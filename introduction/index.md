@@ -15,7 +15,7 @@ Dynamsoft Camera Enhancer (DCE) is a multifunctional SDK specially designed for 
 
 ## Main features
 
-1. Frame list
+1. Frame list - Optimize frame storage structure and reduce waiting time.
 
     DCE frame list reduces waiting time on decoding. Normally, when a decoder finishes decoding on the current frame, it has to acquire a new frame from the camera. Limited by the frame rate of the camera, this process will take a little time. However, If DCE is activated, instead of waiting for the new frames from the camera, decoders can fetch frames from the DCE frame list directly. Further, the DCE frame list also helps when the decoder is blocked on decoding a certain frame. The decoder will restart the decoding process and fetch a new frame from the frame list immediately when the frame list is filled up.
 
@@ -24,15 +24,15 @@ Dynamsoft Camera Enhancer (DCE) is a multifunctional SDK specially designed for 
         <p>DCE frame list</p>
     </div>
 
-2. Fast mode
+2. Fast mode - Reduce the decode time consumption by decoding sliced frames.
 
     DCE fast mode can reduce the time consumption on decoding. In the fast mode, DCE will cut frames into small pieces. This process largely reduces the scan area size for decoders, which sharply decreases the decoding time consumption.
 
-3. Frame filter
+3. Frame filter - Skip blurry frames and optimize decode process.
 
     DCE frame filter will discard the blurry frames before decoders start decoding on the video stream. If frame filter is enabled, the filtered frames will be stored in the DCE frame list for further decode process.
 
-4. Camera Control
+4. Camera Control - Multiple camera settings to reach personalize requirements.
 
     DCE is a highly completed camera module that provides a series of camera control APIs that help users on making personalized settings. The camera control APIs include focus control, zoom control, and other basic camera control.
 

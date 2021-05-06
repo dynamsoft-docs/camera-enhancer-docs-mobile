@@ -224,7 +224,6 @@ This section is the guide for users to add a video stream decoder to the camera 
             mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             mCamera.startScanning();
 
-            //**************The Following parts are newly added*******************
             //Make device level evaluation on the current device
             //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
             int level = mCameraEnhancer.getDeviceLevel();
