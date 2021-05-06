@@ -8,13 +8,11 @@ noTitleIndex: true
 breadcrumbText: Android Guide
 ---
 
-# Get Started on Java(Android)
+# User Guide on Java(Android)
 
-System Requirements
-
-- Operating system:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6
+- System Requirements:
+  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
+  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6.
 
 ## Installation
 
