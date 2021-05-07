@@ -61,7 +61,6 @@ Objective-C code sample:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initDBR];
     [self configurationDCE];
 }
 
