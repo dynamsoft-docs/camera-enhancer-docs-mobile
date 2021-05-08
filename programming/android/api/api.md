@@ -25,6 +25,12 @@ breadcrumbText: Android API References
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updatecamerasetting) | Update camera filter and focus settings from Json. |
 | [`getVersion`]({{site.android-basic-setting}}basic-setting.html#getversion) | Check current DCE version |
 
+## Frame list
+
+| Method | Description |
+|--------|-------------|
+| [`AcquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
+
 ## Fast mode
 
 | Method | Description |
@@ -45,7 +51,6 @@ breadcrumbText: Android API References
 | [`stopScanning`]({{site.android-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
 | [`removeCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Remove camera listener. |
-| [`AcquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
 | [`setTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Set torch state. |
 | [`getTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch desired state. |
 | [`getTorchCurrentState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch current state. |

@@ -59,7 +59,6 @@ Objective-C code sample:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initDBR];
     [self configurationDCE];
 }
 
@@ -147,7 +146,6 @@ For Objective-C users, please add the following code:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initDBR];
     [self configurationDCE];
 }
 
