@@ -4,6 +4,7 @@ title: Dynamsoft Camera Enhancer - Introduction
 description: This is the documentation - introduction page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, introduction
 needAutoGenerateSidebar: true
+noTitleIndex: true
 breadcrumbText: Introduction
 ---
 
@@ -69,13 +70,6 @@ With these features, users can easily integrate the camera and enable certain fe
 - More convenient timing out system
 - High standard camera control.
 
-## Programming language
-
-Dynamsoft Camera Enhancer is now available for the following programming languages:
-
-- Java (Android)
-- Objective-C & Swift (iOS)
-
 ## Usage Scenarios
 
 - Long-distance decoding
@@ -90,10 +84,9 @@ Dynamsoft Camera Enhancer is now available for the following programming languag
 
     Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on old devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
 
-## Quick links
+## Programming language
 
-- [Programming guides]({{site.programming}})
-- View APIs
-  - [Android]({{site.android-api}}api.html)
-  - [iOS]({{site.ios-api}}api.html)
-- [Contact us]({{site.contact-us}})
+Dynamsoft Camera Enhancer is now available for the following programming languages:
+
+- Java (Android)
+- Objective-C & Swift (iOS)
