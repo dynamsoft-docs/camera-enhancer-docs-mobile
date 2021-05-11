@@ -41,6 +41,8 @@ The following content illustrates the key functions and algorithms. By understan
 
     DCE frame list also provides a new solution on timing out. Users can end the current process immediately when the DCE frame list is filled up. This setting can prevent the application from consuming too much time processing the knotty frames.
 
+    Quick link - [frame list performance comparation]()
+
 2. **Fast mode**
 
     DCE fast mode is processing the frames by cropping them and keep the valuable parts only. It is reducing the size of the frames so that the time consumption on scanning each frame will be reduced. If the fast mode is enabled, frames will be cut into small pieces before transferred to the application. DCE has four different cropping modes and they will be implemented periodically.
@@ -49,6 +51,8 @@ The following content illustrates the key functions and algorithms. By understan
         <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
         <p>How fast mode is cropping frames</p>
     </div>
+
+    Quick link - [Fast mode performance comparation]()
 
 3. **Frame filter**
 
@@ -75,7 +79,7 @@ Dynamsoft Camera Enhancer is now available for the following programming languag
 - Java (Android)
 - Objective-C & Swift (iOS)
 
-## User Scenarios
+## Usage Scenarios
 
 - Long-distance decoding
 
@@ -89,14 +93,10 @@ Dynamsoft Camera Enhancer is now available for the following programming languag
 
     Bounded up with camera performance, it is always a huge challenge for barcode decoders to perform well on old devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. With the help of DCE, devices can immediately extract high-quality frames from the video stream and efficiently complete the barcode decoding works.
 
-## About this documentation
-
-This documentation aims at helping you on learning, understanding, and using Dynamsoft Camera Enhancer. In this documentation, you can find useful information that guides you step by step from installation to further development.
-
 ## Quick links
 
 - [Programming guides]({{site.programming}})
 - View APIs
-  - [Android]({{site.android-api}})
-  - [iOS]({{site.ios-api}})
+  - [Android]({{site.android-api}}api.html)
+  - [iOS]({{site.ios-api}}api.html)
 - [Contact us]({{site.contact-us}})
