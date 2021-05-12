@@ -8,13 +8,11 @@ noTitleIndex: true
 breadcrumbText: Android Guide
 ---
 
-# Get Started on Java(Android)
+# User Guide on Java(Android)
 
-System Requirements
-
-- Operating system:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6
+- System Requirements:
+  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
+  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6.
 
 ## Installation
 
@@ -226,7 +224,6 @@ This section is the guide for users to add a video stream decoder in the camera 
             mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             mCamera.startScanning();
 
-            //**************The Following parts are newly added*******************
             //Make device level evaluation on the current device
             //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
             int level = mCameraEnhancer.getDeviceLevel();

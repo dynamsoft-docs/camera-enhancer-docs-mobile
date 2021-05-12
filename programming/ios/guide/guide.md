@@ -8,11 +8,9 @@ noTitleIndex: true
 breadcrumbText: iOS Guide
 ---
 
-# Get Started on Objective-C & Swift
+# User Guide on Objective-C & Swift
 
-System Requirements
-
-- Operating systems:
+- System Requirements:
   - macOS 10.11 and above.
   - iOS 9.0 and above.
 - Environment: Xcode 7.1 - 11.5 and above.
@@ -61,7 +59,6 @@ Objective-C code sample:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initDBR];
     [self configurationDCE];
 }
 
@@ -149,7 +146,6 @@ For Objective-C users, please add the following code:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initDBR];
     [self configurationDCE];
 }
 
