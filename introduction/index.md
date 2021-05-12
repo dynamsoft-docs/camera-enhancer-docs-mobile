@@ -4,6 +4,7 @@ title: Dynamsoft Camera Enhancer - Introduction
 description: This is the documentation - introduction page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, introduction
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Introduction
 ---
@@ -14,54 +15,50 @@ Dynamsoft Camera Enhancer (DCE) is a software development kit (SDK) specially de
 
 ## Main features
 
-1. **Video Frame Queue**
+### **Video Frame Queue**
 
-    DCE frame queue is the key feature that speeds up frame acquisition. It also acts as the administrator that taking over the video frames processed by other DCE functions. The main responsibility of the DCE frame queue is to:
-    - Take over all the processed video frames.
-    - Temporarily store the video frames.
-    - Enable the application to fetch frames immediately.
-    - Optimize the timing out system.
+DCE frame queue is the key feature that speeds up frame acquisition. It also acts as the administrator that taking over the video frames processed by other DCE functions. The main responsibility of the DCE frame queue is to:
 
-    DCE frame queue reduces the waiting time on fetching frames. For example, in the barcode decoding process, when a decoder finishes decoding on the current frame, it has to acquire a new frame from the camera. Limited by the frame rate of the camera, this process will take a little time. However, If DCE is activated, instead of waiting for the new frames from the camera, decoders can fetch frames from the queue directly.
+- Take over all the processed video frames.
+- Temporarily store the video frames.
+- Enable the application to fetch frames immediately.
+- Optimize the timing out system.
 
-    <div align="center">
-        <p><img src="overview/assets/DCE-framequeue.png" width="70%" alt="DCE frame queue"></p>
-        <p>How Frame Queue speed up barcode decoding</p>
-    </div>
+DCE frame queue reduces the waiting time on fetching frames. For example, in the barcode decoding process, when a decoder finishes decoding on the current frame, it has to acquire a new frame from the camera. Limited by the frame rate of the camera, this process will take a little time. However, If DCE is activated, instead of waiting for the new frames from the camera, decoders can fetch frames from the queue directly.
 
-    DCE frame queue also provides a new solution on timing out. Users can end the current process immediately when the queue is filled up. This setting can prevent the application from consuming too much time processing the knotty frames.
+DCE frame queue also provides a new solution on timing out. Users can end the current process immediately when the queue is filled up. This setting can prevent the application from consuming too much time processing the knotty frames.
 
-2. **Frame Filtering**
+### **Frame Filtering**
 
-    Frame filter is designed to filter out high-quality frames and save them in the frame queue for further usage. What DCE frame filter do is to:
+Frame filter is designed to filter out high-quality frames and save them in the frame queue for further usage. What DCE frame filter do is to:
 
-    - Discard all the frames if the device is detected to be shaking.
-    - Make sharpness evaluations on each frame to filter out high-quality frames.
+- Discard all the frames if the device is detected to be shaking.
+- Make sharpness evaluations on each frame to filter out high-quality frames.
 
-    Sensor filter is available for mobile devices and in the meanwhile, frame sharpness filter can be enabled on all kinds of devices. By making restrictions on video frame sources can prevent the applications from processing the blurry frame and improve the working efficiency and accuracy.
+Sensor filter is available for mobile devices and in the meanwhile, frame sharpness filter can be enabled on all kinds of devices. By making restrictions on video frame sources can prevent the applications from processing the blurry frame and improve the working efficiency and accuracy.
 
-3. **Consecutive Frame Cropping**
+### **Consecutive Frame Cropping**
 
-    The pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern "**Fast mode**" because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
+The pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern "**Fast mode**" because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
 
-    <div align="center">
-        <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
-        <p>How fast mode is cropping frames</p>
-    </div>
+<div align="center">
+    <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
+    <p>How fast mode is cropping frames</p>
+</div>
 
-4. **Auto Focus**
+### **Auto Focus**
 
-    For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we don't stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
+For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we don't stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
 
-5. **Auto Zoom**
+### **Auto Zoom**
 
-    When DCE is used with the barcode reader, we can use the certain feature of the barcode reader to predetermine the area of interest and zoom in to get a better frame on barcode decoding. Autozoom mode will be activated if the barcode reader detected a barcode area but failed on decoding. The zoom factor will be reset if the barcode is decoded successfully.
+When DCE is used with the barcode reader, we can use the certain feature of the barcode reader to predetermine the area of interest and zoom in to get a better frame on barcode decoding. Autozoom mode will be activated if the barcode reader detected a barcode area but failed on decoding. The zoom factor will be reset if the barcode is decoded successfully.
 
-6. **Regular Camera Control**
+### **Regular Camera Control**
 
-    Last but not least, we incorporated camera control APIs in the SDK. The benefits of these APIs are:
-    - Enable users to add camera functionality with a few lines of code
-    - Unified experience on iOS/Android
+Last but not least, we incorporated camera control APIs in the SDK. The benefits of these APIs are:
+- Enable users to add camera functionality with a few lines of code
+- Unified experience on iOS/Android
 
 With these features, users can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process which results in:
 
