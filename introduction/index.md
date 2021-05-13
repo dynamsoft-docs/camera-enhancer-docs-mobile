@@ -11,7 +11,7 @@ breadcrumbText: Introduction
 
 # Overview of Dynamsoft Camera Enhancer
 
-Dynamsoft Camera Enhancer (DCE) is a software development kit (SDK) specially designed to enhance the quality of video frames produced by USB connected or mobile cameras. Applications that need to capture frames or read these frames to obtain barcodes or text, etc. can work faster and more efficiently due to the enhancement of the frames. Read on to learn more about the features of the SDK, which makes everything possible.
+Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the camera's ability on capturing and transferring high-quality video frames. Applications that need to capture frames or read these frames to obtain barcodes or text, etc. can work more efficiently and accurately due to the enhancement of the frames.
 
 ## Main features
 
@@ -21,12 +21,10 @@ DCE frame queue is the key feature that speeds up frame acquisition. It also act
 
 - Take over all the processed video frames.
 - Temporarily store the video frames.
-- Enable the application to fetch frames immediately.
-- Optimize the timing out system.
+- Transfer a new frame immediately when the application finished the current process.
+- Provide a new timing-out solution.
 
-DCE frame queue reduces the waiting time on fetching frames. For example, in the barcode decoding process, when a decoder finishes decoding on the current frame, it has to acquire a new frame from the camera. Limited by the frame rate of the camera, this process will take a little time. However, If DCE is activated, instead of waiting for the new frames from the camera, decoders can fetch frames from the queue directly.
-
-DCE frame queue also provides a new solution on timing out. Users can end the current process immediately when the queue is filled up. This setting can prevent the application from consuming too much time processing the knotty frames.
+When DCE is embedded in an application, the video frames will be pretreated and temporarily saved in the DCE frame queue. Each time when the application finished the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on timing out system. By monitoring and controlling the frame number in the queue, users can enable the application to abort the current processing frame and restart the scan. The frame queue intensely reduces the stagnant phase in the scanning process and it will finally result in a highly stable and fluent user experience.
 
 ### **Frame Filtering**
 
