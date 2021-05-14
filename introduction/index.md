@@ -73,7 +73,7 @@ With these features, users can easily integrate the camera and enable certain fe
 
 - Continuous barcode decoding
 
-    No matter the users are decoding on the single barcode or trying to decode continuously, DCE can be the best choice to accelerate the barcode decoding process. In continuous barcode decoding works, the DCE frame queue is taking over the frame source for the decoder instead of the camera. The decode restart time and timeout mechanism are greatly promoted and the total time consumption on continuous decoding is sharply reduced.
+    In traditional scan modes, the scanning process are always intermittent because the scanner can’t continue the scan process before it receives a new frame from the camera. DCE frame queue tried to make this intermittent process continuous. The frame queue takes over and saves the new frames captured during the time that the scanner is processing on the former frame. Immediately when the former frame is processed, the scanner will fetch the newest frame in the queue and restart the scanning process. These behaviors will make the scanning experience of the application more fluent and stable.
 
 - Low-end devices
 
