@@ -185,7 +185,7 @@ Remove Camera Listener
 
 ## AcquireListFrame
 
-This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame list.
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
 
 ```java
     mCameraEnhancer.AcquireListFrame(true);
