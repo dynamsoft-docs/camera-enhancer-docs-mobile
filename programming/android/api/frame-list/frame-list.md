@@ -1,10 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Frame List
-description: This is the documentation - Frame List page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Frame List
+title: Dynamsoft Camera Enhancer - Frame Queue
+description: This is the documentation - Frame Queue page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Frame Queue
 needAutoGenerateSidebar: true
-breadcrumbText: Frame List
+breadcrumbText: Frame Queue
 ---
 
-# Frame List
+# Frame Queue

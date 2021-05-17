@@ -10,6 +10,7 @@ breadcrumbText: Android API References
 # Android API References
 
 - [Initialization](#initialization)
+- [Frame Queue](#frame-queue)
 - [Fast Mode](#fast-mode)
 - [Basic Camera Settings](#basic-camera-settings)
 - [Focus Settings](#focus-settings)
@@ -25,11 +26,11 @@ breadcrumbText: Android API References
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updatecamerasetting) | Update camera filter and focus settings from Json. |
 | [`getVersion`]({{site.android-basic-setting}}basic-setting.html#getversion) | Check current DCE version |
 
-## Frame list
+## Frame Queue
 
 | Method | Description |
 |--------|-------------|
-| [`AcquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
+| [`AcquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame queue when this API is activated. |
 
 ## Fast mode
 
