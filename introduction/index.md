@@ -24,7 +24,7 @@ DCE frame queue is the key feature that speeds up frame acquisition. It also act
 - Transfer a new frame immediately when the application finished the current process.
 - Provide a new timing-out solution.
 
-When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue intensely reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
+When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
 
 ### **Frame Filtering**
 
@@ -39,7 +39,7 @@ By making restrictions on video frame sources can prevent the applications from 
 
 ### **Consecutive Frame Cropping**
 
-**Fast mode** is the pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern "**Fast mode**" because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
+**Fast mode** is the pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern `Fast mode` because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
 
 <div align="center">
     <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
@@ -48,7 +48,7 @@ By making restrictions on video frame sources can prevent the applications from 
 
 ### **Auto Focus**
 
-For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we don't stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
+For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we will not stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
 
 ### **Auto Zoom**
 
@@ -79,7 +79,7 @@ With these features, users can easily integrate the camera and enable certain fe
 
 - Low-end devices
 
-    Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on old devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
+    Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on low-end devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
 
 ## Programming language
 
