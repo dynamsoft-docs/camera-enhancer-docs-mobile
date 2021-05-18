@@ -11,7 +11,7 @@ breadcrumbText: Introduction
 
 # Overview of Dynamsoft Camera Enhancer
 
-Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the camera's ability on capturing and transferring high-quality video frames. Applications that need to capture frames or read these frames to obtain barcodes or text, etc. can work more efficiently and accurately due to the enhancement of the frames.
+Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the frame acquisition process from a camera so that the application only needs to read high-quality frames. Applications that need to capture frames or read these frames to obtain barcodes or text, etc. can work more efficiently and accurately due to the enhancement of this process.
 
 ## Main features
 
@@ -24,20 +24,22 @@ DCE frame queue is the key feature that speeds up frame acquisition. It also act
 - Transfer a new frame immediately when the application finished the current process.
 - Provide a new timing-out solution.
 
-When DCE is embedded in an application, the video frames will be pretreated and temporarily saved in the DCE frame queue. Each time when the application finished the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on timing out system. By monitoring and controlling the frame number in the queue, users can enable the application to abort the current processing frame and restart the scan. The frame queue intensely reduces the stagnant phase in the scanning process and it will finally result in a highly stable and fluent user experience.
+When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue intensely reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
 
 ### **Frame Filtering**
 
-Frame filter is designed to filter out high-quality frames and save them in the frame queue for further usage. What DCE frame filter do is to:
+Frame filter is designed to filter out high-quality frames and temporarily save them in the frame queue for further usage. What DCE frame filter do is to:
 
+- Enable sensor filter on mobile devices.
+- Enable frame sharpness on all devices.
 - Discard all the frames if the device is detected to be shaking.
 - Make sharpness evaluations on each frame to filter out high-quality frames.
 
-Sensor filter is available for mobile devices and in the meanwhile, frame sharpness filter can be enabled on all kinds of devices. By making restrictions on video frame sources can prevent the applications from processing the blurry frame and improve the working efficiency and accuracy.
+By making restrictions on video frame sources can prevent the applications from processing the blurry frame and improve the working efficiency and accuracy.
 
 ### **Consecutive Frame Cropping**
 
-The pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern "**Fast mode**" because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
+**Fast mode** is the pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern "**Fast mode**" because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
 
 <div align="center">
     <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
@@ -50,7 +52,7 @@ For the low-end cameras, DCE enables users to make autofocus settings on control
 
 ### **Auto Zoom**
 
-When DCE is used with the barcode reader, we can use the certain feature of the barcode reader to predetermine the area of interest and zoom in to get a better frame on barcode decoding. Autozoom mode will be activated if the barcode reader detected a barcode area but failed on decoding. The zoom factor will be reset if the barcode is decoded successfully.
+If the barcode reader is enabled at the same time when DCE is working, we can use the intermediate result of the barcode reader to predetermine the area of interest. DCE will let the camera zoom in to approach the interest area on the occasion that the system did not receive the final result but the intermediate result is available. The zoom factor will be reset if the application decodes on the barcode successfully.
 
 ### **Regular Camera Control**
 
@@ -58,7 +60,7 @@ Last but not least, we incorporated camera control APIs in the SDK. The benefits
 - Enable users to add camera functionality with a few lines of code
 - Unified experience on iOS/Android
 
-With these features, users can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process which results in:
+With these features, users can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process, which results in:
 
 - Speed up on barcode or text reading.
 - Less misreading rate.
@@ -77,7 +79,7 @@ With these features, users can easily integrate the camera and enable certain fe
 
 - Low-end devices
 
-    Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on old devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
+    Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on old devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
 
 ## Programming language
 
