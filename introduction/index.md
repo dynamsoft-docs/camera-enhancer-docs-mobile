@@ -28,14 +28,12 @@ When DCE is embedded in an application, the video frames will be preprocessed an
 
 ### **Frame Filtering**
 
-Frame filter is designed to make sharpness filters on frames and temporarily save the high-sharpness frames in the frame queue for further usage. What DCE frame filter do is to:
+DCE can implement the sensor filter and frame sharpness filter on the camera video frames. The blurred frames will be skipped in the image reading process. The filter methods include:
 
-- Enable sensor filter on mobile devices.
-- Enable frame sharpness on all devices.
-- Discard all the frames if the device is detected to be shaking.
-- Make sharpness evaluations on each frame to filter out high-quality frames.
+- Sensor filter on mobile devices.
+- Frame sharpness filter on all kinds of devices.
 
-By making restrictions on video frame sources can prevent the applications from processing the blurry frame and improve the working efficiency and accuracy.
+The frame filter prevents the frame processing algorithm from spending too much time scanning blurry frames. This benefits the application on improves its working efficiency and accuracy.
 
 ### **Frame Cropping**
 

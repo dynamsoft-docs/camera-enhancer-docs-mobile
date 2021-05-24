@@ -78,6 +78,7 @@ breadcrumbText: iOS API Reference
 | Method | Description |
 |-----------------|---------------|
 | [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus for every 3 seconds. |
+| [`setRegularAutoFocusParam`]({{site.ios-zoom-setting}}zoom-focus.html#setregularautofocusparam) | Set the focus interval and termination time for the regular autofocus. |
 | [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will auto focus when clarity change is detected. |
 
 ## Zoom Settings
