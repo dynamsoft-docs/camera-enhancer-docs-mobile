@@ -87,7 +87,7 @@ Advanced focus settings:
 |-----------------|---------------|
 | [`enableRegularAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
 | [`getEnabledRegularAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#enableregularautofocus) | Get the current status (on/off) of this auto focus mode. |
-| [`setRegularAutoFocusParam`]({{site.android-zoom-setting}})zoom-focus.html#setregularautofocusparam | Set the time interval and terminate time for the regular auto focus |
+| [`setRegularAutoFocusParam`]({{site.android-zoom-setting}}zoom-focus.html#setregularautofocusparam) | Set the time interval and terminate time for the regular auto focus |
 | [`enableAutoFocusOnSharpnessChange`]({{site.android-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. This focus mode will start automatically if DCE autofocus is enabled. Users can manually quit this focus mode when DCE autofocus is activated. |
 | [`getEnabledAutoFocusOnSharpnessChangeStatus`]({{site.android-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | Get the current status (on/off) of this auto focus mode. |
 
