@@ -37,7 +37,7 @@ The frame filter prevents the frame processing algorithm from spending too much 
 
 ### **Frame Cropping**
 
-**Fast mode** is the pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern `Fast mode` because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
+**Fast mode** is the pattern in which we process frames by cropping them. We call this pattern `Fast mode` because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
 
 <div align="center">
     <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
@@ -55,6 +55,7 @@ If the barcode reader is enabled at the same time when DCE is working, we can us
 ### **Regular Camera Control**
 
 Last but not least, we incorporated camera control APIs in the SDK. The benefits of these APIs are:
+
 - Enable users to add camera functionality with a few lines of code
 - Unified experience on iOS/Android
 
