@@ -11,33 +11,31 @@ breadcrumbText: Introduction
 
 # Overview of Dynamsoft Camera Enhancer
 
-Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the frame acquisition process from a camera so that the application only needs to read high-quality frames. Applications that need to capture frames or read these frames to obtain barcodes or text, etc. can work more efficiently and accurately due to the enhancement of this process.
+Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the frame acquisition process from a camera.
+DCE enables users to easily deploy camera modules in all kinds of video stream processing applications. This camera module includes high-level video frame preprocessing algorithms and multifunctional camera controlling APIs, which empower the application to focus on processing high-quality frames. Therefore, the processing efficiency and accuracy of the applications are intensely improved.
 
 ## Main features
 
 ### **Video Frame Queue**
 
-DCE frame queue is the key feature that speeds up frame acquisition. It also acts as the administrator that taking over the video frames processed by other DCE functions. The main responsibility of the DCE frame queue is to:
+DCE frame queue is the key feature that speeds up frame acquisition. It also acts as the administrator that takes over the video frames processed by other DCE functions. The main responsibilities of the DCE frame queue are to:
 
-- Take over all the processed video frames.
-- Temporarily store the video frames.
-- Transfer a new frame immediately when the application finished the current process.
-- Provide a new timing-out solution.
+- Temporarily store the filtered and cropped video frames.
+- Transfer a new frame immediately when the application finishes the processing of the current frame.
+- Enable the applications to skip the time-consuming frames to release the occupancy of computation resources.
 
-When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
+When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
 
 ### **Frame Filtering**
 
-Frame filter is designed to filter out high-quality frames and temporarily save them in the frame queue for further usage. What DCE frame filter do is to:
+DCE can implement the sensor filter and frame sharpness filter on the camera video frames. The blurred frames will be skipped in the image reading process. The filter methods include:
 
-- Enable sensor filter on mobile devices.
-- Enable frame sharpness on all devices.
-- Discard all the frames if the device is detected to be shaking.
-- Make sharpness evaluations on each frame to filter out high-quality frames.
+- Sensor filter on mobile devices.
+- Frame sharpness filter on all kinds of devices.
 
-By making restrictions on video frame sources can prevent the applications from processing the blurry frame and improve the working efficiency and accuracy.
+The frame filter prevents the frame processing algorithm from spending too much time scanning blurry frames. This benefits the application on improves its working efficiency and accuracy.
 
-### **Consecutive Frame Cropping**
+### **Frame Cropping**
 
 **Fast mode** is the pattern in which we process frames so that we only add certain areas to the frame queue. We call this pattern `Fast mode` because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
 

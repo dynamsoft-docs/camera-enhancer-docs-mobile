@@ -127,6 +127,21 @@ Swift:
     let res = dce.enableRegularAutoFocus
 ```
 
+## setRegularAutoFocusParam
+
+Set the focus interval and termination time for the regular autofocus.
+
+```objectivec
+    //The camera will autofocus for every 3s. It won't focus for a second time within 500ms.
+    [_dce setRegularAutoFocusParam:3000 terminateFocusByTime:500];
+```
+
+Swift:
+
+```Swift
+    dce.setRegularAutoFocusParam(3000, terminateFocusByTime: 500)
+```
+
 ## enableAutoFocusOnSharpnessChange
 
 This API is another advanced setting that enables the camera to autofocus when a change in sharpness is detected between contiguous frames. The same happens with regular autofocus, this focus mode is also enabled by default when DCE auto focus is enabled. To turn off camera autofocus when sharpness changes:

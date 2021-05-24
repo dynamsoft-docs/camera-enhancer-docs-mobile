@@ -98,7 +98,7 @@ To get status (on/off) of regular autofocus mode:
     boolean x = mCamera.getEnabledRegularAutoFocusStatus();
 ```
 
-## setregularautofocusparam
+## setRegularAutoFocusParam
 
 There are focus interval times and focus terminate times for users to set in regular auto focus mode. Please use `setregularautofocusparam` to make these settings.
 
