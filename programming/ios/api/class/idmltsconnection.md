@@ -4,6 +4,8 @@ title: Dynamsoft Camera Enhancer - iOS CameraLTSConnectionParameters Class
 description: This is the documentation - iOS CameraLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS CameraLTSConnectionParameters Class
 needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: true
 breadcrumbText: iOS CameraLTSConnectionParameters
 ---
 
@@ -26,7 +28,7 @@ Defines a struct to configure the parameters to connect to the license tracking 
 | [`limitedLicenseModules`](#limitedlicensemodules) | NSArray* |
 | [`products`](#products) | NSInteger |
 
-## mainServerURL
+### mainServerURL
 
 The URL of the license tracking server.
 
@@ -34,7 +36,7 @@ The URL of the license tracking server.
 NSString* mainServerURL
 ```
 
-## standbyServerURL
+### standbyServerURL
 
 The URL of the standby license tracking server.
 
@@ -42,7 +44,7 @@ The URL of the standby license tracking server.
 NSString* standbyServerURL
 ```
 
-## organizationID
+### organizationID
 
 Set the organization ID.
 
@@ -50,7 +52,7 @@ Set the organization ID.
 NSString* organizationID
 ```
 
-## handshakeCode
+### handshakeCode
 
 The handshake code.
 
@@ -58,7 +60,7 @@ The handshake code.
 NSString* handshakeCode
 ```
 
-## sessionPassword
+### sessionPassword
 
 The session password of the handshake code set in license tracking server.
 
@@ -66,7 +68,7 @@ The session password of the handshake code set in license tracking server.
 NSString* sessionPassword
 ```
 
-## chargeWay
+### chargeWay
 
 Set the charge way.
 
@@ -74,7 +76,7 @@ Set the charge way.
 EnumDMChargeWay chargeWay
 ```
 
-## UUIDGenerationMethod
+### UUIDGenerationMethod
 
 Set the method to generate UUID.
 
@@ -82,7 +84,7 @@ Set the method to generate UUID.
 EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 
-## maxBufferDays
+### maxBufferDays
 
 Set the max days to buffer the license info.
 
@@ -90,7 +92,7 @@ Set the max days to buffer the license info.
 NSInteger maxBufferDays
 ```
 
-## limitedLicenseModules
+### limitedLicenseModules
 
 Set the count of license modules to use.
 
@@ -98,7 +100,7 @@ Set the count of license modules to use.
 NSArray* limitedLicenseModules
 ```
 
-## products
+### products
 
 Set the products. This is a combined value of Product Enumration items.
 

@@ -4,6 +4,8 @@ title: Dynamsoft Camera Enhancer - Android CameraView Class
 description: This is the documentation - Android CameraView Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, CameraView
 needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: true
 breadcrumbText: Android CameraView
 ---
 
@@ -24,19 +26,19 @@ mCameraEnhancer.addCameraView(cameraView);
 | [`removeOverlay`](#removeoverlay) | Remove overlay |
 | [`setBrushColor`](#setbrushcolor) | Set the brush color |
 
-## addOverlay
+### addOverlay
 
 ```java
 cameraView.addOverlay();
 ```
 
-## removeOverlay
+### removeOverlay
 
 ```java
 cameraView.removeOverlay();
 ```
 
-## setBrushColor
+### setBrushColor
 
 ```java
 cameraView.setBrushColor("Put your color string here");

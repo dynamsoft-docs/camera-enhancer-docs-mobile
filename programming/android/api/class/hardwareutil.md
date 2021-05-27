@@ -4,6 +4,8 @@ title: Dynamsoft Camera Enhancer - Android HardwareUtil Class
 description: This is the documentation - Android HardwareUtil Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, HardwareUtil
 needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: true
 breadcrumbText: Android HardwareUtil
 ---
 
@@ -21,7 +23,7 @@ Static values that illustrate device level.
 | `DEVICE_LEVEL_LOW` | 0 |
 | `DEVICE_LEVEL_UNKNOWN` | -1 |
 
-## Device level
+### Device level
 
 ```java
 int level;

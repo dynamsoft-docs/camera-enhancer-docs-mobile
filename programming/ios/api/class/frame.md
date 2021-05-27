@@ -4,6 +4,8 @@ title: Dynamsoft Camera Enhancer - iOS FramePackage Class
 description: This is the documentation - iOS FramePackage Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS FramePackage Class
 needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: true
 breadcrumbText: iOS FramePackage
 ---
 
