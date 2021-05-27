@@ -22,6 +22,6 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## CameraEnhancer Settings
 
-- [Basic camera settings]()
-- [Filter settings]()
-- [Focus & zoom settings]()
+- [Basic camera settings]({{site.android-cameraenhancer}}basic-setting.html)
+- [Filter settings]({{site.android-cameraenhancer}}filter.html)
+- [Focus & zoom settings]({{site.android-cameraenhancer}}zoom-focus.html)

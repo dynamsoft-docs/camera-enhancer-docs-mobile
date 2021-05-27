@@ -25,9 +25,9 @@ introduction-license: /camera-enhancer/docs/introduction/license/
 android: /camera-enhancer/docs/programming/android/
 android-guide: /camera-enhancer/docs/programming/android/guide/
 android-api: /camera-enhancer/docs/programming/android/api/
-android-basic-setting: /camera-enhancer/docs/programming/android/api/basic-setting/
-android-filter-setting: /camera-enhancer/docs/programming/android/api/filter-setting/
-android-zoom-setting: /camera-enhancer/docs/programming/android/api/zoom-setting/
+android-basic-setting: /camera-enhancer/docs/programming/android/api/class/cameraenhancer/basic-setting/
+android-filter-setting: /camera-enhancer/docs/programming/android/api/class/cameraenhancer/filter-setting/
+android-zoom-setting: /camera-enhancer/docs/programming/android/api/class/cameraenhancer/zoom-setting/
 android-release-note: /camera-enhancer/docs/programming/android/release-note/
 android-class: /camera-enhancer/docs/programming/android/api/class/
 android-cameraenhancer: /camera-enhancer/docs/programming/android/api/class/cameraenhancer/
