@@ -9,7 +9,7 @@ breadcrumbText: Android Frame
 
 # Frame
 
-Exception for signalling camera enhancer errors
+Frame Class for Dynamsoft Camera Enhancer.
 
 ## Method
 

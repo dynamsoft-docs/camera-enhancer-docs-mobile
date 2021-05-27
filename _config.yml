@@ -29,6 +29,7 @@ android-basic-setting: /camera-enhancer/docs/programming/android/api/basic-setti
 android-filter-setting: /camera-enhancer/docs/programming/android/api/filter-setting/
 android-zoom-setting: /camera-enhancer/docs/programming/android/api/zoom-setting/
 android-release-note: /camera-enhancer/docs/programming/android/release-note/
+android-class: /camera-enhancer/docs/programming/android/api/class/
 
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/

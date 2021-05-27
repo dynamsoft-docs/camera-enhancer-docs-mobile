@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - CameraLTSConnectionParameters Class
-description: This is the documentation - CameraLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, CameraLTSConnectionParameters Class
+title: Dynamsoft Camera Enhancer - Android CameraLTSConnectionParameters Class
+description: This is the documentation - Android CameraLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android CameraLTSConnectionParameters Class
 needAutoGenerateSidebar: true
 breadcrumbText: Android CameraLTSConnectionParameters
 ---
 
 # DMLTSConnectionParameters
 
-Defines a struct to configure the parameters to connect to license tracking server.
+Defines a struct to configure the parameters to connect to the license tracking server.
 
 ## Method
 
@@ -57,7 +57,7 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.standbyServerURL
     null
 
 - **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ## handshakeCode
 

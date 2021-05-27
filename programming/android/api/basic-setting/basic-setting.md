@@ -37,7 +37,7 @@ breadcrumbText: Android Basic Setting
 
 ## getDeviceLevel
 
-This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high level mobile devices. 
+This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high-level mobile devices.
 
 ```java
     mCamera.getDeviceLevel();

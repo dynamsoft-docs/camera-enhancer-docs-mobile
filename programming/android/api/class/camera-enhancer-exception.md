@@ -9,10 +9,24 @@ breadcrumbText: Android CameraEnhancerException
 
 # CameraEnhancerException
 
-Exception for signalling camera enhancer errors
+Exception for signalling camera enhancer errors.
+
+```java
+CameraEnhancerException cameraException
+```
 
 ## Method
 
 | Name | Type |
 |------|------|
-| [`getErrorCode`]() | int |
+| [`getErrorCode`](#geterrorcode) | int |
+
+## getErrorCode
+
+```java
+try {
+    //Your code here
+} catch (CameraEnhancerException cameraException) {
+    cameraException.printStackTrace();
+}
+```
