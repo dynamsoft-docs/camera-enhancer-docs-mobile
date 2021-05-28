@@ -26,7 +26,7 @@ Android Classes:
 
 | Method | Description |
 |-----------------|---------------|
-|[`getDeviceLevel`]({{site.android-cameraenhancer}}basic-setting.html#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |
+| [`getDeviceLevel`]({{site.android-cameraenhancer}}basic-setting.html#getdevicelevel) | Make an evaluation on the current device and define its level for further use. |
 | [`setAutoModeLevelParam`]({{site.android-cameraenhancer}}filter.html#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`]({{site.android-cameraenhancer}}basic-setting.html#updatecamerasetting) | Update camera filter and focus settings from Json. |
 | [`getVersion`]({{site.android-cameraenhancer}}basic-setting.html#getversion) | Check current DCE version |
