@@ -13,7 +13,7 @@ breadcrumbText: Android HardwareUtil
 
 This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
 
-## Method
+## Attributes
 
 | Name | Value |
 |------|------|

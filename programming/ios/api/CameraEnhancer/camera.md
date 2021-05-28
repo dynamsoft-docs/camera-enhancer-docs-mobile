@@ -12,7 +12,6 @@ breadcrumbText: iOS Basic Setting
 - [`updateCameraSettingFromJson`](#updatecamerasettingfromjson)
 - [`updateCameraSettingFromFile`](#updatecamerasettingfromfile)
 - [`getVersion`](#getversion)
-- [`enableFastMode`](#enablefastmode)
 - [`getCameraDesiredState`](#camera-state)
 - [`setCameraDesiredState`](#camera-state)
 - [`getCameraCurrentState`](#camera-state)
@@ -22,7 +21,6 @@ breadcrumbText: iOS Basic Setting
 - [`stopScanning`](#stopscanning-and-startscanning)
 - [`addCameraListener`](#addcameralistener)
 - [`removeCameraListener`](#addcameralistener)
-- [`acquireListFrame`](#acquirelistframe)
 - [`setTorchDesiredState`](#torch-state)
 - [`getTorchDesiredState`](#torch-state)
 - [`getTorchCurrentState`](#torch-state)
@@ -104,24 +102,6 @@ Swift:
 
 ```swift
     dce.getVersion()
-```
-
-## enableFastMode
-
-This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
-
-Objective-C:
-
-```objectivec
-    [dce enableFastMode:true];
-    //To check the status of DCE fast mode
-    [dce getEnableFastMode];
-```
-
-Swift:
-
-```swift
-    dce.enableFastMode = true
 ```
 
 ## Camera State
@@ -233,22 +213,6 @@ Swift:
 
 ```swift
     dce.removeCameraListener()
-```
-
-## acquireListFrame
-
-This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
-
-Objective-C:
-
-```objectivec
-    FramePackage *fg = [self.camera AcquireListFrame];
-```
-
-Swift:
-
-```swift
-    let fg = self.dce.acquireListFrame() 
 ```
 
 ## Torch State

@@ -88,7 +88,8 @@ To get status (on/off) of Default autofocus mode:
 ## enableRegularAutoFocus
 
 Regular auto focus is an advanced setting that enables the camera to auto focus every 3 seconds. It is contained in DCE auto focus. When DCE auto focus is enabled, regular auto focus is enabled as well. To turn off regular auto focus mode:
-```java 
+
+```java
     mCameraEnhancer.enableRegularAutoFocus(false);
 ```
 

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - Initialization
-description: This is the documentation - Android API references - Initialization page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android API references, Initialization
+title: Dynamsoft Camera Enhancer - Android API references - CameraEnhancer Class
+description: This is the documentation - Android API references - CameraEnhancer Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android API references, CameraEnhancer Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android Initialization
+breadcrumbText: Android CameraEnhancer Class
 ---
 
 # CameraEnhancer Class
@@ -24,7 +24,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## CameraEnhancer Methods
 
-### [Frame preprocessing methods]({{site.android-cameraenhancer}}filter.html)
+### [Frame preprocessing methods]({{site.android-cameraenhancer}}preprocess.html)
 
 | Method | Description |
 |--------|-------------|

@@ -9,10 +9,46 @@ breadcrumbText: iOS Filter Setting
 
 # iOS API Reference - Filter Setting
 
+- [`acquireListFrame`](#acquirelistframe)
+- [`enableFastMode`](#enablefastmode)
 - [`enableSensorControl`](#enablesensorcontrol)
 - [`setSensorControlThreshold`](#setsensorcontrolthreshold)
 - [`enableFrameFilter`](#enableframefilter)
 - [`setMaxFrameRate`](#setmaxframerate)
+
+## acquireListFrame
+
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
+
+Objective-C:
+
+```objectivec
+    FramePackage *fg = [self.camera AcquireListFrame];
+```
+
+Swift:
+
+```swift
+    let fg = self.dce.acquireListFrame() 
+```
+
+## enableFastMode
+
+This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decode efficiency. It is recommended to be enabled when decoding a single barcode.
+
+Objective-C:
+
+```objectivec
+    [dce enableFastMode:true];
+    //To check the status of DCE fast mode
+    [dce getEnableFastMode];
+```
+
+Swift:
+
+```swift
+    dce.enableFastMode = true
+```
 
 ## enableSensorControl
 

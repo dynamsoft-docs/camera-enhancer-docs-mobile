@@ -15,10 +15,8 @@ trouble-shooting: /camera-enhancer/docs/trouble-shooting/
 ios: /camera-enhancer/docs/programming/ios/
 ios-guide: /camera-enhancer/docs/programming/ios/guide/
 ios-api: /camera-enhancer/docs/programming/ios/api/
-ios-basic-setting: /camera-enhancer/docs/programming/ios/api/basic-setting/
-ios-filter-setting: /camera-enhancer/docs/programming/ios/api/filter-setting/
-ios-zoom-setting: /camera-enhancer/docs/programming/ios/api/zoom-setting/
 ios-release-note: /camera-enhancer/docs/programming/ios/release-note/
+ios-cameraenhancer: /camera-enhancer/docs/programming/ios/api/cameraenhancer/
 
 introduction-license: /camera-enhancer/docs/introduction/license/
 
