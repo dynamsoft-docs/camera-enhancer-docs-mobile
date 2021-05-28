@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - Zoom & Focus Setting
-description: This is the documentation - Android API references - Zoom & Focus Setting page of Dynamsoft Camera Enhancer.
+title: Dynamsoft Camera Enhancer - Android API references - Zoom & Focus Methods
+description: This is the documentation - Android API references - Zoom & Focus Methods page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Focus, Zoom, Android API Reference
 needAutoGenerateSidebar: true
 breadcrumbText: Android Zoom and Focus
 ---
 
-# Android API Reference - Zoom & Focus Setting
+# Android API Reference - Zoom & Focus Methods
 
 - [`setAutoFocusPosition`](#setautofocusposition)
 - [`setManualFocusPosition`](#setautofocusposition)
