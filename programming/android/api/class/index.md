@@ -10,6 +10,10 @@ breadcrumbText: Android Class
 # Android API reference - Class
 
 - [`CameraEnhancer`]({{site.android-cameraenhancer}}initialization.html)
+  - [Initialization]({{ site.android-cameraenhancer }}initialization.html)
+  - [Regular camera Methods]({{ site.android-cameraenhancer }}basic-setting.html)
+  - [Filter Methods]({{ site.android-cameraenhancer }}filter.html)
+  - [Zoom & Focus Methods]({{ site.android-cameraenhancer }}zoom-focus.html)
 - [`DMLTSConnectionParameters`]({{site.android-class}}lts-connection.html)
 - [`Frame`]({{site.android-class}}frame.html)
 - [`HardwareUtil`]({{site.android-class}}hardwareutil.html)
