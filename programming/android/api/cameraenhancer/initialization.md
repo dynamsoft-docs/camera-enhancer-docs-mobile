@@ -9,9 +9,9 @@ needGenerateH3Content: true
 breadcrumbText: Android Initialization
 ---
 
-# Android API Reference - Initialization
+# Android API Reference - CameraEnhancer Class
 
-## Initialize CameraEnhancer
+## Instantiate CameraEnhancer Class
 
 `CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling. Please instantiate the `CameraEnhancer` class before you get to use these APIs.
 
@@ -24,7 +24,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-## CameraEnhancer Methods
+## CameraEnhancer Class Methods
 
 ### [Frame preprocessing methods]({{site.android-cameraenhancer}}filter.html)
 

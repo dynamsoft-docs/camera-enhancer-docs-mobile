@@ -9,8 +9,10 @@ breadcrumbText: Android API
 
 # Android API reference
 
+## Class
+
 - [`CameraEnhancer`]({{site.android-cameraenhancer}}initialization.html)
-  - [Initialization]({{ site.android-cameraenhancer }}initialization.html)
+  - [Instantiate CameraEnhancer]({{ site.android-cameraenhancer }}initialization.html)
   - [Regular camera Methods]({{ site.android-cameraenhancer }}basic-setting.html)
   - [Filter Methods]({{ site.android-cameraenhancer }}filter.html)
   - [Zoom & Focus Methods]({{ site.android-cameraenhancer }}zoom-focus.html)

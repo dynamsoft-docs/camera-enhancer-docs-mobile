@@ -11,7 +11,7 @@ breadcrumbText: Android CameraEnhancerException
 
 # CameraEnhancerException
 
-This is the page for CameraEnhancerException class. CameraEnhancerException is the exception for signaling camera enhancer errors.
+This is the page for `CameraEnhancerException` class. `CameraEnhancerException` is the exception for signaling camera enhancer errors.
 
 ```java
 CameraEnhancerException cameraException
