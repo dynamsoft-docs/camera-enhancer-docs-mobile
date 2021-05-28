@@ -11,7 +11,7 @@ breadcrumbText: Android HardwareUtil
 
 # HardwareUtil
 
-Static values that illustrate device level.
+This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
 
 ## Method
 

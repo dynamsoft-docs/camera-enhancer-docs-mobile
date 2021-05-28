@@ -11,7 +11,7 @@ breadcrumbText: Android CameraLTSConnectionParameters
 
 # DMLTSConnectionParameters
 
-Defines a struct to configure the parameters to connect to the license tracking server.
+`DMLTSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the license tracking server.
 
 ## Method
 

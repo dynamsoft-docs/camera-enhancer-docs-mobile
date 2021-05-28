@@ -11,7 +11,7 @@ breadcrumbText: Android Frame
 
 # Frame
 
-Frame Class for Dynamsoft Camera Enhancer.
+This page is for `Frame` Class. `Frame` parameters store the frame data.
 
 ## Method
 

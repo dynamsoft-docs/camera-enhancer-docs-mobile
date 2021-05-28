@@ -26,8 +26,7 @@ android: /camera-enhancer/docs/programming/android/
 android-guide: /camera-enhancer/docs/programming/android/guide/
 android-api: /camera-enhancer/docs/programming/android/api/
 android-release-note: /camera-enhancer/docs/programming/android/release-note/
-android-class: /camera-enhancer/docs/programming/android/api/class/
-android-cameraenhancer: /camera-enhancer/docs/programming/android/api/class/cameraenhancer/
+android-cameraenhancer: /camera-enhancer/docs/programming/android/api/cameraenhancer/
 
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/

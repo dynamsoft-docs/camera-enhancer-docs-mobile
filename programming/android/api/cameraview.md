@@ -11,7 +11,7 @@ breadcrumbText: Android CameraView
 
 # CameraView
 
-CameraView Class for Dynamsoft Camera Enhancer. Make basic settings on the overlay.
+This page is for CameraView Class. `CameraView` is designed to Make basic settings on the overlay.
 
 ```java
 CameraView cameraView;
