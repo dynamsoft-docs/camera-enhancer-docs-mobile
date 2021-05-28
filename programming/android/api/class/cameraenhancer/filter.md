@@ -7,14 +7,36 @@ needAutoGenerateSidebar: true
 breadcrumbText: Android Filter Methods
 ---
 
-# Android API Reference - Filter Methods
+# Android API Reference - Frame Preprocessing Methods
 
+- [`AcquireListFrame`](#acquirelistframe)
+- [`enableFastMode`](#fast-mode)
+- [`getEnabledFastModeStatus`](#fast-mode)
 - [`enableFrameFilter`](#enableframefilter)
 - [`getEnabledFrameFilterStatus`](#enableframefilter)
 - [`setMaxFrameRate`](#setmaxframerate)
 - [`enableSensorControl`](#enablesensorcontrol)
 - [`getEnabledSensorControlStatus`](#enablesensorcontrol)
 - [`setSensorControlThreshold`](#setsensorcontrolthreshold)
+
+## AcquireListFrame
+
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
+
+```java
+    mCameraEnhancer.AcquireListFrame(true);
+```
+
+## Fast Mode
+
+This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
+
+```java
+    //To enable fast mode
+    mCamera.enableFastMode(true);
+    //To get the value(status) of fast mode
+    boolean x = mCamera.getEnabledFastModeStatus();
+```
 
 ## enableFrameFilter
 
