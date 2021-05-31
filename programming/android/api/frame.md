@@ -13,9 +13,7 @@ breadcrumbText: Android Frame
 
 This page is for `Frame` Class. `Frame` parameters store the frame data.
 
-## Method
-
-| Name | Type |
+| Method Name | Type |
 |------|------|
 | [`getData`](#getdata) | byte[] |
 | [`getWidth`](#getwidth) | int |
@@ -30,7 +28,7 @@ This page is for `Frame` Class. `Frame` parameters store the frame data.
 | [`getOriW`](#getoriw) | int |
 | [`getOriH`](#getorih) | int |
 
-### getData
+## getData
 
 Get the frame data in byte array.
 
@@ -39,7 +37,7 @@ Frame frame;
 byte[] data = frame.getData();
 ```
 
-### getWidth
+## getWidth
 
 Get the frame width in pixels.
 
@@ -47,7 +45,7 @@ Get the frame width in pixels.
 int width = frame.getWidth();
 ```
 
-### getHeight
+## getHeight
 
 Get the frame height in pixels.
 
@@ -55,7 +53,7 @@ Get the frame height in pixels.
 int height = frame.getHeight(); 
 ```
 
-### getStrides
+## getStrides
 
 Get the frame strides.
 
@@ -63,7 +61,7 @@ Get the frame strides.
 int[] strides = frame.getStrides();
 ```
 
-### getFormat
+## getFormat
 
 Get the frame pixel format.
 
@@ -71,7 +69,7 @@ Get the frame pixel format.
 int format = frame.getFormat();
 ```
 
-### getFrameId
+## getFrameId
 
 Get the frame ID.
 
@@ -79,7 +77,7 @@ Get the frame ID.
 int frameid = frame.getFrameId(); 
 ```
 
-### isFastFrame
+## isFastFrame
 
 Check whether the fast mode is enabled.
 
@@ -87,7 +85,7 @@ Check whether the fast mode is enabled.
 boolean isfastframe = frame.isFastFrame();
 ```
 
-### getFastFrameId
+## getFastFrameId
 
 Get the fast frame (cropped frame) ID.
 
@@ -95,7 +93,7 @@ Get the fast frame (cropped frame) ID.
 int fastframeid = frame.getFastFrameId();
 ```
 
-### getCropRect
+## getCropRect
 
 Get the cropped Rect data (Width & height)
 
@@ -103,7 +101,7 @@ Get the cropped Rect data (Width & height)
 Rect croprect = frame.getCropRect();
 ```
 
-### getOrientation
+## getOrientation
 
 Get the orientation (of cropped frame).
 
@@ -116,7 +114,7 @@ Get the orientation (of cropped frame).
 int orientation = frame.getOrientation();
 ```
 
-### getOriW
+## getOriW
 
 Get the original width of the cropped frame.
 
@@ -124,7 +122,7 @@ Get the original width of the cropped frame.
 int originalwidth = frame.getOriW();
 ```
 
-### getOriH
+## getOriH
 
 Get the original width of the cropped frame.
 

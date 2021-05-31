@@ -13,9 +13,7 @@ breadcrumbText: iOS FramePackage
 
 Return the frame decode results and additional information.
 
-## Attributes
-
-| Name | Type |
+| Attribute Name | Type |
 |------|------|
 | [`buffer`](#buffer) | NSData* |
 | [`width`](#width) | NSNumber* |

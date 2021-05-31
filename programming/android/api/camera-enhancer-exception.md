@@ -17,13 +17,11 @@ This is the page for `CameraEnhancerException` class. `CameraEnhancerException` 
 CameraEnhancerException cameraException
 ```
 
-## Method
-
-| Name | Type |
+| Method Name | Type |
 |------|------|
 | [`getErrorCode`](#geterrorcode) | int |
 
-### getErrorCode
+## getErrorCode
 
 ```java
 CameraEnhancerException cameraEnhancerException = null;

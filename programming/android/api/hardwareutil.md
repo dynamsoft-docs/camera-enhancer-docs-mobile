@@ -13,9 +13,7 @@ breadcrumbText: Android HardwareUtil
 
 This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
 
-## Attributes
-
-| Name | Value |
+| Attribute Name | Value |
 |------|------|
 | `DEVICEINFO_UNKNOWN` | -1 |
 | `DEVICE_LEVEL_HIGH` | 2 |
@@ -23,7 +21,7 @@ This page is for `HardwareUtil` page. `HardwareUtil` parameters are static value
 | `DEVICE_LEVEL_LOW` | 0 |
 | `DEVICE_LEVEL_UNKNOWN` | -1 |
 
-### Device level
+## [`Device level`]({{ site.android-cameraenhancer }}camera.html#getdevicelevel)
 
 ```java
 int level;

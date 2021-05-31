@@ -18,27 +18,25 @@ CameraView cameraView;
 mCameraEnhancer.addCameraView(cameraView);
 ```
 
-## Method
-
-| Name | Description |
+| Method Name | Description |
 |------|------|
 | [`addOverlay`](#addoverlay) | Add overlay |
 | [`removeOverlay`](#removeoverlay) | Remove overlay |
 | [`setBrushColor`](#setbrushcolor) | Set the brush color |
 
-### addOverlay
+## addOverlay
 
 ```java
 cameraView.addOverlay();
 ```
 
-### removeOverlay
+## removeOverlay
 
 ```java
 cameraView.removeOverlay();
 ```
 
-### setBrushColor
+## setBrushColor
 
 ```java
 cameraView.setBrushColor("Put your color string here");

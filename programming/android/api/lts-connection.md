@@ -13,9 +13,7 @@ breadcrumbText: Android CameraLTSConnectionParameters
 
 `DMLTSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the license tracking server.
 
-## Attributes
-
-| Name | Type |
+| Attribute Name | Type |
 |------|------|
 | [`mainServerURL`](#mainserverurl) | String |
 | [`standbyServerURL`](#standbyserverurl) | String |
@@ -27,7 +25,7 @@ breadcrumbText: Android CameraLTSConnectionParameters
 | [`limitedLicenseModules`](#limitedlicensemodules) | list |
 | [`chargeWay`](#chargeway) | int |
 
-### mainServerURL
+## mainServerURL
 
 The URL of the license tracking server.
 
@@ -44,7 +42,7 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.mainServerURL
 - **Remarks**
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
-### standbyServerURL
+## standbyServerURL
 
 The URL of the standby license tracking server.
 
@@ -61,7 +59,7 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.standbyServerURL
 - **Remarks**
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
-### handshakeCode
+## handshakeCode
 
 The handshake code.
 
@@ -75,7 +73,7 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.handshakeCode
 - **Default value**
     null
 
-### organizationID
+## organizationID
 
 The organization ID
 
@@ -89,7 +87,7 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.organizationID
 - **Default value**
     null
 
-### sessionPassword
+## sessionPassword
 
 The session password of the handshake code set in license tracking server.
 
@@ -103,7 +101,7 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.sessionPassword
 - **Default value**
     null
 
-### uuidGenerationMethod
+## uuidGenerationMethod
 
 Sets the method to generate UUID.
 
@@ -120,7 +118,7 @@ int com.dynamsoft.dce.DMLTSConnectionParameters.uuidGenerationMethod
 - **See also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
-### maxBufferDays
+## maxBufferDays
 
 Sets the max days to buffer the license info.
 
@@ -134,7 +132,7 @@ int com.dynamsoft.dce.DMLTSConnectionParameters.maxBufferDays
 - **Default value**
     7
 
-### limitedLicenseModules
+## limitedLicenseModules
 
 Sets the license modules to use.
 
@@ -151,7 +149,7 @@ List<Integer> com.dynamsoft.dce.DMLTSConnectionParameters.limitedLicenseModules
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
-### chargeWay
+## chargeWay
 
 Sets the charge way.
 

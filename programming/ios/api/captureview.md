@@ -11,11 +11,9 @@ breadcrumbText: iOS DCECaptureView Class
 
 # DCECaptureView
 
-DCECaptureView is the class that
+DCECaptureView is the class that enable user to add elements on camera view conveniently.
 
-## Method
-
-| Name | Description |
+| Method Name | Description |
 |------|------|
 | [`addTorch`](#addtorch) | Add torch controlling icon |
 | [`addOverlay`](#addoverlay) | Add overlay |
