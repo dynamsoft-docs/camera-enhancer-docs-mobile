@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: Android Regular Camera Methods
 ---
 
-# API Reference - Regular Camera Methods
+# Android API Reference - Regular Camera Methods
 
 - [`getDeviceLevel`](#getdevicelevel)
 - [`setAutoModeLevelParam`](#setautomodelevelparam)

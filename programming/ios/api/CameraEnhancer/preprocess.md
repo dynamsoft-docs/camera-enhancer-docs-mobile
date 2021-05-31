@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: iOS Filter Setting
 ---
 
-# iOS API Reference - Filter Setting
+# iOS API Reference - Frame Preprocessing Methods
 
 - [`acquireListFrame`](#acquirelistframe)
 - [`enableFastMode`](#enablefastmode)

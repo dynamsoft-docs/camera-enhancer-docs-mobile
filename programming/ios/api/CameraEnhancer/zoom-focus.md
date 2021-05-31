@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: iOS Zoom and Focus
 ---
 
-# iOS API Reference - Zoom & Focus Setting
+# iOS API Reference - Focus & Zoom Methods
 
 - [`setAutoFocusPosition`](#setautofocusposition)
 - [`setManualFocusPosition`](#setmanualfocusposition)

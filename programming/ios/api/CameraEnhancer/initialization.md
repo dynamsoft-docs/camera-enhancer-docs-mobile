@@ -9,9 +9,21 @@ needGenerateH3Content: true
 breadcrumbText: iOS CameraEnhancer Class
 ---
 
-# CameraEnhancer Class
+# iOS CameraEnhancer Class
 
 `CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
+
+For Objective-C users:
+
+```objectivec
+@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+```
+
+For Swift users:
+
+```swift
+var dce:DynamsoftCameraEnhancer! = nil
+```
 
 ## CameraEnhancer Methods
 

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: iOS Basic Setting
 ---
 
-# iOS API Reference - Basic Setting
+# iOS API Reference - Regular Camera Methods
 
 - [`updateCameraSettingFromJson`](#updatecamerasettingfromjson)
 - [`updateCameraSettingFromFile`](#updatecamerasettingfromfile)
