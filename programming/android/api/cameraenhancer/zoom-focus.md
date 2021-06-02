@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - Zoom & Focus Setting
-description: This is the documentation - Android API references - Zoom & Focus Setting page of Dynamsoft Camera Enhancer.
+title: Dynamsoft Camera Enhancer - Android API references - Focus & Zoom Methods
+description: This is the documentation - Android API references - Focus & Zoom Methods page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Focus, Zoom, Android API Reference
 needAutoGenerateSidebar: true
 breadcrumbText: Android Zoom and Focus
 ---
 
-# Android API Reference - Zoom & Focus Setting
+# Android API Reference - Focus & Zoom Methods
 
 - [`setAutoFocusPosition`](#setautofocusposition)
 - [`setManualFocusPosition`](#setautofocusposition)
@@ -88,7 +88,8 @@ To get status (on/off) of Default autofocus mode:
 ## enableRegularAutoFocus
 
 Regular auto focus is an advanced setting that enables the camera to auto focus every 3 seconds. It is contained in DCE auto focus. When DCE auto focus is enabled, regular auto focus is enabled as well. To turn off regular auto focus mode:
-```java 
+
+```java
     mCameraEnhancer.enableRegularAutoFocus(false);
 ```
 

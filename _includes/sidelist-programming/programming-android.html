@@ -2,11 +2,22 @@
     <ul>
         {%- if page.url contains '/android/' or page.url contains '/android-v' -%}
         <li><a href="{{ site.android-guide }}guide.html" class="otherLinkColour">User Guide</a></li>
-        <li><a href="{{ site.android-api }}api.html" class="otherLinkColour">API Reference</a>
+        <li><a href="{{ site.android-api }}" class="otherLinkColour">API Reference</a>
             <ul>
-                <li><a href="{{ site.android-basic-setting }}basic-setting.html" class="otherLinkColour">Basic Settings</a></li>
-                <li><a href="{{ site.android-filter-setting }}filter.html" class="otherLinkColour">Filter Settings</a></li>
-                <li><a href="{{ site.android-zoom-setting }}zoom-focus.html" class="otherLinkColour">Zoom & Focus Settings</a></li>
+                <li><a href="{{ site.android-cameraenhancer }}initialization.html" class="otherLinkColour">CameraEnhancer</a>
+                    <ul>
+                        <li><a href="{{ site.android-cameraenhancer }}initialization.html" class="otherLinkColour">Initialization</a></li>                                
+                        <li><a href="{{ site.android-cameraenhancer }}preprocess.html" class="otherLinkColour">Frame Processing Methods</a></li>
+                        <li><a href="{{ site.android-cameraenhancer }}camera.html" class="otherLinkColour">Regular Camera Methods</a></li>
+                        <li><a href="{{ site.android-cameraenhancer }}zoom-focus.html" class="otherLinkColour">Focus & Zoom Methods</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ site.android-api }}lts-connection.html" class="otherLinkColour">DMLTSConnectionParameters</a></li>
+                <li><a href="{{ site.android-api }}frame.html" class="otherLinkColour">Frame</a></li>
+                <li><a href="{{ site.android-api }}hardwareutil.html" class="otherLinkColour">HardwareUtil</a></li>
+                <li><a href="{{ site.android-api }}cameraview.html" class="otherLinkColour">CameraView</a></li>
+                <li><a href="{{ site.android-api }}camera-enhancer-exception.html" class="otherLinkColour">CameraEnhancerException</a></li>
+                <!--<li><a href="{{ site.android-interface }}" class="otherLinkColour">Interface</a></li>-->
             </ul>
         </li>
         <li><a href="{{ site.android-release-note }}release-note.html" class="otherLinkColour">Release Notes</a></li>

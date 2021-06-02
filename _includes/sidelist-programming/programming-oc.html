@@ -2,11 +2,20 @@
     <ul>
         {%- if page.url contains '/ios/' or page.url contains '/ios-v' -%}
         <li><a href="{{ site.ios-guide }}guide.html" class="otherLinkColour">User Guide</a></li>
-        <li><a href="{{ site.ios-api }}api.html" class="otherLinkColour">API Reference</a>
+        <li><a href="{{ site.ios-api }}" class="otherLinkColour">API Reference</a>
             <ul>
-                <li><a href="{{ site.ios-basic-setting }}basic-setting.html" class="otherLinkColour">Basic Settings</a></li>
-                <li><a href="{{ site.ios-filter-setting }}filter.html" class="otherLinkColour">Filter Settings</a></li>
-                <li><a href="{{ site.ios-zoom-setting }}zoom-focus.html" class="otherLinkColour">Zoom & Focus Settings</a></li>
+                <li><a href="{{ site.ios-cameraenhancer }}initialization.html" class="otherLinkColour">CameraEnhancer</a>
+                    <ul>
+                        <li><a href="{{ site.ios-cameraenhancer }}initialization.html" class="otherLinkColour">Initialization</a></li>                                
+                        <li><a href="{{ site.ios-cameraenhancer }}preprocess.html" class="otherLinkColour">Frame Processing Methods</a></li>
+                        <li><a href="{{ site.ios-cameraenhancer }}camera.html" class="otherLinkColour">Regular Camera Methods</a></li>
+                        <li><a href="{{ site.ios-cameraenhancer }}zoom-focus.html" class="otherLinkColour">Focus & Zoom Methods</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ site.ios-api }}idmltsconnection.html" class="otherLinkColour">iDMLTSConnectionParameters</a></li>
+                <li><a href="{{ site.ios-api }}framepackage.html" class="otherLinkColour">FramePackage</a></li>
+                <li><a href="{{ site.ios-api }}captureview.html" class="otherLinkColour">DCECaptureView</a></li>
+                <!--<li><a href="{{ site.ios-interface }}" class="otherLinkColour">Interface</a></li>-->
             </ul>
         </li>
         <li><a href="{{ site.ios-release-note }}release-note.html" class="otherLinkColour">Release Notes</a></li>

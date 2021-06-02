@@ -1,20 +1,18 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - Basic Settings
+title: Dynamsoft Camera Enhancer - Android API references - Regular Camera Methods
 description: This is the documentation - Android API references - Basic Settings page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android API references, Basic Settings
+keywords:  Camera Enhancer, Android API references, Regular Camera Methods
 needAutoGenerateSidebar: true
-breadcrumbText: Android Basic Setting
+breadcrumbText: Android Regular Camera Methods
 ---
 
-# API Reference - Basic Setting
+# Android API Reference - Regular Camera Methods
 
 - [`getDeviceLevel`](#getdevicelevel)
 - [`setAutoModeLevelParam`](#setautomodelevelparam)
 - [`updateCameraSetting`](#updatecamerasetting)
 - [`getVersion`](#getversion)
-- [`enableFastMode`](#fast-mode)
-- [`getEnabledFastModeStatus`](#fast-mode)
 - [`getCameraDesireState`](#camera-state)
 - [`setCameraDesireState`](#camera-state)
 - [`getCameraCurrentState`](#camera-state)
@@ -24,7 +22,6 @@ breadcrumbText: Android Basic Setting
 - [`stopScanning`](#stopscanning-and-startscanning)
 - [`addCameraListener`](#addcameralistener)
 - [`removeCameraListener`](#addcameralistener)
-- [`AcquireListFrame`](#acquirelistframe)
 - [`setTorchDesiredState`](#torch-state)
 - [`getTorchDesiredState`](#torch-state)
 - [`getTorchCurrentState`](#torch-state)
@@ -37,7 +34,7 @@ breadcrumbText: Android Basic Setting
 
 ## getDeviceLevel
 
-This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high level mobile devices. 
+This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high-level mobile devices.
 
 ```java
     mCamera.getDeviceLevel();
@@ -105,24 +102,14 @@ Users can check the current DCE version by using this API.
     mCamera.getVersion();
 ```
 
-## Fast Mode
-    
-This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
-
-```java
-    //To enable fast mode
-    mCamera.enableFastMode(true);
-    //To get the value(status) of fast mode
-    boolean x = mCamera.getEnabledFastModeStatus();
-```
-
 ## Camera State
-    
-Get the current camera status (on/off). 
+
+Get the current camera status (on/off).
+
 ```java
     mCamera.getCameraCurrentState();
 ```
-    
+
 Get the cameras desired status (on/off).
 
 ```java
@@ -180,14 +167,6 @@ Remove Camera Listener
 
 ```java
     mCamera.removeCameraListener();
-```
-
-## AcquireListFrame
-
-This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
-
-```java
-    mCameraEnhancer.AcquireListFrame(true);
 ```
 
 ## Torch State

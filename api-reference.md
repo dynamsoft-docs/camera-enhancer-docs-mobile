@@ -11,5 +11,5 @@ breadcrumbText: API reference for all edition
 
 # API Reference
 
-- [API Reference for Android Edition]({{site.android-api}}api.html)
-- [API Reference for iOS Edition]({{site.ios-api}}api.html)
+- [API Reference for Android Edition]({{site.android-api}})
+- [API Reference for iOS Edition]({{site.ios-api}})
