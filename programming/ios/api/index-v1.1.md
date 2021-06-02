@@ -5,7 +5,7 @@ description: This is the documentation - iOS API references page of Dynamsoft Ca
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: iOS API
+breadcrumbText: iOS API v1.1
 ---
 
 # ios API reference
@@ -17,5 +17,5 @@ breadcrumbText: iOS API
   - [Regular camera Methods]({{ site.ios-cameraenhancer }}camera.html)
   - [Frame preprocessing Methods]({{ site.ios-cameraenhancer }}preprocessing.html)
   - [Focus & Zoom Methods]({{ site.ios-cameraenhancer }}zoom-focus.html)
-- [`iDMLTSConnectionParameters`]({{site.ios-api}}ltsconnection.html)
+- [`iDCELTSConnectionParameters`]({{site.ios-api}}ltsconnection.html)
 - [`FramePackage`]({{site.ios-api}}frame.html)
