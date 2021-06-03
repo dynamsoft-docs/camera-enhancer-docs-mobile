@@ -18,4 +18,5 @@ breadcrumbText: iOS API
   - [Frame preprocessing Methods]({{ site.ios-cameraenhancer }}preprocessing.html)
   - [Focus & Zoom Methods]({{ site.ios-cameraenhancer }}zoom-focus.html)
 - [`iDMLTSConnectionParameters`]({{site.ios-api}}ltsconnection.html)
-- [`FramePackage`]({{site.ios-api}}frame.html)
+- [`FramePackage`]({{site.ios-api}}framepackage.html)
+- [`DCECaptureView`]({{site.ios-api}}captureview.html)
