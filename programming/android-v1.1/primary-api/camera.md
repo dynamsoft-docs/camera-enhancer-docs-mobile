@@ -315,9 +315,9 @@ Java:
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO);
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON);
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
+    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO)
+    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON)
+    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF)
 ```
 
 ## addTorchListener
@@ -355,31 +355,65 @@ Java:
 Kotlin:
 
 ```kotlin
-    
+    mCameraEnhancer!!.cameraPosition
 ```
 
 To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front camera and use `CameraPosition.CAMERA_POSITION_WORLD` to activate back camera
 
+Java:
+
 ```java
     mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
+    mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD);
+```
+
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER)
+    mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD)
 ```
 
 ## Resolution Settings
 
 These APIs are created for you to get or change camera resolution settings.
 
+Java:
+
 ```java
     mCameraEnhancer.getResolution();
 ```
 
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.resolution
+```
+
 Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available on the device, the device will run the closest resolution to the chosen resolution.
+
+Java:
 
 ```java
     mCameraEnhancer.setResolution(Resolution.RESOLUTION_1080P);
 ```
 
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.setResolution(Resolution.RESOLUTION_1080P)
+```
+
 Get all available resolutions that can be set to the current camera.
+
+Java:
 
 ```java
     mCameraEnhancer.getResolutionList();
+```
+
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.resolutionList
 ```

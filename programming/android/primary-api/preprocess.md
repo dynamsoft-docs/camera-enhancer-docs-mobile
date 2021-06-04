@@ -9,16 +9,6 @@ breadcrumbText: Android Filter Methods
 
 # Android API Reference - Frame Preprocessing Methods
 
-- [`AcquireListFrame`](#acquirelistframe)
-- [`enableFastMode`](#fast-mode)
-- [`getEnabledFastModeStatus`](#fast-mode)
-- [`enableFrameFilter`](#enableframefilter)
-- [`getEnabledFrameFilterStatus`](#enableframefilter)
-- [`setMaxFrameRate`](#setmaxframerate)
-- [`enableSensorControl`](#enablesensorcontrol)
-- [`getEnabledSensorControlStatus`](#enablesensorcontrol)
-- [`setSensorControlThreshold`](#setsensorcontrolthreshold)
-
 ## AcquireListFrame
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.

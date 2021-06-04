@@ -9,29 +9,6 @@ breadcrumbText: Android Regular Camera Methods
 
 # Android API Reference - Regular Camera Methods
 
-- [`getDeviceLevel`](#getdevicelevel)
-- [`setAutoModeLevelParam`](#setautomodelevelparam)
-- [`updateCameraSetting`](#updatecamerasetting)
-- [`getVersion`](#getversion)
-- [`getCameraDesireState`](#camera-state)
-- [`setCameraDesireState`](#camera-state)
-- [`getCameraCurrentState`](#camera-state)
-- [`pauseCamera`](#pausecamera-and-resumecamera)
-- [`resumeCamera`](#pausecamera-and-resumecamera)
-- [`startScanning`](#stopscanning-and-startscanning)
-- [`stopScanning`](#stopscanning-and-startscanning)
-- [`addCameraListener`](#addcameralistener)
-- [`removeCameraListener`](#addcameralistener)
-- [`setTorchDesiredState`](#torch-state)
-- [`getTorchDesiredState`](#torch-state)
-- [`getTorchCurrentState`](#torch-state)
-- [`addTorchListener`](#addtorchlistener)
-- [`getCameraPosition`](#camera-position)
-- [`switchCameraPosition`](#camera-position)
-- [`getResolution`](#resolution-settings)
-- [`setResolution`](#resolution-settings)
-- [`getResolutionList`](#resolution-settings)
-
 ## getDeviceLevel
 
 This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high-level mobile devices.

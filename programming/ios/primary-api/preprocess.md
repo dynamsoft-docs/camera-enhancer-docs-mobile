@@ -9,13 +9,6 @@ breadcrumbText: iOS Filter Setting
 
 # iOS API Reference - Frame Preprocessing Methods
 
-- [`acquireListFrame`](#acquirelistframe)
-- [`enableFastMode`](#enablefastmode)
-- [`enableSensorControl`](#enablesensorcontrol)
-- [`setSensorControlThreshold`](#setsensorcontrolthreshold)
-- [`enableFrameFilter`](#enableframefilter)
-- [`setMaxFrameRate`](#setmaxframerate)
-
 ## acquireListFrame
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.

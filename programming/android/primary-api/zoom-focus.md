@@ -9,22 +9,6 @@ breadcrumbText: Android Zoom and Focus
 
 # Android API Reference - Focus & Zoom Methods
 
-- [`setAutoFocusPosition`](#setautofocusposition)
-- [`setManualFocusPosition`](#setautofocusposition)
-- [`setFocalLength`](#setfocallength)
-- [`enableDCEAutoFocus`](#enabledceautofocus)
-- [`getEnabledDCEAutoFocusStatus`](#enabledceautofocus)
-- [`enableDefaultAutoFocus`](#enabledefaultautofocus)
-- [`getEnabledDefaultAutoFocusStatus`](#enabledefaultautofocus)
-- [`enableRegularAutoFocus`](#enableregularautofocus)
-- [`getEnabledRegularAutoFocusStatus`](#enableregularautofocus)
-- [`setRegularAutoFocusParam`](#setregularautofocusparam)
-- [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange)
-- [`getEnabledAutoFocusOnSharpnessChangeStatus`](#enableautofocusonsharpnesschange)
-- [`enableAutoZoom`](#enableautozoom)
-- [`getEnabledAutoZoomStatus`](#enableautozoom)
-- [`setZoomFactor`](#setzoomfactor)
-
 ## setAutoFocusPosition
 
 Set the position that you want to auto focus at. This setting will replace the default focus value and always focus on the set point.

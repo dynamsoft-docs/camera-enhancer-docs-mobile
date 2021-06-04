@@ -9,16 +9,6 @@ breadcrumbText: iOS Zoom and Focus
 
 # iOS API Reference - Focus & Zoom Methods
 
-- [`setAutoFocusPosition`](#setautofocusposition)
-- [`setManualFocusPosition`](#setmanualfocusposition)
-- [`setFocalLength`](#setfocallength)
-- [`enableDCEAutoFocus`](#enabledceautofocus)
-- [`enableDefaultAutoFocus`](#enabledefaultautofocus)
-- [`enableRegularAutoFocus`](#enableregularautofocus)
-- [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange)
-- [`enableAutoZoom`](#enableautozoom)
-- [`setZoomFactor`](#setzoomfactor)
-
 ## setAutoFocusPosition
 
 Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the set point. 

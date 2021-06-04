@@ -9,28 +9,6 @@ breadcrumbText: iOS Basic Setting
 
 # iOS API Reference - Regular Camera Methods
 
-- [`updateCameraSettingFromJson`](#updatecamerasettingfromjson)
-- [`updateCameraSettingFromFile`](#updatecamerasettingfromfile)
-- [`getVersion`](#getversion)
-- [`getCameraDesiredState`](#camera-state)
-- [`setCameraDesiredState`](#camera-state)
-- [`getCameraCurrentState`](#camera-state)
-- [`pauseCamera`](#pausecamera-and-resumecamera)
-- [`resumeCamera`](#pausecamera-and-resumecamera)
-- [`startScanning`](#stopscanning-and-startscanning)
-- [`stopScanning`](#stopscanning-and-startscanning)
-- [`addCameraListener`](#addcameralistener)
-- [`removeCameraListener`](#addcameralistener)
-- [`setTorchDesiredState`](#torch-state)
-- [`getTorchDesiredState`](#torch-state)
-- [`getTorchCurrentState`](#torch-state)
-- [`addTorchListener`](#addtorchlistener)
-- [`getCameraPosition`](#camera-position)
-- [`switchCameraPosition`](#camera-position)
-- [`getResolution`](#resolution-settings)
-- [`setResolution`](#resolution-settings)
-- [`getResolutionList`](#resolution-settings)
-
 ## updateCameraSettingFromJson
 
 There are Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)

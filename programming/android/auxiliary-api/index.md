@@ -12,8 +12,8 @@ breadcrumbText: Android Auxiliary API
 
 ## Class
 
-- [`DMLTSConnectionParameters`]({{site.android-api}}lts-connection.html)
-- [`Frame`]({{site.android-api}}frame.html)
-- [`HardwareUtil`]({{site.android-api}}hardwareutil.html)
-- [`CameraView`]({{site.android-api}}cameraview.html)
-- [`CameraEnhancerException`]({{site.android-api}}camera-enhancer-exception.html)
+- [`DMLTSConnectionParameters`]({{site.android-api-auxiliary}}lts-connection.html)
+- [`Frame`]({{site.android-api-auxiliary}}frame.html)
+- [`HardwareUtil`]({{site.android-api-auxiliary}}hardwareutil.html)
+- [`CameraView`]({{site.android-api-auxiliary}}cameraview.html)
+- [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
