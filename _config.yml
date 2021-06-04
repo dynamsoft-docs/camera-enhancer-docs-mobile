@@ -14,7 +14,8 @@ trouble-shooting: /camera-enhancer/docs/trouble-shooting/
 
 ios: /camera-enhancer/docs/programming/ios/
 ios-guide: /camera-enhancer/docs/programming/ios/guide/
-ios-api: /camera-enhancer/docs/programming/ios/api/
+ios-api: /camera-enhancer/docs/programming/ios/primary-api/
+ios-api-auxiliary: /camera-enhancer/docs/programming/ios/auxiliary-api/
 ios-release-note: /camera-enhancer/docs/programming/ios/release-note/
 ios-cameraenhancer: /camera-enhancer/docs/programming/ios/api/cameraenhancer/
 

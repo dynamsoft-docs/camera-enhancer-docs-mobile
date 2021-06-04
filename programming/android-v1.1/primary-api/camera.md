@@ -346,8 +346,16 @@ Kotlin:
 DCE will use the back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
 
+Java:
+
 ```java
     mCameraEnhancer.getCameraPosition();
+```
+
+Kotlin:
+
+```kotlin
+    
 ```
 
 To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front camera and use `CameraPosition.CAMERA_POSITION_WORLD` to activate back camera
