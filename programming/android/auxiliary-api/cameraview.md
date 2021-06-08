@@ -26,18 +26,42 @@ mCameraEnhancer.addCameraView(cameraView);
 
 ## addOverlay
 
+Java:
+
 ```java
 cameraView.addOverlay();
 ```
 
+Kotlin:
+
+```kotlin
+cameraView!!.addOverlay()
+```
+
 ## removeOverlay
+
+Java:
 
 ```java
 cameraView.removeOverlay();
 ```
 
+Kotlin:
+
+```kotlin
+cameraView!!.removeOverlay()
+```
+
 ## setBrushColor
+
+Java:
 
 ```java
 cameraView.setBrushColor("Put your color string here");
+```
+
+Kotlin:
+
+```kotlin
+cameraView!!.setBrushColor("Put your color string here")
 ```

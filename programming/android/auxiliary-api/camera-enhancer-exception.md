@@ -13,8 +13,16 @@ breadcrumbText: Android CameraEnhancerException
 
 This is the page for `CameraEnhancerException` class. `CameraEnhancerException` is the exception for signaling camera enhancer errors.
 
+Java:
+
 ```java
 CameraEnhancerException cameraException
+```
+
+Kotlin:
+
+```kotlin
+var cameraException: CameraEnhancerException? = null
 ```
 
 | Method Name | Type |
@@ -23,7 +31,16 @@ CameraEnhancerException cameraException
 
 ## getErrorCode
 
+Java:
+
 ```java
 CameraEnhancerException cameraEnhancerException = null;
 cameraEnhancerException.getErrorCode();
+```
+
+Kotlin:
+
+```kotlin
+var cameraException: CameraEnhancerException? = null
+cameraException!!.errorCode
 ```

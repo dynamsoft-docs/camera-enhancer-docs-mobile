@@ -38,13 +38,13 @@ Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are sett
 Java:
 
 ```java
-    mCameraEnhancer.setAutoModeLevelParam(int,int,int,int);
+    mCameraEnhancer.setAutoModeLevelParam(cpuMHz1,cpuMHz2,ramMB1,ramMB2);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setAutoModeLevelParam(int,int,int,int)
+    mCameraEnhancer!!.setAutoModeLevelParam(cpuMHz1,cpuMHz2,ramMB1,ramMB2)
 ```
 
 ## updateCameraSetting
@@ -323,32 +323,74 @@ Kotlin:
 DCE will use the back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
 
+Java:
+
 ```java
     mCameraEnhancer.getCameraPosition();
 ```
 
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.cameraPosition
+```
+
 To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front camera and use `CameraPosition.CAMERA_POSITION_WORLD` to activate back camera
+
+Java:
 
 ```java
     mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
+    mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD);
+```
+
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER)
+    mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD)
 ```
 
 ## Resolution Settings
 
 These APIs are created for you to get or change camera resolution settings.
 
+Java:
+
 ```java
     mCameraEnhancer.getResolution();
 ```
 
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.resolution
+```
+
 Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available on the device, the device will run the closest resolution to the chosen resolution.
+
+Java:
 
 ```java
     mCameraEnhancer.setResolution(Resolution.RESOLUTION_1080P);
 ```
 
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.setResolution(Resolution.RESOLUTION_1080P)
+```
+
 Get all available resolutions that can be set to the current camera.
+
+Java:
 
 ```java
     mCameraEnhancer.getResolutionList();
+```
+
+Kotlin:
+
+```kotlin
+    mCameraEnhancer!!.resolutionList
 ```

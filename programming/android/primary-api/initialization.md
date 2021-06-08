@@ -13,8 +13,16 @@ breadcrumbText: Android CameraEnhancer Class
 
 `CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
 
+Java:
+
 ```java
 CameraEnhancer mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+```
+
+Kotlin:
+
+```kotlin
+mCameraEnhancer = CameraEnhancer(this@MainActivity)
 ```
 
 ## CameraEnhancer Methods

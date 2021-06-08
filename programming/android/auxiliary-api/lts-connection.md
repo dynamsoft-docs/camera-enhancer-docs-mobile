@@ -13,6 +13,20 @@ breadcrumbText: Android CameraLTSConnectionParameters
 
 `DMLTSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the license tracking server.
 
+Java:
+
+```Java
+private com.dynamsoft.dce.DMLTSConnectionParameters dceParameters;
+dceParameters = new com.dynamsoft.dce.DMLTSConnectionParameters();
+```
+
+Kotlin:
+
+```kotlin
+private var dbrParameters: com.dynamsoft.dbr.DMLTSConnectionParameters? = null
+dbrParameters = com.dynamsoft.dbr.DMLTSConnectionParameters()
+```
+
 | Attribute Name | Type |
 |------|------|
 | [`mainServerURL`](#mainserverurl) | String |
@@ -29,8 +43,16 @@ breadcrumbText: Android CameraLTSConnectionParameters
 
 The URL of the license tracking server.
 
+Java:
+
 ```java
-String com.dynamsoft.dce.DMLTSConnectionParameters.mainServerURL
+dbrParameters.mainServerURL = "";
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.mainServerURL = ""
 ```
 
 - **Value range**
@@ -46,8 +68,16 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.mainServerURL
 
 The URL of the standby license tracking server.
 
+Java:
+
 ```java
-String com.dynamsoft.dce.DMLTSConnectionParameters.standbyServerURL
+dbrParameters.standbyServerURL = "";
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.standbyServerURL = ""
 ```
 
 - **Value range**
@@ -63,8 +93,16 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.standbyServerURL
 
 The handshake code.
 
+Java:
+
 ```java
-String com.dynamsoft.dce.DMLTSConnectionParameters.handshakeCode
+dbrParameters.handshakeCode = "";
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.handshakeCode = ""
 ```
 
 - **Value range**
@@ -77,8 +115,16 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.handshakeCode
 
 The organization ID
 
+Java:
+
 ```java
-String com.dynamsoft.dce.DMLTSConnectionParameters.organizationID
+dbrParameters.organizationID = "";
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.organizationID = ""
 ```
 
 - **Value range**
@@ -91,8 +137,16 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.organizationID
 
 The session password of the handshake code set in license tracking server.
 
+Java:
+
 ```java
-String com.dynamsoft.dce.DMLTSConnectionParameters.sessionPassword
+dbrParameters.sessionPassword = "";
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.sessionPassword = ""
 ```
 
 - **Value range**
@@ -105,8 +159,16 @@ String com.dynamsoft.dce.DMLTSConnectionParameters.sessionPassword
 
 Sets the method to generate UUID.
 
+Java:
+
 ```java
-int com.dynamsoft.dce.DMLTSConnectionParameters.uuidGenerationMethod
+dbrParameters.uuidGenerationMethod = int;
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.uuidGenerationMethod = int
 ```
 
 - **Value range**
@@ -122,8 +184,16 @@ int com.dynamsoft.dce.DMLTSConnectionParameters.uuidGenerationMethod
 
 Sets the max days to buffer the license info.
 
+Java:
+
 ```java
-int com.dynamsoft.dce.DMLTSConnectionParameters.maxBufferDays
+dbrParameters.maxBufferDays = int;
+```
+
+Kotlin:
+
+```kotlin
+dbrParameters!!.maxBufferDays = int
 ```
 
 - **Value range**
@@ -137,7 +207,13 @@ int com.dynamsoft.dce.DMLTSConnectionParameters.maxBufferDays
 Sets the license modules to use.
 
 ```java
-List<Integer> com.dynamsoft.dce.DMLTSConnectionParameters.limitedLicenseModules
+dbrParameters.limitedLicenseModules = list<int>;
+```
+
+Kotlin:
+
+```kotlin
+dceParameters!!.limitedLicenseModules = list<int>
 ```
 
 - **Value range**
@@ -153,8 +229,16 @@ List<Integer> com.dynamsoft.dce.DMLTSConnectionParameters.limitedLicenseModules
 
 Sets the charge way.
 
+Java:
+
 ```java
-int com.dynamsoft.dce.DMLTSConnectionParameters.chargeWay
+dbrParameters.maxBufferDays = int;
+```
+
+Kotlin:
+
+```kotlin
+dceParameters!!.chargeWay = int
 ```
 
 - **Value range**

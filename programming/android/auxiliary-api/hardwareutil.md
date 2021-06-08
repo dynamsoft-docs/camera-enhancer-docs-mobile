@@ -23,11 +23,23 @@ This page is for `HardwareUtil` page. `HardwareUtil` parameters are static value
 
 ## [`Device level`]({{ site.android-cameraenhancer }}camera.html#getdevicelevel)
 
+Java:
+
 ```java
 int level;
 level = mCamera.getDeviceLevel();
 if (level == HardwareUtil.DEVICE_LEVEL_LOW){
     mCamera.enableFrameFilter(true);
     mCamera.enableDCEAutoFocus(true);
+}
+```
+
+Kotlin:
+
+```kotlin
+var level: Int? = mCameraEnhancer!!.deviceLevel
+if(level == HardwareUtil.DEVICE_LEVEL_LOW){
+    mCameraEnhancer!!.enableFrameFilter(true)
+    mCameraEnhancer!!.enableDCEAutoFocus(true)
 }
 ```
