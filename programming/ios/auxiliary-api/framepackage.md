@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, iOS FramePackage Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: iOS FramePackage
+breadcrumbText: iOS FramePackage Class
 ---
 
 # FramePackage

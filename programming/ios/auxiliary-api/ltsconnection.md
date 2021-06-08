@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS iDCELTSConnectionParameters Class
-description: This is the documentation - iOS iDCELTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS iDCELTSConnectionParameters Class
+title: Dynamsoft Camera Enhancer - iOS iDMLTSConnectionParameters Class
+description: This is the documentation - iOS iDMLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, iOS iDMLTSConnectionParameters Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: iOS iDCELTSConnectionParameters
+breadcrumbText: iOS iDMLTSConnectionParameters Class
 ---
 
-# iDCELTSConnectionParameters
+# iDMLTSConnectionParameters
 
 Defines a struct to configure the parameters to connect to the license tracking server.
 

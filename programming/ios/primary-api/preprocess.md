@@ -1,20 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Filter setting
-description: This is the documentation - Objective-C & Swift API references - Filter setting page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Objective-C & Swift, API references, Filter
+title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Frame Preprocessing Methods
+description: This is the documentation - Objective-C & Swift API references - Frame Preprocessing Methods page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Objective-C & Swift, API references, Frame Preprocessing Methods
 needAutoGenerateSidebar: true
-breadcrumbText: iOS Filter Setting
+breadcrumbText: iOS Frame Preprocessing Methods
 ---
 
 # iOS API Reference - Frame Preprocessing Methods
-
-- [`acquireListFrame`](#acquirelistframe)
-- [`enableFastMode`](#enablefastmode)
-- [`enableSensorControl`](#enablesensorcontrol)
-- [`setSensorControlThreshold`](#setsensorcontrolthreshold)
-- [`enableFrameFilter`](#enableframefilter)
-- [`setMaxFrameRate`](#setmaxframerate)
 
 ## acquireListFrame
 
