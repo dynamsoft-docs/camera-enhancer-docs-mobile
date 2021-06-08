@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android, CameraView
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android CameraView
+breadcrumbText: Android CameraView Class
 ---
 
 # CameraView

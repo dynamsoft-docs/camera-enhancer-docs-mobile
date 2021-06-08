@@ -248,7 +248,7 @@ Set the zoom factor (float).
 Java:
 
 ```java
-    mCameraEnhancer.setZoomFactor(1.5);
+    mCameraEnhancer.setZoomFactor(1.5f);
 ```
 
 Kotlin:

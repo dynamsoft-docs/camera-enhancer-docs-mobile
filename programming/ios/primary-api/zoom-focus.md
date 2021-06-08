@@ -4,14 +4,14 @@ title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Focus & 
 description: This is the documentation - Objective-C & Swift API references - Focus & Zoom Setting page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Objective-C & Swift API references, Zoom, Focus
 needAutoGenerateSidebar: true
-breadcrumbText: iOS Zoom and Focus
+breadcrumbText: iOS Focus & Zoom Methods
 ---
 
 # iOS API Reference - Focus & Zoom Methods
 
 ## setAutoFocusPosition
 
-Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the set point. 
+Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the set point.
 
 Objective-C:
 

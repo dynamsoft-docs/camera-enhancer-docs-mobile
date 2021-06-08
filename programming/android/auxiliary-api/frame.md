@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android, Frame
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android Frame
+breadcrumbText: Android Frame Class
 ---
 
 # Frame

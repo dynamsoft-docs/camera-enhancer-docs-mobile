@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android, CameraEnhancerException
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android CameraEnhancerException
+breadcrumbText: Android CameraEnhancerException Class
 ---
 
 # CameraEnhancerException

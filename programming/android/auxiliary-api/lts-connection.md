@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android CameraLTSConnectionParameters Class
-description: This is the documentation - Android CameraLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android CameraLTSConnectionParameters Class
+title: Dynamsoft Camera Enhancer - Android DMLTSConnectionParameters Class
+description: This is the documentation - Android DMLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android DMLTSConnectionParameters Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android CameraLTSConnectionParameters
+breadcrumbText: Android DMLTSConnectionParameters Class
 ---
 
 # DMLTSConnectionParameters
@@ -172,13 +172,13 @@ dbrParameters!!.uuidGenerationMethod = int
 ```
 
 - **Value range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
 
 - **Default value**
     DM_UUIDGM_RANDOM
 
 - **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
 
 ## maxBufferDays
 
@@ -202,29 +202,6 @@ dbrParameters!!.maxBufferDays = int
 - **Default value**
     7
 
-## limitedLicenseModules
-
-Sets the license modules to use.
-
-```java
-dbrParameters.limitedLicenseModules = list<int>;
-```
-
-Kotlin:
-
-```kotlin
-dceParameters!!.limitedLicenseModules = list<int>
-```
-
-- **Value range**
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
-
-- **Default value**
-    null
-
-- **See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-
 ## chargeWay
 
 Sets the charge way.
@@ -242,10 +219,10 @@ dceParameters!!.chargeWay = int
 ```
 
 - **Value range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
 
 - **Default value**
     DM_CW_AUTO
 
 - **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)
+    [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)

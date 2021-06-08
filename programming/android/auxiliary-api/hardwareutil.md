@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android, HardwareUtil
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android HardwareUtil
+breadcrumbText: Android HardwareUtil Class
 ---
 
 # HardwareUtil

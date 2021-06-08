@@ -292,9 +292,9 @@ Java:
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO);
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON);
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
+    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO)
+    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON)
+    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF)
 ```
 
 ## addTorchListener

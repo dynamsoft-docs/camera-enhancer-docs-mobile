@@ -12,10 +12,6 @@ breadcrumbText: iOS API v1.1
 
 ## Class
 
-- [`CameraEnhancer`]({{site.ios-cameraenhancer}}initialization.html)
-  - [Instantiate CameraEnhancer]({{ site.ios-cameraenhancer }}initialization.html)
-  - [Regular camera Methods]({{ site.ios-cameraenhancer }}camera.html)
-  - [Frame preprocessing Methods]({{ site.ios-cameraenhancer }}preprocessing.html)
-  - [Focus & Zoom Methods]({{ site.ios-cameraenhancer }}zoom-focus.html)
 - [`iDCELTSConnectionParameters`]({{site.ios-api}}ltsconnection.html)
 - [`FramePackage`]({{site.ios-api}}frame.html)
+- [`DCECaptureView`]({{site.ios-api-auxiliary}}captureview.html)

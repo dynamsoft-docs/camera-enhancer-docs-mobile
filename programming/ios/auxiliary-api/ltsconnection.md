@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, iOS iDMLTSConnectionParameters Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: iOS iDMLTSConnectionParameters
+breadcrumbText: iOS iDMLTSConnectionParameters Class
 ---
 
 # iDMLTSConnectionParameters

@@ -128,6 +128,8 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
 
 This is a template for users to add DCE camera settings into the newly built camera module.
 
+Java:
+
 ```java
 import com.dynamsoft.dce.CameraEnhancer;
 import com.dynamsoft.dce.CameraState;
