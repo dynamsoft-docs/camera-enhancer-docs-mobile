@@ -38,6 +38,7 @@ dbrParameters = com.dynamsoft.dbr.DMLTSConnectionParameters()
 | [`maxBufferDays`](#maxbufferdays) | int |
 | [`limitedLicenseModules`](#limitedlicensemodules) | list |
 | [`chargeWay`](#chargeway) | int |
+| [`products`](#products) | int |
 
 ## mainServerURL
 
@@ -209,7 +210,7 @@ Sets the charge way.
 Java:
 
 ```java
-dbrParameters.maxBufferDays = int;
+dbrParameters.chargeWay = int;
 ```
 
 Kotlin:
@@ -226,3 +227,25 @@ dceParameters!!.chargeWay = int
 
 - **See also**  
     [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+
+## products
+
+Set the products. This is a combined value of Product Enumration items.
+
+Java:
+
+```java
+dbrParameters.products = int;
+```
+
+Kotlin:
+
+```kotlin
+dceParameters!!.products = int
+```
+
+- **Value range**
+    Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+
+- **See also**  
+    [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
