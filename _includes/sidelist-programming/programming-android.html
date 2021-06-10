@@ -11,13 +11,13 @@
             </ul>
         </li>
         <li><a href="{{ site.android-api-auxiliary }}" class="otherLinkColour">Auxiliary APIs</a>
-            <ul id="auxiliaryAPIMenuList">
-                <li class="" text-content-after="C"><a href="{{ site.android-api-auxiliary }}lts-connection.html" class="otherLinkColour">DMLTSConnectionParameters</a></li>
-                <li text-content-after="C"><a href="{{ site.android-api-auxiliary }}frame.html" class="otherLinkColour">Frame</a></li>
-                <li text-content-after="C"><a href="{{ site.android-api-auxiliary }}hardwareutil.html" class="otherLinkColour">HardwareUtil</a></li>
-                <li text-content-after="C"><a href="{{ site.android-api-auxiliary }}cameraview.html" class="otherLinkColour">CameraView</a></li>
-                <li text-content-after="C"><a href="{{ site.android-api-auxiliary }}camera-enhancer-exception.html" class="otherLinkColour">CameraEnhancerException</a></li>
-                <li text-content-after="I"><a href="{{ site.android-api-auxiliary }}interface.html" class="otherLinkColour">Interface</a></li>
+            <ul>
+                <li class="auxiliaryAPIClass" text-content-after="C"><a href="{{ site.android-api-auxiliary }}lts-connection.html" class="otherLinkColour">DMLTSConnectionParameters</a></li>
+                <li class="auxiliaryAPIClass" text-content-after="C"><a href="{{ site.android-api-auxiliary }}frame.html" class="otherLinkColour">Frame</a></li>
+                <li class="auxiliaryAPIClass" text-content-after="C"><a href="{{ site.android-api-auxiliary }}hardwareutil.html" class="otherLinkColour">HardwareUtil</a></li>
+                <li class="auxiliaryAPIClass" text-content-after="C"><a href="{{ site.android-api-auxiliary }}cameraview.html" class="otherLinkColour">CameraView</a></li>
+                <li class="auxiliaryAPIClass" text-content-after="C"><a href="{{ site.android-api-auxiliary }}camera-enhancer-exception.html" class="otherLinkColour">CameraEnhancerException</a></li>
+                <li class="auxiliaryAPIInterface" text-content-after="I"><a href="{{ site.android-api-auxiliary }}interface.html" class="otherLinkColour">Interface</a></li>
             </ul>
         </li>
         <li><a href="{{ site.android-release-note }}release-note.html" class="otherLinkColour">Release Notes</a></li>
@@ -26,14 +26,9 @@
 </li>
 
 <style>
-  #auxiliaryAPIMenuList li:before { display: none; }
-  #auxiliaryAPIMenuList li.expandListStyle > ul li:not(.expandListStyle) { position: relative; }
-  #auxiliaryAPIMenuList li.expandListStyle > ul li:not(.expandListStyle):after { content: attr(text-content-after); display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #e5f5ff; text-align: center; line-height: 20px; position: absolute; top: 0; left: -9px; font-size: 14px; color: #4788b3; }
+  .auxiliaryAPIClass:after { content: attr(text-content-after); display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #e5f5ff; text-align: center; line-height: 20px; position: absolute; top: 0; left: -9px; font-size: 14px; color: #4788b3; }
+  .auxiliaryAPIInterface:after { content: attr(text-content-after); display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #e5f5ff; text-align: center; line-height: 20px; position: absolute; top: 0; left: -9px; font-size: 14px; color: #98FB98; }
 </style>
 <script>
-    $('#auxiliaryAPIMenuList li.expandListStyle > ul li:not(.expandListStyle)').each(function() {
-        if (!$(this).attr("text-content-after") || $(this).attr("text-content-after") == "") {
-            $(this).attr("text-content-after", $(this).find('a').html()[0])
-        }
-    });
+
 </script>
