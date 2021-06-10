@@ -15,7 +15,7 @@ breadcrumbText: Android Release Note
 
 ### New
 
-- Added a new property [`products`]({{ site.ios-api-auxiliary }}lts-connection.html#products) in class `DMLTSConnectionParameters`.
+- Added a new property [`products`]({{ site.android-api-auxiliary }}lts-connection.html#products) in class `DMLTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`]({{ site.enumerations }}enumproduct.html).
 
 ## 1.0 (04/29/2021)

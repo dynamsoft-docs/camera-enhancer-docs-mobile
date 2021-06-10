@@ -18,7 +18,7 @@ breadcrumbText: iOS Guide - v1.0
 
 ## Installation
 
-1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
+1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.1.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
 
 2. Create a new Objective-C or Swift project.
 

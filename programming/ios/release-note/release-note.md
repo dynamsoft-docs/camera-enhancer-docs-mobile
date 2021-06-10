@@ -15,7 +15,7 @@ breadcrumbText: iOS Release Note
 
 ### Update
 
-- Class `iDMLTSConnectionParameters` is renamed to [`iDCELTSConnectionParameters`]({{site.ios-api}}ltsconnection.html)
+- Class `iDMLTSConnectionParameters` is renamed to [`iDCELTSConnectionParameters`]({{ site.ios-api-auxiliary }}ltsconnection.html)
 
 ### New
 
