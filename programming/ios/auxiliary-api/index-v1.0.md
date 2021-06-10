@@ -5,7 +5,7 @@ description: This is the documentation - iOS API references page of Dynamsoft Ca
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: iOS API
+breadcrumbText: iOS API - v1.0
 ---
 
 # ios API reference

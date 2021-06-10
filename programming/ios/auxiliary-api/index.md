@@ -5,7 +5,7 @@ description: This is the documentation - iOS API references page of Dynamsoft Ca
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: iOS API v1.1
+breadcrumbText: iOS API
 ---
 
 # ios API reference
@@ -15,3 +15,10 @@ breadcrumbText: iOS API v1.1
 - [`iDCELTSConnectionParameters`]({{site.ios-api}}ltsconnection.html)
 - [`FramePackage`]({{site.ios-api}}frame.html)
 - [`DCECaptureView`]({{site.ios-api-auxiliary}}captureview.html)
+
+## Enumeration
+
+- [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+- [`EnumCameraDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
+- [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
+- [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)

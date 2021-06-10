@@ -5,7 +5,7 @@ description: This is the documentation - Guide on Objective-C & Swift page of Dy
 keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: iOS Guide
+breadcrumbText: iOS Guide - v1.0
 ---
 
 # User Guide on Objective-C & Swift
