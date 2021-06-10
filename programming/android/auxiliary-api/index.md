@@ -27,6 +27,6 @@ breadcrumbText: Android Auxiliary API
 
 ## Interface
 
-- [`CameraListener`]({{ site.ios-api }}interface.html#cameralistener)
-- [`CameraLTSLicenseVerificationListener`]({{ site.ios-api }}interface.html#cameraltslicenseverificationlistener)
-- [`TorchListener`]({{ site.ios-api }}interface.html#torchlistener)
+- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#cameralistener)
+- [`CameraLTSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameraltslicenseverificationlistener)
+- [`TorchListener`]({{ site.android-api-auxiliary }}interface.html#torchlistener)
