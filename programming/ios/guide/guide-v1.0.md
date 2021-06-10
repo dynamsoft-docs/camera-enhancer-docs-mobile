@@ -5,7 +5,7 @@ description: This is the documentation - Guide on Objective-C & Swift page of Dy
 keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: iOS Guide
+breadcrumbText: iOS Guide - v1.0
 ---
 
 # User Guide on Objective-C & Swift
@@ -18,7 +18,7 @@ breadcrumbText: iOS Guide
 
 ## Installation
 
-1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
+1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.1.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
 
 2. Create a new Objective-C or Swift project.
 
@@ -72,7 +72,7 @@ Objective-C code sample:
     [self.view addSubview:_dceView];
     
     //Initialize License
-    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
     
@@ -111,7 +111,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         dceView.addOverlay()
         self.view.addSubview(dceView)
         //Init DCE license
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         //Turn on the camera
@@ -159,7 +159,7 @@ For Objective-C users, please add the following code:
     [self.view addSubview:_dceView];
     
     //Initialize License
-    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
     
@@ -206,7 +206,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         dceView.addOverlay()
         self.view.addSubview(dceView)
         //Init DCE license
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         //Turn on the camera
@@ -267,7 +267,7 @@ Add this code snippet to the Objective-C project.
     [self.view addSubview:_dceView];
     
     //Initialize License
-    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
     
@@ -288,7 +288,7 @@ Add this code snippet to the Objective-C project.
 //*************Newly added Barcode Reader Settings***************
 //Dynamsoft Barcode Reader (DBR) initialization
 - (void)initDBR{
-    iDCELTSConnectionParameters* dbrPara = [[iDCELTSConnectionParameters alloc] init];
+    iDMLTSConnectionParameters* dbrPara = [[iDMLTSConnectionParameters alloc] init];
     //Initialize DBR License
     dbrPara.organizationID = @"Put your organizationID here";
     _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:dbrPara verificationDelegate:self];
@@ -360,7 +360,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
     //********************Newly added***********************
     //**********Initialize Dynamsoft Barcode Reader*********
     func initDBR() {
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
         barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "0", error: nil)
@@ -373,7 +373,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         dceView.addOverlay()
         self.view.addSubview(dceView)
         //Init DCE license
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         //Turn on the camera

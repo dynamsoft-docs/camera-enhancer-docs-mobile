@@ -11,8 +11,7 @@ breadcrumbText: Introduction
 
 # Overview of Dynamsoft Camera Enhancer
 
-Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the frame acquisition process from a camera.
-DCE enables users to easily deploy camera modules in all kinds of video stream processing applications. This camera module includes high-level video frame preprocessing algorithms and multifunctional camera controlling APIs, which empower the application to focus on processing high-quality frames. Therefore, the processing efficiency and accuracy of the applications are intensely improved.
+Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the frame acquisition process from a camera. DCE enables users to easily deploy camera modules in all kinds of video stream processing applications. This camera module includes high-level video frame preprocessing algorithms and multifunctional camera controlling APIs, which empower the application to focus on processing high-quality frames. Therefore, the processing efficiency and accuracy of the applications are intensely improved.
 
 ## Main features
 
