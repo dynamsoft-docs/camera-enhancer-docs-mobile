@@ -32,13 +32,14 @@ Set the manual focus position. This position only takes effect once when this AP
 Java:
 
 ```java
-    mCameraEnhancer.setManualFocusPosition(0.5,0.6);
+    //The focus position will be 200 pixel from left and 300 pixel from top.
+    mCameraEnhancer.setManualFocusPosition(200,300);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setManualFocusPosition(0.5,0.6)
+    mCameraEnhancer!!.setManualFocusPosition(200,200)
 ```
 
 ## setFocalLength
