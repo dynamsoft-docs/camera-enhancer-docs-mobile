@@ -25,6 +25,8 @@ For Android users:
 
 Android sample
 
+Java:
+
 ```java
     DMLTSConnectionParameters info = new DMLTSConnectionParameters();
     info.organizationID = "Your organizationID";
@@ -36,6 +38,18 @@ Android sample
             }
         }
     });
+```
+
+Kotlin:
+
+```kotlin
+    val info = com.dynamsoft.dce.DMLTSConnectionParameters()
+    info.organizationID = "Put your organizationID here."
+    mCameraEnhancer!!.initLicenseFromLTS(info) { isSuccess, error ->
+        if (!isSuccess) {
+            error.printStackTrace()
+        }
+    }
 ```
 
 For iOS users:

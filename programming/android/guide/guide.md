@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Java(Android)
-description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Guide on Java(Android)
+title: Dynamsoft Camera Enhancer - Guide on Android
+description: This is the documentation - Guide on Android page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Guide on Android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Android Guide
 ---
 
-# User Guide on Java(Android)
+# User Guide on Android (Java & Kotlin)
 
 - System Requirements:
   - Supported OS: Android 5 or higher (Android 7 or higher recommended).
