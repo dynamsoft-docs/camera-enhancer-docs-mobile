@@ -15,7 +15,8 @@ breadcrumbText: Start on Android
 
 ## API reference for Android Edition
 
-- [API reference]({{site.android-api}})
+- [Primary APIs]({{site.android-api}}initialization.html)
+- [Auxiliary APIs]({{site.android-api-auxiliary}})
 
 ## Android Release Note
 
