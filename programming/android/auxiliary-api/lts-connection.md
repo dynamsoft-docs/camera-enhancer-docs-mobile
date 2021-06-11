@@ -23,8 +23,8 @@ dceParameters = new com.dynamsoft.dce.DMLTSConnectionParameters();
 Kotlin:
 
 ```kotlin
-private var dceParameters: com.dynamsoft.dbr.DMLTSConnectionParameters? = null
-dceParameters = com.dynamsoft.dbr.DMLTSConnectionParameters()
+private var dceParameters: com.dynamsoft.dce.DMLTSConnectionParameters? = null
+dceParameters = com.dynamsoft.dce.DMLTSConnectionParameters()
 ```
 
 | Attribute Name | Type |
