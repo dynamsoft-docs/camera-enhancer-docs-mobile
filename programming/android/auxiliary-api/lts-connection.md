@@ -23,8 +23,8 @@ dceParameters = new com.dynamsoft.dce.DMLTSConnectionParameters();
 Kotlin:
 
 ```kotlin
-private var dbrParameters: com.dynamsoft.dbr.DMLTSConnectionParameters? = null
-dbrParameters = com.dynamsoft.dbr.DMLTSConnectionParameters()
+private var dceParameters: com.dynamsoft.dce.DMLTSConnectionParameters? = null
+dceParameters = com.dynamsoft.dce.DMLTSConnectionParameters()
 ```
 
 | Attribute Name | Type |
@@ -47,13 +47,13 @@ The URL of the license tracking server.
 Java:
 
 ```java
-dbrParameters.mainServerURL = "";
+dceParameters.mainServerURL = "";
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.mainServerURL = ""
+dceParameters!!.mainServerURL = ""
 ```
 
 - **Value range**
@@ -72,13 +72,13 @@ The URL of the standby license tracking server.
 Java:
 
 ```java
-dbrParameters.standbyServerURL = "";
+dceParameters.standbyServerURL = "";
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.standbyServerURL = ""
+dceParameters!!.standbyServerURL = ""
 ```
 
 - **Value range**
@@ -97,13 +97,13 @@ The handshake code.
 Java:
 
 ```java
-dbrParameters.handshakeCode = "";
+dceParameters.handshakeCode = "";
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.handshakeCode = ""
+dceParameters!!.handshakeCode = ""
 ```
 
 - **Value range**
@@ -119,13 +119,13 @@ The organization ID
 Java:
 
 ```java
-dbrParameters.organizationID = "";
+dceParameters.organizationID = "";
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.organizationID = ""
+dceParameters!!.organizationID = ""
 ```
 
 - **Value range**
@@ -141,13 +141,13 @@ The session password of the handshake code set in license tracking server.
 Java:
 
 ```java
-dbrParameters.sessionPassword = "";
+dceParameters.sessionPassword = "";
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.sessionPassword = ""
+dceParameters!!.sessionPassword = ""
 ```
 
 - **Value range**
@@ -163,13 +163,13 @@ Sets the method to generate UUID.
 Java:
 
 ```java
-dbrParameters.uuidGenerationMethod = int;
+dceParameters.uuidGenerationMethod = int;
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.uuidGenerationMethod = int
+dceParameters!!.uuidGenerationMethod = int
 ```
 
 - **Value range**
@@ -188,13 +188,13 @@ Sets the max days to buffer the license info.
 Java:
 
 ```java
-dbrParameters.maxBufferDays = int;
+dceParameters.maxBufferDays = int;
 ```
 
 Kotlin:
 
 ```kotlin
-dbrParameters!!.maxBufferDays = int
+dceParameters!!.maxBufferDays = int
 ```
 
 - **Value range**
@@ -210,7 +210,7 @@ Sets the charge way.
 Java:
 
 ```java
-dbrParameters.chargeWay = int;
+dceParameters.chargeWay = int;
 ```
 
 Kotlin:
@@ -235,7 +235,7 @@ Set the products. This is a combined value of Product Enumration items.
 Java:
 
 ```java
-dbrParameters.products = int;
+dceParameters.products = int;
 ```
 
 Kotlin:

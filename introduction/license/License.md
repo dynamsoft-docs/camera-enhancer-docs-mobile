@@ -11,7 +11,7 @@ breadcrumbText: License Initialization
 ## Get a trial key
 
 - A 7-day public trial key is available for every new device for first use of Dynamsoft Camera Enhancer.
-- If your free key is expired, please email trial@dynamsoft.com and include "privateTrial" in the title to get a 30 day extension.
+- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs&package=android" target="_blank">Private Trial License Page</a> to get a 30-day extension.
 
 ## Get a full key license
 
@@ -24,6 +24,8 @@ Once you have a license you can use following code to set up your license from `
 For Android users:
 
 Android sample
+
+Java:
 
 ```java
     DMLTSConnectionParameters info = new DMLTSConnectionParameters();
@@ -38,12 +40,24 @@ Android sample
     });
 ```
 
+Kotlin:
+
+```kotlin
+    val info = com.dynamsoft.dce.DMLTSConnectionParameters()
+    info.organizationID = "Put your organizationID here."
+    mCameraEnhancer!!.initLicenseFromLTS(info) { isSuccess, error ->
+        if (!isSuccess) {
+            error.printStackTrace()
+        }
+    }
+```
+
 For iOS users:
 
 Objective-C sample
 
 ```objectivec
-    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Your organizationID";
     dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
 ```
@@ -51,7 +65,7 @@ Objective-C sample
 Swift sample
 
 ```swift
-    let lts = iDMLTSConnectionParameters()
+    let lts = iDCELTSConnectionParameters()
     lts.organizationID = "Your organizationID"
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
 ```

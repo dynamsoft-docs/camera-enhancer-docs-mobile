@@ -19,10 +19,10 @@ Return the frame decode results and additional information.
 | [`width`](#width) | NSNumber* |
 | [`height`](#height) | NSNumber* |
 | [`stride`](#stride) | NSNumber* |
-| [`pixelFormat`](#pixelFormat) | NSString* |
-| [`frameID`](#frameID) | NSNumber* |
-| [`fastFrameID`](#fastFrameID) | NSNumber* |
-| [`imageBuffer`](#imageBuffer) | CVImageBufferRef |
+| [`pixelFormat`](#pixelformat) | NSString* |
+| [`frameID`](#frameid) | NSNumber* |
+| [`fastFrameID`](#fastframeid) | NSNumber* |
+| [`imageBuffer`](#imagebuffer) | CVImageBufferRef |
 
 ## buffer
 

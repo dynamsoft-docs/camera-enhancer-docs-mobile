@@ -18,7 +18,7 @@ breadcrumbText: iOS Guide
 
 ## Installation
 
-1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.1.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
+1. <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
 
 2. Create a new Objective-C or Swift project.
 
@@ -74,7 +74,7 @@ Objective-C code sample:
     //Initialize License
     iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara;
     
     view:_dceView verificationDelegate:self];
     //Make camera settings, turn on the camera
@@ -161,7 +161,7 @@ For Objective-C users, please add the following code:
     //Initialize License
     iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara;
     
     view:_dceView verificationDelegate:self];
     //Make camera settings, turn on the camera
@@ -269,7 +269,7 @@ Add this code snippet to the Objective-C project.
     //Initialize License
     iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara;
     
     view:_dceView verificationDelegate:self];
     //Make camera settings, turn on the camera
@@ -288,7 +288,7 @@ Add this code snippet to the Objective-C project.
 //*************Newly added Barcode Reader Settings***************
 //Dynamsoft Barcode Reader (DBR) initialization
 - (void)initDBR{
-    iDCELTSConnectionParameters* dbrPara = [[iDCELTSConnectionParameters alloc] init];
+    iDMLTSConnectionParameters* dbrPara = [[iDMLTSConnectionParameters alloc] init];
     //Initialize DBR License
     dbrPara.organizationID = @"Put your organizationID here";
     _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:dbrPara verificationDelegate:self];
@@ -360,7 +360,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
     //********************Newly added***********************
     //**********Initialize Dynamsoft Barcode Reader*********
     func initDBR() {
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
         barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "0", error: nil)
