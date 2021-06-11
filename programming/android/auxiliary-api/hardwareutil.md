@@ -19,7 +19,7 @@ This page is for `HardwareUtil` page. `HardwareUtil` parameters are static value
 | `DEVICE_LEVEL_HIGH` | 2 |
 | `DEVICE_LEVEL_MID` | 1 |
 | `DEVICE_LEVEL_LOW` | 0 |
-| `DEVICE_LEVEL_UNKNOWN` | -1 |
+| `DEVICE_LEVEL_UNKNOWN` | -2 |
 
 ## Device level
 
