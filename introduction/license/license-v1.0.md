@@ -43,7 +43,7 @@ For iOS users:
 Objective-C sample
 
 ```objectivec
-    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Your organizationID";
     dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
 ```
@@ -51,7 +51,7 @@ Objective-C sample
 Swift sample
 
 ```swift
-    let lts = iDCELTSConnectionParameters()
+    let lts = iDMLTSConnectionParameters()
     lts.organizationID = "Your organizationID"
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
 ```
