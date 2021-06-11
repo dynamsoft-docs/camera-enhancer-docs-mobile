@@ -2,9 +2,9 @@ repositoryUrl: https://github.com/Dynamsoft/camera-enhancer-docs/blob/master
 repository: Dynamsoft/camera-enhancer-docs
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs
 firstLevelUrl: /camera-enhancer/docs/
-docHomePage: /camera-enhancer/docs/programming/
+docHomePage: /camera-enhancer/docs/
 
-productUrl: https://www.dynamsoft.com/Products/camera-enhancer.aspx
+productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
 productName: Dynamsoft Camera Enhancer
 
 introduction: /camera-enhancer/docs/introduction/
