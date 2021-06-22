@@ -12,7 +12,7 @@ breadcrumbText: Android Guide
 
 - System Requirements:
   - Supported OS: Android 5 or higher (Android 7 or higher recommended).
-  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6.
+  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_64.
 
 ## Installation
 
