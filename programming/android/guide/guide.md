@@ -24,7 +24,7 @@ breadcrumbText: Android Guide
 
 4. Add the following code into `build.gradle(Module: app)`.
 
-    ```java
+    ```groovy
     repositories {
         flatDir {
             dirs 'libs'
@@ -34,7 +34,7 @@ breadcrumbText: Android Guide
 
 5. Also in `build.gradle(Module: app)` add the reference in dependencies:
 
-    ```java
+    ```groovy
         implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
     ```
 
@@ -234,7 +234,13 @@ Run the project. Now some DCE functions have been added to the camera module.
 
 This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will handle the decoding.
 
-1. Add a new text view for the camera module. In the text view, there will be decode results if the project is running successfully.
+1. Remember to add `DynamsoftBarcodeReaderAndroid.aar` to your project. Put the `aar` file under the dictionary `/app/libs` and add the following code to the `build.gradle(Module: app)`.
+
+    ```groovy
+        implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
+    ```
+
+2. Add a new text view for the camera module. In the text view, there will be decode results if the project is running successfully.
 
     ```xml
         <com.dynamsoft.dce.CameraView
@@ -257,7 +263,7 @@ This section is the guide for users to add a video stream decoder in the camera 
         <!---->
     ```
 
-2. Add the following code to the project in the main activity:
+3. Add the following code to the project in the main activity:
 
     Java:
 
@@ -488,4 +494,4 @@ This section is the guide for users to add a video stream decoder in the camera 
     }
     ```
 
-3. Run the project, now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.
+4. Run the project, now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.
