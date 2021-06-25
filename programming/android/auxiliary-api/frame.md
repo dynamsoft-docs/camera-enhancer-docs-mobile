@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android Frame Class
 ---
 
-# Frame
+# com.dynamsoft.dce.Frame
 
 This page is for `Frame` Class. `Frame` parameters store the frame data.
 

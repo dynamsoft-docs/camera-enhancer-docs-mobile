@@ -11,7 +11,7 @@ breadcrumbText: Android Interface
 
 # Interface
 
-## CameraListener
+## com.dynamsoft.dce.CameraListener
 
 From `CameraListener` user can get preprocessed frames.
 
@@ -19,67 +19,80 @@ From `CameraListener` user can get preprocessed frames.
 - `onPreviewFilterFrame`: Get the filtered frame.
 - `onPreviewFastFrame`: Get the filtered and cropped frame.
 
-```java
-void com.dynamsoft.dce.CameraListener
-```
-
 Java:
 
 ```java
-    mCameraEnhancer.addCameraListener(new CameraListener() {
-        @Override
-        public void onPreviewOriginalFrame(Frame frame) {}
-        @Override
-        public void onPreviewFilterFrame(Frame frame) {}
-        @Override
-        public void onPreviewFastFrame(Frame frame) {}
-    });
+mCameraEnhancer.addCameraListener(new CameraListener() {
+    @Override
+    public void onPreviewOriginalFrame(Frame frame) {}
+    @Override
+    public void onPreviewFilterFrame(Frame frame) {}
+    @Override
+    public void onPreviewFastFrame(Frame frame) {}
+});
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.addCameraListener(object : CameraListener {
-        override fun onPreviewOriginalFrame(frame: Frame) {}
-        override fun onPreviewFilterFrame(frame: Frame) {}
-        override fun onPreviewFastFrame(frame: Frame) {}
-    })
+mCameraEnhancer!!.addCameraListener(object : CameraListener {
+    override fun onPreviewOriginalFrame(frame: Frame) {}
+    override fun onPreviewFilterFrame(frame: Frame) {}
+    override fun onPreviewFastFrame(frame: Frame) {}
+})
 ```
 
-## CameraLTSLicenseVerificationListener
+## com.dynamsoft.dce.CameraLTSLicenseVerificationListener
 
 This is the method that handles callback when license tracking server returns.
 
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
 
-```java
-void com.dynamsoft.dce.CameraLTSLicenseVerificationListener
-```
-
-## TorchListener
-
-This is the method that handles torch state when the torch state changes.
-
-```java
-void com.dynamsoft.dce.TorchListener
-```
-
 Java:
 
 ```java
-    mCameraEnhancer.addTorchListener(new TorchListener() {
-        @Override
-        public void onTorchStateChanged(TorchState torchState) {
-                
-        }
-    });
+com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+info.organizationID = "Put your organizationID here.";
+mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+    @Override
+    public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+        if(!isSuccess){ error.printStackTrace(); }
+    }
+});
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.addTorchListener(object : TorchListener {
-        override fun onTorchStateChanged(TorchState: torchState) {}
-    })
+val info = com.dynamsoft.dce.DMLTSConnectionParameters()
+info.organizationID = "Put your organizationID here."
+mCameraEnhancer!!.initLicenseFromLTS(info) { isSuccess, error ->
+    if (!isSuccess) {
+        error.printStackTrace()
+    }
+}
+```
+
+## com.dynamsoft.dce.TorchListener
+
+This is the method that handles the torch state when the torch state changes.
+
+Java:
+
+```java
+mCameraEnhancer.addTorchListener(new TorchListener() {
+    @Override
+    public void onTorchStateChanged(TorchState torchState) {
+                
+    }
+});
+```
+
+Kotlin:
+
+```kotlin
+mCameraEnhancer!!.addTorchListener(object : TorchListener {
+    override fun onTorchStateChanged(TorchState: torchState) {}
+})
 ```
