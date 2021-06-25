@@ -231,7 +231,7 @@ Run the project, now DCE functions have been added to the camera module.
 
 ## Add decoder to the camera module
 
-This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. After this step, a new simple video streaming decoding app is built successfully.
+This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. Before you start, please remember to add `DynamsoftBarcodeReader.framework` to your xcode project.
 
 Add this code snippet to the Objective-C project.
 
