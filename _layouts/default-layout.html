@@ -17,10 +17,7 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                        {%- include sidelist-introduction.html -%}
-                        {%- include sidelist-programming.html -%}
-                        {%- include sidelist-parameters.html -%}
-                        {%- include sidelist-trouble-shooting.html -%}
+                        <!-- {%- include liquid_searchVersionTreeFile.html ver="latest version" curPath=include.curPath targetRelativePath="sidelist-fullTree.html" -%} -->
                     </ul>
                 </div>
             </div>
@@ -71,6 +68,9 @@
         {%- include page_footer.html -%}
     </div>
 
+    <iframe id="sideBarIframe" src="/Hide_Tree_Page.html" allow="" height="0" frameborder="0"></iframe>
+
+
     <script type="text/javascript">anchors.add();</script>
 
 
@@ -81,16 +81,16 @@
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script type="text/javascript">
-        FullTreeMenuList(true, false);
+        FullTreeMenuList(true, false, '{{ page.pageStartVer }}');
     </script>
     {%- else -%}
     <script type="text/javascript">
-        FullTreeMenuList(true);
+        FullTreeMenuList(true, true, '{{ page.pageStartVer }}');
     </script>
     {%- endunless -%}
     {%- else -%}
     <script type="text/javascript">
-        FullTreeMenuList(false);
+        FullTreeMenuList(false, true, '{{ page.pageStartVer }}');
     </script>
     {%- endif -%}
 
