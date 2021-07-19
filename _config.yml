@@ -1,7 +1,7 @@
 repositoryUrl: https://github.com/Dynamsoft/camera-enhancer-docs/blob/master
 repository: Dynamsoft/camera-enhancer-docs
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs
-firstLevelUrl: /camera-enhancer/docs/
+firstLevelUrl: /camera-enhancer/docs
 docHomePage: /camera-enhancer/docs/introduction/
 
 productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
@@ -51,6 +51,8 @@ dnt_icon: /camera-enhancer/docs/assets/img-icon/icon-dnt.svg
 
 overview: /camera-enhancer/overview/
 download: /camera-enhancer/downloads/1000021-confirmation/
+
+useVersionTree: true
 
 baseurl: "/camera-enhancer/docs/"
 plugins:
