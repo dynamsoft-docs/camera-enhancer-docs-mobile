@@ -78,21 +78,9 @@
         UrlReplace();
     </script>
     
-    {%- if page.needAutoGenerateSidebar -%}
-    {%- unless page.needGenerateH3Content -%}
     <script type="text/javascript">
-        FullTreeMenuList(true, false, '{{ page.pageStartVer }}');
+        FullTreeMenuList('{{ page.needAutoGenerateSidebar }}', '{{ page.needGenerateH3Content }}', '{{ page.pageStartVer }}', '{{ site.useVersionTree }}');
     </script>
-    {%- else -%}
-    <script type="text/javascript">
-        FullTreeMenuList(true, true, '{{ page.pageStartVer }}');
-    </script>
-    {%- endunless -%}
-    {%- else -%}
-    <script type="text/javascript">
-        FullTreeMenuList(false, true, '{{ page.pageStartVer }}');
-    </script>
-    {%- endif -%}
 
     {%- include livehelp.html -%}
 
