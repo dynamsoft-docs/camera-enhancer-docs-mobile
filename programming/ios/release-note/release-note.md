@@ -4,7 +4,6 @@ title: Dynamsoft Camera Enhancer - iOS Release Note
 description: This is the documentation - iOS Release Note page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Release Note
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: iOS Release Note
 ---
