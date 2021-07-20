@@ -42,9 +42,9 @@ mCameraEnhancer!!.addCameraListener(object : CameraListener {
 })
 ```
 
-## com.dynamsoft.dce.CameraDLSLicenseVerificationListener
+## com.dynamsoft.dce.CameraLTSLicenseVerificationListener
 
-This is the method that handles callback when Dynamsoft License Server returns.
+This is the method that handles callback when license tracking server returns.
 
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
@@ -52,11 +52,11 @@ This is the method that handles callback when Dynamsoft License Server returns.
 Java:
 
 ```java
-com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
 info.organizationID = "Put your organizationID here.";
-mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
+mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
     @Override
-    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+    public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
         if(!isSuccess){ error.printStackTrace(); }
     }
 });
@@ -65,9 +65,9 @@ mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener
 Kotlin:
 
 ```kotlin
-val info = com.dynamsoft.dce.DMDLSConnectionParameters()
+val info = com.dynamsoft.dce.DMLTSConnectionParameters()
 info.organizationID = "Put your organizationID here."
-mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+mCameraEnhancer!!.initLicenseFromLTS(info) { isSuccess, error ->
     if (!isSuccess) {
         error.printStackTrace()
     }
