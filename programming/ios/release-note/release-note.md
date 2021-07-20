@@ -8,7 +8,7 @@ noTitleIndex: true
 breadcrumbText: iOS Release Note
 ---
 
-# Release Note for iOS - 1.x
+# Release Note for iOS
 
 ## 1.0.3 (07/20/2021)
 

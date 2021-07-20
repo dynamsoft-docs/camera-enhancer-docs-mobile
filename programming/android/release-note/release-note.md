@@ -8,7 +8,7 @@ noTitleIndex: true
 breadcrumbText: Android Release Note
 ---
 
-# Release Note for Android - 1.x
+# Release Note for Android
 
 ## 1.0.3 (07/20/2021)
 
@@ -17,10 +17,6 @@ breadcrumbText: Android Release Note
 - Add Interface `CameraDLSLicenseVerificationListener` and callback `DLSLicenseVerificationCallback` to replace `CameraLTSLicenseVerificationListener` and `LTSLicenseVerificationCallback`.
 - Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
 - Added method `initLicenseFromDLS` in `CameraEnhancer` class to replace `initLicenseFromLTS`.
-
-### Fixed
-
-- Fixed a compatibility issue that might happen when using Android Studio 4.2.0+.
 
 ## 1.0.1 (06/10/2021)
 
