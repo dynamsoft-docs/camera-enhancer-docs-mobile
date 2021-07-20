@@ -11,7 +11,7 @@ breadcrumbText: Android Interface
 
 # Interface
 
-## com.dynamsoft.dce.CameraListener
+## CameraListener
 
 From `CameraListener` user can get preprocessed frames.
 
@@ -42,7 +42,7 @@ mCameraEnhancer!!.addCameraListener(object : CameraListener {
 })
 ```
 
-## com.dynamsoft.dce.CameraDLSLicenseVerificationListener
+## CameraDLSLicenseVerificationListener
 
 This is the method that handles callback when Dynamsoft License Server returns.
 
@@ -74,7 +74,7 @@ mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
 }
 ```
 
-## com.dynamsoft.dce.TorchListener
+## TorchListener
 
 This is the method that handles the torch state when the torch state changes.
 
