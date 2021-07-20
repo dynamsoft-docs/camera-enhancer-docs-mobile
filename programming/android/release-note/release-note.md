@@ -12,7 +12,7 @@ breadcrumbText: Android Release Note
 
 ## 1.0.3 (07/20/2021)
 
-### Added
+### New
 
 - Add Interface `CameraDLSLicenseVerificationListener` and callback `DLSLicenseVerificationCallback` to replace `CameraLTSLicenseVerificationListener` and `LTSLicenseVerificationCallback`.
 - Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
