@@ -49,7 +49,7 @@ jobs:
           # ftp username
           username: WebsiteAutorelease
           # ftp password
-          password: "$USERPWD"
+          password: $USERPWD
           # Server port to connect to (read your web hosts docs)
           #port: # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
