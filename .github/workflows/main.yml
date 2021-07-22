@@ -33,6 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
+          chmod 777 BuildDoc2.0_v4.sh
           mkdir tempgh
           FIND_CONDITION="-type f"
           ./BuildDoc2.0_v4.sh $GITHUB_WORKSPACE $GITHUB_WORKSPACE/_site /home/ubuntu/tempgh Docs-Template-Repo
