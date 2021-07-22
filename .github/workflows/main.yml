@@ -52,7 +52,7 @@ jobs:
           # protocol to deploy with - ftp, ftps, or ftps-legacy
           protocol: ftp
           # Folder to upload from, must end with trailing slash /
-          local-dir: /home/ubuntu/DCEDoc/_site
+          local-dir: /home/ubuntu/DCEDoc/_site/
           # Path to upload to on the server. Must end with trailing slash /
           server-dir: /www.dynamsoft.com/camera-enhancer/docs/tempdd
           # Path and name of the state file - this file is used to track which files have been deployed
