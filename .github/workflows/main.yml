@@ -35,16 +35,6 @@ jobs:
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build
-          echo "$USERPWD"
-          ftp -n -p 172.31.37.178<<!
-          user WebsiteAutorelease $USERPWD
-          binary
-          cd /www.dynamsoft.com/camera-enhancer/docs/tempdd/
-          lcd /home/ubuntu/DCEDoc/_site/
-          prompt
-          mput *
-          bye
-          !
           
           #FIND_CONDITION="-type f"
           #./BuildDoc2.0_v4.sh $GITHUB_WORKSPACE $GITHUB_WORKSPACE/_site /home/ubuntu/tempgh Docs-Template-Repo
@@ -55,7 +45,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           # ftp server
-          server: www.dynamsoft.com
+          server: 172.31.37.178
           # ftp username
           username: WebsiteAutorelease
           # ftp password
@@ -67,7 +57,7 @@ jobs:
           # Folder to upload from, must end with trailing slash /
           local-dir: /home/ubuntu/DCEDoc/_site/
           # Path to upload to on the server. Must end with trailing slash /
-          server-dir: /www.dynamsoft.com/camera-enhancer/docs/tempdd/
+          server-dir: /www.dynamsoft.com/camera-enhancer/docs/tempss/
           # Path and name of the state file - this file is used to track which files have been deployed
           #state-name: # optional
           # Prints which modifications will be made with current config options, but doesnt actually make any changes
