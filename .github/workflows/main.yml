@@ -35,6 +35,7 @@ jobs:
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build
+          echo "$USERPWD"
           #FIND_CONDITION="-type f"
           #./BuildDoc2.0_v4.sh $GITHUB_WORKSPACE $GITHUB_WORKSPACE/_site /home/ubuntu/tempgh Docs-Template-Repo
           
