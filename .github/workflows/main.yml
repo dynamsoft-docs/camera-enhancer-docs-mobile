@@ -33,8 +33,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
-          mkdir temp
+          mkdir tempgh
           FIND_CONDITION="-type f"
-          ./BuildDoc2.0_v4.sh $GITHUB_WORKSPACE $GITHUB_WORKSPACE/_site /home/ubuntu/temp Docs-Template-Repo
-          cd /home/ubuntu/tem
+          ./BuildDoc2.0_v4.sh $GITHUB_WORKSPACE $GITHUB_WORKSPACE/_site /home/ubuntu/tempgh Docs-Template-Repo
+          cd /home/ubuntu/tempgh
           ll
