@@ -36,7 +36,7 @@ jobs:
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build
           echo "$USERPWD"
-          ftp -n -p www.dynamsoft.com<<!
+          ftp -n -p 172.31.37.178<<!
           user WebsiteAutorelease $USERPWD
           binary
           cd /www.dynamsoft.com/camera-enhancer/docs/tempdd/
