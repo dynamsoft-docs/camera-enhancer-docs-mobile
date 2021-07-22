@@ -33,7 +33,10 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
-          chmod 777 BuildDoc2.0_v4.sh
-          FIND_CONDITION="-type f"
+          [ ! -d DCEDoc ] && mkdir -p DCEDoc
+          cd camera-enhancer-docs && pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
+          cd Docs-Template-Repo && pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
+          cd DCEDoc && bundle exec jekyll build
+          #FIND_CONDITION="-type f"
           #./BuildDoc2.0_v4.sh $GITHUB_WORKSPACE $GITHUB_WORKSPACE/_site /home/ubuntu/tempgh Docs-Template-Repo
 
