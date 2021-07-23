@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,13 +17,11 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: self-hosted
-    environment: "DCE doc site"
-    env: 
-        USERPWD: ${{ secrets.USERPWD }}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -35,6 +31,6 @@ jobs:
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py $USERPWD /home/ubuntu/DCEDoc/_site/ ./www.dynamsoft.com/camera-enhancer/docs/prev
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DCEDoc/_site/ ./www.dynamsoft.com/camera-enhancer/docs/
 
           
