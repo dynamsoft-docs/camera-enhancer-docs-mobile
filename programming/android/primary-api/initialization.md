@@ -29,44 +29,44 @@ mCameraEnhancer = CameraEnhancer(this@MainActivity)
 
 ### [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 
-| Method | Description |
-|--------|-------------|
-| [`AcquireListFrame`]({{site.android-api}}preprocess.html#acquirelistframe) | Get the latest frame from the frame queue when this API is activated. |
-| [`enableFastMode`]({{site.android-api}}preprocess.html#fast-mode) | Set true/false to turn on/off DCE fast mode. |
-| [`getEnabledFastModeStatus`]({{site.android-api}}preprocess.html#fast-mode) | Get the current status of fast mode (on/off). |
-| [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
-| [`getEnabledFrameFilterStatus`]({{site.android-api}}preprocess.html#enableframefilter) | Get the status (on/off) of DCE frame filter mode. |
-| [`setMaxFrameRate`]({{site.android-api}}preprocess.html#setmaxframerate) | Set max frame rate. |
-| [`enableSensorControl`]({{site.android-api}}preprocess.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
-| [`getEnabledSensorControlStatus`]({{site.android-api}}preprocess.html#enablesensorcontrol) | Get the status (on/off) of DCE sensor control mode. |
-| [`setSensorControlThreshold`]({{site.android-api}}preprocess.html#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
+| Method | Type | Description |
+|--------|------|-------------|
+| [`AcquireListFrame`]({{site.android-api}}preprocess.html#acquirelistframe) | *boolean* | Get the latest frame from the frame queue when this API is activated. |
+| [`enableFastMode`]({{site.android-api}}preprocess.html#fast-mode) | *boolean* | Set true/false to turn on/off DCE fast mode. |
+| [`getEnabledFastModeStatus`]({{site.android-api}}preprocess.html#fast-mode) | -- | Get the current status of fast mode (on/off). |
+| [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter) | *boolean* | Set true/false to turn on/off DCE frame filter. |
+| [`getEnabledFrameFilterStatus`]({{site.android-api}}preprocess.html#enableframefilter) | -- | Get the status (on/off) of DCE frame filter mode. |
+| [`setMaxFrameRate`]({{site.android-api}}preprocess.html#setmaxframerate) | *int* | Set max frame rate. |
+| [`enableSensorControl`]({{site.android-api}}preprocess.html#enablesensorcontrol) | *boolean* | Set true/false to turn on/off DCE sensor control. |
+| [`getEnabledSensorControlStatus`]({{site.android-api}}preprocess.html#enablesensorcontrol) | -- | Get the status (on/off) of DCE sensor control mode. |
+| [`setSensorControlThreshold`]({{site.android-api}}preprocess.html#setsensorcontrolthreshold) | *int* | Enable user to change sensor sensitivity (default value is 50). |
 
 ### [Regular camera methods]({{site.android-api}}camera.html)
 
-| Method | Description |
-|-----------------|---------------|
-| [`getDeviceLevel`]({{site.android-api}}camera.html#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |
-| [`setAutoModeLevelParam`]({{site.android-api}}camera.html#setautomodelevelparam) | Set auto mode level parameter. |
-| [`updateCameraSetting`]({{site.android-api}}camera.html#updatecamerasetting) | Update camera, filter and focus settings from Json. |
-| [`getVersion`]({{site.android-api}}camera.html#getversion) | Check current DCE version |
-| [`setCameraDesiredState`]({{site.android-api}}camera.html#camera-state) | Set Camera on/off. |
-| [`getCameraDesiredState`]({{site.android-api}}camera.html#camera-state) | Get camera desired state. |
-| [`getCameraCurrentState`]({{site.android-api}}camera.html#camera-state) | Get camera current state. |
-| [`pauseCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera. |
-| [`resumeCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera. |
-| [`startScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Start scanning. |
-| [`stopScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Stop scanning. |
-| [`addCameraListener`]({{site.android-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
-| [`removeCameraListener`]({{site.android-api}}camera.html#addcameralistener) | Remove camera listener. |
-| [`setTorchDesiredState`]({{site.android-api}}camera.html#torch-state) | Set torch state. |
-| [`getTorchDesiredState`]({{site.android-api}}camera.html#torch-state) | Get torch desired state. |
-| [`getTorchCurrentState`]({{site.android-api}}camera.html#torch-state) | Get torch current state. |
-| [`addTorchListener`]({{site.android-api}}camera.html#addtorchlistener) | Add torch listener. |
-| [`getCameraPosition`]({{site.android-api}}camera.html#camera-position) | Get current camera position. |
-| [`switchCameraPosition`]({{site.android-api}}camera.html#camera-position) | Switch camera position front/back. |
-| [`setResolution`]({{site.android-api}}camera.html#resolution-settings) | Set resolution. |
-| [`getResolution`]({{site.android-api}}camera.html#resolution-settings) | Get current resolution setting. |
-| [`getResolutionList`]({{site.android-api}}camera.html#resolution-settings) | Get all available resolutions |
+| Method | Type | Description |
+| ------ | ---- | ----------- |
+| [`getDeviceLevel`]({{site.android-api}}camera.html#getdevicelevel)| [`HardwareUtil`]({{site.parameter-reference}}index.html#hardwareutil) | Make an evaluation on the current device and define its level for further use. |
+| [`setAutoModeLevelParam`]({{site.android-api}}camera.html#setautomodelevelparam) | *int*, *int*, *int*, *int* | Set auto mode level parameter. |
+| [`updateCameraSetting`]({{site.android-api}}camera.html#updatecamerasetting) | *JSON (String)* | Update camera, filter and focus settings from Json. |
+| [`getVersion`]({{site.android-api}}camera.html#getversion) | -- | Check current DCE version |
+| [`setCameraDesiredState`]({{site.android-api}}camera.html#camera-state) | [`CameraState`]({{site.parameter-reference}}index.html#cameraposition) | Set Camera on/off. |
+| [`getCameraDesiredState`]({{site.android-api}}camera.html#camera-state) | -- | Get camera desired state. |
+| [`getCameraCurrentState`]({{site.android-api}}camera.html#camera-state) | -- | Get camera current state. |
+| [`pauseCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | -- | Pause Camera. |
+| [`resumeCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | -- | Resume Camera. |
+| [`startScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | -- | Start scanning. |
+| [`stopScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | -- | Stop scanning. |
+| [`addCameraListener`]({{site.android-api}}camera.html#addcameralistener) | [`CameraListener`]({{site.android-api-auxiliary}}interface.html#cameralistener) | Add camera listener (on preview original, filtered or fast frames). |
+| [`removeCameraListener`]({{site.android-api}}camera.html#addcameralistener) | -- | Remove camera listener. |
+| [`setTorchDesiredState`]({{site.android-api}}camera.html#torch-state) | [`TorchState`]({{site.parameter-reference}}index.html#torchstate) | Set torch state. |
+| [`getTorchDesiredState`]({{site.android-api}}camera.html#torch-state) | -- | Get torch desired state. |
+| [`getTorchCurrentState`]({{site.android-api}}camera.html#torch-state) | -- | Get torch current state. |
+| [`addTorchListener`]({{site.android-api}}camera.html#addtorchlistener) | [`TorchListener`]({{site.android-api-auxiliary}}interface.html#torchlistener) | Add torch listener. |
+| [`getCameraPosition`]({{site.android-api}}camera.html#camera-position) | -- | Get current camera position. |
+| [`switchCameraPosition`]({{site.android-api}}camera.html#camera-position) | -- | Switch camera position front/back. |
+| [`setResolution`]({{site.android-api}}camera.html#resolution-settings) | [`Resolution`]({{site.parameter-reference}}index.html#resolution) | Set resolution. |
+| [`getResolution`]({{site.android-api}}camera.html#resolution-settings) | -- | Get current resolution setting. |
+| [`getResolutionList`]({{site.android-api}}camera.html#resolution-settings) | -- | Get all available resolutions |
 
 ### [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
 

@@ -6,23 +6,24 @@ keywords:  Camera Enhancer, Parameters reference
 needAutoGenerateSidebar: true
 breadcrumbText: Parameter Reference
 ---
+
 # Parameter Reference
 
-## Camera state
+## CameraState
 
 | Member (Android & iOS) | Value | Description |
 |-----------------------|-------|-------------|
 | `CAMERA_STATE_OFF` | 0 | Set camera off. |
 | `CAMERA_STATE_ON` | 1 | Set camera on. |
 
-## Camera Position
+## CameraPosition
 
 | Member (Android & iOS) | Value | Description |
 |-----------------------|-------|-------------|
 | `CAMERA_POSITION_USER` | 0 | Use front camera. |
 | `CAMERA_POSITION_WORLD` | 1 | Use back camera. |
 
-## Torch State
+## TorchState
 
 | Member (Android & iOS) | Value | Description |
 |-----------------------|-------|-------------|
