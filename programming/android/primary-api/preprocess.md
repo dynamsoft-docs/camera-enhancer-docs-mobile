@@ -24,13 +24,13 @@ com.dynamsoft.dce.CameraEnhancer.AcquireListFrame(boolean)
 Java:
 
 ```java
-    mCameraEnhancer.AcquireListFrame(true);
+mCameraEnhancer.AcquireListFrame(true);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.AcquireListFrame(true)
+mCameraEnhancer!!.AcquireListFrame(true)
 ```
 
 ## enableFastMode
@@ -128,13 +128,13 @@ com.dynamsoft.dce.CameraEnhancer.getEnabledFrameFilterStatus()
 Java:
 
 ```java
-    boolean x = mCameraEnhancer.getEnabledFrameFilterStatus();
+boolean x = mCameraEnhancer.getEnabledFrameFilterStatus();
 ```
 
 Kotlin:
 
 ```kotlin
-    var x:Boolean? = mCameraEnhancer!!.enabledFrameFilterStatus
+var x:Boolean? = mCameraEnhancer!!.enabledFrameFilterStatus
 ```
 
 ## setMaxFrameRate
@@ -154,13 +154,13 @@ com.dynamsoft.dce.CameraEnhancer.setMaxFrameRate(int)
 Java:
 
 ```java
-    mCameraEnhancer.setMaxFrameRate(24);
+mCameraEnhancer.setMaxFrameRate(24);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setMaxFrameRate(24)
+mCameraEnhancer!!.setMaxFrameRate(24)
 ```
 
 ## enableSensorControl
@@ -180,13 +180,13 @@ com.dynamsoft.dce.CameraEnhancer.enableSensorControl(boolean)
 Java:
 
 ```java
-    mCameraEnhancer.enableSensorControl(true);
+mCameraEnhancer.enableSensorControl(true);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.enableSensorControl(true)
+mCameraEnhancer!!.enableSensorControl(true)
 ```
 
 ## getEnabledSensorControlStatus
@@ -206,13 +206,13 @@ com.dynamsoft.dce.CameraEnhancer.getEnabledSensorControlStatus()
 Java:
 
 ```java
-    boolean x = mCameraEnhancer.getEnabledSensorControlStatus();
+boolean x = mCameraEnhancer.getEnabledSensorControlStatus();
 ```
 
 Kotlin:
 
 ```kotlin
-    var x:Boolean? = mCameraEnhancer!!.enabledSensorControlStatus
+var x:Boolean? = mCameraEnhancer!!.enabledSensorControlStatus
 ```
 
 ## setSensorControlThreshold
@@ -232,11 +232,11 @@ com.dynamsoft.dce.CameraEnhancer.setSensorControlThreshold(int)
 Java:
 
 ```java
-    mCameraEnhancer.setSensorControlThreshold(55);
+mCameraEnhancer.setSensorControlThreshold(55);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setSensorControlThreshold(55)
+mCameraEnhancer!!.setSensorControlThreshold(55)
 ```

@@ -45,25 +45,23 @@ var dce:DynamsoftCameraEnhancer! = nil
 | [`updateCameraSettingFromJson`]({{site.ios-api}}camera.html#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`]({{site.ios-api}}camera.html#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
 | [`getVersion`]({{site.ios-api}}camera.html#getversion) | Check current DCE version |
-| [`setCameraDesiredState`]({{site.ios-api}}camera.html#camera-state) | Set Camera on/off |
-| [`getCameraDesiredState`]({{site.ios-api}}camera.html#camera-state) | Get camera desired state |
-| [`getCameraCurrentState`]({{site.ios-api}}camera.html#camera-state) | Get camera current state |
+| [`setCameraDesiredState`]({{site.ios-api}}camera.html#setcameradesiredstate) | Set Camera on/off |
+| [`getCameraDesiredState`]({{site.ios-api}}camera.html#getcameradesiredstate) | Get camera desired state |
+| [`getCameraCurrentState`]({{site.ios-api}}camera.html#getcameracurrentstate) | Get camera current state |
 | [`pauseCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera |
 | [`resumeCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera |
 | [`startScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Start scanning |
 | [`stopScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`]({{site.ios-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`removeCameraListener`]({{site.ios-api}}camera.html#addcameralistener) | Remove camera listener |
-| [`setTorchDesiredState`]({{site.ios-api}}camera.html#torch-state) | Set torch state |
-| [`getTorchDesiredState`]({{site.ios-api}}camera.html#torch-state) | Get torch desired state |
-| [`getTorchCurrentState`]({{site.ios-api}}camera.html#torch-state) | Get torch current state |
+| [`setTorchDesiredState`]({{site.ios-api}}camera.html#settorchdesiredstate) | Set torch state |
+| [`getTorchDesiredState`]({{site.ios-api}}camera.html#gettorchdesiredstate) | Get torch desired state |
+| [`getTorchCurrentState`]({{site.ios-api}}camera.html#gettorchcurrentstate) | Get torch current state |
 | [`addTorchListener`]({{site.ios-api}}camera.html#addtorchlistener) | Add torch listener |
-| [`removeTorchListener`]({{site.ios-api}}camera.html#addtorchlistener) | Remove Torch Listener |
-| [`getCameraPosition`]({{site.ios-api}}camera.html#camera-position) | Get current camera position |
-| [`switchCameraPosition`]({{site.ios-api}}camera.html#camera-position) | Switch camera position front/back |
-| [`setResolution`]({{site.ios-api}}camera.html#resolution-settings) | Set resolution |
-| [`getResolution`]({{site.ios-api}}camera.html#resolution-settings) | Get current resolution setting |
-| [`getResolutionList`]({{site.ios-api}}camera.html#resolution-settings) | Get all available resolutions |
+| [`getCameraPosition`]({{site.ios-api}}camera.html#getcameraposition) | Get current camera position |
+| [`switchCameraPosition`]({{site.ios-api}}camera.html#switchcameraposition) | Switch camera position front/back |
+| [`setResolution`]({{site.ios-api}}camera.html#setresolution) | Set resolution |
+| [`getResolution`]({{site.ios-api}}camera.html#getresolution) | Get current resolution setting |
+| [`getResolutionList`]({{site.ios-api}}camera.html#getresolutionlist) | Get all available resolutions |
 
 ### [Focus & zoom methods]({{site.ios-api}}zoom-focus.html)
 
