@@ -28,7 +28,7 @@ dceParameters = com.dynamsoft.dce.DMDLSConnectionParameters()
 ```
 
 | Attribute Name | Type |
-|------|------|
+| -------------- | ---- |
 | [`mainServerURL`](#mainserverurl) | String |
 | [`standbyServerURL`](#standbyserverurl) | String |
 | [`handshakeCode`](#handshakecode) | String |

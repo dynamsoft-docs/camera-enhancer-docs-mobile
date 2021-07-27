@@ -14,7 +14,7 @@ breadcrumbText: Android Frame Class
 This page is for `Frame` Class. `Frame` parameters store the frame data.
 
 | Method Name | Type |
-|------|------|
+| ----------- | ---- |
 | [`getData`](#getdata) | byte[] |
 | [`getWidth`](#getwidth) | int |
 | [`getHeight`](#getheight) | int |

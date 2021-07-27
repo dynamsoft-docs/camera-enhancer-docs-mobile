@@ -13,6 +13,14 @@ breadcrumbText: Android Filter Methods
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.AcquireListFrame(boolean)
+```
+
+**Parameters**
+
+- `Boolean`: Input true to acquire frame from the frame queue.
+
 Java:
 
 ```java
@@ -25,45 +33,97 @@ Kotlin:
     mCameraEnhancer!!.AcquireListFrame(true)
 ```
 
-## Fast Mode
+## enableFastMode
 
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.enableFastMode(boolean)
+```
+
+**Parameters**
+
+- `Boolean`: True/false value that stands for enabled/disabled status.
+
+**Code Snippet**
 
 Java:
 
 ```java
-    //To enable fast mode
-    mCameraEnhancer.enableFastMode(true);
-    //To get the value(status) of fast mode
-    boolean x = mCameraEnhancer.getEnabledFastModeStatus();
+mCameraEnhancer.enableFastMode(true);
 ```
 
 Kotlin:
 
 ```kotlin
-    //To enable fast mode
-    mCameraEnhancer!!.enableFastMode(true)
-    //To get the value(status) of fast mode
-    var x:Boolean? = mCameraEnhancer!!.enabledFastModeStatus
+mCameraEnhancer!!.enableFastMode(true)
+```
+
+## getEnabledFastModeStatus
+
+Get the status of the fast mode.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getEnabledFastModeStatus()
+```
+
+**Return Value**
+
+- `Boolean`: True/false value that stands for enabled/disabled status.
+
+**Code Snippet**
+
+Java:
+
+```java
+boolean x = mCameraEnhancer.getEnabledFastModeStatus();
+```
+
+Kotlin:
+
+```kotlin
+var x:Boolean? = mCameraEnhancer!!.enabledFastModeStatus
 ```
 
 ## enableFrameFilter
 
 Use `enableFrameFilter` to turn on/off frame filter.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.enableFrameFilter(boolean)
+```
+
+**Parameters**
+
+- `Boolean`: True/false value that stands for enabled/disabled status.
+
+**Code Snippet**
+
 Java:
 
 ```java
-    mCameraEnhancer.enableFrameFilter(true);
+mCameraEnhancer.enableFrameFilter(true);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.enableFrameFilter(true)
+mCameraEnhancer!!.enableFrameFilter(true)
 ```
 
-To check the status of frame filter mode, please use `getEnabledFrameFilterStatus`
+## getEnabledFrameFilterStatus
+
+Get the frame filter status.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getEnabledFrameFilterStatus()
+```
+
+**Return Value**
+
+- `Boolean`: True/false value that stands for enabled/disabled status.
+
+**Code Snippet**
 
 Java:
 
@@ -81,6 +141,16 @@ Kotlin:
 
 Set max frame rate.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.setMaxFrameRate(int)
+```
+
+**Parameters**
+
+- `Frame Rate`: A int value that stands for the max frame rate.
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -97,6 +167,16 @@ Kotlin:
 
 Use `enableSensorControl` to turn on/off sensor control mode.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.enableSensorControl(boolean)
+```
+
+**Parameters**
+
+- `Boolean`: True/false value that stands for enabled/disabled status.
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -109,7 +189,19 @@ Kotlin:
     mCameraEnhancer!!.enableSensorControl(true)
 ```
 
-To check the status of sensor control mode, please use `getEnabledSensorControlStatus`
+## getEnabledSensorControlStatus
+
+Get the status of sensor control mode.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getEnabledSensorControlStatus()
+```
+
+**Return Value**
+
+- `Boolean`: True/false value that stands for enabled/disabled status.
+
+**Code Snippet**
 
 Java:
 
@@ -126,6 +218,16 @@ Kotlin:
 ## setSensorControlThreshold
 
 This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.setSensorControlThreshold(int)
+```
+
+**Parameters**
+
+- `Threshold`: A int value that stands for the sensor filter threshold.
+
+**Code Snippet**
 
 Java:
 

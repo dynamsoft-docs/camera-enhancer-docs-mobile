@@ -14,7 +14,7 @@ breadcrumbText: Android HardwareUtil Class
 This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
 
 | Attribute Name | Value |
-|------|------|
+| -------------- | ----- |
 | `DEVICEINFO_UNKNOWN` | -1 |
 | `DEVICE_LEVEL_HIGH` | 2 |
 | `DEVICE_LEVEL_MID` | 1 |

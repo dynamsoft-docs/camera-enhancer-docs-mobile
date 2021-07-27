@@ -13,56 +13,91 @@ breadcrumbText: Android Regular Camera Methods
 
 This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high-level mobile devices.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.getDeviceLevel()
+```
+
+**Return value**
+
+Returns the device level. Read more in parameter reference [`HardwareUtil`]({{site.parameter-reference}}index.html#hardwareutil).
+
+**Code Snippet**
+
 Java:
 
 ```java
-    mCameraEnhancer.getDeviceLevel();
+mCameraEnhancer.getDeviceLevel();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.deviceLevel
+mCameraEnhancer!!.deviceLevel
 ```
 
 ## setAutoModeLevelParam
 
 Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are settings for device-level.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.setAutoModeLevelParam(int, int, int, int)
+```
+
+**Parameters**
+
+We are defining the devices level by their CPU and RAM performance. You can define the ranges for CPU and RAM performance throw this API.
+
+- `cpuMHz1`: The smallest value for CPU processing speed.
+- `cpuMHz2`: The greatest value for CPU processing speed.
+- `ramMB1`: The smallest value for RAM size.
+- `ramMB2`: The greatest value for RAM size.
+
 | CPU & RAM | If device CPUMHz > cpuMHz2 | If device CPUMHz1 < CPUMHz < cpuMHz2 | If device CPUMHz < CPUMHz1 |
 |--|--|--|--|
 | If device ramMB > ramMB2 | Device-level is high | Device-level is mid | Device-level is mid |
-| If device ramMB1 < ramMB < ramMB2 | Device-level is mid | Device-level is mid | Device-level is mid |
+| If ramMB1 < device ramMB < ramMB2 | Device-level is mid | Device-level is mid | Device-level is mid |
 | If device ramMB < ramMB1 | Device-level is mid | Device-level is mid | Device-level is low |
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.setAutoModeLevelParam(cpuMHz1,cpuMHz2,ramMB1,ramMB2);
+mCameraEnhancer.setAutoModeLevelParam(cpuMHz1,cpuMHz2,ramMB1,ramMB2);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setAutoModeLevelParam(cpuMHz1,cpuMHz2,ramMB1,ramMB2)
+mCameraEnhancer!!.setAutoModeLevelParam(cpuMHz1,cpuMHz2,ramMB1,ramMB2)
 ```
 
 ## updateCameraSetting
 
 There are some detailed settings that can be updated from JSON.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.updateCameraSetting("JSON")
+```
+
+**Parameters**
+
+The camera setting JSON Strings.
+
+**Code Snippet**
+
 To update from JSON string:
 
 Java:
 
 ```java
-    mCameraEnhancer.updateCameraSetting("{"sensorvalue":3,"graydiffthreshold":30,"conversioncountthreshold":30,"sharpnessthreshold":0.2,"sharpnessthresholdlarge":0.4,"abssharpnessthreshold":200,"absgraythreshold":35,"claritythreshold":0.1}");
+mCameraEnhancer.updateCameraSetting("{"sensorvalue":3,"graydiffthreshold":30,"conversioncountthreshold":30,"sharpnessthreshold":0.2,"sharpnessthresholdlarge":0.4,"abssharpnessthreshold":200,"absgraythreshold":35,"claritythreshold":0.1}");
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.updateCameraSetting("{'sensorvalue':3,'graydiffthreshold':30,'conversioncountthreshold':30,'sharpnessthreshold':0.2,'sharpnessthresholdlarge':0.4,'abssharpnessthreshold':200,'absgraythreshold':35,'claritythreshold':0.1}")
+mCameraEnhancer!!.updateCameraSetting("{'sensorvalue':3,'graydiffthreshold':30,'conversioncountthreshold':30,'sharpnessthreshold':0.2,'sharpnessthresholdlarge':0.4,'abssharpnessthreshold':200,'absgraythreshold':35,'claritythreshold':0.1}")
 ```
 
 To update from JSON file:
@@ -70,13 +105,13 @@ To update from JSON file:
 Java:
 
 ```java
-    mCameraEnhancer.updateCameraSetting("Your file path here.");
+mCameraEnhancer.updateCameraSetting("Your file path here.");
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.updateCameraSetting("Your file path here.")
+mCameraEnhancer!!.updateCameraSetting("Your file path here.")
 ```
 
 JSON file template:
@@ -106,6 +141,16 @@ JSON file template:
 
 Users can check the current DCE version by using this API.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.getVersion()
+```
+
+**Return value**
+
+The version number.
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -118,230 +163,359 @@ Kotlin:
     mCameraEnhancer!!.version
 ```
 
-## Camera State
+## getCameraCurrentState
 
-Get the current camera status (on/off).
-
-Java:
+Get the current camera status.
 
 ```java
-    mCameraEnhancer.getCameraCurrentState();
+com.dynamsoft.dce.CameraEnhancer.getCameraCurrentState()
+```
+
+**Return Value**
+
+The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+
+**Code Snippet**
+
+```java
+mCameraEnhancer.getCameraCurrentState();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.cameraCurrentState
+mCameraEnhancer!!.cameraCurrentState
 ```
 
-Get the cameras desired status (on/off).
+## getCameraDesiredState
+
+Get the camera desired status.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getCameraDesiredState()
+```
+
+**Return Value**
+
+The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.getCameraDesireState();
+mCameraEnhancer.getCameraDesiredState();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.cameraDesireState
+mCameraEnhancer!!.cameraDesiredState
 ```
 
-Use `CameraState.CAMERA_STATE_ON` to set the camera on and use `CameraState.CAMERA_STATE_OFF` to set it off.
+## setCameraDesiredState
+
+Set the camera status.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.setCameraDesiredState(CameraState)
+```
+
+**Parameters**
+
+The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.setCameraDesireState(CameraState.CAMERA_STATE_OFF);
-    mCameraEnhancer.setCameraDesireState(CameraState.CAMERA_STATE_ON);
+mCameraEnhancer.setCameraDesireState(CameraState.CAMERA_STATE_OFF);
+// Or
+mCameraEnhancer.setCameraDesireState(CameraState.CAMERA_STATE_ON);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_ON)
-    mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_OFF)
+mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_ON)
+// Or
+mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_OFF)
 ```
 
 ## pauseCamera and resumeCamera
 
 Note: these APIs are created for pausing & resuming the camera but the camera module will still be working when paused. If you want to shut down the camera module please use `stopScanning`.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.pauseCamera()
+com.dynamsoft.dce.CameraEnhancer.resumeCamera()
+```
+
+**Code Snippet**
+
 Java:
 
 ```java
-    mCameraEnhancer.pauseCamera();
-    mCameraEnhancer.resumeCamera();
+mCameraEnhancer.pauseCamera();
+mCameraEnhancer.resumeCamera();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.pauseCamera()
-    mCameraEnhancer!!.resumeCamera()
+mCameraEnhancer!!.pauseCamera()
+mCameraEnhancer!!.resumeCamera()
 ```
 
 ## stopScanning and startScanning
 
 Control the stopping & starting of the camera module.
 
+```java
+com.dynamsoft.dce.CameraEnhancer.stopScanning()
+com.dynamsoft.dce.CameraEnhancer.startScanning()
+```
+
+**Code Snippet**
+
 Java:
 
 ```java
-    mCameraEnhancer.startScanning();
-    mCameraEnhancer.stopScanning();
+mCameraEnhancer.startScanning();
+mCameraEnhancer.stopScanning();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.startScanning()
-    mCameraEnhancer!!.stopScanning()
+mCameraEnhancer!!.startScanning()
+mCameraEnhancer!!.stopScanning()
 ```
 
 ## addCameraListener
 
-Add Camera Listener
+Add the Camera Listener. From the camera listener, you can get three different kinds of frames for further usage.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.addCameraListener(CameraListener)
+```
+
+**Parameters**
+
+The [`CameraListener`]({{site.android-api-auxiliary}}interface.html#cameralistener).
+
+**Return Value**
+
+- `Frame`: The video frame captured by camera. View in class [`Frame`]({{site.android-api-auxiliary}}frame.html).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.addCameraListener(new CameraListener() {
-        @Override
-        public void onPreviewOriginalFrame(Frame frame) {
-
-        }
-        @Override
-        public void onPreviewFilterFrame(Frame frame) {
-
-        }
-
-        @Override
-        public void onPreviewFastFrame(Frame frame) {
-
-        }
-    });
+mCameraEnhancer.addCameraListener(new CameraListener() {
+    @Override
+    public void onPreviewOriginalFrame(Frame frame) {}
+    @Override
+    public void onPreviewFilterFrame(Frame frame) {}
+    @Override
+    public void onPreviewFastFrame(Frame frame) {}
+});
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.addCameraListener(object : CameraListener {
-        override fun onPreviewOriginalFrame(frame: Frame) {}
-        override fun onPreviewFilterFrame(frame: Frame) {}
-        override fun onPreviewFastFrame(frame: Frame) {}
-    })
+mCameraEnhancer!!.addCameraListener(object : CameraListener {
+    override fun onPreviewOriginalFrame(frame: Frame) {}
+    override fun onPreviewFilterFrame(frame: Frame) {}
+    override fun onPreviewFastFrame(frame: Frame) {}
+})
 ```
 
-Remove Camera Listener
+## removeCameraListener
+
+Remove the camera listener.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.removeCameraListener()
+```
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.removeCameraListener();
+mCameraEnhancer.removeCameraListener();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.removeCameraListener()
+mCameraEnhancer!!.removeCameraListener()
 ```
 
-## Torch State
+## getTorchCurrentState
 
-Get current torch state (on/off)
+Get the current torch state.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getTorchCurrentState()
+```
+
+**Return Value**
+
+- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+
+**Code Snippet**
 
 Java:
 
 ```java
-
-    mCameraEnhancer.getTorchCurrentState();
+mCameraEnhancer.getTorchCurrentState();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.removeCameraListener()
+mCameraEnhancer!!.torchCurrentState()
 ```
 
-Get desired torch state (on/off)
+## getTorchDesiredState
+
+Get the desired torch state.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getTorchDesiredState()
+```
+
+**Return Value**
+
+- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.getTorchDesiredState();
+mCameraEnhancer.getTorchDesiredState();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.torchDesiredState
+mCameraEnhancer!!.torchDesiredState
 ```
 
-Use `TorchState.TORCH_STATE_ON` to set the torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
+## setTorchDesiredState
+
+Set the desired torch state.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.setTorchDesiredState(TorchState)
+```
+
+**Parameters**
+
+- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_AUTO);
-    mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_ON);
-    mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
+mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_AUTO);
+mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_ON);
+mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO)
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON)
-    mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF)
+mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO)
+mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON)
+mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF)
 ```
 
 ## addTorchListener
 
+Add the torch listener.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.addTorchListener(TorchListener)
+```
+
+**Parameters**
+
+- `TorchListener`: View in interface [`TorchListener`]({{site.android-api-auxiliary}}interface.html#torchlistener)
+
+**Code Snippet**
+
 Java:
 
 ```java
-    mCameraEnhancer.addTorchListener(new TorchListener() {
-        @Override
-        public void onTorchStateChanged(TorchState torchState) {
+mCameraEnhancer.addTorchListener(new TorchListener() {
+    @Override
+    public void onTorchStateChanged(TorchState torchState) {
                 
-        }
-    });
+    }
+});
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.addTorchListener(object : TorchListener {
-        override fun onTorchStateChanged(TorchState: torchState) {}
-    })
+mCameraEnhancer!!.addTorchListener(object : TorchListener {
+    override fun onTorchStateChanged(TorchState: torchState) {}
+})
 ```
 
-## Camera Position
+## getCameraPosition
 
 DCE will use the back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
-To get camera position:
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getCameraPosition()
+```
+
+**Return Value**
+
+- `CameraPosition`: View in parameter [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.getCameraPosition();
+mCameraEnhancer.getCameraPosition();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.cameraPosition
+mCameraEnhancer!!.cameraPosition
 ```
 
-To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front camera and use `CameraPosition.CAMERA_POSITION_WORLD` to activate back camera
+## switchCameraPosition
+
+Change the camera position. Switch between the front or back camera.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.switchCameraPosition(CameraPosition)
+```
+
+**Parameters**
+
+- `CameraPosition`: View in parameter [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
-    mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD);
+mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
+mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD);
 ```
 
 Kotlin:
@@ -351,9 +525,19 @@ Kotlin:
     mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD)
 ```
 
-## Resolution Settings
+## getResolution
 
-These APIs are created for you to get or change camera resolution settings.
+Get the current resolution settings.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getResolution()
+```
+
+**Return Value**
+
+- `Resolution`: View the parameter [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+
+**Code Snippet**
 
 Java:
 
@@ -367,30 +551,54 @@ Kotlin:
     mCameraEnhancer!!.resolution
 ```
 
-Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available on the device, the device will run the closest resolution to the chosen resolution.
+## setResolution
+
+Set the resolution.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.setResolution(Resolution)
+```
+
+**Parameters**
+
+- `Resolution`: View the parameter [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.setResolution(Resolution.RESOLUTION_1080P);
+mCameraEnhancer.setResolution(Resolution.RESOLUTION_1080P);
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.setResolution(Resolution.RESOLUTION_1080P)
+mCameraEnhancer!!.setResolution(Resolution.RESOLUTION_1080P)
 ```
 
-Get all available resolutions that can be set to the current camera.
+## getResolutionList
+
+Get all the available resolution value of the device.
+
+```java
+com.dynamsoft.dce.CameraEnhancer.getResolutionList()
+```
+
+**Return Value**
+
+- The device available Resolution: The device available resolution list. This resolution list might be different from the value of parameter `Resolution`.
+
+**Code Snippet**
 
 Java:
 
 ```java
-    mCameraEnhancer.getResolutionList();
+mCameraEnhancer.getResolutionList();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.resolutionList
+mCameraEnhancer!!.resolutionList
 ```
