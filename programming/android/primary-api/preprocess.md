@@ -21,6 +21,8 @@ com.dynamsoft.dce.CameraEnhancer.AcquireListFrame(boolean)
 
 - `Boolean`: Input true to acquire frame from the frame queue.
 
+**Code Snippet**
+
 Java:
 
 ```java

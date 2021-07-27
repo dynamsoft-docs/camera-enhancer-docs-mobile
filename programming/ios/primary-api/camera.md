@@ -84,7 +84,7 @@ This is the template for `updateCameraSettingFromJson` and `updateCameraSettingF
 
 Users can check the current DCE version by using this API.
 
-**Return value**
+**Return Value**
 
 The version number.
 
@@ -106,7 +106,7 @@ dce.getVersion()
 
 Get the current status (on/off) of the camera.
 
-**Return value**
+**Return Value**
 
 The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
 
@@ -128,7 +128,7 @@ dce.getCameraCurrentState()
 
 Get the desired status (on/off)of the camera.
 
-**Return value**
+**Return Value**
 
 The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
 
@@ -230,25 +230,7 @@ Swift:
 dce.addCameraListener(self)
 ```
 
-## removeCameraListener
-
-Remove the Camera Listener
-
-**Code Snippet**
-
-Objective-C:
-
-```objectivec
-[dce removeCameraListener];
-```
-
-Swift:
-
-```swift
-dce.removeCameraListener()
-```
-
-## Torch State
+## getTorchCurrentState
 
 Get the current torch state.
 

@@ -17,7 +17,7 @@ This API can help you make an evaluation on your mobile device. It will be helpf
 com.dynamsoft.dce.CameraEnhancer.getDeviceLevel()
 ```
 
-**Return value**
+**Return Value**
 
 Returns the device level. Read more in parameter reference [`HardwareUtil`]({{site.parameter-reference}}index.html#hardwareutil).
 
@@ -145,7 +145,7 @@ Users can check the current DCE version by using this API.
 com.dynamsoft.dce.CameraEnhancer.getVersion()
 ```
 
-**Return value**
+**Return Value**
 
 The version number.
 

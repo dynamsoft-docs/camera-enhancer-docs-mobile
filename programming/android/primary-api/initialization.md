@@ -49,23 +49,23 @@ mCameraEnhancer = CameraEnhancer(this@MainActivity)
 | [`setAutoModeLevelParam`]({{site.android-api}}camera.html#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`]({{site.android-api}}camera.html#updatecamerasetting) | Update camera, filter and focus settings from Json. |
 | [`getVersion`]({{site.android-api}}camera.html#getversion) | Check current DCE version |
-| [`setCameraDesiredState`]({{site.android-api}}camera.html#setcameradesiredstate) | Set Camera on/off. |
-| [`getCameraDesiredState`]({{site.android-api}}camera.html#getcameradesiredstate) | Get camera desired state. |
 | [`getCameraCurrentState`]({{site.android-api}}camera.html#getcameracurrentstate) | Get camera current state. |
+| [`getCameraDesiredState`]({{site.android-api}}camera.html#getcameradesiredstate) | Get camera desired state. |
+| [`setCameraDesiredState`]({{site.android-api}}camera.html#setcameradesiredstate) | Set Camera on/off. |
 | [`pauseCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera. |
 | [`resumeCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera. |
 | [`startScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Start scanning. |
 | [`stopScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`]({{site.android-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
-| [`removeCameraListener`]({{site.android-api}}camera.html#addcameralistener) | Remove camera listener. |
-| [`setTorchDesiredState`]({{site.android-api}}camera.html#settorchdesiredstate) | Set torch state. |
-| [`getTorchDesiredState`]({{site.android-api}}camera.html#gettorchdesiredstate) | Get torch desired state. |
+| [`removeCameraListener`]({{site.android-api}}camera.html#removecameralistener) | Remove camera listener. |
 | [`getTorchCurrentState`]({{site.android-api}}camera.html#gettorchcurrentstate) | Get torch current state. |
+| [`getTorchDesiredState`]({{site.android-api}}camera.html#gettorchdesiredstate) | Get torch desired state. |
+| [`setTorchDesiredState`]({{site.android-api}}camera.html#settorchdesiredstate) | Set torch state. |
 | [`addTorchListener`]({{site.android-api}}camera.html#addtorchlistener) | Add torch listener. |
 | [`getCameraPosition`]({{site.android-api}}camera.html#getcameraposition) | Get current camera position. |
 | [`switchCameraPosition`]({{site.android-api}}camera.html#switchcameraposition) | Switch camera position front/back. |
-| [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set resolution. |
 | [`getResolution`]({{site.android-api}}camera.html#getresolution) | Get current resolution setting. |
+| [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set resolution. |
 | [`getResolutionList`]({{site.android-api}}camera.html#getresolutionlist) | Get all available resolutions |
 
 ### [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
