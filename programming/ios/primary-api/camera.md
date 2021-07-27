@@ -12,35 +12,49 @@ breadcrumbText: iOS Regular Camera Methods
 ## updateCameraSettingFromJson
 
 There are Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
+
+**Parameters**
+
+The camera setting JSON Strings.
+
+**Code Snippet**
+
 To update from JSON string:
 
 Objective-C:
 
 ```objectivec
-    [dce updateCameraSettingFromJson:@"json string"];
+[dce updateCameraSettingFromJson:@"json string"];
 ```
 
 Swift:
 
 ```swift
-    dce.updateCameraSetting(fromJson: "Your json string")
+dce.updateCameraSetting(fromJson: "Your json string")
 ```
 
 ## updateCameraSettingFromFile
 
 There are some detailed settings that can be updated from JSON string or file.
+
+**Parameters**
+
+The camera setting JSON Strings.
+
+**Code Snippet**
+
 To update from JSON file:
 
 Objective-C:
 
 ```objectivec
-    [dce updateCameraSettingFromFile:@"your json file path"];
+[dce updateCameraSettingFromFile:@"your json file path"];
 ```
 
 Swift:
 
 ```swift
-    dce.updateCameraSettingFromFile(fromFile: "Your file path")
+dce.updateCameraSettingFromFile(fromFile: "Your file path")
 ```
 
 This is the template for `updateCameraSettingFromJson` and `updateCameraSettingFromFile`:
@@ -70,248 +84,364 @@ This is the template for `updateCameraSettingFromJson` and `updateCameraSettingF
 
 Users can check the current DCE version by using this API.
 
+**Return value**
+
+The version number.
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce getVersion];
+[dce getVersion];
 ```
 
 Swift:
 
 ```swift
-    dce.getVersion()
+dce.getVersion()
 ```
 
-## Camera State
+## getCameraCurrentState
 
-Use `getCameraCurrentState`, `getCameraDesiredState` and `setCameraDesiredState` to make settings on camera state.
 Get the current status (on/off) of the camera.
 
+**Return value**
+
+The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce getCameraCurrentState];
+[dce getCameraCurrentState];
 ```
 
 Swift:
 
 ```swift
-    dce.getCameraCurrentState()
+dce.getCameraCurrentState()
 ```
+
+## getCameraDesiredState
 
 Get the desired status (on/off)of the camera.
 
+**Return value**
+
+The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce getCameraDesiredState];
+[dce getCameraDesiredState];
 ```
 
 Swift:
 
 ```swift
-    dce.getCameraDesiredState()
+dce.getCameraDesiredState()
 ```
 
-Use `CAMERA_STATE_ON` to set the camera on and use `CAMERA_STATE_OFF` to set it off.
+## setCameraDesiredState
+
+Set the camera state.
+
+**Parameters**
+
+The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce setCameraDesiredState:CAMERA_STATE_ON];
+[dce setCameraDesiredState:CAMERA_STATE_ON];
 ```
 
 Swift:
 
 ```swift
-    dce.setCameraDesiredState(CAMERA_STATE_ON)
+dce.setCameraDesiredState(CAMERA_STATE_ON)
 ```
 
 ## pauseCamera and resumeCamera
 
 Note: these APIs are created for pausing & resuming the camera but the camera module is still working when paused. if you want to shut down camera module please use `stopScanning`.
 
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce pauseCamera];
-    [dce resumeCamera];
+[dce pauseCamera];
+[dce resumeCamera];
 ```
 
 Swift:
 
 ```swift
-    dce.pauseCamera()
-    dce.resumeCamera()
+dce.pauseCamera()
+dce.resumeCamera()
 ```
 
 ## stopScanning and startScanning
 
 Control the stopping & starting of the camera module.
 
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce startScanning];
-    [dce stopScanning];
+[dce startScanning];
+[dce stopScanning];
 ```
 
 Swift:
 
 ```swift
-    dce.startScanning()
-    dce.stopScanning()
+dce.startScanning()
+dce.stopScanning()
 ```
 
 ## addCameraListener
 
 Add Camera Listener
 
+**Parameters**
+
+- `CameraEnhancerListener`
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce addCameraListener:self];
+[dce addCameraListener:self];
 ```
 
 Swift:
 
 ```swift
-    dce.addCameraListener(self)
+dce.addCameraListener(self)
 ```
 
-Remove Camera Listener
+## removeCameraListener
+
+Remove the Camera Listener
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce removeCameraListener];
+[dce removeCameraListener];
 ```
 
 Swift:
 
 ```swift
-    dce.removeCameraListener()
+dce.removeCameraListener()
 ```
 
 ## Torch State
 
-Use `getTorchCurrentState`, `getTorchDesiredState` and `setTorchDesiredState` to make settings on torch state
-Get current torch state (on/off)
+Get the current torch state.
+
+**Return Value**
+
+- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce getTorchCurrentState];
+[dce getTorchCurrentState];
 ```
 
 Swift:
 
 ```swift
-    dce.getTorchCurrentState()
+dce.getTorchCurrentState()
 ```
+
+## getTorchDesiredState
 
 Get desired torch state (on/off)
 
+**Return Value**
+
+- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce getTorchDesiredState];
+[dce getTorchDesiredState];
 ```
 
 Swift:
 
 ```swift
-    dce.getTorchDesiredState()
+dce.getTorchDesiredState()
 ```
 
-Use `TorchState.TORCH_STATE_ON` to set the torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
+## setTorchDesiredState
+
+Set the torch on/off.
+
+**Return Value**
+
+- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce setTorchDesiredState:TorchState.on];
+[dce setTorchDesiredState:TorchState.on];
 ```
 
 Swift:
 
 ```swift
-    dce.setTorchDesiredState(TorchState.on)
+dce.setTorchDesiredState(TorchState.on)
 ```
 
 ## addTorchListener
 
+Add the torch listener.
+
+**Parameters**
+
+- `CameraTorchListener`
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
-    [dce addTorchListener:self];
-    [dce removeTorchListener];
+[dce addTorchListener:self];
 ```
 
 Swift:
 
 ```swift
-    dce.addTorchListener(self)
-    dce.removeCameraListener()
+dce.addTorchListener(self)
 ```
 
-## Camera Position
+## getCameraPosition
 
-DCE will use the back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated currently.
+Get the camera position. DCE will use the back camera as default.
+
+**Return Value**
+
+- `CameraPosition`: View in parameter [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce getCameraPosition];
+[dce getCameraPosition];
 ```
 
 Swift:
 
 ```swift
-    dce.getCameraPosition()
+dce.getCameraPosition()
 ```
 
-To change to another camera:
+## switchCameraPosition
+
+Change the camera (front/back).
+
+**Parameters**
+
+- `CameraPosition`: View in parameter [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce switchCameraPosition];
+[dce switchCameraPosition];
 ```
 
 Swift:
 
 ```swift
-    dce.switchCameraPosition()
+dce.switchCameraPosition()
 ```
 
-## Resolution Settings
+## getResolution
 
-These APIs are created for you to get or change camera resolution settings.
+Get the current resolution setting.
+
+**Return Value**
+
+- Resolution: A resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce getResolution];
-    [dce setResolution:Resolution1080P];
+[dce getResolution];
 ```
 
 Swift:
 
 ```swift
-    dce.getResolution()
-    dce.setResolution(Resolution.Quality1080P)
+dce.getResolution()
 ```
 
-`getResolutionList` enables users to check all available resolutions that can be set to the current camera.
+## setResolution
+
+Set the resolution.
+
+**Parameters**
+
+- Resolution: Input a resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+
+**Code Snippet**
 
 Objective-C:
 
 ```objectivec
-    [dce getResolutionList];
+[dce setResolution:RESOLUTION_1080P];
 ```
 
 Swift:
 
 ```swift
-    dce.getResolutionList()
+dce.setResolution(Resolution.RESOLUTION_1080P)
+```
+
+## getResolutionList
+
+Get the available resolutions of the current device.
+
+**Return Value**
+
+- Resolution(s): The available resolutions of the current device. This resolution list might be different from the DCE preset resolution list.
+
+**Code Snippet**
+
+Objective-C:
+
+```objectivec
+[dce getResolutionList];
+```
+
+Swift:
+
+```swift
+dce.getResolutionList()
 ```
