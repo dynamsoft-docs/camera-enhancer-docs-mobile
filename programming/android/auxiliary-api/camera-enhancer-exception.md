@@ -31,6 +31,8 @@ var cameraException: CameraEnhancerException? = null
 
 ## getErrorCode
 
+**Code Snippet**
+
 Java:
 
 ```java

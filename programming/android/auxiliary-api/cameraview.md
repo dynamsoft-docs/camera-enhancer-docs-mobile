@@ -26,6 +26,14 @@ mCameraEnhancer.addCameraView(cameraView);
 
 ## addOverlay
 
+Add overlay on located barcode.
+
+```java
+com.dynamsoft.dce.CameraView.addOverlay()
+```
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -40,6 +48,12 @@ cameraView!!.addOverlay()
 
 ## removeOverlay
 
+```java
+com.dynamsoft.dce.CameraView.addOverlay()
+```
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -53,6 +67,16 @@ cameraView!!.removeOverlay()
 ```
 
 ## setBrushColor
+
+```java
+com.dynamsoft.dce.CameraView.addOverlay()
+```
+
+**Parameters**
+
+`String`: A string value that refers to a color.
+
+**Code Snippet**
 
 Java:
 

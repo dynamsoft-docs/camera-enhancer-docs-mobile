@@ -56,14 +56,17 @@ Kotlin:
 dceParameters!!.mainServerURL = ""
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+**Default Value**
+
+null
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
 
 ## standbyServerURL
 
@@ -81,14 +84,17 @@ Kotlin:
 dceParameters!!.standbyServerURL = ""
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+**Default Value**
+
+null
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
 
 ## handshakeCode
 
@@ -106,11 +112,13 @@ Kotlin:
 dceParameters!!.handshakeCode = ""
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## organizationID
 
@@ -128,11 +136,13 @@ Kotlin:
 dceParameters!!.organizationID = ""
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## sessionPassword
 
@@ -150,11 +160,13 @@ Kotlin:
 dceParameters!!.sessionPassword = ""
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## uuidGenerationMethod
 
@@ -172,14 +184,17 @@ Kotlin:
 dceParameters!!.uuidGenerationMethod = int
 ```
 
-- **Value range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
+**Value Range**
 
-- **Default value**
-    DM_UUIDGM_RANDOM
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
 
-- **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
+**Default Value**
+
+DM_UUIDGM_RANDOM
+
+**See Also**
+
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
 
 ## maxBufferDays
 
@@ -197,11 +212,13 @@ Kotlin:
 dceParameters!!.maxBufferDays = int
 ```
 
-- **Value range**
-    [7,0x7fffffff]  
+**Value Range**
 
-- **Default value**
-    7
+[7,0x7fffffff]  
+
+**Default Value**
+
+7
 
 ## chargeWay
 
@@ -219,14 +236,17 @@ Kotlin:
 dceParameters!!.chargeWay = int
 ```
 
-- **Value range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
+**Value Range**
 
-- **Default value**
-    DM_CW_AUTO
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
 
-- **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+**Default Value**
+
+DM_CW_AUTO
+
+**See Also**
+
+[`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
 
 ## products
 
@@ -244,8 +264,10 @@ Kotlin:
 dceParameters!!.products = int
 ```
 
-- **Value range**
-    Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+**Value Range**
 
-- **See also**  
-    [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
+Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+
+**See Also**
+
+[`EnumProduct`]({{ site.enumerations }}enumproduct.html)

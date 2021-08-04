@@ -56,10 +56,10 @@ Kotlin:
 dceParameters!!.mainServerURL = ""
 ```
 
-- **Value range**
+**Value Range**
     Any string value
 
-- **Default value**
+**Default Value**
     null
 
 - **Remarks**
@@ -81,10 +81,10 @@ Kotlin:
 dceParameters!!.standbyServerURL = ""
 ```
 
-- **Value range**
+**Value Range**
     Any string value
 
-- **Default value**
+**Default Value**
     null
 
 - **Remarks**
@@ -106,10 +106,10 @@ Kotlin:
 dceParameters!!.handshakeCode = ""
 ```
 
-- **Value range**
+**Value Range**
     Any string value
 
-- **Default value**
+**Default Value**
     null
 
 ## organizationID
@@ -128,10 +128,10 @@ Kotlin:
 dceParameters!!.organizationID = ""
 ```
 
-- **Value range**
+**Value Range**
     Any string value
 
-- **Default value**
+**Default Value**
     null
 
 ## sessionPassword
@@ -150,10 +150,10 @@ Kotlin:
 dceParameters!!.sessionPassword = ""
 ```
 
-- **Value range**
+**Value Range**
     Any string value
 
-- **Default value**
+**Default Value**
     null
 
 ## uuidGenerationMethod
@@ -172,13 +172,13 @@ Kotlin:
 dceParameters!!.uuidGenerationMethod = int
 ```
 
-- **Value range**
+**Value Range**
     Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
 
-- **Default value**
+**Default Value**
     DM_UUIDGM_RANDOM
 
-- **See also**  
+**See Also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
 
 ## maxBufferDays
@@ -197,10 +197,10 @@ Kotlin:
 dceParameters!!.maxBufferDays = int
 ```
 
-- **Value range**
+**Value Range**
     [7,0x7fffffff]  
 
-- **Default value**
+**Default Value**
     7
 
 ## chargeWay
@@ -219,13 +219,13 @@ Kotlin:
 dceParameters!!.chargeWay = int
 ```
 
-- **Value range**
+**Value Range**
     Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
 
-- **Default value**
+**Default Value**
     DM_CW_AUTO
 
-- **See also**  
+**See Also**  
     [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
 
 ## products
@@ -244,8 +244,8 @@ Kotlin:
 dceParameters!!.products = int
 ```
 
-- **Value range**
+**Value Range**
     Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
 
-- **See also**  
+**See Also**  
     [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
