@@ -57,13 +57,16 @@ dceParameters!!.mainServerURL = ""
 ```
 
 **Value Range**
-    Any string value
+
+Any string value
 
 **Default Value**
-    null
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+null
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ## standbyServerURL
 
@@ -82,13 +85,16 @@ dceParameters!!.standbyServerURL = ""
 ```
 
 **Value Range**
-    Any string value
+
+Any string value
 
 **Default Value**
-    null
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+null
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ## handshakeCode
 
@@ -107,10 +113,12 @@ dceParameters!!.handshakeCode = ""
 ```
 
 **Value Range**
-    Any string value
+
+Any string value
 
 **Default Value**
-    null
+
+null
 
 ## organizationID
 
@@ -129,10 +137,12 @@ dceParameters!!.organizationID = ""
 ```
 
 **Value Range**
-    Any string value
+
+Any string value
 
 **Default Value**
-    null
+
+null
 
 ## sessionPassword
 
@@ -151,10 +161,12 @@ dceParameters!!.sessionPassword = ""
 ```
 
 **Value Range**
-    Any string value
+
+Any string value
 
 **Default Value**
-    null
+
+null
 
 ## uuidGenerationMethod
 
@@ -173,13 +185,16 @@ dceParameters!!.uuidGenerationMethod = int
 ```
 
 **Value Range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
+
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
 
 **Default Value**
-    DM_UUIDGM_RANDOM
+
+DM_UUIDGM_RANDOM
 
 **See Also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
+
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
 
 ## maxBufferDays
 
@@ -198,10 +213,12 @@ dceParameters!!.maxBufferDays = int
 ```
 
 **Value Range**
-    [7,0x7fffffff]  
+
+[7,0x7fffffff]  
 
 **Default Value**
-    7
+
+7
 
 ## chargeWay
 
@@ -220,13 +237,16 @@ dceParameters!!.chargeWay = int
 ```
 
 **Value Range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
+
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
 
 **Default Value**
-    DM_CW_AUTO
+
+DM_CW_AUTO
 
 **See Also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+
+[`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
 
 ## products
 
@@ -245,7 +265,9 @@ dceParameters!!.products = int
 ```
 
 **Value Range**
-    Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+
+Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
 
 **See Also**  
-    [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
+
+[`EnumProduct`]({{ site.enumerations }}enumproduct.html)

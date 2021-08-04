@@ -13,11 +13,17 @@ breadcrumbText: Android Interface
 
 ## CameraListener
 
-From `CameraListener` user can get preprocessed frames.
+Get frames through the `CameraListener`.
 
-- `onPreviewOriginalFrame`: Get the original frame.
-- `onPreviewFilterFrame`: Get the filtered frame.
-- `onPreviewFastFrame`: Get the filtered and cropped frame.
+```java
+void onPreviewOriginalFrame(Frame var1);
+void onPreviewFilterFrame(Frame var1);
+void onPreviewFastFrame(Frame var1);
+```
+
+**Parameters**
+
+`frame`: Use `onPreviewOriginalFrame` to get the original `frame`. Use `onPreviewFilterFrame` to get the filtered `frame`. Use `onPreviewFastFrame` to get the filtered and cropped `frame`.
 
 Java:
 
@@ -46,8 +52,10 @@ mCameraEnhancer!!.addCameraListener(object : CameraListener {
 
 This is the method that handles callback when Dynamsoft License Server returns.
 
-- `isSuccess`: Whether the license verification was successful.
-- `error`: The error message from license server.
+**Parameters**
+
+`isSuccess`: Whether the license verification was successful.
+`error`: The error message from license server.
 
 Java:
 
