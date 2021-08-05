@@ -9,9 +9,13 @@ breadcrumbText: iOS Frame Preprocessing Methods
 
 # iOS API Reference - Frame Preprocessing Methods
 
-## acquireListFrame
+## AcquireListFrame
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
+
+```objectivec
+- (FramePackage*)AcquireListFrame;
+```
 
 **Code Snippet**
 
@@ -31,9 +35,14 @@ let fg = self.dce.acquireListFrame()
 
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decode efficiency. It is recommended to be enabled when decoding a single barcode.
 
+```objc
+@property (nonatomic, assign) BOOL enableFastMode;
+```
+
 **Parameters**
 
-- `Boolean`: True/false value that stands for enabled/disabled status.
+`true`: enable the fast mode.  
+`false`: disable the fast mode.
 
 **Code Snippet**
 
@@ -55,9 +64,14 @@ dce.enableFastMode = true
 
 Turn on (off) sensor control
 
+```objc
+@property (nonatomic, assign) BOOL enableSensorControl;
+```
+
 **Parameters**
 
-- `Boolean`: True/false value that stands for enabled/disabled status.
+`true`: enable the sensor filter.  
+`false`: disable the sensor filter.
 
 **Code Snippet**
 
@@ -81,9 +95,13 @@ let res = dce.enableSensorControl
 
 This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50.
 
+```objectivec
+- (void)setSensorControlThreshold:(double)sensor NS_SWIFT_NAME(setSensorControlThreshold(_:));
+```
+
 **Parameters**
 
-- `Threshold`: A int value that stands for the sensor filter threshold.
+`int`: A int value that stands for the sensor filter threshold.
 
 **Code Snippet**
 
@@ -105,7 +123,8 @@ Turn on(off) DCE filter (recommended to be true).
 
 **Parameters**
 
-- `Boolean`: True/false value that stands for enabled/disabled status.
+`true`: enable the frame sharpness filter.  
+`false`: disable the frame sharpness filter.
 
 **Code Snippet**
 
@@ -129,9 +148,13 @@ let res = dce.enableFrameFilter
 
 Set max frame rate.
 
+```objectivec
+- (void)setMaxFrameRate:(int)maxFrameRate NS_SWIFT_NAME(setMaxFrameRate(_:));
+```
+
 **Parameters**
 
-- `Frame Rate`: A int value that stands for the max frame rate.
+`int`: A int value that stands for the max frame rate.
 
 **Code Snippet**
 

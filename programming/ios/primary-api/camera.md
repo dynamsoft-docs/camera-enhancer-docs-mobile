@@ -13,6 +13,10 @@ breadcrumbText: iOS Regular Camera Methods
 
 There are Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
 
+```objc
+- (void)updateCameraSettingFromJson:(NSString*)params;
+```
+
 **Parameters**
 
 The camera setting JSON Strings.
@@ -37,6 +41,10 @@ dce.updateCameraSetting(fromJson: "Your json string")
 
 There are some detailed settings that can be updated from JSON string or file.
 
+```objc
+- (void)updateCameraSettingFromFile:(NSString*)filePath;
+```
+
 **Parameters**
 
 The camera setting JSON Strings.
@@ -60,33 +68,37 @@ dce.updateCameraSettingFromFile(fromFile: "Your file path")
 This is the template for `updateCameraSettingFromJson` and `updateCameraSettingFromFile`:
 
 ```Json
-    {
-        //Absolute sharpness value, A threshold value for controlling filter
-        "abssharpnessthreshold":200,
-        //Sensor value, A threshold value for controlling filter
-        "sensorvalue":3,        
-        //A threshold value for gray scale analysis
-        "graydiffthreshold":30,
-        //A threshold for judging whether the device is shaking
-        "sharpnessthreshold":0.2,
-        //A threshold for judging whether the device is shaking violently
-        "sharpnessthresholdlarge":0.4,
-        //A threshold value for calculating sharpness
-        "absgraythreshold":35,
-        //A threshold value for controlling auto zoom
-        "conversioncountthreshold":30,
+{
+    //Absolute sharpness value, A threshold value for controlling filter
+    "abssharpnessthreshold":200,
+    //Sensor value, A threshold value for controlling filter
+    "sensorvalue":3,        
+    //A threshold value for gray scale analysis
+    "graydiffthreshold":30,
+    //A threshold for judging whether the device is shaking
+    "sharpnessthreshold":0.2,
+    //A threshold for judging whether the device is shaking violently
+    "sharpnessthresholdlarge":0.4,
+    //A threshold value for calculating sharpness
+    "absgraythreshold":35,
+    //A threshold value for controlling auto zoom
+    "conversioncountthreshold":30,
         //A threshold value that controlling auto focus
-        "claritythreshold":0.1
-    }
+    "claritythreshold":0.1
+}
 ```
 
 ## getVersion
 
 Users can check the current DCE version by using this API.
 
+```objectivec
+- (NSString*)getVersion;
+```
+
 **Return Value**
 
-The version number.
+`NSString`: The version number.
 
 **Code Snippet**
 
@@ -106,9 +118,13 @@ dce.getVersion()
 
 Get the current status (on/off) of the camera.
 
+```objectivec
+- (CameraState)getCameraCurrentState NS_SWIFT_NAME(getCameraCurrentState());
+```
+
 **Return Value**
 
-The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
 
 **Code Snippet**
 
@@ -128,9 +144,13 @@ dce.getCameraCurrentState()
 
 Get the desired status (on/off)of the camera.
 
+```objc
+- (CameraState)getCameraDesiredState NS_SWIFT_NAME(getCameraDesiredState());
+```
+
 **Return Value**
 
-The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
 
 **Code Snippet**
 
@@ -149,6 +169,10 @@ dce.getCameraDesiredState()
 ## setCameraDesiredState
 
 Set the camera state.
+
+```objc
+- (void)setCameraDesiredState:(CameraState)state;
+```
 
 **Parameters**
 
@@ -172,6 +196,11 @@ dce.setCameraDesiredState(CAMERA_STATE_ON)
 
 Note: these APIs are created for pausing & resuming the camera but the camera module is still working when paused. if you want to shut down camera module please use `stopScanning`.
 
+```objc
+- (void)resumeCamera NS_SWIFT_NAME(resumeCamera());
+- (void)pauseCamera NS_SWIFT_NAME(pauseCamera());
+```
+
 **Code Snippet**
 
 Objective-C:
@@ -191,6 +220,11 @@ dce.resumeCamera()
 ## stopScanning and startScanning
 
 Control the stopping & starting of the camera module.
+
+```objc
+- (void)startScanning;
+- (void)stopScanning;
+```
 
 **Code Snippet**
 
@@ -212,9 +246,13 @@ dce.stopScanning()
 
 Add Camera Listener
 
+```objc
+- (void)addCameraListener:(id)listener NS_SWIFT_NAME(addCameraListener(_:));
+```
+
 **Parameters**
 
-- `CameraEnhancerListener`
+`Listener`: The camera listener.
 
 **Code Snippet**
 
@@ -234,9 +272,13 @@ dce.addCameraListener(self)
 
 Get the current torch state.
 
+```objc
+- (TorchState)getTorchCurrentState;
+```
+
 **Return Value**
 
-- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The parameter that stands for the torch state. View in parameter `TorchState`.
 
 **Code Snippet**
 
@@ -256,9 +298,13 @@ dce.getTorchCurrentState()
 
 Get desired torch state (on/off)
 
+```objc
+- (TorchState)getTorchDesiredState;
+```
+
 **Return Value**
 
-- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The parameter that stands for the torch state. View in parameter `TorchState`.
 
 **Code Snippet**
 
@@ -278,9 +324,13 @@ dce.getTorchDesiredState()
 
 Set the torch on/off.
 
+```objc
+- (void)setTorchDesiredState:(TorchState)state NS_SWIFT_NAME(setTorchDesiredState(_:));
+```
+
 **Return Value**
 
-- `TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The parameter that stands for the torch state. View in parameter `TorchState`.
 
 **Code Snippet**
 
@@ -300,9 +350,13 @@ dce.setTorchDesiredState(TorchState.on)
 
 Add the torch listener.
 
+```objc
+- (void)addTorchListener:(id)listener NS_SWIFT_NAME(addTorchListener(_:));
+```
+
 **Parameters**
 
-- `CameraTorchListener`
+`Listener`: The torch listener.
 
 **Code Snippet**
 
@@ -322,9 +376,13 @@ dce.addTorchListener(self)
 
 Get the camera position. DCE will use the back camera as default.
 
+```objc
+- (CameraPosition)getCameraPosition;
+```
+
 **Return Value**
 
-- `CameraPosition`: View in parameter [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition).
+[`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition): The activated camera (front/back).
 
 **Code Snippet**
 
@@ -344,9 +402,13 @@ dce.getCameraPosition()
 
 Change the camera (front/back).
 
+```objc
+- (void)switchCameraPosition;
+```
+
 **Parameters**
 
-- `CameraPosition`: View in parameter [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition).
+[`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition): The activated camera (front/back).
 
 **Code Snippet**
 
@@ -366,9 +428,13 @@ dce.switchCameraPosition()
 
 Get the current resolution setting.
 
+```objc
+- (NSString*)getResolution;
+```
+
 **Return Value**
 
-- Resolution: A resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+`NSString`: A resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
 
 **Code Snippet**
 
@@ -388,9 +454,13 @@ dce.getResolution()
 
 Set the resolution.
 
+```objc
+- (void)setResolution:(Resolution)resolution;
+```
+
 **Parameters**
 
-- Resolution: Input a resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+`NSString`: Input a resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
 
 **Code Snippet**
 
@@ -404,26 +474,4 @@ Swift:
 
 ```swift
 dce.setResolution(Resolution.RESOLUTION_1080P)
-```
-
-## getResolutionList
-
-Get the available resolutions of the current device.
-
-**Return Value**
-
-- Resolution(s): The available resolutions of the current device. This resolution list might be different from the DCE preset resolution list.
-
-**Code Snippet**
-
-Objective-C:
-
-```objectivec
-[dce getResolutionList];
-```
-
-Swift:
-
-```swift
-dce.getResolutionList()
 ```
