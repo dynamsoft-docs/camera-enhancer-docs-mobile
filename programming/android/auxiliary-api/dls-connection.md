@@ -44,6 +44,16 @@ dceParameters = com.dynamsoft.dce.DMDLSConnectionParameters()
 
 The URL of the Dynamsoft License Server.
 
+**Value Range**
+
+Any string value
+
+**Default Value**
+
+null
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -56,6 +66,14 @@ Kotlin:
 dceParameters!!.mainServerURL = ""
 ```
 
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+
+## standbyServerURL
+
+The URL of the standby Dynamsoft License Server.
+
 **Value Range**
 
 Any string value
@@ -64,13 +82,7 @@ Any string value
 
 null
 
-**Remarks**
-
-If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
-
-## standbyServerURL
-
-The URL of the standby Dynamsoft License Server.
+**Code Snippet**
 
 Java:
 
@@ -84,6 +96,14 @@ Kotlin:
 dceParameters!!.standbyServerURL = ""
 ```
 
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+
+## handshakeCode
+
+The handshake code.
+
 **Value Range**
 
 Any string value
@@ -92,13 +112,7 @@ Any string value
 
 null
 
-**Remarks**
-
-If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
-
-## handshakeCode
-
-The handshake code.
+**Code Snippet**
 
 Java:
 
@@ -112,6 +126,10 @@ Kotlin:
 dceParameters!!.handshakeCode = ""
 ```
 
+## organizationID
+
+The organization ID
+
 **Value Range**
 
 Any string value
@@ -120,9 +138,7 @@ Any string value
 
 null
 
-## organizationID
-
-The organization ID
+**Code Snippet**
 
 Java:
 
@@ -136,6 +152,10 @@ Kotlin:
 dceParameters!!.organizationID = ""
 ```
 
+## sessionPassword
+
+The session password of the handshake code set in Dynamsoft License Server.
+
 **Value Range**
 
 Any string value
@@ -144,9 +164,7 @@ Any string value
 
 null
 
-## sessionPassword
-
-The session password of the handshake code set in Dynamsoft License Server.
+**Code Snippet**
 
 Java:
 
@@ -160,17 +178,19 @@ Kotlin:
 dceParameters!!.sessionPassword = ""
 ```
 
-**Value Range**
-
-Any string value
-
-**Default Value**
-
-null
-
 ## uuidGenerationMethod
 
 Sets the method to generate UUID.
+
+**Value Range**
+
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
+
+**Default Value**
+
+DM_UUIDGM_RANDOM
+
+**Code Snippet**
 
 Java:
 
@@ -184,14 +204,6 @@ Kotlin:
 dceParameters!!.uuidGenerationMethod = int
 ```
 
-**Value Range**
-
-Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
-
-**Default Value**
-
-DM_UUIDGM_RANDOM
-
 **See Also**
 
 [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
@@ -199,6 +211,16 @@ DM_UUIDGM_RANDOM
 ## maxBufferDays
 
 Sets the max days to buffer the license info.
+
+**Value Range**
+
+[7,0x7fffffff]  
+
+**Default Value**
+
+7
+
+**Code Snippet**
 
 Java:
 
@@ -212,17 +234,19 @@ Kotlin:
 dceParameters!!.maxBufferDays = int
 ```
 
-**Value Range**
-
-[7,0x7fffffff]  
-
-**Default Value**
-
-7
-
 ## chargeWay
 
 Sets the charge way.
+
+**Value Range**
+
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
+
+**Default Value**
+
+DM_CW_AUTO
+
+**Code Snippet**
 
 Java:
 
@@ -236,14 +260,6 @@ Kotlin:
 dceParameters!!.chargeWay = int
 ```
 
-**Value Range**
-
-Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
-
-**Default Value**
-
-DM_CW_AUTO
-
 **See Also**
 
 [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
@@ -251,6 +267,12 @@ DM_CW_AUTO
 ## products
 
 Set the products. This is a combined value of Product Enumration items.
+
+**Value Range**
+
+Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+
+**Code Snippet**
 
 Java:
 
@@ -263,10 +285,6 @@ Kotlin:
 ```kotlin
 dceParameters!!.products = int
 ```
-
-**Value Range**
-
-Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
 
 **See Also**
 

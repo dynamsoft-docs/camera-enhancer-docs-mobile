@@ -13,16 +13,35 @@ breadcrumbText: Android CameraEnhancer Class
 
 `com.dynamsoft.dce.CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
 
+To initialize the `CameraEnhancer` with a license:
+
 Java:
 
 ```java
 CameraEnhancer mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+mCameraEnhancer.addCameraView(cameraView);
+com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+info.organizationID = "Put your organizationID here.";
+mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
+    @Override
+    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+        if(!isSuccess){ error.printStackTrace(); }
+    }
+});
 ```
 
 Kotlin:
 
 ```kotlin
 mCameraEnhancer = CameraEnhancer(this@MainActivity)
+mCameraEnhancer!!.addCameraView(cameraView)
+val info = com.dynamsoft.dce.DMDLSConnectionParameters()
+info.organizationID = "Put your organizationID here."
+mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+    if (!isSuccess) {
+        error.printStackTrace()
+    }
+}
 ```
 
 ## CameraEnhancer Methods

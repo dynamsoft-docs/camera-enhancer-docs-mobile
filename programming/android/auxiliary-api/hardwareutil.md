@@ -27,6 +27,8 @@ This page is for `HardwareUtil` page. `HardwareUtil` parameters are static value
 
 [`getDeviceLevel`]({{ site.android-api }}camera.html#getdevicelevel)
 
+**Code Snippet**
+
 Java:
 
 ```java

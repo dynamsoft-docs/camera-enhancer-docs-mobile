@@ -45,7 +45,7 @@ enableFastMode(boolean)
 
 **Parameters**
 
-`true`: Enable the fast-mode.
+`true`: Enable the fast-mode.  
 `false`: Disable the fast-mode.
 
 **Code Snippet**
@@ -72,7 +72,7 @@ getEnabledFastModeStatus()
 
 **Return Value**
 
-`true`: The fast-mode is enabled.
+`true`: The fast-mode is enabled.  
 `false`: The fast-mode is disabled.
 
 **Code Snippet**
@@ -99,7 +99,7 @@ enableFrameFilter(boolean)
 
 **Parameters**
 
-`true`: Enable the frame filter.
+`true`: Enable the frame filter.  
 `false`: Disable the frame filter.
 
 **Code Snippet**
@@ -126,7 +126,7 @@ getEnabledFrameFilterStatus()
 
 **Return Value**
 
-`true`: The frame filter is enabled.
+`true`: The frame filter is enabled.  
 `false`: The frame filter is disabled.
 
 **Code Snippet**
@@ -179,7 +179,7 @@ enableSensorControl(boolean)
 
 **Parameters**
 
-`true`: Enable the sensor filter.
+`true`: Enable the sensor filter.  
 `false`: Disable the sensor filter.
 
 **Code Snippet**
@@ -206,7 +206,7 @@ getEnabledSensorControlStatus()
 
 **Return Value**
 
-`true`: The sensor filter is enabled.
+`true`: The sensor filter is enabled.  
 `false`: The sensor filter is disabled.
 
 **Code Snippet**

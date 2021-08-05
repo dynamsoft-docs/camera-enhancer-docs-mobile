@@ -47,9 +47,9 @@ setAutoModeLevelParam(int, int, int, int)
 
 We are defining the devices level by their CPU and RAM performance. You can define the ranges for CPU and RAM performance throw this API.
 
-`int (cpuMHz1)`: The smallest value for CPU processing speed.
-`int (cpuMHz2)`: The greatest value for CPU processing speed.
-`int (ramMB1)`: The smallest value for RAM size.
+`int (cpuMHz1)`: The smallest value for CPU processing speed.  
+`int (cpuMHz2)`: The greatest value for CPU processing speed.  
+`int (ramMB1)`: The smallest value for RAM size.  
 `int (ramMB2)`: The greatest value for RAM size.
 
 | CPU & RAM | If device CPUMHz > cpuMHz2 | If device CPUMHz1 < CPUMHz < cpuMHz2 | If device CPUMHz < CPUMHz1 |

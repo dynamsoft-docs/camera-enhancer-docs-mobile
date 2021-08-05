@@ -19,7 +19,7 @@ setAutoFocusPosition(float, float)
 
 **Parameters**
 
-`X`: A float value that stands for the X coordinate of the focus position.
+`X`: A float value that stands for the X coordinate of the focus position.  
 `Y`: A float value that stands for the Y coordinate of the focus position.
 
 **Code Snippet**
@@ -46,7 +46,7 @@ setAutoFocusPosition(int, int)
 
 **Parameters**
 
-`X`: The int pixel value that stands for the X coordinate of the focus position.
+`X`: The int pixel value that stands for the X coordinate of the focus position.  
 `Y`: The int pixel value that stands for the Y coordinate of the focus position.
 
 **Code Snippet**
@@ -114,7 +114,7 @@ enableDCEAutoFocus(boolean)
 
 **Parameters**
 
-`true`: Enable the DCE auto focus.
+`true`: Enable the DCE auto focus.  
 `false`: Disable the DCE auto focus.
 
 **Code Snippet**
@@ -141,7 +141,7 @@ getEnabledDCEAutoFocusStatus()
 
 **Return Value**
 
-`true`: The DCE auto focus is enabled.
+`true`: The DCE auto focus is enabled.  
 `false`: The DCE auto focus is disabled.
 
 **Code Snippet**
@@ -168,7 +168,7 @@ enableDefaultAutoFocus(boolean)
 
 **Parameters**
 
-`true`: Enable the default auto focus.
+`true`: Enable the default auto focus.  
 `false`: Disable the default auto focus.
 
 **Code Snippet**
@@ -195,7 +195,7 @@ getEnabledDefaultAutoFocusStatus()
 
 **Return Value**
 
-`true`: The default auto focus is enabled.
+`true`: The default auto focus is enabled.  
 `false`: The default auto focus is disabled.
 
 **Code Snippet**
@@ -222,7 +222,7 @@ enableRegularAutoFocus(boolean)
 
 **Parameters**
 
-`true`: Enable the regular auto focus.
+`true`: Enable the regular auto focus.  
 `false`: Disable the regular auto focus.
 
 **Code Snippet**
@@ -249,7 +249,7 @@ getEnabledRegularAutoFocusStatus()
 
 **Parameters**
 
-`true`: The regular auto focus is enabled.
+`true`: The regular auto focus is enabled.  
 `false`: The regular auto focus is disabled.
 
 **Code Snippet**
@@ -276,7 +276,7 @@ setRegularAutoFocusParam(int, int)
 
 **Parameters**
 
-`int`: Focus interval, Default value is 3000 (millisecond), which means the camera will auto focus for every 3000 milliseconds.
+`int`: Focus interval, Default value is 3000 (millisecond), which means the camera will auto focus for every 3000 milliseconds.  
 `int`: Terminate time, Default value is 500 (millisecond), which means the camera will not focus once again within 500 milliseconds.
 
 **Code Snippet**
@@ -304,7 +304,7 @@ enableAutoFocusOnSharpnessChange(boolean)
 
 **Parameters**
 
-`true`: Enable the sharpness auto focus.
+`true`: Enable the sharpness auto focus.  
 `false`: Disable the sharpness auto focus.
 
 **Code Snippet**
@@ -331,7 +331,7 @@ getEnabledAutoFocusOnSharpnessChangeStatus()
 
 **Return Value**
 
-`true`: The sharpness auto focus is enabled.
+`true`: The sharpness auto focus is enabled.  
 `false`: The sharpness auto focus is disabled.
 
 **Code Snippet**
@@ -358,7 +358,7 @@ enableAutoZoom(boolean)
 
 **Parameters**
 
-`true`: Enable the auto zoom.
+`true`: Enable the auto zoom.  
 `false`: Disable the auto zoom.
 
 **Code Snippet**
@@ -385,7 +385,7 @@ getEnabledAutoZoomStatus()
 
 **Return Value**
 
-`true`: The auto zoom is enabled.
+`true`: The auto zoom is enabled.  
 `false`: The auto zoom is disabled.
 
 **Code Snippet**
