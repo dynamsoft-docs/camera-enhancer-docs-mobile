@@ -124,7 +124,7 @@ Get the current status (on/off) of the camera.
 
 **Return Value**
 
-[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
+`CameraState`: An argument that stands for the camera state. One of the [`CameraState`]({{site.parameter-reference}}index.html#camerastate) value.
 
 **Code Snippet**
 
@@ -150,7 +150,7 @@ Get the desired status (on/off)of the camera.
 
 **Return Value**
 
-[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
+`CameraState`: An argument that stands for the camera state. One of the [`CameraState`]({{site.parameter-reference}}index.html#camerastate) value.
 
 **Code Snippet**
 
@@ -176,7 +176,7 @@ Set the camera state.
 
 **Parameters**
 
-The [`CameraState`]({{site.parameter-reference}}index.html#camerastate).
+`CameraState`: An argument that stands for the camera state. One of the [`CameraState`]({{site.parameter-reference}}index.html#camerastate) value.
 
 **Code Snippet**
 
@@ -278,7 +278,7 @@ Get the current torch state.
 
 **Return Value**
 
-[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The parameter that stands for the torch state. View in parameter `TorchState`.
+`TorchState`: An argument that stands for the torch state. One of the [`TorchState`]({{site.parameter-reference}}index.html#torchstate) value.
 
 **Code Snippet**
 
@@ -304,7 +304,7 @@ Get desired torch state (on/off)
 
 **Return Value**
 
-[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The parameter that stands for the torch state. View in parameter `TorchState`.
+`TorchState`: An argument that stands for the torch state. One of the [`TorchState`]({{site.parameter-reference}}index.html#torchstate) value.
 
 **Code Snippet**
 
@@ -330,7 +330,7 @@ Set the torch on/off.
 
 **Return Value**
 
-[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The parameter that stands for the torch state. View in parameter `TorchState`.
+`TorchState`: An argument that stands for the torch state. One of the [`TorchState`]({{site.parameter-reference}}index.html#torchstate) value.
 
 **Code Snippet**
 
@@ -382,7 +382,7 @@ Get the camera position. DCE will use the back camera as default.
 
 **Return Value**
 
-[`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition): The activated camera (front/back).
+`CameraPosition`: An argument that stands for which camera is selected. One of the [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition) value.
 
 **Code Snippet**
 
@@ -408,7 +408,7 @@ Change the camera (front/back).
 
 **Parameters**
 
-[`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition): The activated camera (front/back).
+`CameraPosition`: An argument that stands for which camera is selected. One of the [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition) value.
 
 **Code Snippet**
 
@@ -434,7 +434,7 @@ Get the current resolution setting.
 
 **Return Value**
 
-`NSString`: A resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+`NSString`: One of the [`Resolution`]({{site.parameter-reference}}index.html#resolution) value.
 
 **Code Snippet**
 
@@ -460,7 +460,7 @@ Set the resolution.
 
 **Parameters**
 
-`NSString`: Input a resolution value. View in [`Resolution`]({{site.parameter-reference}}index.html#resolution).
+`Resolution`: Input one of the [`Resolution`]({{site.parameter-reference}}index.html#resolution) value to set the resolution.
 
 **Code Snippet**
 
@@ -475,3 +475,7 @@ Swift:
 ```swift
 dce.setResolution(Resolution.RESOLUTION_1080P)
 ```
+
+**Remarks**
+
+If the pre-set resolution is unavailable for the current device, the SDK will select the highest available resolution below the pre-set value.
