@@ -181,7 +181,7 @@ getCameraCurrentState()
 
 **Return Value**
 
-[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
+`CameraState`: An argument that stands for the camera state. One of the [`CameraState`]({{site.parameter-reference}}index.html#camerastate) value.
 
 **Code Snippet**
 
@@ -205,7 +205,7 @@ getCameraDesiredState()
 
 **Return Value**
 
-[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
+`CameraState`: An argument that stands for the camera state. One of the [`CameraState`]({{site.parameter-reference}}index.html#camerastate) value.
 
 **Code Snippet**
 
@@ -231,7 +231,7 @@ setCameraDesiredState(CameraState)
 
 **Parameters**
 
-[`CameraState`]({{site.parameter-reference}}index.html#camerastate): The camera status.
+`CameraState`: An argument that stands for the camera state. One of the [`CameraState`]({{site.parameter-reference}}index.html#camerastate) value.
 
 **Code Snippet**
 
@@ -311,7 +311,7 @@ addCameraListener(CameraListener)
 
 **Parameters**
 
-[`CameraListener`]({{site.android-api-auxiliary}}interface.html#cameralistener): interface `CameraListener`.
+`CameraListener`: The interface [`CameraListener`]({{site.android-api-auxiliary}}interface.html#cameralistener).
 
 **Return Value**
 
@@ -374,7 +374,7 @@ getTorchCurrentState()
 
 **Return Value**
 
-`TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+`TorchState`: An argument that stands for the torch state. One of the [`TorchState`]({{site.parameter-reference}}index.html#torchstate) value.
 
 **Code Snippet**
 
@@ -400,7 +400,7 @@ getTorchDesiredState()
 
 **Return Value**
 
-`TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+`TorchState`: An argument that stands for the torch state. One of the [`TorchState`]({{site.parameter-reference}}index.html#torchstate) value.
 
 **Code Snippet**
 
@@ -426,7 +426,7 @@ setTorchDesiredState(TorchState)
 
 **Parameters**
 
-`TorchState`: The parameter that stands for the torch state. View in parameter [`TorchState`]({{site.parameter-reference}}index.html#torchstate).
+`TorchState`: An argument that stands for the torch state. One of the [`TorchState`]({{site.parameter-reference}}index.html#torchstate) value.
 
 **Code Snippet**
 
@@ -456,7 +456,7 @@ addTorchListener(TorchListener)
 
 **Parameters**
 
-[`TorchListener`]({{site.android-api-auxiliary}}interface.html#torchlistener): interface `TorchListener`
+`TorchListener`: The interface [`TorchListener`]({{site.android-api-auxiliary}}interface.html#torchlistener)
 
 **Code Snippet**
 
@@ -489,7 +489,7 @@ getCameraPosition()
 
 **Return Value**
 
-[`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition): View in parameter `CameraPosition`.
+`CameraPosition`: An argument that stands for which camera is selected. One of the [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition) value.
 
 **Code Snippet**
 
@@ -515,7 +515,7 @@ switchCameraPosition(CameraPosition)
 
 **Parameters**
 
-[`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition): View in parameter `CameraPosition`.
+`CameraPosition`: An argument that stands for which camera is selected. One of the [`CameraPosition`]({{site.parameter-reference}}index.html#cameraposition) value.
 
 **Code Snippet**
 
@@ -543,7 +543,7 @@ getResolution()
 
 **Return Value**
 
-[`Resolution`]({{site.parameter-reference}}index.html#resolution): View the parameter `Resolution`.
+`Resolution`: One of the [`Resolution`]({{site.parameter-reference}}index.html#resolution) value.
 
 **Code Snippet**
 
@@ -569,7 +569,7 @@ setResolution(Resolution)
 
 **Parameters**
 
-[`Resolution`]({{site.parameter-reference}}index.html#resolution): View the parameter `Resolution`.
+`Resolution`: One of the [`Resolution`]({{site.parameter-reference}}index.html#resolution) value.
 
 **Code Snippet**
 
@@ -610,3 +610,7 @@ Kotlin:
 ```kotlin
 mCameraEnhancer!!.resolutionList
 ```
+
+**Remarks**
+
+If the pre-set resolution is unavailable for the current device, the SDK will select the highest available resolution below the pre-set value.

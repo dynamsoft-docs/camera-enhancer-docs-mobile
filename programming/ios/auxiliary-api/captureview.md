@@ -24,6 +24,12 @@ breadcrumbText: iOS DCECaptureView Class
 
 Add a torch controlling icon on the view.
 
+```objc
+- (void)addTorch;
+```
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
@@ -47,6 +53,12 @@ dceView.addTorch(with: UIImage, torchOffImg: UIImage, frame: CGRect)
 ## addOverlay
 
 Add overlay on the view.
+
+```objc
+- (void)addOverlay;
+```
+
+**Code Snippet**
 
 Objective-C:
 
@@ -72,6 +84,16 @@ dceView.addOverlay(stroke: UIColor, fill: UIColor)
 
 Add view Listener.
 
+```objc
+- (void)addListener:(id<DCECaptureViewListener>)listener NS_SWIFT_NAME(addListener(_:));
+```
+
+**Parameters**
+
+`Listener`: DCECaptureViewListener.
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
@@ -89,6 +111,12 @@ dceView.addListener(listener: DCECaptureViewListener)
 ## removeListener
 
 Remove view listener.
+
+```objc
+- (void)removeListener;
+```
+
+**Code Snippet**
 
 Objective-C:
 
