@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: Android Filter Methods
 ---
 
-# Android API Reference - Frame Preprocessing Methods
+# Frame Preprocessing Methods
 
 ## AcquireListFrame
 

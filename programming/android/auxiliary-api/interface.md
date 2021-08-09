@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android DCECaptureView Class
-description: This is the documentation - Android DCECaptureView Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android DCECaptureView Class
+title: Dynamsoft Camera Enhancer - Android Interface
+description: This is the documentation - Android Interface page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android Interface
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true

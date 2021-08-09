@@ -13,15 +13,13 @@ breadcrumbText: Android CameraEnhancer Class
 
 `com.dynamsoft.dce.CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
 
-## CameraEnhancer Methods
-
-### [Initialization Methods]({{site.android-api}}initialization.html)
+## [Initialization Methods]({{site.android-api}}initialization.html)
 
 | Method | Description |
 | ------ | ----------- |
 | [`initLicenseFromDLS`]({{site.android-api}}initialization.html#initLicensefromdls) | Get the latest frame from the frame queue when this API is activated. |
 
-### [Frame preprocessing methods]({{site.android-api}}preprocess.html)
+## [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 
 | Method | Description |
 | ------ | ----------- |
@@ -35,7 +33,7 @@ breadcrumbText: Android CameraEnhancer Class
 | [`getEnabledSensorControlStatus`]({{site.android-api}}preprocess.html#getenabledsensorcontrolstatus) | Get the status (on/off) of DCE sensor control mode. |
 | [`setSensorControlThreshold`]({{site.android-api}}preprocess.html#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
 
-### [Regular camera methods]({{site.android-api}}camera.html)
+## [Regular camera methods]({{site.android-api}}camera.html)
 
 | Method | Description |
 | ------ | ----------- |
@@ -62,7 +60,7 @@ breadcrumbText: Android CameraEnhancer Class
 | [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set resolution. |
 | [`getResolutionList`]({{site.android-api}}camera.html#getresolutionlist) | Get all available resolutions |
 
-### [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
+## [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
 
 | Method | Description |
 | ------ | ----------- |

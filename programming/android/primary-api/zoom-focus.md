@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: Android Zoom and Focus
 ---
 
-# Android API Reference - Focus & Zoom Methods
+# Focus & Zoom Methods
 
 ## setAutoFocusPosition
 
