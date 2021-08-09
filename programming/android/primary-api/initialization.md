@@ -21,7 +21,7 @@ void initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, CameraDLSLicenseVerif
 
 **Parameters**
 
-`DMDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.
+`DMDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.  
 `CameraDLSLicenseVerificationListener`: The interface [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener).
 
 **Code Snippet**

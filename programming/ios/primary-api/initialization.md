@@ -23,7 +23,7 @@ Initialize the Camera Enhancer with a license.
 
 **Parameters**
 
-`iDCEDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.
+`iDCEDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.  
 `view`: The [`DCECaptureView`]({{ site.ios-api-auxiliary }}captureview.html).
 
 **Code Snippet**
