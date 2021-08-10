@@ -17,6 +17,48 @@ breadcrumbText: iOS Protocol
 @protocol CameraEnhancerListener <NSObject>
 ```
 
+**Parameters**
+
+**Required**
+
+```objc
+- (void)onPreviewOriginalFrame:(FramePackage*)frame;
+```
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+[_dce addCameraListener:self];
+// Add protocol requirements
+- (void)onPreviewOriginalFrame:(FramePackage *) frame{
+    // TODO add your code for original frame
+}
+- (void)onPreviewFilterFrame:(FramePackage *) frame{
+    // TODO add your code for filter frame
+}
+- (void)onPreviewFastFrame:(FramePackage *) frame{
+    // TODO add your code for fast frame
+}
+```
+
+Swift:
+
+```swift
+dce.addTorchListener(self)
+// Add protocol requirements
+func onPreviewOriginalFrame(_ frame: FramePackage){
+    // TODO add your code for original frame
+}
+func onPreviewFilterFrame(_ frame: FramePackage){
+    // TODO add your code for filter frame
+}
+func onPreviewFastFrame(_ frame: FramePackage){
+    // TODO add your code for fast frame
+}
+```
+
 ## CameraTorchListener
 
 This is the method that handles the torch state when the torch state changes.
@@ -25,16 +67,34 @@ This is the method that handles the torch state when the torch state changes.
 @protocol CameraTorchListener <NSObject>
 ```
 
+**Parameters**
+
+**Required**
+
+```objc
+- (void)didChangeTorchState:(TorchState)torchState NS_SWIFT_NAME(didChangeTorchState(torchState:));
+```
+
 **Code Snippet**
 
 Objective-C:
 
 ```objc
+[_dce addTorchListener:self];
+// Add protocol requirements
+- (void)didChangeTorchState:(TorchState) torchState{
+    // TODO add your code for torch listener
+}
 ```
 
 Swift:
 
 ```swift
+dce.addTorchListener(self)
+// Add protocol requirements
+func didChangeTorchState(torchState: TorchState){
+    // TODO add your code for torch listener
+}
 ```
 
 ## DCEDLSLicenseVerificationDelegate
