@@ -25,7 +25,7 @@ The protocol to handle callback when previewed frame callback is returned.
 
 ## onPreviewOriginalFrame
 
-The previewed original frame callback.
+The previewed original frame callback. Add code to use the original frames.
 
 ```objc
 - (void)onPreviewOriginalFrame:(FramePackage*)frame;
@@ -33,7 +33,7 @@ The previewed original frame callback.
 
 **Parameters**
 
-`frame`: The frame data. View in [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html).
+`Original frames`: The data of original frame(s). The Camera Enhancer can make preprocessing on video frames. In this callback function, the input parameters are the original frames that are captured by the camera.
 
 **Code Snippet**
 
@@ -57,9 +57,13 @@ func onPreviewOriginalFrame(_ frame: FramePackage){
 }
 ```
 
+**See also**
+
+- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
+
 ## onPreviewFilterFrame
 
-The previewed filtered frame callback.
+The previewed filtered frame callback. Add code to use the filtered frames.
 
 ```objc
 - (void)onPreviewFilterFrame:(FramePackage*)frame;
@@ -67,7 +71,7 @@ The previewed filtered frame callback.
 
 **Parameters**
 
-`frame`: The frame data. View in [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html).
+`Filtered frames`: The data of filtered frame(s). The Camera Enhancer can make preprocessing on video frames. If the frame filter processing is enabled, the input parameter of this function will be the filtered frames.
 
 **Code Snippet**
 
@@ -91,9 +95,14 @@ func onPreviewFilterFrame(_ frame: FramePackage){
 }
 ```
 
+**See also**
+
+- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
+- [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter)
+
 ## onPreviewFastFrame
 
-The previewed fast frame callback.
+The previewed fast frame callback. Add code to use the cropped frames.
 
 ```objc
 - (void)onPreviewFastFrame:(FramePackage*)frame;
@@ -101,7 +110,7 @@ The previewed fast frame callback.
 
 **Parameters**
 
-`frame`: The frame data. View in [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html).
+`Fast frames`: The data of cropped frame(s). The Camera Enhancer can make preprocessing on video frames. If the fast mode is enabled, the input parameter of this function will be the specially cropped frames.
 
 **Code Snippet**
 
@@ -124,3 +133,8 @@ func onPreviewFastFrame(_ frame: FramePackage){
     // TODO add your code for fast frame
 }
 ```
+
+**See also**
+
+- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
+- [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode)

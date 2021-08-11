@@ -31,7 +31,7 @@ void onTorchStateChanged(TorchState var1);
 
 **Parameters**
 
-[`TorchState`]({{site.parameter-reference}}index.html#torchstate): The torch status.
+`TorchState`: The torch status value. One of the parameters in [`TorchState`]({{site.parameter-reference}}index.html#torchstate)
 
 **Code Snippet**
 

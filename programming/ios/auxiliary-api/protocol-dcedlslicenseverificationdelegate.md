@@ -23,7 +23,7 @@ Protocol for a delegate to handle callback when license verification message ret
 
 ## DCEDLSLicenseVerificationCallback
 
-The callback of license server.
+The callback of license server. Add the code in the callback function to react when the license server connection is successful or failed.
 
 ```objc
 - (void)DCEDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error;
