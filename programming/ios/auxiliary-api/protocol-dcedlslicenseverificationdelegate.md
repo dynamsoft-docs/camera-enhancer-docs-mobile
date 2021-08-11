@@ -31,7 +31,7 @@ The callback of license server. Add the code in the callback function to react w
 
 **Parameters**
 
-`[in,out] isSuccess`: Whether the license verification was successful.
+`[in,out] isSuccess`: Whether the license verification was successful.  
 `[in,out] error`: The error message from license server.
 
 **Code Snippet**

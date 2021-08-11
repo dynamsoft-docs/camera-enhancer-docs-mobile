@@ -31,7 +31,7 @@ void DLSLicenseVerificationCallback(boolean var1, Exception var2);
 
 **Parameters**
 
-`[in, out] isSuccess`: Whether the license verification was successful.
+`[in, out] isSuccess`: Whether the license verification was successful.  
 `[in, out] error`: The error message from the license server.
 
 **Code Snippet**
