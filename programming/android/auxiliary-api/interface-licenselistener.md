@@ -1,0 +1,48 @@
+---
+layout: default-layout
+title: Dynamsoft Camera Enhancer - CameraDLSLicenseVerificationListener
+description: This is the documentation - CameraDLSLicenseVerificationListener page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, CameraDLSLicenseVerificationListener
+needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: true
+breadcrumbText: CameraDLSLicenseVerificationListener
+---
+
+# CameraDLSLicenseVerificationListener
+
+The interface to handle callback when license verification messages are returned.
+
+```java
+interface com.dynamsoft.dce.CameraDLSLicenseVerificationListener
+```
+
+| Method | Description |
+| ------ | ----------- |
+| `DLSLicenseVerificationCallback` | The call back of the license server. |
+
+## DLSLicenseVerificationCallback
+
+The call back of the license server.
+
+```java
+void DLSLicenseVerificationCallback(boolean var1, Exception var2);
+```
+
+**Parameters**
+
+`[in, out] isSuccess`: Whether the license verification was successful.
+`[in, out] error`: The error message from license server.
+
+**Code Snippet**
+
+```java
+cameraEnhancer.initLicenseFromDLS(dceParameters, new CameraDLSLicenseVerificationListener() {
+    @Override
+    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception e) {
+        if (!isSuccess) {
+            e.printStackTrace();
+        }
+    }
+});
+```

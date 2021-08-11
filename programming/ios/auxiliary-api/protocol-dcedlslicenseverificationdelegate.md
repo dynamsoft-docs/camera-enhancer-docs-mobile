@@ -1,0 +1,54 @@
+---
+layout: default-layout
+title: Dynamsoft Camera Enhancer - iOS Protocol DCEDLSLicenseVerificationDelegate
+description: This is the documentation - iOS Protocol DCEDLSLicenseVerificationDelegate page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, iOS Protocol DCEDLSLicenseVerificationDelegate
+needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: false
+breadcrumbText: iOS Protocol DCEDLSLicenseVerificationDelegate
+---
+
+# DCEDLSLicenseVerificationDelegate
+
+Protocol for a delegate to handle callback when license verification message returned.
+
+```objc
+@protocol DCEDLSLicenseVerificationDelegate <NSObject>
+```
+
+| Method | Type | Description |
+| ------ | ---- | ----------- |
+| `DCEDLSLicenseVerificationCallback` | *required* | The callback of license server. |
+
+## DCEDLSLicenseVerificationCallback
+
+The callback of license server.
+
+```objc
+- (void)DCEDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error;
+```
+
+**Parameters**
+
+`[in,out] isSuccess`: Whether the license verification was successful.
+`[in,out] error`: The error message from license server.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+- (void)DCEDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+    //TODO add your code for license verification
+}
+```
+
+Swift:
+
+```swift
+func dcedlsLicenseVerificationCallback(_ isSuccess: bool, error: Error?){
+    //TODO add your code for license verification
+}
+```

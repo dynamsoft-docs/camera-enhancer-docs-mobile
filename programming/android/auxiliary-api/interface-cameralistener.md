@@ -11,17 +11,17 @@ breadcrumbText: CameraListener
 
 # CameraListener
 
-The `CameraListener` includes three interface methods for you to add your code on the previewed original, filtered and cropped frames.
+The interface to handle callback when previewed frame callback is returned.
 
 ```java
-interface CameraListener
+interface com.dynamsoft.dce.CameraListener
 ```
 
-| Functions | Type |
-| --------- | ---- |
-| [`onPreviewOriginalFrame`](#onprevieworiginalframe) | [`Frame`]({{site.android-api-auxiliary}}frame.html) |
-| [`onPreviewFilterFrame`](#onpreviewfilterframe) | [`Frame`]({{site.android-api-auxiliary}}frame.html) |
-| [`onPreviewFastFrame`](#onpreviewfastframe) | [`Frame`]({{site.android-api-auxiliary}}frame.html) |
+| Functions | Description |
+| --------- | ----------- |
+| [`onPreviewOriginalFrame`](#onprevieworiginalframe) | The function for user to add code on the previewed original frames. |
+| [`onPreviewFilterFrame`](#onpreviewfilterframe) |  The function for user to add code on the previewed filtered frames. |
+| [`onPreviewFastFrame`](#onpreviewfastframe) |  The function for user to add code on the previewed cropped frames. |
 
 ## onPreviewOriginalFrame
 
