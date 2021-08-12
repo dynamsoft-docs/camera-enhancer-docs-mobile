@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: iOS CameraEnhancer Class
 ---
 
-# iOS CameraEnhancer Methods
+# iOS CameraEnhancer Class
 
 `CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
 

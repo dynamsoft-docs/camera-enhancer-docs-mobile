@@ -5,6 +5,7 @@ description: This is the documentation - Android API references - Basic Settings
 keywords:  Camera Enhancer, Android API references, Regular Camera Methods
 needAutoGenerateSidebar: true
 breadcrumbText: Android Regular Camera Methods
+noTitleIndex: true
 ---
 
 # Regular Camera Methods
@@ -118,7 +119,25 @@ updateCameraSetting(JSONObject json) throws CameraEnhancerException
 Java:
 
 ```java
-mCameraEnhancer.updateCameraSetting("{"sensorvalue":3,"graydiffthreshold":30,"conversioncountthreshold":30,"sharpnessthreshold":0.2,"sharpnessthresholdlarge":0.4,"abssharpnessthreshold":200,"absgraythreshold":35,"claritythreshold":0.1}");
+mJson = new JSONObject();
+try {
+    mJson.put("graydiffthreshold", 30);//auto zoom
+    mJson.put("conversioncountthreshold", 30);//auto zoom
+    mJson.put("sensorvalue", 5);//filter by sensor
+    mJson.put("sharpnessthreshold", 0.2);//filter by sharpness
+    mJson.put("sharpnessthresholdlarge", 0.4);//filter by sharpness
+    mJson.put("abssharpnessthreshold", 200);//filter by sharpness
+    mJson.put("absgraythreshold", 35);//filter by sharpness
+    mJson.put("claritythreshold", 0.1);//focus by sharpness
+    mJson.put("ternimatefocusbysharpness", 0.02);//focus by sharpness
+} catch (JSONException e) {
+    e.printStackTrace();
+}
+try {
+    mCameraEnhancer.updateCameraSetting(mJson);
+} catch (CameraEnhancerException e) {
+    e.printStackTrace();
+}
 ```
 
 Kotlin:

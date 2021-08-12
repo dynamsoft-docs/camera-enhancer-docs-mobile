@@ -115,7 +115,7 @@ This API is designed to turn on DCE autofocus mode which is specially designed a
 
 **Parameters**
 
-`true`: Enable the DCE autofocus.
+`true`: Enable the DCE autofocus.  
 `false`: Disable the DCE autofocus.
 
 **Code Snippet**
@@ -146,7 +146,7 @@ This API is designed for controlling the system default autofocus. To turn off d
 
 **Parameters**
 
-`true`: Enable the default autofocus.
+`true`: Enable the default autofocus.  
 `false`: Disable the default autofocus.
 
 **Code Snippet**
@@ -177,7 +177,7 @@ Regular autofocus is an advanced setting that enables the camera to autofocus fo
 
 **Parameters**
 
-`true`: Enable the regular autofocus.
+`true`: Enable the regular autofocus.  
 `false`: Disable the regular autofocus.
 
 **Code Snippet**
@@ -208,7 +208,7 @@ Set the focus interval and termination time for the regular autofocus.
 
 **Parameters**
 
-`int`: Default value is 3000 (millisecond), which means the camera will auto focus for every 3000 milliseconds.
+`int`: Default value is 3000 (millisecond), which means the camera will auto focus for every 3000 milliseconds.  
 `int`: Default value is 500 (millisecond), which means the camera will not focus once again within 500 milliseconds.
 
 **Code Snippet**
@@ -234,7 +234,7 @@ This API is another advanced setting that enables the camera to autofocus when a
 
 **Parameters**
 
-`true`: Enable the sharpness autofocus.
+`true`: Enable the sharpness autofocus.  
 `false`: Disable the sharpness autofocus.
 
 **Code Snippet**
@@ -265,7 +265,7 @@ DCE auto zoom mode can be enabled if user is using DCE to enhance decode perform
 
 **Parameters**
 
-`true`: Enable the autozoom.
+`true`: Enable the autozoom.  
 `false`: Disable the autozoom.
 
 **Code Snippet**
