@@ -13,6 +13,10 @@ breadcrumbText: iOS FramePackage Class
 
 Return the frame decode results and additional information.
 
+```objc
+@interface FramePackage : NSObject
+```
+
 | Attribute Name | Type |
 |------|------|
 | [`buffer`](#buffer) | NSData* |

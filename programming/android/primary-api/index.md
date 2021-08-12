@@ -11,7 +11,11 @@ breadcrumbText: Android CameraEnhancer Class
 
 # Android CameraEnhancer Class
 
-`com.dynamsoft.dce.CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
+`CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
+
+```java
+class com.dynamsoft.dce.CameraEnhancer
+```
 
 ## [Initialization Methods]({{site.android-api}}initialization.html)
 

@@ -15,9 +15,9 @@ Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance the fram
 
 ## Main features
 
-### **Video Frame Queue**
+### **Video Buffer**
 
-DCE frame queue is the key feature that speeds up frame acquisition. It also acts as the administrator that takes over the video frames processed by other DCE functions. The main responsibilities of the DCE frame queue are to:
+DCE video buffer is the key feature that speeds up frame acquisition. It also acts as the administrator that takes over the video frames processed by other DCE functions. The main responsibilities of the video buffer are to:
 
 - Temporarily store the filtered and cropped video frames.
 - Transfer a new frame immediately when the application finishes the processing of the current frame.

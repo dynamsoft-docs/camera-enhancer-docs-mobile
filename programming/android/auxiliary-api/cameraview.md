@@ -9,13 +9,12 @@ needGenerateH3Content: true
 breadcrumbText: Android CameraView Class
 ---
 
-# com.dynamsoft.dce.CameraView
+# CameraView
 
 This page is for `CameraView` Class. `CameraView` is designed to Make basic settings on the overlay.
 
-```java
-CameraView cameraView;
-mCameraEnhancer.addCameraView(cameraView);
+```Java
+class com.dynamsoft.dce.CameraView
 ```
 
 | Method Name | Description |

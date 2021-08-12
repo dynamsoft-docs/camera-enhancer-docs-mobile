@@ -9,9 +9,13 @@ needGenerateH3Content: true
 breadcrumbText: Android HardwareUtil Class
 ---
 
-# com.dynamsoft.dce.HardwareUtil
+# HardwareUtil
 
 This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
+
+```Java
+class com.dynamsoft.dce.HardwareUtil
+```
 
 | Attribute Name | Value |
 | -------------- | ----- |

@@ -9,22 +9,12 @@ needGenerateH3Content: true
 breadcrumbText: Android DMDLSConnectionParameters Class
 ---
 
-# com.dynamsoft.dce.DMDLSConnectionParameters
+# DMDLSConnectionParameters
 
 `DMDLSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the Dynamsoft License Server.
 
-Java:
-
 ```Java
-private com.dynamsoft.dce.DMDLSConnectionParameters dceParameters;
-dceParameters = new com.dynamsoft.dce.DMDLSConnectionParameters();
-```
-
-Kotlin:
-
-```kotlin
-private var dceParameters: com.dynamsoft.dce.DMDLSConnectionParameters? = null
-dceParameters = com.dynamsoft.dce.DMDLSConnectionParameters()
+class com.dynamsoft.dce.DMDLSConnectionParameters
 ```
 
 | Attribute Name | Type |

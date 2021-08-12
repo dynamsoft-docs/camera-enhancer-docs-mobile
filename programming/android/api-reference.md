@@ -14,8 +14,6 @@ noTitleIndex: true
 
 ### [Initialization]({{site.android-api}}initialization.html)
 
-
-
 ### [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 
 | Method | Description |

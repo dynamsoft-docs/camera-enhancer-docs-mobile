@@ -9,9 +9,13 @@ needGenerateH3Content: true
 breadcrumbText: Android CameraEnhancerException Class
 ---
 
-# com.dynamsoft.dce.CameraEnhancerException
+# CameraEnhancerException
 
 This is the page for `CameraEnhancerException` class. `CameraEnhancerException` is the exception for signaling camera enhancer errors.
+
+```Java
+class com.dynamsoft.dce.CameraEnhancerException
+```
 
 | Method Name | Type |
 |------|------|

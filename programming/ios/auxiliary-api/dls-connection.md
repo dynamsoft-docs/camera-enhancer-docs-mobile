@@ -13,6 +13,10 @@ breadcrumbText: iOS iDCEDLSConnectionParameters Class
 
 Defines a struct to configure the parameters to connect to the Dynamsoft License Server.
 
+```objc
+@interface iDCEDLSConnectionParameters : NSObject
+```
+
 | Attribute Name | Type |
 |------|------|
 | [`mainServerURL`](#mainserverurl) | NSString* |
