@@ -17,7 +17,7 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicenseFromDLS`]({{site.android-api}}initialization.html#initlicensefromdls) |  |
+| [`initLicenseFromDLS`]({{site.android-api}}initialization.html#initlicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
 
 ### [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 

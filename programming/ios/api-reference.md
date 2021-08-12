@@ -17,7 +17,7 @@ breadcrumbText: iOS API references
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicenseFromDLS`]({{site.ios-api}}initialization.html#initLicensefromdls) | Get the latest frame from the frame queue when this API is activated. |
+| [`initLicenseFromDLS`]({{site.ios-api}}initialization.html#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
 
 ### [Frame preprocessing methods]({{site.ios-api}}preprocess.html)
 

@@ -21,7 +21,7 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicenseFromDLS`]({{site.android-api}}initialization.html#initLicensefromdls) | Get the latest frame from the frame queue when this API is activated. |
+| [`initLicenseFromDLS`]({{site.android-api}}initialization.html#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
 
 ## [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 

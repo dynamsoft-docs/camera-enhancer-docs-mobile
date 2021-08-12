@@ -5,39 +5,25 @@ description: This is the documentation - Android API references - Filter Methods
 keywords:  Camera Enhancer, Android API references, Filter
 needAutoGenerateSidebar: true
 breadcrumbText: Android Filter Methods
+noTitleIndex: true
 ---
 
 # Frame Preprocessing Methods
 
-## AcquireListFrame
-
-This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
-
-```java
-AcquireListFrame(boolean)
-```
-
-**Parameters**
-
-`Boolean (true)`: Acquire frame from the frame queue.
-
-**Code Snippet**
-
-Java:
-
-```java
-mCameraEnhancer.AcquireListFrame(true);
-```
-
-Kotlin:
-
-```kotlin
-mCameraEnhancer!!.AcquireListFrame(true)
-```
+| Method | Description |
+| ------ | ----------- |
+| [`enableFastMode`](#enablefastmode) | Set true/false to turn on/off DCE fast mode. |
+| [`getEnabledFastModeStatus`](#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
+| [`enableFrameFilter`](#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
+| [`getEnabledFrameFilterStatus`](#getenabledframefilterstatus) | Get the status (on/off) of DCE frame filter mode. |
+| [`setMaxFrameRate`](#setmaxframerate) | Set max frame rate. |
+| [`enableSensorControl`](#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
+| [`getEnabledSensorControlStatus`](#getenabledsensorcontrolstatus) | Get the status (on/off) of DCE sensor control mode. |
+| [`setSensorControlThreshold`](#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
 
 ## enableFastMode
 
-This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
+This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contain barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
 
 ```java
 enableFastMode(boolean)

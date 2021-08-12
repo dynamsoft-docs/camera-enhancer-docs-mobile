@@ -47,6 +47,8 @@ cameraView!!.addOverlay()
 
 ## removeOverlay
 
+Remove the overlay.
+
 ```java
 com.dynamsoft.dce.CameraView.addOverlay()
 ```

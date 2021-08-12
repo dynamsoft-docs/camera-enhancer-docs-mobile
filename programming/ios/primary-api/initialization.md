@@ -11,6 +11,12 @@ breadcrumbText: iOS CameraEnhancer Class
 
 # Initialization Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
+
+---
+
 ## initLicenseFromDLS
 
 Initialize the Camera Enhancer with a license.

@@ -9,6 +9,24 @@ breadcrumbText: Android Zoom and Focus
 
 # Focus & Zoom Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`setAutoFocusPosition`](#setautofocusposition) | Set auto focus position (Change the default auto focus position). |
+| [`setManualFocusPosition`](#setmanualfocusposition) | Set manual focus position (This focus position is only effected once for each time the API is called). |
+| [`setFocalLength`](#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
+| [`enableDCEAutoFocus`](#enabledceautofocus) | Set true/false to turn on/off DCE auto focus. |
+| [`getEnabledDCEAutoFocusStatus`](#getenableddceautofocusstatus) | Get the status (on/off) of DCE auto focus. |
+| [`enableDefaultAutoFocus`](#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
+| [`getEnabledDefaultAutoFocusStatus`](#getenableddefaultautofocusstatus) | Get the status (on/off) of camera default auto focus. |
+| [`enableRegularAutoFocus`](#enableregularautofocus) | If this is true, camera will auto focus every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
+| [`getEnabledRegularAutoFocusStatus`](#getenabledregularautofocusstatus) | Get the current status (on/off) of this auto focus mode. |
+| [`setRegularAutoFocusParam`](#setregularautofocusparam) | Set the time interval and terminate time for the regular auto focus |
+| [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. This focus mode will start automatically if DCE autofocus is enabled. Users can manually quit this focus mode when DCE autofocus is activated. |
+| [`getEnabledAutoFocusOnSharpnessChangeStatus`](#getenabledautofocusonsharpnesschangestatus) | Get the current status (on/off) of this auto focus mode. |
+| [`enableAutoZoom`](#enableautozoom) | Set enableAutoZoom value true to enable auto zoom mode. |
+| [`getEnabledAutoZoomStatus`](#getenabledautozoomstatus) | Get the status (on/off) of auto zoom mode. |
+| [`setZoomFactor`](#setzoomfactor) | Set zoom factor. |
+
 ## setAutoFocusPosition
 
 Set the position that you want to auto focus at. This setting will replace the default focus value and always focus on the set point.

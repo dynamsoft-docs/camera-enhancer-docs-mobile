@@ -5,9 +5,34 @@ description: This is the documentation - Objective-C & Swift API references - Re
 keywords:  Camera Enhancer, Objective-C & Swift API references, Regular Camera Methods
 needAutoGenerateSidebar: true
 breadcrumbText: iOS Regular Camera Methods
+noTitleIndex: true
 ---
 
 # iOS API Reference - Regular Camera Methods
+
+| Method | Description |
+|-----------------|---------------|
+| [`updateCameraSettingFromJson`](#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
+| [`updateCameraSettingFromFile`](#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
+| [`getVersion`](#getversion) | Check current DCE version |
+| [`getCameraCurrentState`](#getcameracurrentstate) | Get camera current state |
+| [`getCameraDesiredState`](#getcameradesiredstate) | Get camera desired state |
+| [`setCameraDesiredState`](#setcameradesiredstate) | Set Camera on/off |
+| [`pauseCamera`](#pausecamera-and-resumecamera) | Pause Camera |
+| [`resumeCamera`](#pausecamera-and-resumecamera) | Resume Camera |
+| [`startScanning`](#stopscanning-and-startscanning) | Start scanning |
+| [`stopScanning`](#stopscanning-and-startscanning) | Stop scanning |
+| [`addCameraListener`](#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
+| [`getTorchCurrentState`](#gettorchcurrentstate) | Get torch current state |
+| [`getTorchDesiredState`](#gettorchdesiredstate) | Get torch desired state |
+| [`setTorchDesiredState`](#settorchdesiredstate) | Set torch state |
+| [`addTorchListener`](#addtorchlistener) | Add torch listener |
+| [`getCameraPosition`](#getcameraposition) | Get current camera position |
+| [`switchCameraPosition`](#switchcameraposition) | Switch camera position front/back |
+| [`getResolution`](#getresolution) | Get current resolution setting |
+| [`setResolution`](#setresolution) | Set resolution |
+
+---
 
 ## updateCameraSettingFromJson
 

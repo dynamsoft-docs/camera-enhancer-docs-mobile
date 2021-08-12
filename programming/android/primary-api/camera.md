@@ -9,6 +9,33 @@ breadcrumbText: Android Regular Camera Methods
 
 # Regular Camera Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`getDeviceLevel`](#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |
+| [`setAutoModeLevelParam`](#setautomodelevelparam) | Set auto mode level parameter. |
+| [`updateCameraSetting`](#updatecamerasetting) | Update camera, filter and focus settings from Json. |
+| [`getVersion`](#getversion) | Check current DCE version |
+| [`getCameraCurrentState`](#getcameracurrentstate) | Get camera current state. |
+| [`getCameraDesiredState`](#getcameradesiredstate) | Get camera desired state. |
+| [`setCameraDesiredState`](#setcameradesiredstate) | Set Camera on/off. |
+| [`pauseCamera`](#pausecamera-and-resumecamera) | Pause Camera. |
+| [`resumeCamera`](#pausecamera-and-resumecamera) | Resume Camera. |
+| [`startScanning`](#stopscanning-and-startscanning) | Start scanning. |
+| [`stopScanning`](#stopscanning-and-startscanning) | Stop scanning. |
+| [`addCameraListener`](#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
+| [`removeCameraListener`](#removecameralistener) | Remove camera listener. |
+| [`getTorchCurrentState`](#gettorchcurrentstate) | Get torch current state. |
+| [`getTorchDesiredState`](#gettorchdesiredstate) | Get torch desired state. |
+| [`setTorchDesiredState`](#settorchdesiredstate) | Set torch state. |
+| [`addTorchListener`](#addtorchlistener) | Add torch listener. |
+| [`getCameraPosition`](#getcameraposition) | Get current camera position. |
+| [`switchCameraPosition`](#switchcameraposition) | Switch camera position front/back. |
+| [`getResolution`](#getresolution) | Get current resolution setting. |
+| [`setResolution`](#setresolution) | Set resolution. |
+| [`getResolutionList`](#getresolutionlist) | Get all available resolutions |
+
+---
+
 ## getDeviceLevel
 
 This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high-level mobile devices.

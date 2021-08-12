@@ -5,9 +5,25 @@ description: This is the documentation - Objective-C & Swift API references - Fo
 keywords:  Camera Enhancer, Objective-C & Swift API references, Zoom, Focus
 needAutoGenerateSidebar: true
 breadcrumbText: iOS Focus & Zoom Methods
+noTitleIndex: true
 ---
 
 # iOS API Reference - Focus & Zoom Methods
+
+| Method | Description |
+|-----------------|---------------|
+| [`setAutoFocusPosition`](#setautofocusposition) | Set auto focus position (Change the default auto focus position). |
+| [`setManualFocusPosition`](#setmanualfocusposition) | Set manual focus position (This focus position only takes effect once for each time the API is called). |
+| [`setFocalLength`](#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
+| [`enableDCEAutoFocus`](#enabledceautofocus) | Set true/false to turn on/off DCE auto focus. |
+| [`enableDefaultAutoFocus`](#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
+| [`enableRegularAutoFocus`](#enableregularautofocus) | If this is true, camera will auto focus for every 3 seconds. |
+| [`setRegularAutoFocusParam`](#setregularautofocusparam) | Set the focus interval and termination time for the regular autofocus. |
+| [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. |
+| [`enableAutoZoom`](#enableautozoom) | Set enableAutoZoom value true to enable auto zoom mode. |
+| [`setZoomFactor`](#setzoomfactor) | Set zoom factor |
+
+---
 
 ## setDefaultAutoFocusPosition
 

@@ -11,6 +11,10 @@ breadcrumbText: Android Initialization Methods
 
 # Initialization Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
+
 ## initLicenseFromDLS
 
 Initialize the `CameraEnhancer` from the license server.
