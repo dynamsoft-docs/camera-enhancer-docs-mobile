@@ -5,6 +5,7 @@ description: This is the documentation - Android API references - Focus & Zoom M
 keywords:  Camera Enhancer, Focus, Zoom, Android API Reference
 needAutoGenerateSidebar: true
 breadcrumbText: Android Zoom and Focus
+noTitleIndex: true
 ---
 
 # Focus & Zoom Methods
