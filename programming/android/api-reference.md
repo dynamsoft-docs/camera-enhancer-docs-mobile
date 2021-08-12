@@ -5,14 +5,19 @@ description: This is the documentation - Android API reference page of Dynamsoft
 keywords:  Camera Enhancer, Android, API
 needAutoGenerateSidebar: true
 breadcrumbText: API references
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Android API references
 
-## com.dynamsoft.dce.CameraEnhancer
+## Primary Class - CameraEnhancer
 
 ### [Initialization]({{site.android-api}}initialization.html)
+
+| Method | Description |
+| ------ | ----------- |
+| [`initLicenseFromDLS`]({{site.android-api}}initialization.html#initlicensefromdls) |  |
 
 ### [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 
@@ -83,15 +88,15 @@ noTitleIndex: true
 - [`CameraView`]({{site.android-api-auxiliary}}cameraview.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
 
+## Interfaces
+
+- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#cameralistener)
+- [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener)
+- [`TorchListener`]({{ site.android-api-auxiliary }}interface.html#torchlistener)
+
 ## Enumerations
 
 - [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
 - [`EnumCameraDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
 - [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
 - [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
-
-## Interfaces
-
-- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#cameralistener)
-- [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener)
-- [`TorchListener`]({{ site.android-api-auxiliary }}interface.html#torchlistener)
