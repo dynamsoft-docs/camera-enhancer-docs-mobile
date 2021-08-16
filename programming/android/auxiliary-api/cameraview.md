@@ -9,13 +9,12 @@ needGenerateH3Content: true
 breadcrumbText: Android CameraView Class
 ---
 
-# com.dynamsoft.dce.CameraView
+# CameraView
 
 This page is for `CameraView` Class. `CameraView` is designed to Make basic settings on the overlay.
 
-```java
-CameraView cameraView;
-mCameraEnhancer.addCameraView(cameraView);
+```Java
+class com.dynamsoft.dce.CameraView
 ```
 
 | Method Name | Description |
@@ -25,6 +24,14 @@ mCameraEnhancer.addCameraView(cameraView);
 | [`setBrushColor`](#setbrushcolor) | Set the brush color |
 
 ## addOverlay
+
+Add overlay on located barcode.
+
+```java
+com.dynamsoft.dce.CameraView.addOverlay()
+```
+
+**Code Snippet**
 
 Java:
 
@@ -40,6 +47,14 @@ cameraView!!.addOverlay()
 
 ## removeOverlay
 
+Remove the overlay.
+
+```java
+com.dynamsoft.dce.CameraView.addOverlay()
+```
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -53,6 +68,16 @@ cameraView!!.removeOverlay()
 ```
 
 ## setBrushColor
+
+```java
+com.dynamsoft.dce.CameraView.addOverlay()
+```
+
+**Parameters**
+
+`String`: A string value that refers to a color.
+
+**Code Snippet**
 
 Java:
 

@@ -9,12 +9,16 @@ needGenerateH3Content: true
 breadcrumbText: Android Frame Class
 ---
 
-# com.dynamsoft.dce.Frame
+# Frame
 
 This page is for `Frame` Class. `Frame` parameters store the frame data.
 
+```Java
+class com.dynamsoft.dce.Frame
+```
+
 | Method Name | Type |
-|------|------|
+| ----------- | ---- |
 | [`getData`](#getdata) | byte[] |
 | [`getWidth`](#getwidth) | int |
 | [`getHeight`](#getheight) | int |
@@ -31,6 +35,12 @@ This page is for `Frame` Class. `Frame` parameters store the frame data.
 ## getData
 
 Get the frame data in byte array.
+
+**Return Value**
+
+`byte[]`: The frame byte data.
+
+**Code Snippet**
 
 Java:
 
@@ -50,6 +60,12 @@ var data: ByteArray? = frame!!.data
 
 Get the frame width in pixels.
 
+**Return Value**
+
+`int`: The pixel width of the frame.
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -65,6 +81,12 @@ var width: Int? = frame!!.width
 ## getHeight
 
 Get the frame height in pixels.
+
+**Return Value**
+
+`int`: The pixel height of the frame.
+
+**Code Snippet**
 
 Java:
 
@@ -82,6 +104,12 @@ var height: Int? = frame!!.height
 
 Get the frame strides.
 
+**Return Value**
+
+`int[]`: The strides of the frame.
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -97,6 +125,12 @@ var strides: IntArray? = frame!!.strides
 ## getFormat
 
 Get the frame pixel format.
+
+**Return Value**
+
+`int`: The format of the frame.
+
+**Code Snippet**
 
 Java:
 
@@ -114,6 +148,14 @@ var format: Int? = frame!!.format
 
 Get the frame ID.
 
+**Return Value**
+
+`int`: The ID of the frame.
+
+**Code Snippet**
+
+Java:
+
 ```java
 int frameid = frame.getFrameId(); 
 ```
@@ -127,6 +169,12 @@ var frameid: Int? = frame!!.frameId
 ## isFastFrame
 
 Check whether the fast mode is enabled.
+
+**Return Value**
+
+`Boolean`: Whether the frame is cropped.
+
+**Code Snippet**
 
 Java:
 
@@ -144,6 +192,12 @@ var isfastframe: Boolean? = frame!!.isFastFrame
 
 Get the fast frame (cropped frame) ID.
 
+**Return Value**
+
+`int`: The ID of the fast frame (cropped frame).
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -159,6 +213,12 @@ var fastframeid: Int? = frame!!.fastFrameId
 ## getCropRect
 
 Get the cropped Rect data (Width & height)
+
+**Return Value**
+
+`Rectangle`: The value of the cropped frame.
+
+**Code Snippet**
 
 Java:
 
@@ -176,10 +236,14 @@ var croprect: Rect? = frame!!.cropRect
 
 Get the orientation (of cropped frame).
 
-| Orientation of the frame | Value |
+**Return Value**
+
+| Orientation of the frame | Value (int) |
 |--------------------------|-------|
 | Vertical | 1 |
 | Horizontal | 2 |
+
+**Code Snippet**
 
 Java:
 
@@ -197,6 +261,12 @@ var orientation: Int? = frame!!.getOrientation
 
 Get the original width of the cropped frame.
 
+**Return Value**
+
+`int`: The pixel width of the cropped frame.
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -212,6 +282,12 @@ var originalwidth: Int? = frame!!.getOriW
 ## getOriH
 
 Get the original width of the cropped frame.
+
+**Return Value**
+
+`int`: The pixel height of the cropped frame.
+
+**Code Snippet**
 
 Java:
 

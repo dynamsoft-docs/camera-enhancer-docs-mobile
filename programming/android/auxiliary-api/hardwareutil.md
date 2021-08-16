@@ -9,12 +9,16 @@ needGenerateH3Content: true
 breadcrumbText: Android HardwareUtil Class
 ---
 
-# com.dynamsoft.dce.HardwareUtil
+# HardwareUtil
 
 This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
 
+```Java
+class com.dynamsoft.dce.HardwareUtil
+```
+
 | Attribute Name | Value |
-|------|------|
+| -------------- | ----- |
 | `DEVICEINFO_UNKNOWN` | -1 |
 | `DEVICE_LEVEL_HIGH` | 2 |
 | `DEVICE_LEVEL_MID` | 1 |
@@ -23,8 +27,11 @@ This page is for `HardwareUtil` page. `HardwareUtil` parameters are static value
 
 ## Device level
 
-- Related API:
-  [`getDeviceLevel`]({{ site.android-api }}camera.html#getdevicelevel)
+**Related API**
+
+[`getDeviceLevel`]({{ site.android-api }}camera.html#getdevicelevel)
+
+**Code Snippet**
 
 Java:
 

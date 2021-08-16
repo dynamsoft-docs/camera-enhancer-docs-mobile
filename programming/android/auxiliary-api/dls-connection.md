@@ -9,26 +9,16 @@ needGenerateH3Content: true
 breadcrumbText: Android DMDLSConnectionParameters Class
 ---
 
-# com.dynamsoft.dce.DMDLSConnectionParameters
+# DMDLSConnectionParameters
 
 `DMDLSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the Dynamsoft License Server.
 
-Java:
-
 ```Java
-private com.dynamsoft.dce.DMDLSConnectionParameters dceParameters;
-dceParameters = new com.dynamsoft.dce.DMDLSConnectionParameters();
-```
-
-Kotlin:
-
-```kotlin
-private var dceParameters: com.dynamsoft.dce.DMDLSConnectionParameters? = null
-dceParameters = com.dynamsoft.dce.DMDLSConnectionParameters()
+class com.dynamsoft.dce.DMDLSConnectionParameters
 ```
 
 | Attribute Name | Type |
-|------|------|
+| -------------- | ---- |
 | [`mainServerURL`](#mainserverurl) | String |
 | [`standbyServerURL`](#standbyserverurl) | String |
 | [`handshakeCode`](#handshakecode) | String |
@@ -44,6 +34,16 @@ dceParameters = com.dynamsoft.dce.DMDLSConnectionParameters()
 
 The URL of the Dynamsoft License Server.
 
+**Value Range**
+
+Any string value
+
+**Default Value**
+
+null
+
+**Code Snippet**
+
 Java:
 
 ```java
@@ -56,18 +56,23 @@ Kotlin:
 dceParameters!!.mainServerURL = ""
 ```
 
-- **Value range**
-    Any string value
+**Remarks**
 
-- **Default value**
-    null
-
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
 
 ## standbyServerURL
 
 The URL of the standby Dynamsoft License Server.
+
+**Value Range**
+
+Any string value
+
+**Default Value**
+
+null
+
+**Code Snippet**
 
 Java:
 
@@ -81,18 +86,23 @@ Kotlin:
 dceParameters!!.standbyServerURL = ""
 ```
 
-- **Value range**
-    Any string value
+**Remarks**
 
-- **Default value**
-    null
-
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
 
 ## handshakeCode
 
 The handshake code.
+
+**Value Range**
+
+Any string value
+
+**Default Value**
+
+null
+
+**Code Snippet**
 
 Java:
 
@@ -106,15 +116,19 @@ Kotlin:
 dceParameters!!.handshakeCode = ""
 ```
 
-- **Value range**
-    Any string value
-
-- **Default value**
-    null
-
 ## organizationID
 
 The organization ID
+
+**Value Range**
+
+Any string value
+
+**Default Value**
+
+null
+
+**Code Snippet**
 
 Java:
 
@@ -128,15 +142,19 @@ Kotlin:
 dceParameters!!.organizationID = ""
 ```
 
-- **Value range**
-    Any string value
-
-- **Default value**
-    null
-
 ## sessionPassword
 
 The session password of the handshake code set in Dynamsoft License Server.
+
+**Value Range**
+
+Any string value
+
+**Default Value**
+
+null
+
+**Code Snippet**
 
 Java:
 
@@ -150,15 +168,19 @@ Kotlin:
 dceParameters!!.sessionPassword = ""
 ```
 
-- **Value range**
-    Any string value
-
-- **Default value**
-    null
-
 ## uuidGenerationMethod
 
 Sets the method to generate UUID.
+
+**Value Range**
+
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
+
+**Default Value**
+
+DM_UUIDGM_RANDOM
+
+**Code Snippet**
 
 Java:
 
@@ -172,18 +194,23 @@ Kotlin:
 dceParameters!!.uuidGenerationMethod = int
 ```
 
-- **Value range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html) Enumeration items.
+**See Also**
 
-- **Default value**
-    DM_UUIDGM_RANDOM
-
-- **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
 
 ## maxBufferDays
 
 Sets the max days to buffer the license info.
+
+**Value Range**
+
+[7,0x7fffffff]  
+
+**Default Value**
+
+7
+
+**Code Snippet**
 
 Java:
 
@@ -197,15 +224,19 @@ Kotlin:
 dceParameters!!.maxBufferDays = int
 ```
 
-- **Value range**
-    [7,0x7fffffff]  
-
-- **Default value**
-    7
-
 ## chargeWay
 
 Sets the charge way.
+
+**Value Range**
+
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
+
+**Default Value**
+
+DM_CW_AUTO
+
+**Code Snippet**
 
 Java:
 
@@ -219,18 +250,19 @@ Kotlin:
 dceParameters!!.chargeWay = int
 ```
 
-- **Value range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html) Enumeration items.
+**See Also**
 
-- **Default value**
-    DM_CW_AUTO
-
-- **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+[`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
 
 ## products
 
 Set the products. This is a combined value of Product Enumration items.
+
+**Value Range**
+
+Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+
+**Code Snippet**
 
 Java:
 
@@ -244,8 +276,6 @@ Kotlin:
 dceParameters!!.products = int
 ```
 
-- **Value range**
-    Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumeration items.
+**See Also**
 
-- **See also**  
-    [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
+[`EnumProduct`]({{ site.enumerations }}enumproduct.html)

@@ -13,6 +13,10 @@ breadcrumbText: iOS DCECaptureView Class
 
 `DCECaptureView` is the class that enable user to add elements on camera view conveniently.
 
+```objc
+@interface DCECaptureView: UIView<CALayerDelegate>
+```
+
 | Method Name | Description |
 |------|------|
 | [`addTorch`](#addtorch) | Add torch controlling icon |
@@ -23,6 +27,12 @@ breadcrumbText: iOS DCECaptureView Class
 ## addTorch
 
 Add a torch controlling icon on the view.
+
+```objc
+- (void)addTorch;
+```
+
+**Code Snippet**
 
 Objective-C:
 
@@ -48,6 +58,12 @@ dceView.addTorch(with: UIImage, torchOffImg: UIImage, frame: CGRect)
 
 Add overlay on the view.
 
+```objc
+- (void)addOverlay;
+```
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
@@ -72,6 +88,16 @@ dceView.addOverlay(stroke: UIColor, fill: UIColor)
 
 Add view Listener.
 
+```objc
+- (void)addListener:(id<DCECaptureViewListener>)listener NS_SWIFT_NAME(addListener(_:));
+```
+
+**Parameters**
+
+`Listener`: DCECaptureViewListener.
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
@@ -89,6 +115,12 @@ dceView.addListener(listener: DCECaptureViewListener)
 ## removeListener
 
 Remove view listener.
+
+```objc
+- (void)removeListener;
+```
+
+**Code Snippet**
 
 Objective-C:
 
