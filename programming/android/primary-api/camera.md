@@ -208,13 +208,13 @@ getVersion()
 Java:
 
 ```java
-    mCameraEnhancer.getVersion();
+mCameraEnhancer.getVersion();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.version
+mCameraEnhancer!!.version
 ```
 
 ## getCameraCurrentState
@@ -575,8 +575,8 @@ mCameraEnhancer.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD);
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER)
-    mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD)
+mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER)
+mCameraEnhancer!!.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD)
 ```
 
 ## getResolution
@@ -596,13 +596,13 @@ getResolution()
 Java:
 
 ```java
-    mCameraEnhancer.getResolution();
+mCameraEnhancer.getResolution();
 ```
 
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.resolution
+mCameraEnhancer!!.resolution
 ```
 
 ## setResolution
