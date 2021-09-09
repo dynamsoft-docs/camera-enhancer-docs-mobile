@@ -41,15 +41,13 @@ Get the value of the frame data in Byte array. You can also access the data via 
 Java:
 
 ```java
-byte[] data = frame.getFrameData();
-// OR
-byte[] data = frame.frameData();
+byte[] data = DCEFrame.getFrameData();
 ```
 
 Kotlin:
 
 ```kotlin
-var data: ByteArray? = frame!!.frameData
+var data: ByteArray? = DCEFrame!!.frameData
 ```
 
 ## getWidth
@@ -65,13 +63,13 @@ Get the frame width in pixels.
 Java:
 
 ```java
-int width = frame.getWidth();
+int width = DCEFrame.getWidth();
 ```
 
 Kotlin:
 
 ```kotlin
-var width: Int? = frame!!.width
+var width: Int? = DCEFrame!!.width
 ```
 
 ## getHeight
@@ -87,13 +85,13 @@ Get the frame height in pixels.
 Java:
 
 ```java
-int height = frame.getHeight(); 
+int height = DCEFrame.getHeight(); 
 ```
 
 Kotlin:
 
 ```kotlin
-var height: Int? = frame!!.height
+var height: Int? = DCEFrame!!.height
 ```
 
 ## getStrides
@@ -109,13 +107,13 @@ Get the frame strides.
 Java:
 
 ```java
-int[] strides = frame.getStrides();
+int[] strides = DCEFrame.getStrides();
 ```
 
 Kotlin:
 
 ```kotlin
-var strides: IntArray? = frame!!.strides
+var strides: IntArray? = DCEFrame!!.strides
 ```
 
 ## getFormat
@@ -131,13 +129,13 @@ Get the frame pixel format.
 Java:
 
 ```java
-int format = frame.getFormat();
+int format = DCEFrame.getFormat();
 ```
 
 Kotlin:
 
 ```kotlin
-var format: Int? = frame!!.format
+var format: Int? = DCEFrame!!.format
 ```
 
 ## getFrameId
@@ -153,35 +151,13 @@ Get the frame ID.
 Java:
 
 ```java
-int frameid = frame.getFrameId(); 
+int frameid = DCEFrame.getFrameId(); 
 ```
 
 Kotlin:
 
 ```kotlin
-var frameid: Int? = frame!!.frameId
-```
-
-## isFastFrame
-
-Check whether the fast mode is enabled.
-
-**Return Value**
-
-`Boolean`: Whether the frame is cropped.
-
-**Code Snippet**
-
-Java:
-
-```java
-boolean isfastframe = frame.isFastFrame();
-```
-
-Kotlin:
-
-```kotlin
-var isfastframe: Boolean? = frame!!.isFastFrame
+var frameid: Int? = DCEFrame!!.frameId
 ```
 
 ## getFastFrameId
@@ -197,35 +173,13 @@ Get the fast frame (cropped frame) ID.
 Java:
 
 ```java
-int fastframeid = frame.getFastFrameId();
+int fastframeid = DCEFrame.getFastFrameId();
 ```
 
 Kotlin:
 
 ```kotlin
-var fastframeid: Int? = frame!!.fastFrameId
-```
-
-## getCropRect
-
-Get the cropped Rect data (Width & height)
-
-**Return Value**
-
-`Rectangle`: The value of the cropped frame.
-
-**Code Snippet**
-
-Java:
-
-```java
-Rect croprect = frame.getCropRect();
-```
-
-Kotlin:
-
-```kotlin
-var croprect: Rect? = frame!!.cropRect
+var fastframeid: Int? = DCEFrame!!.fastFrameId
 ```
 
 ## getOrientation
@@ -244,55 +198,11 @@ Get the orientation (of cropped frame).
 Java:
 
 ```java
-int orientation = frame.getOrientation();
+int orientation = DCEFrame.getOrientation();
 ```
 
 Kotlin:
 
 ```kotlin
-var orientation: Int? = frame!!.getOrientation
-```
-
-## getOriW
-
-Get the original width of the cropped frame.
-
-**Return Value**
-
-`int`: The pixel width of the cropped frame.
-
-**Code Snippet**
-
-Java:
-
-```java
-int originalwidth = frame.getOriW();
-```
-
-Kotlin:
-
-```kotlin
-var originalwidth: Int? = frame!!.getOriW
-```
-
-## getOriH
-
-Get the original width of the cropped frame.
-
-**Return Value**
-
-`int`: The pixel height of the cropped frame.
-
-**Code Snippet**
-
-Java:
-
-```java
-int originalheight = frame.getOriH();
-```
-
-Kotlin:
-
-```kotlin
-var originalheight: Int? = frame!!.getOriH
+var orientation: Int? = DCEFrame!!.getOrientation
 ```

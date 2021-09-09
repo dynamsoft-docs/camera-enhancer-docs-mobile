@@ -62,10 +62,10 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
     ```java
     import com.dynamsoft.dce.CameraEnhancer;
     import com.dynamsoft.dce.CameraState;
-    import com.dynamsoft.dce.DCECameraView;
+    import com.dynamsoft.dce.CameraView;
     public class MainActivity extends AppCompatActivity {
         CameraEnhancer mCameraEnhancer;
-        DCECameraView cameraView;
+        CameraView cameraView;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);    
@@ -74,9 +74,11 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
             mCameraEnhancer = new CameraEnhancer(MainActivity.this);
             mCameraEnhancer.addCameraView(cameraView);
             //Initialize your license
-            mCameraEnhancer.initLicenseFromDLS(info,new DCELicenseVerificationListener() {
+            com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+            info.organizationID = "Put your organizationID here.";
+            mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
                 @Override
-                public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+                public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
                     if(!isSuccess){
                         error.printStackTrace();
                     }
@@ -95,10 +97,10 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
     ```kotlin
     import com.dynamsoft.dce.CameraEnhancer
     import com.dynamsoft.dce.CameraState
-    import com.dynamsoft.dce.DCECameraView
+    import com.dynamsoft.dce.CameraView
 
     class MainActivity : AppCompatActivity() {
-        var cameraView: DCECameraView? = null
+        var cameraView: CameraView? = null
         var mCameraEnhancer: CameraEnhancer? = null
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -107,6 +109,8 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
             mCameraEnhancer = CameraEnhancer(this@MainActivity)
             mCameraEnhancer!!.addCameraView(cameraView)
             //Initialize DCE from Dynamsoft License Server
+            val info = com.dynamsoft.dce.DMDLSConnectionParameters()
+            info.organizationID = "Put your organizationID here."
             mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
                 if (!isSuccess) {
                     error.printStackTrace()
@@ -129,10 +133,10 @@ Java:
 ```java
 import com.dynamsoft.dce.CameraEnhancer;
 import com.dynamsoft.dce.CameraState;
-import com.dynamsoft.dce.DCECameraView;
+import com.dynamsoft.dce.CameraView;
 public class MainActivity extends AppCompatActivity {
     CameraEnhancer mCameraEnhancer;
-    DCECameraView cameraView;
+    CameraView cameraView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    
@@ -140,9 +144,11 @@ public class MainActivity extends AppCompatActivity {
         cameraView = findViewById(R.id.cameraView);
         mCameraEnhancer = new CameraEnhancer(MainActivity.this);
         mCameraEnhancer.addCameraView(cameraView);
-        mCameraEnhancer.initLicenseFromDLS(info,new DCELicenseVerificationListener() {
+        com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+        info.organizationID = "Put your organizationID here.";
+        mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
             @Override
-            public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+            public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
                 if(!isSuccess){
                     error.printStackTrace();
                 }
@@ -178,10 +184,10 @@ Kotlin:
 ```kotlin
 import com.dynamsoft.dce.CameraEnhancer
 import com.dynamsoft.dce.CameraState
-import com.dynamsoft.dce.DCECameraView
+import com.dynamsoft.dce.CameraView
 
 class MainActivity : AppCompatActivity() {
-    var cameraView: DCECameraView? = null
+    var cameraView: CameraView? = null
     var mCameraEnhancer: CameraEnhancer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -190,6 +196,8 @@ class MainActivity : AppCompatActivity() {
         mCameraEnhancer = CameraEnhancer(this@MainActivity)
         mCameraEnhancer!!.addCameraView(cameraView)
         //Initialize DCE from Dynamsoft License Server
+        val info = com.dynamsoft.dce.DMDLSConnectionParameters()
+        info.organizationID = "Put your organizationID here."
         mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
             if (!isSuccess) {
                 error.printStackTrace()
@@ -267,11 +275,11 @@ This section is the guide for users to add a video stream decoder in the camera 
     import com.dynamsoft.dbr.TextResultCallback;
     import com.dynamsoft.dbr.TextResult;
     import com.dynamsoft.dce.CameraEnhancer;
-    import com.dynamsoft.dce.DCELicenseVerificationListener;
-    import com.dynamsoft.dce.DCECameraView;
+    import com.dynamsoft.dce.CameraDLSLicenseVerificationListener;
+    import com.dynamsoft.dce.CameraView;
 
     public class MainActivity extends AppCompatActivity {
-        DCECameraView cameraView;            
+        CameraView cameraView;            
         CameraEnhancer mCameraEnhancer;
         //************Newly added code***************
         TextResultCallback mTextResultCallback;
@@ -290,9 +298,11 @@ This section is the guide for users to add a video stream decoder in the camera 
             mCameraEnhancer = new CameraEnhancer(MainActivity.this);
             mCameraEnhancer.addCameraView(cameraView);
             //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer.initLicenseFromDLS(info,new DCELicenseVerificationListener() {
+            com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+            info.organizationID = "Put your organizationID here.";
+            mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
                 @Override
-                public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+                public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
                     if(!isSuccess){ error.printStackTrace(); }
                 }
             });
@@ -326,7 +336,7 @@ This section is the guide for users to add a video stream decoder in the camera 
                 parameters.organizationID = "Put your organizationID here.";
                 reader.initLicenseFromDLS(parameters, new DBRDLSLicenseVerificationListener() {
                     @Override
-                    public void DCELicenseVerificationCallback(boolean b, Exception e) {
+                    public void DLSLicenseVerificationCallback(boolean b, Exception e) {
                         if (!b) { e.printStackTrace(); }
                     }
                 });
@@ -374,18 +384,18 @@ This section is the guide for users to add a video stream decoder in the camera 
     Kotlin:
 
     ```kotlin
-    import com.dynamsoft.dbr.TextResultCallback
-    import com.dynamsoft.dbr.BarcodeReader
-    import com.dynamsoft.dcesimplesample.R
-    import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
-    import com.dynamsoft.dbr.BarcodeReaderException
-    import com.dynamsoft.dbr.TextResult
-    import com.dynamsoft.dbr.DCESettingParameters
-    import com.dynamsoft.dbr.DMDLSConnectionParameters
-    import com.dynamsoft.dce.DCECameraView;
+    import com.dynamsoft.dbr.BarcodeReader;
+    import com.dynamsoft.dbr.BarcodeReaderException;
+    import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener;
+    import com.dynamsoft.dbr.DCESettingParameters;
+    import com.dynamsoft.dbr.TextResultCallback;
+    import com.dynamsoft.dbr.TextResult;
+    import com.dynamsoft.dce.CameraEnhancer;
+    import com.dynamsoft.dce.CameraDLSLicenseVerificationListener;
+    import com.dynamsoft.dce.CameraView;
 
     class MainActivity : AppCompatActivity() {
-        var cameraView: DCECameraView? = null
+        var cameraView: CameraView? = null
         var mCameraEnhancer: CameraEnhancer? = null
 
         //************Newly added code***************
@@ -405,6 +415,8 @@ This section is the guide for users to add a video stream decoder in the camera 
             mCameraEnhancer = CameraEnhancer(this@MainActivity)
             mCameraEnhancer!!.addCameraView(cameraView)
             //Initialize DCE from Dynamsoft License Server
+            val info = com.dynamsoft.dce.DMDLSConnectionParameters()
+            info.organizationID = "Put your organizationID here."
             mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
                 if (!isSuccess) {
                     error.printStackTrace()

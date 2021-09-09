@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android DCECameraView Class
-description: This is the documentation - Android DCECameraView Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android, DCECameraView
+title: Dynamsoft Camera Enhancer - Android CameraView Class
+description: This is the documentation - Android CameraView Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android, CameraView
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android DCECameraView Class
+breadcrumbText: Android CameraView Class
 ---
 
-# DCECameraView
+# CameraView
 
-This page is for `DCECameraView` Class. `DCECameraView` is designed to Make basic settings on the overlay.
+This page is for `CameraView` Class. `CameraView` is designed to Make basic settings on the overlay.
 
 ```Java
-class com.dynamsoft.dce.DCECameraView
+class com.dynamsoft.dce.CameraView
 ```
 
 | Method Name | Description |
@@ -36,13 +36,13 @@ void addOverlay()
 Java:
 
 ```java
-DCECameraView.addOverlay();
+cameraView.addOverlay();
 ```
 
 Kotlin:
 
 ```kotlin
-DCECameraView!!.addOverlay()
+cameraView!!.addOverlay()
 ```
 
 ## removeOverlay
@@ -58,13 +58,13 @@ void removeOverlay()
 Java:
 
 ```java
-DCECameraView.removeOverlay();
+cameraView.removeOverlay();
 ```
 
 Kotlin:
 
 ```kotlin
-DCECameraView!!.removeOverlay()
+cameraView!!.removeOverlay()
 ```
 
 ## setBrushColor
@@ -82,11 +82,11 @@ void setBrushColor(String color)
 Java:
 
 ```java
-DCECameraView.setBrushColor("Put your color string here");
+cameraView.setBrushColor("Put your color string here");
 ```
 
 Kotlin:
 
 ```kotlin
-DCECameraView!!.setBrushColor("Put your color string here")
+cameraView!!.setBrushColor("Put your color string here")
 ```

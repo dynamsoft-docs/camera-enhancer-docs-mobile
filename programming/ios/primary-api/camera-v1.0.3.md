@@ -15,9 +15,9 @@ noTitleIndex: true
 | [`updateCameraSettingFromJson`](#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`](#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
 | [`getVersion`](#getversion) | Check current DCE version |
-| [`getCurrentCameraState`](#getcurrentcamerastate) | Get camera current state |
-| [`getDesiredCameraState`](#getsesiredcamerastate) | Get camera desired state |
-| [`setDesiredCameraState`](#setdesiredcamerastate) | Set Camera on/off |
+| [`getCameraCurrentState`](#getcameracurrentstate) | Get camera current state |
+| [`getCameraDesiredState`](#getcameradesiredstate) | Get camera desired state |
+| [`setCameraDesiredState`](#setcameradesiredstate) | Set Camera on/off |
 | [`pauseCamera`](#pausecamera-and-resumecamera) | Pause Camera |
 | [`resumeCamera`](#pausecamera-and-resumecamera) | Resume Camera |
 | [`startScanning`](#stopscanning-and-startscanning) | Start scanning |
@@ -139,12 +139,12 @@ Swift:
 dce.getVersion()
 ```
 
-## getCurrentCameraState
+## getCameraCurrentState
 
 Get the current status (on/off) of the camera.
 
 ```objectivec
-- (CameraState)getCurrentCameraState NS_SWIFT_NAME(getCurrentCameraState());
+- (CameraState)getCameraCurrentState NS_SWIFT_NAME(getCameraCurrentState());
 ```
 
 **Return Value**
@@ -156,21 +156,21 @@ Get the current status (on/off) of the camera.
 Objective-C:
 
 ```objectivec
-[dce getCurrentCameraState];
+[dce getCameraCurrentState];
 ```
 
 Swift:
 
 ```swift
-dce.getCurrentCameraState()
+dce.getCameraCurrentState()
 ```
 
-## getDesiredCameraState
+## getCameraDesiredState
 
 Get the desired status (on/off)of the camera.
 
 ```objc
-- (CameraState)getDesiredCameraState NS_SWIFT_NAME(getDesiredCameraState());
+- (CameraState)getCameraDesiredState NS_SWIFT_NAME(getCameraDesiredState());
 ```
 
 **Return Value**
@@ -182,21 +182,21 @@ Get the desired status (on/off)of the camera.
 Objective-C:
 
 ```objectivec
-[dce getDesiredCameraState];
+[dce getCameraDesiredState];
 ```
 
 Swift:
 
 ```swift
-dce.getDesiredCameraState()
+dce.getCameraDesiredState()
 ```
 
-## setDesiredCameraState
+## setCameraDesiredState
 
 Set the camera state.
 
 ```objc
-- (void)setDesiredCameraState:(CameraState)state;
+- (void)setCameraDesiredState:(CameraState)state;
 ```
 
 **Parameters**
@@ -208,13 +208,13 @@ Set the camera state.
 Objective-C:
 
 ```objectivec
-[dce setDesiredCameraState:CAMERA_STATE_ON];
+[dce setCameraDesiredState:CAMERA_STATE_ON];
 ```
 
 Swift:
 
 ```swift
-dce.setDesiredCameraState(CAMERA_STATE_ON)
+dce.setCameraDesiredState(CAMERA_STATE_ON)
 ```
 
 ## pauseCamera and resumeCamera

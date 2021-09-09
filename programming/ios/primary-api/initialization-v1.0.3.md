@@ -13,21 +13,24 @@ breadcrumbText: iOS CameraEnhancer Class
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`](#initLicense) | Initialize the Camera Enhancer from the license server with a license. |
+| [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
 
 ---
 
-## initLicense
+## initLicenseFromDLS
 
 Initialize the Camera Enhancer with a license.
 
 ```objc
-+ (void)initLicense:(NSString*)license verificationDelegate:(id)connectionDelegate;
+- (instancetype)initLicenseFromDLS:(iDCEDLSConnectionParameters*)parameters
+                              view:(DCECaptureView *)view
+              verificationDelegate:(id)connectionDelegate;
 ```
 
 **Parameters**
 
-`license`: You have to input a valid license to access the full feature of `Dynamsoft Camera Enhancer`.
+`iDCEDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.  
+`view`: The [`DCECaptureView`]({{ site.ios-api-auxiliary }}captureview.html).
 
 **Code Snippet**
 
@@ -35,7 +38,9 @@ Objective-C:
 
 ```objc
 _decView = [DCECaptureView captureWithFrame:self.view.bounds];
-_dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:"" view:_dceView verificationDelegate:self];
+iDCEDLSConnectionParameters* dls = [[iDCEDLSConnectionParameters alloc] init];
+dls.organizationID = @"200001";
+_dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dls view:_dceView verificationDelegate:self];
 ```
 
 Swift:
