@@ -12,23 +12,22 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`acquireBufferedFrame`](#acquireBufferedFrame) | Fetch a frame from the video buffer. |
 | [`getDeviceLevel`](#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |
 | [`setAutoModeLevelParam`](#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`](#updatecamerasetting) | Update camera, filter and focus settings from Json. |
 | [`getVersion`](#getversion) | Check current DCE version |
-| [`getCurrentCameraState`](#getcurrentcamerastate) | Get camera current state. |
-| [`getDesiredCameraState`](#getdesiredcameraState) | Get camera desired state. |
-| [`setDesiredCameraState`](#setdesiredcameraState) | Set Camera on/off. |
+| [`getCameraCurrentState`](#getcameracurrentstate) | Get camera current state. |
+| [`getCameraDesiredState`](#getcameradesiredstate) | Get camera desired state. |
+| [`setCameraDesiredState`](#setcameradesiredstate) | Set Camera on/off. |
 | [`pauseCamera`](#pausecamera-and-resumecamera) | Pause Camera. |
 | [`resumeCamera`](#pausecamera-and-resumecamera) | Resume Camera. |
 | [`startScanning`](#stopscanning-and-startscanning) | Start scanning. |
 | [`stopScanning`](#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`](#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
 | [`removeCameraListener`](#removecameralistener) | Remove camera listener. |
-| [`getCurrentTorchState`](#getcurrenttorchstate) | Get torch current state. |
-| [`getDesiredTorchState`](#getdesiredtorchstate) | Get torch desired state. |
-| [`setDesiredTorchState`](#setdesiredtorchstate) | Set torch state. |
+| [`getTorchCurrentState`](#gettorchcurrentstate) | Get torch current state. |
+| [`getTorchDesiredState`](#gettorchdesiredstate) | Get torch desired state. |
+| [`setTorchDesiredState`](#settorchdesiredstate) | Set torch state. |
 | [`addTorchListener`](#addtorchlistener) | Add torch listener. |
 | [`getCameraPosition`](#getcameraposition) | Get current camera position. |
 | [`switchCameraPosition`](#switchcameraposition) | Switch camera position front/back. |
@@ -37,18 +36,6 @@ noTitleIndex: true
 | [`getResolutionList`](#getresolutionlist) | Get all available resolutions |
 
 ---
-
-## acquireBufferedFrame
-
-Fetch a single buffered frame from the video buffer.
-
-```java
-acquireBufferedFrame();
-```
-
-**Return Value**
-
-`DCEFrame`: This method returns the buffered image data. The frame data including the width, height, strides and other information.
 
 ## getDeviceLevel
 
@@ -230,12 +217,12 @@ Kotlin:
 mCameraEnhancer!!.version
 ```
 
-## getCurrentCameraState
+## getCameraCurrentState
 
 Get the current camera status.
 
 ```java
-getCurrentCameraState()
+getCameraCurrentState()
 ```
 
 **Return Value**
@@ -245,21 +232,21 @@ getCurrentCameraState()
 **Code Snippet**
 
 ```java
-mCameraEnhancer.getCurrentCameraState();
+mCameraEnhancer.getCameraCurrentState();
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.currentCameraState
+mCameraEnhancer!!.cameraCurrentState
 ```
 
-## getDesiredCameraState
+## getCameraDesiredState
 
 Get the camera desired status.
 
 ```java
-getDesiredCameraState()
+getCameraDesiredState()
 ```
 
 **Return Value**
@@ -271,21 +258,21 @@ getDesiredCameraState()
 Java:
 
 ```java
-mCameraEnhancer.getDesiredCameraState();
+mCameraEnhancer.getCameraDesiredState();
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.desiredCameraState
+mCameraEnhancer!!.cameraDesiredState
 ```
 
-## setDesiredCameraState
+## setCameraDesiredState
 
 Set the camera status.
 
 ```java
-setDesiredCameraState(CameraState)
+setCameraDesiredState(CameraState)
 ```
 
 **Parameters**
@@ -297,17 +284,17 @@ setDesiredCameraState(CameraState)
 Java:
 
 ```java
-mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_OFF);
+mCameraEnhancer.setCameraDesireState(CameraState.CAMERA_STATE_OFF);
 // Or
-mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
+mCameraEnhancer.setCameraDesireState(CameraState.CAMERA_STATE_ON);
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
+mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_ON)
 // Or
-mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_OFF)
+mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_OFF)
 ```
 
 ## pauseCamera and resumeCamera
@@ -423,12 +410,12 @@ Kotlin:
 mCameraEnhancer!!.removeCameraListener()
 ```
 
-## getCurrentTorchState
+## getTorchCurrentState
 
 Get the current torch state.
 
 ```java
-getCurrentTorchState()
+getTorchCurrentState()
 ```
 
 **Return Value**
@@ -440,21 +427,21 @@ getCurrentTorchState()
 Java:
 
 ```java
-mCameraEnhancer.getCurrentTorchState();
+mCameraEnhancer.getTorchCurrentState();
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.currentTorchState()
+mCameraEnhancer!!.torchCurrentState()
 ```
 
-## getDesiredTorchState
+## getTorchDesiredState
 
 Get the desired torch state.
 
 ```java
-getDesiredTorchState()
+getTorchDesiredState()
 ```
 
 **Return Value**
@@ -466,21 +453,21 @@ getDesiredTorchState()
 Java:
 
 ```java
-mCameraEnhancer.getDesiredTorchState();
+mCameraEnhancer.getTorchDesiredState();
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.desiredTorchState
+mCameraEnhancer!!.torchDesiredState
 ```
 
-## setDesiredTorchState
+## setTorchDesiredState
 
 Set the desired torch state.
 
 ```java
-setDesiredTorchState(TorchState)
+setTorchDesiredState(TorchState)
 ```
 
 **Parameters**
@@ -492,17 +479,17 @@ setDesiredTorchState(TorchState)
 Java:
 
 ```java
-mCameraEnhancer.setDesiredTorchState(TorchState.TORCH_STATE_AUTO);
-mCameraEnhancer.setDesiredTorchState(TorchState.TORCH_STATE_ON);
-mCameraEnhancer.setDesiredTorchState(TorchState.TORCH_STATE_OFF);
+mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_AUTO);
+mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_ON);
+mCameraEnhancer.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.setDesiredTorchState(TorchState.TORCH_STATE_AUTO)
-mCameraEnhancer!!.setDesiredTorchState(TorchState.TORCH_STATE_ON)
-mCameraEnhancer!!.setDesiredTorchState(TorchState.TORCH_STATE_OFF)
+mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_AUTO)
+mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_ON)
+mCameraEnhancer!!.setTorchDesiredState(TorchState.TORCH_STATE_OFF)
 ```
 
 ## addTorchListener
