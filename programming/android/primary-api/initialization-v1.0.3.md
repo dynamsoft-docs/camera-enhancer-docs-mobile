@@ -13,19 +13,19 @@ breadcrumbText: Android Initialization Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`](#initLicense) | Initialize the Camera Enhancer from the license server with a license. |
+| [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
 
 ## initLicenseFromDLS
 
 Initialize the `CameraEnhancer` from the license server.
 
 ```java
-void initLicense(DCELicenseVerificationListener listener)
+void initLicenseFromDLS(CameraDLSLicenseVerificationListener listener)
 ```
 
 **Parameters**
 
-`DCELicenseVerificationListener`: The interface [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html).
+`CameraDLSLicenseVerificationListener`: The interface [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener-v1.0.3.html).
 
 **Code Snippet**
 
@@ -34,10 +34,11 @@ Java:
 ```java
 CameraEnhancer mCameraEnhancer = new CameraEnhancer(MainActivity.this);
 mCameraEnhancer.addCameraView(cameraView);
-// Please use your own license to replace the public trial license.
-mCameraEnhancer.initLicenseFromDLS("Put your license here", new DCELicenseVerificationListener() {
+com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+info.organizationID = "Put your organizationID here.";
+mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
     @Override
-    public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
         if(!isSuccess){ error.printStackTrace(); }
     }
 });

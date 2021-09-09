@@ -12,7 +12,8 @@ breadcrumbText: Android Auxiliary API
 
 ## Class
 
-- [`DCEFrame`]({{site.android-api-auxiliary}}frame.html)
+- [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html)
+- [`Frame`]({{site.android-api-auxiliary}}frame.html)
 - [`HardwareUtil`]({{site.android-api-auxiliary}}hardwareutil.html)
-- [`DCECameraView`]({{site.android-api-auxiliary}}cameraview.html)
+- [`CameraView`]({{site.android-api-auxiliary}}cameraview.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)

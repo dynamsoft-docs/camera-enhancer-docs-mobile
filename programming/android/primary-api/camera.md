@@ -12,7 +12,6 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`acquireBufferedFrame`](#acquireBufferedFrame) | Fetch a frame from the video buffer. |
 | [`getDeviceLevel`](#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |
 | [`setAutoModeLevelParam`](#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`](#updatecamerasetting) | Update camera, filter and focus settings from Json. |
@@ -37,18 +36,6 @@ noTitleIndex: true
 | [`getResolutionList`](#getresolutionlist) | Get all available resolutions |
 
 ---
-
-## acquireBufferedFrame
-
-Fetch a single buffered frame from the video buffer.
-
-```java
-acquireBufferedFrame();
-```
-
-**Return Value**
-
-`DCEFrame`: This method returns the buffered image data. The frame data including the width, height, strides and other information.
 
 ## getDeviceLevel
 

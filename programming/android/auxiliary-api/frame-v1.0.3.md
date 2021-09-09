@@ -17,20 +17,24 @@ This page is for `Frame` Class. `Frame` parameters store the frame data.
 class com.dynamsoft.dce.Frame
 ```
 
-| Attribute | Type |
+| Method Name | Type |
 | ----------- | ---- |
-| [`getFrameData`](#getframedata) | byte[] |
+| [`getData`](#getdata) | byte[] |
 | [`getWidth`](#getwidth) | int |
 | [`getHeight`](#getheight) | int |
 | [`getStrides`](#getstrides) | int[] |
 | [`getFormat`](#getformat) | int |
 | [`getFrameId`](#getframeid) | int |
+| [`isFastFrame`](#isfastframe) | boolean |
 | [`getFastFrameId`](#getfastframeid) | int |
+| [`getCropRect`](#getcroprect) | Rect |
 | [`getOrientation`](#getorientation) | int |
+| [`getOriW`](#getoriw) | int |
+| [`getOriH`](#getorih) | int |
 
-## getFrameData
+## getData
 
-Get the value of the frame data in Byte array. You can also access the data via property `frameData`.
+Get the frame data in byte array.
 
 **Return Value**
 
@@ -41,15 +45,15 @@ Get the value of the frame data in Byte array. You can also access the data via 
 Java:
 
 ```java
-byte[] data = frame.getFrameData();
-// OR
-byte[] data = frame.frameData();
+Frame frame;
+byte[] data = frame.getData();
 ```
 
 Kotlin:
 
 ```kotlin
-var data: ByteArray? = frame!!.frameData
+var frame: Frame? = null
+var data: ByteArray? = frame!!.data
 ```
 
 ## getWidth

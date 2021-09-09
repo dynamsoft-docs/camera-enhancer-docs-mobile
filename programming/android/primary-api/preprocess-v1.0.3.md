@@ -12,7 +12,7 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`acquireBufferedFrame`](#acquirebufferedframe) | Fetch a frame from the video buffer. |
+| [`AcquireListFrame`](#AcquireListFrame) | Fetch a frame from the video buffer. |
 | [`enableFastMode`](#enablefastmode) | Set true/false to turn on/off DCE fast mode. |
 | [`getEnabledFastModeStatus`](#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
 | [`enableFrameFilter`](#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
@@ -22,13 +22,18 @@ noTitleIndex: true
 | [`getEnabledSensorControlStatus`](#getenabledsensorcontrolstatus) | Get the status (on/off) of DCE sensor control mode. |
 | [`setSensorControlThreshold`](#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
 
-## acquireBufferedFrame
+## AcquireListFrame
 
 Fetch a single buffered frame from the video buffer.
 
 ```java
-acquireBufferedFrame();
+AcquireListFrame(boolean);
 ```
+
+**Parameters**
+
+`true`: If the video buffer is empty, the method will wait for the next added frame.
+`false`: If the video buffer is empty, the method will return an empty value.
 
 **Return Value**
 
@@ -39,13 +44,13 @@ acquireBufferedFrame();
 Java:
 
 ```java
-mCameraEnhancer.acquireBufferedFrame();
+mCameraEnhancer.AcquireListFrame();
 ```
 
 Kotlin:
 
 ```kotlin
-mCameraEnhancer!!.acquireBufferedFrame
+mCameraEnhancer!!.AcquireListFrame
 ```
 
 ## enableFastMode

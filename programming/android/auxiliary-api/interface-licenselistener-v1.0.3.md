@@ -9,24 +9,24 @@ needGenerateH3Content: true
 breadcrumbText: CameraDLSLicenseVerificationListener
 ---
 
-# DCELicenseVerificationListener
+# CameraDLSLicenseVerificationListener
 
 The interface to handle callback when license verification messages are returned.
 
 ```java
-interface com.dynamsoft.dce.DCELicenseVerificationListener
+interface com.dynamsoft.dce.CameraDLSLicenseVerificationListener
 ```
 
 | Method | Description |
 | ------ | ----------- |
-| `DCELicenseVerificationCallback` | The call back of the license server. |
+| `DLSLicenseVerificationCallback` | The call back of the license server. |
 
-## DCELicenseVerificationCallback
+## DLSLicenseVerificationCallback
 
 The call back of the license server. Add the code in the callback function to react when the license server connection is successful or failed.
 
 ```java
-void DCELicenseVerificationCallback(boolean var1, Exception var2);
+void DLSLicenseVerificationCallback(boolean var1, Exception var2);
 ```
 
 **Parameters**
@@ -37,9 +37,9 @@ void DCELicenseVerificationCallback(boolean var1, Exception var2);
 **Code Snippet**
 
 ```java
-cameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener() {
+cameraEnhancer.initLicenseFromDLS(dceParameters, new CameraDLSLicenseVerificationListener() {
     @Override
-    public void DCELicenseVerificationCallback(boolean isSuccess, Exception e) {
+    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception e) {
         if (!isSuccess) {
             e.printStackTrace();
         }
