@@ -3,6 +3,7 @@ repository: dynamsoft-docs/camera-enhancer-docs
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs
 firstLevelUrl: /camera-enhancer/docs
 docHomePage: /camera-enhancer/docs/introduction/
+frontPageFolder: /camera-enhancer/docs/
 
 productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
 productName: Dynamsoft Camera Enhancer
