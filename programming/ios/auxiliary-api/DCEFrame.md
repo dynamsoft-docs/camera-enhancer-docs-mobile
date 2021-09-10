@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS FramePackage Class
-description: This is the documentation - iOS FramePackage Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS FramePackage Class
+title: Dynamsoft Camera Enhancer - iOS DCEFrame Class
+description: This is the documentation - iOS DCEFrame Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, iOS DCEFrame Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: iOS FramePackage Class
+breadcrumbText: iOS DCEFrame Class
 ---
 
-# FramePackage
+# DCEFrame
 
 Return the frame decode results and additional information.
 
 ```objc
-@interface FramePackage : NSObject
+@interface DCEFrame : NSObject
 ```
 
 | Attribute Name | Type |

@@ -35,7 +35,7 @@ Java:
 CameraEnhancer mCameraEnhancer = new CameraEnhancer(MainActivity.this);
 mCameraEnhancer.addCameraView(cameraView);
 // Please use your own license to replace the public trial license.
-mCameraEnhancer.initLicenseFromDLS("Put your license here", new DCELicenseVerificationListener() {
+mCameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener() {
     @Override
     public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
         if(!isSuccess){ error.printStackTrace(); }
@@ -48,9 +48,7 @@ Kotlin:
 ```kotlin
 mCameraEnhancer = CameraEnhancer(this@MainActivity)
 mCameraEnhancer!!.addCameraView(cameraView)
-val info = com.dynamsoft.dce.DMDLSConnectionParameters()
-info.organizationID = "Put your organizationID here."
-mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+mCameraEnhancer!!.initLicense(info) { isSuccess, error ->
     if (!isSuccess) {
         error.printStackTrace()
     }

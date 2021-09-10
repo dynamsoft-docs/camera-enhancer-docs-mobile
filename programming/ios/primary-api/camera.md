@@ -23,9 +23,9 @@ noTitleIndex: true
 | [`startScanning`](#stopscanning-and-startscanning) | Start scanning |
 | [`stopScanning`](#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`](#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`getTorchCurrentState`](#gettorchcurrentstate) | Get torch current state |
-| [`getTorchDesiredState`](#gettorchdesiredstate) | Get torch desired state |
-| [`setTorchDesiredState`](#settorchdesiredstate) | Set torch state |
+| [`getTorchCurrentState`](#getcurrenttorchstate) | Get torch current state |
+| [`getTorchDesiredState`](#getdesiredtorchstate) | Get torch desired state |
+| [`setTorchDesiredState`](#setdesiredtorchstate) | Set torch state |
 | [`addTorchListener`](#addtorchlistener) | Add torch listener |
 | [`getCameraPosition`](#getcameraposition) | Get current camera position |
 | [`switchCameraPosition`](#switchcameraposition) | Switch camera position front/back |
@@ -293,12 +293,12 @@ Swift:
 dce.addCameraListener(self)
 ```
 
-## getTorchCurrentState
+## getCurrentTorchState
 
 Get the current torch state.
 
 ```objc
-- (TorchState)getTorchCurrentState;
+- (TorchState)getCurrentTorchState;
 ```
 
 **Return Value**
@@ -310,21 +310,21 @@ Get the current torch state.
 Objective-C:
 
 ```objectivec
-[dce getTorchCurrentState];
+[dce getCurrentTorchState];
 ```
 
 Swift:
 
 ```swift
-dce.getTorchCurrentState()
+dce.getCurrentTorchState()
 ```
 
-## getTorchDesiredState
+## getDesiredTorchState
 
 Get desired torch state (on/off)
 
 ```objc
-- (TorchState)getTorchDesiredState;
+- (TorchState)getDesiredTorchState;
 ```
 
 **Return Value**
@@ -336,21 +336,21 @@ Get desired torch state (on/off)
 Objective-C:
 
 ```objectivec
-[dce getTorchDesiredState];
+[dce getDesiredTorchState];
 ```
 
 Swift:
 
 ```swift
-dce.getTorchDesiredState()
+dce.getDesiredTorchState()
 ```
 
-## setTorchDesiredState
+## setDesiredTorchState
 
 Set the torch on/off.
 
 ```objc
-- (void)setTorchDesiredState:(TorchState)state NS_SWIFT_NAME(setTorchDesiredState(_:));
+- (void)setDesiredTorchState:(TorchState)state NS_SWIFT_NAME(setDesiredTorchState(_:));
 ```
 
 **Return Value**
@@ -362,13 +362,13 @@ Set the torch on/off.
 Objective-C:
 
 ```objectivec
-[dce setTorchDesiredState:TorchState.on];
+[dce setDesiredTorchState:TorchState.on];
 ```
 
 Swift:
 
 ```swift
-dce.setTorchDesiredState(TorchState.on)
+dce.setDesiredTorchState(TorchState.on)
 ```
 
 ## addTorchListener

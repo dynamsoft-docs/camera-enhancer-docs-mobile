@@ -21,7 +21,7 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`]({{site.android-api}}initialization.html#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
+| [`initLicense`]({{site.android-api}}initialization.html#initLicense) | Initialize the Camera Enhancer from the license server with a license. |
 
 ## [Frame preprocessing methods]({{site.android-api}}preprocess.html)
 

@@ -23,7 +23,7 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`acquireBufferedFrame`]({{site.android-api}}preprocess.html#acquirelistframe) | Get the latest frame from the frame queue when this API is activated. |
+| [`acquireBufferedFrame`]({{site.android-api}}preprocess.html#acquirebufferedframe) | Get the latest frame from the frame queue when this API is activated. |
 | [`enableFastMode`]({{site.android-api}}preprocess.html#enablefastmode) | Set true/false to turn on/off DCE fast mode. |
 | [`getEnabledFastModeStatus`]({{site.android-api}}preprocess.html#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
 | [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
@@ -41,18 +41,18 @@ noTitleIndex: true
 | [`setAutoModeLevelParam`]({{site.android-api}}camera.html#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`]({{site.android-api}}camera.html#updatecamerasetting) | Update camera, filter and focus settings from Json. |
 | [`getVersion`]({{site.android-api}}camera.html#getversion) | Check current DCE version |
-| [`getCurrentCameraState`]({{site.android-api}}camera.html#getcameracurrentstate) | Get camera current state. |
-| [`getDesiredCameraState`]({{site.android-api}}camera.html#getcameradesiredstate) | Get camera desired state. |
-| [`setDesiredCameraState`]({{site.android-api}}camera.html#setcameradesiredstate) | Set Camera on/off. |
+| [`getCurrentCameraState`]({{site.android-api}}camera.html#getcurrentcamerastate) | Get camera current state. |
+| [`getDesiredCameraState`]({{site.android-api}}camera.html#getdesiredcamerastate) | Get camera desired state. |
+| [`setDesiredCameraState`]({{site.android-api}}camera.html#setdesiredcamerastate) | Set Camera on/off. |
 | [`pauseCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera. |
 | [`resumeCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera. |
 | [`startScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Start scanning. |
 | [`stopScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`]({{site.android-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
 | [`removeCameraListener`]({{site.android-api}}camera.html#removecameralistener) | Remove camera listener. |
-| [`getCurrentTorchState`]({{site.android-api}}camera.html#gettorchcurrentstate) | Get torch current state. |
-| [`getDesiredTorchState`]({{site.android-api}}camera.html#gettorchdesiredstate) | Get torch desired state. |
-| [`setDesiredTorchState`]({{site.android-api}}camera.html#settorchdesiredstate) | Set torch state. |
+| [`getCurrentTorchState`]({{site.android-api}}camera.html#getcurrenttorchstate) | Get torch current state. |
+| [`getDesiredTorchState`]({{site.android-api}}camera.html#getdesiredtorchstate) | Get torch desired state. |
+| [`setDesiredTorchState`]({{site.android-api}}camera.html#setdesiredtorchstate) | Set torch state. |
 | [`addTorchListener`]({{site.android-api}}camera.html#addtorchlistener) | Add torch listener. |
 | [`getCameraPosition`]({{site.android-api}}camera.html#getcameraposition) | Get current camera position. |
 | [`switchCameraPosition`]({{site.android-api}}camera.html#switchcameraposition) | Switch camera position front/back. |
@@ -82,16 +82,16 @@ noTitleIndex: true
 
 ## Auxiliary Classes
 
-- [`DCEFrame`]({{site.android-api-auxiliary}}frame.html)
+- [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`HardwareUtil`]({{site.android-api-auxiliary}}hardwareutil.html)
 - [`DCECameraView`]({{site.android-api-auxiliary}}cameraview.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
 
 ## Interfaces
 
-- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#cameralistener)
-- [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener)
-- [`TorchListener`]({{ site.android-api-auxiliary }}interface.html#torchlistener)
+- [`CameraListener`]({{ site.android-api-auxiliary }}interface-cameralistener.html)
+- [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-torchlistener.html)
+- [`TorchListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 
 ## Enumerations
 

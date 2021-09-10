@@ -37,9 +37,9 @@ breadcrumbText: iOS CameraEnhancer Class
 | [`updateCameraSettingFromJson`]({{site.ios-api}}camera.html#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`]({{site.ios-api}}camera.html#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
 | [`getVersion`]({{site.ios-api}}camera.html#getversion) | Check current DCE version |
-| [`getCurrentCameraState`]({{site.ios-api}}camera.html#getcameracurrentstate) | Get the current camera state |
-| [`getDesiredCameraState`]({{site.ios-api}}camera.html#getcameradesiredstate) | Get the desired camera state |
-| [`setDesiredCameraState`]({{site.ios-api}}camera.html#setcameradesiredstate) | Set Camera on/off |
+| [`getCurrentCameraState`]({{site.ios-api}}camera.html#getcurrentcamerastate) | Get the current camera state |
+| [`getDesiredCameraState`]({{site.ios-api}}camera.html#getdesiredcamerastate) | Get the desired camera state |
+| [`setDesiredCameraState`]({{site.ios-api}}camera.html#setdesiredcamerastate) | Set Camera on/off |
 | [`pauseCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera |
 | [`resumeCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera |
 | [`startScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Start scanning |

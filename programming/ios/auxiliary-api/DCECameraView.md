@@ -23,7 +23,6 @@ breadcrumbText: iOS DCECameraView Class
 | [`captureWithFrame`](#capturewithframe) |  |
 | [`addTorch`](#addtorch) | Add torch controlling icon |
 | [`addOverlay`](#addoverlay) | Add overlay |
-| [`DCECameraViewListener`](#dcecameraviewlistener) | The protocol of `DCECameraView` |
 
 ## initWithView
 
@@ -38,7 +37,7 @@ Init the DCECameraView.
 Objective-C:
 
 ```objc
-_dceView = [[DCECaptureView alloc] initWithView:<#(CGRect)#>]
+_dceView = [[DCECameraView alloc] initWithView:<#(CGRect)#>]
 ```
 
 Swift:
@@ -127,56 +126,4 @@ var dceView:DCECameraView! = nil
 dceView.addOverlay()
 //Add a personalized overlay
 dceView.addOverlay(stroke: UIColor, fill: UIColor)
-```
-
-## addListener
-
-Add view Listener.
-
-```objc
-- (void)addListener:(id<DCECameraViewListener>)listener NS_SWIFT_NAME(addListener(_:));
-```
-
-**Parameters**
-
-`Listener`: DCECameraViewListener.
-
-**Code Snippet**
-
-Objective-C:
-
-```objectivec
-@property(nonatomic, strong) DCECameraView *dceView;
-[_dceView addListener:(nonnull id<DCECameraViewListener>)];
-```
-
-Swift:
-
-```swift
-var dceView:DCECameraView! = nil
-dceView.addListener(listener: DCECameraViewListener)
-```
-
-## removeListener
-
-Remove view listener.
-
-```objc
-- (void)removeListener;
-```
-
-**Code Snippet**
-
-Objective-C:
-
-```objectivec
-@property(nonatomic, strong) DCECameraView *dceView;
-[_dceView removeListener];
-```
-
-Swift:
-
-```swift
-var dceView:DCECameraView! = nil
-dceView.removeListener()
 ```

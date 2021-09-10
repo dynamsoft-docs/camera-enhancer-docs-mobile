@@ -83,7 +83,7 @@ noTitleIndex: true
 ## Auxiliary Classes
 
 - [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html)
-- [`Frame`]({{site.android-api-auxiliary}}frame.html)
+- [`Frame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`HardwareUtil`]({{site.android-api-auxiliary}}hardwareutil.html)
 - [`CameraView`]({{site.android-api-auxiliary}}cameraview.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
