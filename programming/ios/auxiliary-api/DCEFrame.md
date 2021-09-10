@@ -19,16 +19,17 @@ Return the frame decode results and additional information.
 
 | Attribute Name | Type |
 |------|------|
-| [`buffer`](#buffer) | NSData* |
-| [`width`](#width) | NSNumber* |
-| [`height`](#height) | NSNumber* |
-| [`stride`](#stride) | NSNumber* |
-| [`pixelFormat`](#pixelformat) | NSString* |
-| [`frameID`](#frameid) | NSNumber* |
-| [`fastFrameID`](#fastframeid) | NSNumber* |
-| [`imageBuffer`](#imagebuffer) | CVImageBufferRef |
+| [`frameData`](#buffer) | *NSData** |
+| [`width`](#width) | *NSInteger* |
+| [`height`](#height) | *NSInteger* |
+| [`stride`](#stride) | *NSInteger* |
+| [`format`](#pixelformat) | *NSInteger* |
+| [`frameID`](#frameid) | *NSInteger* |
+| [`fastFrameID`](#fastframeid) | *NSInteger* |
+| [`orientation`](#orientation) | *NSInteger* |
+| [`imageBuffer`](#imagebuffer) | *CVImageBufferRef* |
 
-## buffer
+## frameData
 
 Store the buffered frame data in NSData.
 
@@ -41,7 +42,7 @@ NSData* buffer
 Store the width of the frame.
 
 ```objectivec
-NSNumber* width
+NSInteger width
 ```
 
 ## height
@@ -49,7 +50,7 @@ NSNumber* width
 Store the height of the frame.
 
 ```objectivec
-NSNumber* height
+NSInteger height
 ```
 
 ## stride
@@ -57,23 +58,28 @@ NSNumber* height
 Store the stride of the frame.
 
 ```objectivec
-NSNumber* stride
+NSInteger stride
 ```
 
-## pixelFormat
+## format
 
 Store the pixel format of the frame.
 
 ```objectivec
-NSString* pixelFormat
+NSInteger format
 ```
+
+**Value**
+
+`3`: The Enumeration value of `ImagePixelFormat.EnumImagePixelFormatNV21`.  
+`7`: The Enumeration value of `ImagePixelFormat.EnumImagePixelFormatARGB_8888`.
 
 ## frameID
 
 Store the frame ID of the frame.
 
 ```objectivec
-NSNumber* frameID
+NSInteger frameID
 ```
 
 ## fastFrameID
@@ -81,8 +87,25 @@ NSNumber* frameID
 Store the fast frame ID of the frame.
 
 ```objectivec
-NSNumber* fastFrameID
+NSInteger fastFrameID
 ```
+
+## orientation
+
+Stores the orientation value
+
+```objectivec
+NSInteger orientation
+```
+
+**Value**
+
+The following image illustrates how we defined 4 different device orientations.
+
+<div align="center">
+    <p><img src="assets/getOrientation.png" width="70%" alt="getOrientation"></p>
+    <p>All orientation values</p>
+</div>
 
 ## imageBuffer
 

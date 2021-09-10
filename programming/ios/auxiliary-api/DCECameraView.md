@@ -38,13 +38,13 @@ Init the DCECameraView.
 Objective-C:
 
 ```objc
-
+_dceView = [[DCECaptureView alloc] initWithView:<#(CGRect)#>]
 ```
 
 Swift:
 
 ```swift
-dceView = DCECaptureView.init(view: self.view.bounds)
+dceView = DCECameraView.init(view: self.view.bounds)
 ```
 
 ## captureWithFrame
@@ -60,13 +60,13 @@ Init the DCECameraView.
 Objective-C:
 
 ```objc
-_dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+_dceView = [DCECameraView captureWithFrame:self.view.bounds];
 ```
 
 Swift:
 
 ```swift
-dceView = DCECaptureView.init(frame:self.view.bounds)
+dceView = DCECameraView.init(frame:self.view.bounds)
 ```
 
 ## addTorch
