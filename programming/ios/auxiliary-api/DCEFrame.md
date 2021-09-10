@@ -19,7 +19,7 @@ Return the frame decode results and additional information.
 
 | Attribute Name | Type |
 |------|------|
-| [`frameData`](#buffer) | *NSData** |
+| [`frameData`](#buffer) | *NSData* * |
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |

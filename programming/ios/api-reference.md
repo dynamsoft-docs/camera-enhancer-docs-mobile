@@ -11,7 +11,7 @@ breadcrumbText: iOS API references
 
 # iOS API references
 
-## Primary Class - CameraEnhancer
+## DynamsoftCameraEnhancer Class
 
 ### [Initialization Methods]({{site.ios-api}}initialization.html)
 
@@ -26,7 +26,7 @@ breadcrumbText: iOS API references
 | [`acquireBufferedFrame`]({{site.ios-api}}preprocess.html#acquirebufferedframe) | Get the latest frame from the frame queue when this API is activated. |
 | [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode) | Set the value true/false to turn on/off DCE fast mode. |
 | [`enableSensorControl`]({{site.ios-api}}preprocess.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
-|[`setSensorControlThreshold`]({{site.ios-api}}preprocess.html#setsensorcontrolthreshold)| Make settings on sensor control threshold. |
+| [`setSensorControlThreshold`]({{site.ios-api}}preprocess.html#setsensorcontrolthreshold) | Make settings on sensor control threshold. |
 | [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
 | [`setMaxFrameRate`]({{site.ios-api}}preprocess.html#setmaxframerate) | Set max frame rate. |
 
