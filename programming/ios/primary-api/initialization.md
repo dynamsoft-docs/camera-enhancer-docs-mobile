@@ -34,15 +34,13 @@ Initialize the Camera Enhancer with a license.
 Objective-C:
 
 ```objc
-_decView = [DCECaptureView captureWithFrame:self.view.bounds];
-_dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:"" view:_dceView verificationDelegate:self];
+//Replace the string with your own license
+[DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
 ```
 
 Swift:
 
 ```swift
-dceView = DCECaptureView.init(view: self.view.bounds)
-let dls = iDCEDLSConnectionParameters()
-dls.organizationID = "200001"
-dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
+//Replace the string with your own license
+DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
 ```

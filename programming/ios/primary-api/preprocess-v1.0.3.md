@@ -12,21 +12,21 @@ noTitleIndex: true
 
 | Method | Description |
 |-----------------|---------------|
-| [`acquireBufferedFrame`](#acquirebufferedframe) | Get the latest frame from the frame queue when this API is activated. |
+| [`acquireListFrame`](#acquirelistframe) | Get the latest frame from the frame queue when this API is activated. |
 | [`enableFastMode`](#enablefastmode) | Set the value true/false to turn on/off DCE fast mode |
 | [`enableSensorControl`](#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
-|[`setSensorControlThreshold`](#setsensorcontrolthreshold)| Make settings on sensor control threshold |
+| [`setSensorControlThreshold`](#setsensorcontrolthreshold) | Make settings on sensor control threshold |
 | [`enableFrameFilter`](#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
 | [`setMaxFrameRate`](#setmaxframerate) | Set max frame rate |
 
 ---
 
-## acquireBufferedFrame
+## AcquireListFrame
 
-Fetch a single frame from the video buffer.
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
 
 ```objectivec
-- (FramePackage*)acquireBufferedFrame;
+- (FramePackage*)AcquireListFrame;
 ```
 
 **Code Snippet**
@@ -34,13 +34,13 @@ Fetch a single frame from the video buffer.
 Objective-C:
 
 ```objectivec
-FramePackage *fg = [self.camera acquireBufferedFrame];
+FramePackage *fg = [self.camera AcquireListFrame];
 ```
 
 Swift:
 
 ```swift
-let fg = self.dce.acquireBufferedFrame() 
+let fg = self.dce.acquireListFrame() 
 ```
 
 ## enableFastMode

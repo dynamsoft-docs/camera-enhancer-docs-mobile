@@ -5,12 +5,13 @@ description: This is the documentation - iOS API references page of Dynamsoft Ca
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: iOS API
+breadcrumbText: iOS API - v1.0
 ---
 
-# iOS Auxiliary Classes
+# ios API reference
 
-## Classes
+## Class
 
-- [`DCEFrame`]({{ site.ios-api-auxiliary }}DCEFrame.html)
-- [`DCECameraView`]({{ site.ios-api-auxiliary }}DCECameraView.html)
+- [`iDMDLSConnectionParameters`]({{site.ios-api-auxiliary}}dls-connection.html)
+- [`FramePackage`]({{site.ios-api-auxiliary}}framepackage.html)
+- [`DCECaptureView`]({{site.ios-api-auxiliary}}captureview.html)

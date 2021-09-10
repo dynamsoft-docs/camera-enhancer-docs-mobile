@@ -23,7 +23,7 @@ breadcrumbText: iOS API references
 
 | Method | Description |
 |-----------------|---------------|
-| [`acquireListFrame`]({{site.ios-api}}preprocess.html#acquirelistframe) | Get the latest frame from the frame queue when this API is activated. |
+| [`acquireBufferedFrame`]({{site.ios-api}}preprocess.html#acquirebufferedframe) | Get the latest frame from the frame queue when this API is activated. |
 | [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode) | Set the value true/false to turn on/off DCE fast mode |
 | [`enableSensorControl`]({{site.ios-api}}preprocess.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
 |[`setSensorControlThreshold`]({{site.ios-api}}preprocess.html#setsensorcontrolthreshold)| Make settings on sensor control threshold |
@@ -37,17 +37,17 @@ breadcrumbText: iOS API references
 | [`updateCameraSettingFromJson`]({{site.ios-api}}camera.html#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`]({{site.ios-api}}camera.html#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
 | [`getVersion`]({{site.ios-api}}camera.html#getversion) | Check current DCE version |
-| [`getCameraCurrentState`]({{site.ios-api}}camera.html#getcameracurrentstate) | Get camera current state |
-| [`getCameraDesiredState`]({{site.ios-api}}camera.html#getcameradesiredstate) | Get camera desired state |
-| [`setCameraDesiredState`]({{site.ios-api}}camera.html#setcameradesiredstate) | Set Camera on/off |
+| [`getCurrentCameraState`]({{site.ios-api}}camera.html#getcurrentcamerastate) | Get the current camera state |
+| [`getDesiredCameraState`]({{site.ios-api}}camera.html#getdesiredcamerastate) | Get the desired camera state |
+| [`setDesiredCameraState`]({{site.ios-api}}camera.html#setdesiredcamerastate) | Set Camera on/off |
 | [`pauseCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera |
 | [`resumeCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera |
 | [`startScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Start scanning |
 | [`stopScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`]({{site.ios-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`getTorchCurrentState`]({{site.ios-api}}camera.html#gettorchcurrentstate) | Get torch current state |
-| [`getTorchDesiredState`]({{site.ios-api}}camera.html#gettorchdesiredstate) | Get torch desired state |
-| [`setTorchDesiredState`]({{site.ios-api}}camera.html#settorchdesiredstate) | Set torch state |
+| [`getCurrentTorchState`]({{site.ios-api}}camera.html#getcurrenttorchstate) | Get the current torch state |
+| [`getDesiredTorchState`]({{site.ios-api}}camera.html#getdesiredtorchstate) | Get the desired torch state |
+| [`setDesiredTorchState`]({{site.ios-api}}camera.html#setdesiredtorchstate) | Set torch state |
 | [`addTorchListener`]({{site.ios-api}}camera.html#addtorchlistener) | Add torch listener |
 | [`getCameraPosition`]({{site.ios-api}}camera.html#getcameraposition) | Get current camera position |
 | [`switchCameraPosition`]({{site.ios-api}}camera.html#switchcameraposition) | Switch camera position front/back |
@@ -72,9 +72,8 @@ breadcrumbText: iOS API references
 
 ## Auxiliary Classes
 
-- [`iDCEDLSConnectionParameters`]({{ site.ios-api-auxiliary }}dls-connection.html)
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
-- [`DCECaptureView`]({{ site.ios-api-auxiliary }}captureview.html)
+- [`DCEFrame`]({{ site.ios-api-auxiliary }}DCEFrame.html)
+- [`DCECameraView`]({{ site.ios-api-auxiliary }}DCECameraView.html)
 
 ## Protocols
 
