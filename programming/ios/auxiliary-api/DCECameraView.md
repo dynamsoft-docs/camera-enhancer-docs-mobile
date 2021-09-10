@@ -19,8 +19,8 @@ breadcrumbText: iOS DCECameraView Class
 
 | Method Name | Description |
 | ----------- | ----------- |
-| [`initWithView`](#initwithview) |  |
-| [`captureWithFrame`](#capturewithframe) |  |
+| [`initWithView`](#initwithview) | Init the `DCECameraView`. |
+| [`captureWithFrame`](#capturewithframe) | Init the `DCECameraView` with a static method. |
 | [`addTorch`](#addtorch) | Add torch controlling icon |
 | [`addOverlay`](#addoverlay) | Add overlay |
 
