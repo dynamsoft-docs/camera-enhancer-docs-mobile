@@ -384,15 +384,15 @@ This section is the guide for users to add a video stream decoder in the camera 
     Kotlin:
 
     ```kotlin
-    import com.dynamsoft.dbr.BarcodeReader;
-    import com.dynamsoft.dbr.BarcodeReaderException;
-    import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener;
-    import com.dynamsoft.dbr.DCESettingParameters;
-    import com.dynamsoft.dbr.TextResultCallback;
-    import com.dynamsoft.dbr.TextResult;
-    import com.dynamsoft.dce.CameraEnhancer;
-    import com.dynamsoft.dce.CameraDLSLicenseVerificationListener;
-    import com.dynamsoft.dce.CameraView;
+    import com.dynamsoft.dbr.BarcodeReader
+    import com.dynamsoft.dbr.BarcodeReaderException
+    import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
+    import com.dynamsoft.dbr.DCESettingParameters
+    import com.dynamsoft.dbr.TextResultCallback
+    import com.dynamsoft.dbr.TextResult
+    import com.dynamsoft.dce.CameraEnhancer
+    import com.dynamsoft.dce.CameraDLSLicenseVerificationListener
+    import com.dynamsoft.dce.CameraView
 
     class MainActivity : AppCompatActivity() {
         var cameraView: CameraView? = null

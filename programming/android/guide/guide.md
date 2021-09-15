@@ -266,6 +266,7 @@ This section is the guide for users to add a video stream decoder in the camera 
     import com.dynamsoft.dbr.DCESettingParameters;
     import com.dynamsoft.dbr.TextResultCallback;
     import com.dynamsoft.dbr.TextResult;
+    import com.dynamsoft.dbr.DMDLSConnectionParameters;
     import com.dynamsoft.dce.CameraEnhancer;
     import com.dynamsoft.dce.DCELicenseVerificationListener;
     import com.dynamsoft.dce.DCECameraView;
@@ -376,13 +377,14 @@ This section is the guide for users to add a video stream decoder in the camera 
     ```kotlin
     import com.dynamsoft.dbr.TextResultCallback
     import com.dynamsoft.dbr.BarcodeReader
-    import com.dynamsoft.dcesimplesample.R
     import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
     import com.dynamsoft.dbr.BarcodeReaderException
     import com.dynamsoft.dbr.TextResult
     import com.dynamsoft.dbr.DCESettingParameters
     import com.dynamsoft.dbr.DMDLSConnectionParameters
-    import com.dynamsoft.dce.DCECameraView;
+    import com.dynamsoft.dce.CameraEnhancer
+    import com.dynamsoft.dce.DCELicenseVerificationListener
+    import com.dynamsoft.dce.DCECameraView
 
     class MainActivity : AppCompatActivity() {
         var cameraView: DCECameraView? = null
