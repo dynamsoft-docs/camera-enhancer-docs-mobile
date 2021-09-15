@@ -15,4 +15,4 @@ breadcrumbText: Android Interface
 | -------- | ----------- |
 | [`CameraListener`](interface-cameralistener.md) | The interface that handles callback when previewed frame callback is returned. By adding code to the callback functions, users can make use of the original, filtered and cropped frames. |
 | [`TorchListener`](interface-torchlistener.md) | The interface that handles the torch state when the torch state changes. |
-| [`CameraDLSLicenseVerificationListener`](interface-licenselistener.md) | The interface for a delegate to handle callback when license verification message returned. |
+| [`DCELicenseVerificationListener`](interface-licenselistener.md) | The interface for a delegate to handle callback when license verification message returned. |

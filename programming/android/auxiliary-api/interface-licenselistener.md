@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - CameraDLSLicenseVerificationListener
-description: This is the documentation - CameraDLSLicenseVerificationListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, CameraDLSLicenseVerificationListener
+title: Dynamsoft Camera Enhancer - DCELicenseVerificationListener
+description: This is the documentation - DCELicenseVerificationListener page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, DCELicenseVerificationListener
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: CameraDLSLicenseVerificationListener
+breadcrumbText: DCELicenseVerificationListener
 ---
 
 # DCELicenseVerificationListener

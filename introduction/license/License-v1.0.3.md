@@ -28,9 +28,11 @@ Android sample
 Java:
 
 ```java
-    mCamera.initLicense("", new DCELicenseVerificationListener() {
+    DMDLSConnectionParameters info = new DMDLSConnectionParameters();
+    info.organizationID = "Your organizationID";
+    mCamera.initLicenseFromDLS(info, new CameraDLSLicenseVerificationListener() {
         @Override
-        public void DCELicenseVerificationCallback(boolean b, Exception e) {
+        public void DLSLicenseVerificationCallback(boolean b, Exception e) {
             if(!b && e != null){
                 e.printStackTrace();
             }
@@ -41,7 +43,9 @@ Java:
 Kotlin:
 
 ```kotlin
-    mCameraEnhancer!!.initLicense("") { isSuccess, error ->
+    val info = com.dynamsoft.dce.DMDLSConnectionParameters()
+    info.organizationID = "Put your organizationID here."
+    mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
         if (!isSuccess) {
             error.printStackTrace()
         }
@@ -53,19 +57,15 @@ For iOS users:
 Objective-C sample
 
 ```objectivec
-    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
-
-    - (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-        NSLog(@"Verification: %@",error.userInfo);
-    }
+    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara view:dceview verificationDelegate:self];
 ```
 
 Swift sample
 
 ```swift
-    DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
-
-    func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-        print("Verification: \(String(describing: error))")
-    }
+    let DLS = iDCEDLSConnectionParameters()
+    DLS.organizationID = "Your organizationID"
+    dce = DynamsoftCameraEnhancer.init(licenseFromDLS: DLS, view: dceView, verificationDelegate: self)
 ```

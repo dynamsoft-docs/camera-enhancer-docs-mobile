@@ -74,7 +74,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
             mCameraEnhancer = new CameraEnhancer(MainActivity.this);
             mCameraEnhancer.addCameraView(cameraView);
             //Initialize your license
-            mCameraEnhancer.initLicenseFromDLS(info,new DCELicenseVerificationListener() {
+            mCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",new DCELicenseVerificationListener() {
                 @Override
                 public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
                     if(!isSuccess){
@@ -83,7 +83,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
                 }
             });
             //Turn on the camera
-            mCameraEnhancer.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+            mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
             //Start scanning
             mCameraEnhancer.startScanning();
         }
@@ -107,12 +107,12 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
             mCameraEnhancer = CameraEnhancer(this@MainActivity)
             mCameraEnhancer!!.addCameraView(cameraView)
             //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+            mCameraEnhancer!!.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==") { isSuccess, error ->
                 if (!isSuccess) {
                     error.printStackTrace()
                 }
             }
-            mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_ON)
+            mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
             mCameraEnhancer!!.startScanning()
         }
     }
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         cameraView = findViewById(R.id.cameraView);
         mCameraEnhancer = new CameraEnhancer(MainActivity.this);
         mCameraEnhancer.addCameraView(cameraView);
-        mCameraEnhancer.initLicenseFromDLS(info,new DCELicenseVerificationListener() {
+        mCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",new DCELicenseVerificationListener() {
             @Override
             public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
                 if(!isSuccess){
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        mCameraEnhancer.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+        mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
         mCameraEnhancer.startScanning();
         //**************The Following parts are newly added*******************
         //Make device level evaluation on the current device
@@ -190,12 +190,12 @@ class MainActivity : AppCompatActivity() {
         mCameraEnhancer = CameraEnhancer(this@MainActivity)
         mCameraEnhancer!!.addCameraView(cameraView)
         //Initialize DCE from Dynamsoft License Server
-        mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+        mCameraEnhancer!!.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==") { isSuccess, error ->
             if (!isSuccess) {
                 error.printStackTrace()
             }
         }
-        mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_ON)
+        mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
         mCameraEnhancer!!.startScanning()
         //**************The Following parts are newly added*******************
         //Make device level evaluation on the current device
@@ -290,13 +290,13 @@ This section is the guide for users to add a video stream decoder in the camera 
             mCameraEnhancer = new CameraEnhancer(MainActivity.this);
             mCameraEnhancer.addCameraView(cameraView);
             //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer.initLicenseFromDLS(info,new DCELicenseVerificationListener() {
+            mCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",new DCELicenseVerificationListener() {
                 @Override
                 public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
                     if(!isSuccess){ error.printStackTrace(); }
                 }
             });
-            mCameraEnhancer.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+            mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
             mCameraEnhancer.startScanning();
 
             //Make device level evaluation on the current device
@@ -342,8 +342,8 @@ This section is the guide for users to add a video stream decoder in the camera 
             };                
             //Set DCE setting parameters in Dynamsoft Barcode Reader
             DCESettingParameters dceSettingParameters = new DCESettingParameters();
-            dceSettingParameters._cameraInstance = mCameraEnhancer;
-            dceSettingParameters._textResultCallback = mTextResultCallback;
+            dceSettingParameters.cameraInstance = mCameraEnhancer;
+            dceSettingParameters.textResultCallback = mTextResultCallback;
             //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
             reader.SetCameraEnhancerParam(dceSettingParameters);
         }
@@ -405,12 +405,12 @@ This section is the guide for users to add a video stream decoder in the camera 
             mCameraEnhancer = CameraEnhancer(this@MainActivity)
             mCameraEnhancer!!.addCameraView(cameraView)
             //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+            mCameraEnhancer!!.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==") { isSuccess, error ->
                 if (!isSuccess) {
                     error.printStackTrace()
                 }
             }
-            mCameraEnhancer!!.setCameraDesiredState(CameraState.CAMERA_STATE_ON)
+            mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
             mCameraEnhancer!!.startScanning()
 
             //Make device level evaluation on the current device

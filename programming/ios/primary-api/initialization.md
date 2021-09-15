@@ -36,6 +36,10 @@ Objective-C:
 ```objc
 //Replace the string with your own license
 [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
+
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    NSLog(@"Verification: %@",error.userInfo);
+}
 ```
 
 Swift:
@@ -43,4 +47,8 @@ Swift:
 ```swift
 //Replace the string with your own license
 DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
+
+func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    print("Verification: \(String(describing: error))")
+}
 ```

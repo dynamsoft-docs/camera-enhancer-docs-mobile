@@ -51,7 +51,7 @@ Objective-C code sample:
 @interface ViewController ()
 
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
+@property(nonatomic, strong) DCECameraView *dceView;
 
 @end
 
@@ -67,22 +67,20 @@ Objective-C code sample:
 }
 
 - (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    _dceView = [DCECameraView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     
     //Initialize License
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;
+    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
     
     view:_dceView verificationDelegate:self];
     //Make camera settings, turn on the camera
-    [_dce setCameraDesiredState:CAMERA_STATE_ON];
+    [_dce setDeiredCameraState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
 }
 
-- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     NSLog(@"Verification: %@",error.userInfo);
 }
 ```
@@ -93,10 +91,10 @@ Swift code sample:
 import UIKit
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
+class ViewController: UIViewController, DCELicenseVerificationDelegate, DBRTextResultDelegate {
     
     var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
+    var dceView:DCECameraView! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDCE()
@@ -107,19 +105,17 @@ class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DB
     }
     
     func configurationDCE() {
-        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView = DCECameraView.init(view: self.view.bounds)
         dceView.addOverlay()
         self.view.addSubview(dceView)
         //Init DCE license
-        let dls = iDCEDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
+        DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
         //Turn on the camera
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.setDesiredCameraState(.CAMERA_STATE_ON)
         dce.isEnable = true
     }
 
-    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         print("Verification: \(String(describing: error))")
     }    
 }
@@ -138,7 +134,7 @@ For Objective-C users, please add the following code:
 @interface ViewController ()
 
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
+@property(nonatomic, strong) DCECameraView *dceView;
 
 @end
 
@@ -154,18 +150,16 @@ For Objective-C users, please add the following code:
 }
 
 - (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    _dceView = [DCECameraView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     
     //Initialize License
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;
+    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
     
     view:_dceView verificationDelegate:self];
     //Make camera settings, turn on the camera
-    [_dce setCameraDesiredState:CAMERA_STATE_ON];
+    [_dce setDesiredCameraState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
     
     //*********Newly added****************
@@ -177,7 +171,7 @@ For Objective-C users, please add the following code:
     [dce setEnableFrameFilter:true];
 }
 
-- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     NSLog(@"Verification: %@",error.userInfo);
 }
 ```
@@ -188,10 +182,10 @@ For Swift users, please add the following code:
 import UIKit
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
-    
+class ViewController: UIViewController, DCELicenseVerificationDelegate, DBRTextResultDelegate {
+
     var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
+    var dceView:DCECameraView! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDCE()
@@ -202,15 +196,13 @@ class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DB
     }
     
     func configurationDCE() {
-        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView = DCECameraView.init(view: self.view.bounds)
         dceView.addOverlay()
         self.view.addSubview(dceView)
         //Init DCE license
-        let dls = iDCEDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
+        DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
         //Turn on the camera
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.setDesiredCameraState(.CAMERA_STATE_ON)
         dce.isEnable = true
         //*********************Newly added**********************
         //************Add Camera Enhancer functions*************
@@ -221,9 +213,9 @@ class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DB
         dce.enableSensorControl = true
     }
 
-    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         print("Verification: \(String(describing: error))")
-    }    
+    }
 }
 ```
 
@@ -245,7 +237,7 @@ Add this code snippet to the Objective-C project.
 //Barcode Reader initialize
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
+@property(nonatomic, strong) DCECameraView *dceView;
 
 @end
 
@@ -262,18 +254,15 @@ Add this code snippet to the Objective-C project.
 }
 
 - (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    _dceView = [DCECameraView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     
     //Initialize License
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;
-    
-    view:_dceView verificationDelegate:self];
+    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
+
     //Make camera settings, turn on the camera
-    [_dce setCameraDesiredState:CAMERA_STATE_ON];
+    [_dce setDesiredCameraState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
     
     //*********Newly added****************
@@ -298,7 +287,7 @@ Add this code snippet to the Objective-C project.
 }
 //****************************************************************
 
-- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     NSLog(@"Verification: %@",error.userInfo);
 }
 
@@ -337,10 +326,10 @@ import UIKit
 import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
+class ViewController: UIViewController, DCELicenseVerificationDelegate, DBRTextResultDelegate {
     
     var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
+    var dceView:DCECameraView! = nil
     //*********************Newly added**********************
     //************init Dynamsoft Barcode Reader*************
     var barcodeReader:DynamsoftBarcodeReader! = nil
@@ -369,15 +358,13 @@ class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DB
     }
     
     func configurationDCE() {
-        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView = DCECameraView.init(view: self.view.bounds)
         dceView.addOverlay()
         self.view.addSubview(dceView)
         //Init DCE license
-        let dls = iDCEDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
+        DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
         //Turn on the camera
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.setDesiredCameraState(.CAMERA_STATE_ON)
         dce.isEnable = true
         //*********************Newly added**********************
         //************Add Camera Enhancer functions*************
@@ -394,7 +381,7 @@ class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DB
         barcodeReader.setCameraEnhancerPara(para)
     }
 
-    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         print("Verification: \(String(describing: error))")
     }
     

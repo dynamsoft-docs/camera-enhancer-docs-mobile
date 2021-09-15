@@ -23,9 +23,9 @@ noTitleIndex: true
 | [`startScanning`](#stopscanning-and-startscanning) | Start scanning |
 | [`stopScanning`](#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`](#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`getTorchCurrentState`](#getcurrenttorchstate) | Get torch current state |
-| [`getTorchDesiredState`](#getdesiredtorchstate) | Get torch desired state |
-| [`setTorchDesiredState`](#setdesiredtorchstate) | Set torch state |
+| [`getCurrentTorchState`](#getcurrenttorchstate) | Get torch current state |
+| [`getDesiredTorchState`](#getdesiredtorchstate) | Get torch desired state |
+| [`setDesiredTorchState`](#setdesiredtorchstate) | Set torch state |
 | [`addTorchListener`](#addtorchlistener) | Add torch listener |
 | [`getCameraPosition`](#getcameraposition) | Get current camera position |
 | [`switchCameraPosition`](#switchcameraposition) | Switch camera position front/back |
