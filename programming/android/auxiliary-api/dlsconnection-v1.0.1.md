@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android DMLTSConnectionParameters Class
 ---
 
-# com.dynamsoft.dce.DMLTSConnectionParameters
+# DMLTSConnectionParameters
 
 `DMLTSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the license tracking server.
 

@@ -156,32 +156,6 @@ Kotlin:
 var x:Boolean? = mCameraEnhancer!!.enabledFrameFilterStatus
 ```
 
-## setMaxFrameRate
-
-Set max frame rate.
-
-```java
-setMaxFrameRate(int)
-```
-
-**Parameters**
-
-`int`: A int value that stands for the max frame rate.
-
-**Code Snippet**
-
-Java:
-
-```java
-mCameraEnhancer.setMaxFrameRate(24);
-```
-
-Kotlin:
-
-```kotlin
-mCameraEnhancer!!.setMaxFrameRate(24)
-```
-
 ## enableSensorControl
 
 Use `enableSensorControl` to turn on/off sensor control mode.

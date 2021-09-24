@@ -660,3 +660,29 @@ mCameraEnhancer!!.resolutionList
 **Remarks**
 
 If the pre-set resolution is unavailable for the current device, the SDK will select the highest available resolution below the pre-set value.
+
+## setMaxFrameRate
+
+Set max frame rate.
+
+```java
+setMaxFrameRate(int)
+```
+
+**Parameters**
+
+`int`: A int value that stands for the max frame rate.
+
+**Code Snippet**
+
+Java:
+
+```java
+mCameraEnhancer.setMaxFrameRate(24);
+```
+
+Kotlin:
+
+```kotlin
+mCameraEnhancer!!.setMaxFrameRate(24)
+```
