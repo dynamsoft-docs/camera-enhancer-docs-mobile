@@ -9,77 +9,236 @@ needGenerateH3Content: true
 breadcrumbText: Android CameraEnhancer Class
 ---
 
-# Android CameraEnhancer Class
-
-`CameraEnhancer` is the class that provides multifunctional APIs on frame preprocessing and camera controlling.
+# CameraEnhancer Class
 
 ```java
 class com.dynamsoft.dce.CameraEnhancer
 ```
 
-## [Initialization Methods]({{site.android-api}}initialization.html)
+## Initialization
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`]({{site.android-api}}initialization.html#initLicense) | Initialize the Camera Enhancer from the license server with a license. |
+| [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer` object. |
+| [`initLicense`](#initlicense) | Initialize Dynamsoft Camera Enhancer with a valid license. |
+| [`getVersion`](#getversion) | Get the SDK version. |
 
-## [Frame preprocessing methods]({{site.android-api}}preprocess.html)
+## Video Streaming Controlling & Frame Acquiring Methods
+
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`](#addlistener) | Add [`DCEFrameListener`](). |
+| [`removeListener`](#removelistener) | Remove [`DCEFrameListener`](). |
+
+| [`enableFeatures`](#enablefeature) | Enable DCE features with Enumeration value. |
+| [`disableFeatures`](#disablefeature) | Disable DCE features with Enumeration value. |
+| [`isFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
+| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
+| [`getFrameRate`](#getframerate) | Get the current frame rate. |
+
+### getFrameFromBuffer
+
+Get the latest frame from the video buffer.
+
+**Parameters**
+
+`true`: The frame will be kept in the video buffer.  
+`false`: The frame will be removed from the video buffer.
+
+```java
+getFrameFromBuffer(boolean keepOrRemove)
+```
+
+### addListener
+
+Add a `DCEFrameListener` to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
+
+```java
+void addListener(DCEFrameListener listener)
+```
+
+**Parameters**
+
+`listener`: Add an object of `DCEFrameListener`. Callback method, `frameOutputCallback`, will be available for users to make further operations on the video streaming.
+
+**Code Snippet**
+
+```java
+DCEFrameListener listener = new DCEFrameListener(){
+    @Override
+    public void frameOutputCallback(DCEFrame frame, long timeStamp)
+};
+CameraEnhancer.addListener(listener);
+```
+
+### removeListener
+
+Remove a preciously added `DCEFrameListener` from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
+
+```java
+void removeListener(DCEFrameListener listener)
+```
+
+**Parameters**
+
+`listener`: The input listener will be removed from CameraEnhancer instance.
+
+**Code Snippet**
+
+```java
+//Suppose we have added "listener" via CameraEnhancer.addListener(listener);
+// You can remove it via removeListener
+CameraEnhancer.removeListener(listener);
+```
+
+### enableFeatures
+
+Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
+
+```java
+void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+
+**Code Snippet**
+
+```java
+CameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+```
+
+**Remarks**
+
+| `EnumEnhancerFeatures` Members | Value |
+| ------------------------------ | ----- |
+| `FRAME_FILTER` | 0x01 |
+| `SENSOR_CONTROL` | 0x02 |
+| `ENHANCED_FOCUS` | 0x04 |
+| `FAST_MODE` | 0x08 |
+| `AUTO_ZOOM` | 0x10 |
+
+The enable action will not be approved if the license is invalid. If your input values include the features that already enabled, these features will keep the enabled status.
+
+For example:
+
+```java
+// The following code equals to CameraEnhancer.enableFeatures(0x01|0x02|00x4);
+CameraEnhancer.enableFeatures(0x01|0x02);
+CameraEnhancer.enableFeatures(0x02|0x04);
+```
+
+### disableFeatures
+
+Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
+
+```java
+void disableFeatures(int enhancerFeatures)
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+
+**Code Snippet**
+
+```java
+CameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+```
+
+**Remarks**
+
+You can still disable the features evenif the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
+
+For example:
+
+```java
+CameraEnhancer.enableFeatures(0x01|0x02);
+CameraEnhancer.disableFeatures(0x02|0x04);
+// Finally, feature 0x01 is enabled, 0x02 and 0x04 are not enabled;
+```
+
+### isFeatureEnabled
+
+Returns a boolean value that means whether the feature(s) you input is (are) enabled.
+
+```java
+boolean isFeatureEnabled(int enhancerFeatures)
+```
+
+**Parameters**
+
+`True`: All the features you input are enabled.
+`False`: There is at least one feature is not enabled among your input values.
+
+**Code Snippet**
+
+```java
+boolean isEnabled = CameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+```
+
+**Remarks**
+
+If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
+
+For example:
+
+```java
+CameraEnhancer.enableFeatures(0x01|0x02);
+boolean isEnabled_0 = CameraEnhancer.isFeatureEnabled(0x01);
+boolean isEnabled_1 = CameraEnhancer.isFeatureEnabled(0x01|0x02);
+boolean isEnabled_2 = CameraEnhancer.isFeatureEnabled(0x01|0x04);
+// The value isEnabled_0 = true
+// The value isEnabled_1 = true
+// The value isEnabled_2 = false
+```
+
+### setFrameRate
+
+Camera Enhancer will try to set the frame rate around the input value.
+
+```java
+void setFrameRate(int frameRate) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`frameRate`: An int value that refers to the target frame rate. The available frame rate setting threshold is alway intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still not match any threshold, the frame rate will be set to the highest available threshold that belows the input value.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.setFrameRate(25);
+```
+
+### getFrameRate
+
+## Regular Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`acquireBufferedFrame`]({{site.android-api}}preprocess.html#acquirebufferedframe) | Get the latest frame from the frame queue when this API is activated. |
-| [`enableFastMode`]({{site.android-api}}preprocess.html#enablefastmode) | Set true/false to turn on/off DCE fast mode. |
-| [`getEnabledFastModeStatus`]({{site.android-api}}preprocess.html#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
-| [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
-| [`getEnabledFrameFilterStatus`]({{site.android-api}}preprocess.html#getenabledframefilterstatus) | Get the status (on/off) of DCE frame filter mode. |
-| [`enableSensorControl`]({{site.android-api}}preprocess.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
-| [`getEnabledSensorControlStatus`]({{site.android-api}}preprocess.html#getenabledsensorcontrolstatus) | Get the status (on/off) of DCE sensor control mode. |
-| [`setSensorControlThreshold`]({{site.android-api}}preprocess.html#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
+| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCamera`](#selectcamera) | Select and active a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current actived camera. |
+| [`open`](#open) | Turn on the current actived camera. |
+| [`close`](#close) | Turn off the current actived camera. |
+| [`pause`](#pause) | Pause the current actived  camera. |
+| [`resume`](#resume) | Resume the current actived camera. |
+| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-## [Regular camera methods]({{site.android-api}}camera.html)
+## Advanced Camera Control Methods
 
-| Method | Description |
-| ------ | ----------- |
-| [`getDeviceLevel`]({{site.android-api}}camera.html#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |
-| [`setAutoModeLevelParam`]({{site.android-api}}camera.html#setautomodelevelparam) | Set auto mode level parameter. |
-| [`updateCameraSetting`]({{site.android-api}}camera.html#updatecamerasetting) | Update camera, filter and focus settings from Json. |
-| [`getVersion`]({{site.android-api}}camera.html#getversion) | Check current DCE version |
-| [`getCurrentCameraState`]({{site.android-api}}camera.html#getcurrentcamerastate) | Get camera current state. |
-| [`getDesiredCameraState`]({{site.android-api}}camera.html#getdesiredcamerastate) | Get camera desired state. |
-| [`setDesiredCameraState`]({{site.android-api}}camera.html#setdesiredcamerastate) | Set Camera on/off. |
-| [`pauseCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera. |
-| [`resumeCamera`]({{site.android-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera. |
-| [`startScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Start scanning. |
-| [`stopScanning`]({{site.android-api}}camera.html#stopscanning-and-startscanning) | Stop scanning. |
-| [`addCameraListener`]({{site.android-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
-| [`removeCameraListener`]({{site.android-api}}camera.html#removecameralistener) | Remove camera listener. |
-| [`getCurrentTorchState`]({{site.android-api}}camera.html#getcurrenttorchstate) | Get torch current state. |
-| [`getDesiredTorchState`]({{site.android-api}}camera.html#getdesiredtorchstate) | Get torch desired state. |
-| [`setDesiredTorchState`]({{site.android-api}}camera.html#setdesiredtorchstate) | Set torch state. |
-| [`addTorchListener`]({{site.android-api}}camera.html#addtorchlistener) | Add torch listener. |
-| [`getCameraPosition`]({{site.android-api}}camera.html#getcameraposition) | Get current camera position. |
-| [`switchCameraPosition`]({{site.android-api}}camera.html#switchcameraposition) | Switch camera position front/back. |
-| [`getResolution`]({{site.android-api}}camera.html#getresolution) | Get current resolution setting. |
-| [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set resolution. |
-| [`getResolutionList`]({{site.android-api}}camera.html#getresolutionlist) | Get all available resolutions |
-| [`setMaxFrameRate`]({{site.android-api}}preprocess.html#setmaxframerate) | Set max frame rate. |
+| [`getResolution`](#getresolution) | Get the current resolution. |
+| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
+| [`setZoomRegion`](#setzoomregion) | Set `Rect` value of the interest region. The Camera Enhancer will try to zoom in to maximize the interest area on the screen. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setFocusPosition`](#setfocusposition) | Focus once at the input position. |
+| [`updateAdvancedSettings`](#updateadvancedsetting) | Update advanced parameter settings including filter, sensor and focus settings from a JSON Object. |
 
-## [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
+## Camera UI Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`setAutoFocusPosition`]({{site.android-api}}zoom-focus.html#setautofocusposition) | Set auto focus position (Change the default auto focus position). |
-| [`setManualFocusPosition`]({{site.android-api}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position is only effected once for each time the API is called). |
-| [`setFocalLength`]({{site.android-api}}zoom-focus.html#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
-| [`enableDCEAutoFocus`]({{site.android-api}}zoom-focus.html#enabledceautofocus) | Set true/false to turn on/off DCE auto focus. |
-| [`getEnabledDCEAutoFocusStatus`]({{site.android-api}}zoom-focus.html#getenableddceautofocusstatus) | Get the status (on/off) of DCE auto focus. |
-| [`enableDefaultAutoFocus`]({{site.android-api}}zoom-focus.html#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
-| [`getEnabledDefaultAutoFocusStatus`]({{site.android-api}}zoom-focus.html#getenableddefaultautofocusstatus) | Get the status (on/off) of camera default auto focus. |
-| [`enableRegularAutoFocus`]({{site.android-api}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
-| [`getEnabledRegularAutoFocusStatus`]({{site.android-api}}zoom-focus.html#getenabledregularautofocusstatus) | Get the current status (on/off) of this auto focus mode. |
-| [`setRegularAutoFocusParam`]({{site.android-api}}zoom-focus.html#setregularautofocusparam) | Set the time interval and terminate time for the regular auto focus |
-| [`enableAutoFocusOnSharpnessChange`]({{site.android-api}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. This focus mode will start automatically if DCE autofocus is enabled. Users can manually quit this focus mode when DCE autofocus is activated. |
-| [`getEnabledAutoFocusOnSharpnessChangeStatus`]({{site.android-api}}zoom-focus.html#getenabledautofocusonsharpnesschangestatus) | Get the current status (on/off) of this auto focus mode. |
-| [`enableAutoZoom`]({{site.android-api}}zoom-focus.html#enableautozoom) | Set enableAutoZoom value true to enable auto zoom mode. |
-| [`getEnabledAutoZoomStatus`]({{site.android-api}}zoom-focus.html#getenabledautozoomstatus) | Get the status (on/off) of auto zoom mode. |
-| [`setZoomFactor`]({{site.android-api}}zoom-focus.html#setzoomfactor) | Set zoom factor. |
+| [`addCameraView`](#addcameraview) | Add camera video streaming UI. Read more from [`DCECameraView`](). |

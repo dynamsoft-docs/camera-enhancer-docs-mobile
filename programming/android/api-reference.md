@@ -13,43 +13,32 @@ noTitleIndex: true
 
 ## Primary Class - CameraEnhancer
 
-### [Initialization]({{site.android-api}}initialization.html)
-
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`]({{site.android-api}}initialization.html#initlicense) | Initialize the Camera Enhancer from the license server with a license. |
-
-### [Frame preprocessing methods]({{site.android-api}}preprocess.html)
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameFromBuffer`]({{site.android-api}}preprocess.html#acquirebufferedframe) | Get the latest frame from the buffer. |
-| [`setFrameRate`]({{site.android-api}}preprocess.html#setframerate) | Set max frame rate. |
-| [`getFrameRate`]({{site.android-api}}preprocess.html#getframerate) | Set max frame rate. |
-
-### [Regular camera methods]({{site.android-api}}camera.html)
-
-| Method | Description |
-| ------ | ----------- |
-| [`updateAdvancedSetting`]({{site.android-api}}camera.html#updateadvancedsetting) | Update camera, filter and focus settings from Json String. |
-| [`getVersion`]({{site.android-api}}camera.html#getversion) | Check current DCE version |
-
-| getAllCameras ||
-| [`open`]({{site.android-api}}camera.html#open) | Turn on the selected or default camera. |
-| [`close`]({{site.android-api}}camera.html#close) | Turn off the selected or default camera. |
-| [`pause`]({{site.android-api}}camera.html#pause) | Pause the selected or default camera. |
-| [`resume`]({{site.android-api}}camera.html#resume) | Resume the selected or default camera. |
-| [`addListener`]({{site.android-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
-| [`removeListener`]({{site.android-api}}camera.html#removecameralistener) | Remove camera listener. |
-| [`getResolution`]({{site.android-api}}camera.html#getresolution) | Get current resolution setting. |
-| [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set resolution. |
-| [`getResolutionList`]({{site.android-api}}camera.html#getresolutionlist) | Get all available resolutions |
-
-### [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
-
-| Method | Description |
-| ------ | ----------- |
-| [`setFocusPosition`]({{site.android-api}}zoom-focus.html#setfocusposition) | Set auto focus position (Change the default auto focus position). |
+| [`initLicense`]({{site.android-api}}initialization.html#initlicense) | Initialize Dynamsoft Camera Enhancer with a valid license. |
+| [`addCameraView`]({{site.android-api}}.html#) | Add camera video streaming UI. Read more from [`DCECameraView`](). |
+| [`getFrameFromBuffer`]({{site.android-api}}preprocess.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`setFrameRate`]({{site.android-api}}preprocess.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
+| [`getFrameRate`]({{site.android-api}}preprocess.html#getframerate) | Get the current frame rate. |
+| [`getAllCameras`]({{site.android-api}}camera.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCamera`]({{site.android-api}}camera.html#selectcamera) | Select and active a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`]({{site.android-api}}camera.html#getselectedcamera) | Get the camera ID of the current actived camera. |
+| [`open`]({{site.android-api}}camera.html#open) | Turn on the current actived camera. |
+| [`close`]({{site.android-api}}camera.html#close) | Turn off the current actived camera. |
+| [`pause`]({{site.android-api}}camera.html#pause) | Pause the current actived  camera. |
+| [`resume`]({{site.android-api}}camera.html#resume) | Resume the current actived camera. |
+| [`turnOnTorch`]({{site.android-api}}camera.html#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`]({{site.android-api}}camera.html#turnofftorch) | Turn off the torch. |
+| [`addListener`]({{site.android-api}}camera.html#addlistener) | Add [`DCEFrameListener`](). |
+| [`removeListener`]({{site.android-api}}camera.html#removelistener) | Remove [`DCEFrameListener`](). |
+| [`getResolution`]({{site.android-api}}camera.html#getresolution) | Get the current resolution. |
+| [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolutionList`]({{site.android-api}}camera.html#getresolutionlist) | Get all available resolutions. |
+| [`updateAdvancedSetting`]({{site.android-api}}camera.html#updateadvancedsetting) | Update advanced parameter settings including filter, sensor and focus settings from a JSON Object. |
+| [`getVersion`]({{site.android-api}}camera.html#getversion) | Get the SDK version. |
+| [`setFocusPosition`]({{site.android-api}}zoom-focus.html#setfocusposition) | Focus once at the input position. |
+| [`setZoomRegion`]({{site.android-api}}.html#) | Set `Rect` value of the interest region. The Camera Enhancer will try to zoom in to maximize the interest area on the screen. |
+| [`setZoom`]({{site.android-api}}.html#) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 
 ## Auxiliary Classes
 
