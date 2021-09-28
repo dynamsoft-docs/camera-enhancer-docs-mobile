@@ -32,8 +32,8 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`enableFeatures`](#enablefeature) | Enable DCE features with Enumeration value. |
 | [`disableFeatures`](#disablefeature) | Disable DCE features with Enumeration value. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
-| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
-| [`getFrameRate`](#getframerate) | Get the current frame rate. |
+
+&nbsp;
 
 ### getFrameFromBuffer
 
@@ -47,6 +47,8 @@ Get the latest frame from the video buffer.
 ```java
 getFrameFromBuffer(boolean keepOrRemove)
 ```
+
+&nbsp;
 
 ### addListener
 
@@ -70,6 +72,8 @@ DCEFrameListener listener = new DCEFrameListener(){
 CameraEnhancer.addListener(listener);
 ```
 
+&nbsp;
+
 ### removeListener
 
 Remove a preciously added `DCEFrameListener` from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
@@ -89,6 +93,8 @@ void removeListener(DCEFrameListener listener)
 // You can remove it via removeListener
 CameraEnhancer.removeListener(listener);
 ```
+
+&nbsp;
 
 ### enableFeatures
 
@@ -110,7 +116,9 @@ CameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFe
 
 **Remarks**
 
-| `EnumEnhancerFeatures` Members | Value |
+The `EnumEnhancerFeatures` members:
+
+|  Members | Value |
 | ------------------------------ | ----- |
 | `FRAME_FILTER` | 0x01 |
 | `SENSOR_CONTROL` | 0x02 |
@@ -120,13 +128,7 @@ CameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFe
 
 The enable action will not be approved if the license is invalid. If your input values include the features that already enabled, these features will keep the enabled status.
 
-For example:
-
-```java
-// The following code equals to CameraEnhancer.enableFeatures(0x01|0x02|00x4);
-CameraEnhancer.enableFeatures(0x01|0x02);
-CameraEnhancer.enableFeatures(0x02|0x04);
-```
+&nbsp;
 
 ### disableFeatures
 
@@ -150,13 +152,7 @@ CameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerF
 
 You can still disable the features evenif the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
 
-For example:
-
-```java
-CameraEnhancer.enableFeatures(0x01|0x02);
-CameraEnhancer.disableFeatures(0x02|0x04);
-// Finally, feature 0x01 is enabled, 0x02 and 0x04 are not enabled;
-```
+&nbsp;
 
 ### isFeatureEnabled
 
@@ -168,7 +164,11 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`True`: All the features you input are enabled.
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
+
+**Return Value**
+
+`True`: All the features you input are enabled.  
 `False`: There is at least one feature is not enabled among your input values.
 
 **Code Snippet**
@@ -181,37 +181,7 @@ boolean isEnabled = CameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_F
 
 If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
 
-For example:
-
-```java
-CameraEnhancer.enableFeatures(0x01|0x02);
-boolean isEnabled_0 = CameraEnhancer.isFeatureEnabled(0x01);
-boolean isEnabled_1 = CameraEnhancer.isFeatureEnabled(0x01|0x02);
-boolean isEnabled_2 = CameraEnhancer.isFeatureEnabled(0x01|0x04);
-// The value isEnabled_0 = true
-// The value isEnabled_1 = true
-// The value isEnabled_2 = false
-```
-
-### setFrameRate
-
-Camera Enhancer will try to set the frame rate around the input value.
-
-```java
-void setFrameRate(int frameRate) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`frameRate`: An int value that refers to the target frame rate. The available frame rate setting threshold is alway intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still not match any threshold, the frame rate will be set to the highest available threshold that belows the input value.
-
-**Code Snippet**
-
-```java
-CameraEnhancer.setFrameRate(25);
-```
-
-### getFrameRate
+&nbsp;
 
 ## Regular Camera Control Methods
 
@@ -227,15 +197,309 @@ CameraEnhancer.setFrameRate(25);
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 
+### getAllCameras
+
+Get the IDs of all available cameras.
+
+```java
+String[] getAllCameras()
+```
+
+**Return Value**
+
+`cameraIDList`: An array list that inclueds all available cameras. User can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.getAllCameras();
+```
+
+&nbsp;
+
+### selectCamera
+
+Select camera by cameraID. The selected camera will be actived and further camera control setting will be applied on this camera. When the actived camera is changed by selecting another camera via this method, the settings that applied on this camera will be inherited by the newly selected camera.
+
+```java
+void selectCamera(String cameraID) throws CameraEnhancerException
+```
+
+**Parameters**
+
+cameraID: A `String` value that listed in the `cameraIDList` returned by `getAllCamera`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.selectCamera("BACK_FACING_CAMERA_0");
+```
+
+**Remarks**
+
+There is always a back-facing camera be defined as a default camera. If user don't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
+
+&nbsp;
+
+### getSelectedCamera
+
+Get the ID of the current actived camera.
+
+```java
+String getSelectedCamera();
+```
+
+**Return Value**
+
+`cameraID`: The ID of the current actived camera.
+
+**CodeSnippet**
+
+```java
+String selectedCameraID = CameraEnhancer.getSelectedCamera();
+```
+
+&nbsp;
+
+### open
+
+- Turn on the selected camera if a camera has been selected via `selectCamera`.
+- Turn on the default camera if no camera is selected via `selectCamera`.
+
+```java
+void open() throws CameraEnhancerException
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer.open();
+```
+
+&nbsp;
+
+### close
+
+- Turn off the selected camera if a camera has been selected via `selectCamera`.
+- Turn off the default camera if no camera is selected via `selectCamera`.
+
+```java
+void close() throws CameraEnhancerException
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer.close();
+```
+
+&nbsp;
+
+### pause
+
+- Pause the selected camera if a camera has been selected via `selectCamera`.
+- Pause the default camera if no camera is selected via `selectCamera`.
+
+```java
+void pause() throws CameraEnhancerException
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer.pause();
+```
+
+**Remarks**
+
+If the `pause` method is triggered:
+
+- The camera UI will be stopped on the last frame that captured before you `pause` the camera.
+- The camera is still opened.
+- The video streaming input is not stopped.
+- DCE video buffer will continue appending frames.
+
+&nbsp;
+
+### resume
+
+- Resume the selected camera if a camera has been selected via `selectCamera`.
+- Resume the default camera if no camera is selected via `selectCamera`.
+
+```java
+void resume() throws CameraEnhancerException
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer.resume();
+```
+
+&nbsp;
+
+### turnOnTorch
+
+Turn on the torch (if the torch of the mobile device is available).
+
+```java
+void turnOnTorch() throws CameraEnhancerException
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer.turnOnTorch();
+```
+
+&nbsp;
+
+### turnOffTorch
+
+Turn off the torch.
+
+```java
+void turnOffTorch() throws CameraEnhancerException
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer.turnOffTorch();
+```
+
+&nbsp;
+
 ## Advanced Camera Control Methods
 
-| [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| Method | Description |
+| ------ | ----------- |
+| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
+| [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
-| [`setZoomRegion`](#setzoomregion) | Set `Rect` value of the interest region. The Camera Enhancer will try to zoom in to maximize the interest area on the screen. |
+| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocusPosition`](#setfocusposition) | Focus once at the input position. |
 | [`updateAdvancedSettings`](#updateadvancedsetting) | Update advanced parameter settings including filter, sensor and focus settings from a JSON Object. |
+
+### setFrameRate
+
+Camera Enhancer will try to set the frame rate around the input value.
+
+```java
+void setFrameRate(int frameRate) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`frameRate`: An int value that refers to the target frame rate.  
+
+**Code Snippet**
+
+```java
+CameraEnhancer.setFrameRate(25);
+```
+
+**Remarks**
+
+The available frame rate setting threshold is alway intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still not match any threshold, the frame rate will be set to the highest available threshold that belows the input value.
+
+&nbsp;
+
+### getFrameRate
+
+Get the current frame rate.
+
+```java
+int getFrameRate()
+```
+
+**Return Value**
+
+`frameRate`: the current frame rate.
+
+**Code Snippet**
+
+```java
+int frameRate = CameraEnhancer.getFrameRate();
+```
+
+&nbsp;
+
+### getResolutionList
+
+Check the available resolutions of the current device.
+
+```java
+List<Size> getResolutionList()
+```
+
+**Return Value**
+
+`resolutionList`: A list that contains all available resolutions.
+
+**Code Snippet**
+
+```java
+List<Size> resolutionList = mCameraEnhancer.getResolutionList();
+```
+
+### setResolution
+
+Input a target resolution value that preset in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
+
+```java
+void setResolution(Resolution resolution) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`resolution`: One of the int value that preset in Enumeration `Resolution`.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.setResolution(Resolution.RESOLUTION_2K);
+```
+
+### getResolution
+
+```java
+Size getResolution
+```
+
+**Return Value**
+
+`resolution`: The size of the current resolution.
+
+**Code Snippet**
+
+```java
+Size currentResolution = CameraEnhancer.getResolution();
+```
+
+### setZoom
+
+Set the zoom factor. The camera will zoom in/out immediately after this method is triggered.
+
+```java
+void setZoom(float factor) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`factor`: The target zoom factor.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.setZoom(2.5)
+```
+
+### setFocusPosition
+
+### updateAdvancedSettings
 
 ## Camera UI Methods
 
