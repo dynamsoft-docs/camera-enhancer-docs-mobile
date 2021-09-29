@@ -380,7 +380,7 @@ CameraEnhancer.turnOffTorch();
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`setFocusPosition`](#setfocusposition) | Focus once at the input position. |
+| [`setFocus`](#setfocusposition) | Focus once at the input position. |
 | [`updateAdvancedSettings`](#updateadvancedsetting) | Update advanced parameter settings including filter, sensor and focus settings from a JSON Object. |
 
 ### setFrameRate
@@ -497,7 +497,19 @@ void setZoom(float factor) throws CameraEnhancerException
 CameraEnhancer.setZoom(2.5)
 ```
 
-### setFocusPosition
+### setFocus
+
+Set the focus position and trigger a focus at the configured position.
+
+```java
+void setFocus(int x, int y, boolean byPercentage) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`x`: The x-coordinate of the targeting focus position.
+`y`: The y-coordinate of the targeting focus position.
+`byPercentage`: When the `byPercentage` value is true, the coordinate value will be recognized as percentage (int from 1 to 100). Otherwise, the coordinate value will be recognized as pixel length.
 
 ### updateAdvancedSettings
 
