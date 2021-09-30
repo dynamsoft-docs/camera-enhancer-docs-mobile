@@ -61,7 +61,34 @@ Boolean isVisible = DCECameraView.getOverlayVisible()
 
 ## setOverlayPosition
 
+Set the position of interest area so that the camera enhancer can draw overlay(s) on the interest area.
+
+```java
+void setOverlayPosition(ArrayList<quadrilateral> overlayPosition)
+```
+
+**Parameters**
+
+`overlayPosition`: The position that you want to draw the overlay.
+
+**Code Snippet**
+
+```java
+
+```
+
 ## setOverlayColour
+
+Set the stroke and fill in colour of the overlay(s).
+
+```java
+void setOverlayColour(int strokeARGB, int fillARGB)
+```
+
+**Parameters**
+
+`strokeARGB`: The colour code of the overlay stroke.
+`fillARGB`: The colour code of the overlay stroke.
 
 ## setViewfinderVisible
 
