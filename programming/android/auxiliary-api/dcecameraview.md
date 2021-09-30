@@ -64,7 +64,7 @@ Boolean isVisible = DCECameraView.getOverlayVisible()
 Set the position of interest area so that the camera enhancer can draw overlay(s) on the interest area.
 
 ```java
-void setOverlayPosition(ArrayList<quadrilateral> overlayPosition)
+void setOverlayPosition(ArrayList<Quadrilateral> overlayPosition)
 ```
 
 **Parameters**
