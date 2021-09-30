@@ -23,12 +23,77 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`initLicense`](#initlicense) | Initialize Dynamsoft Camera Enhancer with a valid license. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
+&nbsp;
+
+### CameraEnhancer
+
+Initialize the `CameraEnhancer` Object.
+
+```java
+CameraEnhancer()
+```
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer();
+```
+
+&nbsp;
+
+### initLicense
+
+Initialize the camera enhancer with a valid license.
+
+```java
+static void initLicense(String license, DCELicenseVerificationListener listener)
+```
+
+**Parameters**
+
+`license`: The product key.  
+`DCELicenseVerificationListener`: The listener that handle callback when license server returns.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.initLicense("", new DCELicenseVerificationListener(){
+    @Override
+    public void DCELicenseVerificationCallback(boolean b, Exception e) {
+        if (!b && e != null) {
+            e.printStackTrace();
+        }
+    }
+});
+```
+
+&nbsp;
+
+### getVersion
+
+Get the SDK version of Dynamsoft Camera Enhancer.
+
+```java
+String getVersion()
+```
+
+**Return Value**
+
+`DCEVersion`: A string value that stands for the camera enhancer SDK version.
+
+**Code Snippet**
+
+```java
+String DCEVersion = CameraEnhancer.getVersion();
+```
+
+&nbsp;
+
 ## Video Streaming Controlling & Frame Acquiring Methods
 
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add [`DCEFrameListener`](). |
 | [`removeListener`](#removelistener) | Remove [`DCEFrameListener`](). |
-
 | [`enableFeatures`](#enablefeature) | Enable DCE features with Enumeration value. |
 | [`disableFeatures`](#disablefeature) | Disable DCE features with Enumeration value. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
@@ -197,6 +262,8 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 
+&nbsp;
+
 ### getAllCameras
 
 Get the IDs of all available cameras.
@@ -219,7 +286,7 @@ CameraEnhancer.getAllCameras();
 
 ### selectCamera
 
-Select camera by cameraID. The selected camera will be actived and further camera control setting will be applied on this camera. When the actived camera is changed by selecting another camera via this method, the settings that applied on this camera will be inherited by the newly selected camera.
+Select camera by `cameraID`. The selected camera will be activated and further camera control settings will be applied to this camera. When the activated camera is changed by selecting another camera via this method, the settings that applied to this camera will be inherited by the newly selected camera.
 
 ```java
 void selectCamera(String cameraID) throws CameraEnhancerException
@@ -227,7 +294,7 @@ void selectCamera(String cameraID) throws CameraEnhancerException
 
 **Parameters**
 
-cameraID: A `String` value that listed in the `cameraIDList` returned by `getAllCamera`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCamera`. The method will have no effects if the input value does not exist in the `cameraIDList`.
 
 **Code Snippet**
 
@@ -445,6 +512,8 @@ List<Size> getResolutionList()
 List<Size> resolutionList = mCameraEnhancer.getResolutionList();
 ```
 
+&nbsp;
+
 ### setResolution
 
 Input a target resolution value that preset in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
@@ -463,10 +532,12 @@ void setResolution(Resolution resolution) throws CameraEnhancerException
 CameraEnhancer.setResolution(Resolution.RESOLUTION_2K);
 ```
 
+&nbsp;
+
 ### getResolution
 
 ```java
-Size getResolution
+Size getResolution()
 ```
 
 **Return Value**
@@ -478,6 +549,8 @@ Size getResolution
 ```java
 Size currentResolution = CameraEnhancer.getResolution();
 ```
+
+&nbsp;
 
 ### setZoom
 
@@ -497,24 +570,118 @@ void setZoom(float factor) throws CameraEnhancerException
 CameraEnhancer.setZoom(2.5)
 ```
 
+&nbsp;
+
 ### setFocus
 
 Set the focus position and trigger a focus at the configured position.
 
 ```java
-void setFocus(int x, int y, boolean byPercentage) throws CameraEnhancerException
+void setFocus(float x, float y) throws CameraEnhancerException
 ```
 
 **Parameters**
 
-`x`: The x-coordinate of the targeting focus position.
+`x`: The x-coordinate of the targeting focus position.  
 `y`: The y-coordinate of the targeting focus position.
-`byPercentage`: When the `byPercentage` value is true, the coordinate value will be recognized as percentage (int from 1 to 100). Otherwise, the coordinate value will be recognized as pixel length.
 
-### updateAdvancedSettings
+**Code Snippet**
+
+```java
+CameraEnhancer.setFocus(0.5,0.4);
+```
+
+&nbsp;
+
+### updateAdvancedSettingsFromFile
+
+Update the advanced camera controlling and video streaming processing parameters. This method enable you to update the JSON data via a JSON file from the storage.
+
+```java
+void updateAdvancedSettings(String filePath) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`filePath`: The file path of the JSON file.
+
+**Code Snippet**
+
+```java
+// Replace the filePath with your target filePath
+CameraEnhancer.updateAdvancedSettingsFromFile("/storage/emulated/0/")
+```
+
+**Remarks**
+
+You might need permission authority to enable the Camera Enhancer to read the file in your mobile storage.
+
+&nbsp;
+
+### updateAdvancedSettingsFromString
+
+Update the advanced camera controlling and video streaming processing parameters. This method enable you to update the JSON data via a JSON string.
+
+```java
+void updateAdvancedSettings(String jsonString) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`jsonString`: A stringified JSON data.
+
+**Code Snippet**
+
+```java
+CameraEnhancer.updateAdvancedSettingsFromFile("")
+```
+
+&nbsp;
 
 ## Camera UI Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`addCameraView`](#addcameraview) | Add camera video streaming UI. Read more from [`DCECameraView`](). |
+| [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) |
+| [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) |
+
+&nbsp;
+
+### setCameraView
+
+Set a [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object as the camera UI.
+
+```java
+void setCameraView(DCECameraView cameraView)
+```
+
+**Parameters**
+
+`cameraView`: [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) Object.
+
+**Code Snippet**
+
+```java
+CameraView cameraView = findViewById(R.id.cameraView);
+CameraEnhancer.setCameraView(cameraView);
+```
+
+&nbsp;
+
+### getCameraView
+
+Get the [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object of the current UI.
+
+```java
+DCECameraView getCameraView()
+```
+
+**Return Value**
+
+`cameraView`: The [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object of the currently displayed UI.
+
+**Code Snippet**
+
+```java
+DCECameraView cameraView =  CameraEnhancer.getCameraView();
+```
