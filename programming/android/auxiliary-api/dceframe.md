@@ -17,192 +17,127 @@ This page is for `Frame` Class. `Frame` parameters store the frame data.
 class com.dynamsoft.dce.Frame
 ```
 
-| Attribute | Type |
+| Method Name | Type |
 | ----------- | ---- |
-| [`getFrameData`](#getframedata) | byte[] |
+| [`getImageData`](#getimagedata) | byte[] |
 | [`getWidth`](#getwidth) | int |
 | [`getHeight`](#getheight) | int |
 | [`getStrides`](#getstrides) | int[] |
-| [`getFormat`](#getformat) | int |
-| [`getFrameId`](#getframeid) | int |
-| [`getFastFrameId`](#getfastframeid) | int |
-| [`getOrientation`](#getorientation) | int |
+| [`getPixelFormat`](#getpixelformat) | int |
+| [`getFrameID`](#getframeid) | int |
+| [`getQuality`](#getquality) |  |
+| [`getIsCropped`](#getiscropped) | boolean |
+| [`getCropRegion`](#getcropregion) |  |
+| [`getOrientation`](#setorientation) |  |
+| [`setImageData`](#setimagedata) | byte[] |
+| [`setWidth`](#setwidth) | int |
+| [`setHeight`](#setheight) | int |
+| [`setStrides`](#setstrides) | int[] |
+| [`setPixelFormat`](#setpixelformat) | int |
+| [`setFrameID`](#setframeid) | int |
+| [`setQuality`](#setquality) | [`EnumFrameQuality`]({{site.}}) |
+| [`setIsCropped`](#setiscropped) | boolean |
+| [`setCropRegion`](#setcropregion) |  |
+| [`setOrientation`](#setorientation) |  |
 
-## getFrameData
+## setImageData
 
-Get the value of the frame data in Byte array. You can also access the data via property `frameData`.
-
-**Return Value**
-
-`byte[]`: The frame byte data.
-
-**Code Snippet**
-
-Java:
-
-```java
-byte[] data = DCEFrame.getFrameData();
-```
-
-Kotlin:
-
-```kotlin
-var data: ByteArray? = DCEFrame!!.frameData
-```
-
-## getWidth
-
-Get the frame width in pixels.
-
-**Return Value**
-
-`int`: The pixel width of the frame.
-
-**Code Snippet**
-
-Java:
+Set the image data of the `DCEFrame` object by byte.
 
 ```java
-int width = DCEFrame.getWidth();
+void setImageData(byte[] imageData)
 ```
 
-Kotlin:
+**Parameters**
 
-```kotlin
-var width: Int? = DCEFrame!!.width
-```
+`imageData`: A byte list that stands for the image data.
 
-## getHeight
+## setWidth
 
-Get the frame height in pixels.
-
-**Return Value**
-
-`int`: The pixel height of the frame.
-
-**Code Snippet**
-
-Java:
+Set the pixel width of the `DCEFrame` object.
 
 ```java
-int height = DCEFrame.getHeight(); 
+void setWidth(int width)
 ```
 
-Kotlin:
+**Parameters**
 
-```kotlin
-var height: Int? = DCEFrame!!.height
-```
+## setHeight
 
-## getStrides
-
-Get the frame strides.
-
-**Return Value**
-
-`int[]`: The strides of the frame.
-
-**Code Snippet**
-
-Java:
+Set the pixel height of the `DCEFrame` object.
 
 ```java
-int[] strides = DCEFrame.getStrides();
+void setHeight(int height)
 ```
 
-Kotlin:
+**Parameters**
 
-```kotlin
-var strides: IntArray? = DCEFrame!!.strides
-```
+## setStrides
 
-## getFormat
-
-Get the frame pixel format.
-
-**Return Value**
-
-`int`: The format of the frame.
-
-**Code Snippet**
-
-Java:
+Set the pixel stride length of the `DCEFrame` object.
 
 ```java
-int format = DCEFrame.getFormat();
+void setStrides(int[] strides)
 ```
 
-Kotlin:
+**Parameters**
 
-```kotlin
-var format: Int? = DCEFrame!!.format
-```
+## setPixelFormat
 
-## getFrameId
-
-Get the frame ID.
-
-**Return Value**
-
-`int`: The ID of the frame.
-
-**Code Snippet**
-
-Java:
+Set the pixel format of the `DCEFrame` object.
 
 ```java
-int frameid = DCEFrame.getFrameId(); 
+void setPixelFormat(int pixelFormat)
 ```
 
-Kotlin:
+**Parameters**
 
-```kotlin
-var frameid: Int? = DCEFrame!!.frameId
-```
+## setFrameID
 
-## getFastFrameId
-
-Get the fast frame (cropped frame) ID.
-
-**Return Value**
-
-`int`: The ID of the fast frame (cropped frame).
-
-**Code Snippet**
-
-Java:
+Set the frameID of the `DCEFrame` object.
 
 ```java
-int fastframeid = DCEFrame.getFastFrameId();
+void setFrameID(int frameID)
 ```
 
-Kotlin:
+**Parameters**
 
-```kotlin
-var fastframeid: Int? = DCEFrame!!.fastFrameId
-```
+## setQuality
 
-## getOrientation
+Set the frame quality of the `DCEFrame` image.
 
-Get the orientation (of cropped frame).
-
-**Return Value**
-
-| Orientation of the frame | Value (int) |
-|--------------------------|-------|
-| Vertical | 1 |
-| Horizontal | 2 |
-
-**Code Snippet**
-
-Java:
+**Parameters**
 
 ```java
-int orientation = DCEFrame.getOrientation();
+void setQuality(EnumFrameQuality quality)
 ```
 
-Kotlin:
+## setIsCropped
 
-```kotlin
-var orientation: Int? = DCEFrame!!.getOrientation
+Set whether the `DCEFrame` image is cropped.
+
+```java
+void setIsCropped(boolean isCropped)
 ```
+
+**Parameters**
+
+## setCropRegion
+
+Set the crop region of the `DCEframe` image (if the frame will be cropped).
+
+```java
+void setCropRegion(Rect region)
+```
+
+**Parameters**
+
+## setOrientation
+
+Set the orientation of the `DCEFrame` image (comparing with the device).
+
+```java
+void setOrientation(int orientation)
+```
+
+**Parameters**
