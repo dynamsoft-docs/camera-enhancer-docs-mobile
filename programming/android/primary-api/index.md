@@ -20,7 +20,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | Method | Description |
 | ------ | ----------- |
 | [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer` object. |
-| [`initLicense`](#initlicense) | Initialize Dynamsoft Camera Enhancer with a valid license. |
+| [`initLicense`](#initlicense) | Sets product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;
@@ -30,20 +30,20 @@ class com.dynamsoft.dce.CameraEnhancer
 Initialize the `CameraEnhancer` Object.
 
 ```java
-CameraEnhancer()
+CameraEnhancer(android.content.Context context)
 ```
 
 **Code Snippet**
 
 ```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
 ```
 
 &nbsp;
 
 ### initLicense
 
-Initialize the camera enhancer with a valid license.
+Sets product key and activate the SDK.
 
 ```java
 static void initLicense(String license, DCELicenseVerificationListener listener)
@@ -52,12 +52,12 @@ static void initLicense(String license, DCELicenseVerificationListener listener)
 **Parameters**
 
 `license`: The product key.  
-`DCELicenseVerificationListener`: The listener that handle callback when license server returns.
+`listener`: The listener that handle callback when license server returns.  See also [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html).
 
 **Code Snippet**
 
 ```java
-CameraEnhancer.initLicense("", new DCELicenseVerificationListener(){
+CameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener(){
     @Override
     public void DCELicenseVerificationCallback(boolean b, Exception e) {
         if (!b && e != null) {
@@ -79,186 +79,29 @@ String getVersion()
 
 **Return Value**
 
-`DCEVersion`: A string value that stands for the camera enhancer SDK version.
+A string value that stands for the camera enhancer SDK version.
 
 **Code Snippet**
 
 ```java
-String DCEVersion = CameraEnhancer.getVersion();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+String DCEVersion = cameraEnhancer.getVersion();
 ```
 
 &nbsp;
 
-## Video Streaming Controlling & Frame Acquiring Methods
 
-| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`](#addlistener) | Add [`DCEFrameListener`](). |
-| [`removeListener`](#removelistener) | Remove [`DCEFrameListener`](). |
-| [`enableFeatures`](#enablefeature) | Enable DCE features with Enumeration value. |
-| [`disableFeatures`](#disablefeature) | Disable DCE features with Enumeration value. |
-| [`isFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
-
-&nbsp;
-
-### getFrameFromBuffer
-
-Get the latest frame from the video buffer.
-
-**Parameters**
-
-`true`: The frame will be kept in the video buffer.  
-`false`: The frame will be removed from the video buffer.
-
-```java
-getFrameFromBuffer(boolean keepOrRemove)
-```
-
-&nbsp;
-
-### addListener
-
-Add a `DCEFrameListener` to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
-
-```java
-void addListener(DCEFrameListener listener)
-```
-
-**Parameters**
-
-`listener`: Add an object of `DCEFrameListener`. Callback method, `frameOutputCallback`, will be available for users to make further operations on the video streaming.
-
-**Code Snippet**
-
-```java
-DCEFrameListener listener = new DCEFrameListener(){
-    @Override
-    public void frameOutputCallback(DCEFrame frame, long timeStamp)
-};
-CameraEnhancer.addListener(listener);
-```
-
-&nbsp;
-
-### removeListener
-
-Remove a preciously added `DCEFrameListener` from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
-
-```java
-void removeListener(DCEFrameListener listener)
-```
-
-**Parameters**
-
-`listener`: The input listener will be removed from CameraEnhancer instance.
-
-**Code Snippet**
-
-```java
-//Suppose we have added "listener" via CameraEnhancer.addListener(listener);
-// You can remove it via removeListener
-CameraEnhancer.removeListener(listener);
-```
-
-&nbsp;
-
-### enableFeatures
-
-Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
-
-```java
-void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
-
-**Code Snippet**
-
-```java
-CameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
-```
-
-**Remarks**
-
-The `EnumEnhancerFeatures` members:
-
-|  Members | Value |
-| ------------------------------ | ----- |
-| `FRAME_FILTER` | 0x01 |
-| `SENSOR_CONTROL` | 0x02 |
-| `ENHANCED_FOCUS` | 0x04 |
-| `FAST_MODE` | 0x08 |
-| `AUTO_ZOOM` | 0x10 |
-
-The enable action will not be approved if the license is invalid. If your input values include the features that already enabled, these features will keep the enabled status.
-
-&nbsp;
-
-### disableFeatures
-
-Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
-
-```java
-void disableFeatures(int enhancerFeatures)
-```
-
-**Parameters**
-
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
-
-**Code Snippet**
-
-```java
-CameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
-```
-
-**Remarks**
-
-You can still disable the features evenif the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
-
-&nbsp;
-
-### isFeatureEnabled
-
-Returns a boolean value that means whether the feature(s) you input is (are) enabled.
-
-```java
-boolean isFeatureEnabled(int enhancerFeatures)
-```
-
-**Parameters**
-
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
-
-**Return Value**
-
-`True`: All the features you input are enabled.  
-`False`: There is at least one feature is not enabled among your input values.
-
-**Code Snippet**
-
-```java
-boolean isEnabled = CameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
-```
-
-**Remarks**
-
-If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
-
-&nbsp;
-
-## Regular Camera Control Methods
+## Basic Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera`](#selectcamera) | Select and active a camera from the camera list with the camera ID. |
+| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current actived camera. |
-| [`open`](#open) | Turn on the current actived camera. |
-| [`close`](#close) | Turn off the current actived camera. |
-| [`pause`](#pause) | Pause the current actived  camera. |
-| [`resume`](#resume) | Resume the current actived camera. |
+| [`open`](#open) | Turn on the current selected camera. |
+| [`close`](#close) | Turn off the current selected camera. |
+| [`pause`](#pause) | Pause the current selected  camera. |
+| [`resume`](#resume) | Resume the current selected camera. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 
@@ -274,19 +117,19 @@ String[] getAllCameras()
 
 **Return Value**
 
-`cameraIDList`: An array list that inclueds all available cameras. User can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
+An array list that inclueds all available cameras. User can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
 
 **Code Snippet**
 
 ```java
-CameraEnhancer.getAllCameras();
+String[] cameraIds = CameraEnhancer.getAllCameras();
 ```
 
 &nbsp;
 
 ### selectCamera
 
-Select camera by `cameraID`. The selected camera will be activated and further camera control settings will be applied to this camera. When the activated camera is changed by selecting another camera via this method, the settings that applied to this camera will be inherited by the newly selected camera.
+Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings that applied to this camera will be inherited by the newly selected camera.
 
 ```java
 void selectCamera(String cameraID) throws CameraEnhancerException
@@ -436,6 +279,176 @@ CameraEnhancer.turnOffTorch();
 ```
 
 &nbsp;
+
+## Video Streaming Controlling & Frame Acquiring Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`](#addlistener) | Add [`DCEFrameListener`](). |
+| [`removeListener`](#removelistener) | Remove [`DCEFrameListener`](). |
+
+&nbsp;
+
+### getFrameFromBuffer
+
+Get the latest frame from the video buffer.
+
+**Parameters**
+
+`true`: The frame will be kept in the video buffer.  
+`false`: The frame will be removed from the video buffer.
+
+```java
+getFrameFromBuffer(boolean keepOrRemove)
+```
+
+&nbsp;
+
+### addListener
+
+Add a `DCEFrameListener` to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
+
+```java
+void addListener(DCEFrameListener listener)
+```
+
+**Parameters**
+
+`listener`: Add an object of `DCEFrameListener`. Callback method, `frameOutputCallback`, will be available for users to make further operations on the video streaming.
+
+**Code Snippet**
+
+```java
+DCEFrameListener listener = new DCEFrameListener(){
+    @Override
+    public void frameOutputCallback(DCEFrame frame, long timeStamp)
+};
+CameraEnhancer.addListener(listener);
+```
+
+&nbsp;
+
+### removeListener
+
+Remove a preciously added `DCEFrameListener` from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
+
+```java
+void removeListener(DCEFrameListener listener)
+```
+
+**Parameters**
+
+`listener`: The input listener will be removed from CameraEnhancer instance.
+
+**Code Snippet**
+
+```java
+//Suppose we have added "listener" via CameraEnhancer.addListener(listener);
+// You can remove it via removeListener
+CameraEnhancer.removeListener(listener);
+```
+
+&nbsp;
+
+## Enhanced Features
+
+| Method | Description |
+| ------ | ----------- |
+| [`enableFeatures`](#enablefeature) | Enable DCE features with Enumeration value. |
+| [`disableFeatures`](#disablefeature) | Disable DCE features with Enumeration value. |
+| [`isFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
+
+&nbsp;
+
+
+### enableFeatures
+
+Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
+
+```java
+void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+
+**Code Snippet**
+
+```java
+CameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+```
+
+**Remarks**
+
+The `EnumEnhancerFeatures` members:
+
+|  Members | Value |
+| ------------------------------ | ----- |
+| `FRAME_FILTER` | 0x01 |
+| `SENSOR_CONTROL` | 0x02 |
+| `ENHANCED_FOCUS` | 0x04 |
+| `FAST_MODE` | 0x08 |
+| `AUTO_ZOOM` | 0x10 |
+
+The enable action will not be approved if the license is invalid. If your input values include the features that already enabled, these features will keep the enabled status.
+
+&nbsp;
+
+### disableFeatures
+
+Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
+
+```java
+void disableFeatures(int enhancerFeatures)
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+
+**Code Snippet**
+
+```java
+CameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+```
+
+**Remarks**
+
+You can still disable the features evenif the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
+
+&nbsp;
+
+### isFeatureEnabled
+
+Returns a boolean value that means whether the feature(s) you input is (are) enabled.
+
+```java
+boolean isFeatureEnabled(int enhancerFeatures)
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
+
+**Return Value**
+
+`True`: All the features you input are enabled.  
+`False`: There is at least one feature is not enabled among your input values.
+
+**Code Snippet**
+
+```java
+boolean isEnabled = CameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+```
+
+**Remarks**
+
+If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
+
+&nbsp;
+
 
 ## Advanced Camera Control Methods
 
