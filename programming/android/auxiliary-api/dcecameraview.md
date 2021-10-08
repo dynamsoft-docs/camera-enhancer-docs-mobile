@@ -29,15 +29,15 @@ class com.dynamsoft.dce.DCECameraView
 
 ## setOverlayVisible
 
-This method is controlling whether to display coloured and translucent overly on the interest areas.
+This method controls whether to display coloured and translucent overly on the interest areas.
 
 ```java
-void setOverlayVisible(boolean isVisibile)
+void setOverlayVisible(boolean overlayVisibile)
 ```
 
 **Parameters**
 
-`isVisibile`: If true, the camera enhancer will be able to draw and display overlays on the cameraView accroding to the position and colour settings. If false, the camera enhancer will never draw overlays evenif position and colour are set.
+`overlayVisibile`: If true, the camera enhancer will be able to draw and display overlays on the `DCECameraView` according to the position and colour settings. If false, the camera enhancer will never draw overlays even if position and colour are set.
 
 **Code Snippet**
 
@@ -47,21 +47,25 @@ DCECameraView.setOverlayVisible(true);
 
 ## getOverlayVisible
 
-Get the visibility (true/false) of overlays.
+Get the visibility (true: visible/ false: invisible) of overlays.
+
+```java
+boolean getOverlayVisible()
+```
 
 **Return Value**
 
-`isVisible`: If true, the camera enhancer will be able to draw and display overlays on the cameraView accroding to the position and colour settings. If false, the camera enhancer will never draw overlays evenif position and colour are set.
+If the return value is true, the camera enhancer will be able to draw and display overlays on the `DCECameraView` according to the position and colour settings. Otherwise, the camera enhancer will never draw overlays even if position and colour are set.
 
 **Code Snippet**
 
 ```java
-Boolean isVisible = DCECameraView.getOverlayVisible()
+Boolean isVisible = DCECameraView.getOverlayVisible();
 ```
 
 ## setOverlayPosition
 
-Set the position of interest area so that the camera enhancer can draw overlay(s) on the interest area.
+Set the position of the interest area so that the camera enhancer can draw overlay(s) on the interest area.
 
 ```java
 void setOverlayPosition(ArrayList<Quadrilateral> overlayPosition)
@@ -74,8 +78,25 @@ void setOverlayPosition(ArrayList<Quadrilateral> overlayPosition)
 **Code Snippet**
 
 ```java
-
+ArrayList<Quadrilateral> overlayPosition = new ArrayList<>();
+Point[] points = new Point[4];
+points[0].x = 800;
+points[0].y = 600;
+points[1].x = 800;
+points[1].y = 250;
+points[2].x = 850;
+points[2].y = 250;
+points[3].x = 850;
+points[3].y = 600;
+Quadrilateral quadrilateral_0 = new Quadrilateral();
+quadrilateral_0.points = points;
+overlayPosition.add(quadrilateral_0);
+DCECameraView.setOverlayPosition(overlayPosition);
 ```
+
+**Remarks**
+
+The method `setOverlayPosition` applies the same coordinate system with the class `DCEFrame`. The origin of the coordinate is the left-top point of the image and the unit of the horizontal and vertical positions is the pixel length.
 
 ## setOverlayColour
 
@@ -90,8 +111,59 @@ void setOverlayColour(int strokeARGB, int fillARGB)
 `strokeARGB`: The colour code of the overlay stroke.
 `fillARGB`: The colour code of the overlay stroke.
 
+**Code Snippet**
+
+```java
+DCECameraView.setOverlayColour(0xff00ff00, 0x00000000);
+```
+
 ## setViewfinderVisible
+
+This method controls whether to display a viewfinder on the `DCECameraView`.
+
+```java
+void setViewfinderVisible(boolean viewfinderVisible)
+```
+
+**Parameters**
+
+`viewfinderVisible`: A boolean value that means whether the viewfinder is visible. If the input value is true, the camera enhancer will try to create a viewfinder on the `DCECameraView`. Users can define the position and size of the viewfinder via method [`setViewfinder`](#setviewfinder). The viewfinder will be created based on the default value if the `setViewfinder` has never been triggered.
+
+**Code Snippet**
+
+```java
+DCECameraView.setViewfinderVisible(true);
+```
 
 ## getViewfinderVisible
 
+Get the visibility (true: visible/ false: invisible) of the viewfinder.
+
+**Return Value**
+
+A boolean value that means whether the viewfinder is visible.
+
 ## setViewfinder
+
+Set the position and the size of the viewfinder.
+
+```java
+void setViewfinder(float left, float top, float right, float bottom) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`left`: The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
+`top`: The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
+`right`: The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
+`bottom`: The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
+
+**Code Snippet**
+
+```java
+DCECameraView.setViewfinder(0.2, 0.3, 0.8, 0.7);
+```
+
+**Remarks**
+
+The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
