@@ -15,7 +15,7 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`]({{site.android-api}}initialization.html#initlicense) | Initialize Dynamsoft Camera Enhancer with a valid license. |
+| [`initLicense`]({{site.android-api}}initialization.html#initlicense) | Sets product key and activate the SDK. |
 | [`addCameraView`]({{site.android-api}}.html#) | Add camera video streaming UI. Read more from [`DCECameraView`](). |
 | [`getFrameFromBuffer`]({{site.android-api}}preprocess.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`setFrameRate`]({{site.android-api}}preprocess.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
