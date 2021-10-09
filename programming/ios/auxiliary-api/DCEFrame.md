@@ -32,15 +32,15 @@ Return the frame decode results and additional information.
 
 ## imageData
 
-The property that stores the pixel data of the image.
+The property stores the pixel data of the image.
 
 ```objectivec
-NSData* buffer
+NSData* imageData
 ```
 
 ## width
 
-The property that store the pixel width of the image.
+The property stores the pixel width of the image.
 
 ```objectivec
 NSInteger width
@@ -48,7 +48,7 @@ NSInteger width
 
 ## height
 
-The property that store the pixel height of the image.
+The property stores the pixel height of the image.
 
 ```objectivec
 NSInteger height
@@ -56,7 +56,7 @@ NSInteger height
 
 ## stride
 
-Store the stride of the frame.
+The property stores the stride of the image.
 
 ```objectivec
 NSInteger stride
@@ -64,20 +64,15 @@ NSInteger stride
 
 ## pixelFormat
 
-Store the pixel format of the frame.
+The property stores the pixel format of the image. The property value is one of the Enumeration value of `ImagePixelFormat`. Currently, the image output formats of `DCEFrame` are NV21 or ARGB_8888.
 
 ```objectivec
-NSInteger format
+NSInteger pixelFormat
 ```
-
-**Value**
-
-`3`: The Enumeration value of `ImagePixelFormat.EnumImagePixelFormatNV21`.  
-`7`: The Enumeration value of `ImagePixelFormat.EnumImagePixelFormatARGB_8888`.
 
 ## frameID
 
-Store the frame ID of the frame.
+The property stores the `frameID` of the frame.
 
 ```objectivec
 NSInteger frameID
@@ -85,7 +80,7 @@ NSInteger frameID
 
 ## quality
 
-The property that stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more about the frame quality in enumeration [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
+The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more about the frame quality in enumeration [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
 
 ```objectivec
 EnumFrameQuality quality
@@ -93,7 +88,15 @@ EnumFrameQuality quality
 
 ## isCropped
 
+The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. Property value `true` means the image is cropped and `false` means the image has never been cropped.
+
+```objectivec
+BOOL isCropped
+```
+
 ## cropRegion
+
+The property stores the crop region of the image (if the image is cropped).
 
 ## orientation
 

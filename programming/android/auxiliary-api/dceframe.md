@@ -142,7 +142,7 @@ boolean getIsCropped()
 
 **Return Value**
 
-A boolean value. `True` means the image is cropped and `false` means the image of the is an original image.
+A boolean value. `True` means the image is cropped and `false` means the image has never been cropped.
 
 ## getCropRegion
 
