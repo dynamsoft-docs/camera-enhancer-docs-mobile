@@ -96,29 +96,21 @@ BOOL isCropped
 
 ## cropRegion
 
-The property stores the crop region of the image (if the image is cropped).
+The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null.
+
+```objectivec
+CGRect cropRegion
+```
 
 ## orientation
 
-Stores the orientation value
+The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation.
 
 ```objectivec
 NSInteger orientation
 ```
 
-**Value**
-
-The following image illustrates how we defined 4 different device orientations.
-
 <div align="center">
     <p><img src="assets/getOrientation.png" width="70%" alt="getOrientation"></p>
-    <p>All orientation values</p>
+    <p>All examples of the orientation</p>
 </div>
-
-## imageBuffer
-
-Store the buffered frame data in CVImageBufferRef.
-
-```objectivec
-CVImageBufferRef imageBuffer
-```
