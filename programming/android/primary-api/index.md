@@ -33,6 +33,10 @@ Initialize the `CameraEnhancer` Object.
 CameraEnhancer(android.content.Context context)
 ```
 
+**Parameters**
+
+`context`: An instance to global information about an application environment. 
+
 **Code Snippet**
 
 ```java
@@ -97,7 +101,7 @@ String DCEVersion = cameraEnhancer.getVersion();
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
 | [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current actived camera. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`open`](#open) | Turn on the current selected camera. |
 | [`close`](#close) | Turn off the current selected camera. |
 | [`pause`](#pause) | Pause the current selected  camera. |
@@ -122,7 +126,8 @@ An array list that inclueds all available cameras. User can clearly read whether
 **Code Snippet**
 
 ```java
-String[] cameraIds = CameraEnhancer.getAllCameras();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+String[] cameraIds = cameraEnhancer.getAllCameras();
 ```
 
 &nbsp;
@@ -137,12 +142,13 @@ void selectCamera(String cameraID) throws CameraEnhancerException
 
 **Parameters**
 
-`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCamera`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
 
 **Code Snippet**
 
 ```java
-CameraEnhancer.selectCamera("BACK_FACING_CAMERA_0");
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.selectCamera("BACK_FACING_CAMERA_0");
 ```
 
 **Remarks**
@@ -153,7 +159,7 @@ There is always a back-facing camera be defined as a default camera. If user don
 
 ### getSelectedCamera
 
-Get the ID of the current actived camera.
+Get the ID of the current selected camera.
 
 ```java
 String getSelectedCamera();
@@ -161,12 +167,13 @@ String getSelectedCamera();
 
 **Return Value**
 
-`cameraID`: The ID of the current actived camera.
+The ID of the current selected camera.
 
 **CodeSnippet**
 
 ```java
-String selectedCameraID = CameraEnhancer.getSelectedCamera();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+String selectedCameraID = cameraEnhancer.getSelectedCamera();
 ```
 
 &nbsp;
@@ -183,7 +190,8 @@ void open() throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.open();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.open();
 ```
 
 &nbsp;
@@ -200,7 +208,8 @@ void close() throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.close();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.close();
 ```
 
 &nbsp;
@@ -217,7 +226,8 @@ void pause() throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.pause();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.pause();
 ```
 
 **Remarks**
@@ -243,7 +253,8 @@ void resume() throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.resume();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.resume();
 ```
 
 &nbsp;
@@ -259,7 +270,8 @@ void turnOnTorch() throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.turnOnTorch();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.turnOnTorch();
 ```
 
 &nbsp;
@@ -275,12 +287,13 @@ void turnOffTorch() throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.turnOffTorch();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.turnOffTorch();
 ```
 
 &nbsp;
 
-## Video Streaming Controlling & Frame Acquiring Methods
+## Frame Acquiring Methods
 
 | Method | Description |
 | ------ | ----------- |
@@ -294,20 +307,31 @@ CameraEnhancer.turnOffTorch();
 
 Get the latest frame from the video buffer.
 
+```java
+DCEFrame getFrameFromBuffer(boolean isKeep)
+```
+
 **Parameters**
 
-`true`: The frame will be kept in the video buffer.  
-`false`: The frame will be removed from the video buffer.
+`isKeep`: If set to `true`, the frame will be kept in the video buffer, otherwise it will be removed from the video buffer.
+
+**Return Value**
+
+The latest frame in the video buffer.
+
+**Code Snippet**
 
 ```java
-getFrameFromBuffer(boolean keepOrRemove)
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+DCEFrame frame = cameraEnhancer.getFrameFromBuffer(false);
 ```
+
 
 &nbsp;
 
 ### addListener
 
-Add a `DCEFrameListener` to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
+Add a listener to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
 
 ```java
 void addListener(DCEFrameListener listener)
@@ -315,23 +339,27 @@ void addListener(DCEFrameListener listener)
 
 **Parameters**
 
-`listener`: Add an object of `DCEFrameListener`. Callback method, `frameOutputCallback`, will be available for users to make further operations on the video streaming.
+`listener`: An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
 
 **Code Snippet**
 
 ```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
 DCEFrameListener listener = new DCEFrameListener(){
     @Override
-    public void frameOutputCallback(DCEFrame frame, long timeStamp)
+    public void frameOutputCallback(DCEFrame frame, long timeStamp) {
+        //perform custom action on generated frame
+    }
 };
-CameraEnhancer.addListener(listener);
+cameraEnhancer.addListener(listener);
 ```
 
 &nbsp;
 
 ### removeListener
 
-Remove a preciously added `DCEFrameListener` from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
+Remove a preciously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
 
 ```java
 void removeListener(DCEFrameListener listener)
@@ -344,9 +372,17 @@ void removeListener(DCEFrameListener listener)
 **Code Snippet**
 
 ```java
-//Suppose we have added "listener" via CameraEnhancer.addListener(listener);
-// You can remove it via removeListener
-CameraEnhancer.removeListener(listener);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+DCEFrameListener listener = new DCEFrameListener(){
+    @Override
+    public void frameOutputCallback(DCEFrame frame, long timeStamp) {
+        //perform custom action on generated frame
+    }
+};
+cameraEnhancer.addListener(listener);
+// ......
+cameraEnhancer.removeListener(listener);
 ```
 
 &nbsp;
@@ -377,7 +413,9 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
 ```
 
 **Remarks**
@@ -411,7 +449,9 @@ void disableFeatures(int enhancerFeatures)
 **Code Snippet**
 
 ```java
-CameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
 ```
 
 **Remarks**
@@ -440,7 +480,9 @@ boolean isFeatureEnabled(int enhancerFeatures)
 **Code Snippet**
 
 ```java
-boolean isEnabled = CameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+boolean isEnabled = cameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
 ```
 
 **Remarks**
@@ -461,7 +503,8 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocus`](#setfocusposition) | Focus once at the input position. |
-| [`updateAdvancedSettings`](#updateadvancedsetting) | Update advanced parameter settings including filter, sensor and focus settings from a JSON Object. |
+| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
 ### setFrameRate
 
@@ -478,7 +521,9 @@ void setFrameRate(int frameRate) throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.setFrameRate(25);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setFrameRate(25);
 ```
 
 **Remarks**
@@ -497,12 +542,14 @@ int getFrameRate()
 
 **Return Value**
 
-`frameRate`: the current frame rate.
+The current frame rate.
 
 **Code Snippet**
 
 ```java
-int frameRate = CameraEnhancer.getFrameRate();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+int frameRate = cameraEnhancer.getFrameRate();
 ```
 
 &nbsp;
@@ -517,12 +564,14 @@ List<Size> getResolutionList()
 
 **Return Value**
 
-`resolutionList`: A list that contains all available resolutions.
+A list that contains all available resolutions.
 
 **Code Snippet**
 
 ```java
-List<Size> resolutionList = mCameraEnhancer.getResolutionList();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+List<Size> resolutionList = cameraEnhancer.getResolutionList();
 ```
 
 &nbsp;
@@ -532,17 +581,19 @@ List<Size> resolutionList = mCameraEnhancer.getResolutionList();
 Input a target resolution value that preset in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
 
 ```java
-void setResolution(Resolution resolution) throws CameraEnhancerException
+void setResolution(EnumResolution resolution) throws CameraEnhancerException
 ```
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration `Resolution`.
+`resolution`: One of the int value that preset in Enumeration `EnumResolution`.
 
 **Code Snippet**
 
 ```java
-CameraEnhancer.setResolution(Resolution.RESOLUTION_2K);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setResolution(EnumResolution.RESOLUTION_2K);
 ```
 
 &nbsp;
@@ -555,12 +606,14 @@ Size getResolution()
 
 **Return Value**
 
-`resolution`: The size of the current resolution.
+The size of the current resolution.
 
 **Code Snippet**
 
 ```java
-Size currentResolution = CameraEnhancer.getResolution();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+Size currentResolution = cameraEnhancer.getResolution();
 ```
 
 &nbsp;
@@ -580,14 +633,16 @@ void setZoom(float factor) throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.setZoom(2.5)
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setZoom(2.5)
 ```
 
 &nbsp;
 
 ### setFocus
 
-Set the focus position and trigger a focus at the configured position.
+Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
 
 ```java
 void setFocus(float x, float y) throws CameraEnhancerException
@@ -601,17 +656,19 @@ void setFocus(float x, float y) throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.setFocus(0.5,0.4);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setFocus(0.5,0.4);
 ```
 
 &nbsp;
 
 ### updateAdvancedSettingsFromFile
 
-Update the advanced camera controlling and video streaming processing parameters. This method enable you to update the JSON data via a JSON file from the storage.
+Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON file from the storage.
 
 ```java
-void updateAdvancedSettings(String filePath) throws CameraEnhancerException
+void updateAdvancedSettingsFromFile(String filePath) throws CameraEnhancerException
 ```
 
 **Parameters**
@@ -621,8 +678,9 @@ void updateAdvancedSettings(String filePath) throws CameraEnhancerException
 **Code Snippet**
 
 ```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
 // Replace the filePath with your target filePath
-CameraEnhancer.updateAdvancedSettingsFromFile("/storage/emulated/0/")
+cameraEnhancer.updateAdvancedSettingsFromFile("/storage/emulated/0/1.json")
 ```
 
 **Remarks**
@@ -633,10 +691,10 @@ You might need permission authority to enable the Camera Enhancer to read the fi
 
 ### updateAdvancedSettingsFromString
 
-Update the advanced camera controlling and video streaming processing parameters. This method enable you to update the JSON data via a JSON string.
+Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON string.
 
 ```java
-void updateAdvancedSettings(String jsonString) throws CameraEnhancerException
+void updateAdvancedSettingsFromString(String jsonString) throws CameraEnhancerException
 ```
 
 **Parameters**
@@ -646,7 +704,9 @@ void updateAdvancedSettings(String jsonString) throws CameraEnhancerException
 **Code Snippet**
 
 ```java
-CameraEnhancer.updateAdvancedSettingsFromFile("")
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthreshold':30,'conversioncountthreshold':30,'sharpnessthreshold':0.2,'sharpnessthresholdlarge':0.4,'abssharpnessthreshold':200,'absgraythreshold':35,'claritythreshold':0.1}");
 ```
 
 &nbsp;
@@ -675,8 +735,10 @@ void setCameraView(DCECameraView cameraView)
 **Code Snippet**
 
 ```java
-CameraView cameraView = findViewById(R.id.cameraView);
-CameraEnhancer.setCameraView(cameraView);
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+DCECameraView cameraView = findViewById(R.id.cameraView);
+cameraEnhancer.setCameraView(cameraView);
 ```
 
 &nbsp;
@@ -691,10 +753,12 @@ DCECameraView getCameraView()
 
 **Return Value**
 
-`cameraView`: The [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object of the currently displayed UI.
+The [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object of the currently displayed UI.
 
 **Code Snippet**
 
 ```java
-DCECameraView cameraView =  CameraEnhancer.getCameraView();
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+DCECameraView cameraView =  cameraEnhancer.getCameraView();
 ```
