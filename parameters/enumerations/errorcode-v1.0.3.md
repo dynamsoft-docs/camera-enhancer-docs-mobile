@@ -21,15 +21,13 @@ breadcrumbText: Enumerations Error code
 | Error Code (Android) | Error Code (iOS) | Value | Description |
 |----------------------|------------------|-------|-------------|
 | `DCE_OK` | `EnumCameraErrorCode_OK`  | 0 | Successful. |
-| `DCE_UNKNOWN` | `EnumCameraErrorCode_UNKNOWN` | -10000 | Unknown error. |
 | `DCE_LICENSE_INVALID` | `EnumCameraErrorCode_LICENSE_INVALID` | -10001 | The licence is invalid. |
 | `DCE_LICENSE_EXPIRED` | `EnumCameraErrorCode_LICENSE_EXPIRED` | -10002 | The licence has expired. |
-| `DCE_CAMERA_MODULE_NOT_EXIST` | `EnumCameraErrorCode_CAMERA_MODULE_NOT_EXIST` | -10003 | Camera module does not exist. |
-| `DCE_FILE_NOT_FOUND` | `EnumCameraErrorCode_FILE_NOT_FOUND` | -10004 | File is not found. |
+| `DCE_NOT_EXIST_CAMERA_MODULE` | `EnumCameraErrorCode_NOT_EXIST_CAMERA_MODULE` | -10003 | Camera module does not exist. |
+| `DCE_NOT_FOUND_FILE` | `EnumCameraErrorCode_NOT_FOUND_FILE` | -10004 | File is not found. |
 | `DCE_FILE_FORMAT_ERROR` | `EnumCameraErrorCode_FILE_FORMAT_ERROR` | -10005 | File format error. |
-| `DCE_LICENSEKEY_NOT_MATCHED` | `EnumCameraErrorCode_LICENSEKEY_NOT_MATCHED` | -10043 | The license key does not match the license content. |
-| `DCE_REQUESTED_FAILED` | `EnumCameraErrorCode_REQUESTED_FAILED` | -10044 | The license key does not match the license content. |
-| `DCE_NO_SENSOR` | `EnumCameraErrorCode_NO_SENSOR` | -10045 | The mobile sensor is not available. |
+| `DCE_LICENSEKEY_NOT_MATCHED` | Not available for iOS. | -10043 | The license key does not match the license content. |
+| Not available for Android | `EnumCameraErrorCode_Requested_Failed` | -10044 | The license key does not match the license content. |
 | `DM_NO_LICENSE` | `EnumCameraErrorCode_NO_LICENSE` | -20000 | There is no license specified. |
 | `DM_HANDSHAKE_CODE_INVALID` | `EnumCameraErrorCode_HANDSHAKE_CODE_INVALID` | -20001 | Handshake code is invalid. |
 | `DM_LICENSE_BUFFER_FAILED` | `EnumCameraErrorCode_LICENSE_BUFFER_FAILED` | -20002 | Failed to read or write license buffer. |
