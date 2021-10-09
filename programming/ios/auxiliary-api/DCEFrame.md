@@ -19,17 +19,18 @@ Return the frame decode results and additional information.
 
 | Attribute Name | Type |
 |------|------|
-| [`frameData`](#buffer) | *NSData* * |
+| [`imageData`](#imagedata) | *NSData* * |
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
-| [`format`](#pixelformat) | *NSInteger* |
+| [`pixelFormat`](#pixelformat) | *NSInteger* |
 | [`frameID`](#frameid) | *NSInteger* |
-| [`fastFrameID`](#fastframeid) | *NSInteger* |
+| [`quality`](#quality) | [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html) |
+| [`isCropped`](#iscropped) | *BOOL* |
+| [`cropRegion`](#cropregion) | *CGRect* |
 | [`orientation`](#orientation) | *NSInteger* |
-| [`imageBuffer`](#imagebuffer) | *CVImageBufferRef* |
 
-## frameData
+## imageData
 
 Store the buffered frame data in NSData.
 
@@ -61,7 +62,7 @@ Store the stride of the frame.
 NSInteger stride
 ```
 
-## format
+## pixelFormat
 
 Store the pixel format of the frame.
 
@@ -82,13 +83,17 @@ Store the frame ID of the frame.
 NSInteger frameID
 ```
 
-## fastFrameID
+## quality
 
-Store the fast frame ID of the frame.
+The property that stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more in enumeration [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
 
 ```objectivec
-NSInteger fastFrameID
+EnumFrameQuality quality
 ```
+
+## isCropped
+
+## cropRegion
 
 ## orientation
 
