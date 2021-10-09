@@ -32,7 +32,7 @@ Return the frame decode results and additional information.
 
 ## imageData
 
-Store the buffered frame data in NSData.
+The property that stores the pixel data of the image.
 
 ```objectivec
 NSData* buffer
@@ -40,7 +40,7 @@ NSData* buffer
 
 ## width
 
-Store the width of the frame.
+The property that store the pixel width of the image.
 
 ```objectivec
 NSInteger width
@@ -48,7 +48,7 @@ NSInteger width
 
 ## height
 
-Store the height of the frame.
+The property that store the pixel height of the image.
 
 ```objectivec
 NSInteger height
@@ -85,7 +85,7 @@ NSInteger frameID
 
 ## quality
 
-The property that stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more in enumeration [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
+The property that stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more about the frame quality in enumeration [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
 
 ```objectivec
 EnumFrameQuality quality

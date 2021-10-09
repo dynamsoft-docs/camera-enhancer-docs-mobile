@@ -42,7 +42,7 @@ class com.dynamsoft.dce.Frame
 
 ## getImageData
 
-Get the pixel data of the `DCEFrame` image.
+Get the pixel data of the image.
 
 ```java
 byte[] getImageData()
@@ -50,11 +50,11 @@ byte[] getImageData()
 
 **Return Value**
 
-The method returns the pixel data of the `DCEFrame` object in a byte list.
+The method returns a byte list that stores the pixel data of the image.
 
 ## getWidth
 
-Get the pixel width of the `DCEFrame` image.
+Get the pixel width of the image.
 
 ```java
 int getWidth()
@@ -62,11 +62,11 @@ int getWidth()
 
 **Return Value**
 
-The method returns the pixel length of the `DCEFrame` image.
+The method returns the pixel length of the image.
 
 ## getHeight
 
-Get the pixel height of the `DCEFrame` image.
+Get the pixel height of the image.
 
 ```java
 int getHeight()
@@ -74,11 +74,11 @@ int getHeight()
 
 **Return Value**
 
-The method returns the pixel height of the `DCEFrame` image.
+The method returns the pixel height of the image.
 
 ## getStrides
 
-Get the stride of the `DCEFrame` image by the Y (luminance) component.
+Get the stride of the image by the Y (luminance) component.
 
 ```java
 int getHeight()
@@ -86,7 +86,7 @@ int getHeight()
 
 **Return Value**
 
-The method returns the YUV components value of the DCEFrame image.
+The method returns the YUV components value of the image.
 
 **Remarks**
 
@@ -94,7 +94,7 @@ The method returns the YUV components value of the DCEFrame image.
 
 ## getPixelFormat
 
-Get the pixel format of the `DCEFrame` image. Currently, the output format of `DCEFrame` is always NV21.
+Get the pixel format of the image. Currently, the image output format of `DCEFrame` is always NV21.
 
 ```java
 int setPixelFormat()
@@ -114,11 +114,11 @@ int setFrameID()
 
 **Return Value**
 
-The method returns an int value that means the `frameID` of the `DCEFrame`.
+The method returns an int value that stores the `frameID` of the image.
 
 ## getQuality
 
-Get the frame quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown.
+Get the frame quality of the image. User have to enable the frame filter feature to get the quality (high/low) of the image. Otherwise, the frame quality will be unknown.
 
 ```java
 EnumFrameQuality setQuality()
@@ -134,7 +134,7 @@ Users can get all the original DCEFrame via `DCEFrameListener` but only high-qua
 
 ## getIsCropped
 
-Get a boolean value that means whether the `DCEFrame` image is cropped. The frames can be cropped if `fast mode` is enabled.
+Get a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled.
 
 ```java
 boolean getIsCropped()
@@ -142,11 +142,11 @@ boolean getIsCropped()
 
 **Return Value**
 
-A boolean value. `True` means the image of `DCEFrame` is cropped and `false` means the image of the `DCEFrame` is an original frame.
+A boolean value. `True` means the image is cropped and `false` means the image of the is an original image.
 
 ## getCropRegion
 
-Get the crop region of the `DCEFrame` image (if the image is cropped).
+Get the crop region of the image (if the image is cropped).
 
 ```java
 Rect getCropRegion()
@@ -154,11 +154,11 @@ Rect getCropRegion()
 
 **Return Value**
 
-A Rect value that stores the crop region. If the `DCEFrame` image is not cropped, the value will be null.
+A Rect value that stores the crop region. If the image is not cropped, the value will be null.
 
 ## getOrientation
 
-Set the orientation of the `DCEFrame` image.
+Set the orientation of the image.
 
 ```java
 int getOrientation()
@@ -166,7 +166,7 @@ int getOrientation()
 
 **Return Value**
 
-Int value that means the rotation angle of the `DCEFrame` image. The value is 0, 90, 180 or 270 with depends on the device orientation.
+Int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation.
 
 <div align="center">
     <p><img src="assets/getOrientation.png" width="70%" alt="getOrientation"></p>
@@ -175,7 +175,7 @@ Int value that means the rotation angle of the `DCEFrame` image. The value is 0,
 
 ## setImageData
 
-Set the pixel data of the `DCEFrame` image.
+Set the pixel data of the image.
 
 ```java
 void setImageData(byte[] imageData)
@@ -187,7 +187,7 @@ void setImageData(byte[] imageData)
 
 ## setWidth
 
-Set the pixel width of the `DCEFrame` object.
+Set the pixel width of the image.
 
 ```java
 void setWidth(int width)
@@ -195,11 +195,11 @@ void setWidth(int width)
 
 **Parameters**
 
-`width`: The pixel value that stands for the width of the `DCEFrame` image.
+`width`: The pixel value that stands for the width of the image.
 
 ## setHeight
 
-Set the pixel height of the `DCEFrame` object.
+Set the pixel height of the image.
 
 ```java
 void setHeight(int height)
@@ -207,11 +207,11 @@ void setHeight(int height)
 
 **Parameters**
 
-`height`: The pixel value that stands for the height of the `DCEFrame` image.
+`height`: The pixel value that stands for the height of the image.
 
 ## setStrides
 
-Set the pixel stride length of the `DCEFrame` object.
+Set the pixel stride length of the image.
 
 ```java
 void setStrides(int[] strides)
@@ -219,11 +219,11 @@ void setStrides(int[] strides)
 
 **Parameters**
 
-`strides`: The pixel values that stand for the strides of the `DCEFrame` image.
+`strides`: The pixel values that stand for the strides of the image.
 
 ## setPixelFormat
 
-Set the pixel format of the `DCEFrame` object.
+Set the pixel format of the image.
 
 ```java
 void setPixelFormat(int pixelFormat)
@@ -231,11 +231,11 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the `DCEFrame`. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
+`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
 
 ## setFrameID
 
-Set the `frameID` of the `DCEFrame` object.
+Set the `frameID` of the image.
 
 ```java
 void setFrameID(int frameID)
@@ -243,11 +243,11 @@ void setFrameID(int frameID)
 
 **Parameters**
 
-`frameID`: An int value that stands for the `frameID` of the `DCEFrame`.
+`frameID`: An int value that stands for the `frameID` of the image.
 
 ## setQuality
 
-Set the frame quality of the `DCEFrame` image.
+Set the frame quality of the image.
 
 ```java
 void setQuality(EnumFrameQuality quality)
@@ -259,7 +259,7 @@ void setQuality(EnumFrameQuality quality)
 
 ## setIsCropped
 
-Set whether the `DCEFrame` image is cropped.
+Set whether the image is cropped.
 
 ```java
 void setIsCropped(boolean isCropped)
@@ -267,11 +267,11 @@ void setIsCropped(boolean isCropped)
 
 **Parameters**
 
-`isCropped`: A boolean value that means whether the `DCEFrame` is cropped.
+`isCropped`: A boolean value that means whether the image is cropped.
 
 ## setCropRegion
 
-Set the crop region of the `DCEframe` image (if the frame is cropped).
+Set the crop region of the image (if the frame is cropped).
 
 ```java
 void setCropRegion(Rect region)
@@ -279,11 +279,11 @@ void setCropRegion(Rect region)
 
 **Parameters**
 
-`cropRegion`: A Rect value that means crop area of the `DCEFrame` image (if the frame is cropped).
+`cropRegion`: A Rect value that means crop area of the image (if the frame is cropped).
 
 ## setOrientation
 
-Set the orientation of the `DCEFrame` image.
+Set the orientation of the image.
 
 ```java
 void setOrientation(int orientation)
@@ -291,4 +291,4 @@ void setOrientation(int orientation)
 
 **Parameters**
 
-`orientation`: Int value that means the rotation angle of the `DCEFrame` image.
+`orientation`: Int value that means the rotation angle of the image.
