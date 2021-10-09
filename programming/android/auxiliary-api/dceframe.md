@@ -334,3 +334,21 @@ void setOrientation(int orientation)
 **Parameters**
 
 `orientation`: Int value that means the rotation angle of the image.
+
+## toBitmap
+
+The method converts the image to `UIImage` to make it visible on the UI.
+
+```java
+Bitmap toBitmap()
+```
+
+**Return Value**
+
+The converted image.
+
+**Code Snippet**
+
+```java
+Bitmap frame = DCEFrame.toBitmap();
+```

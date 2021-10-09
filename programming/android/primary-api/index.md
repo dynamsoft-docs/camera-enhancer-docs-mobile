@@ -102,6 +102,7 @@ String DCEVersion = cameraEnhancer.getVersion();
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
 | [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
 | [`open`](#open) | Turn on the current selected camera. |
 | [`close`](#close) | Turn off the current selected camera. |
 | [`pause`](#pause) | Pause the current selected  camera. |
@@ -153,7 +154,10 @@ cameraEnhancer.selectCamera("BACK_FACING_CAMERA_0");
 
 **Remarks**
 
-There is always a back-facing camera be defined as a default camera. If user don't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
+- There is always a back-facing camera be defined as a default camera. If user don't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
+- If there is no opened camera, the method `selectCamera` will not open any camera.
+- If there is an opened camera and the opened camera's ID is exactly equals the input ID, the method `selectCamera` will make no changes.
+- If there is an opened camera and the opened camera's ID is different with the input ID, the method `selectCamera` will close the currently opened camera and then open a new camera by the input ID.
 
 &nbsp;
 
@@ -162,7 +166,7 @@ There is always a back-facing camera be defined as a default camera. If user don
 Get the ID of the current selected camera.
 
 ```java
-String getSelectedCamera();
+String getSelectedCamera()
 ```
 
 **Return Value**
@@ -174,6 +178,27 @@ The ID of the current selected camera.
 ```java
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
 String selectedCameraID = cameraEnhancer.getSelectedCamera();
+```
+
+&nbsp;
+
+### getCameraState
+
+Get the state of the current selected camera.
+
+```java
+EnumCameraState getCameraState()
+```
+
+**Return Value**
+
+One of the preset camera state in Enumeration `EnumCameraState`.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
+int cameraState = cameraEnhancer.getCameraState();
 ```
 
 &nbsp;
@@ -599,6 +624,8 @@ cameraEnhancer.setResolution(EnumResolution.RESOLUTION_2K);
 &nbsp;
 
 ### getResolution
+
+Get the current resolution.
 
 ```java
 Size getResolution()

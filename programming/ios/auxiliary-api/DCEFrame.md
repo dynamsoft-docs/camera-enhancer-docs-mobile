@@ -17,8 +17,8 @@ Return the frame decode results and additional information.
 @interface DCEFrame : NSObject
 ```
 
-| Attribute Name | Type |
-|------|------|
+| Method & Property Name | Type/Return Value |
+| ---------------------- | ----------------- |
 | [`imageData`](#imagedata) | *NSData* * |
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
@@ -29,6 +29,7 @@ Return the frame decode results and additional information.
 | [`isCropped`](#iscropped) | *BOOL* |
 | [`cropRegion`](#cropregion) | *CGRect* |
 | [`orientation`](#orientation) | *NSInteger* |
+| [`toUIImage`](#touiimage) | *UIImage* * |
 
 ## imageData
 
@@ -114,3 +115,29 @@ NSInteger orientation
     <p><img src="assets/getOrientation.png" width="70%" alt="getOrientation"></p>
     <p>All examples of the orientation</p>
 </div>
+
+## toUIImage
+
+The method converts the image to `UIImage` to make it visible on the UI.
+
+```objc
+- (UIImage*)toUIImage;
+```
+
+**Return Value**
+
+The converted image.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+
+```
+
+Swift:
+
+```swift
+
+```
