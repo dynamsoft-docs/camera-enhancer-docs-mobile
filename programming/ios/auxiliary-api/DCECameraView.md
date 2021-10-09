@@ -17,12 +17,14 @@ breadcrumbText: iOS DCECameraView Class
 @interface DCECameraView: UIView<CALayerDelegate>
 ```
 
-| Method Name | Description |
+| Method/Property Name | Description |
 | ----------- | ----------- |
 | [`initWithView`](#initwithview) | Init the `DCECameraView`. |
 | [`captureWithFrame`](#capturewithframe) | Init the `DCECameraView` with a static method. |
-| [`addTorch`](#addtorch) | Add torch controlling icon |
-| [`addOverlay`](#addoverlay) | Add overlay |
+| [`overlayVisible`](#overlayvisible) | The property stores the BOOL value that controls the visibility of the overlays. |
+| [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
+| [`viewfinderVisible`](#setoverlaycolour) | The property stores the BOOL value that controls the visibility of the viewfinder. |
+| [`setViewfinder`](#setoverlaycolour) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
 
 ## initWithView
 
@@ -48,7 +50,7 @@ dceView = DCECameraView.init(view: self.view.bounds)
 
 ## captureWithFrame
 
-Init the DCECameraView.
+Statically init the DCECameraView.
 
 ```objc
 + (instancetype)captureWithFrame:(CGRect)frame NS_SWIFT_NAME(init(frame:));
@@ -68,62 +70,58 @@ Swift:
 dceView = DCECameraView.init(frame:self.view.bounds)
 ```
 
-## addTorch
+## overlayVisible
 
-Add a torch controlling icon on the view.
-
-```objc
-- (void)addTorch;
-```
-
-**Code Snippet**
-
-Objective-C:
-
-```objectivec
-@property(nonatomic, strong) DCECameraView *dceView;
-//Add a default torch icon
-[_dceView addTorch];
-//Or add a personalized torch icon
-[_dceView addTorchWith:(nonnull UIImage *) TorchOffImg:(nonnull UIImage *) frame:(CGRect)];
-```
-
-Swift:
-
-```swift
-var dceView:DCECameraView! = nil
-//Add a default torch icon
-dceView.addTorch()
-//Or add a personalized torch icon
-dceView.addTorch(with: UIImage, torchOffImg: UIImage, frame: CGRect)
-```
-
-## addOverlay
-
-Add overlay on the view.
+The property stores the BOOL value that controls the visibility of the overlays.
 
 ```objc
-- (void)addOverlay;
+BOOL overlayVisible
 ```
 
-**Code Snippet**
+**Remarks**
 
-Objective-C:
+If the property value is `true`, the `cameraView` will try to draw and display overlays on the interest areas. Otherwise, the `cameraView` will not draw overlays.
 
-```objectivec
-@property(nonatomic, strong) DCECameraView *dceView;
-//Add a default overlay
-[_dceView addOverlay];
-//Add a personalized overlay
-[_dceView addOverlay:(nonnull UIColor *) fill:(nonnull UIColor *)];
+## setOverlayColour
+
+Set the stroke and fill in colour of the overlay(s).
+
+```objc
+- (void)setOverlayColour:(UIColor*)stroke fill:(UIColor*)fill;
 ```
 
-Swift:
+**Parameters**
 
-```swift
-var dceView:DCECameraView! = nil
-//Add a default overlay
-dceView.addOverlay()
-//Add a personalized overlay
-dceView.addOverlay(stroke: UIColor, fill: UIColor)
+`stroke`: The stroke colour of the overlay.  
+`fill`: The fill in colour of the overlay.
+
+## viewfinderVisible
+
+The property stores the BOOL value that controls the visibility of the viewfinder.
+
+```objc
+BOOL viewfinderVisible
 ```
+
+**Remarks**
+
+If the property value is `true`, the `cameraView` will try to create and display a viewfinder. Otherwise, the `cameraView` will not create the viewfinder.
+
+## setViewfinder
+
+Set the attribute of the viewfinder. Currently only available for position and size setting.
+
+```objc
+- (void)setViewfinder:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom;
+```
+
+**Parameters**
+
+`left`: The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
+`top`: The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
+`right`: The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
+`bottom`: The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
+
+**Remarks**
+
+The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
