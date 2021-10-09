@@ -33,8 +33,6 @@ class com.dynamsoft.dce.HardwareUtil
 
 **Code Snippet**
 
-Java:
-
 ```java
 int level;
 level = mCamera.getDeviceLevel();
@@ -44,12 +42,3 @@ if (level == HardwareUtil.DEVICE_LEVEL_LOW){
 }
 ```
 
-Kotlin:
-
-```kotlin
-var level: Int? = mCameraEnhancer!!.deviceLevel
-if(level == HardwareUtil.DEVICE_LEVEL_LOW){
-    mCameraEnhancer!!.enableFrameFilter(true)
-    mCameraEnhancer!!.enableDCEAutoFocus(true)
-}
-```

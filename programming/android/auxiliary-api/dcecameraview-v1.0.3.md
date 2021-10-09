@@ -23,6 +23,8 @@ class com.dynamsoft.dce.CameraView
 | [`removeOverlay`](#removeoverlay) | Remove overlay |
 | [`setBrushColor`](#setbrushcolor) | Set the brush color |
 
+&nbsp;
+
 ## addOverlay
 
 Add overlay on located barcode.
@@ -33,17 +35,11 @@ void addOverlay()
 
 **Code Snippet**
 
-Java:
-
 ```java
 cameraView.addOverlay();
 ```
 
-Kotlin:
-
-```kotlin
-cameraView!!.addOverlay()
-```
+&nbsp;
 
 ## removeOverlay
 
@@ -55,17 +51,11 @@ void removeOverlay()
 
 **Code Snippet**
 
-Java:
-
 ```java
 cameraView.removeOverlay();
 ```
 
-Kotlin:
-
-```kotlin
-cameraView!!.removeOverlay()
-```
+&nbsp;
 
 ## setBrushColor
 
@@ -79,14 +69,6 @@ void setBrushColor(String color)
 
 **Code Snippet**
 
-Java:
-
 ```java
 cameraView.setBrushColor("Put your color string here");
-```
-
-Kotlin:
-
-```kotlin
-cameraView!!.setBrushColor("Put your color string here")
 ```

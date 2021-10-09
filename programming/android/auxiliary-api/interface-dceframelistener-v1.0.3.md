@@ -23,91 +23,98 @@ interface com.dynamsoft.dce.CameraListener
 | [`onPreviewFilterFrame`](#onpreviewfilterframe) | The callback function where you can add code to use the previewed **filtered** frames. |
 | [`onPreviewFastFrame`](#onpreviewfastframe) | The callback function where you can add code to use the previewed **cropped** frames. |
 
+&nbsp;
+
 ## onPreviewOriginalFrame
 
-Add your code to use the previewed `original frames`.
+The callback function where you can add code to use the previewed **original** frames.
 
 ```java
-void onPreviewOriginalFrame(Frame var1);
+void onPreviewOriginalFrame(Frame originalFrame);
 ```
 
 **Parameters**
 
-`Original frames`: The data of original frame(s). The Camera Enhancer can make preprocessing on video frames. In this callback function, the input parameters are the original frames that are captured by the camera.
+`originalFrame`: The data of original frame(s). The Camera Enhancer can make preprocessing on video frames. In this callback function, the input parameters are the original frames that are captured by the camera.
 
 **Code Snippet**
 
 ```java
 cameraEnhancer.addCameraListener(new CameraListener() {
     @Override
-    public void onPreviewOriginalFrame(Frame frame) {
+    public void onPreviewOriginalFrame(Frame originalFrame) {
         // Add your code
     }
     @Override
-    public void onPreviewFilterFrame(Frame frame) {}
+    public void onPreviewFilterFrame(Frame filteredFrame) {}
     @Override
-    public void onPreviewFastFrame(Frame frame) {}
+    public void onPreviewFastFrame(Frame fastFrame) {}
 });
 ```
 
 **See also**
 
-- [`class Frame`]({{site.android-api-auxiliary}}frame.html)
+- [`class Frame`]({{site.android-api-auxiliary}}dceframe.html)
+
+&nbsp;
+
 
 ## onPreviewFilterFrame
 
-Add your code to use the previewed `filtered` frames.
+The callback function where you can add code to use the previewed **filtered** frames.
 
 ```java
-void onPreviewFilterFrame(Frame var1);
+void onPreviewFilterFrame(Frame filteredFrame);
 ```
 
 **Parameters**
 
-`Filtered frames`: The data of filtered frame(s). The Camera Enhancer can make preprocessing on video frames. If the frame filter processing is enabled, the input parameter of this function will be the filtered frames.
+`filteredFrame`: The data of filtered frame(s). The Camera Enhancer can make preprocessing on video frames. If the frame filter processing is enabled, the input parameter of this function will be the filtered frames.
 
 **Code Snippet**
 
 ```java
 cameraEnhancer.addCameraListener(new CameraListener() {
     @Override
-    public void onPreviewOriginalFrame(Frame frame) {}
+    public void onPreviewOriginalFrame(Frame originalFrame) {}
     @Override
-    public void onPreviewFilterFrame(Frame frame) {
+    public void onPreviewFilterFrame(Frame filteredFrame) {
         // Add your code
     }
     @Override
-    public void onPreviewFastFrame(Frame frame) {}
+    public void onPreviewFastFrame(Frame fastFrame) {}
 });
 ```
 
 **See also**
 
-- [`class Frame`]({{site.android-api-auxiliary}}frame.html)  
+- [`class Frame`]({{site.android-api-auxiliary}}dceframe.html)  
 - [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter)
+
+&nbsp;
 
 ## onPreviewFastFrame
 
-Add your code to use the previewed cropped frames.
+The callback function where you can add code to use the previewed **cropped** frames.
 
 ```java
-void onPreviewFastFrame(Frame var1);
+void onPreviewFastFrame(Frame fastFrame);
 ```
 
 **Parameters**
 
-`Fast frames`: The data of cropped frame(s). The Camera Enhancer can make preprocessing on video frames. If the fast mode is enabled, the input parameter of this function will be the specially cropped frames.
+`fastFrame`: The data of cropped frame(s). The Camera Enhancer can make preprocessing on video frames. If the fast mode is enabled, the input parameter of this function will be the specially cropped frames.
 
 **Code Snippet**
 
 ```java
 cameraEnhancer.addCameraListener(new CameraListener() {
     @Override
-    public void onPreviewOriginalFrame(Frame frame) {}
+    public void onPreviewOriginalFrame(Frame originalFrame) {}
     @Override
-    public void onPreviewFilterFrame(Frame frame) {}
+    public void onPreviewFilterFrame(Frame filteredFrame) {}
     @Override
-    public void onPreviewFastFrame(Frame frame) {
+    public void onPreviewFastFrame(Frame fastFrame) {
         // Add your code
     }
 });
@@ -115,5 +122,5 @@ cameraEnhancer.addCameraListener(new CameraListener() {
 
 **See also**
 
-- [`class Frame`]({{site.android-api-auxiliary}}frame.html)
+- [`class Frame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`enableFastMode`]({{site.android-api}}preprocess.html#enablefastmode)

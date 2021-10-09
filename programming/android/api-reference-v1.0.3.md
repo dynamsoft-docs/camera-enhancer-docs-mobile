@@ -85,12 +85,12 @@ noTitleIndex: true
 - [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html)
 - [`Frame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`HardwareUtil`]({{site.android-api-auxiliary}}hardwareutil.html)
-- [`CameraView`]({{site.android-api-auxiliary}}cameraview.html)
+- [`CameraView`]({{site.android-api-auxiliary}}dcecameraview.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
 
 ## Interfaces
 
-- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#cameralistener)
+- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#dceframelistener)
 - [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener)
 - [`TorchListener`]({{ site.android-api-auxiliary }}interface.html#torchlistener)
 

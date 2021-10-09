@@ -32,271 +32,183 @@ class com.dynamsoft.dce.Frame
 | [`getOriW`](#getoriw) | int |
 | [`getOriH`](#getorih) | int |
 
+&nbsp;
+
 ## getData
 
 Get the frame data in byte array.
 
+```java
+byte[] getData()
+```
+
 **Return Value**
 
-`byte[]`: The frame byte data.
+The frame byte data.
 
-**Code Snippet**
 
-Java:
-
-```java
-Frame frame;
-byte[] data = frame.getData();
-```
-
-Kotlin:
-
-```kotlin
-var frame: Frame? = null
-var data: ByteArray? = frame!!.data
-```
+&nbsp;
 
 ## getWidth
 
 Get the frame width in pixels.
 
+```java
+int getWidth()
+```
+
 **Return Value**
 
-`int`: The pixel width of the frame.
+The pixel width of the frame.
 
-**Code Snippet**
 
-Java:
-
-```java
-int width = frame.getWidth();
-```
-
-Kotlin:
-
-```kotlin
-var width: Int? = frame!!.width
-```
+&nbsp;
 
 ## getHeight
 
 Get the frame height in pixels.
 
+```java
+int getHeight()
+```
+
 **Return Value**
 
-`int`: The pixel height of the frame.
+The pixel height of the frame.
 
-**Code Snippet**
 
-Java:
-
-```java
-int height = frame.getHeight(); 
-```
-
-Kotlin:
-
-```kotlin
-var height: Int? = frame!!.height
-```
+&nbsp;
 
 ## getStrides
 
 Get the frame strides.
 
+```java
+int[] getStrides()
+```
+
 **Return Value**
 
-`int[]`: The strides of the frame.
+The strides of the frame.
 
-**Code Snippet**
 
-Java:
-
-```java
-int[] strides = frame.getStrides();
-```
-
-Kotlin:
-
-```kotlin
-var strides: IntArray? = frame!!.strides
-```
+&nbsp;
 
 ## getFormat
 
 Get the frame pixel format.
 
+```java
+int getFormat()
+```
+
 **Return Value**
 
-`int`: The format of the frame.
+The format of the frame.
 
-**Code Snippet**
 
-Java:
-
-```java
-int format = frame.getFormat();
-```
-
-Kotlin:
-
-```kotlin
-var format: Int? = frame!!.format
-```
+&nbsp;
 
 ## getFrameId
 
 Get the frame ID.
 
+```java
+int getFrameId()
+```
+
 **Return Value**
 
-`int`: The ID of the frame.
+The ID of the frame.
 
-**Code Snippet**
 
-Java:
-
-```java
-int frameid = frame.getFrameId(); 
-```
-
-Kotlin:
-
-```kotlin
-var frameid: Int? = frame!!.frameId
-```
+&nbsp;
 
 ## isFastFrame
 
 Check whether the fast mode is enabled.
 
+```java
+boolean isFastFrame()
+```
+
 **Return Value**
 
-`Boolean`: Whether the frame is cropped.
+Whether the frame is cropped.
 
-**Code Snippet**
 
-Java:
-
-```java
-boolean isfastframe = frame.isFastFrame();
-```
-
-Kotlin:
-
-```kotlin
-var isfastframe: Boolean? = frame!!.isFastFrame
-```
+&nbsp;
 
 ## getFastFrameId
 
 Get the fast frame (cropped frame) ID.
 
+```java
+int getFastFrameId()
+```
+
 **Return Value**
 
-`int`: The ID of the fast frame (cropped frame).
+The ID of the fast frame (cropped frame).
 
-**Code Snippet**
 
-Java:
-
-```java
-int fastframeid = frame.getFastFrameId();
-```
-
-Kotlin:
-
-```kotlin
-var fastframeid: Int? = frame!!.fastFrameId
-```
+&nbsp;
 
 ## getCropRect
 
 Get the cropped Rect data (Width & height)
 
+```java
+Rect getCropRect()
+```
+
 **Return Value**
 
-`Rectangle`: The value of the cropped frame.
+The value of the cropped frame.
 
-**Code Snippet**
-
-Java:
-
-```java
-Rect croprect = frame.getCropRect();
-```
-
-Kotlin:
-
-```kotlin
-var croprect: Rect? = frame!!.cropRect
-```
+&nbsp;
 
 ## getOrientation
 
 Get the orientation (of cropped frame).
 
+```java
+int getOrientation()
+```
+
 **Return Value**
+
+The orientation (of cropped frame).
 
 | Orientation of the frame | Value (int) |
 |--------------------------|-------|
 | Vertical | 1 |
 | Horizontal | 2 |
 
-**Code Snippet**
-
-Java:
-
-```java
-int orientation = frame.getOrientation();
-```
-
-Kotlin:
-
-```kotlin
-var orientation: Int? = frame!!.getOrientation
-```
+&nbsp;
 
 ## getOriW
 
 Get the original width of the cropped frame.
 
+```java
+int getOriW()
+```
+
 **Return Value**
 
-`int`: The pixel width of the cropped frame.
+The pixel width of the cropped frame.
 
-**Code Snippet**
-
-Java:
-
-```java
-int originalwidth = frame.getOriW();
-```
-
-Kotlin:
-
-```kotlin
-var originalwidth: Int? = frame!!.getOriW
-```
+&nbsp;
 
 ## getOriH
 
 Get the original width of the cropped frame.
 
+```java
+int getOriH()
+```
+
 **Return Value**
 
-`int`: The pixel height of the cropped frame.
-
-**Code Snippet**
-
-Java:
-
-```java
-int originalheight = frame.getOriH();
-```
-
-Kotlin:
-
-```kotlin
-var originalheight: Int? = frame!!.getOriH
-```
+The pixel height of the cropped frame.

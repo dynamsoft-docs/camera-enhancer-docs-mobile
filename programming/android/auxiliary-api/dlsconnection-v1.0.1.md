@@ -13,18 +13,8 @@ breadcrumbText: Android DMLTSConnectionParameters Class
 
 `DMLTSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the license tracking server.
 
-Java:
-
 ```Java
-private com.dynamsoft.dce.DMLTSConnectionParameters dceParameters;
-dceParameters = new com.dynamsoft.dce.DMLTSConnectionParameters();
-```
-
-Kotlin:
-
-```kotlin
-private var dceParameters: com.dynamsoft.dce.DMLTSConnectionParameters? = null
-dceParameters = com.dynamsoft.dce.DMLTSConnectionParameters()
+class com.dynamsoft.dce.DMLTSConnectionParameters
 ```
 
 | Attribute Name | Type |
@@ -54,21 +44,15 @@ null
 
 **Code Snippet**
 
-Java:
-
 ```java
 dceParameters.mainServerURL = "";
-```
-
-Kotlin:
-
-```kotlin
-dceParameters!!.mainServerURL = ""
 ```
 
 **Remarks**
 
 If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+
+&nbsp;
 
 ## standbyServerURL
 
@@ -84,21 +68,15 @@ null
 
 **Code Snippet**
 
-Java:
-
 ```java
 dceParameters.standbyServerURL = "";
-```
-
-Kotlin:
-
-```kotlin
-dceParameters!!.standbyServerURL = ""
 ```
 
 **Remarks**
 
 If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+
+&nbsp;
 
 ## handshakeCode
 
@@ -114,17 +92,11 @@ null
 
 **Code Snippet**
 
-Java:
-
 ```java
 dceParameters.handshakeCode = "";
 ```
 
-Kotlin:
-
-```kotlin
-dceParameters!!.handshakeCode = ""
-```
+&nbsp;
 
 ## organizationID
 
@@ -138,17 +110,13 @@ Any string value
 
 null
 
-Java:
+**Code Snippet**
 
 ```java
 dceParameters.organizationID = "";
 ```
 
-Kotlin:
-
-```kotlin
-dceParameters!!.organizationID = ""
-```
+&nbsp;
 
 ## sessionPassword
 
@@ -164,17 +132,11 @@ null
 
 **Code Snippet**
 
-Java:
-
 ```java
 dceParameters.sessionPassword = "";
 ```
 
-Kotlin:
-
-```kotlin
-dceParameters!!.sessionPassword = ""
-```
+&nbsp;
 
 ## uuidGenerationMethod
 
@@ -190,21 +152,16 @@ DM_UUIDGM_RANDOM
 
 **Code Snippet**
 
-Java:
-
 ```java
-dceParameters.uuidGenerationMethod = int;
-```
-
-Kotlin:
-
-```kotlin
-dceParameters!!.uuidGenerationMethod = int
+dceParameters.uuidGenerationMethod = EnumCameraDMUUIDGenerationMethod.DM_UUIDGM_RANDOM;
 ```
 
 **See Also**  
 
 [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
+
+&nbsp;
+
 
 ## maxBufferDays
 
@@ -220,17 +177,13 @@ Sets the max days to buffer the license info.
 
 **Code Snippet**
 
-Java:
 
 ```java
-dceParameters.maxBufferDays = int;
+dceParameters.maxBufferDays = 7;
 ```
 
-Kotlin:
 
-```kotlin
-dceParameters!!.maxBufferDays = int
-```
+&nbsp;
 
 ## chargeWay
 
@@ -246,21 +199,15 @@ DM_CW_AUTO
 
 **Code Snippet**
 
-Java:
-
 ```java
-dceParameters.chargeWay = int;
-```
-
-Kotlin:
-
-```kotlin
-dceParameters!!.chargeWay = int
+dceParameters.chargeWay = EnumDMChargeWay.DM_CW_DEVICE_COUNT;
 ```
 
 **See Also**  
 
 [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+
+&nbsp;
 
 ## products
 
@@ -272,16 +219,8 @@ Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumerat
 
 **Code Snippet**
 
-Java:
-
 ```java
-dceParameters.products = int;
-```
-
-Kotlin:
-
-```kotlin
-dceParameters!!.products = int
+dceParameters.products = EnumProduct.PROD_DBR;
 ```
 
 **See Also**  

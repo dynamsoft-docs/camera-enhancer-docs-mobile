@@ -26,13 +26,13 @@ interface com.dynamsoft.dce.CameraDLSLicenseVerificationListener
 The call back of the license server. Add the code in the callback function to react when the license server connection is successful or failed.
 
 ```java
-void DLSLicenseVerificationCallback(boolean var1, Exception var2);
+void DLSLicenseVerificationCallback(boolean isSuccess, Exception error);
 ```
 
 **Parameters**
 
-`[in, out] isSuccess`: Whether the license verification was successful.  
-`[in, out] error`: The error message from the license server.
+`isSuccess`: Whether the license verification was successful.  
+`error`: The error message from the license server.
 
 **Code Snippet**
 

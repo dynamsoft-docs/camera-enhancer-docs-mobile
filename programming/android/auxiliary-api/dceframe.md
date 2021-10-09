@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android Frame Class
-description: This is the documentation - Android Frame Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android, Frame
+title: Dynamsoft Camera Enhancer - Android DCEFrame Class
+description: This is the documentation - Android DCEFrame Class page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android, DCEFrame
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android Frame Class
+breadcrumbText: Android DCEFrame Class
 ---
 
-# Frame
+# DCEFrame
 
-This page is for `Frame` Class. `Frame` parameters store the frame data.
+The `DCEFrame` is the class that stores pixel data and further information.
 
 ```Java
-class com.dynamsoft.dce.Frame
+class com.dynamsoft.dce.DCEFrame
 ```
 
 | Method Name | Type |
@@ -40,6 +40,8 @@ class com.dynamsoft.dce.Frame
 | [`setCropRegion`](#setcropregion) | Rect |
 | [`setOrientation`](#setorientation) | int |
 
+&nbsp;
+
 ## getImageData
 
 Get the pixel data of the image.
@@ -52,6 +54,8 @@ byte[] getImageData()
 
 The method returns a byte list that stores the pixel data of the image.
 
+&nbsp;
+
 ## getWidth
 
 Get the pixel width of the image.
@@ -62,7 +66,9 @@ int getWidth()
 
 **Return Value**
 
-The method returns the pixel length of the image.
+The method returns the pixel width of the image.
+
+&nbsp;
 
 ## getHeight
 
@@ -76,12 +82,14 @@ int getHeight()
 
 The method returns the pixel height of the image.
 
+&nbsp;
+
 ## getStrides
 
 Get the stride of the image by the Y (luminance) component.
 
 ```java
-int getHeight()
+int[] getStrides()
 ```
 
 **Return Value**
@@ -92,36 +100,44 @@ The method returns the YUV components value of the image.
 
 `strides[0]` is the Y component of the image which equals the stride of the image. `strides[1]` and `strides[2]` are the U (blue projection) and V (red projection) components of the image.
 
+&nbsp;
+
 ## getPixelFormat
 
 Get the pixel format of the image. Currently, the image output format of `DCEFrame` is always NV21.
 
 ```java
-int setPixelFormat()
+int getPixelFormat()
 ```
 
 **Return Value**
 
 The method returns an int value that refers to the enumeration value of [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat) (view the enumeration members in Dynamsoft Barcode Reader documents).
 
+&nbsp;
+
+
 ## getFrameID
 
 Get the `frameID` of the `DCEFrame` object.
 
 ```java
-int setFrameID()
+int getFrameID()
 ```
 
 **Return Value**
 
 The method returns an int value that stores the `frameID` of the image.
 
+&nbsp;
+
+
 ## getQuality
 
 Get the frame quality of the image. User have to enable the frame filter feature to get the quality (high/low) of the image. Otherwise, the frame quality will be unknown.
 
 ```java
-EnumFrameQuality setQuality()
+EnumFrameQuality getQuality()
 ```
 
 **Return Value**
@@ -131,6 +147,8 @@ The method returns an enumeration value in [`EnumFrameQuality`]({{site.barcode-e
 **Remarks**
 
 Users can get all the original DCEFrame via `DCEFrameListener` but only high-quality frame can be acquired from the DCE video buffer if frame filter is enabled. In another word, when frame filter feature is enabled, the frame quality will always be high if they are acquired by triggering `getFrameFromBuffer`.
+
+&nbsp;
 
 ## getIsCropped
 
@@ -144,6 +162,8 @@ boolean getIsCropped()
 
 A boolean value. `True` means the image is cropped and `false` means the image has never been cropped.
 
+&nbsp;
+
 ## getCropRegion
 
 Get the crop region of the image (if the image is cropped).
@@ -155,6 +175,8 @@ Rect getCropRegion()
 **Return Value**
 
 A Rect value that stores the crop region. If the image is not cropped, the value will be null.
+
+&nbsp;
 
 ## getOrientation
 
@@ -173,6 +195,8 @@ Int value that means the rotation angle of the image. The value is 0, 90, 180 or
     <p>All examples of the orientation</p>
 </div>
 
+&nbsp;
+
 ## setImageData
 
 Set the pixel data of the image.
@@ -184,6 +208,8 @@ void setImageData(byte[] imageData)
 **Parameters**
 
 `imageData`: A byte list that storing the image pixel data.
+
+&nbsp;
 
 ## setWidth
 
@@ -197,6 +223,8 @@ void setWidth(int width)
 
 `width`: The pixel value that stands for the width of the image.
 
+&nbsp;
+
 ## setHeight
 
 Set the pixel height of the image.
@@ -208,6 +236,8 @@ void setHeight(int height)
 **Parameters**
 
 `height`: The pixel value that stands for the height of the image.
+
+&nbsp;
 
 ## setStrides
 
@@ -221,6 +251,8 @@ void setStrides(int[] strides)
 
 `strides`: The pixel values that stand for the strides of the image.
 
+&nbsp;
+
 ## setPixelFormat
 
 Set the pixel format of the image.
@@ -232,6 +264,8 @@ void setPixelFormat(int pixelFormat)
 **Parameters**
 
 `pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
+
+&nbsp;
 
 ## setFrameID
 
@@ -245,6 +279,8 @@ void setFrameID(int frameID)
 
 `frameID`: An int value that stands for the `frameID` of the image.
 
+&nbsp;
+
 ## setQuality
 
 Set the frame quality of the image.
@@ -256,6 +292,8 @@ void setQuality(EnumFrameQuality quality)
 **Parameters**
 
 `quality`: An `Enumeration` value that means the frame quality. Read more in `EnumFrameQuality`.
+
+&nbsp;
 
 ## setIsCropped
 
@@ -269,6 +307,8 @@ void setIsCropped(boolean isCropped)
 
 `isCropped`: A boolean value that means whether the image is cropped.
 
+&nbsp;
+
 ## setCropRegion
 
 Set the crop region of the image (if the frame is cropped).
@@ -280,6 +320,8 @@ void setCropRegion(Rect region)
 **Parameters**
 
 `cropRegion`: A Rect value that means crop area of the image (if the frame is cropped).
+
+&nbsp;
 
 ## setOrientation
 
