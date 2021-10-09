@@ -42,6 +42,7 @@ resource: /camera-enhancer/docs/resources/
 
 barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhancer/
 barcode-deploy-android: /barcode-reader/programming/android/api-reference/camera-enhancer/
+barcode-enum: /barcode-reader/parameters/enum/
 
 assets: /camera-enhancer/docs/assets/
 edit_icon: /camera-enhancer/docs/assets/img-icon/edit-icon.png

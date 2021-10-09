@@ -62,6 +62,8 @@ void setWidth(int width)
 
 **Parameters**
 
+`width`: The pixel value that stands for the width of the `DCEFrame` image.
+
 ## setHeight
 
 Set the pixel height of the `DCEFrame` object.
@@ -71,6 +73,8 @@ void setHeight(int height)
 ```
 
 **Parameters**
+
+`height`: The pixel value that stands for the height of the `DCEFrame` image.
 
 ## setStrides
 
@@ -82,6 +86,8 @@ void setStrides(int[] strides)
 
 **Parameters**
 
+`strides`: The pixel values that stand for the strides of the `DCEFrame` image.
+
 ## setPixelFormat
 
 Set the pixel format of the `DCEFrame` object.
@@ -91,6 +97,8 @@ void setPixelFormat(int pixelFormat)
 ```
 
 **Parameters**
+
+`pixelFormat`: The pixelFormat of the `DCEFrame`. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
 
 ## setFrameID
 
@@ -102,15 +110,19 @@ void setFrameID(int frameID)
 
 **Parameters**
 
+`frameID`: A int value that stands for the `frameID` of the `DCEFrame`.
+
 ## setQuality
 
 Set the frame quality of the `DCEFrame` image.
 
-**Parameters**
-
 ```java
 void setQuality(EnumFrameQuality quality)
 ```
+
+**Parameters**
+
+`quality`: .
 
 ## setIsCropped
 
