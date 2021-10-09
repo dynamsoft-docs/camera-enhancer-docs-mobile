@@ -107,7 +107,7 @@ Get the IDs of all available cameras.
 
 **Return Value**
 
-An NSArray that inclueds all available cameras. User can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
+An NSArray that includes all available cameras. Users can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
 
 **Code Snippet**
 
