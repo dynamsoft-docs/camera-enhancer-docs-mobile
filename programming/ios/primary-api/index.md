@@ -298,7 +298,7 @@ Turn off the torch.
 | Method | Description |
 | ------ | ----------- |
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance). |
+| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a preciously added listener from the camera enhancer instance. |
 
 &nbsp;
@@ -371,7 +371,7 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value. |
+| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 

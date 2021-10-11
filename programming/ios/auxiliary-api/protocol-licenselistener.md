@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Protocol DCELicenseVerificationDelegate
-description: This is the documentation - iOS Protocol DCELicenseVerificationDelegate page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS Protocol DCELicenseVerificationDelegate
+title: Dynamsoft Camera Enhancer - iOS Protocol DCELicenseVerificationListener
+description: This is the documentation - iOS Protocol DCELicenseVerificationListener page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, iOS Protocol DCELicenseVerificationListener
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
-breadcrumbText: iOS Protocol DCELicenseVerificationDelegate
+breadcrumbText: iOS Protocol DCELicenseVerificationListener
 ---
 
-# DCELicenseVerificationDelegate
+# DCELicenseVerificationListener
 
 Protocol for a delegate to handle callback when license verification message returned.
 
 ```objc
-@protocol DCELicenseVerificationDelegate <NSObject>
+@protocol DCELicenseVerificationListener <NSObject>
 ```
 
 | Method | Type | Description |

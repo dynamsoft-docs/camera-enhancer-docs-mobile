@@ -102,7 +102,7 @@ String DCEVersion = cameraEnhancer.getVersion();
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
 | [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
+| [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`](#open) | Turn on the current selected camera. |
 | [`close`](#close) | Turn off the current selected camera. |
 | [`pause`](#pause) | Pause the current selected  camera. |
@@ -184,7 +184,7 @@ String selectedCameraID = cameraEnhancer.getSelectedCamera();
 
 ### getCameraState
 
-Get the state of the current selected camera.
+Get the state of the currently selected camera.
 
 ```java
 EnumCameraState getCameraState()
@@ -323,8 +323,8 @@ cameraEnhancer.turnOffTorch();
 | Method | Description |
 | ------ | ----------- |
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`](#addlistener) | Add [`DCEFrameListener`](). |
-| [`removeListener`](#removelistener) | Remove [`DCEFrameListener`](). |
+| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
+| [`removeListener`](#removelistener) | Remove a preciously added listener from the camera enhancer instance. |
 
 &nbsp;
 
@@ -350,7 +350,6 @@ The latest frame in the video buffer.
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
 DCEFrame frame = cameraEnhancer.getFrameFromBuffer(false);
 ```
-
 
 &nbsp;
 
@@ -416,9 +415,9 @@ cameraEnhancer.removeListener(listener);
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable DCE features with Enumeration value. |
-| [`disableFeatures`](#disablefeature) | Disable DCE features with Enumeration value. |
-| [`isFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
+| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
 
