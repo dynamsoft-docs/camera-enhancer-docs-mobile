@@ -192,7 +192,7 @@ EnumCameraState getCameraState()
 
 **Return Value**
 
-One of the preset camera state in Enumeration `EnumCameraState`.
+One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumerations}}enum-camera-state.html).
 
 **Code Snippet**
 
@@ -422,10 +422,9 @@ cameraEnhancer.removeListener(listener);
 
 &nbsp;
 
-
 ### enableFeatures
 
-Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
 
 ```java
 void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
@@ -433,7 +432,7 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
 
 **Code Snippet**
 
@@ -461,7 +460,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values.
 
 ```java
 void disableFeatures(int enhancerFeatures)
@@ -469,7 +468,7 @@ void disableFeatures(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
 
 **Code Snippet**
 
@@ -495,7 +494,7 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
 
 **Return Value**
 
@@ -515,7 +514,6 @@ boolean isEnabled = cameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_F
 If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
 
 &nbsp;
-
 
 ## Advanced Camera Control Methods
 
@@ -611,7 +609,7 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration `EnumResolution`.
+`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
 
 **Code Snippet**
 

@@ -174,7 +174,7 @@ Get the state of the current selected camera.
 
 **Return Value**
 
-One of the preset camera state in Enumeration `EnumCameraState`.
+One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumerations}}enum-camera-state.html).
 
 **Code Snippet**
 
@@ -371,15 +371,15 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` value. |
-| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value. |
+| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
 
 ```objc
 - (void)enableFeatures:(EnumEnhancerFeatures)features;
@@ -387,7 +387,7 @@ Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
 
 **Code Snippet**
 
@@ -413,7 +413,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values.
 
 ```objc
 - (void)disableFeatures:(EnumEnhancerFeatures)features;
@@ -421,7 +421,7 @@ Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
 
 **Code Snippet**
 
@@ -445,7 +445,7 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
 
 **Return Value**
 
@@ -533,7 +533,7 @@ Input a target resolution value that preset in Enumeration `Resolution`. The cam
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration `EnumResolution`.
+`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
 
 **Code Snippet**
 
