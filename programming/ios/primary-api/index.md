@@ -39,6 +39,18 @@ The instance of DynamsoftCameraEnhancer.
 
 **Code Snippet**
 
+Objective-C:
+
+```objc
+_dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+```
+
+Swift:
+
+```swift
+
+```
+
 ### initLicense
 
 Sets product key and activate the SDK.
@@ -50,11 +62,19 @@ Sets product key and activate the SDK.
 **Parameters**
 
 `license`: The product key.  
-`verificationListener`: The listener that handle callback when license server returns. See also [`DCELicenseVerificationListener`]().
+`verificationListener`: The listener that handle callback when license server returns. See also [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html).
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+[DynamsoftCameraEnhancer initLicense:@"" verificationDelegate: self];
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -74,7 +94,15 @@ A string value that stands for the camera enhancer SDK version.
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+NSString* version = [_dce getVersion];
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -111,7 +139,15 @@ An NSArray that includes all available cameras. Users can clearly read whether t
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+NSArray<NSString*>* allCameras = [_dce getAllCameras];
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -131,7 +167,15 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+[_dce selectCamera:@"FRONT_FACING_CAMERA"];
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -158,7 +202,15 @@ The ID of the current selected camera.
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+NSString* cameraID = [_dce getSelectedCamera];
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -178,7 +230,15 @@ One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumera
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+EnumCameraState state = [_dce getCameraState];
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -195,7 +255,15 @@ One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumera
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -212,7 +280,15 @@ One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumera
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -229,7 +305,15 @@ One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumera
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -255,7 +339,15 @@ If the `pause` method is triggered:
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -271,7 +363,15 @@ Turn on the torch (if the torch of the mobile device is available).
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -287,7 +387,15 @@ Turn off the torch.
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
