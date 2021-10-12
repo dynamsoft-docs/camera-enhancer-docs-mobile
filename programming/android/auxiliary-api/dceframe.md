@@ -86,7 +86,7 @@ The method returns the pixel height of the image.
 
 ## getStrides
 
-Get the stride of the image by the Y (luminance) component.
+Get the number of row bytes in each image plane (YUV).
 
 ```java
 int[] getStrides()
@@ -94,11 +94,11 @@ int[] getStrides()
 
 **Return Value**
 
-The method returns the YUV components value of the image.
+The number of row bytes in each image plane (YUV).
 
 **Remarks**
 
-`strides[0]` is the Y component of the image which equals the stride of the image. `strides[1]` and `strides[2]` are the U (blue projection) and V (red projection) components of the image.
+`strides[0]` is the stride of Y component in the image. `strides[1]` and `strides[2]` are the strides of the U (blue projection) and V (red projection) components in the image.
 
 &nbsp;
 
@@ -241,7 +241,7 @@ void setHeight(int height)
 
 ## setStrides
 
-Set the pixel stride length of the image.
+Set the number of row bytes in each image plane.
 
 ```java
 void setStrides(int[] strides)
@@ -249,7 +249,7 @@ void setStrides(int[] strides)
 
 **Parameters**
 
-`strides`: The pixel values that stand for the strides of the image.
+`strides`: The number of row bytes in each image plane.
 
 &nbsp;
 
