@@ -48,7 +48,7 @@ _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
 Swift:
 
 ```swift
-
+let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 ```
 
 ### initLicense
@@ -75,7 +75,7 @@ Objective-C:
 Swift:
 
 ```swift
-
+DynamsoftCameraEnhancer.initLicense("", verificationDelegate: self)
 ```
 
 &nbsp;
@@ -103,7 +103,7 @@ NSString* version = [_dce getVersion];
 Swift:
 
 ```swift
-
+let version = dce.getVersion()
 ```
 
 &nbsp;
@@ -148,7 +148,7 @@ NSArray<NSString*>* allCameras = [_dce getAllCameras];
 Swift:
 
 ```swift
-
+let allCameraList = dce.getAllCameras()
 ```
 
 &nbsp;
@@ -170,13 +170,13 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 Objective-C:
 
 ```objc
-[_dce selectCamera:@"FRONT_FACING_CAMERA"];
+[_dce selectCamera:@"BACK_FACING_CAMERA"];
 ```
 
 Swift:
 
 ```swift
-
+dce.selectCamera("BACK_FACING_CAMERA")
 ```
 
 **Remarks**
@@ -211,7 +211,7 @@ NSString* cameraID = [_dce getSelectedCamera];
 Swift:
 
 ```swift
-
+let selectedCamera = dce.getSelectedCamera()
 ```
 
 &nbsp;
@@ -239,7 +239,7 @@ EnumCameraState state = [_dce getCameraState];
 Swift:
 
 ```swift
-
+let cameraState = dce.getCameraState()
 ```
 
 &nbsp;
@@ -258,13 +258,13 @@ Swift:
 Objective-C:
 
 ```objc
-
+[_dce open];
 ```
 
 Swift:
 
 ```swift
-
+dce.open()
 ```
 
 &nbsp;
@@ -283,13 +283,13 @@ Swift:
 Objective-C:
 
 ```objc
-
+[_dce close];
 ```
 
 Swift:
 
 ```swift
-
+dce.close()
 ```
 
 &nbsp;
@@ -308,13 +308,13 @@ Swift:
 Objective-C:
 
 ```objc
-
+[_dce pause];
 ```
 
 Swift:
 
 ```swift
-
+dce.pause()
 ```
 
 **Remarks**
@@ -342,13 +342,13 @@ If the `pause` method is triggered:
 Objective-C:
 
 ```objc
-
+[_dce resume];
 ```
 
 Swift:
 
 ```swift
-
+dce.resume()
 ```
 
 &nbsp;
@@ -366,13 +366,13 @@ Turn on the torch (if the torch of the mobile device is available).
 Objective-C:
 
 ```objc
-
+[_dce turnOnTorch];
 ```
 
 Swift:
 
 ```swift
-
+dce.turnOnTorch()
 ```
 
 &nbsp;
@@ -390,13 +390,13 @@ Turn off the torch.
 Objective-C:
 
 ```objc
-
+[_dce turnOffTorch];
 ```
 
 Swift:
 
 ```swift
-
+dce.turnOffTorch()
 ```
 
 &nbsp;
@@ -429,8 +429,16 @@ The latest frame in the video buffer.
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+dceFrame = [_dce getFrameFromBuffer:true];
+```
+
+Swift:
+
+```swift
+let dceFrame = dce.getFrameFromBuffer()
 ```
 
 &nbsp;
@@ -449,7 +457,15 @@ Add a listener to the `CameraEnhancer` instance. This method will have no effect
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -469,7 +485,15 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 
 **Code Snippet**
 
+Objective-C:
+
 ```objc
+
+```
+
+Swift:
+
+```swift
 
 ```
 
@@ -499,8 +523,16 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce enableFeatures:0x01];
+```
+
+Swift:
+
+```swift
+dce.enableFeatures(0x01)
 ```
 
 **Remarks**
@@ -533,8 +565,16 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.en
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce disableFeatures:0x02];
+```
+
+Swift:
+
+```swift
+dce.disableFeatures(0x02)
 ```
 
 **Remarks**
@@ -564,8 +604,16 @@ A BOOL value that refers to whether all the features you input are enabled.
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+BOOL featureEnabled = [_dce isFeatureEnabled:0x02];
+```
+
+Swift:
+
+```swift
+let featureEnabled = dce.isFeatureEnabled(0x02)
 ```
 
 **Remarks**
@@ -601,8 +649,16 @@ Set the frame rate to the input value (if the input value is available for the d
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce setFrameRate:15];
+```
+
+Swift:
+
+```swift
+dce.setFrameRate(15)
 ```
 
 **Remarks**
@@ -625,8 +681,16 @@ The current frame rate.
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+NSInteger frameRate = [_dce getFrameRate];
+```
+
+Swift:
+
+```swift
+let frameRate = dce.getFrameRate()
 ```
 
 &nbsp;
@@ -645,8 +709,16 @@ Input a target resolution value that preset in Enumeration `Resolution`. The cam
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce setResolution:EnumResolution1080P];
+```
+
+Swift:
+
+```swift
+dce.setResolution(Resolution.EnumResolution1080P)
 ```
 
 &nbsp;
@@ -665,8 +737,16 @@ The size of the current resolution.
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+NSInteger resolution = [_dce getResolution];
+```
+
+Swift:
+
+```swift
+let resolution = dce.getResolution()
 ```
 
 &nbsp;
@@ -685,8 +765,16 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce setZoom:3.0f];
+```
+
+Swift:
+
+```swift
+dce.setZoom(3.0)
 ```
 
 &nbsp;
@@ -705,8 +793,18 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+CGPoint focusPoint = {0.4, 0.5};
+[_dce setFocus:focusPoint];
+```
+
+Swift:
+
+```swift
+let focusPoint = CGPoint(x:0.4, y:0.5)
+dce.setFocus(focusPoint)
 ```
 
 &nbsp;
@@ -725,8 +823,16 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce updateAdvancedSettingsFromFile:@"Put your JSON file path here."];
+```
+
+Swift:
+
+```swift
+dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
 ```
 
 **Remarks**
@@ -749,6 +855,14 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Code Snippet**
 
-```objc
+Objective-C:
 
+```objc
+[_dce updateAdvancedSettingsFromString:@"Put your stringified JSON data here."];
+```
+
+Swift:
+
+```swift
+dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
 ```

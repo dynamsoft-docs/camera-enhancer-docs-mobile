@@ -19,7 +19,7 @@ breadcrumbText: iOS DCECameraView Class
 
 | Method/Property Name | Description |
 | ----------- | ----------- |
-| [`initWithView`](#initwithview) | Init the `DCECameraView`. |
+| [`initWithFrame`](#initwithframe) | Init the `DCECameraView`. |
 | [`captureWithFrame`](#capturewithframe) | Init the `DCECameraView` with a static method. |
 | [`overlayVisible`](#overlayvisible) | The property stores the BOOL value that controls the visibility of the overlays. |
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
@@ -31,7 +31,7 @@ breadcrumbText: iOS DCECameraView Class
 Init the DCECameraView.
 
 ```objc
-- (instancetype)initWithView:(CGRect)frame;
+- (instancetype)initWithFrame:(CGRect)frame;
 ```
 
 **Code Snippet**
@@ -39,13 +39,13 @@ Init the DCECameraView.
 Objective-C:
 
 ```objc
-_dceView = [[DCECameraView alloc] initWithView:<#(CGRect)#>]
+_dceView = [[DCECameraView alloc] initWithView:self.view.bounds]
 ```
 
 Swift:
 
 ```swift
-dceView = DCECameraView.init(view: self.view.bounds)
+let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
 ## captureWithFrame
@@ -61,13 +61,13 @@ Statically init the DCECameraView.
 Objective-C:
 
 ```objc
-_dceView = [DCECameraView captureWithFrame:self.view.bounds];
+_dceView = [DCECameraView cameraWithFrame:self.view.bounds];
 ```
 
 Swift:
 
 ```swift
-dceView = DCECameraView.init(frame:self.view.bounds)
+
 ```
 
 ## overlayVisible
@@ -82,6 +82,20 @@ BOOL overlayVisible
 
 If the property value is `true`, the `cameraView` will try to draw and display overlays on the interest areas. Otherwise, the `cameraView` will not draw overlays.
 
+**Code Snippet**
+
+Objective-C:
+
+```objc
+
+```
+
+Swift:
+
+```swift
+
+```
+
 ## setOverlayColour
 
 Set the stroke and fill in colour of the overlay(s).
@@ -94,6 +108,24 @@ Set the stroke and fill in colour of the overlay(s).
 
 `stroke`: The stroke colour of the overlay.  
 `fill`: The fill in colour of the overlay.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+UIColor* strokeColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
+UIColor* fillColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
+[_dceView setOverlayColour:strokeColor fill:fillColor];
+```
+
+Swift:
+
+```swift
+let strokeColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
+let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
+_dceView = setOverlayColour(strokeColour, fill: fillcolour)
+```
 
 ## viewfinderVisible
 
@@ -121,6 +153,20 @@ Set the attribute of the viewfinder. Currently only available for position and s
 `top`: The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
 `right`: The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
 `bottom`: The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+[_dceView setViewfinder:0.1 top: 0.3 right: 0.9 bottom: 0.7];
+```
+
+Swift:
+
+```swift
+_dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
+```
 
 **Remarks**
 
