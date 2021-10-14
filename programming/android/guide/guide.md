@@ -8,481 +8,267 @@ noTitleIndex: true
 breadcrumbText: Android Guide
 ---
 
-# User Guide on Android (Java & Kotlin)
+# User Guide on Android (Java)
 
 - System Requirements:
   - Supported OS: Android 5 or higher (Android 7 or higher recommended).
   - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_64.
 
+- Environment: Android Studio 3.4+.
+
 ## Installation
 
-1. <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Download Dynamsoft Camera Enhancer</a> to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`.
+If you don’t have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) SDK from the <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `[INSTALLATION FOLDER]`.
 
-2. Create a new Android project in Android Studio.
+## Build Your First Application
 
-3. Put the `.aar` file under the dictionary `/app/libs` in your project.
+The following sample will demonstrate how to acquire a frame from video streaming by DCE.
+>Note: 
+>- The following steps are completed in Android Studio 4.2.
+>- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
 
-4. Add the following code into `build.gradle(Module: app)`.
 
-    ```groovy
+### Create a New Project 
+
+1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
+
+2. Choose the correct template for your project. In this sample, we’ll use `Empty Activity`.
+
+3. When prompted, choose your app name (`HelloWorld`) and set the Save location, Language, and Minimum SDK (21)
+    >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).
+
+### Include the library
+
+There are two ways to include the Dynamsoft Camera Enhancer SDK into your project：
+
+#### Local Binary Dependency
+
+1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
+
+2. Open the file `HelloWorld\app\build.gradle`, and add reference in the dependencies:
+    ```
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.aar'])
+    }
+    ```
+
+3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
+
+4. import the package int the file `MainActivity.java`
+    ```java
+    import com.dynamsoft.dce.*;
+    ```
+
+#### Remote Binary Dependency
+
+1. Open the file `HelloWorld\app\build.gradle`, and add the remote repository:
+    ```
     repositories {
-        flatDir {
-            dirs 'libs'
+        maven {
+            url "https://download2.dynamsoft.com/maven/dce/aar"
         }
     }
     ```
 
-5. Also in `build.gradle(Module: app)` add the reference in dependencies:
+2. Add reference in the dependencies:
+    ```
+    dependencies {
+        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}@aar'
+    }
+    ```
+    >Note:Please replace {version-number} with the correct version number.
 
-    ```groovy
-        implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
+3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
+
+4. import the package in the file `MainActivity.java`
+    ```java
+    import com.dynamsoft.dce.*;
     ```
 
-6. Sync the project with Gradle, then, `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
+### Initialize Dynamsoft Camera Enhancer
 
-## Create a Camera Module
-
-This section is a guide on using Dynamsoft Camera Enhancer to create a simple camera app after installation.
-
-1. Keep working on the project that you have installed DCE. In the project, create a CameraView section in activity_main.xml.
-
-    ```xml
-        <com.dynamsoft.dce.CameraView
-            android:id="@+id/cameraView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="0dp" />
-    ```
-
-2. Set up for your camera in the `cameraView` section. Please add the following code in your activity for the camera. The following code is an example of setting camera view in `MainActivity`
-
-    Java:
+1. Initialize the license
 
     ```java
-    import com.dynamsoft.dce.CameraEnhancer;
-    import com.dynamsoft.dce.CameraState;
-    import com.dynamsoft.dce.DCECameraView;
-    public class MainActivity extends AppCompatActivity {
-        CameraEnhancer mCameraEnhancer;
-        DCECameraView cameraView;
+    CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==", new DCELicenseVerificationListener() {
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);    
-            setContentView(R.layout.activity_main);
-            cameraView = findViewById(R.id.cameraView);
-            mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-            mCameraEnhancer.addCameraView(cameraView);
-            //Initialize your license
-            mCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",new DCELicenseVerificationListener() {
-                @Override
-                public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-                    if(!isSuccess){
-                        error.printStackTrace();
-                    }
-                }
-            });
-            //Turn on the camera
-            mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
-            //Start scanning
-            mCameraEnhancer.startScanning();
-        }
-    }
-    ```
-
-    Kotlin:
-
-    ```kotlin
-    import com.dynamsoft.dce.CameraEnhancer
-    import com.dynamsoft.dce.CameraState
-    import com.dynamsoft.dce.DCECameraView
-
-    class MainActivity : AppCompatActivity() {
-        var cameraView: DCECameraView? = null
-        var mCameraEnhancer: CameraEnhancer? = null
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-            cameraView = findViewById(R.id.cameraView)
-            mCameraEnhancer = CameraEnhancer(this@MainActivity)
-            mCameraEnhancer!!.addCameraView(cameraView)
-            //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer!!.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==") { isSuccess, error ->
-                if (!isSuccess) {
-                    error.printStackTrace()
-                }
+        public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+            if(!isSuccess){
+                error.printStackTrace();
             }
-            mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
-            mCameraEnhancer!!.startScanning()
         }
-    }
-    ```
+    });
+    ```    
 
-3. Run the project. Now your camera module is running. If you have any questions about the program, you can view the `samples` we provided in the package you download to get a better understanding of how it works. Also, you can get help from our online customer service.
+    >Note:
+    >- Network connection is required for the license to work.
+    >- "DLS2***" is a default 7-day trial license used in the sample.
+    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
-## Extend the camera module with DCE functions
+2. Create an instance of Dynamsoft Camera Enhancer
 
-This is a template for users to add DCE camera settings into the newly built camera module.
-
-Java:
-
-```java
-import com.dynamsoft.dce.CameraEnhancer;
-import com.dynamsoft.dce.CameraState;
-import com.dynamsoft.dce.DCECameraView;
-public class MainActivity extends AppCompatActivity {
+    ```java
     CameraEnhancer mCameraEnhancer;
-    DCECameraView cameraView;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);    
-        setContentView(R.layout.activity_main);
-        cameraView = findViewById(R.id.cameraView);
-        mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-        mCameraEnhancer.addCameraView(cameraView);
-        mCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",new DCELicenseVerificationListener() {
-            @Override
-            public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-                if(!isSuccess){
-                    error.printStackTrace();
-                }
-            }
-        });
-        mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
-        mCameraEnhancer.startScanning();
-        //**************The Following parts are newly added*******************
-        //Make device level evaluation on the current device
-        //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
-        int level = mCameraEnhancer.getDeviceLevel();
-        boolean frame_filter = true;
-        boolean auto_focus = true;
-        if (level == 2) {
-            //Disable both autofocus and frame filter on high-level device
-            frame_filter = false;
-            auto_focus = false;
-        }else if (level == 1) {
-            //Disable autofocus on mid-level devices
-            auto_focus = false;
-        }
-        mCameraEnhancer.enableDCEAutoFocus(auto_focus);
-        mCameraEnhancer.enableFrameFilter(frame_filter);
-        //Enable sensor control & fast mode
-        mCameraEnhancer.enableSensorControl(true);        
-        mCameraEnhancer.enableFastMode(true);
-    }
-}
-```
-
-Kotlin:
-
-```kotlin
-import com.dynamsoft.dce.CameraEnhancer
-import com.dynamsoft.dce.CameraState
-import com.dynamsoft.dce.DCECameraView
-
-class MainActivity : AppCompatActivity() {
-    var cameraView: DCECameraView? = null
-    var mCameraEnhancer: CameraEnhancer? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        cameraView = findViewById(R.id.cameraView)
-        mCameraEnhancer = CameraEnhancer(this@MainActivity)
-        mCameraEnhancer!!.addCameraView(cameraView)
-        //Initialize DCE from Dynamsoft License Server
-        mCameraEnhancer!!.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==") { isSuccess, error ->
-            if (!isSuccess) {
-                error.printStackTrace()
-            }
-        }
-        mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
-        mCameraEnhancer!!.startScanning()
-        //**************The Following parts are newly added*******************
-        //Make device level evaluation on the current device
-        //User can set parameters for device level evaluation via API `setAutoModeLevelParam` 
-        val level = mCameraEnhancer!!.deviceLevel
-        var frame_filter = true
-        var auto_focus = true
-        if (level == 2) {
-            //Disable both autofocus and frame filter on high-level device
-            frame_filter = false
-            auto_focus = false
-        } else if (level == 1) {
-            //Disable autofocus on mid-level devices
-            auto_focus = false
-        }
-        mCameraEnhancer!!.enableDCEAutoFocus(auto_focus)
-        mCameraEnhancer!!.enableFrameFilter(frame_filter)
-        //Enable sensor control & fast mode
-        mCameraEnhancer!!.enableSensorControl(true)
-        mCameraEnhancer!!.enableFastMode(true)
-    }
-}
-```
-
-Run the project. Now some DCE functions have been added to the camera module.
-
-## Add decoder to the camera module
-
-This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will handle the decoding.
-
-1. Remember to add `DynamsoftBarcodeReaderAndroid.aar` to your project. Put the `aar` file under the dictionary `/app/libs` and add the following code to the `build.gradle(Module: app)`.
-
-    ```groovy
-        implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
+    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
     ```
 
-2. Add a new text view for the camera module. In the text view, there will be decode results if the project is running successfully.
+### Create Camera View And Control Camera
+
+1. In the Project window, open app > res > layout > `activity_main.xml`, create a DCE camera view section under the root node.
 
     ```xml
-        <com.dynamsoft.dce.CameraView
+    <com.dynamsoft.dce.DCECameraView
         android:id="@+id/cameraView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="0dp" />
-        <!--Add this TextView-->
-        <TextView
-            android:id="@+id/tv_res"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="430dp"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:scrollbars="vertical"
-            android:textColor="@color/white"
-            android:visibility="visible"/>
-        <!---->
     ```
 
-3. Add the following code to the project in the main activity:
-
-    Java:
+2. Initialize the camera view, and bind to the Camera Enhancer object.
 
     ```java
-    import com.dynamsoft.dbr.BarcodeReader;
-    import com.dynamsoft.dbr.BarcodeReaderException;
-    import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener;
-    import com.dynamsoft.dbr.DCESettingParameters;
-    import com.dynamsoft.dbr.TextResultCallback;
-    import com.dynamsoft.dbr.TextResult;
-    import com.dynamsoft.dbr.DMDLSConnectionParameters;
-    import com.dynamsoft.dce.CameraEnhancer;
-    import com.dynamsoft.dce.DCELicenseVerificationListener;
-    import com.dynamsoft.dce.DCECameraView;
+    DCECameraView mCameraView;
 
-    public class MainActivity extends AppCompatActivity {
-        DCECameraView cameraView;            
-        CameraEnhancer mCameraEnhancer;
-        //************Newly added code***************
-        TextResultCallback mTextResultCallback;
-        BarcodeReader reader;
-        TextView tvRes;
-        //*******************************************
+    mCameraView = findViewById(R.id.cameraView);
+    mCameraEnhancer.setCameraView(cameraView);
+    ```
+
+3. Override the MainActivity.onResume and MainActivity.onPause function to open and close camera.
+
+    ```java
+    @Override
+    protected void onResume() {
+        super.onResume();
+        needCapture = false;
+        try {
+            mCameraEnhancer.open();
+        } catch (CameraEnhancerException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        try {
+            mCameraEnhancer.close();
+        } catch (CameraEnhancerException e) {
+            e.printStackTrace();
+        }
+    }
+    ```
+
+### Capture Frame
+
+1. In the Project window, open app > res > layout > `activity_main.xml`, and add a `Button` to capture frame.
+    ```xml
+    <Button
+        android:id="@+id/btn_capture"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/icon_capture"/>
+    ```
+
+2. Add UI variables and event response codes
+
+    ```java
+    // Click to capture a frame
+    private Button btnCapture;
+
+    btnCapture =(Button)findViewById(R.id.btnCapture);
+
+    btnCapture.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // Here we just set a flag, the actual capture action will be executed in the `frameOutputCallback`
+            needCapture = true;
+        }
+    });
+
+    ```
+
+3. Add a frame listener to acquire the latest frame from video streaming. Here we capture a frame and show it on the other activity(`ShowPictureActivity`).
+
+    ```java
+    static DCEFrame mFrame;
+
+    mCameraEnhancer.addListener(new DCEFrameListener() {
+        @Override
+        public void frameOutputCallback(DCEFrame frame, long nowTime) {
+            if(needCapture){
+                needCapture = false;
+                mFrame = frame;
+                Intent intent = new Intent(MainActivity.this,ShowPictureActivity.class);
+                startActivity(intent);
+            }
+        }
+    });
+    ```
+
+### Additional Steps
+
+1. In the Project window, open app > res > layout > `activity_show_picture.xml`, and add a `ImageView`.
+    ```xml
+	<ImageView
+		android:id="@+id/iv_picture"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		/>
+    ```
+
+2. Display the captured frame in ImageView.
+
+    ```java
+    public class ShowPictureActivity extends AppCompatActivity {
+        ImageView ivPicture;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            cameraView = findViewById(R.id.cameraView);
-                
-            //**This line is newly added**
-            tvRes = findViewById(R.id.tv_res);
-            //****************************
-            mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-            mCameraEnhancer.addCameraView(cameraView);
-            //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",new DCELicenseVerificationListener() {
-                @Override
-                public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-                    if(!isSuccess){ error.printStackTrace(); }
-                }
-            });
-            mCameraEnhancer.setDesiredCameraState(CameraState.CAMERA_STATE_ON);
-            mCameraEnhancer.startScanning();
+            setContentView(R.layout.activity_show_picture);
+            ivPicture = findViewById(R.id.iv_picture);
 
-            //Make device level evaluation on the current device
-            //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
-            int level = mCameraEnhancer.getDeviceLevel();
-            boolean frame_filter = true;
-            boolean auto_focus = true;
-            if (level == 2) {
-                //Disable both autofocus and frame filter on high-level device
-                frame_filter = false;
-                auto_focus = false;
-            }else if (level == 1) {
-                //Disable autofocus on mid-level devices
-                auto_focus = false;
-            }
-            mCameraEnhancer.enableDCEAutoFocus(auto_focus);
-            mCameraEnhancer.enableFrameFilter(frame_filter);
-            //Enable sensor control & fast mode
-            mCameraEnhancer.enableSensorControl(true);        
-            mCameraEnhancer.enableFastMode(true);
+            // Convert to Bitmap from the captured frame.
+            Bitmap bitmap = MainActivity.mFrame.toBitmap();
 
-            //******************The following parts are newly added******************************
-            //Initialize Dynamsoft Barcode Reader from Dynamsoft License Server
-            try {
-                reader = new BarcodeReader();
-                com.dynamsoft.dbr.DMDLSConnectionParameters parameters = new com.dynamsoft.dbr.DMDLSConnectionParameters();
-                parameters.organizationID = "Put your organizationID here.";
-                reader.initLicenseFromDLS(parameters, new DBRDLSLicenseVerificationListener() {
-                    @Override
-                    public void DCELicenseVerificationCallback(boolean b, Exception e) {
-                        if (!b) { e.printStackTrace(); }
-                    }
-                });
-            } catch (BarcodeReaderException e) {
-                e.printStackTrace();
+            // Rotate it to the nature device orientation.
+            bitmap = rotateBitmap(bitmap, frame.getOrientation());
+
+            // Display it in ImageView
+            ivPicture.setImageBitmap(bitmap);
+        }
+
+        private Bitmap rotateBitmap(Bitmap origin, float degree) {
+            if (origin == null) {
+                return null;
             }
-            //Get the text result from Dynamsoft Barcode Reader
-            mTextResultCallback = new TextResultCallback() {
-                @Override
-                public void textResultCallback(int i, TextResult[] textResults, Object o) {
-                    showResult(textResults);
-                }
-            };                
-            //Set DCE setting parameters in Dynamsoft Barcode Reader
-            DCESettingParameters dceSettingParameters = new DCESettingParameters();
-            dceSettingParameters.cameraInstance = mCameraEnhancer;
-            dceSettingParameters.textResultCallback = mTextResultCallback;
-            //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
-            reader.SetCameraEnhancerParam(dceSettingParameters);
-        }
-        //Start DCE on resume
-        @Override
-        public void onResume() {
-            reader.StartCameraEnhancer();
-            super.onResume();
-        }
-        //Stop DCE on pause
-        @Override
-        public void onPause() {
-            reader.StopCameraEnhancer();
-            super.onPause();
-        }
-        //This is the function for displaying decode result on the screen
-        private void showResult(TextResult[] results) {
-            if (results != null && results.length > 0) {
-                String strRes = "";
-                for (int i = 0; i < results.length; i++)
-                    strRes += results[i].barcodeText + "\n\n";
-                tvRes.setText(strRes);
-            }
+            int width = origin.getWidth();
+            int height = origin.getHeight();
+            Matrix matrix = new Matrix();
+            matrix.setRotate(degree);
+            Bitmap newBM = Bitmap.createBitmap(origin, 0, 0, width, height, matrix, false);
+            origin.recycle();
+            return newBM;
         }
     }
     ```
 
-    Kotlin:
+You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
 
-    ```kotlin
-    import com.dynamsoft.dbr.TextResultCallback
-    import com.dynamsoft.dbr.BarcodeReader
-    import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
-    import com.dynamsoft.dbr.BarcodeReaderException
-    import com.dynamsoft.dbr.TextResult
-    import com.dynamsoft.dbr.DCESettingParameters
-    import com.dynamsoft.dbr.DMDLSConnectionParameters
-    import com.dynamsoft.dce.CameraEnhancer
-    import com.dynamsoft.dce.DCELicenseVerificationListener
-    import com.dynamsoft.dce.DCECameraView
+### Build and Run the Project
 
-    class MainActivity : AppCompatActivity() {
-        var cameraView: DCECameraView? = null
-        var mCameraEnhancer: CameraEnhancer? = null
+1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
-        //************Newly added code***************
-        var mTextResultCallback: TextResultCallback? = null
-        var reader: BarcodeReader? = null
-        var tvRes: TextView? = null
+2. Click `Run app` button, then Android Studio installs your app on your connected device and starts it.
 
-        //*******************************************
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-            cameraView = findViewById(R.id.cameraView)
+## What's next?
 
-            //**This line is newly added**
-            tvRes = findViewById(R.id.tv_res)
-            //****************************
-            mCameraEnhancer = CameraEnhancer(this@MainActivity)
-            mCameraEnhancer!!.addCameraView(cameraView)
-            //Initialize DCE from Dynamsoft License Server
-            mCameraEnhancer!!.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==") { isSuccess, error ->
-                if (!isSuccess) {
-                    error.printStackTrace()
-                }
-            }
-            mCameraEnhancer!!.setDesiredCameraState(CameraState.CAMERA_STATE_ON)
-            mCameraEnhancer!!.startScanning()
+### How to integration with barcode reader
 
-            //Make device level evaluation on the current device
-            //User can set parameters for device level evaluation via API `setAutoModeLevelParam`
-            val level = mCameraEnhancer!!.deviceLevel
-            var frame_filter = true
-            var auto_focus = true
-            if (level == 2) {
-                //Disable both autofocus and frame filter on high-level device
-                frame_filter = false
-                auto_focus = false
-            } else if (level == 1) {
-                //Disable autofocus on mid-level devices
-                auto_focus = false
-            }
-            mCameraEnhancer!!.enableDCEAutoFocus(auto_focus)
-            mCameraEnhancer!!.enableFrameFilter(frame_filter)
-            //Enable sensor control & fast mode
-            mCameraEnhancer!!.enableSensorControl(true)
-            mCameraEnhancer!!.enableFastMode(true)
+<a href="https://www.dynamsoft.com/barcode-reader/programming/android/user-guide.html?utm_source=docs" target="_blank">This article</a> guides you to integrate barcode reader function into your app.
 
-            //******************The following parts are newly added******************************
-            //Initialize Dynamsoft Barcode Reader from Dynamsoft License Server
-            try {
-                reader = BarcodeReader()
-                val parameters = DMDLSConnectionParameters()
-                parameters.organizationID = "Put your organizationID here."
-                reader!!.initLicenseFromDLS(parameters) { b, e ->
-                    if (!b) {
-                        e.printStackTrace()
-                    }
-                }
-            } catch (e: BarcodeReaderException) {
-                e.printStackTrace()
-            }
-            //Get the text result from Dynamsoft Barcode Reader
-            mTextResultCallback = TextResultCallback { i, textResults, o -> showResult(textResults) }
-            //Set DCE setting parameters in Dynamsoft Barcode Reader
-            val dceSettingParameters = DCESettingParameters()
-            dceSettingParameters._cameraInstance = mCameraEnhancer
-            dceSettingParameters._textResultCallback = mTextResultCallback
-            //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
-            reader!!.SetCameraEnhancerParam(dceSettingParameters)
-        }
 
-        //Start DCE on resume
-        public override fun onResume() {
-            reader!!.StartCameraEnhancer()
-            super.onResume()
-        }
-
-        //Stop DCE on pause
-        public override fun onPause() {
-            reader!!.StopCameraEnhancer()
-            super.onPause()
-        }
-
-        //This is the function for displaying decode result on the screen
-        private fun showResult(results: Array<TextResult>?) {
-            if (results != null && results.size > 0) {
-                var strRes = ""
-                for (i in results.indices) strRes += """
-        ${results[i].barcodeText}
-        
-        
-        """.trimIndent()
-                tvRes!!.text = strRes
-            }
-        }
-    }
-    ```
-
-4. Run the project, now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.
