@@ -33,7 +33,7 @@ breadcrumbText: Android 2.x Release Notes
 #### Breaking Change(s)
 
 - Added method [`initLicense`]({{site.android-api}}index.html#initlicense) to replace `initLicenseFromDLS`.
-- Upgraded the [`basic camera-control APIs`]({{site.android-api}}index.html#basic-Camera-control-methods).
+- Upgraded the [`basic camera-control APIs`]({{site.android-api}}index.html#basic-camera-control-methods).
 - Upgraded the usage of [`camera enhancer features`]({{site.android-api}}index.html#enhanced-features).
 - Renamed class `CameraView` to [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html). The features of the class are extended as well.
 - Renamed class `Frame` to [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html). The features of the class are extended as well.
