@@ -22,6 +22,12 @@ If you don’t have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK
 
 ## Build Your First Application with Dynamsoft Camera Enhancer
 
+The following sample will demonstrate how to acquire a frame from video streaming by DCE.
+
+> Note:
+> - You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
+> - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/master/android/).
+
 ### Create a New Project and Include Dynamsoft Camera Enhancer
 
 1. Create a new Objective-C or Swift project.
