@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android Release Note
-description: This is the documentation - Android Release Note page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android Release Note
+title: Dynamsoft Camera Enhancer - Android 1.x Release Note
+description: This is the documentation - Android 1.x Release Note page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android 1.x Release Note
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: Android Release Note
+breadcrumbText: Android 1.x Release Note
 ---
 
-# Release Note for Android
+# Release Notes - Android 1.x
 
 ## 1.0.3 (07/20/2021)
 
