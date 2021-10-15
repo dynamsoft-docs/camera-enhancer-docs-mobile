@@ -13,14 +13,14 @@ breadcrumbText: API Reference
 
 ## Methods and Properties
 
-### Instantiation
+### Initialization
 
 | API Name | Description |
 |---|---|
-| [createInstance()](instantiation.md#createinstance) | Creates a `CameraEnhancer` instance. |
-| [defaultUIElementURL](instantiation.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
-| [getUIElement()](instantiation.md#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
-| [setUIElement()](instantiation.md#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
+| [createInstance()](initialization.md#createinstance) | Creates a `CameraEnhancer` instance. |
+| [defaultUIElementURL](initialization.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [getUIElement()](initialization.md#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
+| [setUIElement()](initialization.md#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
 
 ### Camera Control
 

@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Instantiation
-description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Instantiation.
-keywords: camera enhancer, instantiation, javascript, js
+title: Dynamsoft Camera Enhancer JavaScript API - Initialization
+description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Initialization.
+keywords: camera enhancer, initialization, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Instantiation
+breadcrumbText: Initialization
 ---
 
-# Instantiation APIs
+# Initialization APIs
 
 | API Name | Description |
 |---|---|
