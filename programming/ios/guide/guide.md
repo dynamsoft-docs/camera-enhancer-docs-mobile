@@ -69,13 +69,15 @@ var dceView:DCECameraView! = nil
 Objective-C:
 
 ```objc
-- (void)configuration{
+- (void)configurationDCE{
   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
   [self.view.addSubView:_dceView];
-  // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
+  /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.*/
   [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
   [_dce open];
+  [_dce addListener:self];
+  [_dce setFrameRate:30];
 }
 ```
 
@@ -89,17 +91,14 @@ func configurationDCE() {
   DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
   dce = DynamsoftCameraEnhancer.init(view: dceView)
   dce.open()
-  self.addbutton()
+  dce.setFrameRate(30)
+  dce.addListener(self)
 }
 ```
 
 Now, DCE and CameraView instance are created. You can control the and add elements on the view via DCE high-level APIs.
 
 ### Capture Frame(s)
-
-Dynamsoft Camera Enhancer provides 2 solutions for you to get the frames from the video streaming. `FrameOutputCallback` is a callback method in `DCEFrameListener`, from which you can get continuous video frames that captured by the camera. In addition, there is a method `getFrameFromBuffer` for you to get a single frame from the video buffer when the method is triggered.
-
-On this page, you will be guide on how to use the `getFrameFromBuffer` to acquire a single frame and save it as an image when using Dynamsoft Camera Enhancer.
 
 1. Add a button on the UI to trigger the image capture.
 
@@ -123,13 +122,14 @@ Objective-C:
 Swift:
 
 ```swift
-func addbutton() {
+func configurationUI() {
   let w = UIScreen.main.bounds.size.width
   let h = UIScreen.main.bounds.size.height
   let safeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
   photoButton = UIButton(frame: CGRect(x:w / 2 - 60, y: h - 170 - safeAreaBottomHeight, width: 120, height: 120))
   photoButton.adjustsImageWhenDisabled = false
   photoButton.setImage(UIImage(named: "icon_capture"), for: .normal)
+  self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
   photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
   DispatchQueue.main.async {
     self.view.addSubview(self.photoButton)
@@ -153,11 +153,19 @@ Objective-C:
 Swift:
 
 ```swift
-@objc func takePictures() {
-  NotificationCenter.default.addObserver(self, selector: #selector(handleOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-  /*Get Frame*/
-  let dceframe:DCEFrame = dce.getFrameFromBuffer(false)
-  image = dceframe.toUIImage()
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
+  if isview {
+    isview = false
+    DispatchQueue.main.async {
+      self.photoButton?.isEnabled = false
+      var image:UIImage!
+      image = frame.toUIImage()
+      image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+      self.imageView.image = image
+      self.view.addSubview(self.imageView)
+      self.addBack()
+    }
+  }
 }
 ```
 
