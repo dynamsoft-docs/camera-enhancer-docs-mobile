@@ -18,13 +18,17 @@ breadcrumbText: iOS Guide
 
 ## Installation
 
-## Add Dynamsoft Camera Enhancer to Your Project
+If you don’t have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK from<a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `INSTALLATION FOLDER`.
 
-1. <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
+## Build Your First Application with Dynamsoft Camera Enhancer
 
-2. Create a new Objective-C or Swift project.
+### Create a New Project and Include Dynamsoft Camera Enhancer
 
-3. Add DynamsoftCameraEnhancer.framework in your Xcode project.
+1. Create a new Objective-C or Swift project.
+
+2. Drag and drop the `DynamsoftCameraEnhancer.framework` into your Xcode project. Make sure to `check Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
+
+3. Click on the project. Go to the `General --> Frameworks --> Libraries and Embedded Content`. Set the `embed type` to `Embed & Sign`.
 
 4. Import Dynamsoft Camera Enhancer
 
@@ -42,7 +46,7 @@ import DynamsoftCameraEnhancer
 
 Now Dynamsoft Camera Enhancer is added to your project.
 
-## Initialize the Camera View and Control the Camera
+### Initialize the Camera View and Control the Camera
 
 1. Delcare the DCE & DCECameraView property.
 
@@ -91,7 +95,7 @@ func configurationDCE() {
 
 Now, DCE and CameraView instance are created. You can control the and add elements on the view via DCE high-level APIs.
 
-## Capture Frame(s)
+### Capture Frame(s)
 
 Dynamsoft Camera Enhancer provides 2 solutions for you to get the frames from the video streaming. `FrameOutputCallback` is a callback method in `DCEFrameListener`, from which you can get continuous video frames that captured by the camera. In addition, there is a method `getFrameFromBuffer` for you to get a single frame from the video buffer when the method is triggered.
 
@@ -220,3 +224,5 @@ func addBack(){
   self.navigationItem.leftBarButtonItem = nil
 }
 ```
+
+Run the project. Now, you first app with Dynamsoft Camera Enhancer is completed.
