@@ -19,4 +19,4 @@ needGenerateH3Content: true
 
 ## Release Notes
 
-* [Version 2.x](release-notes/index.md)
+* [Version 2.x](release-note/index.md)
