@@ -100,18 +100,26 @@ Now, DCE and CameraView instance are created. You can control the and add elemen
 
 ### Capture Frame(s)
 
-1. Add a button on the UI to trigger the image capture.
+Dynamsoft Camera Enhancer provides two solutions on fetching the video frames:
+
+- Use the method [`getFrameFromBuffer`]({{site.ios-api}}index.html#getframefrombuffer) to fetch a single frame from the video buffer.
+- Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
+
+On this page, you will be guide on how to get a raw frame from the video streaming and convert it into a visible image so that you can display it on the UI.
+
+1. Add a capture button on the UI.
 
 Objective-C:
 
 ```objc
-- (void)addbutton{
+- (void)configurationUI{
   CGFloat w = [[UIScreen mainScreen] bounds].size.width;
   CGFloat h = [[UIScreen mainScreen] bounds].size.height;
   CGFloat SafeAreaBottomHeight = [[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 34 : 0;
   photoButton = [[UIButton alloc] initWithFrame:CGRectMake(w / 2 - 60, h - 170 - SafeAreaBottomHeight, 120, 120)];
   photoButton.adjustsImageWhenDisabled = NO;
   [photoButton setImage:[UIImage imageNamed:@"icon_capture"] forState:UIControlStateNormal];
+  self->imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
   [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
   dispatch_async(dispatch_get_main_queue(), ^{
     [self.view addSubview:self->photoButton];
@@ -137,16 +145,48 @@ func configurationUI() {
 }
 ```
 
-2. Fetch the frames and convert them to visible images.
+2. Add the trigger of the capture button.
 
 Objective-C:
 
 ```objc
+/*Declare a BOOL value to control the capture*/
+bool isview;
+/*Add a method to trigger the capture*/
 - (void)takePictures{
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOrientationDidChange) name:UIDeviceOrientationDidChangeNotification object:nil];
-  /*Get Frame*/
-  DCEFrame *dceframe = [_dce getFrameFromBuffer:false];
-  UIImage *image = dceframe.toUIImage;
+  isview = true;
+}
+```
+
+Swift:
+
+```swift
+/*Declare a BOOL value to control the capture*/
+var isview:Bool = false
+/*Add a method to trigger the capture*/
+func takePictures() {
+  isview = true;
+}
+```
+
+3. Fetch the frames from the callback. Convert the frame to a visible image and display it on the view if the capture button is triggered.
+
+Objective-C:
+
+```objc
+- (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
+  if (isview) {
+    isview = false;
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self->photoButton setEnabled:false];
+      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+                                                  scale: 1.0
+                                            orientation: UIImageOrientationRight];
+      [self->imageView setImage:image];
+      [self.view addSubview:self->imageView];
+      [self addBack];
+    });
+  }
 }
 ```
 
@@ -169,34 +209,17 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
 }
 ```
 
-3. Display the image on the view and add an additional button.
+4. Configure a BackToHome button.
 
 Objective-C:
 
 ```objc
-- (void)takePictures{
-  /*
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOrientationDidChange) name:UIDeviceOrientationDidChangeNotification object:nil];
-    [photoButton setEnabled:false];
-    
-    DCEFrame *dceframe = [_dce getFrameFromBuffer:false];
-    UIImage *image = dceframe.toUIImage;
-  */
-
-  CGFloat w = [[UIScreen mainScreen] bounds].size.width;
-  CGFloat h = [[UIScreen mainScreen] bounds].size.height;
-  resImageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];    
-  [resImageview setImage:image];
-  [self.view addSubview:resImageview];
-  [self addBack];
-}
-
 - (void)addBack{
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
 }
 
 - (void)BackToHome{
-  [resImageview removeFromSuperview];
+  [imageView removeFromSuperview];
   self.navigationItem.leftBarButtonItem = nil;
   [photoButton setEnabled:true];
 }
@@ -205,29 +228,12 @@ Objective-C:
 Swift:
 
 ```swift
-@objc func takePictures() {
-  /*
-  NotificationCenter.default.addObserver(self, selector: #selector(handleOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-  self.photoButton?.isEnabled = false
-        
-  let dceframe:DCEFrame = dce.getFrameFromBuffer(false)
-  var image:UIImage!
-  image = dceframe.toUIImage()
-  */
-  let w = UIScreen.main.bounds.size.width
-  let h = UIScreen.main.bounds.size.height
-  resImageview = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))       
-  resImageview.image = image
-  self.view.addSubview(resImageview)
-  self.addBack()
-}
-    
 func addBack(){
   self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
 }
     
 @objc func backToHome(){
-  self.resImageview.removeFromSuperview()
+  self.imageView.removeFromSuperview()
   self.photoButton?.isEnabled = true
   self.navigationItem.leftBarButtonItem = nil
 }
