@@ -30,6 +30,11 @@ android-api-auxiliary: /camera-enhancer/docs/programming/android/auxiliary-api/
 android-release-note: /camera-enhancer/docs/programming/android/release-note/
 android-cameraenhancer: /camera-enhancer/docs/programming/android/primary-api/cameraenhancer/
 
+js: /camera-enhancer/docs/programming/javascript/
+js-guide: /camera-enhancer/docs/programming/javascript/user-guide/
+js-api: /camera-enhancer/docs/programming/javascript/api-referecne/
+js-rn: /camera-enhancer/docs/programming/javascript/release-note/
+
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/
 
