@@ -25,7 +25,7 @@ breadcrumbText: Android 1.x Release Note
 - Added a new property [`products`]({{ site.android-api-auxiliary }}lts-connection.html#products) in class `DMLTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`]({{ site.enumerations }}enumproduct.html).
 
-## 1.0 (04/29/2021)
+## 1.0.0 (04/29/2021)
 
 - Video frame queue is available.
 - Supports frame cropping mode.

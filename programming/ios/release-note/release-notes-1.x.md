@@ -29,7 +29,7 @@ breadcrumbText: iOS Release Note
 - Added a new property [`products`]({{ site.ios-api-auxiliary }}ltsconnection.html#products) in class `iDCELTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`]({{ site.enumerations }}enumproduct.html).
 
-## 1.0 (04/29/2021)
+## 1.0.0 (04/29/2021)
 
 - Video frame queue is available.
 - Supports frame cropping mode.
