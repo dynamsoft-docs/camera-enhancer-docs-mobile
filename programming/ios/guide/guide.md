@@ -85,7 +85,65 @@ Dynamsoft Camera Enhancer provides 2 solutions for you to get the frames from th
 
 On this page, you will be guide on how to use the `getFrameFromBuffer` to acquire a single frame and save it as an image when using Dynamsoft Camera Enhancer.
 
-1. Add a Capture Button:
+1. Add a Button to Save the Image.
+
+Objective-C:
+
+```objc
+- (void)addbutton{
+    CGFloat w = [[UIScreen mainScreen] bounds].size.width;
+    CGFloat h = [[UIScreen mainScreen] bounds].size.height;
+    CGFloat SafeAreaBottomHeight = [[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 34 : 0;
+    photoButton = [[UIButton alloc] initWithFrame:CGRectMake(w / 2 - 60, h - 170 - SafeAreaBottomHeight, 120, 120)];
+    photoButton.adjustsImageWhenDisabled = NO;
+    [photoButton setImage:[UIImage imageNamed:@"icon_capture"] forState:UIControlStateNormal];
+    [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.view addSubview:self->photoButton];
+    });
+}
+```
+
+Swift:
+
+```swift
+func addbutton() {
+  let w = UIScreen.main.bounds.size.width
+  let h = UIScreen.main.bounds.size.height
+  let safeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
+  photoButton = UIButton(frame: CGRect(x:w / 2 - 60, y: h - 170 - safeAreaBottomHeight, width: 120, height: 120))
+  photoButton.adjustsImageWhenDisabled = false
+  photoButton.setImage(UIImage(named: "icon_capture"), for: .normal)
+  photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
+  DispatchQueue.main.async {
+    self.view.addSubview(self.photoButton)
+  }
+}
+```
+
+2. Add Code to Fetch and Save the Frame.
+
+Objective-C:
+
+```objc
+- (void)takePictures{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOrientationDidChange) name:UIDeviceOrientationDidChangeNotification object:nil];
+    /*Get Frame*/
+    DCEFrame *dceframe = [_dce getFrameFromBuffer:false];
+}
+```
+
+Swift:
+
+```swift
+@objc func takePictures() {
+  NotificationCenter.default.addObserver(self, selector: #selector(handleOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+  /*Get Frame*/
+  let dceframe:DCEFrame = dce.getFrameFromBuffer(false)
+}
+```
+
+3. Add Code to Convert the Frame to visible image.
 
 Objective-C:
 
@@ -96,10 +154,20 @@ Objective-C:
 Swift:
 
 ```swift
+/*
+@objc func takePictures() {
+  NotificationCenter.default.addObserver(self, selector: #selector(handleOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
 
+  let dceframe:DCEFrame = dce.getFrameFromBuffer(false)
+  var image:UIImage!
+*/
+  image = dceframe.toUIImage()
+/*
+}
+*/
 ```
 
-2. Add Method for the Button
+4. Display the Saved Image on the View
 
 Objective-C:
 
