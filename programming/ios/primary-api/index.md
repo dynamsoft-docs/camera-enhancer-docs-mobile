@@ -460,13 +460,13 @@ Add a listener to the `CameraEnhancer` instance. This method will have no effect
 Objective-C:
 
 ```objc
-
+[_dce addListener:self];
 ```
 
 Swift:
 
 ```swift
-
+dce.addListener(self)
 ```
 
 &nbsp;
@@ -488,13 +488,13 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 Objective-C:
 
 ```objc
-
+[_dce removeListener];
 ```
 
 Swift:
 
 ```swift
-
+dce.removeListener()
 ```
 
 &nbsp;
