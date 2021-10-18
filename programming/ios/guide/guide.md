@@ -246,3 +246,9 @@ func addBack(){
 ```
 
 Run the project. Now, you first app with Dynamsoft Camera Enhancer is completed.
+
+## What's Next?
+
+### How to integration with barcode reader
+
+<a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/user-guide.html?utm_source=docs" target="_blank">This article</a> guides you to integrate the barcode reader function into your app.
