@@ -91,7 +91,7 @@ singleFrameMode: boolean
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.createInstance();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 enhancer.singleFrameMode = true;
 await enhancer.open();
 ```
@@ -111,7 +111,7 @@ onSingleFrameAcquired: (frameData: DCEFrame) => {}
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.createInstance();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 enhancer.onSingleFrameAcquired = frameData => {
     document.body.appendChild(frameData.canvas);
 };

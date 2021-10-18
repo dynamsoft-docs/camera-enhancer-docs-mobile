@@ -37,7 +37,7 @@ A promise resolving to the created `CameraEnhancer` object.
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.createInstance();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 ```
 
 ## defaultUIElementURL
@@ -51,8 +51,8 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DCE.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.0/dist/dce.ui.html";
-let enhancer = await Dynamsoft.DCE.createInstance();
+Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.0/dist/dce.ui.html";
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.open();
 ```
 
@@ -78,7 +78,7 @@ The HTML element used as the UI by the [CameraEnhancer](#CameraEnhancer) instanc
 <!-- Define an element to hold the UI element -->
 <div id="enhancerUIContainer"></div>
 <script>
-    let enhancer = await Dynamsoft.DCE.createInstance();
+    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
     await enhancer.open();
 </script>
@@ -106,7 +106,7 @@ A promise that resolves when the operation succeeds.
 <!-- Define an element that shows only the video input -->
 <video class="dce-video" playsinline="true"></video>
 <script>
-    let enhancer = await Dynamsoft.DCE.createInstance();
+    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     await enhancer.setUIElement(document.getElementsByClassName("dce-video")[0]);
     await enhancer.open();
 </script>
@@ -115,7 +115,7 @@ A promise that resolves when the operation succeeds.
 ```html
 <!-- Use the default official UI element definition -->
 <script>
-    let enhancer = await Dynamsoft.DCE.createInstance();
+    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.0/dist/dce.ui.html");
     await enhancer.open();
 </script>
