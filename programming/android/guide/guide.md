@@ -90,7 +90,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 1. Initialize the license
 
     ```java
-    CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==", new DCELicenseVerificationListener() {
+    CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
         @Override
         public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
             if(!isSuccess){
@@ -232,8 +232,10 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
             setContentView(R.layout.activity_show_picture);
             ivPicture = findViewById(R.id.iv_picture);
 
+            DCEFrame frame = MainActivity.mFrame;
+
             // Convert to Bitmap from the captured frame.
-            Bitmap bitmap = MainActivity.mFrame.toBitmap();
+            Bitmap bitmap = frame.toBitmap();
 
             // Rotate it to the nature device orientation.
             bitmap = rotateBitmap(bitmap, frame.getOrientation());
