@@ -19,7 +19,7 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`initWithView`](#initwithview) |  |
+| [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
 | [`initLicense`](#initlicense) | Sets product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
@@ -69,13 +69,13 @@ Sets product key and activate the SDK.
 Objective-C:
 
 ```objc
-[DynamsoftCameraEnhancer initLicense:@"" verificationDelegate: self];
+[DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate: self];
 ```
 
 Swift:
 
 ```swift
-DynamsoftCameraEnhancer.initLicense("", verificationDelegate: self)
+DynamsoftCameraEnhancer.initLicense("Put your license here", verificationDelegate: self)
 ```
 
 &nbsp;
@@ -448,7 +448,7 @@ let dceFrame = dce.getFrameFromBuffer()
 Add a listener to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
 
 ```objc
-- (void)addListener:(id)listener;
+- (void)addListener:(nonnull id<DCEFrameListener>)listener;
 ```
 
 **Parameters**
@@ -476,7 +476,7 @@ dce.addListener(self)
 Remove a preciously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
 
 ```objc
-- (void)removeListener:(id)listener;
+- (void)removeListener:(nonnull id<DCEFrameListener>)listener;
 ```
 
 **Parameters**
@@ -488,13 +488,13 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 Objective-C:
 
 ```objc
-[_dce removeListener];
+[_dce removeListener:self];
 ```
 
 Swift:
 
 ```swift
-dce.removeListener()
+dce.removeListener(self)
 ```
 
 &nbsp;
