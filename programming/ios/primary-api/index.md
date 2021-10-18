@@ -448,7 +448,7 @@ let dceFrame = dce.getFrameFromBuffer()
 Add a listener to the `CameraEnhancer` instance. This method will have no effect if the same listener is already added.
 
 ```objc
-- (void)addListener:(id)listener;
+- (void)addListener:(nonnull id<DCEFrameListener>)listener;
 ```
 
 **Parameters**
@@ -476,7 +476,7 @@ dce.addListener(self)
 Remove a preciously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
 
 ```objc
-- (void)removeListener:(id)listener;
+- (void)removeListener:(nonnull id<DCEFrameListener>)listener;
 ```
 
 **Parameters**
@@ -488,13 +488,13 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 Objective-C:
 
 ```objc
-[_dce removeListener];
+[_dce removeListener:self];
 ```
 
 Swift:
 
 ```swift
-dce.removeListener()
+dce.removeListener(self)
 ```
 
 &nbsp;

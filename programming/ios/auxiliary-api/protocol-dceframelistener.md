@@ -19,122 +19,43 @@ The protocol to handle callback when previewed frame callback is returned.
 
 | Method | Type | Description |
 | ------ | ---- | ----------- |
-| [`onPreviewOriginalFrame`](#onrrevieworiginalframe) | *required* | The previewed original frame callback. |
-| [`onPreviewFilterFrame`](#onpreviewfilterframe) | *optional* | The previewed filtered frame callback. |
-| [`onPreviewFastFrame`](#onpreviewfastframe) | *optional* | The previewed cropped frame callback. |
+| [`frameOutPutCallback`](#frameoutputcallback) | *required* | Callback when the `DCEFrame` is output. |
 
-## onPreviewOriginalFrame
+## frameOutPutCallback
 
-The previewed original frame callback. Add code to use the original frames.
+Callback when the `DCEFrame` is output.
 
 ```objc
-- (void)onPreviewOriginalFrame:(FramePackage*)frame;
+- (void)frameOutPutCallback:(DCEFrame*)frame timeStamp:(NSTimeInterval)timeStamp;
 ```
 
 **Parameters**
 
-`Original frames`: The data of original frame(s). The Camera Enhancer can make preprocessing on video frames. In this callback function, the input parameters are the original frames that are captured by the camera.
+`frame`: The parameter is the original `DCEFrame` with detailed frame information. View more in [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) class.
+`timeStamp`: The time stamp that records when the DCEFrame is output. 
 
 **Code Snippet**
 
 Objective-C:
 
 ```objc
-[_dce addCameraListener:self];
+[_dce addListener:self];
 
-- (void)onPreviewOriginalFrame:(FramePackage *) frame{
-    // TODO add your code for original frame
+- (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
+    // TODO add your code
 }
 ```
 
 Swift:
 
 ```swift
-dce.addTorchListener(self)
+dce.addListener(self)
 
-func onPreviewOriginalFrame(_ frame: FramePackage){
-    // TODO add your code for original frame
+func frameOutPutCallback(_ frame: FramePackage, timeStamp: TimeInterval){
+    // TODO add your code
 }
 ```
 
 **See also**
 
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
-
-## onPreviewFilterFrame
-
-The previewed filtered frame callback. Add code to use the filtered frames.
-
-```objc
-- (void)onPreviewFilterFrame:(FramePackage*)frame;
-```
-
-**Parameters**
-
-`Filtered frames`: The data of filtered frame(s). The Camera Enhancer can make preprocessing on video frames. If the frame filter processing is enabled, the input parameter of this function will be the filtered frames.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[_dce addCameraListener:self];
-
-- (void)onPreviewFilterFrame:(FramePackage *) frame{
-    // TODO add your code for filter frame
-}
-```
-
-Swift:
-
-```swift
-dce.addTorchListener(self)
-
-func onPreviewFilterFrame(_ frame: FramePackage){
-    // TODO add your code for filter frame
-}
-```
-
-**See also**
-
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
-- [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter)
-
-## onPreviewFastFrame
-
-The previewed fast frame callback. Add code to use the cropped frames.
-
-```objc
-- (void)onPreviewFastFrame:(FramePackage*)frame;
-```
-
-**Parameters**
-
-`Fast frames`: The data of cropped frame(s). The Camera Enhancer can make preprocessing on video frames. If the fast mode is enabled, the input parameter of this function will be the specially cropped frames.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[_dce addCameraListener:self];
-
-- (void)onPreviewFastFrame:(FramePackage *) frame{
-    // TODO add your code for fast frame
-}
-```
-
-Swift:
-
-```swift
-dce.addTorchListener(self)
-
-func onPreviewFastFrame(_ frame: FramePackage){
-    // TODO add your code for fast frame
-}
-```
-
-**See also**
-
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
-- [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode)
+- [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html)

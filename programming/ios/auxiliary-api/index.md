@@ -12,5 +12,5 @@ breadcrumbText: iOS API
 
 ## Classes
 
-- [`DCEFrame`]({{ site.ios-api-auxiliary }}DCEFrame.html)
-- [`DCECameraView`]({{ site.ios-api-auxiliary }}DCECameraView.html)
+- [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html)
+- [`DCECameraView`]({{ site.ios-api-auxiliary }}dcecameraview.html)
