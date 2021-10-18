@@ -19,7 +19,7 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`initWithView`](#initwithview) |  |
+| [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
 | [`initLicense`](#initlicense) | Sets product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
@@ -69,13 +69,13 @@ Sets product key and activate the SDK.
 Objective-C:
 
 ```objc
-[DynamsoftCameraEnhancer initLicense:@"" verificationDelegate: self];
+[DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate: self];
 ```
 
 Swift:
 
 ```swift
-DynamsoftCameraEnhancer.initLicense("", verificationDelegate: self)
+DynamsoftCameraEnhancer.initLicense("Put your license here", verificationDelegate: self)
 ```
 
 &nbsp;

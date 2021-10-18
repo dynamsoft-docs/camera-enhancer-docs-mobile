@@ -43,7 +43,6 @@ DCECameraView(android.content.Context context)
 
 &nbsp;
 
-
 ## setOverlayVisible
 
 This method controls whether the camera view displays coloured and translucent overlay.
@@ -146,7 +145,6 @@ boolean flag = dceCameraView.getViewfinderVisible();
 ```
 
 &nbsp;
-
 
 ## setViewfinder
 
