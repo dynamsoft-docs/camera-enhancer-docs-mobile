@@ -10,6 +10,4 @@ breadcrumbText: Release Notes
 
 # Release Notes
 
-## 2.0 (04/29/2021)
-
-* 
+- [2.0.0 (10/19/2021)](release-notes-2.x.md/#200-10192021)
