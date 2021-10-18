@@ -101,19 +101,19 @@ await enhancer.open();
 This event is triggered when a new frame / image is acquired under the single-frame mode.
 
 ```typescript
-onSingleFrameAcquired: (frameData: DCEFrame) => {}
+onSingleFrameAcquired: (file: File) => {}
 ```
 
 **Arguments**
 
-`frameData` : a `DCEFrame` object which contains the image data of the "single frame / file ".
+`file` : a `File` object representing the image the user chose or a frame from the video input.
 
 **Code Snippet**
 
 ```js
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.onSingleFrameAcquired = frameData => {
-    document.body.appendChild(frameData.canvas);
+enhancer.onSingleFrameAcquired = file => {
+    console.log(file.size);
 };
 await enhancer.open();
 ```
