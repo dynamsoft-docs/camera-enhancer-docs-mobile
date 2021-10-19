@@ -95,9 +95,12 @@ As shown in the code snippet below, we just need to specify where the UI should 
 <!-- Define an element to hold the UI element -->
 <div id="enhancerUIContainer"></div>
 <script>
-    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-    document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
-    await enhancer.open();
+    let pEnhancer = null;
+    (async () => {
+        let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+        await enhancer.open();
+    })();
 </script>
 ```
 
@@ -135,9 +138,9 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
-    let pScanner = null;
+    let pEnhancer = null;
     (async () => {
-        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
         await enhancer.setUIElement(document.getElementById('div-video-container'));
         await enhancer.open();
     })();
