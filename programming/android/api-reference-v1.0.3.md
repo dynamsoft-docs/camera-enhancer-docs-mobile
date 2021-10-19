@@ -82,7 +82,7 @@ noTitleIndex: true
 
 ## Auxiliary Classes
 
-- [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html)
+- [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dlsconnection.html)
 - [`Frame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`HardwareUtil`]({{site.android-api-auxiliary}}hardwareutil.html)
 - [`CameraView`]({{site.android-api-auxiliary}}dcecameraview.html)
@@ -90,9 +90,9 @@ noTitleIndex: true
 
 ## Interfaces
 
-- [`CameraListener`]({{ site.android-api-auxiliary }}interface.html#dceframelistener)
-- [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener)
-- [`TorchListener`]({{ site.android-api-auxiliary }}interface.html#torchlistener)
+- [`CameraListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
+- [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
+- [`TorchListener`]({{ site.android-api-auxiliary }}interface-torchlistener.html)
 
 ## Enumerations
 

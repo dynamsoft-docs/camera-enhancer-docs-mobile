@@ -357,11 +357,11 @@ addCameraListener(CameraListener)
 
 **Parameters**
 
-`CameraListener`: The interface [`CameraListener`]({{site.android-api-auxiliary}}interface.html#cameralistener).
+`CameraListener`: The interface [`CameraListener`]({{site.android-api-auxiliary}}interface-dceframelistener.html).
 
 **Return Value**
 
-`Frame`: The video frame captured by camera. View in class [`Frame`]({{site.android-api-auxiliary}}frame.html).
+`Frame`: The video frame captured by camera. View in class [`Frame`]({{site.android-api-auxiliary}}dceframe.html).
 
 **Code Snippet**
 
@@ -502,7 +502,7 @@ addTorchListener(TorchListener)
 
 **Parameters**
 
-`TorchListener`: The interface [`TorchListener`]({{site.android-api-auxiliary}}interface.html#torchlistener)
+`TorchListener`: The interface [`TorchListener`]({{site.android-api-auxiliary}}interface-torchlistener.html)
 
 **Code Snippet**
 

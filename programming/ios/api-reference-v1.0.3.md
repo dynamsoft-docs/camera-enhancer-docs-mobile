@@ -77,9 +77,9 @@ breadcrumbText: iOS API references
 
 ## Protocols
 
-- [`CameraEnhancerListener`]({{ site.ios-api-auxiliary }}protocol-cameralistener.html)
+- [`CameraEnhancerListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
 - [`CameraTorchListener`]({{ site.ios-api-auxiliary }}protocol-torchlistener.html)
-- [`DCEDLSLicenseVerificationDelegate`]({{ site.ios-api-auxiliary }}protocol-dcelicenseverificationdelegate.html)
+- [`DCEDLSLicenseVerificationDelegate`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
 
 ## Enumerations
 

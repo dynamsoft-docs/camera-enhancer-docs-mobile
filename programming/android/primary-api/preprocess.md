@@ -32,7 +32,7 @@ acquireBufferedFrame();
 
 **Return Value**
 
-[`DCEFrame`]({{site.android-api-auxiliary}}frame.html): This method returns the buffered frame data. The frame data includes the image data, width, height, strides and other frame information.
+[`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html): This method returns the buffered frame data. The frame data includes the image data, width, height, strides and other frame information.
 
 **Code Snippet**
 
