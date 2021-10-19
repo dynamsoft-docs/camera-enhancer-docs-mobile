@@ -108,7 +108,7 @@ Now, DCE and CameraView instance are created. You can control the and add elemen
 
 Dynamsoft Camera Enhancer provides two solutions on fetching the video frames:
 
-- Use the method [`getFrameFromBuffer`]({{site.ios-api}}index.html#getframefrombuffer) to fetch a single frame from the video buffer.
+- Use the method [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) to fetch a single frame from the video buffer.
 - Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
 
 On this page, you will be guide on how to get a raw frame from the video streaming and convert it into a visible image so that you can display it on the UI.
