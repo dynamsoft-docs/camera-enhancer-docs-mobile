@@ -25,7 +25,7 @@ class com.dynamsoft.dce.DCEFrame
 | [`getStrides`](#getstrides) | int[] |
 | [`getPixelFormat`](#getpixelformat) | int |
 | [`getFrameID`](#getframeid) | int |
-| [`getQuality`](#getquality) | [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html) |
+| [`getQuality`](#getquality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) |
 | [`getIsCropped`](#getiscropped) | boolean |
 | [`getCropRegion`](#getcropregion) | Rect |
 | [`getOrientation`](#setorientation) | int |
@@ -35,7 +35,7 @@ class com.dynamsoft.dce.DCEFrame
 | [`setStrides`](#setstrides) | int[] |
 | [`setPixelFormat`](#setpixelformat) | int |
 | [`setFrameID`](#setframeid) | int |
-| [`setQuality`](#setquality) | [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html) |
+| [`setQuality`](#setquality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) |
 | [`setIsCropped`](#setiscropped) | boolean |
 | [`setCropRegion`](#setcropregion) | Rect |
 | [`setOrientation`](#setorientation) | int |
@@ -142,7 +142,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
+The method returns an enumeration value in [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html).
 
 **Remarks**
 
@@ -263,7 +263,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
+`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.enumerations}}other-enums.html#imagepixelformat)
 
 &nbsp;
 

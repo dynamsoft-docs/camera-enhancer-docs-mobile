@@ -27,8 +27,8 @@ breadcrumbText: iOS 2.x Release Notes
 
 #### Breaking Change(s)
 
-- Added method [`initLicense`]({{site.ios-api}}index.html#initlicense) to replace `initLicenseFromDLS`.
-- Upgraded the [`basic camera-control APIs`]({{site.ios-api}}index.html#basic-camera-control-methods).
-- Upgraded the usage of [`camera enhancer features`]({{site.ios-api}}index.html#enhanced-features).
+- Added method [`initLicense`]({{site.ios-api}}camera-enhancer.html#initlicense) to replace `initLicenseFromDLS`.
+- Upgraded the [`basic camera-control APIs`]({{site.ios-api}}camera-enhancer.html#basic-camera-control-methods).
+- Upgraded the usage of [`camera enhancer features`]({{site.ios-api}}camera-enhancer.html#enhanced-features).
 - Renamed class `CameraView` to [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html). The features of the class are extended as well.
 - Renamed class `Frame` to [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html). The features of the class are extended as well.
