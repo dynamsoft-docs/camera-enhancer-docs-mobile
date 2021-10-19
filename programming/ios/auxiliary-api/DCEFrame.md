@@ -25,7 +25,7 @@ Return the frame decode results and additional information.
 | [`stride`](#stride) | *NSInteger* |
 | [`pixelFormat`](#pixelformat) | *NSInteger* |
 | [`frameID`](#frameid) | *NSInteger* |
-| [`quality`](#quality) | [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html) |
+| [`quality`](#quality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) |
 | [`isCropped`](#iscropped) | *BOOL* |
 | [`cropRegion`](#cropregion) | *CGRect* |
 | [`orientation`](#orientation) | *NSInteger* |
