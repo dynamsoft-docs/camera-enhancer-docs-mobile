@@ -54,10 +54,11 @@ breadcrumbText: API Reference
 
 ### Frame Acquisition
 
+<!--| [getFrameFromBuffer()](acquisition.md#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |-->
+
 | API Name | Description |
 |---|---|
 | [getFrame()](acquisition.md#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
-| [getFrameFromBuffer()](acquisition.md#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |
 | [singleFrameMode](acquisition.md#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 | [onSingleFrameAcquired](acquisition.md#onsingleframeacquired) | This event is triggered when a new frame / image is acquired under the single-frame mode. |
 

@@ -11,11 +11,12 @@ breadcrumbText: Acquisition
 
 # Frame Acquisition
 
+<!--| [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |-->
+
 | API Name | Description |
 |---|---|
 | [getFrame()](#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
-| [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |
-| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
+| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the single-frame mode. |
 | [onSingleFrameAcquired](#onsingleframeacquired) | This event is triggered when a new frame / image is acquired under the single-frame mode. |
 
 ## getFrame
@@ -53,6 +54,7 @@ document.body.appendChild(frameData.canvas);
 * [DCEFrame](interface/dceframe.md)
 * [Region](interface/region.md)
 
+<!--
 ## getFrameFromBuffer
 
 Returns a `DCEFrame` object which contains the image data of the latest buffered frame.
@@ -79,7 +81,7 @@ document.body.appendChild(frameData.canvas);
 **See also**
 
 * [DCEFrame](interface/dceframe.md)
-
+-->
 ## singleFrameMode
 
 Returns or sets whether to enable the singe-frame mode. When the single-frame mode is enabled, the video will not stream in the built-in UI of the library. Instead, the user can click the UI to invoke the system camera interface to catch a frame or select an existing image from the device storage.
@@ -91,9 +93,12 @@ singleFrameMode: boolean
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.singleFrameMode = true;
-await enhancer.open();
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.singleFrameMode = true;
+    await enhancer.open();
+})();
 ```
 
 ## onSingleFrameAcquired
@@ -111,11 +116,14 @@ onSingleFrameAcquired: (file: File) => {}
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.onSingleFrameAcquired = file => {
-    console.log(file.size);
-};
-await enhancer.open();
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.onSingleFrameAcquired = file => {
+        console.log(file.size);
+    };
+    await enhancer.open();
+})();
 ```
 
 **See also**

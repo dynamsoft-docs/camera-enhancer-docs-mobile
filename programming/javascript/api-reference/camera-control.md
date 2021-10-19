@@ -37,9 +37,10 @@ breadcrumbText: Camera Control
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 | [setZoom()](#setzoom) | Sets the zoom level of the video. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
-| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
+
+<!--| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |-->
 
 ## getAllCameras
 
@@ -188,11 +189,14 @@ playCallBackInfo: returns the resolution of the video input.
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.onPlayed = playCallBackInfo => {
-    console.log(playCallBackInfo.width);
-};
-await enhancer.open();
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.onPlayed = playCallBackInfo => {
+        console.log(playCallBackInfo.width);
+    };
+    await enhancer.open();
+})();
 ```
 
 **See also**
@@ -467,11 +471,10 @@ enhancer.getCapabilities();
 
 * [MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)
 
+<!--
 ## getCameraSettings
 
 Returns the current values for each constrainable property of the selected camera.
-
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
 
 ```typescript
 getCameraSettings(): any
@@ -515,7 +518,7 @@ enhancer.getCameraSettings();
 **See also**
 
 * [getCapabilities](#getcapabilities)
-
+-->
 ## setColorTemperature
 
 Adjusts the color temperature of the selected camera.

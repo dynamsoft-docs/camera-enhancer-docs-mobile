@@ -80,11 +80,15 @@ Read more on [how to host the library](#hosting-the-library).
 To use the library, we first create a `CameraEnhancer` object.
 
 ```javascript
-try {
-    await Dynamsoft.DCE.CameraEnhancer.createInstance();
-} catch (ex) {
-    console.error(ex);
-}
+ let enhancer = null;
+ try {
+     let pEnhancer = null;
+     (async () => {
+         enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+     })();
+ } catch (ex) {
+     console.error(ex);
+ }
 ```
 
 #### Configure the `CameraEnhancer` object
@@ -95,9 +99,12 @@ As shown in the code snippet below, we just need to specify where the UI should 
 <!-- Define an element to hold the UI element -->
 <div id="enhancerUIContainer"></div>
 <script>
-    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-    document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
-    await enhancer.open();
+    let pEnhancer = null;
+    (async () => {
+        let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+        await enhancer.open();
+    })();
 </script>
 ```
 
@@ -135,9 +142,9 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
-    let pScanner = null;
+    let pEnhancer = null;
     (async () => {
-        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
         await enhancer.setUIElement(document.getElementById('div-video-container'));
         await enhancer.open();
     })();
@@ -157,13 +164,13 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 <select class="dce-sel-resolution"></select>
 ```
 
-  > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
+  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720 640 x 480),are populated as options. You can show a custom set of options by hardcoding them.
 
 ```html
 <select class="dce-sel-resolution">
     <option class="dce-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">1920 x 1080</option>
     <option data-width="1280" data-height="720">1280 x 720</option>
+    <option data-width="800" data-height="600">800 x 600</option>
     <option data-width="640" data-height="480">640 x 480</option>
 </select>
 ```
