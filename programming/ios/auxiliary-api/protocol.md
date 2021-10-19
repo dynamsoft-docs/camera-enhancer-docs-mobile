@@ -13,6 +13,6 @@ breadcrumbText: iOS Protocol
 
 | Protocol | Description |
 | -------- | ----------- |
-| [`CameraEnhancerListener`](protocol-cameralistener.md) | The protocol that handles callback when previewed frame callback is returned. By adding code to the callback functions, users can make use of the original, filtered and cropped frames. |
+| [`CameraEnhancerListener`](protocol-dceframelistener.md) | The protocol that handles callback when previewed frame callback is returned. By adding code to the callback functions, users can make use of the original, filtered and cropped frames. |
 | [`CameraTorchListener`](protocol-torchlistener.md) | The protocol that handles the torch state when the torch state changes. |
-| [`DCELicenseVerificationDelegate`](protocol-dcelicenseverificationdelegate.md) | The protocol for a delegate to handle callback when license verification message returned. |
+| [`DCELicenseVerificationListener`](protocol-licenselistener.md) | The protocol for a delegate to handle callback when license verification message returned. |

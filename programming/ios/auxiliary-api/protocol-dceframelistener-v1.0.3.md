@@ -59,7 +59,7 @@ func onPreviewOriginalFrame(_ frame: FramePackage){
 
 **See also**
 
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
+- [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
 
 ## onPreviewFilterFrame
 
@@ -97,7 +97,7 @@ func onPreviewFilterFrame(_ frame: FramePackage){
 
 **See also**
 
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
+- [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
 - [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter)
 
 ## onPreviewFastFrame
@@ -136,5 +136,5 @@ func onPreviewFastFrame(_ frame: FramePackage){
 
 **See also**
 
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
+- [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
 - [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode)

@@ -12,6 +12,6 @@ breadcrumbText: iOS API - v1.0
 
 ## Class
 
-- [`iDMLTSConnectionParameters`]({{site.ios-api-auxiliary}}ltsconnection.html)
-- [`FramePackage`]({{site.ios-api-auxiliary}}framepackage.html)
-- [`DCECaptureView`]({{site.ios-api-auxiliary}}captureview.html)
+- [`iDMLTSConnectionParameters`]({{site.ios-api-auxiliary}}dlsconnection.html)
+- [`FramePackage`]({{site.ios-api-auxiliary}}dceframe.html)
+- [`DCECaptureView`]({{site.ios-api-auxiliary}}dcecameraview.html)

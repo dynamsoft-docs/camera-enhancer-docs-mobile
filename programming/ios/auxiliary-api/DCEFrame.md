@@ -133,11 +133,19 @@ The converted image.
 Objective-C:
 
 ```objc
-
+@property(nonatomic, strong) DCEFrame *dceFrame;
+/*
+  ...
+*/
+[dceFrame toUIImage];
 ```
 
 Swift:
 
 ```swift
-
+var dceFrame:DCEFrame! = nil
+/*
+  ...
+*/
+dceFrame.toUIImage()
 ```

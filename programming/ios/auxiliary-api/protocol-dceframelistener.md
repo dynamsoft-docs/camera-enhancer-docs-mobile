@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Protocol CameraEnhancerListener
-description: This is the documentation - iOS Protocol CameraEnhancerListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS Protocol CameraEnhancerListener
+title: Dynamsoft Camera Enhancer - iOS Protocol DCEFrameListener
+description: This is the documentation - iOS Protocol DCEFrameListener page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, iOS Protocol DCEFrameListener
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
-breadcrumbText: iOS Protocol CameraEnhancerListener
+breadcrumbText: iOS Protocol DCEFrameListener
 ---
 
-# CameraEnhancerListener
+# DCEFrameListener
 
 The protocol to handle callback when previewed frame callback is returned.
 
