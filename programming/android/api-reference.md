@@ -40,7 +40,7 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`getFrameFromBuffer`]({{site.android-api}}index.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+<!--| [`getFrameFromBuffer`]({{site.android-api}}index.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |-->
 | [`addListener`]({{site.android-api}}index.html#addlistener) | Add a listener to the Camera Enhancer instance. |
 | [`removeListener`]({{site.android-api}}index.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
 
