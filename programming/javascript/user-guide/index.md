@@ -62,7 +62,7 @@ $ npm install dynamsoft-camera-enhancer --save
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/DCE-JS-2.0.0/dist/dce.js"></script>
+<script src="/dce-js-2.0.0/dist/dce.js"></script>
 ```
 
 or
