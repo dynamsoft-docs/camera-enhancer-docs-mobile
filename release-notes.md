@@ -24,4 +24,4 @@ breadcrumbText: Release Note
 ### Editions
 
 | -- | -- | -- |
-| [JavaScript]({{ site.js-rn }}) | [Android]({{ site.android-release-note }}) | [iOS]({{ site.ios-release-note }}) |
+| [JavaScript]({{ site.js-rn }}release-notes-2.x.html) | [Android]({{ site.android-release-note }}release-notes-2.x.html) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html) |
