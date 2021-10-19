@@ -3,6 +3,7 @@ tree_file_list:
   - sidelist-introduction.html
   - sidelist-programming.html
   - sidelist-parameters.html
+  - sidelist-release-notes.html
   - sidelist-trouble-shooting.html
   - sidelist-programming/programming-oc.html
   - sidelist-programming/programming-oc-v1.0.html
