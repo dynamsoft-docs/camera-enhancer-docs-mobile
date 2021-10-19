@@ -50,8 +50,8 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`]({{site.android-api}}camera-enhancer.html#enablefeature) | Enable DCE features with Enumeration value. |
-| [`disableFeatures`]({{site.android-api}}camera-enhancer.html#disablefeature) | Disable DCE features with Enumeration value. |
+| [`enableFeatures`]({{site.android-api}}camera-enhancer.html#enablefeatures) | Enable DCE features with Enumeration value. |
+| [`disableFeatures`]({{site.android-api}}camera-enhancer.html#disablefeatures) | Disable DCE features with Enumeration value. |
 | [`isFeatureEnabled`]({{site.android-api}}camera-enhancer.html#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
 
 ### Advanced Camera Control Methods
@@ -63,10 +63,10 @@ noTitleIndex: true
 | [`getResolutionList`]({{site.android-api}}camera-enhancer.html#getresolutionlist) | Get all available resolutions. |
 | [`setResolution`]({{site.android-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`]({{site.android-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
-| [`setZoom`]({{site.android-api}}.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setZoom`]({{site.android-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`updateAdvancedSettingFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
-| [`updateAdvancedSettingFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
+| [`updateAdvancedSettingsFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingsFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
 ### Camera UI Methods
 

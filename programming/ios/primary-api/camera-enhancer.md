@@ -631,7 +631,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`setFocus`](#setfocusposition) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON file from the storage. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON string. |
 
