@@ -37,9 +37,10 @@ breadcrumbText: Camera Control
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 | [setZoom()](#setzoom) | Sets the zoom level of the video. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
-<!--| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |-->
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
+
+<!--| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |-->
 
 ## getAllCameras
 
