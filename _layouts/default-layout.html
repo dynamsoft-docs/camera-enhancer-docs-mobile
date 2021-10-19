@@ -100,7 +100,12 @@
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-ios-1.0.3.zip?ver=latest');
                     $('.dceThanksDownloading').show();
                     $('.downloadlink')[0].click();
-                }
+                } else if (curHref.indexOf('/javascript/') > -1) {
+                    $('.editionName').html('Javascript');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DCE-JS-2.0.0.zip?ver=latest');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink')[0].click();
+                } 
             }
 
             $('#txtSearch').keydown(function(e) { 
