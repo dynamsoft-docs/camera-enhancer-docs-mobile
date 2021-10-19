@@ -8,7 +8,7 @@ breadcrumbText: Parameters
 ---
 # Parameters
 
-## Reference
+## Parameter Reference
 
 - [Parameters reference]({{site.reference}})
 - [Enumerations]({{site.enumerations}})

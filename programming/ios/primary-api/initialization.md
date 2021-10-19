@@ -13,41 +13,42 @@ breadcrumbText: iOS CameraEnhancer Class
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
+| [`initLicense`](#initLicense) | Initialize the Camera Enhancer from the license server with a license. |
 
 ---
 
-## initLicenseFromDLS
+## initLicense
 
 Initialize the Camera Enhancer with a license.
 
 ```objc
-- (instancetype)initLicenseFromDLS:(iDCEDLSConnectionParameters*)parameters
-                              view:(DCECaptureView *)view
-              verificationDelegate:(id)connectionDelegate;
++ (void)initLicense:(NSString*)license verificationDelegate:(id)connectionDelegate;
 ```
 
 **Parameters**
 
-`iDCEDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.  
-`view`: The [`DCECaptureView`]({{ site.ios-api-auxiliary }}captureview.html).
+`license`: You have to input a valid license to access the full feature of `Dynamsoft Camera Enhancer`.
 
 **Code Snippet**
 
 Objective-C:
 
 ```objc
-_decView = [DCECaptureView captureWithFrame:self.view.bounds];
-iDCEDLSConnectionParameters* dls = [[iDCEDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-_dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dls view:_dceView verificationDelegate:self];
+//Replace the string with your own license
+[DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
+
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    NSLog(@"Verification: %@",error.userInfo);
+}
 ```
 
 Swift:
 
 ```swift
-dceView = DCECaptureView.init(view: self.view.bounds)
-let dls = iDCEDLSConnectionParameters()
-dls.organizationID = "200001"
-dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
+//Replace the string with your own license
+DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
+
+func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    print("Verification: \(String(describing: error))")
+}
 ```

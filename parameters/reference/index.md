@@ -1,53 +1,70 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Parameter reference
-description: This is the documentation - Parameter reference page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Parameters reference
+title: Dynamsoft Camera Enhancer - Advanced Setting Parameters
+description: This is the documentation - Advanced Setting Parameters Page of Dynamsoft Camera Enhancer.
+keywords:  Advanced Setting Parameters
 needAutoGenerateSidebar: true
-breadcrumbText: Parameter Reference
+noTitleIndex: true
+needGenerateH3Content: true
+breadcrumbText: Advanced Setting Parameters
 ---
 
-# Parameter Reference
+# Parameter reference - Advanced Settings parameters
 
-## CameraState
+The following parameters are advanced parameters for special usages. These parameters can be uploaded via method [`updateAdvancedSettingsFromFile`]({{site.android-api}}index.html#updateadvancedsettingfromfile) and [`updateAdvancedSettingsFromString`]({{site.android-api}}index.html#updateadvancedsettingfromstring).
 
-| Member (Android & iOS) | Value | Description |
-|-----------------------|-------|-------------|
-| `CAMERA_STATE_OFF` | 0 | Set camera off. |
-| `CAMERA_STATE_ON` | 1 | Set camera on. |
+| Parameter Name | Type | Description |
+| -------------- | ---- | ----------- |
+| [`focalLength`](#focallength) | *float* | Set the fixed focal length. |
+| [`autoFocusInterval`](#autofocusinterval) | *int* | Set the time interval of the auto focus. |
+| [`autoFocusTerminateTime`](#autofocusterminatetime) | *int* | Set the minimum terminate time of auto focus. |
+| [`sensorControlSensitivity`](#sensorcontrolsensitivity) | *int* | Set the sensitivity of the mobile sensor. |
 
-## CameraPosition
+## focalLength
 
-| Member (Android & iOS) | Value | Description |
-|-----------------------|-------|-------------|
-| `CAMERA_POSITION_USER` | 0 | Use front camera. |
-| `CAMERA_POSITION_WORLD` | 1 | Use back camera. |
+Set the fixed focal length with a float value. When this parameter is configured, the other focus methods and parameters will be disbaled and the focal length will be fixed. Users can reset the focalLength to -1 to disable the fixed focus settings. The closer to the 0, the further the focalLength will be.
 
-## TorchState
+**Default Value**
 
-| Member (Android & iOS) | Value | Description |
-|-----------------------|-------|-------------|
-| `TORCH_STATE_OFF` | 0 | Turn off torch. |
-| `TORCH_STATE_ON` | 1 | Turn on torch. |
-| `TORCH_STATE_AUTO` | 2 | Auto turn on/off torch. |
+-1
 
-## Resolution
+**Range**
 
-| Member (Android & iOS) | Value | Description |
-|------------------------|-------|-------------|
-| `RESOLUTION_AUTO` | 0 | Set resolution auto. |
-| `RESOLUTION_480P` | 1 | Set resolution at 480p. |
-| `RESOLUTION_720P` | 2 | Set resolution at 720p. |
-| `RESOLUTION_1080P` | 3 | Set resolution at 1080p. |
-| `RESOLUTION_2K` (Android Only) | 4 | Set resolution at 2k. |
-| `RESOLUTION_4K` | 5 | Set resolution at 4k. |
+Android: -1 or float value between 0 and 10.  
+iOS: -1 or float value between 0 and 1.
 
-## HardwareUtil
+## autoFocusInterval
 
-| Member (Android Only) | Value | Description |
-|-----------------------|-------|-------------|
-| `DEVICEINFO_UNKNOWN` | -1 | The device info is unavailable. |
-| `DEVICE_LEVEL_HIGH` | 2 | The device level is detected to be high. |
-| `DEVICE_LEVEL_MID` | 1 | The device level is detected to be medium. |
-| `DEVICE_LEVEL_LOW` | 0 | The device level is detected to be low. |
-| `DEVICE_LEVEL_UNKNOWN` | -2 | The device level is unavailable. |
+Set the time interval of the auto-focus with an int value.
+
+**Default Value**
+
+The default focus interval is 3000 milliseconds which means the camera will focus once for every 3 seconds.
+
+**Range**
+
+At least 0 and no maximum limit.
+
+## autoFocusTerminateTime
+
+The minimum termination time of the auto-focus with an int value.
+
+**Default Value**
+
+The default terminates time is 3000 milliseconds which means the camera will never focus for another time with in 500 miliseconds.
+
+**Range**
+
+At least 0 and no maximum limit.
+
+## sensorControlSensitivity
+
+Set the sensitivity of the mobile sensor with an int value. A lower input value results in a higher sensitivity.
+
+**Default Value**
+
+50
+
+**Range**
+
+At least 0 and no maximum limit.

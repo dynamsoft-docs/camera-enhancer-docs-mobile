@@ -13,78 +13,72 @@ breadcrumbText: iOS API references
 
 ## Primary Class - CameraEnhancer
 
-### [Initialization Methods]({{site.ios-api}}initialization.html)
+### Initialization
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicenseFromDLS`]({{site.ios-api}}initialization.html#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
+| [`initWithView`]({{site.ios-api}}index.html##initwithview) | Initialize the camera enhancer with the `DCECameraView`. |
+| [`initLicense`]({{site.ios-api}}index.html#initlicense) | Sets product key and activate the SDK. |
+| [`getVersion`]({{site.ios-api}}index.html#getversion) | Get the SDK version. |
 
-### [Frame preprocessing methods]({{site.ios-api}}preprocess.html)
-
-| Method | Description |
-|-----------------|---------------|
-| [`acquireListFrame`]({{site.ios-api}}preprocess.html#acquirelistframe) | Get the latest frame from the frame queue when this API is activated. |
-| [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode) | Set the value true/false to turn on/off DCE fast mode |
-| [`enableSensorControl`]({{site.ios-api}}preprocess.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
-|[`setSensorControlThreshold`]({{site.ios-api}}preprocess.html#setsensorcontrolthreshold)| Make settings on sensor control threshold |
-| [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
-| [`setMaxFrameRate`]({{site.ios-api}}preprocess.html#setmaxframerate) | Set max frame rate |
-
-### [Regular camera methods]({{site.ios-api}}camera.html)
+### Basic Camera Control Methods
 
 | Method | Description |
-|-----------------|---------------|
-| [`updateCameraSettingFromJson`]({{site.ios-api}}camera.html#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
-| [`updateCameraSettingFromFile`]({{site.ios-api}}camera.html#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
-| [`getVersion`]({{site.ios-api}}camera.html#getversion) | Check current DCE version |
-| [`getCameraCurrentState`]({{site.ios-api}}camera.html#getcameracurrentstate) | Get camera current state |
-| [`getCameraDesiredState`]({{site.ios-api}}camera.html#getcameradesiredstate) | Get camera desired state |
-| [`setCameraDesiredState`]({{site.ios-api}}camera.html#setcameradesiredstate) | Set Camera on/off |
-| [`pauseCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Pause Camera |
-| [`resumeCamera`]({{site.ios-api}}camera.html#pausecamera-and-resumecamera) | Resume Camera |
-| [`startScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Start scanning |
-| [`stopScanning`]({{site.ios-api}}camera.html#stopscanning-and-startscanning) | Stop scanning |
-| [`addCameraListener`]({{site.ios-api}}camera.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`getTorchCurrentState`]({{site.ios-api}}camera.html#gettorchcurrentstate) | Get torch current state |
-| [`getTorchDesiredState`]({{site.ios-api}}camera.html#gettorchdesiredstate) | Get torch desired state |
-| [`setTorchDesiredState`]({{site.ios-api}}camera.html#settorchdesiredstate) | Set torch state |
-| [`addTorchListener`]({{site.ios-api}}camera.html#addtorchlistener) | Add torch listener |
-| [`getCameraPosition`]({{site.ios-api}}camera.html#getcameraposition) | Get current camera position |
-| [`switchCameraPosition`]({{site.ios-api}}camera.html#switchcameraposition) | Switch camera position front/back |
-| [`getResolution`]({{site.ios-api}}camera.html#getresolution) | Get current resolution setting |
-| [`setResolution`]({{site.ios-api}}camera.html#setresolution) | Set resolution |
-| [`getResolutionList`]({{site.ios-api}}camera.html#getresolutionlist) | Get all available resolutions |
+| ------ | ----------- |
+| [`getAllCameras`]({{site.ios-api}}index.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCamera`]({{site.ios-api}}index.html#selectcamera) | Select and active a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`]({{site.ios-api}}index.html#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraState`]({{site.ios-api}}index.html#getcamerastate) | Get the state of the currently selected camera. |
+| [`open`]({{site.ios-api}}index.html#open) | Turn on the current selected camera. |
+| [`close`]({{site.ios-api}}index.html#close) | Turn off the current selected camera. |
+| [`pause`]({{site.ios-api}}index.html#pause) | Pause the current selected  camera. |
+| [`resume`]({{site.ios-api}}index.html#resume) | Resume the current selected camera. |
+| [`turnOnTorch`]({{site.ios-api}}index.html#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`]({{site.ios-api}}index.html#turnofftorch) | Turn off the torch. |
 
-### [Focus & zoom methods]({{site.ios-api}}zoom-focus.html)
+### Frame Acquiring Methods
 
 | Method | Description |
-|-----------------|---------------|
-| [`setAutoFocusPosition`]({{site.ios-api}}zoom-focus.html#setautofocusposition) | Set auto focus position (Change the default auto focus position). |
-| [`setManualFocusPosition`]({{site.ios-api}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position only takes effect once for each time the API is called). |
-| [`setFocalLength`]({{site.ios-api}}zoom-focus.html#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
-| [`enableDCEAutoFocus`]({{site.ios-api}}zoom-focus.html#enabledceautofocus) | Set true/false to turn on/off DCE auto focus. |
-| [`enableDefaultAutoFocus`]({{site.ios-api}}zoom-focus.html#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
-| [`enableRegularAutoFocus`]({{site.ios-api}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus for every 3 seconds. |
-| [`setRegularAutoFocusParam`]({{site.ios-api}}zoom-focus.html#setregularautofocusparam) | Set the focus interval and termination time for the regular autofocus. |
-| [`enableAutoFocusOnSharpnessChange`]({{site.ios-api}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. |
-| [`enableAutoZoom`]({{site.ios-api}}zoom-focus.html#enableautozoom) | Set enableAutoZoom value true to enable auto zoom mode. |
-| [`setZoomFactor`]({{site.ios-api}}zoom-focus.html#setzoomfactor) | Set zoom factor |
+| ------ | ----------- |
+| [`getFrameFromBuffer`]({{site.ios-api}}index.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`]({{site.ios-api}}index.html#addlistener) | Add a listener to the Camera Enhancer instance. |
+| [`removeListener`]({{site.ios-api}}index.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
+
+### Enhanced Features
+
+| Method | Description |
+| ------ | ----------- |
+| [`enableFeatures`]({{site.ios-api}}index.html#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`disableFeatures`]({{site.ios-api}}index.html#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`isFeatureEnabled`]({{site.ios-api}}index.html#isfeatureenabled) | Check whether the input features are enabled. |
+
+### Advanced Camera Control Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`setFrameRate`]({{site.ios-api}}index.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
+| [`getFrameRate`]({{site.ios-api}}index.html#getframerate) | Get the current frame rate. |
+| [`setResolution`]({{site.ios-api}}index.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`]({{site.ios-api}}index.html#getresolution) | Get the current resolution. |
+| [`setZoom`]({{site.ios-api}}.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setFocus`]({{site.ios-api}}index.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`updateAdvancedSettingFromFile`]({{site.ios-api}}index.html#updateadvancedsettingfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingFromString`]({{site.ios-api}}index.html#updateadvancedsettingfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
 ## Auxiliary Classes
 
-- [`iDCEDLSConnectionParameters`]({{ site.ios-api-auxiliary }}dls-connection.html)
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
-- [`DCECaptureView`]({{ site.ios-api-auxiliary }}captureview.html)
+- [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
+- [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
 
-## Protocols
+## Interfaces
 
-- [`CameraEnhancerListener`]({{ site.ios-api-auxiliary }}protocol-cameralistener.html)
-- [`CameraTorchListener`]({{ site.ios-api-auxiliary }}protocol-torchlistener.html)
-- [`DCEDLSLicenseVerificationDelegate`]({{ site.ios-api-auxiliary }}protocol-dcedlslicenseverificationdelegate.html)
+- [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
+- [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
 
 ## Enumerations
 
-- [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
-- [`EnumCameraDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
-- [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
 - [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
+- [`EnumFrameQuality`]({{ site.enumerations }}enum-frame-quality.html)
+- [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
+- [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-feature.html)
+- [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)

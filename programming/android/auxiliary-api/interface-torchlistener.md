@@ -26,12 +26,12 @@ interface com.dynamsoft.dce.TorchListener
 The method for user to add code when torch state is changed.
 
 ```java
-void onTorchStateChanged(TorchState var1);
+void onTorchStateChanged(TorchState state);
 ```
 
 **Parameters**
 
-`TorchState`: The torch status value. One of the parameters in [`TorchState`]({{site.parameter-reference}}index.html#torchstate)
+`state`: The torch status value. One of the parameters in [`TorchState`]({{site.parameter-reference}}index.html#torchstate)
 
 **Code Snippet**
 

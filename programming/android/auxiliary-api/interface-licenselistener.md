@@ -1,45 +1,48 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - CameraDLSLicenseVerificationListener
-description: This is the documentation - CameraDLSLicenseVerificationListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, CameraDLSLicenseVerificationListener
+title: Dynamsoft Camera Enhancer - DCELicenseVerificationListener
+description: This is the documentation - DCELicenseVerificationListener page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, DCELicenseVerificationListener
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: CameraDLSLicenseVerificationListener
+breadcrumbText: DCELicenseVerificationListener
 ---
 
-# CameraDLSLicenseVerificationListener
+# DCELicenseVerificationListener
 
 The interface to handle callback when license verification messages are returned.
 
 ```java
-interface com.dynamsoft.dce.CameraDLSLicenseVerificationListener
+interface com.dynamsoft.dce.DCELicenseVerificationListener
 ```
 
 | Method | Description |
 | ------ | ----------- |
-| `DLSLicenseVerificationCallback` | The call back of the license server. |
+| `DCELicenseVerificationCallback` | The call back of the license server. |
 
-## DLSLicenseVerificationCallback
+&nbsp;
+
+
+## DCELicenseVerificationCallback
 
 The call back of the license server. Add the code in the callback function to react when the license server connection is successful or failed.
 
 ```java
-void DLSLicenseVerificationCallback(boolean var1, Exception var2);
+void DCELicenseVerificationCallback(boolean isSuccess, Exception error);
 ```
 
 **Parameters**
 
-`[in, out] isSuccess`: Whether the license verification was successful.  
-`[in, out] error`: The error message from the license server.
+`isSuccess`: Whether the license verification was successful.  
+`error`: The error message from the license server.
 
 **Code Snippet**
 
 ```java
-cameraEnhancer.initLicenseFromDLS(dceParameters, new CameraDLSLicenseVerificationListener() {
+CameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener() {
     @Override
-    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception e) {
+    public void DCELicenseVerificationCallback(boolean isSuccess, Exception e) {
         if (!isSuccess) {
             e.printStackTrace();
         }

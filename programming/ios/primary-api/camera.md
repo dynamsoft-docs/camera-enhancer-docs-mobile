@@ -15,17 +15,17 @@ noTitleIndex: true
 | [`updateCameraSettingFromJson`](#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`](#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
 | [`getVersion`](#getversion) | Check current DCE version |
-| [`getCameraCurrentState`](#getcameracurrentstate) | Get camera current state |
-| [`getCameraDesiredState`](#getcameradesiredstate) | Get camera desired state |
-| [`setCameraDesiredState`](#setcameradesiredstate) | Set Camera on/off |
+| [`getCurrentCameraState`](#getcurrentcamerastate) | Get camera current state |
+| [`getDesiredCameraState`](#getsesiredcamerastate) | Get camera desired state |
+| [`setDesiredCameraState`](#setdesiredcamerastate) | Set Camera on/off |
 | [`pauseCamera`](#pausecamera-and-resumecamera) | Pause Camera |
 | [`resumeCamera`](#pausecamera-and-resumecamera) | Resume Camera |
 | [`startScanning`](#stopscanning-and-startscanning) | Start scanning |
 | [`stopScanning`](#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`](#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`getTorchCurrentState`](#gettorchcurrentstate) | Get torch current state |
-| [`getTorchDesiredState`](#gettorchdesiredstate) | Get torch desired state |
-| [`setTorchDesiredState`](#settorchdesiredstate) | Set torch state |
+| [`getCurrentTorchState`](#getcurrenttorchstate) | Get torch current state |
+| [`getDesiredTorchState`](#getdesiredtorchstate) | Get torch desired state |
+| [`setDesiredTorchState`](#setdesiredtorchstate) | Set torch state |
 | [`addTorchListener`](#addtorchlistener) | Add torch listener |
 | [`getCameraPosition`](#getcameraposition) | Get current camera position |
 | [`switchCameraPosition`](#switchcameraposition) | Switch camera position front/back |
@@ -139,12 +139,12 @@ Swift:
 dce.getVersion()
 ```
 
-## getCameraCurrentState
+## getCurrentCameraState
 
 Get the current status (on/off) of the camera.
 
 ```objectivec
-- (CameraState)getCameraCurrentState NS_SWIFT_NAME(getCameraCurrentState());
+- (CameraState)getCurrentCameraState NS_SWIFT_NAME(getCurrentCameraState());
 ```
 
 **Return Value**
@@ -156,21 +156,21 @@ Get the current status (on/off) of the camera.
 Objective-C:
 
 ```objectivec
-[dce getCameraCurrentState];
+[dce getCurrentCameraState];
 ```
 
 Swift:
 
 ```swift
-dce.getCameraCurrentState()
+dce.getCurrentCameraState()
 ```
 
-## getCameraDesiredState
+## getDesiredCameraState
 
 Get the desired status (on/off)of the camera.
 
 ```objc
-- (CameraState)getCameraDesiredState NS_SWIFT_NAME(getCameraDesiredState());
+- (CameraState)getDesiredCameraState NS_SWIFT_NAME(getDesiredCameraState());
 ```
 
 **Return Value**
@@ -182,21 +182,21 @@ Get the desired status (on/off)of the camera.
 Objective-C:
 
 ```objectivec
-[dce getCameraDesiredState];
+[dce getDesiredCameraState];
 ```
 
 Swift:
 
 ```swift
-dce.getCameraDesiredState()
+dce.getDesiredCameraState()
 ```
 
-## setCameraDesiredState
+## setDesiredCameraState
 
 Set the camera state.
 
 ```objc
-- (void)setCameraDesiredState:(CameraState)state;
+- (void)setDesiredCameraState:(CameraState)state;
 ```
 
 **Parameters**
@@ -208,13 +208,13 @@ Set the camera state.
 Objective-C:
 
 ```objectivec
-[dce setCameraDesiredState:CAMERA_STATE_ON];
+[dce setDesiredCameraState:CAMERA_STATE_ON];
 ```
 
 Swift:
 
 ```swift
-dce.setCameraDesiredState(CAMERA_STATE_ON)
+dce.setDesiredCameraState(CAMERA_STATE_ON)
 ```
 
 ## pauseCamera and resumeCamera
@@ -293,12 +293,12 @@ Swift:
 dce.addCameraListener(self)
 ```
 
-## getTorchCurrentState
+## getCurrentTorchState
 
 Get the current torch state.
 
 ```objc
-- (TorchState)getTorchCurrentState;
+- (TorchState)getCurrentTorchState;
 ```
 
 **Return Value**
@@ -310,21 +310,21 @@ Get the current torch state.
 Objective-C:
 
 ```objectivec
-[dce getTorchCurrentState];
+[dce getCurrentTorchState];
 ```
 
 Swift:
 
 ```swift
-dce.getTorchCurrentState()
+dce.getCurrentTorchState()
 ```
 
-## getTorchDesiredState
+## getDesiredTorchState
 
 Get desired torch state (on/off)
 
 ```objc
-- (TorchState)getTorchDesiredState;
+- (TorchState)getDesiredTorchState;
 ```
 
 **Return Value**
@@ -336,21 +336,21 @@ Get desired torch state (on/off)
 Objective-C:
 
 ```objectivec
-[dce getTorchDesiredState];
+[dce getDesiredTorchState];
 ```
 
 Swift:
 
 ```swift
-dce.getTorchDesiredState()
+dce.getDesiredTorchState()
 ```
 
-## setTorchDesiredState
+## setDesiredTorchState
 
 Set the torch on/off.
 
 ```objc
-- (void)setTorchDesiredState:(TorchState)state NS_SWIFT_NAME(setTorchDesiredState(_:));
+- (void)setDesiredTorchState:(TorchState)state NS_SWIFT_NAME(setDesiredTorchState(_:));
 ```
 
 **Return Value**
@@ -362,13 +362,13 @@ Set the torch on/off.
 Objective-C:
 
 ```objectivec
-[dce setTorchDesiredState:TorchState.on];
+[dce setDesiredTorchState:TorchState.on];
 ```
 
 Swift:
 
 ```swift
-dce.setTorchDesiredState(TorchState.on)
+dce.setDesiredTorchState(TorchState.on)
 ```
 
 ## addTorchListener

@@ -28,11 +28,9 @@ Android sample
 Java:
 
 ```java
-    DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-    info.organizationID = "Your organizationID";
-    mCamera.initLicenseFromDLS(info, new CameraDLSLicenseVerificationListener() {
+    mCamera.initLicense("", new DCELicenseVerificationListener() {
         @Override
-        public void DLSLicenseVerificationCallback(boolean b, Exception e) {
+        public void DCELicenseVerificationCallback(boolean b, Exception e) {
             if(!b && e != null){
                 e.printStackTrace();
             }
@@ -43,9 +41,7 @@ Java:
 Kotlin:
 
 ```kotlin
-    val info = com.dynamsoft.dce.DMDLSConnectionParameters()
-    info.organizationID = "Put your organizationID here."
-    mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+    mCameraEnhancer!!.initLicense("") { isSuccess, error ->
         if (!isSuccess) {
             error.printStackTrace()
         }
@@ -57,15 +53,19 @@ Kotlin:
 Objective-C sample
 
 ```objectivec
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara view:dceview verificationDelegate:self];
+    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
+
+    - (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+        NSLog(@"Verification: %@",error.userInfo);
+    }
 ```
 
 Swift sample
 
 ```swift
-    let DLS = iDCEDLSConnectionParameters()
-    DLS.organizationID = "Your organizationID"
-    dce = DynamsoftCameraEnhancer.init(licenseFromDLS: DLS, view: dceView, verificationDelegate: self)
+    DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
+
+    func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+        print("Verification: \(String(describing: error))")
+    }
 ```

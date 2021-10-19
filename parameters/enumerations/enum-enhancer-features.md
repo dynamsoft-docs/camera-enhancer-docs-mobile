@@ -1,0 +1,28 @@
+---
+layout: default-layout
+title: Dynamsoft Camera Enhancer - Enumerations Enhancer Features
+description: This is the documentation - Enumerations Enhancer Features page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Enumerations Enhancer Features
+needAutoGenerateSidebar: true
+breadcrumbText: Enumerations Enhancer Features
+---
+
+# EnumEnhancerFeatures
+
+## Declarations
+
+| Language | Declaration |
+|----------|-------------|
+| Java(Android) | `class EnumEnhancerFeatures` |
+| Objective-C & Swift | `enum EnumEnhancerFeatures` |
+
+## Members
+
+| Member | Value | Description |
+|--------|-------|-------------|
+| `EF_FRAME_FILTER` | 0x01 | The frame filter feature of DCE. By enabling this feature, the low-quality frame will be discarded automatically. |
+| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EF_ALL` | 0x1f | Enable all the above features. |

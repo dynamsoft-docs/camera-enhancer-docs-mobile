@@ -15,9 +15,8 @@ breadcrumbText: Start on iOS
 
 ## API reference for Objective-C & Swift Edition
 
-- [Primary APIs]({{site.ios-api}}initialization.html)
-- [Auxiliary APIs]({{site.ios-api-auxiliary}})
+- [APIs reference]({{site.ios}}api-reference.html)
 
 ## Objective-C & Swift Release Note
 
-- [Objective-C & Swift Release Note]({{site.ios-release-note}}release-note.html)
+- [Objective-C & Swift Release Note]({{site.ios-release-note}})

@@ -11,30 +11,26 @@ breadcrumbText: Android CameraEnhancerException Class
 
 # CameraEnhancerException
 
-This is the page for `CameraEnhancerException` class. `CameraEnhancerException` is the exception for signaling camera enhancer errors.
+Exception for signaling camera enhancer errors.
 
 ```Java
-class com.dynamsoft.dce.CameraEnhancerException
+class com.dynamsoft.dce.CameraEnhancerException extends Exception
 ```
 
 | Method Name | Type |
 |------|------|
 | [`getErrorCode`](#geterrorcode) | int |
 
+&nbsp;
+
 ## getErrorCode
 
-**Code Snippet**
-
-Java:
+Gets the error code.
 
 ```java
-CameraEnhancerException cameraEnhancerException = null;
-cameraEnhancerException.getErrorCode();
+int getErrorCode()	
 ```
 
-Kotlin:
+**Return Value**
 
-```kotlin
-var cameraException: CameraEnhancerException? = null
-cameraException!!.errorCode
-```
+The error code. See also [`Error Code List`]({{ site.enumerations }}errorcode.html).

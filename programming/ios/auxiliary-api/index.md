@@ -12,6 +12,5 @@ breadcrumbText: iOS API
 
 ## Classes
 
-- [`iDCEDLSConnectionParameters`]({{ site.ios-api-auxiliary }}dls-connection.html)
-- [`FramePackage`]({{ site.ios-api-auxiliary }}framepackage.html)
-- [`DCECaptureView`]({{ site.ios-api-auxiliary }}captureview.html)
+- [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html)
+- [`DCECameraView`]({{ site.ios-api-auxiliary }}dcecameraview.html)

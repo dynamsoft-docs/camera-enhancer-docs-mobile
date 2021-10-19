@@ -13,20 +13,19 @@ breadcrumbText: Android Initialization Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |
+| [`initLicense`](#initLicense) | Initialize the Camera Enhancer from the license server with a license. |
 
-## initLicenseFromDLS
+## initLicense
 
 Initialize the `CameraEnhancer` from the license server.
 
 ```java
-void initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, CameraDLSLicenseVerificationListener listener)
+void initLicense(DCELicenseVerificationListener listener)
 ```
 
 **Parameters**
 
-`DMDLSConnectionParameters`: The class [`DMDLSConnectionParameters`]({{site.android-api-auxiliary}}dls-connection.html) parameters.  
-`CameraDLSLicenseVerificationListener`: The interface [`CameraDLSLicenseVerificationListener`]({{ site.android-api-auxiliary }}interface.html#cameradlslicenseverificationlistener).
+`DCELicenseVerificationListener`: The interface [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html).
 
 **Code Snippet**
 
@@ -35,11 +34,10 @@ Java:
 ```java
 CameraEnhancer mCameraEnhancer = new CameraEnhancer(MainActivity.this);
 mCameraEnhancer.addCameraView(cameraView);
-com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
-info.organizationID = "Put your organizationID here.";
-mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
+// Please use your own license to replace the public trial license.
+mCameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener() {
     @Override
-    public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+    public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
         if(!isSuccess){ error.printStackTrace(); }
     }
 });
@@ -50,9 +48,7 @@ Kotlin:
 ```kotlin
 mCameraEnhancer = CameraEnhancer(this@MainActivity)
 mCameraEnhancer!!.addCameraView(cameraView)
-val info = com.dynamsoft.dce.DMDLSConnectionParameters()
-info.organizationID = "Put your organizationID here."
-mCameraEnhancer!!.initLicenseFromDLS(info) { isSuccess, error ->
+mCameraEnhancer!!.initLicense(info) { isSuccess, error ->
     if (!isSuccess) {
         error.printStackTrace()
     }

@@ -18,11 +18,23 @@ breadcrumbText: iOS Guide
 
 ## Installation
 
-1. <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
+If you don’t have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK from<a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `INSTALLATION FOLDER`.
 
-2. Create a new Objective-C or Swift project.
+## Build Your First Application with Dynamsoft Camera Enhancer
 
-3. Add DynamsoftCameraEnhancer.framework in your Xcode project.
+The following sample will demonstrate how to acquire a frame from video streaming by DCE.
+
+> Note:
+> - You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
+> - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/master/android/).
+
+### Create a New Project and Include Dynamsoft Camera Enhancer
+
+1. Create a new Objective-C or Swift project.
+
+2. Drag and drop the `DynamsoftCameraEnhancer.framework` into your Xcode project. Make sure to `check Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
+
+3. Click on the project. Go to the `General --> Frameworks --> Libraries and Embedded Content`. Set the `embed type` to `Embed & Sign`.
 
 4. Import Dynamsoft Camera Enhancer
 
@@ -38,387 +50,205 @@ Swift:
 import DynamsoftCameraEnhancer
 ```
 
-## Create a Camera Module
+Now Dynamsoft Camera Enhancer is added to your project.
 
-This section is the guide for users to create a camera module in Objective-C or Swift project. After the installation of DCE, please add the following code to the new project.
+### Initialize the Camera View and Control the Camera
 
-Objective-C code sample:
+1. Delcare the DCE & DCECameraView property.
 
-```objectivec
-#import "ViewController.h"
-#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+Objective-C:
 
-@interface ViewController ()
-
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configurationDCE];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
-    [_dceView addOverlay];
-    [self.view addSubview:_dceView];
-    
-    //Initialize License
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;
-    
-    view:_dceView verificationDelegate:self];
-    //Make camera settings, turn on the camera
-    [_dce setCameraDesiredState:CAMERA_STATE_ON];
-    _dce.isEnable = YES;
-}
-
-- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-    NSLog(@"Verification: %@",error.userInfo);
-}
+```objc
+@property (nonatomic, strong) DynamsoftCameraEnhancer *dce;
+@property (nonatomic, strong) DCECameraView *dceView;
 ```
 
-Swift code sample:
-
-```Swift
-import UIKit
-import DynamsoftCameraEnhancer
-
-class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
-    
-    var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configurationDCE()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    func configurationDCE() {
-        dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay()
-        self.view.addSubview(dceView)
-        //Init DCE license
-        let dls = iDCEDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
-        //Turn on the camera
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.isEnable = true
-    }
-
-    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-        print("Verification: \(String(describing: error))")
-    }    
-}
-```
-
-## Extend the camera module with DCE functions
-
-This section is displaying how to add DCE functions to the camera module we built just now.
-
-For Objective-C users, please add the following code:
-
-```objectivec
-#import "ViewController.h"
-#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-
-@interface ViewController ()
-
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configurationDCE];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
-    [_dceView addOverlay];
-    [self.view addSubview:_dceView];
-    
-    //Initialize License
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;
-    
-    view:_dceView verificationDelegate:self];
-    //Make camera settings, turn on the camera
-    [_dce setCameraDesiredState:CAMERA_STATE_ON];
-    _dce.isEnable = YES;
-    
-    //*********Newly added****************
-    //*******Camera Settings**************
-    [dce setEnableDefaultAutoFocus:true];
-    [dce setEnableAutoZoom:true];
-    [dce setEnableFastMode:true];
-    [dce setEnableSensorControl:true];
-    [dce setEnableFrameFilter:true];
-}
-
-- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-    NSLog(@"Verification: %@",error.userInfo);
-}
-```
-
-For Swift users, please add the following code:
+Swift:
 
 ```swift
-import UIKit
-import DynamsoftCameraEnhancer
+var dce:DynamsoftCameraEnhancer! = nil
+var dceView:DCECameraView! = nil
+```
 
-class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
-    
-    var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configurationDCE()
-    }
+2. Initialize the DCE & DCECameraView in a method.
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    func configurationDCE() {
-        dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay()
-        self.view.addSubview(dceView)
-        //Init DCE license
-        let dls = iDCEDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
-        //Turn on the camera
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.isEnable = true
-        //*********************Newly added**********************
-        //************Add Camera Enhancer functions*************
-        dce.enableFastMode = true
-        dce.enableFrameFilter = true
-        dce.enableDefaultAutoFocus = true
-        dce.enableAutoZoom = true
-        dce.enableSensorControl = true
-    }
+Objective-C:
 
-    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-        print("Verification: \(String(describing: error))")
-    }    
+```objc
+- (void)configurationDCE{
+  _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
+  [self.view.addSubView:_dceView];
+  /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.*/
+  [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+  _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+  [_dce open];
+  [_dce addListener:self];
+  [_dce setFrameRate:30];
 }
 ```
 
-Run the project, now DCE functions have been added to the camera module.
+Swift:
 
-## Add decoder to the camera module
-
-This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. Before you start, please remember to add `DynamsoftBarcodeReader.framework` to your xcode project.
-
-Add this code snippet to the Objective-C project.
-
-```objectivec
-#import "ViewController.h"
-#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-//import Dynamsoft Barcode Reader for decoding
-#import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
-
-@interface ViewController ()
-//Barcode Reader initialize
-@property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self initDBR];
-    [self configurationDCE];
+```swift
+func configurationDCE() {
+  dceView = DCECameraView.init(frame: self.view.bounds)
+  self.view.addSubview(dceView)
+  // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
+  DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+  dce = DynamsoftCameraEnhancer.init(view: dceView)
+  dce.open()
+  dce.setFrameRate(30)
+  dce.addListener(self)
 }
+```
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+Now, DCE and CameraView instance are created. You can control the and add elements on the view via DCE high-level APIs.
+
+### Capture Frame(s)
+
+Dynamsoft Camera Enhancer provides two solutions on fetching the video frames:
+
+- Use the method [`getFrameFromBuffer`]({{site.ios-api}}index.html#getframefrombuffer) to fetch a single frame from the video buffer.
+- Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
+
+On this page, you will be guide on how to get a raw frame from the video streaming and convert it into a visible image so that you can display it on the UI.
+
+1. Add a capture button on the UI.
+
+Objective-C:
+
+```objc
+- (void)configurationUI{
+  CGFloat w = [[UIScreen mainScreen] bounds].size.width;
+  CGFloat h = [[UIScreen mainScreen] bounds].size.height;
+  CGFloat SafeAreaBottomHeight = [[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 34 : 0;
+  photoButton = [[UIButton alloc] initWithFrame:CGRectMake(w / 2 - 60, h - 170 - SafeAreaBottomHeight, 120, 120)];
+  photoButton.adjustsImageWhenDisabled = NO;
+  [photoButton setImage:[UIImage imageNamed:@"icon_capture"] forState:UIControlStateNormal];
+  self->imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
+  [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self.view addSubview:self->photoButton];
+  });
 }
+```
 
-- (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
-    [_dceView addOverlay];
-    [self.view addSubview:_dceView];
-    
-    //Initialize License
-    iDCEDLSConnectionParameters* dcePara = [[iDCEDLSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;
-    
-    view:_dceView verificationDelegate:self];
-    //Make camera settings, turn on the camera
-    [_dce setCameraDesiredState:CAMERA_STATE_ON];
-    _dce.isEnable = YES;
-    
-    //*********Newly added****************
-    //*******Camera Settings**************
-    [dce setEnableDefaultAutoFocus:true];
-    [dce setEnableAutoZoom:true];
-    [dce setEnableFastMode:true];
-    [dce setEnableSensorControl:true];
-    [dce setEnableFrameFilter:true];
+Swift:
+
+```swift
+func configurationUI() {
+  let w = UIScreen.main.bounds.size.width
+  let h = UIScreen.main.bounds.size.height
+  let safeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
+  photoButton = UIButton(frame: CGRect(x:w / 2 - 60, y: h - 170 - safeAreaBottomHeight, width: 120, height: 120))
+  photoButton.adjustsImageWhenDisabled = false
+  photoButton.setImage(UIImage(named: "icon_capture"), for: .normal)
+  self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
+  photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
+  DispatchQueue.main.async {
+    self.view.addSubview(self.photoButton)
+  }
 }
+```
 
-//*************Newly added Barcode Reader Settings***************
-//Dynamsoft Barcode Reader (DBR) initialization
-- (void)initDBR{
-    iDMDLSConnectionParameters* dbrPara = [[iDMDLSConnectionParameters alloc] init];
-    //Initialize DBR License
-    dbrPara.organizationID = @"Put your organizationID here";
-    _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dbrPara verificationDelegate:self];
-    [_barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:@"0" error:nil];
-    [_barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"BlockSizeX" argumentValue:@"81" error:nil];
-    [_barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"BlockSizeY" argumentValue:@"81" error:nil];
+2. Add the trigger of the capture button.
+
+Objective-C:
+
+```objc
+/*Declare a BOOL value to control the capture*/
+bool isview;
+/*Add a method to trigger the capture*/
+- (void)takePictures{
+  isview = true;
 }
-//****************************************************************
+```
 
-- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-    NSLog(@"Verification: %@",error.userInfo);
+Swift:
+
+```swift
+/*Declare a BOOL value to control the capture*/
+var isview:Bool = false
+/*Add a method to trigger the capture*/
+func takePictures() {
+  isview = true;
 }
+```
 
-//***********************Newly added********************************
-//******************Display text decode result**********************
-- (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
-    if (results.count > 0) {
-        _dce.isEnable = NO;
-        __weak ViewController *weakSelf = self;
-        [self showResult:results.firstObject.barcodeText
-              completion:^{
-                  weakSelf.dce.isEnable = YES;
-              }];
-    }else{
-        return;
-    }
-}
+3. Fetch the frames from the callback. Convert the frame to a visible image and display it on the view if the capture button is triggered.
 
-- (void)showResult:(NSString *)result completion:(void (^)(void))completion {
+Objective-C:
+
+```objc
+- (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
+  if (isview) {
+    isview = false;
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:result message:nil preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                handler:^(UIAlertAction * action) {
-                                                    completion();
-                                                }]];
-        [self presentViewController:alert animated:YES completion:nil];
+      [self->photoButton setEnabled:false];
+      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+                                                  scale: 1.0
+                                            orientation: UIImageOrientationRight];
+      [self->imageView setImage:image];
+      [self.view addSubview:self->imageView];
+      [self addBack];
     });
+  }
 }
 ```
 
-For Swift users, please add the following code to the Swift project.
+Swift:
 
 ```swift
-import UIKit
-//Import Dynamsoft Barcode Reader
-import DynamsoftBarcodeReader
-import DynamsoftCameraEnhancer
-
-class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
-    
-    var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
-    //*********************Newly added**********************
-    //************init Dynamsoft Barcode Reader*************
-    var barcodeReader:DynamsoftBarcodeReader! = nil
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //*********************Newly added**********************
-        //************init Dynamsoft Barcode Reader*************
-        initDBR()
-        configurationDCE()
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
+  if isview {
+    isview = false
+    DispatchQueue.main.async {
+      self.photoButton?.isEnabled = false
+      var image:UIImage!
+      image = frame.toUIImage()
+      image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+      self.imageView.image = image
+      self.view.addSubview(self.imageView)
+      self.addBack()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    //********************Newly added***********************
-    //**********Initialize Dynamsoft Barcode Reader*********
-    func initDBR() {
-        let dls = iDMDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-        barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "0", error: nil)
-        barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "BlockSizeX", argumentValue: "81", error: nil)
-        barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "BlockSizeY", argumentValue: "81", error: nil)
-    }
-    
-    func configurationDCE() {
-        dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay()
-        self.view.addSubview(dceView)
-        //Init DCE license
-        let dls = iDCEDLSConnectionParameters()
-        dls.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
-        //Turn on the camera
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.isEnable = true
-        //*********************Newly added**********************
-        //************Add Camera Enhancer functions*************
-        dce.enableFastMode = true
-        dce.enableFrameFilter = true
-        dce.enableDefaultAutoFocus = true
-        dce.enableAutoZoom = true
-        dce.enableSensorControl = true
-        //*********************Newly added**********************
-        //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
-        let para = DCESettingParameters.init()
-        para.cameraInstance = dce
-        para.textResultDelegate = self
-        barcodeReader.setCameraEnhancerPara(para)
-    }
-
-    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-        print("Verification: \(String(describing: error))")
-    }
-    
-    //*********************Newly added**********************
-    //******Get and display barcode decoding text result****
-    func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
-        if results!.count > 0 {
-            dce.isEnable = false
-            showResult(results!.first!.barcodeText!) { [weak self] in
-                self?.dce.isEnable = true
-            }
-        }else{
-            return
-        }
-    }
-    
-    private func showResult(_ result: String, completion: @escaping () -> Void) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: result, message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion() }))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
+  }
 }
 ```
 
-Run the project. Now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.
+4. Configure a BackToHome button.
+
+Objective-C:
+
+```objc
+- (void)addBack{
+  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
+}
+
+- (void)BackToHome{
+  [imageView removeFromSuperview];
+  self.navigationItem.leftBarButtonItem = nil;
+  [photoButton setEnabled:true];
+}
+```
+
+Swift:
+
+```swift
+func addBack(){
+  self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
+}
+    
+@objc func backToHome(){
+  self.imageView.removeFromSuperview()
+  self.photoButton?.isEnabled = true
+  self.navigationItem.leftBarButtonItem = nil
+}
+```
+
+Run the project. Now, you first app with Dynamsoft Camera Enhancer is completed.
+
+## What's Next?
+
+### How to integration with barcode reader
+
+<a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/user-guide.html?utm_source=docs" target="_blank">This article</a> guides you to integrate the barcode reader function into your app.

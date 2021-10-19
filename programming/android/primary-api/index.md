@@ -32,7 +32,6 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`getEnabledFastModeStatus`]({{site.android-api}}preprocess.html#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
 | [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
 | [`getEnabledFrameFilterStatus`]({{site.android-api}}preprocess.html#getenabledframefilterstatus) | Get the status (on/off) of DCE frame filter mode. |
-| [`setMaxFrameRate`]({{site.android-api}}preprocess.html#setmaxframerate) | Set max frame rate. |
 | [`enableSensorControl`]({{site.android-api}}preprocess.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
 | [`getEnabledSensorControlStatus`]({{site.android-api}}preprocess.html#getenabledsensorcontrolstatus) | Get the status (on/off) of DCE sensor control mode. |
 | [`setSensorControlThreshold`]({{site.android-api}}preprocess.html#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
@@ -63,6 +62,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`getResolution`]({{site.android-api}}camera.html#getresolution) | Get current resolution setting. |
 | [`setResolution`]({{site.android-api}}camera.html#setresolution) | Set resolution. |
 | [`getResolutionList`]({{site.android-api}}camera.html#getresolutionlist) | Get all available resolutions |
+| [`setMaxFrameRate`]({{site.android-api}}preprocess.html#setmaxframerate) | Set max frame rate. |
 
 ## [Focus & zoom methods]({{site.android-api}}zoom-focus.html)
 

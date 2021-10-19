@@ -12,6 +12,7 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
+| [`acquireBufferedFrame`](#acquirebufferedframe) | Fetch a frame from the video buffer. |
 | [`enableFastMode`](#enablefastmode) | Set true/false to turn on/off DCE fast mode. |
 | [`getEnabledFastModeStatus`](#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
 | [`enableFrameFilter`](#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
@@ -21,9 +22,35 @@ noTitleIndex: true
 | [`getEnabledSensorControlStatus`](#getenabledsensorcontrolstatus) | Get the status (on/off) of DCE sensor control mode. |
 | [`setSensorControlThreshold`](#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
 
+## acquireBufferedFrame
+
+Fetch a single buffered frame from the video buffer.
+
+```java
+acquireBufferedFrame();
+```
+
+**Return Value**
+
+[`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html): This method returns the buffered frame data. The frame data includes the image data, width, height, strides and other frame information.
+
+**Code Snippet**
+
+Java:
+
+```java
+mCameraEnhancer.acquireBufferedFrame();
+```
+
+Kotlin:
+
+```kotlin
+mCameraEnhancer!!.acquireBufferedFrame
+```
+
 ## enableFastMode
 
-This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contain barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
+This API is designed for users to set up DCE fast mode. DCE fast mode will cut frames into small images that contain barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
 
 ```java
 enableFastMode(boolean)
@@ -127,32 +154,6 @@ Kotlin:
 
 ```kotlin
 var x:Boolean? = mCameraEnhancer!!.enabledFrameFilterStatus
-```
-
-## setMaxFrameRate
-
-Set max frame rate.
-
-```java
-setMaxFrameRate(int)
-```
-
-**Parameters**
-
-`int`: A int value that stands for the max frame rate.
-
-**Code Snippet**
-
-Java:
-
-```java
-mCameraEnhancer.setMaxFrameRate(24);
-```
-
-Kotlin:
-
-```kotlin
-mCameraEnhancer!!.setMaxFrameRate(24)
 ```
 
 ## enableSensorControl
