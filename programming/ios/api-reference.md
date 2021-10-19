@@ -17,53 +17,53 @@ breadcrumbText: iOS API references
 
 | Method | Description |
 | ------ | ----------- |
-| [`initWithView`]({{site.ios-api}}index.html##initwithview) | Initialize the camera enhancer with the `DCECameraView`. |
-| [`initLicense`]({{site.ios-api}}index.html#initlicense) | Sets product key and activate the SDK. |
-| [`getVersion`]({{site.ios-api}}index.html#getversion) | Get the SDK version. |
+| [`initWithView`]({{site.ios-api}}camera-enhancer.html#initwithview) | Initialize the camera enhancer with the `DCECameraView`. |
+| [`initLicense`]({{site.ios-api}}camera-enhancer.html#initlicense) | Sets product key and activate the SDK. |
+| [`getVersion`]({{site.ios-api}}camera-enhancer.html#getversion) | Get the SDK version. |
 
 ### Basic Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`getAllCameras`]({{site.ios-api}}index.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera`]({{site.ios-api}}index.html#selectcamera) | Select and active a camera from the camera list with the camera ID. |
-| [`getSelectedCamera`]({{site.ios-api}}index.html#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraState`]({{site.ios-api}}index.html#getcamerastate) | Get the state of the currently selected camera. |
-| [`open`]({{site.ios-api}}index.html#open) | Turn on the current selected camera. |
-| [`close`]({{site.ios-api}}index.html#close) | Turn off the current selected camera. |
-| [`pause`]({{site.ios-api}}index.html#pause) | Pause the current selected  camera. |
-| [`resume`]({{site.ios-api}}index.html#resume) | Resume the current selected camera. |
-| [`turnOnTorch`]({{site.ios-api}}index.html#turnontorch) | Turn on the torch. |
-| [`turnOffTorch`]({{site.ios-api}}index.html#turnofftorch) | Turn off the torch. |
+| [`getAllCameras`]({{site.ios-api}}camera-enhancer.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCamera`]({{site.ios-api}}camera-enhancer.html#selectcamera) | Select and active a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`]({{site.ios-api}}camera-enhancer.html#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraState`]({{site.ios-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
+| [`open`]({{site.ios-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
+| [`close`]({{site.ios-api}}camera-enhancer.html#close) | Turn off the current selected camera. |
+| [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | Pause the current selected  camera. |
+| [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | Resume the current selected camera. |
+| [`turnOnTorch`]({{site.ios-api}}camera-enhancer.html#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`]({{site.ios-api}}camera-enhancer.html#turnofftorch) | Turn off the torch. |
 
 ### Frame Acquiring Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`getFrameFromBuffer`]({{site.ios-api}}index.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`]({{site.ios-api}}index.html#addlistener) | Add a listener to the Camera Enhancer instance. |
-| [`removeListener`]({{site.ios-api}}index.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
+| [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`]({{site.ios-api}}camera-enhancer.html#addlistener) | Add a listener to the Camera Enhancer instance. |
+| [`removeListener`]({{site.ios-api}}camera-enhancer.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
 
 ### Enhanced Features
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`]({{site.ios-api}}index.html#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
-| [`disableFeatures`]({{site.ios-api}}index.html#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
-| [`isFeatureEnabled`]({{site.ios-api}}index.html#isfeatureenabled) | Check whether the input features are enabled. |
+| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`isFeatureEnabled`]({{site.ios-api}}camera-enhancer.html#isfeatureenabled) | Check whether the input features are enabled. |
 
 ### Advanced Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`setFrameRate`]({{site.ios-api}}index.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
-| [`getFrameRate`]({{site.ios-api}}index.html#getframerate) | Get the current frame rate. |
-| [`setResolution`]({{site.ios-api}}index.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`]({{site.ios-api}}index.html#getresolution) | Get the current resolution. |
+| [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
+| [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
+| [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.ios-api}}.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`setFocus`]({{site.ios-api}}index.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`updateAdvancedSettingFromFile`]({{site.ios-api}}index.html#updateadvancedsettingfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
-| [`updateAdvancedSettingFromString`]({{site.ios-api}}index.html#updateadvancedsettingfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
+| [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`updateAdvancedSettingFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
 ## Auxiliary Classes
 
