@@ -48,8 +48,8 @@ breadcrumbText: iOS API references
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
-| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`isFeatureEnabled`]({{site.ios-api}}camera-enhancer.html#isfeatureenabled) | Check whether the input features are enabled. |
 
 ### Advanced Camera Control Methods
@@ -60,7 +60,7 @@ breadcrumbText: iOS API references
 | [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
 | [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
-| [`setZoom`]({{site.ios-api}}.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`updateAdvancedSettingFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
