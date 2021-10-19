@@ -53,6 +53,7 @@ document.body.appendChild(frameData.canvas);
 
 * [DCEFrame](interface/dceframe.md)
 * [Region](interface/region.md)
+
 <!--
 ## getFrameFromBuffer
 
