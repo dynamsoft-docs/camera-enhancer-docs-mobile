@@ -80,11 +80,15 @@ Read more on [how to host the library](#hosting-the-library).
 To use the library, we first create a `CameraEnhancer` object.
 
 ```javascript
-try {
-    await Dynamsoft.DCE.CameraEnhancer.createInstance();
-} catch (ex) {
-    console.error(ex);
-}
+ let enhancer = null;
+ try {
+     let pEnhancer = null;
+     (async () => {
+         enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+     })();
+ } catch (ex) {
+     console.error(ex);
+ }
 ```
 
 #### Configure the `CameraEnhancer` object

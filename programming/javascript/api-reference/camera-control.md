@@ -188,11 +188,14 @@ playCallBackInfo: returns the resolution of the video input.
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.onPlayed = playCallBackInfo => {
-    console.log(playCallBackInfo.width);
-};
-await enhancer.open();
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.onPlayed = playCallBackInfo => {
+        console.log(playCallBackInfo.width);
+    };
+    await enhancer.open();
+})();
 ```
 
 **See also**

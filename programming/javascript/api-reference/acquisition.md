@@ -91,9 +91,12 @@ singleFrameMode: boolean
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.singleFrameMode = true;
-await enhancer.open();
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.singleFrameMode = true;
+    await enhancer.open();
+})();
 ```
 
 ## onSingleFrameAcquired
@@ -111,11 +114,14 @@ onSingleFrameAcquired: (file: File) => {}
 **Code Snippet**
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-enhancer.onSingleFrameAcquired = file => {
-    console.log(file.size);
-};
-await enhancer.open();
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.onSingleFrameAcquired = file => {
+        console.log(file.size);
+    };
+    await enhancer.open();
+})();
 ```
 
 **See also**
