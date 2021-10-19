@@ -81,7 +81,7 @@ NSInteger frameID
 
 ## quality
 
-The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more about the frame quality in enumeration [`EnumFrameQuality`]({{site.barcode-enum}}enum-frame-quality.html).
+The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more about the frame quality in enumeration [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html).
 
 ```objectivec
 EnumFrameQuality quality
