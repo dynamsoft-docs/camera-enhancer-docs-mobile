@@ -22,11 +22,11 @@ breadcrumbText: iOS Release Note
 
 ### Update
 
-- Class `iDMLTSConnectionParameters` is renamed to [`iDCELTSConnectionParameters`]({{ site.ios-api-auxiliary }}ltsconnection.html)
+- Class `iDMLTSConnectionParameters` is renamed to [`iDCELTSConnectionParameters`]({{ site.ios-api-auxiliary }}dlsconnection.html)
 
 ### New
 
-- Added a new property [`products`]({{ site.ios-api-auxiliary }}ltsconnection.html#products) in class `iDCELTSConnectionParameters`.
+- Added a new property [`products`]({{ site.ios-api-auxiliary }}dlsconnection.html#products) in class `iDCELTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`]({{ site.enumerations }}enumproduct.html).
 
 ## 1.0.0 (04/29/2021)
