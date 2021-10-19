@@ -18,7 +18,7 @@ breadcrumbText: iOS Guide
 
 ## Installation
 
-If you don’t have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK from<a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `INSTALLATION FOLDER`.
+If you don’t have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK from <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `INSTALLATION FOLDER`.
 
 ## Build Your First Application with Dynamsoft Camera Enhancer
 
