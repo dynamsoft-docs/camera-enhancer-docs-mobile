@@ -21,7 +21,7 @@ breadcrumbText: Auxiliary
 Returns the version of the library.
 
 ```typescript
-getVersion(): string
+static getVersion(): string
 ```
 
 **Parameters**
@@ -32,12 +32,18 @@ None.
 
 The version string of the library.
 
+**Code Snippet**
+
+```js
+Dynamsoft.DCE.CameraEnhancer.getVersion(); // 'JS 1.0.0.20210628'
+```
+
 ## detectEnvironment
 
 Returns a report (in JSON) on the current running environments.
 
 ```typescript
-detectEnvironment(): any
+static detectEnvironment(): Promise<any>
 ```
 
 **Parameters**
@@ -58,4 +64,10 @@ A JSON object about the running environment. For example
     "version": 90,
     "OS": "Windows"
 }
+```
+
+**Code Snippet**
+
+```js
+await Dynamsoft.DCE.CameraEnhancer.detectEnvironment();
 ```

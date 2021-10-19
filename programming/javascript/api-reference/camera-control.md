@@ -76,12 +76,12 @@ if (cameras.length) {
 Chooses a camera as the video source.
 
 ```typescript
-selectCamera(deviceID: string): Promise<PlayCallbackInfo>
+selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>
 ```
 
 **Parameters**
 
-`deviceID` : specifies the camera.
+`cameraObjectOrDeviceID` : specifies the camera.
 
 **Return value**
 
