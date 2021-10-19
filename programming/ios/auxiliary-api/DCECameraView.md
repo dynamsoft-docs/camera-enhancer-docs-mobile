@@ -26,7 +26,7 @@ breadcrumbText: iOS DCECameraView Class
 | [`viewfinderVisible`](#setoverlaycolour) | The property stores the BOOL value that controls the visibility of the viewfinder. |
 | [`setViewfinder`](#setoverlaycolour) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
 
-## initWithView
+## initWithFrame
 
 Init the DCECameraView.
 
