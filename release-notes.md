@@ -18,7 +18,7 @@ breadcrumbText: Release Note
 - Simplified the usage of camera-control APIs. The new APIs are easier to use and covers more scenarios.
 - Simplified the usage of camera enhancer features. Users can enable all required features via the method `enableFeatures` by inputting the combined enumeration value.
 - Extended the features of `DCECameraView`. Users can add and personalize the overlays and viewfinder on the camera UI.
-- Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap/toUIImage` is added to enable users to convert `DCEFrame` to a visible image.
+- Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap/toUIImage` is added to enable users to convert `DCEFrame` to a system built-in image object.
 
 ### Editions
 
