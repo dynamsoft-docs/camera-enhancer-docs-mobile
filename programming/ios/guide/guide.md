@@ -25,8 +25,9 @@ If you don’t have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK
 The following sample will demonstrate how to acquire a frame from video streaming by DCE.
 
 > Note:
-> - You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
-> - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/master/android/).
+> - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).
+> - You can download the similar complete Swift source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldSwift).
+> - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/).
 
 ### Create a New Project and Include Dynamsoft Camera Enhancer
 
@@ -78,7 +79,7 @@ Objective-C:
 - (void)configurationDCE{
   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
   [self.view.addSubView:_dceView];
-  /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.*/
+  /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs to request for 30 days extension.*/
   [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
   [_dce open];
@@ -93,7 +94,7 @@ Swift:
 func configurationDCE() {
   dceView = DCECameraView.init(frame: self.view.bounds)
   self.view.addSubview(dceView)
-  // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
+  // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs to request for 30 days extension.
   DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
   dce = DynamsoftCameraEnhancer.init(view: dceView)
   dce.open()
@@ -108,10 +109,10 @@ Now, DCE and CameraView instance are created. You can control the and add elemen
 
 Dynamsoft Camera Enhancer provides two solutions on fetching the video frames:
 
-- Use the method [`getFrameFromBuffer`]({{site.ios-api}}index.html#getframefrombuffer) to fetch a single frame from the video buffer.
+- Use the method [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) to fetch a single frame from the video buffer.
 - Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
 
-On this page, you will be guide on how to get a raw frame from the video streaming and convert it into a visible image so that you can display it on the UI.
+On this page, you will be guide on how to get a raw frame from the video streaming and convert it into a system built-in image so that you can display it on the UI.
 
 1. Add a capture button on the UI.
 
@@ -245,7 +246,12 @@ func addBack(){
 }
 ```
 
-Run the project. Now, you first app with Dynamsoft Camera Enhancer is completed.
+Run the project. Now, your first app with Dynamsoft Camera Enhancer is completed.
+
+> Note:
+> - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).
+> - You can download the similar complete Swift source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldSwift).
+> - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/).
 
 ## What's Next?
 
