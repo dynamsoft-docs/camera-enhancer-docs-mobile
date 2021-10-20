@@ -263,7 +263,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.enumerations}}other-enums.html#imagepixelformat)
+`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
 
 &nbsp;
 
@@ -291,7 +291,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: An `Enumeration` value that means the frame quality. Read more in `EnumFrameQuality`.
+`quality`: An `Enumeration` value that means the frame quality. Read more in [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html).
 
 &nbsp;
 
