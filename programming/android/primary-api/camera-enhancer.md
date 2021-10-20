@@ -739,14 +739,14 @@ cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthres
 
 | Method | Description |
 | ------ | ----------- |
-| [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) |
-| [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) |
+| [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
+| [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
 
 &nbsp;
 
 ### setCameraView
 
-Set a [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object as the main UI view.
+Set a [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object as the main UI view.
 
 ```java
 void setCameraView(DCECameraView cameraView)
@@ -754,7 +754,7 @@ void setCameraView(DCECameraView cameraView)
 
 **Parameters**
 
-`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html).
+`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
 
 **Code Snippet**
 
@@ -769,7 +769,7 @@ cameraEnhancer.setCameraView(cameraView);
 
 ### getCameraView
 
-Get the [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object of the current UI view.
+Get the [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object of the current UI view.
 
 ```java
 DCECameraView getCameraView()
@@ -777,7 +777,7 @@ DCECameraView getCameraView()
 
 **Return Value**
 
-The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html).
+The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
 
 **Code Snippet**
 
