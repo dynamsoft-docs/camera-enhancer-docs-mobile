@@ -10,7 +10,7 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
-## 2.0.0 (10/19/2021)
+## 2.0.0 (10/20/2021)
 
 * Well-wrapped APIs to control cameras based on [the MediaDevices interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices).
 * Automatic selection of the optimal camera to use.
