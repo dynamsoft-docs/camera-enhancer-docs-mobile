@@ -19,4 +19,4 @@ breadcrumbText: Start on iOS
 
 ## Objective-C & Swift Release Note
 
-- [Objective-C & Swift Release Note]({{site.ios-release-note}}release-note.html)
+- [Objective-C & Swift Release Note]({{site.ios-release-note}})

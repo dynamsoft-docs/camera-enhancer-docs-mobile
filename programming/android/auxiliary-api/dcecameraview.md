@@ -19,13 +19,13 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 
 | Method Name | Description |
 |------|------|
-| [`DCECameraView`](#dceameraview) | Initialize the `DCECameraView` object. |
-| [`setOverlayVisible`](#setOverlayVisible) | This method controls whether the camera view to display coloured and translucent overlay. |
-| [`getOverlayVisible`](#getOverlayVisible) | Get the visibility (true: visible/ false: invisible) of the overlay. |
-| [`setOverlayColour`](#setOverlayColour) | Set the stroke and fill colour of the overlay. |
-| [`setViewfinderVisible`](#setViewfinderVisible) | This method controls whether to display a viewfinder. |
-| [`getViewfinderVisible`](#getViewfinderVisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
-| [`setViewfinder`](#setViewfinder) | Set the position and the size of the viewfinder. |
+| [`DCECameraView`](#dcecameraview) | Initialize the `DCECameraView` object. |
+| [`setOverlayVisible`](#setoverlayvisible) | This method controls whether the camera view to display coloured and translucent overlay. |
+| [`getOverlayVisible`](#getoverlayvisible) | Get the visibility (true: visible/ false: invisible) of the overlay. |
+| [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill colour of the overlay. |
+| [`setViewfinderVisible`](#setviewfindervisible) | This method controls whether to display a viewfinder. |
+| [`getViewfinderVisible`](#getviewfindervisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
+| [`setViewfinder`](#setviewfinder) | Set the position and the size of the viewfinder. |
 
 &nbsp;
 

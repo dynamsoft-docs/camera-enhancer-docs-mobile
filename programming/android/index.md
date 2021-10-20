@@ -19,4 +19,4 @@ breadcrumbText: Start on Android
 
 ## Android Release Note
 
-- [Android Release Note]({{site.android-release-note}}release-note.html)
+- [Android Release Note]({{site.android-release-note}})

@@ -8,8 +8,7 @@ breadcrumbText: Enumerations
 ---
 # Enumerations
 
+- [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
+- [`EnumCameraDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
+- [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
 - [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
-- [`EnumFrameQuality`]({{ site.enumerations }}enum-frame-quality.html)
-- [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
-- [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
-- [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
