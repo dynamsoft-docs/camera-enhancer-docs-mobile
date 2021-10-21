@@ -6,7 +6,12 @@ keywords:  Camera Enhancer, License initialization
 needAutoGenerateSidebar: true
 breadcrumbText: License Initialization
 ---
+
 # License initialization
+
+> NOTE
+>
+> The JavaScript edition doesn't require a license as of version 2.0.0.
 
 ## Get a trial key
 
