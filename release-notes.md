@@ -23,4 +23,37 @@ breadcrumbText: Release Note
 ### Editions
 
 | -- | -- | -- |
-| [JavaScript]({{ site.js-rn }}release-notes-2.x.html) | [Android]({{ site.android-release-note }}release-notes-2.x.html) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html) |
+| [JavaScript]({{ site.js-rn }}release-notes-2.x.html#200-10202021) | [Android]({{ site.android-release-note }}release-notes-2.x.html#200-10192021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#200-10192021) |
+
+## 1.0.3 (07/20/2021)
+
+### Highlights
+
+- Updated the names of license activation APIs.
+
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-1.x.html#103-07202021) | [iOS]({{ site.ios-release-note }}release-notes-1.x.html#103-07202021) |
+
+## 1.0.1 (06/10/2021)
+
+### Highlights
+
+- Added a new property `products` in `LTSConnectionParameters`.
+- Added a new enumeration `EnumProduct`.
+
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-1.x.html#101-06102021) | [iOS]({{ site.ios-release-note }}release-notes-1.x.html#101-06102021) |
+
+## 1.0.0 (04/29/2021)
+
+### Highlights
+
+- Dynamsoft Camera Enhancer is released. The following features are available:
+  - Video Buffer
+  - Frame Filter
+  - Fast Mode
+  - Auto-Zoom
+  - Enhanced-Focus
+
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-1.x.html#100-04292021) | [iOS]({{ site.ios-release-note }}release-notes-1.x.html#100-04292021) |
