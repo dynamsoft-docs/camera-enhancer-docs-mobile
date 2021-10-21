@@ -1,7 +1,7 @@
 repositoryUrl: https://github.com/dynamsoft-docs/camera-enhancer-docs/blob/master
 repository: dynamsoft-docs/camera-enhancer-docs
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs
-firstLevelUrl: /camera-enhancer/docs
+firstLevelUrl: /camera-enhancer/docs/
 docHomePage: /camera-enhancer/docs/introduction/
 frontPageFolder: /camera-enhancer/docs/
 
@@ -65,3 +65,12 @@ useVersionTree: true
 baseurl: "/camera-enhancer/docs/"
 plugins:
   - jemoji
+  - jekyll-sitemap
+  
+defaults:
+  - scope:
+      path: "Hide_Tree_Page.html"
+    values:
+      sitemap: false
+
+url: "https://www.dynamsoft.com" # sitemap root

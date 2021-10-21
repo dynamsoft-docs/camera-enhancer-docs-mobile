@@ -16,17 +16,17 @@ breadcrumbText: License Initialization
 ## Get a trial key
 
 - A 7-day public trial key is available for every new device for first use of Dynamsoft Camera Enhancer.
-- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs&package=android" target="_blank">Private Trial License Page</a> to get a 30-day extension.
+- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs&package=android" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
 
-## Get a full key license
+## Get a full license
 
-- [Please contact us to purchase for full key license]({{site.contact-us}})
+- [Contact us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
 
-## Set up the license from Dynamsoft License Server
+## Set up the license
 
-Once you have a license you can use following code to set up your license from `Dynamsoft License Server`:
+Once you have a license, you can use following code to set up your license:
 
-For Android users:
+### For Android users:
 
 Android sample
 
@@ -53,7 +53,7 @@ Kotlin:
     }
 ```
 
-For iOS users:
+### For iOS users:
 
 Objective-C sample
 
