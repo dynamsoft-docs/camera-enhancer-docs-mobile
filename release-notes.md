@@ -38,7 +38,7 @@ breadcrumbText: Release Note
 
 ### Highlights
 
-- Added a new property `products` in `LTSConnectionParameters`.
+- Added a new property `products` in `DMLTSConnectionParameters`.
 - Added a new enumeration `EnumProduct`.
 
 | -- | -- |
