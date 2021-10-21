@@ -5,6 +5,7 @@ description: This is the main page of Dynamsoft Camera Enhancer for JavaScript L
 keywords: javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # JavaScript Documentation

@@ -5,10 +5,9 @@ description: This is the documentation - Parameters page of Dynamsoft Camera Enh
 keywords:  Camera Enhancer, Parameters
 needAutoGenerateSidebar: true
 breadcrumbText: Parameters
+noTitleIndex: true
 ---
 # Parameters
-
-## Parameter Reference
 
 - [Parameters reference]({{site.reference}})
 - [Enumerations]({{site.enumerations}})
