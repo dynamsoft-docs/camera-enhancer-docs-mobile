@@ -11,25 +11,25 @@ breadcrumbText: iOS DCEFrame Class
 
 # DCEFrame
 
-Return the frame decode results and additional information.
+The `DCEFrame` is the class that stores pixel data and further information.
 
 ```objc
 @interface DCEFrame : NSObject
 ```
 
-| Method & Property Name | Type/Return Value |
-| ---------------------- | ----------------- |
-| [`imageData`](#imagedata) | *NSData* * |
-| [`width`](#width) | *NSInteger* |
-| [`height`](#height) | *NSInteger* |
-| [`stride`](#stride) | *NSInteger* |
-| [`pixelFormat`](#pixelformat) | *NSInteger* |
-| [`frameID`](#frameid) | *NSInteger* |
-| [`quality`](#quality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) |
-| [`isCropped`](#iscropped) | *BOOL* |
-| [`cropRegion`](#cropregion) | *CGRect* |
-| [`orientation`](#orientation) | *NSInteger* |
-| [`toUIImage`](#touiimage) | *UIImage* * |
+| Method & Property Name | Type/Return Value | Description |
+| ---------------------- | ----------------- | ----------- |
+| [`imageData`](#imagedata) | *NSData* * | The property stores the pixel data of the image. |
+| [`width`](#width) | *NSInteger* | The property stores the pixel width of the image. |
+| [`height`](#height) | *NSInteger* | The property stores the pixel height of the image. |
+| [`stride`](#stride) | *NSInteger* | The property stores the stride of the image. |
+| [`pixelFormat`](#pixelformat) | *NSInteger* | The property stores the pixel format of the image. |
+| [`frameID`](#frameid) | *NSInteger* | The property stores the `frameID` of the frame. |
+| [`quality`](#quality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) | The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. |
+| [`isCropped`](#iscropped) | *BOOL* | The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
+| [`cropRegion`](#cropregion) | *CGRect* | The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null. |
+| [`orientation`](#orientation) | *NSInteger* | The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation. |
+| [`toUIImage`](#touiimage) | *UIImage* * | The method converts the image to `UIImage` to make it visible on the UI. |
 
 ## imageData
 

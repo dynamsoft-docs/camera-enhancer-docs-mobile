@@ -11,7 +11,7 @@ breadcrumbText: iOS FramePackage Class
 
 # FramePackage
 
-Return the frame decode results and additional information.
+The `FramePackage` is the class that stores pixel data and further information.
 
 ```objc
 @interface FramePackage : NSObject
