@@ -94,7 +94,6 @@ String DCEVersion = cameraEnhancer.getVersion();
 
 &nbsp;
 
-
 ## Basic Camera Control Methods
 
 | Method | Description |
