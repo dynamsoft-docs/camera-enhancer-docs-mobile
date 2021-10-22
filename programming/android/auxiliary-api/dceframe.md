@@ -17,28 +17,29 @@ The `DCEFrame` is the class that stores pixel data and further information.
 class com.dynamsoft.dce.DCEFrame
 ```
 
-| Method Name | Type |
-| ----------- | ---- |
-| [`getImageData`](#getimagedata) | byte[] |
-| [`getWidth`](#getwidth) | int |
-| [`getHeight`](#getheight) | int |
-| [`getStrides`](#getstrides) | int[] |
-| [`getPixelFormat`](#getpixelformat) | int |
-| [`getFrameID`](#getframeid) | int |
-| [`getQuality`](#getquality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) |
-| [`getIsCropped`](#getiscropped) | boolean |
-| [`getCropRegion`](#getcropregion) | Rect |
-| [`getOrientation`](#setorientation) | int |
-| [`setImageData`](#setimagedata) | byte[] |
-| [`setWidth`](#setwidth) | int |
-| [`setHeight`](#setheight) | int |
-| [`setStrides`](#setstrides) | int[] |
-| [`setPixelFormat`](#setpixelformat) | int |
-| [`setFrameID`](#setframeid) | int |
-| [`setQuality`](#setquality) | [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html) |
-| [`setIsCropped`](#setiscropped) | boolean |
-| [`setCropRegion`](#setcropregion) | Rect |
-| [`setOrientation`](#setorientation) | int |
+| Method Name | Description |
+| ----------- | ----------- |
+| [`getImageData`](#getimagedata) | Get the pixel data of the image. |
+| [`getWidth`](#getwidth) | Get the pixel width of the image. |
+| [`getHeight`](#getheight) | Get the pixel height of the image. |
+| [`getStrides`](#getstrides) | Get the number of row bytes in each image plane (YUV). |
+| [`getPixelFormat`](#getpixelformat) | Get the pixel format of the image. Currently, the image output format of `DCEFrame` is always NV21. |
+| [`getFrameID`](#getframeid) | Get the `frameID` of the `DCEFrame` object. |
+| [`getQuality`](#getquality) | Get the frame quality of the image. User have to enable the frame filter feature to get the quality (high/low) of the image. Otherwise, the frame quality will be unknown. |
+| [`getIsCropped`](#getiscropped) | Get a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
+| [`getCropRegion`](#getcropregion) | Get the crop region of the image (if the image is cropped). |
+| [`getOrientation`](#setorientation) | Set the orientation of the image. |
+| [`setImageData`](#setimagedata) | Set the pixel data of the image. |
+| [`setWidth`](#setwidth) | Set the pixel width of the image. |
+| [`setHeight`](#setheight) | Set the pixel height of the image. |
+| [`setStrides`](#setstrides) | Set the number of row bytes in each image plane (YUV). |
+| [`setPixelFormat`](#setpixelformat) | Set the pixel format of the image. Currently, the image output format of `DCEFrame` is always NV21. |
+| [`setFrameID`](#setframeid) | Set the `frameID` of the `DCEFrame` object. |
+| [`setQuality`](#setquality) | Set the frame quality of the image. User have to enable the frame filter feature to get the quality (high/low) of the image. Otherwise, the frame quality will be unknown. |
+| [`setIsCropped`](#setiscropped) | Set a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
+| [`setCropRegion`](#setcropregion) | Set a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
+| [`setOrientation`](#setorientation) | Set the orientation of the image. |
+| [`toBitmap`](#tobitmap) | The method converts the image to `UIImage` to make it visible on the UI. |
 
 &nbsp;
 

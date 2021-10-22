@@ -20,7 +20,7 @@ breadcrumbText: Enumerations Enhancer Features
 
 | Member | Value | Description |
 |--------|-------|-------------|
-| `EF_FRAME_FILTER` | 0x01 | The frame filter feature of DCE. By enabling this feature, the low-quality frame will be discarded automatically. |
+| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
 | `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
 | `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
 | `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
