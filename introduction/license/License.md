@@ -11,7 +11,7 @@ breadcrumbText: License Initialization
 
 > NOTE
 >
-> The JavaScript edition doesn't require a license as of version 2.0.0.
+> The JavaScript edition doesn't require a license as of version 2.0.1.
 
 ## Get a trial key
 
