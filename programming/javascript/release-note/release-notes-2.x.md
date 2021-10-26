@@ -10,7 +10,7 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
-## 2.0.1 (10/22/2021)
+## 2.0.1 (10/26/2021)
 
 * Improved the frame buffer mechanism.
 
