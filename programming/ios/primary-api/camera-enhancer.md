@@ -814,7 +814,7 @@ dce.setFocus(focusPoint)
 Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON file from the storage.
 
 ```objc
-- (void)updateAdvancedSettings:(NSString*)filePath;
+- (void)updateAdvancedSettings:(NSString*)filePath error:(NSError * _Nullable * _Nullable)error;
 ```
 
 **Parameters**
@@ -846,7 +846,7 @@ You might need permission authority to enable the Camera Enhancer to read the fi
 Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON string.
 
 ```objc
-- (void)updateAdvancedSettings:(NSString*)JSONString;
+- (void)updateAdvancedSettings:(NSString*)params error:(NSError * _Nullable * _Nullable)error;
 ```
 
 **Parameters**
