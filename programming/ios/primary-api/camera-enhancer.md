@@ -158,7 +158,7 @@ let allCameraList = dce.getAllCameras()
 Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings that applied to this camera will be inherited by the newly selected camera.
 
 ```objc
-- (void)selectCamera:(NSString*)cameraId;
+- (void)selectCamera:(NSString*)cameraId error:(NSError * _Nullable * _Nullable)error;
 ```
 
 **Parameters**
@@ -170,13 +170,13 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 Objective-C:
 
 ```objc
-[_dce selectCamera:@"BACK_FACING_CAMERA"];
+[_dce selectCamera:@"BACK_FACING_CAMERA" error: &error];
 ```
 
 Swift:
 
 ```swift
-dce.selectCamera("BACK_FACING_CAMERA")
+dce.selectCamera("BACK_FACING_CAMERA", error: &error)
 ```
 
 **Remarks**
@@ -514,7 +514,7 @@ dce.removeListener(self)
 Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
 
 ```objc
-- (void)enableFeatures:(EnumEnhancerFeatures)features;
+- (void)enableFeatures:(EnumEnhancerFeatures)features  error:(NSError * _Nullable * _Nullable)error;
 ```
 
 **Parameters**
@@ -526,13 +526,13 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 Objective-C:
 
 ```objc
-[_dce enableFeatures:0x01];
+[_dce enableFeatures:0x01 error: &error];
 ```
 
 Swift:
 
 ```swift
-dce.enableFeatures(0x01)
+dce.enableFeatures(0x01, error: &error)
 ```
 
 **Remarks**
@@ -826,13 +826,13 @@ Update the advanced camera controlling and video streaming processing parameters
 Objective-C:
 
 ```objc
-[_dce updateAdvancedSettingsFromFile:@"Put your JSON file path here."];
+[_dce updateAdvancedSettingsFromFile:@"Put your JSON file path here." error: &error];
 ```
 
 Swift:
 
 ```swift
-dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
+dce.updateAdvancedSettingsFromFile("Put your JSON file path here.", error: &error)
 ```
 
 **Remarks**
@@ -858,11 +858,11 @@ Update the advanced camera controlling and video streaming processing parameters
 Objective-C:
 
 ```objc
-[_dce updateAdvancedSettingsFromString:@"Put your stringified JSON data here."];
+[_dce updateAdvancedSettingsFromString:@"Put your stringified JSON data here." error: &error];
 ```
 
 Swift:
 
 ```swift
-dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
+dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.", error: &error)
 ```
