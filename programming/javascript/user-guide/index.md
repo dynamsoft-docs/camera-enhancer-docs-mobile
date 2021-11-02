@@ -11,11 +11,11 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Camera Enhancer for Your Website
 
-Allow your web application to easily control cameras on desktop and mobile devices.
+Allow your website to easily control cameras on desktop and mobile devices.
 
-Once integrated, various powerful camera control interfaces are available for developers to build their dream web application.
+Once integrated, your users can open your website in a browser, access their cameras to stream live video and acquire realtime frames.
 
-Follow this guide, you can learn a step-by-step instruction on how to integrate Dynamsoft Camera Enhancer library into your web application.
+In this guide, you will learn step by step on how to integrate this library into your website.
 
 ## Getting Started
 
@@ -110,7 +110,7 @@ As shown in the code snippet below, before opening the video stream, we need to 
 
 #### Customize the UI
 
-A built-in UI of the `CameraEnhancer` object is defined in the file `dist/dce.ui.html` . There are a few ways to customize it:
+The built-in UI of the `CameraEnhancer` object is defined in the file `dist/dce.ui.html` . There are a few ways to customize it:
 
 * Modify the file `dist/dce.ui.html` directly. 
 
@@ -163,7 +163,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 <select class="dce-sel-resolution"></select>
 ```
 
-  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480),are populated as options. You can show a customized set of options by hardcoding them.
+  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
 ```html
 <select class="dce-sel-resolution">
@@ -210,7 +210,7 @@ Yes, for simple testing purposes, it's perfectly fine to open the file directly 
 
 ### Why can't I use my camera?
 
-If you open the web page as `file:///` or `http://` , the camera may not work. The following error will show in the browser console:
+If you open the web page as `file:///` or `http://` , the camera may not work and you see the following error in the browser console:
 
 > [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
 
