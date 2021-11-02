@@ -94,7 +94,6 @@ String DCEVersion = cameraEnhancer.getVersion();
 
 &nbsp;
 
-
 ## Basic Camera Control Methods
 
 | Method | Description |
@@ -524,7 +523,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`setFocus`](#setfocusposition) | Focus once at the input position. |
+| [`setFocus`](#setfocus) | Focus once at the input position. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
@@ -739,14 +738,14 @@ cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthres
 
 | Method | Description |
 | ------ | ----------- |
-| [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) |
-| [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) |
+| [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
+| [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
 
 &nbsp;
 
 ### setCameraView
 
-Set a [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object as the main UI view.
+Set a [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object as the main UI view.
 
 ```java
 void setCameraView(DCECameraView cameraView)
@@ -754,7 +753,7 @@ void setCameraView(DCECameraView cameraView)
 
 **Parameters**
 
-`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html).
+`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
 
 **Code Snippet**
 
@@ -769,7 +768,7 @@ cameraEnhancer.setCameraView(cameraView);
 
 ### getCameraView
 
-Get the [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html) object of the current UI view.
+Get the [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object of the current UI view.
 
 ```java
 DCECameraView getCameraView()
@@ -777,7 +776,7 @@ DCECameraView getCameraView()
 
 **Return Value**
 
-The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}cameraview.html).
+The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
 
 **Code Snippet**
 

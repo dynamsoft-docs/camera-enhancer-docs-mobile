@@ -72,8 +72,8 @@ breadcrumbText: iOS API references
 
 ## Auxiliary Classes
 
-- [`FramePackage`]({{ site.ios-api-auxiliary }}DCEFrame.html)
-- [`DCECaptureView`]({{ site.ios-api-auxiliary }}DCECameraView.html)
+- [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
+- [`DCECaptureView`]({{ site.ios-api-auxiliary }}dcecameraView.html)
 
 ## Protocols
 

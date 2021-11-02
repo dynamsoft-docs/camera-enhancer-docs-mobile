@@ -11,7 +11,7 @@ breadcrumbText: Advanced Setting Parameters
 
 # Parameter reference - Advanced Settings parameters
 
-The following parameters are advanced parameters for special usages. These parameters can be uploaded via method [`updateAdvancedSettingsFromFile`]({{site.android-api}}index.html#updateadvancedsettingfromfile) and [`updateAdvancedSettingsFromString`]({{site.android-api}}index.html#updateadvancedsettingfromstring).
+The following parameters are advanced parameters for special usages. These parameters can be uploaded via method [`updateAdvancedSettingsFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromfile) and [`updateAdvancedSettingsFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromstring).
 
 | Parameter Name | Type | Description |
 | -------------- | ---- | ----------- |

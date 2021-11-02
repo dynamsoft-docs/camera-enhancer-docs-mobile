@@ -18,10 +18,10 @@ breadcrumbText: Documentation
 
 - [Android]({{site.android}})
   - [Android user guide]({{site.android-guide}}guide.html)
-  - [Android API reference]({{site.android-api}}initialization.html)
+  - [Android API reference]({{site.android}}api-reference.html)
 - [iOS]({{site.ios}})
   - [iOS user guide]({{site.ios-guide}}guide.html)
-  - [iOS API reference]({{site.ios-api}}initialization.html)
+  - [iOS API reference]({{site.ios}}api-reference.html)
 
 ## Parameters
 

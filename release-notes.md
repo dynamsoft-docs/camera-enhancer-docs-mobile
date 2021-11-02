@@ -18,10 +18,42 @@ breadcrumbText: Release Note
 - Simplified the usage of camera-control APIs. The new APIs are easier to use and covers more scenarios.
 - Simplified the usage of camera enhancer features. Users can enable all required features via the method `enableFeatures` by inputting the combined enumeration value.
 - Extended the features of `DCECameraView`. Users can add and personalize the overlays and viewfinder on the camera UI.
-- Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap` is added to enable users to convert `DCEFrame` to a visible image.
-- The camera UI will display a fuzzified image instead of the previously captured image when the camera UI is quit and resumed.
+- Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap/toUIImage` is added to enable users to convert `DCEFrame` to a system built-in image object.
 
 ### Editions
 
 | -- | -- | -- |
-| [JavaScript]({{ site.js-rn }}release-notes-2.x.html) | [Android]({{ site.android-release-note }}release-notes-2.x.html) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html) |
+| [JavaScript]({{ site.js-rn }}release-notes-2.x.html#200-10202021) | [Android]({{ site.android-release-note }}release-notes-2.x.html#200-10192021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#200-10192021) |
+
+## 1.0.3 (07/20/2021)
+
+### Highlights
+
+- Updated the names of license activation APIs.
+
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-1.x.html#103-07202021) | [iOS]({{ site.ios-release-note }}release-notes-1.x.html#103-07202021) |
+
+## 1.0.1 (06/10/2021)
+
+### Highlights
+
+- Added a new property `products` in `DMLTSConnectionParameters`.
+- Added a new enumeration `EnumProduct`.
+
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-1.x.html#101-06102021) | [iOS]({{ site.ios-release-note }}release-notes-1.x.html#101-06102021) |
+
+## 1.0.0 (04/29/2021)
+
+### Highlights
+
+- Dynamsoft Camera Enhancer is released. The following features are available:
+  - Video Buffer
+  - Frame Filter
+  - Fast Mode
+  - Auto-Zoom
+  - Enhanced-Focus
+
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-1.x.html#100-04292021) | [iOS]({{ site.ios-release-note }}release-notes-1.x.html#100-04292021) |

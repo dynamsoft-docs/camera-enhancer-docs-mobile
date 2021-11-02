@@ -25,8 +25,8 @@ If you don’t have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) 
 The following sample will demonstrate how to acquire a frame from video streaming by DCE.
 >Note: 
 >- The following steps are completed in Android Studio 4.2.
->- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
-
+>- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
+>- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
 
 ### Create a New Project 
 
@@ -259,13 +259,17 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
     }
     ```
 
-You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/master/android/HelloWorld).
+
 
 ### Build and Run the Project
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
 2. Click `Run app` button, then Android Studio installs your app on your connected device and starts it.
+
+>Note: 
+>- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
+>- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
 
 ## What's next?
 
