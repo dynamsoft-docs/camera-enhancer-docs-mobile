@@ -39,7 +39,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 
 #### Host the library yourself (recommended)
 
-Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
+Besides using the CDN, you can also download the library and host it locally.
 
 The following shows a few ways to download the library.
 
@@ -62,8 +62,7 @@ $ npm install dynamsoft-camera-enhancer --save
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dce-js-2.0.1/dist/dce.js"></script>
-```
+<script src="/DCE-JS-2.0.0/dist/dce.js"></script>
 
 or
 
@@ -77,7 +76,7 @@ Read more on [how to host the library](#hosting-the-library).
 
 #### Create a `CameraEnhancer` object
 
-To use the library, we first create a `CameraEnhancer` object.
+To use the library, we need to create a `CameraEnhancer` object first.
 
 ```javascript
  let enhancer = null;
@@ -93,7 +92,7 @@ To use the library, we first create a `CameraEnhancer` object.
 
 #### Configure the `CameraEnhancer` object
 
-As shown in the code snippet below, we just need to specify where the UI should be created before opening the video stream. If opened without this customization, a full-page-size UI element will be created over the current page.
+As shown in the code snippet below, before opening the video stream, we need to decide where to place the UI. By default, a full-page-size UI element will be created over the current page.
 
 ```html
 <!-- Define an element to hold the UI element -->
@@ -116,7 +115,7 @@ The built-in UI of the `CameraEnhancer` object is defined in the file `dist/dce.
 
   This option is only possible when you host this file on your own web server instead of using a CDN.
 
-* Copy the file `dist/dce.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
+* Copy the file `dist/dce.ui.html` to your project, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
 
 ```javascript
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
@@ -163,7 +162,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 <select class="dce-sel-resolution"></select>
 ```
 
-  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720 640 x 480),are populated as options. You can show a custom set of options by hardcoding them.
+  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
 ```html
 <select class="dce-sel-resolution">
@@ -174,13 +173,13 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 </select>
 ```
 
-  > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
+  > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
 ## Hosting the library
 
 ### Step One: Deploy the dist folder
 
-Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). The following shows some of the files in this directory:
+Once you have downloaded the library, you can locate the "dist" directory and copy it to your project (usually as part of your website / web application). The following shows some of the files in this directory:
 
 * `dce.js` // The main library file
 * `dce.browser.mjs` // For using the library as a module (`<script type="module">`)
@@ -220,7 +219,7 @@ If you open the web page as `file:///` or `http://` , the camera may not work an
 
 You get this error because the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) requires HTTPS to access the camera.
 
-* If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
+* If you use Chrome or Firefox, you might not get the error, because these two browsers allow camera access via file:/// and http://localhost.
 
 To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
 
