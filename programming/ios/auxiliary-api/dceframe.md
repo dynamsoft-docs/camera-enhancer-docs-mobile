@@ -105,7 +105,7 @@ CGRect cropRegion
 
 ## orientation
 
-The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation.
+The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270, which depends on the device orientation.
 
 ```objectivec
 NSInteger orientation
