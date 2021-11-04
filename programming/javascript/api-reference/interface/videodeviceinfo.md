@@ -12,10 +12,10 @@ breadcrumbText: VideoDeviceInfo
 
 `interface` VideoDeviceInfo
 
-* deviceId: *string*
+* `deviceId: string`
 
   An alphanumeric string that uniquely identifies a camera.
 
-* label: *string*
+* `label: string`
 
   A human-readable string describing the camera.
