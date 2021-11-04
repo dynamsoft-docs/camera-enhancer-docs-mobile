@@ -12,11 +12,11 @@ breadcrumbText: PlayCallbackInfo
 
 `interface` PlayCallbackInfo
 
-* width: *number*
+* `width: number`
 
   The width (in pixels) of the video input.
 
-* height: *number*
+* `height: number`
 
   The height (in pixels) of the video input.
   
