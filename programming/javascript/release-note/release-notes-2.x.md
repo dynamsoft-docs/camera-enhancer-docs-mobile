@@ -10,6 +10,10 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+## 2.0.3 (10/29/2021)
+
+* Fixed a bug that caused compiler errors in frameworks such as Angular, React, and Vue.
+
 ## 2.0.1 (10/26/2021)
 
 * Improved the frame buffer mechanism.
