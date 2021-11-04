@@ -67,7 +67,7 @@ _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
 Swift:
 
 ```swift
-
+let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
 ## overlayVisible
@@ -87,13 +87,13 @@ If the property value is `true`, the `cameraView` will try to draw and display o
 Objective-C:
 
 ```objc
-
+[_dceView setOverlayVisible:true];
 ```
 
 Swift:
 
 ```swift
-
+dceView.overlayVisible = true
 ```
 
 ## setOverlayColour
