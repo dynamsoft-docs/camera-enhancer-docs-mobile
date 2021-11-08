@@ -12,22 +12,22 @@ breadcrumbText: Region
 
 `interface` Region
 
-* regionLeft: *number*
+* regionLeft: `number`
 
   The left-most coordinate (in pixels or percentage) of the region on the original image.
 
-* regionTop: *number*
+* regionTop: `number`
 
   The top-most coordinate (in pixels or percentage) of the region on the original image.
 
-* regionRight: *number*
+* regionRight: `number`
 
   The right-most coordinate (in pixels or percentage) of the region on the original image.
 
-* regionBottom: *number*
+* regionBottom: `number`
 
   The bottom-most coordinate (in pixels or percentage) of the region on the original image.
 
-* regionMeasuredByPercentage: *number | boolean*
+* regionMeasuredByPercentage: `number | boolean`
 
   Whether the coordinates are measured by percentage or not.
