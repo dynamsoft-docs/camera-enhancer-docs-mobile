@@ -35,7 +35,7 @@ CameraEnhancer(android.content.Context context)
 
 **Parameters**
 
-`context`: An instance to global information about an application environment. 
+`context`: An instance of global information about an application environment.
 
 **Code Snippet**
 
@@ -47,7 +47,7 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 
 ### initLicense
 
-Sets product key and activate the SDK.
+Set product key and activate the SDK.
 
 ```java
 static void initLicense(String license, DCELicenseVerificationListener listener)
@@ -56,7 +56,7 @@ static void initLicense(String license, DCELicenseVerificationListener listener)
 **Parameters**
 
 `license`: The product key.  
-`listener`: The listener that handle callback when license server returns.  See also [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html).
+`listener`: The listener that handles callback when the license server returns.  See also [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html).
 
 **Code Snippet**
 
@@ -121,7 +121,7 @@ String[] getAllCameras()
 
 **Return Value**
 
-An array list that inclueds all available cameras. User can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
+An array list that inclueds all available cameras. Users can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
 
 **Code Snippet**
 
@@ -134,7 +134,7 @@ String[] cameraIds = cameraEnhancer.getAllCameras();
 
 ### selectCamera
 
-Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings that applied to this camera will be inherited by the newly selected camera.
+Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings applied to this camera will be inherited by the newly selected camera.
 
 ```java
 void selectCamera(String cameraID) throws CameraEnhancerException
@@ -153,16 +153,16 @@ cameraEnhancer.selectCamera("BACK_FACING_CAMERA_0");
 
 **Remarks**
 
-- There is always a back-facing camera be defined as a default camera. If user don't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
+- There is always a back-facing camera be defined as a default camera. If the user doesn't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
 - If there is no opened camera, the method `selectCamera` will not open any camera.
-- If there is an opened camera and the opened camera's ID is exactly equals the input ID, the method `selectCamera` will make no changes.
-- If there is an opened camera and the opened camera's ID is different with the input ID, the method `selectCamera` will close the currently opened camera and then open a new camera by the input ID.
+- If there is an opened camera and the opened camera's ID exactly equals the input ID, the method `selectCamera` will make no changes.
+- If there is an opened camera and the opened camera's ID is different from the input ID, the method `selectCamera` will close the currently opened camera and then open a new camera by the input ID.
 
 &nbsp;
 
 ### getSelectedCamera
 
-Get the ID of the current selected camera.
+Get the ID of the currently selected camera.
 
 ```java
 String getSelectedCamera()
@@ -258,8 +258,8 @@ cameraEnhancer.pause();
 
 If the `pause` method is triggered:
 
-- The camera UI will be stopped on the last frame that captured before you `pause` the camera.
-- The camera is still opened.
+- The camera UI will be stopped on the last captured frame before you `pause` the camera.
+- The camera is still open.
 - The video streaming input is not stopped.
 - DCE video buffer will continue appending frames.
 
@@ -321,9 +321,9 @@ cameraEnhancer.turnOffTorch();
 
 | Method | Description |
 | ------ | ----------- |
-| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
-| [`removeListener`](#removelistener) | Remove a preciously added listener from the camera enhancer instance. |
+| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
 
 &nbsp;
 
@@ -337,7 +337,7 @@ DCEFrame getFrameFromBuffer(boolean isKeep)
 
 **Parameters**
 
-`isKeep`: If set to `true`, the frame will be kept in the video buffer, otherwise it will be removed from the video buffer.
+`isKeep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -382,7 +382,7 @@ cameraEnhancer.addListener(listener);
 
 ### removeListener
 
-Remove a preciously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
+Remove a previously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
 
 ```java
 void removeListener(DCEFrameListener listener)
@@ -390,7 +390,7 @@ void removeListener(DCEFrameListener listener)
 
 **Parameters**
 
-`listener`: The input listener will be removed from CameraEnhancer instance.
+`listener`: The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -452,7 +452,7 @@ The `EnumEnhancerFeatures` members:
 | `FAST_MODE` | 0x08 |
 | `AUTO_ZOOM` | 0x10 |
 
-The enable action will not be approved if the license is invalid. If your input values include the features that already enabled, these features will keep the enabled status.
+The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 
 &nbsp;
 
@@ -478,7 +478,7 @@ cameraEnhancer.disableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerF
 
 **Remarks**
 
-You can still disable the features evenif the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
+You can still disable the features even if the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
 
 &nbsp;
 
@@ -497,7 +497,7 @@ boolean isFeatureEnabled(int enhancerFeatures)
 **Return Value**
 
 `True`: All the features you input are enabled.  
-`False`: There is at least one feature is not enabled among your input values.
+`False`: There is at least one feature that is not enabled among your input values.
 
 **Code Snippet**
 
@@ -549,7 +549,7 @@ cameraEnhancer.setFrameRate(25);
 
 **Remarks**
 
-The available frame rate setting threshold is alway intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still not match any threshold, the frame rate will be set to the highest available threshold that belows the input value.
+The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
 
 &nbsp;
 
@@ -599,7 +599,7 @@ List<Size> resolutionList = cameraEnhancer.getResolutionList();
 
 ### setResolution
 
-Input a target resolution value that preset in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
+Input a preset resolution value in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
 
 ```java
 void setResolution(EnumResolution resolution) throws CameraEnhancerException
@@ -714,7 +714,7 @@ You might need permission authority to enable the Camera Enhancer to read the fi
 
 ### updateAdvancedSettingsFromString
 
-Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON string.
+Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string.
 
 ```java
 void updateAdvancedSettingsFromString(String jsonString) throws CameraEnhancerException
