@@ -540,7 +540,7 @@ dce.enableFeatures(0x01, error: &error)
 The `EnumEnhancerFeatures` members:
 
 |  Members | Value |
-| ------------------------------ | ----- |
+| -------- | ----- |
 | `FRAME_FILTER` | 0x01 |
 | `SENSOR_CONTROL` | 0x02 |
 | `ENHANCED_FOCUS` | 0x04 |
