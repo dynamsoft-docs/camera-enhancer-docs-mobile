@@ -60,3 +60,53 @@ mCamera.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVe
 // After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
 DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
 ```
+
+## Display License Verification Message on the UI
+
+You can add the following code to the `DCELicenseVerificationCallback` to display the error message on the UI when the license verification is failed.
+
+**Android Code Snippet**
+
+```java
+public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e) {
+    if (!isSuccess) {
+        e.printStackTrace();
+        MainActivity.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast ts = Toast.makeText(getBaseContext(), "error:"+((CameraEnhancerException)e).getErrorCode()+ " "+((CameraEnhancerException)e).getMessage(), Toast.LENGTH_LONG);
+                ts.show();
+            }
+        });
+    }
+}
+```
+
+**Objective-C Code Snippet**
+
+```objc
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    if(error != nil){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Server license verify failed" message:error.userInfo[NSUnderlyingErrorKey] preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
+    }
+}
+```
+
+**Swift Code Snippet**
+
+```swift
+func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    let err = error as NSError?
+    if(error != nil){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Server license verify failed", message: err!.userInfo[NSUnderlyingErrorKey] as? String, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+```
