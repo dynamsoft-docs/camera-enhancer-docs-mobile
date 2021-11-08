@@ -12,65 +12,101 @@ breadcrumbText: License Initialization
 > NOTE
 >
 > The JavaScript edition doesn't require a license as of version 2.0.1.
+>
+> The method `initLicenseFromDLS` and `DMDLSSettingParameters` are no longer available from version 2.0.
+>
+> To initialize the license for 2.0 version, please use the new license item illustrated on this page.
 
 ## Get a trial key
 
-- A 7-day public trial key is available for every new device for first use of Dynamsoft Camera Enhancer.
+- A 7-day public trial key is available for every new device for first use of Dynamsoft Camera Enhancer. The public trial key is the default key used in samples. You can also find the public trial key on the following parts of this page.
 - If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs&package=android" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
 
 ## Get a full license
 
 - [Contact us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
 
-## Set up the license
+## Initialize the license
 
-Once you have a license, you can use following code to set up your license:
+The following code snippets are using the public trial key to initialize the license. You can replace the public trial key with your own license key.
 
-### For Android users:
-
-Android sample
-
-Java:
+**Android Code Snippet**
 
 ```java
-    mCamera.initLicense("", new DCELicenseVerificationListener() {
-        @Override
-        public void DCELicenseVerificationCallback(boolean b, Exception e) {
-            if(!b && e != null){
-                e.printStackTrace();
-            }
-        }
-    });
-```
-
-Kotlin:
-
-```kotlin
-    mCameraEnhancer!!.initLicense("") { isSuccess, error ->
-        if (!isSuccess) {
-            error.printStackTrace()
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
+mCamera.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
+    @Override
+    public void DCELicenseVerificationCallback(boolean b, Exception e) {
+        if(!b && e != null){
+            e.printStackTrace();
         }
     }
+});
 ```
 
-### For iOS users:
+**Objective-C Code Snippet**
 
-Objective-C sample
-
-```objectivec
-    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
-
-    - (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-        NSLog(@"Verification: %@",error.userInfo);
-    }
+```objc
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
+[DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
 ```
 
-Swift sample
+**Swift Code Snippet**
 
 ```swift
-    DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
+DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
+```
 
-    func DCELicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-        print("Verification: \(String(describing: error))")
+## Display License Verification Message on the UI
+
+You can add the following code to the `DCELicenseVerificationCallback` to display the error message on the UI when the license verification is failed.
+
+**Android Code Snippet**
+
+```java
+public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e) {
+    if (!isSuccess) {
+        e.printStackTrace();
+        MainActivity.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast ts = Toast.makeText(getBaseContext(), "error:"+((CameraEnhancerException)e).getErrorCode()+ " "+((CameraEnhancerException)e).getMessage(), Toast.LENGTH_LONG);
+                ts.show();
+            }
+        });
     }
+}
+```
+
+**Objective-C Code Snippet**
+
+```objc
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    if(error != nil){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Server license verify failed" message:error.userInfo[NSUnderlyingErrorKey] preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
+    }
+}
+```
+
+**Swift Code Snippet**
+
+```swift
+func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    let err = error as NSError?
+    if(error != nil){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Server license verify failed", message: err!.userInfo[NSUnderlyingErrorKey] as? String, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
 ```
