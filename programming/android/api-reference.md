@@ -38,11 +38,11 @@ noTitleIndex: true
 
 ### Frame Acquiring Methods
 
-
 <!--| [`getFrameFromBuffer`]({{site.android-api}}camera-enhancer.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |-->
 
 | Method | Description |
 | ------ | ----------- |
+| [`getFrameFromBuffer`]({{site.android-api}}camera-enhancer.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`]({{site.android-api}}camera-enhancer.html#addlistener) | Add a listener to the Camera Enhancer instance. |
 | [`removeListener`]({{site.android-api}}camera-enhancer.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
 

@@ -20,7 +20,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | Method | Description |
 | ------ | ----------- |
 | [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
-| [`initLicense`](#initlicense) | Sets product key and activate the SDK. |
+| [`initLicense`](#initlicense) | Set product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;
@@ -53,7 +53,7 @@ let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 
 ### initLicense
 
-Sets product key and activate the SDK.
+Set product key and activate the SDK.
 
 ```objc
 +(void)initLicense:(NSString*)license verificationListener:(id) verificationListener;
@@ -62,7 +62,7 @@ Sets product key and activate the SDK.
 **Parameters**
 
 `license`: The product key.  
-`verificationListener`: The listener that handle callback when license server returns. See also [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html).
+`verificationListener`: The listener that handles callback when the license server returns. See also [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html).
 
 **Code Snippet**
 
@@ -90,7 +90,7 @@ Get the SDK version of Dynamsoft Camera Enhancer.
 
 **Return Value**
 
-A string value that stands for the camera enhancer SDK version.
+A string value that stands for the Camera Enhancer SDK version.
 
 **Code Snippet**
 
@@ -135,7 +135,7 @@ Get the IDs of all available cameras.
 
 **Return Value**
 
-An NSArray that includes all available cameras. Users can clearly read whether the camera is front-facing, back-facing or external from the cameraID.
+An NSArray that includes all available cameras. Users can clearly read whether the camera is front-facing, back-facing, or external from the cameraID.
 
 **Code Snippet**
 
@@ -155,7 +155,7 @@ let allCameraList = dce.getAllCameras()
 
 ### selectCamera
 
-Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings that applied to this camera will be inherited by the newly selected camera.
+Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed via this method, the settings will be inherited by the newly selected camera.
 
 ```objc
 - (void)selectCamera:(NSString*)cameraId error:(NSError * _Nullable * _Nullable)error;
@@ -181,16 +181,16 @@ dce.selectCamera("BACK_FACING_CAMERA", error: &error)
 
 **Remarks**
 
-- There is always a back-facing camera be defined as a default camera. If user don't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
+- There is always a back-facing camera be defined as a default camera. If the user doesn't select any camera via `selectCamera`, the default camera will be considered as the selected camera.
 - If there is no opened camera, the method `selectCamera` will not open any camera.
-- If there is an opened camera and the opened camera's ID is exactly equals the input ID, the method `selectCamera` will make no changes.
-- If there is an opened camera and the opened camera's ID is different with the input ID, the method `selectCamera` will close the currently opened camera and then open a new camera by the input ID.
+- If there is an opened camera and the opened camera's ID exactly equals the input ID, the method `selectCamera` will make no changes.
+- If there is an opened camera and the opened camera's ID is different from the input ID, the method `selectCamera` will close the currently opened camera and then open a new camera by the input ID.
 
 &nbsp;
 
 ### getSelectedCamera
 
-Get the ID of the current selected camera.
+Get the ID of the currently selected camera.
 
 ```objc
 - (NSString*)getSelectedCamera;
@@ -218,7 +218,7 @@ let selectedCamera = dce.getSelectedCamera()
 
 ### getCameraState
 
-Get the state of the current selected camera.
+Get the state of the currently selected camera.
 
 ```objc
 - (EnumCameraState*)getCameraState;
@@ -321,8 +321,8 @@ dce.pause()
 
 If the `pause` method is triggered:
 
-- The camera UI will be stopped on the last frame that captured before you `pause` the camera.
-- The camera is still opened.
+- The camera UI will be stopped on the last frame captured before you `pause` the camera.
+- The camera is still open.
 - The video streaming input is not stopped.
 - DCE video buffer will continue appending frames.
 
@@ -405,15 +405,15 @@ dce.turnOffTorch()
 
 | Method | Description |
 | ------ | ----------- |
-| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
-| [`removeListener`](#removelistener) | Remove a preciously added listener from the camera enhancer instance. |
+| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
 
 &nbsp;
 
 ### getFrameFromBuffer
 
-Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer.
+Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer.
 
 ```objc
 - (DCEFrame*)getFrameFromBuffer:(BOOL)keep;
@@ -421,7 +421,7 @@ Get the latest frame from the buffer. The input boolean value determines whether
 
 **Parameters**
 
-`Keep`: If set to `true`, the frame will be kept in the video buffer, otherwise it will be removed from the video buffer.
+`Keep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -473,7 +473,7 @@ dce.addListener(self)
 
 ### removeListener
 
-Remove a preciously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
+Remove a previously added listener from the `CameraEnhancer` instance. This method will have no effect if there is no listener exists in `CameraEnhancer` instance.
 
 ```objc
 - (void)removeListener:(nonnull id<DCEFrameListener>)listener;
@@ -481,7 +481,7 @@ Remove a preciously added listener from the `CameraEnhancer` instance. This meth
 
 **Parameters**
 
-`listener`: The input listener will be removed from CameraEnhancer instance.
+`listener`: The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -540,14 +540,14 @@ dce.enableFeatures(0x01, error: &error)
 The `EnumEnhancerFeatures` members:
 
 |  Members | Value |
-| ------------------------------ | ----- |
+| -------- | ----- |
 | `FRAME_FILTER` | 0x01 |
 | `SENSOR_CONTROL` | 0x02 |
 | `ENHANCED_FOCUS` | 0x04 |
 | `FAST_MODE` | 0x08 |
 | `AUTO_ZOOM` | 0x10 |
 
-The enable action will not be approved if the license is invalid. If your input values include the features that already enabled, these features will keep the enabled status.
+The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 
 &nbsp;
 
@@ -579,7 +579,7 @@ dce.disableFeatures(0x02)
 
 **Remarks**
 
-You can still disable the features evenif the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
+You can still disable the features even if the license is invalid. If your input values include the features that are not enabled, these features will keep the disabled status.
 
 &nbsp;
 
@@ -597,7 +597,7 @@ Check whether the input features are enabled.
 
 **Return Value**
 
-A BOOL value that refers to whether all the features you input are enabled.
+A BOOL value refers to whether all the features you input are enabled.
 
 - `True`: All the features you input are enabled.  
 - `False`: There is at least one feature is not enabled among your input values.
@@ -630,10 +630,10 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON file from the storage. |
-| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON string. |
+| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
+| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
 
 ### setFrameRate
 
@@ -663,7 +663,7 @@ dce.setFrameRate(15)
 
 **Remarks**
 
-The available frame rate setting threshold is alway intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still not match any threshold, the frame rate will be set to the highest available threshold that belows the input value.
+The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
 
 &nbsp;
 
@@ -697,7 +697,7 @@ let frameRate = dce.getFrameRate()
 
 ### setResolution
 
-Input a target resolution value that preset in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
+Input one of the preset resolution value in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
 
 ```objc
 - (Void)setResolution:(Resolution)resolution;
@@ -753,7 +753,7 @@ let resolution = dce.getResolution()
 
 ### setZoom
 
-Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value.
+Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the activated camera will immediately become the input value.
 
 ```objc
 - (Void)setZoom:(CGFloat)factor
@@ -843,7 +843,7 @@ You might need permission authority to enable the Camera Enhancer to read the fi
 
 ### updateAdvancedSettingsFromString
 
-Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON string.
+Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string.
 
 ```objc
 - (void)updateAdvancedSettings:(NSString*)params error:(NSError * _Nullable * _Nullable)error;
