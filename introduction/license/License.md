@@ -61,30 +61,34 @@ mCamera.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVe
 DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
 ```
 
-## Display License Verification Message on the UI
+## Optional Codes -- Display License Verification Message on the UI
 
 You can add the following code to the `DCELicenseVerificationCallback` to display the error message on the UI when the license verification is failed.
 
 **Android Code Snippet**
 
 ```java
-public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e) {
-    if (!isSuccess) {
-        e.printStackTrace();
-        MainActivity.this.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast ts = Toast.makeText(getBaseContext(), "error:"+((CameraEnhancerException)e).getErrorCode()+ " "+((CameraEnhancerException)e).getMessage(), Toast.LENGTH_LONG);
-                ts.show();
-            }
-        });
+mCamera.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
+    @Override
+    public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e) {
+        if (!isSuccess) {
+            e.printStackTrace();
+            MainActivity.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast ts = Toast.makeText(getBaseContext(), "error:"+((CameraEnhancerException)e).getErrorCode()+ " "+((CameraEnhancerException)e).getMessage(), Toast.LENGTH_LONG);
+                    ts.show();
+                }
+            });
+        }
     }
-}
+});
 ```
 
 **Objective-C Code Snippet**
 
 ```objc
+[DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
 - (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     if(error != nil){
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -99,6 +103,7 @@ public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e)
 **Swift Code Snippet**
 
 ```swift
+DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
 func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
     let err = error as NSError?
     if(error != nil){
