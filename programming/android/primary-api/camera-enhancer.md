@@ -700,6 +700,24 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 `scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view `RegionDefinition`.
 
+**Code Snippet**
+
+```java
+com.dynamsoft.dce.RegionDefinition scanRegion = new RegionDefinition();
+scanRegion.regionTop = 25;
+scanRegion.regionBottom = 75;
+scanRegion.regionLeft = 25;
+scanRegion.regionRight = 75;
+regionDefinition.regionMeasuredByPercentage = 1;
+
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
+try {
+    cameraEnhancer.setScanRegion(scanRegion);;
+} catch (CameraEnhancerException e) {
+    e.printStackTrace();
+}
+```
+
 **Remarks**
 
 - The region definition defines the region on the **camera view**. For each value of the class `RegionDefinition`:
@@ -728,6 +746,15 @@ RegionDefinition getScanRegion()
 **Return Value**
 
 The return value of `getScanRegion` is always the actual parameter of the `scanRegion`, which might be different from the user input parameter. If `scanRegion` is not configured or the method `setScanRegion` is not approved, the return value will be null.
+
+**Code Snippet**
+
+```java
+com.dynamsoft.dce.RegionDefinition myScanRegion = new RegionDefinition();
+
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
+myScanRegion = cameraEnhancer.getScanRegion(scanRegion);
+```
 
 ### updateAdvancedSettingsFromFile
 

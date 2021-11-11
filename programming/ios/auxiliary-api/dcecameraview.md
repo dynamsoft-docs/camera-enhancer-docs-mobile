@@ -192,13 +192,23 @@ Set the viewfinder position and size with a [`iRegionDefinition`]({{ site.ios-ap
 Objective-C:
 
 ```objc
-
+iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
+scanRegion.regionTop = 25;
+scanRegion.regionBottom = 75;
+scanRegion.regionLeft = 25;
+scanRegion.regionRight = 75;
+[_dceView setViewfinder:scanRegion];
 ```
 
 Swift:
 
 ```swift
-
+let scanRegion = iRegionDefinition()
+scanRegion.regionTop = 25
+scanRegion.regionBottom = 75
+scanRegion.regionLeft = 25
+scanRegion.regionRight = 75
+dceView.setScanRegion(scanRegion)
 ```
 
 **Remarks**

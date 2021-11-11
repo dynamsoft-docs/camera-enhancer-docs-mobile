@@ -188,6 +188,17 @@ void setViewfinder(RegionDefinition viewfinderRegion) throws CameraEnhancerExcep
 **Code Snippet**
 
 ```java
+com.dynamsoft.dce.RegionDefinition viewfinderRegion = new RegionDefinition();
+viewfinderRegion.regionTop = 25;
+viewfinderRegion.regionBottom = 75;
+viewfinderRegion.regionLeft = 25;
+viewfinderRegion.regionRight = 75;
+regionDefinition.regionMeasuredByPercentage = 1;
+try {
+  dceCameraView.setViewfinder(viewfinderRegion);
+} catch (CameraEnhancerException e) {
+  e.printStackTrace();
+}
 ```
 
 **Remarks**
@@ -220,6 +231,10 @@ void setTorchButton(Point torchButtonPosition)
 **Code Snippet**
 
 ```java
+Point torchButtonPosition = new Point();
+torchButtonPosition.x = 100;
+torchButtonPosition.y = 100;
+dceCameraView.setTorchButtonPosition(torchButtonPosition);
 ```
 
 &nbsp;
@@ -239,6 +254,7 @@ void setTorchButtonVisible(boolean isTorchButtonVisible)
 **Code Snippet**
 
 ```java
+dceCameraView.setTorchButtonVisible(true);
 ```
 
 &nbsp;
@@ -258,4 +274,5 @@ A boolean value. When the value is true, the torch button should be displayed. O
 **Code Snippet**
 
 ```java
+Boolean isTorchButtonVisible = dceCameraView.getTorchButtonVisible();
 ```
