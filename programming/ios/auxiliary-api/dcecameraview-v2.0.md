@@ -25,8 +25,6 @@ breadcrumbText: iOS DCECameraView Class
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
 | [`viewfinderVisible`](#setoverlaycolour) | The property stores the BOOL value that controls the visibility of the viewfinder. |
 | [`setViewfinder`](#setoverlaycolour) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
-| [`setTorch`](#settorch) |  |
-| [`torchVisible`](#torchvisible) |  |
 
 ## initWithFrame
 
@@ -77,7 +75,7 @@ let dceView = DCECameraView.init(frame self.view.bounds)
 The property stores the BOOL value that controls the visibility of the overlays.
 
 ```objc
-@property (assign, nonatomic) BOOL overlayVisible;
+BOOL overlayVisible
 ```
 
 **Remarks**
@@ -173,27 +171,3 @@ _dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 **Remarks**
 
 The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
-
-## setViewfinder(RegionDefinition)
-
-```objc
-- (void)setViewfinder:(iRegionDefinition)viewfinderRegion;
-```
-
-## setTorch
-
-```objc
-- (void)setTorch:(CGPoint)torchPosition;
-```
-
-## torchVisible
-
-```objc
-@property (assign, nonatomic) BOOL torchVisible;
-```
-
-## setScanRegion
-
-```objc
-- (void)setScanRegion:(iRegionDefinition)scanRegion;
-```

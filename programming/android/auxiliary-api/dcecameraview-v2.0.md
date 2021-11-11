@@ -171,27 +171,3 @@ dceCameraView.setViewfinder(0.2, 0.3, 0.8, 0.7);
 **Remarks**
 
 The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
-
-## setViewfinder(RegionDefinition)
-
-```java
-void setViewfinder(RegionDefinition viewfinderRegion)
-```
-
-## setTorch
-
-```java
-void setTorch(Point torchPoint)
-```
-
-## setTorchVisible
-
-```java
-void setTorchVisible(boolean)
-```
-
-## getTorchVisible
-
-```java
-Boolean getTorchVisible()
-```

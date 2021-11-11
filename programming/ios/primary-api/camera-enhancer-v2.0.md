@@ -632,8 +632,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
 
@@ -811,78 +809,9 @@ dce.setFocus(focusPoint)
 
 &nbsp;
 
-### setScanRegion
-
-Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRegion` before they are stored in the video buffer.
-
-```objc
-- (void)setScanRegion:(RegionDefinition)scanRegion error:(NSError * _Nullable)error;
-```
-
-**Parameter**
-
-`scanRegion`: Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-
-```
-
-Swift:
-
-```swift
-```
-
-**Remarks**
-
-- The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the camera view.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the camera view.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the camera view.
-
-<div align="center">
-    <p><img src="assets/scan-region-compare.png" width="70%" alt="setScanRegion"></p>
-    <p>Examples of <b>setScanRegion</b></p>
-</div>
-
-- When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from `FrameOutputCallback` and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- You can set the `viewfinder` and the `scanRegion` with the same [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
-
-&nbsp;
-
-### getScanRegion
-
-```objc
-- (iRegionDefinition) getScanRegion
-```
-
-**Return Value**
-
-The return value of `getScanRegion` is always the actual parameter of the `scanRegion`, which might be different from the user input parameter. If `scanRegion` is not configured or the method `setScanRegion` is not approved, the return value will be null.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-
-```
-
-Swift:
-
-```swift
-```
-
-&nbsp;
-
 ### updateAdvancedSettingsFromFile
 
-Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage.
+Update the advanced camera controlling and video streaming processing parameters. This method enable you to update settings via a JSON file from the storage.
 
 ```objc
 - (void)updateAdvancedSettings:(NSString*)filePath error:(NSError * _Nullable * _Nullable)error;
