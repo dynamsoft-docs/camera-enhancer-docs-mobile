@@ -26,7 +26,7 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 | [`setViewfinderVisible`](#setviewfindervisible) | This method controls whether to display a viewfinder. |
 | [`getViewfinderVisible`](#getviewfindervisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the position and the size of the viewfinder. |
-| [`setViewfinder (with RegionDefinition)`](#setviewfinder-with-regiondefinition) | Set the position and the size of the viewfinder with a [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html) value. |
+| [`setViewfinder (with RegionDefinition)`](#setviewfinder-with-regiondefinition) | Set the position and the size of the viewfinder with a [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value. |
 | [`setTorchButton`](#settorchbutton) | Set the position of the torch button. The method determines where shall the torch button be displayed. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
@@ -179,7 +179,7 @@ The viewfinder is built based on the screen coordinate system. The origin of the
 
 ## setViewfinder (with RegionDefinition)
 
-Set the position and the size of the viewfinder with a [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html) value.
+Set the position and the size of the viewfinder with a [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value.
 
 ```java
 void setViewfinder(RegionDefinition viewfinderRegion) throws CameraEnhancerException
@@ -187,7 +187,7 @@ void setViewfinder(RegionDefinition viewfinderRegion) throws CameraEnhancerExcep
 
 **Parameter**
 
-`viewfinderRegion`: Use a [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html) value to draw a viewfinder. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html).
+`viewfinderRegion`: Use a [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value to draw a viewfinder. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html).
 
 **Code Snippet**
 
@@ -207,7 +207,7 @@ try {
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html):
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
   - The `regionTop` is the distance between the **top** of the viewfinder and the **top** of the camera view.
   - The `regionBottom` is the distance between the **bottom** of the viewfinder and the **top** of the camera view.
   - The `regionLeft` is the distance between the **left** of the viewfinder and the **left** of the camera view.

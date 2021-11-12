@@ -698,7 +698,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameter**
 
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{android-api-auxiliary}}region-definition.html) class.
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
 
 **Code Snippet**
 
@@ -720,7 +720,7 @@ try {
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{android-api-auxiliary}}region-definition.html):
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the camera view.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the camera view.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
@@ -733,7 +733,7 @@ try {
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
 - You will still get the original [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{android-api-auxiliary}}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
+- You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
 
 ### getScanRegion
 
