@@ -833,7 +833,7 @@ scanRegion.regionTop = 25;
 scanRegion.regionBottom = 75;
 scanRegion.regionLeft = 25;
 scanRegion.regionRight = 75;
-[_dce setViewfinder:scanRegion];
+[_dce setScanRegion:scanRegion];
 ```
 
 Swift:
@@ -881,12 +881,15 @@ The return value of `getScanRegion` is always the actual parameter of the `scanR
 Objective-C:
 
 ```objc
-
+iRegionDefinition* myScanRegion = [[iRegionDefinition alloc] init];
+myScanRegion = [_dce getScanRegion];
 ```
 
 Swift:
 
 ```swift
+let scanRegion = iRegionDefinition()
+scanRegion = dce.getScanRegion()
 ```
 
 &nbsp;
