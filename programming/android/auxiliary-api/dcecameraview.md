@@ -26,6 +26,10 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 | [`setViewfinderVisible`](#setviewfindervisible) | This method controls whether to display a viewfinder. |
 | [`getViewfinderVisible`](#getviewfindervisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the position and the size of the viewfinder. |
+| [`setViewfinder (with RegionDefinition)`](#setViewfinder-with-RegionDefinition) | Set the position and the size of the viewfinder with a [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html) value. |
+| [`setTorchButton`](#settorchbutton) | Set the position of the torch button. The method determines where shall the torch button be displayed. |
+| [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
+| [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
 
 &nbsp;
 
@@ -39,13 +43,13 @@ DCECameraView(android.content.Context context)
 
 **Parameters**
 
-`context`: An instance to global information about an application environment. 
+`context`: An instance of global information about an application environment.
 
 &nbsp;
 
 ## setOverlayVisible
 
-This method controls whether the camera view displays coloured and translucent overlay.
+This method controls whether the camera view displays coloured and translucent overlays.
 
 ```java
 void setOverlayVisible(boolean overlayVisibile)
@@ -53,7 +57,7 @@ void setOverlayVisible(boolean overlayVisibile)
 
 **Parameters**
 
-`overlayVisibile`: If true, the camera view will draw and display overlay according to the position and colour settings. Otherwise, the overlay will be hidden.
+`overlayVisibile`: If true, the camera view will draw and display overlays according to the position and colour settings. Otherwise, the overlay will be hidden.
 
 **Code Snippet**
 
@@ -87,7 +91,7 @@ boolean isVisible = dceCameraView.getOverlayVisible();
 
 ## setOverlayColour
 
-Set the stroke and fill colour of the overlay.
+Set the stroke and fill colour of the overlays.
 
 ```java
 void setOverlayColour(int strokeARGB, int fillARGB)
@@ -95,8 +99,8 @@ void setOverlayColour(int strokeARGB, int fillARGB)
 
 **Parameters**
 
-`strokeARGB`: The colour code of the overlay stroke.
-`fillARGB`: The colour code of the overlay stroke.
+`strokeARGB`: The colour code of the overlays stroke.
+`fillARGB`: The colour code of the overlays stroke.
 
 **Code Snippet**
 
@@ -134,7 +138,7 @@ Get the visibility (true: visible/ false: invisible) of the viewfinder.
 
 **Return Value**
 
-A boolean value that means whether the viewfinder is visible.
+A boolean value means whether the viewfinder is visible.
 
 **Code Snippet**
 

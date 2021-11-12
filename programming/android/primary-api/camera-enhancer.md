@@ -698,7 +698,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameter**
 
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html).
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html) class.
 
 **Code Snippet**
 
