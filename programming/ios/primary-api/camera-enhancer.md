@@ -828,12 +828,23 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 Objective-C:
 
 ```objc
-
+iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
+scanRegion.regionTop = 25;
+scanRegion.regionBottom = 75;
+scanRegion.regionLeft = 25;
+scanRegion.regionRight = 75;
+[_dce setViewfinder:scanRegion];
 ```
 
 Swift:
 
 ```swift
+let scanRegion = iRegionDefinition()
+scanRegion.regionTop = 25
+scanRegion.regionBottom = 75
+scanRegion.regionLeft = 25
+scanRegion.regionRight = 75
+dce.setScanRegion(scanRegion)
 ```
 
 **Remarks**

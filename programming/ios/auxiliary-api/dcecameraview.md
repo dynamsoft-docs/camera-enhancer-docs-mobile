@@ -192,23 +192,23 @@ Set the viewfinder position and size with a [`iRegionDefinition`]({{ site.ios-ap
 Objective-C:
 
 ```objc
-iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
-scanRegion.regionTop = 25;
-scanRegion.regionBottom = 75;
-scanRegion.regionLeft = 25;
-scanRegion.regionRight = 75;
-[_dceView setViewfinder:scanRegion];
+iRegionDefinition* viewfinderRegion = [[iRegionDefinition alloc] init];
+viewfinderRegion.regionTop = 25;
+viewfinderRegion.regionBottom = 75;
+viewfinderRegion.regionLeft = 25;
+viewfinderRegion.regionRight = 75;
+[_dceView setViewfinder:viewfinderRegion];
 ```
 
 Swift:
 
 ```swift
-let scanRegion = iRegionDefinition()
-scanRegion.regionTop = 25
-scanRegion.regionBottom = 75
-scanRegion.regionLeft = 25
-scanRegion.regionRight = 75
-dceView.setScanRegion(scanRegion)
+let viewfinderRegion = iRegionDefinition()
+viewfinderRegion.regionTop = 25
+viewfinderRegion.regionBottom = 75
+viewfinderRegion.regionLeft = 25
+viewfinderRegion.regionRight = 75
+dceView.setScanRegion(viewfinderRegion)
 ```
 
 **Remarks**
@@ -241,13 +241,13 @@ Set the position of the torch button. The method determines where shall the torc
 Objective-C:
 
 ```objc
-
+[_dceView setTorchButton:CGPointMake(100,100)];
 ```
 
 Swift:
 
 ```swift
-
+dceView.setTorchButton(torchButtonPosition: CGPoint(x: 100, y: 100))
 ```
 
 ## torchButtonVisible
