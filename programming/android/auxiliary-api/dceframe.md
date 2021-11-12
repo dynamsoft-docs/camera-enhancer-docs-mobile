@@ -13,7 +13,7 @@ breadcrumbText: Android DCEFrame Class
 
 The `DCEFrame` is the class that stores pixel data and further information.
 
-```Java
+```java
 class com.dynamsoft.dce.DCEFrame
 ```
 

@@ -688,7 +688,7 @@ cameraEnhancer.setFocus(0.5,0.4);
 
 &nbsp;
 
-## setScanRegion
+### setScanRegion
 
 Specify the scan region. The DCEFrames will be cropped according to the scan region before they are stored in the video buffer.
 
@@ -698,7 +698,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameter**
 
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view `RegionDefinition`.
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html).
 
 **Code Snippet**
 
@@ -720,7 +720,7 @@ try {
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class `RegionDefinition`:
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the camera view.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the camera view.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
@@ -731,11 +731,11 @@ try {
     <p>Examples of <b>setScanRegion</b></p>
 </div>
 
-- When you trigger `setScanRegion`, the enhancer feature `EF_FAST_MODE` will be disabled.
-- You will still get the original `DCEFrame` from `FrameOutputCallback` and cropped `DCEFrame` from `getFrameFromBuffer`. The `cropRegion` of `DCEFrame` will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- You can set the `viewfinder` and the `scanRegion` with the same `RegionDefinition` value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
+- When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
+- You will still get the original [`DCEFrame`]({{ android-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ android-api-auxiliary }}interface-dceframelistener.html) and cropped [`DCEFrame`]({{ android-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ android-api-auxiliary }}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
+- You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{ android-api-auxiliary }}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
 
-## getScanRegion
+### getScanRegion
 
 Get the scan region configurations. You will get a null value if the scan region is not set.
 

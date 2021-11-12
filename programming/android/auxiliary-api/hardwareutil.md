@@ -13,7 +13,7 @@ breadcrumbText: Android HardwareUtil Class
 
 This page is for `HardwareUtil` page. `HardwareUtil` parameters are static values that illustrate device level.
 
-```Java
+```java
 class com.dynamsoft.dce.HardwareUtil
 ```
 

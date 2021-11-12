@@ -62,6 +62,8 @@ breadcrumbText: iOS API references
 | [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
 | [`updateAdvancedSettingsFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
@@ -69,6 +71,7 @@ breadcrumbText: iOS API references
 
 - [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
 - [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
+- [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html)
 
 ## Interfaces
 

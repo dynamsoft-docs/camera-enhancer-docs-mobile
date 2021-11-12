@@ -13,7 +13,7 @@ breadcrumbText: Android CameraEnhancerException Class
 
 Exception for signaling camera enhancer errors.
 
-```Java
+```java
 class com.dynamsoft.dce.CameraEnhancerException extends Exception
 ```
 
@@ -28,7 +28,7 @@ class com.dynamsoft.dce.CameraEnhancerException extends Exception
 Gets the error code.
 
 ```java
-int getErrorCode()	
+int getErrorCode()
 ```
 
 **Return Value**

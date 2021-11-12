@@ -13,7 +13,7 @@ breadcrumbText: Android DMDLSConnectionParameters Class
 
 `DMDLSConnectionParameters` is the class that defines a struct to configure the parameters to connect to the Dynamsoft License Server.
 
-```Java
+```java
 class com.dynamsoft.dce.DMDLSConnectionParameters
 ```
 

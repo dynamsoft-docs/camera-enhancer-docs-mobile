@@ -861,7 +861,7 @@ dce.setScanRegion(scanRegion)
 </div>
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from `FrameOutputCallback` and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
+- You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
 - You can set the `viewfinder` and the `scanRegion` with the same [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
 
 &nbsp;

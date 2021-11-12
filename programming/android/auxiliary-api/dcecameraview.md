@@ -13,7 +13,7 @@ breadcrumbText: Android DCECameraView Class
 
 The camera view is the main UI view of the DCE SDK. It is designed to display the video preview, overlay, viewfinder, etc.
 
-```Java
+```java
 class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 ```
 
@@ -225,7 +225,7 @@ void setTorchButton(Point torchButtonPosition)
 
 <div align="center"> 
     <p><img src="assets/torch-button.png" width="70%" alt="setScanRegion"></p>
-    <p><b>torchButtonPosition</b> is the position on the camera view</b></p>
+    <p><b>torchButtonPosition</b> is the position on the <b>camera view</b></p>
 </div>
 
 **Code Snippet**
