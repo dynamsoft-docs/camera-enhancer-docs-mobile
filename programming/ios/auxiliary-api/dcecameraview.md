@@ -25,9 +25,10 @@ breadcrumbText: iOS DCECameraView Class
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
 | [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
-| [`setViewfinder (with RegionDefinition)`](#setoverlaycolour) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
-| [`setTorchButton`](#settorch) |  |
-| [`torchButtonVisible`](#torchvisible) |  |
+| [`setTorchButton`](#settorch) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
+| [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
+
+&nbsp;
 
 ## initWithFrame
 
@@ -51,6 +52,8 @@ Swift:
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
+&nbsp;
+
 ## captureWithFrame
 
 Statically init the DCECameraView.
@@ -72,6 +75,8 @@ Swift:
 ```swift
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
+
+&nbsp;
 
 ## overlayVisible
 
@@ -98,6 +103,8 @@ Swift:
 ```swift
 dceView.overlayVisible = true
 ```
+
+&nbsp;
 
 ## setOverlayColour
 
@@ -130,6 +137,8 @@ let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
 _dceView = setOverlayColour(strokeColour, fill: fillcolour)
 ```
 
+&nbsp;
+
 ## viewfinderVisible
 
 The property stores the BOOL value that controls the visibility of the viewfinder.
@@ -141,6 +150,8 @@ BOOL viewfinderVisible
 **Remarks**
 
 If the property value is `true`, the `cameraView` will try to create and display a viewfinder. Otherwise, the `cameraView` will not create the viewfinder.
+
+&nbsp;
 
 ## setViewfinder
 
@@ -175,53 +186,11 @@ _dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 
 The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
 
-## setViewfinder (with RegionDefinition)
-
-Set the viewfinder position and size with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value.
-
-```objc
-- (void)setViewfinder:(iRegionDefinition)viewfinderRegion error:(NSError * _Nullable)error;
-```
-
-**Parameter**
-
-`viewfinderRegion`: Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to draw a viewfinder. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-iRegionDefinition* viewfinderRegion = [[iRegionDefinition alloc] init];
-viewfinderRegion.regionTop = 25;
-viewfinderRegion.regionBottom = 75;
-viewfinderRegion.regionLeft = 25;
-viewfinderRegion.regionRight = 75;
-[_dceView setViewfinder:viewfinderRegion];
-```
-
-Swift:
-
-```swift
-let viewfinderRegion = iRegionDefinition()
-viewfinderRegion.regionTop = 25
-viewfinderRegion.regionBottom = 75
-viewfinderRegion.regionLeft = 25
-viewfinderRegion.regionRight = 75
-dceView.setScanRegion(viewfinderRegion)
-```
-
-**Remarks**
-
-- The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the viewfinder and the **top** of the camera view.
-  - The `regionBottom` is the distance between the **bottom** of the viewfinder and the **top** of the camera view.
-  - The `regionLeft` is the distance between the **left** of the viewfinder and the **left** of the camera view.
-  - The `regionRight` is the distance between the **right** of the viewfinder and the **left** of the camera view.
+&nbsp;
 
 ## setTorchButton
 
-Set the position of the torch button. The method determines where shall the torch button be displayed.
+Set the position of the torch button. The visibility of the torch button will be set to true as well.
 
 ```objc
 - (void)setTorch:(CGPoint)torchButtonPosition;
@@ -249,6 +218,8 @@ Swift:
 ```swift
 dceView.setTorchButton(torchButtonPosition: CGPoint(x: 100, y: 100))
 ```
+
+&nbsp;
 
 ## torchButtonVisible
 
