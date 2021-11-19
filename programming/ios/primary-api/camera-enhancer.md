@@ -850,10 +850,10 @@ dce.setScanRegion(scanRegion)
 **Remarks**
 
 - The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the camera view.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the camera view.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the camera view.
+  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video.
+  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video.
+  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video.
+  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video.
 
 <div align="center">
     <p><img src="assets/scan-region-compare.png" width="70%" alt="setScanRegion"></p>
