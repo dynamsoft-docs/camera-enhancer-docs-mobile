@@ -10,6 +10,23 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.1.0 (12/xx/2021)
+
+### Highlights
+
+- Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
+- APIs are added to `DCECameraView` class to control whether and where to display a torch button.
+- Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
+
+### Changelog
+
+#### Added
+
+- Added method [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) and [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) to [`CameraEnhancer`]({{site.android-api}}camera-enhancer.html) class for users to set or get the region of interest. The scan region will determine how frames will be cropped.
+- Added class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html). The class will be used to define the parameters for method [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion).
+- Added method [`setTorchButton`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbutton) to [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html) class for users to set the position of the torch button. Methods [`setTorchButtonVisible`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbuttonvisible) and [`getTorchButtonVisible`]({{site.android-api-auxiliary}}dcecameraview.html#gettorchbuttonvisible) are added to set and check the visibility of the torch button.
+- Extended the JSON template of [`updateAdvancedSettingsFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromfile) and [`updateAdvancedSettingsFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromstring). Added fast mode configuration parameters to the template.
+
 ## 2.0.0 (10/19/2021)
 
 ### Highlights

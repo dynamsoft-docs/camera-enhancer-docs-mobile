@@ -11,6 +11,19 @@ breadcrumbText: Release Note
 
 # Release Notes
 
+## 2.1.0 (12/xx/2021)
+
+### Highlights
+
+- Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
+- APIs are added to `DCECameraView` class to control whether and where to display a torch button.
+- Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
+
+### Editions
+
+| -- | -- | -- |
+| [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-12xx2021) | [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12xx2021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12xx2021) |
+
 ## 2.0.0 (10/19/2021)
 
 ### Highlights
