@@ -726,11 +726,6 @@ try {
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the camera view.
 
-<div align="center">
-    <p><img src="assets/scan-region-compare.png" width="70%" alt="setScanRegion"></p>
-    <p>Examples of <b>setScanRegion</b></p>
-</div>
-
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
 - You will still get the original [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
 - You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
