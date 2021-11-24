@@ -13,7 +13,7 @@ breadcrumbText: Android Frame Class
 
 This page is for `Frame` Class. `Frame` parameters store the frame data.
 
-```Java
+```java
 class com.dynamsoft.dce.Frame
 ```
 

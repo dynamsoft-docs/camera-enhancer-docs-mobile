@@ -23,12 +23,8 @@ breadcrumbText: iOS DCECameraView Class
 | [`captureWithFrame`](#capturewithframe) | Init the `DCECameraView` with a static method. |
 | [`overlayVisible`](#overlayvisible) | The property stores the BOOL value that controls the visibility of the overlays. |
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
-| [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
-| [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
-| [`setTorchButton`](#settorch) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
-| [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
-
-&nbsp;
+| [`viewfinderVisible`](#setoverlaycolour) | The property stores the BOOL value that controls the visibility of the viewfinder. |
+| [`setViewfinder`](#setoverlaycolour) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
 
 ## initWithFrame
 
@@ -52,8 +48,6 @@ Swift:
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
-&nbsp;
-
 ## captureWithFrame
 
 Statically init the DCECameraView.
@@ -76,14 +70,12 @@ Swift:
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
-&nbsp;
-
 ## overlayVisible
 
 The property stores the BOOL value that controls the visibility of the overlays.
 
 ```objc
-@property (assign, nonatomic) BOOL overlayVisible;
+BOOL overlayVisible
 ```
 
 **Remarks**
@@ -103,8 +95,6 @@ Swift:
 ```swift
 dceView.overlayVisible = true
 ```
-
-&nbsp;
 
 ## setOverlayColour
 
@@ -137,8 +127,6 @@ let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
 _dceView = setOverlayColour(strokeColour, fill: fillcolour)
 ```
 
-&nbsp;
-
 ## viewfinderVisible
 
 The property stores the BOOL value that controls the visibility of the viewfinder.
@@ -150,8 +138,6 @@ BOOL viewfinderVisible
 **Remarks**
 
 If the property value is `true`, the `cameraView` will try to create and display a viewfinder. Otherwise, the `cameraView` will not create the viewfinder.
-
-&nbsp;
 
 ## setViewfinder
 
@@ -185,50 +171,3 @@ _dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 **Remarks**
 
 The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
-
-&nbsp;
-
-## setTorchButton
-
-Set the position of the torch button. The visibility of the torch button will be set to true as well.
-
-```objc
-- (void)setTorch:(CGPoint)torchButtonPosition;
-```
-
-**Parameter**
-
-`torchButtonPosition`: The `torchButtonPosition` illustrates the coordinate of the torch button. The x coordinate of the point stands for the pixel distance between the point and the left edge of the screen. The y coordinate of the point stands for the pixel distance between the point and the top edge of the screen.
-
-<div align="center"> 
-    <p><img src="assets/torch-button.png" width="70%" alt="setScanRegion"></p>
-    <p><b>torchButtonPosition</b> is the position on the camera view</b></p>
-</div>
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[_dceView setTorchButton:CGPointMake(100,100)];
-```
-
-Swift:
-
-```swift
-dceView.setTorchButton(torchButtonPosition: CGPoint(x: 100, y: 100))
-```
-
-&nbsp;
-
-## torchButtonVisible
-
-`torchVisible` is a property that controls the visibility of the `torchButton`. The torch button icon is preset in the SDK. If the `torchButtonPosition` has never been configured, the `torchButton` will be displayed on the default position. Currently, the icon and the size of the button are not available for setting.
-
-```objc
-@property (assign, nonatomic) BOOL torchVisible;
-```
-
-**Parameter**
-
-When the property value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.

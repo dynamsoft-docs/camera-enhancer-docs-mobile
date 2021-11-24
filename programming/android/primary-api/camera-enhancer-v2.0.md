@@ -524,8 +524,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocus`](#setfocus) | Focus once at the input position. |
-| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
@@ -687,69 +685,6 @@ cameraEnhancer.setFocus(0.5,0.4);
 ```
 
 &nbsp;
-
-### setScanRegion
-
-Specify the scan region. The DCEFrames will be cropped according to the scan region before they are stored in the video buffer.
-
-```java
-void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
-```
-
-**Parameter**
-
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
-
-**Code Snippet**
-
-```java
-com.dynamsoft.dce.RegionDefinition scanRegion = new RegionDefinition();
-scanRegion.regionTop = 25;
-scanRegion.regionBottom = 75;
-scanRegion.regionLeft = 25;
-scanRegion.regionRight = 75;
-regionDefinition.regionMeasuredByPercentage = 1;
-
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
-try {
-    cameraEnhancer.setScanRegion(scanRegion);;
-} catch (CameraEnhancerException e) {
-    e.printStackTrace();
-}
-```
-
-**Remarks**
-
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the camera view.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the camera view.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the camera view.
-
-- When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
-
-### getScanRegion
-
-Get the scan region configurations. You will get a null value if the scan region is not set.
-
-```java
-RegionDefinition getScanRegion()
-```
-
-**Return Value**
-
-The return value of `getScanRegion` is always the actual parameter of the `scanRegion`, which might be different from the user input parameter. If `scanRegion` is not configured or the method `setScanRegion` is not approved, the return value will be null.
-
-**Code Snippet**
-
-```java
-com.dynamsoft.dce.RegionDefinition myScanRegion = new RegionDefinition();
-
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
-myScanRegion = cameraEnhancer.getScanRegion(scanRegion);
-```
 
 ### updateAdvancedSettingsFromFile
 

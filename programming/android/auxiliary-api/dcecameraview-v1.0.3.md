@@ -13,7 +13,7 @@ breadcrumbText: Android CameraView Class
 
 This page is for `CameraView` Class. `CameraView` is designed to Make basic settings on the overlay.
 
-```Java
+```java
 class com.dynamsoft.dce.CameraView
 ```
 

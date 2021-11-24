@@ -24,6 +24,10 @@ breadcrumbText: DCEFrame
 
   The region based on which the original frame is cropped.
 
+* croppingRegionIndex: `number`
+
+  The index of the region  
+
 * sx: `number`
 
   The horizontal coordinate of the upper left point of the `data` on the original frame. If the frame was not cropped, the coordinate is 0.

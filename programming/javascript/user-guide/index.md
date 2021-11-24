@@ -28,13 +28,13 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.1/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.1/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 #### Host the library yourself (recommended)
