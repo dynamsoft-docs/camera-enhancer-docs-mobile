@@ -11,7 +11,7 @@ breadcrumbText: License Initialization
 
 > NOTE
 >
-> The JavaScript edition doesn't require a license as of version 2.0.1.
+> The JavaScript edition doesn't require a license as of version 2.0.3.
 >
 > The method `initLicenseFromDLS` and `DMDLSSettingParameters` are no longer available from version 2.0.
 >
