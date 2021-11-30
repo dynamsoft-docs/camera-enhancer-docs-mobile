@@ -833,7 +833,8 @@ scanRegion.regionTop = 25;
 scanRegion.regionBottom = 75;
 scanRegion.regionLeft = 25;
 scanRegion.regionRight = 75;
-[_dce setScanRegion:scanRegion];
+scanRegion.regionMeasuredByPercentage = 1
+[_dce setScanRegion:scanRegion error: &error];
 ```
 
 Swift:
@@ -844,7 +845,8 @@ scanRegion.regionTop = 25
 scanRegion.regionBottom = 75
 scanRegion.regionLeft = 25
 scanRegion.regionRight = 75
-dce.setScanRegion(scanRegion)
+scanRegion.regionMeasuredByPercentage = 1
+dce.setScanRegion(scanRegion, error: &error)
 ```
 
 **Remarks**
