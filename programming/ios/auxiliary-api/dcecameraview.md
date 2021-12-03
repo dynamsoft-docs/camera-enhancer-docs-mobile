@@ -144,7 +144,7 @@ _dceView = setOverlayColour(strokeColour, fill: fillcolour)
 The property stores the BOOL value that controls the visibility of the viewfinder.
 
 ```objc
-BOOL viewfinderVisible
+@property (assign, nonatomic) BOOL viewfinderVisible;
 ```
 
 **Remarks**

@@ -526,6 +526,8 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`setFocus`](#setfocus) | Focus once at the input position. |
 | [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
@@ -696,7 +698,7 @@ Specify the scan region. The DCEFrames will be cropped according to the scan reg
 void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 ```
 
-**Parameter**
+**Parameters**
 
 `scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
 
@@ -730,6 +732,8 @@ try {
 - You will still get the original [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
 - You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
 
+&nbsp;
+
 ### getScanRegion
 
 Get the scan region configurations. You will get a null value if the scan region is not set.
@@ -750,6 +754,52 @@ com.dynamsoft.dce.RegionDefinition myScanRegion = new RegionDefinition();
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 myScanRegion = cameraEnhancer.getScanRegion(scanRegion);
 ```
+
+&nbsp;
+
+### setScanRegionVisible
+
+Set whether to display the **scanRegion** on the UI. The default value is false. When the value is set to true, the scan region will be displayed on the UI. The **scanRegion** will not be displayed if the **scanRegion** value is null.
+
+```java
+void setScanRegionVisible(boolean scanRegionVisible)
+```
+
+**Parameters**
+
+`scanRegionVisible`: When the value is set to true, the **scanRegion** will be displayed on the UI. Otherwise, the **scanRegion** will not be displayed.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setScanRegionVisible(true);
+```
+
+&nbsp;
+
+### getScanRegionVisible
+
+Get whether the **scanRegion** will be displayed on the UI.
+
+```java
+boolean getScanRegionVisible()
+```
+
+**Return Value**
+
+When the return value is true, the **scanRegion** will be displayed. Otherwise, the **scanRegion** will not be displayed.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+boolean scanRegionVisible = cameraEnhancer.getScanRegionVisible();
+```
+
+&nbsp;
 
 ### updateAdvancedSettingsFromFile
 
