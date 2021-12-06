@@ -21,8 +21,8 @@ breadcrumbText: Release Note
 
 ### Editions
 
-| -- | -- | -- |
-| [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-12xx2021) | [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12xx2021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12xx2021) |
+| -- | -- |
+| [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12xx2021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12xx2021) |
 
 ## 2.0.0 (10/19/2021)
 
