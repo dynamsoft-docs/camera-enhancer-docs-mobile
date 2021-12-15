@@ -24,6 +24,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 - Added method [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) and [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) to [`CameraEnhancer`]({{site.ios-api}}camera-enhancer.html) class for users to set or get the region of interest. The scan region will determine how frames will be cropped.
 - Added class [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html). The class will be used to define the parameters for method [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion).
+- Added property [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) to control and check the visibility of the scan region.
 - Added method [`setTorchButton`]({{site.ios-api-auxiliary}}dcecameraview.html#settorchbutton) to [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html) class for users to set the position of the torch button. Property [`torchButtonVisible`]({{site.ios-api-auxiliary}}dcecameraview.html#torchbuttonvisible) is added to set and check the visibility of the torch button.
 - Extended the JSON template of [`updateAdvancedSettingsFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromfile) and [`updateAdvancedSettingsFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromstring). Added fast mode configuration parameters to the template.
 
