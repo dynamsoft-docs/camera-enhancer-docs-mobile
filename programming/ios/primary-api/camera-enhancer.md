@@ -53,7 +53,7 @@ let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 
 ### initLicense
 
-Set product key and activate the SDK.
+Set product key and activate the SDK. It is recommended to initialize the license in `AppDelegate.m`.
 
 ```objc
 +(void)initLicense:(NSString*)license verificationListener:(id) verificationListener;
