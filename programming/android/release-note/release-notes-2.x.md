@@ -15,7 +15,6 @@ breadcrumbText: Android 2.x Release Notes
 ### Highlights
 
 - Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
-- APIs are added to `DCECameraView` class to control whether and where to display a torch button.
 - Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
 
 ### Changelog

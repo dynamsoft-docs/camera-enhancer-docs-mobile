@@ -47,7 +47,7 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 
 ### initLicense
 
-Set product key and activate the SDK.
+Set product key and activate the SDK. It is recommended to initialize the license in `AppDelegate.m`.
 
 ```java
 static void initLicense(String license, DCELicenseVerificationListener listener)
