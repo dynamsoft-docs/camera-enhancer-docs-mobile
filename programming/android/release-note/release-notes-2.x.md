@@ -10,7 +10,7 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
-## 2.1.0 (12/xx/2021)
+## 2.1.0 (12/15/2021)
 
 ### Highlights
 
