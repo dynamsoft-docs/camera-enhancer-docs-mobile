@@ -53,7 +53,7 @@ let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 
 ### initLicense
 
-Set product key and activate the SDK.
+Set product key and activate the SDK. It is recommended to initialize the license in `AppDelegate.m`.
 
 ```objc
 +(void)initLicense:(NSString*)license verificationListener:(id) verificationListener;
@@ -630,10 +630,11 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
 
@@ -833,7 +834,8 @@ scanRegion.regionTop = 25;
 scanRegion.regionBottom = 75;
 scanRegion.regionLeft = 25;
 scanRegion.regionRight = 75;
-[_dce setScanRegion:scanRegion];
+scanRegion.regionMeasuredByPercentage = 1
+[_dce setScanRegion:scanRegion error: &error];
 ```
 
 Swift:
@@ -844,7 +846,8 @@ scanRegion.regionTop = 25
 scanRegion.regionBottom = 75
 scanRegion.regionLeft = 25
 scanRegion.regionRight = 75
-dce.setScanRegion(scanRegion)
+scanRegion.regionMeasuredByPercentage = 1
+dce.setScanRegion(scanRegion, error: &error)
 ```
 
 **Remarks**
@@ -856,8 +859,8 @@ dce.setScanRegion(scanRegion)
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- You can set the `viewfinder` and the `scanRegion` with the same [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
+- You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the **scanRegion** when `setScanRegion` is triggered.
+- When you trigger `setScanRegion`, the [`scanRegionVisible`](#scanregionvisible) will be set to true automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;
 
@@ -885,6 +888,16 @@ Swift:
 ```swift
 let scanRegion = iRegionDefinition()
 scanRegion = dce.getScanRegion()
+```
+
+&nbsp;
+
+### scanRegionVisible
+
+Set whether to display the **scanRegion** on the UI. The default value of the property is false. When the property value is set to true, the scan region will be drawn on the UI. The **scanRegion** will not be displayed if its value is null
+
+```objc
+@property (assign, nonatomic) BOOL scanRegionVisible;
 ```
 
 &nbsp;
