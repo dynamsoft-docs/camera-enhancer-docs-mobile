@@ -11,7 +11,7 @@ breadcrumbText: Release Note
 
 # Release Notes
 
-## 2.1.0 (12/15/2021)
+## 2.1.0 (12/16/2021)
 
 ### Highlights
 
@@ -21,7 +21,7 @@ breadcrumbText: Release Note
 ### Editions
 
 | -- | -- |
-| [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12152021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12152021) |
+| [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12162021) | [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12162021) |
 
 ## 2.0.0 (10/19/2021)
 
