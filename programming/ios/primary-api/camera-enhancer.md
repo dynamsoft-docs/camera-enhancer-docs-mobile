@@ -743,7 +743,7 @@ The size of the current resolution.
 Objective-C:
 
 ```objc
-NSInteger resolution = [_dce getResolution];
+NSString* resolution = [_dce getResolution];
 ```
 
 Swift:
