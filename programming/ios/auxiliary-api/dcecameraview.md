@@ -43,7 +43,7 @@ Init the DCECameraView.
 Objective-C:
 
 ```objc
-_dceView = [[DCECameraView alloc] initWithView:self.view.bounds]
+_dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds]
 ```
 
 Swift:

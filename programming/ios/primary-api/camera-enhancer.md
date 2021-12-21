@@ -715,13 +715,13 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 Objective-C:
 
 ```objc
-[_dce setResolution:EnumResolution1080P];
+[_dce setResolution:EnumRESOLUTION_1080P];
 ```
 
 Swift:
 
 ```swift
-dce.setResolution(Resolution.EnumResolution1080P)
+dce.setResolution(Resolution.EnumRESOLUTION_1080P)
 ```
 
 &nbsp;
