@@ -18,7 +18,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Highlights
 
-- Added class scan region configuration APIs and `iRegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
+- Added class scan region configuration APIs and `iRegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate further frame processing.
 - Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
 
 ### Changelog
@@ -35,7 +35,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Highlights
 
-- Simplified the usage of camera-control APIs. The new APIs are easier to use and covers more scenarios.
+- Simplified the usage of camera-control APIs. The new APIs are easier to use and cover more scenarios.
 - Simplified the usage of camera enhancer features. Users can enable all required features via the method `enableFeatures` by inputting the combined enumeration value.
 - Extended the features of `DCECameraView`. Users can add and personalize the overlays and viewfinder on the camera UI.
 - Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap` is added to enable users to convert `DCEFrame` to a visible image.

@@ -25,5 +25,4 @@ breadcrumbText: Enumerations Enhancer Features
 | `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
 | `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
 | `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hide when the environment brightness is high and displayed when the brightness is low. |
-| `EF_ALL` | 0x3f | Enable all the above features. |
+| `EF_ALL` | 0x1f | Enable all the above features. |

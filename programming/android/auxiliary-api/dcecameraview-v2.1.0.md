@@ -26,8 +26,7 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 | [`setViewfinderVisible`](#setviewfindervisible) | This method controls whether to display a viewfinder. |
 | [`getViewfinderVisible`](#getviewfindervisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the position and the size of the viewfinder. |
-| [`setTorchButton (with default size and image)`](#settorchbutton) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
-| [`setTorchButton (with user input position, size and image)`](#settorchbutton-with-the-position-size-and-images) | Set the position, size and image of the torch button. |
+| [`setTorchButton`](#settorchbutton) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
 
@@ -179,8 +178,6 @@ The viewfinder is built based on the screen coordinate system. The origin of the
 
 ## setTorchButton
 
-### setTorchButton with the Position
-
 Set the position of the torch button. The visibility of the torch button will be set to true as well.
 
 ```java
@@ -203,28 +200,6 @@ Point torchButtonPosition = new Point();
 torchButtonPosition.x = 100;
 torchButtonPosition.y = 100;
 dceCameraView.setTorchButtonPosition(torchButtonPosition);
-```
-
-### setTorchButton with the Position, Size and Images
-
-Set the styles of the button with the position, size and images.
-
-```java
-void setTorchButton(Point torchButtonPosition, int width, int height, Drawable torchOnImage, Drawable torchOffImage)
-```
-
-**Parameters**
-
-`torchButtonPosition`: The coordinate of the top-left corner of the torch button.
-`width`: The width of the torch button.
-`height`: The height of the torch button.
-`torchOnImage`: Display this image when the torch is on.
-`torchOffImage`: Display this image when the torch is off.
-
-**Code Snippet**
-
-```java
-
 ```
 
 &nbsp;

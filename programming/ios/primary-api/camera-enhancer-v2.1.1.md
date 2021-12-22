@@ -541,12 +541,11 @@ The `EnumEnhancerFeatures` members:
 
 |  Members | Value |
 | -------- | ----- |
-| `EnumFRAME_FILTER` | 0x01 |
-| `EnumSENSOR_CONTROL` | 0x02 |
-| `EnumENHANCED_FOCUS` | 0x04 |
-| `EnumFAST_MODE` | 0x08 |
-| `EnumAUTO_ZOOM` | 0x10 |
-| `EnumSMART_TORCH` | 0x20 |
+| `FRAME_FILTER` | 0x01 |
+| `SENSOR_CONTROL` | 0x02 |
+| `ENHANCED_FOCUS` | 0x04 |
+| `FAST_MODE` | 0x08 |
+| `AUTO_ZOOM` | 0x10 |
 
 The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 

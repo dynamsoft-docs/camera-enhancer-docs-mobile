@@ -25,8 +25,7 @@ breadcrumbText: iOS DCECameraView Class
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
 | [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
-| [`setTorchButton (with default size and image)`](#settorchbutton) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
-| [`setTorchButton (with user input position, size and image)`](#settorchbutton-with-the-position-size-and-images) | Set the position, size and image of the torch button. |
+| [`setTorchButton`](#settorch) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
 | [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
 
 &nbsp;
@@ -191,8 +190,6 @@ The viewfinder is built based on the screen coordinate system. The origin of the
 
 ## setTorchButton
 
-### setTorchButton with the Position
-
 Set the position of the torch button. The visibility of the torch button will be set to true as well.
 
 ```objc
@@ -220,34 +217,6 @@ Swift:
 
 ```swift
 dceView.setTorchButton(torchButtonPosition: CGPoint(x: 100, y: 100))
-```
-
-### setTorchButton with the Position, Size and Images
-
-Set the position, size and image for the torch button.
-
-```objc
-- (void)setTorchButton:(CGRect)torchButton torchOnImage:(UIImage*)torchOnImage torchOffImage:(UIImage*)torchOffImage;
-```
-
-**Parameters**
-
-`frame`: The frame of torch button. It includes the width, height and top-left corner coordinate of the torch button.
-`torchOnImage`: Set the image to be displayed when torch is on.
-`torchOffImage`: Set the image to be displayed when torch is off.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-
-```
-
-Swift:
-
-```swift
-
 ```
 
 &nbsp;
