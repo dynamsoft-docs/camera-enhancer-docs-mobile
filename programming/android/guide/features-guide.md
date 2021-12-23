@@ -10,11 +10,10 @@ breadcrumbText: Enable DCE Features
 
 # How to Use Dynamsoft Camera Enhancer Features
 
-| Features ||
-| -------- | ---- |
-| Frame Filter |  |
-| Sensor Control |  |
-| Enhanced Focus |  |
-| Fast Mode |  |
-| Auto Zoom |  |
-| Smart Torch |  |
+## Specify a Scan Region
+
+## Add Highlighted Overlays
+
+## Auto Zoom Camera
+
+## 
