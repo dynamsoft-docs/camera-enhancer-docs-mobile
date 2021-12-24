@@ -8,12 +8,14 @@ noTitleIndex: true
 breadcrumbText: Enable DCE Features
 ---
 
-# How to Use Dynamsoft Camera Enhancer Features
+# Customize the Camera Settings
 
-## Specify a Scan Region
+## Camera Control
 
-## Add Highlighted Overlays
+Camera control APIs are available in `CameraEnhancer` class.
 
-## Auto Zoom Camera
+- getAllCameras/selectCamera
+- open/close/pause/resume
+- setResolution/getResolution/getResolutionList
 
-## 
+## UI Configurations
