@@ -207,7 +207,8 @@ Set the position, size and image for the torch button.
 Objective-C:
 
 ```objc
-[_dceView setTorchButton:CGRectMake(0,0,500,500) torchOnImage: image torchOffImage: image];
+CGRect rect = {0, 0, 30, 30};
+[_dceView setTorchButton:(rect) torchOnImage: image torchOffImage: image];
 ```
 
 Swift:
