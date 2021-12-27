@@ -12,7 +12,14 @@ breadcrumbText: Android 2.x Release Notes
 
 ## 2.1.1 (12/21/2021)
 
+### New
+
+- Overwrite `DCECameraView` method [`setTorchButton`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbutton). Users can set the position, size and image of the torch button. The previous `setTorchButton` method is deprecated.
+
+### Fixed
+
 - Fixed a bug that might affect the processing speed.
+- Fixed a bug that `enableFeatures` might not have effects.
 
 ## 2.1.0 (12/16/2021)
 

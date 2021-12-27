@@ -12,7 +12,14 @@ breadcrumbText: iOS 2.x Release Notes
 
 ## 2.1.1 (12/21/2021)
 
+### New
+
+- Overwrite `DCECameraView` method [`setTorchButton`]({{site.ios-api-auxiliary}}dcecameraview.html#settorchbutton). Users can set the position, size and image of the torch button. The previous `setTorchButton` method is deprecated.
+
+### Fixed
+
 - Fixed a bug that might affect the processing speed.
+- Fixed a bug that `enableFeatures` might not have effects.
 
 ## 2.1.0 (12/16/2021)
 
@@ -23,7 +30,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Changelog
 
-#### Added
+#### New
 
 - Added method [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) and [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) to [`CameraEnhancer`]({{site.ios-api}}camera-enhancer.html) class for users to set or get the region of interest. The scan region will determine how frames will be cropped.
 - Added class [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html). The class will be used to define the parameters for method [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion).
