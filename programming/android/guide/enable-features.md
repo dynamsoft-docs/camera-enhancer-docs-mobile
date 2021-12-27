@@ -13,11 +13,11 @@ breadcrumbText: Enable Features
 In addition to the basic camera control APIs, Dynamsoft Camera Enhancer (DCE) have some features that need a valid license to drive. DCE features include:
 
 - Frame Filter: Filter out blurry frames.
-- Sensor Control: Discard all the frames when device is shaking.
+- Sensor Control: Discard all the frames when the device is shaking.
 - Enhanced Focus: Enhanced the camera focus ability (recommended on low-end devices).
-- Fast Mode: Crop the frames into different small size.
-- Auto Zoom: Auto zoom to approach the region of interest.
-- Smart Torch: Show/hide a torch button when environment light level is low/high.
+- Fast Mode: Crop the frames into different small sizes.
+- Auto Zoom: Auto-zoom to approach the region of interest.
+- Smart Torch: Show/hide a torch button when the environment light level is low/high.
 
 ## How to Enable DCE Features
 
@@ -43,5 +43,5 @@ mCameraEnhancer.disableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhan
 ```
 
 - You can enable or disable multiple features at one time.
-- When a enabled feature is enabled again , it remains enabled.
+- When an enabled feature is enabled again, it remains enabled.
 - When a feature is disabled more than once, it remains disabled.

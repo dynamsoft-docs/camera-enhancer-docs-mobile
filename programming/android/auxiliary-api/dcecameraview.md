@@ -26,8 +26,7 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 | [`setViewfinderVisible`](#setviewfindervisible) | This method controls whether to display a viewfinder. |
 | [`getViewfinderVisible`](#getviewfindervisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the position and the size of the viewfinder. |
-| [`setTorchButton (with default size and image)`](#settorchbutton) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
-| [`setTorchButton (with user input position, size and image)`](#settorchbutton-with-the-position-size-and-images) | Set the position, size and image of the torch button. |
+| [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
 
@@ -179,34 +178,6 @@ The viewfinder is built based on the screen coordinate system. The origin of the
 
 ## setTorchButton
 
-### setTorchButton with the Position
-
-Set the position of the torch button. The visibility of the torch button will be set to true as well.
-
-```java
-void setTorchButton(Point torchButtonPosition)
-```
-
-**Parameters**
-
-`torchButtonPosition`: The `torchButtonPosition` illustrates the coordinates of the torch button on the camera view. The x coordinate of the point stands for the pixel distance between the point and the left edge of the screen. The y coordinate of the point stands for the pixel distance between the point and the top edge of the screen.
-
-<div align="center"> 
-    <p><img src="assets/torch-button.png" width="70%" alt="setScanRegion"></p>
-    <p><b>torchButtonPosition</b> is the position on the <b>camera view</b></p>
-</div>
-
-**Code Snippet**
-
-```java
-Point torchButtonPosition = new Point();
-torchButtonPosition.x = 100;
-torchButtonPosition.y = 100;
-dceCameraView.setTorchButtonPosition(torchButtonPosition);
-```
-
-### setTorchButton with the Position, Size and Images
-
 Set the styles of the button with the position, size and images.
 
 ```java
@@ -224,8 +195,12 @@ void setTorchButton(Point torchButtonPosition, int width, int height, Drawable t
 **Code Snippet**
 
 ```java
-
+cameraView.setTorchButton(new Point(100,100), 50,50, getDrawable(R.drawable.torch_on_image), getDrawable(R.drawable.torch_off_image));
 ```
+
+**Remarks**
+
+Method `setTorchButton(Point torchButtonPosition)` is deprecated. Please use the new `setTorchButton` method.
 
 &nbsp;
 

@@ -135,7 +135,7 @@ Swift:
 ```swift
 let strokeColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
 let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
-_dceView = setOverlayColour(strokeColour, fill: fillcolour)
+_dceView.setOverlayColour(strokeColour, fill: fillcolour)
 ```
 
 &nbsp;
@@ -180,7 +180,7 @@ Objective-C:
 Swift:
 
 ```swift
-_dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
+_dceView.setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 ```
 
 **Remarks**
@@ -190,39 +190,6 @@ The viewfinder is built based on the screen coordinate system. The origin of the
 &nbsp;
 
 ## setTorchButton
-
-### setTorchButton with the Position
-
-Set the position of the torch button. The visibility of the torch button will be set to true as well.
-
-```objc
-- (void)setTorchButton:(CGPoint)torchButtonPosition;
-```
-
-**Parameters**
-
-`torchButtonPosition`: The `torchButtonPosition` illustrates the coordinate of the torch button. The x coordinate of the point stands for the pixel distance between the point and the left edge of the screen. The y coordinate of the point stands for the pixel distance between the point and the top edge of the screen.
-
-<div align="center"> 
-    <p><img src="assets/torch-button.png" width="70%" alt="setScanRegion"></p>
-    <p><b>torchButtonPosition</b> is the position on the camera view</b></p>
-</div>
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[_dceView setTorchButton:CGPointMake(100,100)];
-```
-
-Swift:
-
-```swift
-dceView.setTorchButton(torchButtonPosition: CGPoint(x: 100, y: 100))
-```
-
-### setTorchButton with the Position, Size and Images
 
 Set the position, size and image for the torch button.
 
@@ -241,14 +208,18 @@ Set the position, size and image for the torch button.
 Objective-C:
 
 ```objc
-
+[_dceView setTorchButton:CGRectMake(0,0,500,500) torchOnImage: image torchOffImage: image];
 ```
 
 Swift:
 
 ```swift
-
+_dceView.setTorchButton(CGRect.init(x: 0, y: 0, width: 500, height: 500), torchOnImage: image, torchOffImage:image)
 ```
+
+**Remarks**
+
+Method `- (void)setTorchButton:(CGPoint)torchButtonPosition` is deprecated. Please use the new `setTorchButton` method.
 
 &nbsp;
 

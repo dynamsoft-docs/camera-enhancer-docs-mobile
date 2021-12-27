@@ -10,7 +10,13 @@ breadcrumbText: Customize Camera Settings
 
 # Customize the Basic Settings
 
-On this page you will be guided on how to add configurations to your camera app. License is not required when using camera configuration APIs.
+There are three classes available in Dynamsoft Camera Enhancer SDK.
+
+| Class | Description |
+| ----- | ----------- |
+| `CameraEnhancer` | The class includes basic hardware control and video streaming control APIs. |
+| `DCECameraView` | The class includes UI  |
+| `DCEFrame` |  |
 
 ## Camera Control
 
@@ -41,6 +47,11 @@ The resolution, focus, zoom factor and torchlight settings are also available wh
 - `setZoom`
 - `setFocus`
 - `turnOnTorch`/`turnOffTorch`
+
+**Sample Code**
+
+```java
+```
 
 ## UI Configurations
 
