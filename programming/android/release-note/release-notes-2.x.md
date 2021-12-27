@@ -14,6 +14,7 @@ breadcrumbText: Android 2.x Release Notes
 
 ### New
 
+- Added a new feature `SMART_TORCH`. Users can enable this feature via the method [`enableFeatures`]({{site.android-api}}camera-enhancer.html#enablefeatures) by specifying `EF_SMART_TORCH`. When `SMART_TORCH` is enabled, a torch button will be displayed automatically when the environment light level is low. Users can click on the torch button to turn on/off the torchlight.
 - Overwrite `DCECameraView` method [`setTorchButton`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbutton). Users can set the position, size and image of the torch button. The previous `setTorchButton` method is deprecated.
 
 ### Fixed
