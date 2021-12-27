@@ -25,8 +25,7 @@ breadcrumbText: iOS DCECameraView Class
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
 | [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
-| [`setTorchButton (with default size and image)`](#settorchbutton) | Set the position of the torch button. The visibility of the torch button will be set to true as well. |
-| [`setTorchButton (with user input position, size and image)`](#settorchbutton-with-the-position-size-and-images) | Set the position, size and image of the torch button. |
+| [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
 | [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
 
 &nbsp;

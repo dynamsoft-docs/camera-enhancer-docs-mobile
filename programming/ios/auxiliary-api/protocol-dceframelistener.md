@@ -31,7 +31,7 @@ Callback when the `DCEFrame` is output.
 
 **Parameters**
 
-`frame`: The parameter is the original `DCEFrame` with detailed frame information. View more in [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) class.
+`frame`: The parameter is the original `DCEFrame` with detailed frame information. View more in [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) class.  
 `timeStamp`: The time stamp that records when the DCEFrame is output. 
 
 **Code Snippet**
