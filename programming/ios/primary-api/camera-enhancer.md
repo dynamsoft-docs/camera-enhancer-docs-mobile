@@ -51,6 +51,8 @@ Swift:
 let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 ```
 
+&nbsp;
+
 ### initLicense
 
 Set product key and activate the SDK. It is recommended to initialize the license in `AppDelegate.m`.
