@@ -25,12 +25,4 @@ CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELi
 });
 ```
 
-If you can using Camera Enhancer features like frame filter or camera control APIs in the old versions, it is recommended to check the APIs reference for the new APIs.
-
-| Methods in 1.x Versions | Methods in 2.x Versions |
-| ----------------------- | ----------------------- |
-| `AcquireListFrame` | `getFrameFromBuffer` |
-| `getCameraCurrentStatus`, `getCameraDesiredStatus`, `setCameraDesiredStatus` | `getCameraStatus` `open`, `close` |
-| `pauseCamera`, `resumeCamera` | `pause`, `resume` |
-| `getTorchCurrentState`, `getTorchDesiredState`, `setTorchDesiredState`, `addTorchListener` | `turnOnTorch`, `turnOffTorch` |
-| `AcquireListFrame` | `` |
+For API changes, it is recommended to check the [APIs reference](api-reference.md) for the new APIs.
