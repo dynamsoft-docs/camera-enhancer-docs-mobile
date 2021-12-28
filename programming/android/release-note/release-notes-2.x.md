@@ -10,11 +10,23 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.1.1 (12/28/2021)
+
+### New
+
+- Added a new feature `SMART_TORCH`. Users can enable this feature via the method [`enableFeatures`]({{site.android-api}}camera-enhancer.html#enablefeatures) by specifying `EF_SMART_TORCH`. When `SMART_TORCH` is enabled, a torch button will be displayed automatically when the environment light level is low. Users can click on the torch button to turn on/off the torchlight.
+- Overwrite `DCECameraView` method [`setTorchButton`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbutton). Users can set the position, size and image of the torch button. The previous `setTorchButton` method is deprecated.
+
+### Fixed
+
+- Fixed a bug that might affect the processing speed.
+- Fixed a bug that `enableFeatures` might not have effects.
+
 ## 2.1.0 (12/16/2021)
 
 ### Highlights
 
-- Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
+- Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate further frame processing.
 - Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
 
 ### Changelog

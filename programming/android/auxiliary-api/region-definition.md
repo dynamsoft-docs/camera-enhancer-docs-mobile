@@ -41,6 +41,8 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 0
 
+&nbsp;
+
 ## regionLeft
 
 The left-most coordinate or percentage of the region.
@@ -57,6 +59,8 @@ regionMeasuredByPercentage = 1: [0, 100]
 **Default Value**
 
 0
+
+&nbsp;
 
 ## regionRight
 
@@ -75,6 +79,8 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 0
 
+&nbsp;
+
 ## regionBottom
 
 The bottom-most coordinate or percentage of the region.
@@ -91,6 +97,8 @@ regionMeasuredByPercentage = 1: [0, 100]
 **Default Value**
 
 0
+
+&nbsp;
 
 ## regionMeasuredByPercentage
 

@@ -39,6 +39,8 @@ The property stores the pixel data of the image.
 NSData* imageData
 ```
 
+&nbsp;
+
 ## width
 
 The property stores the pixel width of the image.
@@ -46,6 +48,8 @@ The property stores the pixel width of the image.
 ```objectivec
 NSInteger width
 ```
+
+&nbsp;
 
 ## height
 
@@ -55,6 +59,8 @@ The property stores the pixel height of the image.
 NSInteger height
 ```
 
+&nbsp;
+
 ## stride
 
 The property stores the stride of the image.
@@ -62,6 +68,8 @@ The property stores the stride of the image.
 ```objectivec
 NSInteger stride
 ```
+
+&nbsp;
 
 ## pixelFormat
 
@@ -71,6 +79,8 @@ The property stores the pixel format of the image. The property value is one of 
 NSInteger pixelFormat
 ```
 
+&nbsp;
+
 ## frameID
 
 The property stores the `frameID` of the frame.
@@ -78,6 +88,8 @@ The property stores the `frameID` of the frame.
 ```objectivec
 NSInteger frameID
 ```
+
+&nbsp;
 
 ## quality
 
@@ -87,6 +99,8 @@ The property stores the quality of the `DCEFrame` image. User have to enable the
 EnumFrameQuality quality
 ```
 
+&nbsp;
+
 ## isCropped
 
 The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. Property value `true` means the image is cropped and `false` means the image has never been cropped.
@@ -95,6 +109,8 @@ The property stores a boolean value that recording whether the image is cropped.
 BOOL isCropped
 ```
 
+&nbsp;
+
 ## cropRegion
 
 The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null.
@@ -102,6 +118,8 @@ The property stores a CGRect value that means the crop region of the image (if t
 ```objectivec
 CGRect cropRegion
 ```
+
+&nbsp;
 
 ## orientation
 
@@ -115,6 +133,8 @@ NSInteger orientation
     <p><img src="assets/getOrientation.png" width="70%" alt="getOrientation"></p>
     <p>All examples of the orientation</p>
 </div>
+
+&nbsp;
 
 ## toUIImage
 

@@ -10,16 +10,28 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.1.1 (12/28/2021)
+
+### New
+
+- Added a new feature `SMART_TORCH`. Users can enable this feature via the method [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeatures) by specifying `EnumSMART_TORCH`. When `SMART_TORCH` is enabled, a torch button will be displayed automatically when the environment light level is low. Users can click on the torch button to turn on/off the torchlight.
+- Overwrite `DCECameraView` method [`setTorchButton`]({{site.ios-api-auxiliary}}dcecameraview.html#settorchbutton). Users can set the position, size and image of the torch button. The previous `setTorchButton` method is deprecated.
+
+### Fixed
+
+- Fixed a bug that might affect the processing speed.
+- Fixed a bug that `enableFeatures` might not have effects.
+
 ## 2.1.0 (12/16/2021)
 
 ### Highlights
 
-- Added class scan region configuration APIs and `iRegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
+- Added class scan region configuration APIs and `iRegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate further frame processing.
 - Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
 
 ### Changelog
 
-#### Added
+#### New
 
 - Added method [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) and [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) to [`CameraEnhancer`]({{site.ios-api}}camera-enhancer.html) class for users to set or get the region of interest. The scan region will determine how frames will be cropped.
 - Added class [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html). The class will be used to define the parameters for method [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion).
@@ -31,7 +43,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Highlights
 
-- Simplified the usage of camera-control APIs. The new APIs are easier to use and covers more scenarios.
+- Simplified the usage of camera-control APIs. The new APIs are easier to use and cover more scenarios.
 - Simplified the usage of camera enhancer features. Users can enable all required features via the method `enableFeatures` by inputting the combined enumeration value.
 - Extended the features of `DCECameraView`. Users can add and personalize the overlays and viewfinder on the camera UI.
 - Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap` is added to enable users to convert `DCEFrame` to a visible image.
