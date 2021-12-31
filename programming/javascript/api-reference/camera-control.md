@@ -131,12 +131,12 @@ let camera = await enhancer.getSelectedCamera();
 Turns on the camera to start streaming live video.
 
 ```typescript
-open(): void
+open(appendOrShowUI?: boolean): void
 ```
 
 **Parameters**
 
-None.
+`appendOrShowUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 **Return value**
 
@@ -147,12 +147,12 @@ None.
 Stops video streaming and releases the camera.
 
 ```typescript
-close(): void
+close(hideUI?: boolean): void
 ```
 
 **Parameters**
 
-None.
+`hideUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
 
 **Return value**
 
