@@ -23,6 +23,8 @@ breadcrumbText: Release Note
 | 2.1.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12162021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12162021) |
 | 2.1.1 | [Android]({{ site.android-release-note }}release-notes-2.x.html#211-12282021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#211-12282021) |
 
+&nbsp;
+
 ## 2.0
 
 ### Highlights
@@ -36,11 +38,15 @@ breadcrumbText: Release Note
 | -------- | ------------------ |
 | 2.0.0 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#200-10202021) / [Android]({{ site.android-release-note }}release-notes-2.x.html#200-10192021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#200-10192021) |
 
+&nbsp;
+
 <div class="fold-panel-prefix"></div>
 
 ## 1.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 1.0
 
