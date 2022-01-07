@@ -31,7 +31,7 @@ breadcrumbText: API Reference
 | [getSelectedCamera()](camera-control.md#getselectedcamera) | Returns information about the selected / current camera. |
 | [open()](camera-control.md#open) | Turn on the camera to start streaming live video. |
 | [close()](camera-control.md#close) | Stops video streaming and releases the camera. |
-| [isOpen()](camera-control.md#isOpen) | Returns whether the selected camera is turned on / occupied. |
+| [isOpen()](camera-control.md#isopen) | Returns whether the selected camera is turned on / occupied. |
 | [pause()](camera-control.md#pause) | Pauses video streaming without releasing the camera. |
 | [resume()](camera-control.md#resume) | Resumes video streaming. |
 | [setResolution()](camera-control.md#setresolution) | Sets the resolution of the current video input. |

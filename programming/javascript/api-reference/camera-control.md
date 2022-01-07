@@ -20,7 +20,7 @@ breadcrumbText: Camera Control
 | [getSelectedCamera()](#getselectedcamera) | Returns information about the selected / current camera. |
 | [open()](#open) | Turns on the camera to start streaming live video. |
 | [close()](#close) | Stops video streaming and releases the camera. |
-| [isOpen()](#isOpen) | Returns whether the selected camera is turned on / occupied. |
+| [isOpen()](#isopen) | Returns whether the selected camera is turned on / occupied. |
 | [pause()](#pause) | Pauses video streaming without releasing the camera. |
 | [resume()](#resume) | Resumes video streaming. |
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
@@ -220,7 +220,7 @@ None.
 
 None.
 
-## resume()
+## resume
 
 Resumes video streaming.
 
@@ -529,11 +529,11 @@ enhancer.getCapabilities();
 
 * [MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)
 
-<!--
-
 ## getCameraSettings
 
 Returns the current values for each constrainable property of the selected camera.
+
+> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
 
 ```typescript
 getCameraSettings(): any
@@ -577,7 +577,6 @@ enhancer.getCameraSettings();
 **See also**
 
 * [getCapabilities](#getcapabilities)
--->
 
 ## setColorTemperature
 
