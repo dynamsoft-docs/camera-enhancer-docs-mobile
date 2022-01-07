@@ -105,6 +105,7 @@ breadcrumbText: API Reference
 
 ## Interfaces
 
+* [Area](interface/area.md)
 * [Region](interface/region.md)
 * [DCEFrame](interface/dceframe.md)
 * [VideoDeviceInfo](interface/videodeviceinfo.md)
