@@ -38,10 +38,9 @@ breadcrumbText: Camera Control
 | [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
 | [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
+| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
-
-<!--| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |-->
 
 ## getAllCameras
 
