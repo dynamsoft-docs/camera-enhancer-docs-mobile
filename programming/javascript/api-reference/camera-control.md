@@ -21,7 +21,6 @@ breadcrumbText: Camera Control
 | [open()](#open) | Turns on the camera to start streaming live video. |
 | [close()](#close) | Stops video streaming and releases the camera. |
 | [isOpen()](#isOpen) | Returns whether the selected camera is turned on / occupied. |
-| [onPlayed](#onplayed) | Defines a callback which is triggered when the video streaming first starts or restarts when its source (camera) or resolution changes. |
 | [pause()](#pause) | Pauses video streaming without releasing the camera. |
 | [resume()](#resume) | Resumes video streaming. |
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
@@ -36,6 +35,8 @@ breadcrumbText: Camera Control
 | [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 | [setZoom()](#setzoom) | Sets the zoom level of the video. |
+| [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
+| [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
@@ -395,7 +396,7 @@ await enhancer.turnOffTorch();
 
 ## setZoom
 
-Sets the zoom level of the video.
+Sets the focus mode and focus distance of the camera.
 
 > Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
 
@@ -415,6 +416,63 @@ A promise that resolves when the operation succeeds.
 
 ```js
 await enhancer.setZoom(400);
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
+## setFocus
+
+Sets the focus mode and focus distance of the camera.
+
+> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+
+```typescript
+setFocus(mode: string, distance?: number): Promise<void>;
+```
+
+**Parameters**
+
+`mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+`distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+await enhancer.setFocus("manual", 400);
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
+## getFocus
+
+Gets the focus mode and the focus distance.
+
+> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+
+```typescript
+getFocus(): {mode: string, distance?: number}
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+await enhancer.getFocus();
 ```
 
 **See also**
@@ -472,6 +530,7 @@ enhancer.getCapabilities();
 * [MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)
 
 <!--
+
 ## getCameraSettings
 
 Returns the current values for each constrainable property of the selected camera.
@@ -519,6 +578,7 @@ enhancer.getCameraSettings();
 
 * [getCapabilities](#getcapabilities)
 -->
+
 ## setColorTemperature
 
 Adjusts the color temperature of the selected camera.

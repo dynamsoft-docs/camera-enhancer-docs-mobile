@@ -16,7 +16,7 @@ breadcrumbText: DCEFrame
 
   A canvas element that holds the image data of the frame.
 
-* data: `Uint8Array | Uint8ClampedArray`
+* data: `Uint8Array | Uint8ClampedArray | File`
 
   The raw image data.
 

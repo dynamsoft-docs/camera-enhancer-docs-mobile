@@ -12,6 +12,10 @@ breadcrumbText: PlayCallbackInfo
 
 `interface` PlayCallbackInfo
 
+* deviceId: `string`
+
+  The ID of the currently used camera.
+
 * width: `number`
 
   The width (in pixels) of the video input.
