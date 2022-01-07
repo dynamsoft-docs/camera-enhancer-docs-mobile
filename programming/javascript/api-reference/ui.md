@@ -46,7 +46,7 @@ The visible region represented by a `Region` object.
 **Code Snippet**
 
 ```js
-enhancer.getVisibleRegion()
+enhancer.getVisibleRegion();
 ```
 
 **See also**
@@ -206,7 +206,7 @@ enhancer.setViewDecorator(["rectangle", "crosshair"], area);
 Gets what view decorator is shown.
 
 ```typescript
-getViewDecorator(): {type: string[], area: Area, canvas: Canvas}
+getViewDecorator(): {type: string[], area: Area, canvas: Canvas};
 ```
 
 **See also**
@@ -218,7 +218,7 @@ getViewDecorator(): {type: string[], area: Area, canvas: Canvas}
 Sets the line width for drawing the view decorator.
 
 ```typescript
-setViewDecoratorLineWidth(type: string, width: Number): void;
+setViewDecoratorLineWidth(type: string, width: number): void;
 ```
 
 **Parameters**

@@ -72,7 +72,7 @@ breadcrumbText: API Reference
 | [isFetchingLoopStarted()](acquisition.md#isfetchingloopstarted) | Returns the state of the fetching loop. |
 | [maxNumberOfFramesInBuffer](acquisition.md#maxnumberofframesinbuffer) | Sets or returns how many frames can be buffered. |
 | [numberOfFramesInBuffer](acquisition.md#numberofframesinbuffer) | Returns how many frames there are in the buffer. |
-| [loopInterval](acquisition.md#singleframemode) | Returns or sets the start time of the next fetch operation. |
+| [loopInterval](acquisition.md#loopinterval) | Returns or sets the start time of the next fetch operation. |
 | [singleFrameMode](acquisition.md#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 
 ### UI

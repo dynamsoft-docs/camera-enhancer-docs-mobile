@@ -30,7 +30,7 @@ breadcrumbText: Acquisition
 | [isFetchingLoopStarted()](#isfetchingloopstarted) | Returns the state of the fetching loop. |
 | [maxNumberOfFramesInBuffer](#maxnumberofframesinbuffer) | Sets or returns how many frames can be buffered. |
 | [numberOfFramesInBuffer](#numberofframesinbuffer) | Returns how many frames there are in the buffer. |
-| [loopInterval](#singleframemode) | Returns or sets the start time of the next fetch operation. |
+| [loopInterval](#loopinterval) | Returns or sets the start time of the next fetch operation. |
 | [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 
 
@@ -98,7 +98,7 @@ let region = enhancer.getScanRegion();
 Returns a `DCEFrame` object which contains the image data of the latest frame from the video input.
 
 ```typescript
-getFrame(): DCEFrame
+getFrame(): DCEFrame;
 ```
 
 **Parameters**
@@ -125,7 +125,7 @@ document.body.appendChild(frameData.canvas);
 Returns a `DCEFrame` object which contains the image data of the latest buffered frame.
 
 ```typescript
-getFrameFromBuffer(): DCEFrame
+getFrameFromBuffer(): DCEFrame;
 ```
 
 **Parameters**
@@ -200,7 +200,7 @@ None.
 Sets or returns how many frames can be buffered.
 
 ```typescript
-maxNumberOfFramesInBuffer: Number;
+maxNumberOfFramesInBuffer: number;
 ```
 
 ## numberOfFramesInBuffer
@@ -208,7 +208,7 @@ maxNumberOfFramesInBuffer: Number;
 Returns how many frames there are in the buffer.
 
 ```typescript
-readonly numberOfFramesInBuffer: Number;
+readonly numberOfFramesInBuffer: number;
 ```
 
 ## loopInterval
@@ -216,7 +216,7 @@ readonly numberOfFramesInBuffer: Number;
 Returns or sets the start time of the next fetch operation.
 
 ```typescript
-loopInterval: Number;
+loopInterval: number;
 ```
 <!--
 ## refreshInterval
@@ -227,7 +227,7 @@ Returns or sets how often the buffer is refreshed when the buffer is full. Allow
 * a natural number: sets a timer that starts as soon as the buffer is full, when the timer expires, a new frame is fetched and appended to the image buffer
 
 ```typescript
-refreshInterval: Number;
+refreshInterval: number;
 ```
 
 
@@ -248,7 +248,7 @@ croppingRegions: Array<Region>;
 Returns or sets which of the cropping regions is to be used in cropping the next frame. If not specified, the next region in line will be applied.
 
 ```typescript
-croppingRegionIndex: Number;
+croppingRegionIndex: number;
 ```
 
 -->
@@ -260,7 +260,7 @@ Returns or sets whether to enable the singe-frame mode. When the single-frame mo
 To get the actual data, add a event handler to the event 'singleFrameAcquired'.
 
 ```typescript
-singleFrameMode: boolean
+singleFrameMode: boolean;
 ```
 
 **Code Snippet**
