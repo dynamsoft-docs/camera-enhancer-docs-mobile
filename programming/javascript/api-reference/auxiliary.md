@@ -73,6 +73,7 @@ off(eventName: EventName, listener: Function<any[]>): void;
 **Parameters**
 
 `eventName` : specifies the event.
+
 `listener` : specifies the handler function.
 
 **Return value**
@@ -121,7 +122,7 @@ enhancer.dispose();
 Returns the version of the library.
 
 ```typescript
-static getVersion(): string
+static getVersion(): string;
 ```
 
 **Parameters**
@@ -143,7 +144,7 @@ Dynamsoft.DCE.CameraEnhancer.getVersion(); // 'JS 1.0.0.20210628'
 Returns a report (in JSON) on the current running environments.
 
 ```typescript
-static detectEnvironment(): Promise<any>
+static detectEnvironment(): Promise<any>;
 ```
 
 **Parameters**
