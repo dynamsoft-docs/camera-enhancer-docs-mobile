@@ -451,7 +451,6 @@ The `EnumEnhancerFeatures` members:
 | `EF_ENHANCED_FOCUS` | 0x04 |
 | `EF_FAST_MODE` | 0x08 |
 | `EF_AUTO_ZOOM` | 0x10 |
-| `EF_SMART_TORCH` | 0x20 |
 
 The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 

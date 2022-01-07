@@ -10,13 +10,29 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
-## 2.1.0 (12/xx/2021)
+## 2.1.1 (12/28/2021)
 
-### Highlights
+### New
 
-- Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate the further frame processing.
-- APIs are added to `DCECameraView` class to control whether and where to display a torch button.
-- Fast mode setting parameters are opened for users to set via `updateAdvancedSettings`. The fast mode will be more flexible.
+- Added a new feature `SMART_TORCH`. Users can enable this feature via the method [`enableFeatures`]({{site.android-api}}camera-enhancer.html#enablefeatures) by specifying `EF_SMART_TORCH`. When `SMART_TORCH` is enabled, a torch button will be displayed automatically when the environment light level is low. Users can click on the torch button to turn on/off the torchlight.
+- Overwrite `DCECameraView` method [`setTorchButton`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbutton). Users can set the position, size and image of the torch button. The previous `setTorchButton` method is deprecated.
+
+### Fixed
+
+- Fixed a bug that might affect the processing speed.
+- Fixed a bug that `enableFeatures` might not have effects.
+
+## 2.1.0 (12/16/2021)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.1.0.md -%}
+
+<div class="fold-panel-end"></div>
 
 ### Changelog
 
@@ -24,18 +40,21 @@ breadcrumbText: Android 2.x Release Notes
 
 - Added method [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) and [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) to [`CameraEnhancer`]({{site.android-api}}camera-enhancer.html) class for users to set or get the region of interest. The scan region will determine how frames will be cropped.
 - Added class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html). The class will be used to define the parameters for method [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion).
+- Added method [`setScanRegionVisible`]({{site.android-api}}camera-enhancer.html#setscanregionvisible) and [`getScanRegionVisible`]({{site.android-api}}camera-enhancer.html#getscanregionvisible) to control and check the visibility of the scan region.
 - Added method [`setTorchButton`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbutton) to [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html) class for users to set the position of the torch button. Methods [`setTorchButtonVisible`]({{site.android-api-auxiliary}}dcecameraview.html#settorchbuttonvisible) and [`getTorchButtonVisible`]({{site.android-api-auxiliary}}dcecameraview.html#gettorchbuttonvisible) are added to set and check the visibility of the torch button.
 - Extended the JSON template of [`updateAdvancedSettingsFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromfile) and [`updateAdvancedSettingsFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromstring). Added fast mode configuration parameters to the template.
 
 ## 2.0.0 (10/19/2021)
 
-### Highlights
+<div class="fold-panel-prefix"></div>
 
-- Simplified the usage of camera-control APIs. The new APIs are easier to use and covers more scenarios.
-- Simplified the usage of camera enhancer features. Users can enable all required features via the method `enableFeatures` by inputting the combined enumeration value.
-- Extended the features of `DCECameraView`. Users can add and personalize the overlays and viewfinder on the camera UI.
-- Extended the features of `DCEFrame`. `DCEFrame` will store more frame information to cover more scenarios. In addition, the method `toBitmap` is added to enable users to convert `DCEFrame` to a visible image.
-- The camera UI will display a fuzzified image instead of the previously captured image when the camera UI is quit and resumed.
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.0.0.md -%}
+
+<div class="fold-panel-end"></div>
 
 ### Changelog
 

@@ -19,7 +19,6 @@ The following parameters are advanced parameters for special usages. These param
 | [`autoFocusInterval`](#autofocusinterval) | *int* | Set the time interval of the auto focus. |
 | [`autoFocusTerminateTime`](#autofocusterminatetime) | *int* | Set the minimum terminate time of auto focus. |
 | [`sensorControlSensitivity`](#sensorcontrolsensitivity) | *int* | Set the sensitivity of the mobile sensor. |
-| [`FastMode`](#fastmode) | *JSON data* | Set a group of crop regions. |
 
 ## focalLength
 
@@ -69,38 +68,3 @@ Set the sensitivity of the mobile sensor with an int value. A lower input value 
 **Range**
 
 At least 0 and no maximum limit.
-
-## FastMode
-
-The fast-mode parameters store four groups of frame cropping parameters. The cropping parameters will be implemented periodically when the fast mode is enabled. You can use the default cropping region settings or update your personalized crop regions via a JSON string or file.
-
-**Default Value**
-
-```json
-“FastMode”: {
-    “cropRegions”: [{
-        “top”: 0,
-        “right”: 100,
-        “bottom”: 100,
-        “left”: 0
-    },
-    {
-        “top”: 25,
-        “right”: 100,
-        “bottom”: 75,
-        “left”: 0
-    },
-    {
-        “top”: 25,
-        “right”: 75,
-        “bottom”: 75,
-        “left”: 25
-    },
-    {
-        “top”: 25,
-        “right”: 75,
-        “bottom”: 75,
-        “left”: 25
-    }]
-}
-```
