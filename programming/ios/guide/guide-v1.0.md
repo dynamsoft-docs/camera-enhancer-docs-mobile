@@ -411,7 +411,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         }
     }
     
-    private func showResult(_ result: string, completion: @escaping () -> Void) {
+    private func showResult(_ result: String, completion: @escaping () -> Void) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: result, message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion() }))
