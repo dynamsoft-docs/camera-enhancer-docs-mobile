@@ -15,8 +15,8 @@ breadcrumbText: Camera Control
 
 | API Name | Description |
 |---|---|
-| [ifSkipCameraInspection](#ifskipcamerainspection) | Return or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Return or sets whether to save the last used camera. |
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [selectCamera()](#selectcamera) | Chooses a camera as the video source. |
 | [getSelectedCamera()](#getselectedcamera) | Returns information about the selected / current camera. |
@@ -46,7 +46,7 @@ breadcrumbText: Camera Control
 
 ## ifSkipCameraInspection
 
-Return or sets whether to skip camera inspection at initialization to save time.
+Returns or sets whether to skip camera inspection at initialization to save time. Note that if a previously used camera is already available in the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), the inspection is skipped automatically. Read more on [ifSaveLastUsedCamera](#ifsavelastusedcamera).
 
 ```typescript
 ifSkipCameraInspection: boolean;
@@ -54,7 +54,7 @@ ifSkipCameraInspection: boolean;
 
 ## ifSaveLastUsedCamera
 
-Return or sets whether to save the last used camera.
+Returns or sets whether to save the last used camera. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
 
 ```typescript
 ifSaveLastUsedCamera: boolean;
