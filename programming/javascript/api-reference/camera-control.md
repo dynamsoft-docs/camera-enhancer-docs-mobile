@@ -15,6 +15,8 @@ breadcrumbText: Camera Control
 
 | API Name | Description |
 |---|---|
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Return or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Return or sets whether to save the last used camera. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [selectCamera()](#selectcamera) | Chooses a camera as the video source. |
 | [getSelectedCamera()](#getselectedcamera) | Returns information about the selected / current camera. |
@@ -41,6 +43,22 @@ breadcrumbText: Camera Control
 | [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
+
+## ifSkipCameraInspection
+
+Return or sets whether to skip camera inspection at initialization to save time.
+
+```typescript
+ifSkipCameraInspection: boolean;
+```
+
+## ifSaveLastUsedCamera
+
+Return or sets whether to save the last used camera.
+
+```typescript
+ifSaveLastUsedCamera: boolean;
+```
 
 ## getAllCameras
 

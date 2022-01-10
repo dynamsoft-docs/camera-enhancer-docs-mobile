@@ -26,6 +26,8 @@ breadcrumbText: API Reference
 
 | API Name | Description |
 |---|---|
+| [ifSkipCameraInspection](camera-control.md#ifskipcamerainspection) | Return or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](camera-control.md#ifsavelastusedcamera) | Return or sets whether to save the last used camera. |
 | [getAllCameras()](camera-control.md#getallcameras) | Returns infomation of all available cameras on the device. |
 | [selectCamera()](camera-control.md#selectcamera) | Chooses a camera as the video source. |
 | [getSelectedCamera()](camera-control.md#getselectedcamera) | Returns information about the selected / current camera. |
