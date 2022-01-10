@@ -28,13 +28,13 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.1.0/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.1.0/dist/dce.js"></script>
 ```
 
 #### Host the library yourself (recommended)
@@ -62,7 +62,7 @@ $ npm install dynamsoft-camera-enhancer --save
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/DCE-JS-2.0.0/dist/dce.js"></script>
+<script src="/DCE-JS-2.1.0/dist/dce.js"></script>
 
 or
 
@@ -79,15 +79,7 @@ Read more on [how to host the library](#hosting-the-library).
 To use the library, we need to create a `CameraEnhancer` object first.
 
 ```javascript
- let enhancer = null;
- try {
-     let pEnhancer = null;
-     (async () => {
-         enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-     })();
- } catch (ex) {
-     console.error(ex);
- }
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 ```
 
 #### Configure the `CameraEnhancer` object
@@ -98,12 +90,9 @@ As shown in the code snippet below, before opening the video stream, we need to 
 <!-- Define an element to hold the UI element -->
 <div id="enhancerUIContainer"></div>
 <script>
-    let pEnhancer = null;
-    (async () => {
-        let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
-        await enhancer.open();
-    })();
+    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+    document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+    await enhancer.open();
 </script>
 ```
 
@@ -152,7 +141,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
   > The video element must have the class `dce-video` .
 
-  + Add the camera list and resolution list. If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
+  + Add the camera list and resolution list. If the class names for these lists match the default ones,  `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
 <select class="dce-sel-camera"></select>
