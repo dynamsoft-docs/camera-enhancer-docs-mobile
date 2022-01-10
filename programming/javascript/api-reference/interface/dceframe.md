@@ -12,7 +12,7 @@ breadcrumbText: DCEFrame
 
 `interface` DCEFrame
 
-* canvas: `HTMLCanvasElement | OffscreenCanvas`
+* canvas: `HTMLCanvasElement`
 
   A canvas element that holds the image data of the frame.
 
