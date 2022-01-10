@@ -23,7 +23,7 @@ breadcrumbText: Initialization
 Creates a `CameraEnhancer` instance.
 
 ```typescript
-static createInstance(): Promise<CameraEnhancer>
+static createInstance(): Promise<CameraEnhancer>;
 ```
 
 **Parameters**
@@ -48,13 +48,13 @@ let pEnhancer = null;
 Returns or sets the URL of the *.html* file that defines the default UI Element. The URL can only be set before the API [createInstance](#createinstance) is called.
 
 ```typescript
-static defaultUIElementURL: string
+static defaultUIElementURL: string;
 ```
 
 **Code Snippet**
 
 ```js
-Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.ui.html";
+Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.1.0/dist/dce.ui.html";
 let pEnhancer = null;
 (async () => {
     let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
@@ -67,7 +67,7 @@ let pEnhancer = null;
 Returns the HTML element that is used by the [CameraEnhancer](#CameraEnhancer) instance.
 
 ```typescript
-getUIElement(): HTMLElement
+getUIElement(): HTMLElement;
 ```
 
 **Parameters**
@@ -98,7 +98,7 @@ The HTML element used as the UI by the [CameraEnhancer](#CameraEnhancer) instanc
 Specifies an HTML element for the [CameraEnhancer](#CameraEnhancer) instance to use as its UI. The structure inside the element determines the appearance of the UI.
 
 ```typescript
-setUIElement(elementOrURL: HTMLElement | string): Promise<void>
+setUIElement(elementOrURL: HTMLElement | string): Promise<void>;
 ```
 
 **Parameters**
@@ -130,7 +130,7 @@ A promise that resolves when the operation succeeds.
     let pEnhancer = null;
     (async () => {
         let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-        await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.ui.html");
+        await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.1.0/dist/dce.ui.html");
         await enhancer.open();
     })();
 </script>
