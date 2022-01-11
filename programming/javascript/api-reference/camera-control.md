@@ -123,7 +123,7 @@ if (cameras.length) {
 Returns information about the selected / current camera.
 
 ```typescript
-getSelectedCamera(): Promise<VideoDeviceInfo | null>;
+getSelectedCamera(): VideoDeviceInfo;
 ```
 
 **Parameters**
@@ -132,12 +132,13 @@ None.
 
 **Return value**
 
-A promise resolving to a `VideoDeviceInfo` object.
+A `VideoDeviceInfo` object with details about the selected camera.
 
 **Code Snippet**
 
 ```js
-let camera = await enhancer.getSelectedCamera();
+let camera = enhancer.getSelectedCamera();
+console.log(camera.label);
 ```
 
 **See also**
