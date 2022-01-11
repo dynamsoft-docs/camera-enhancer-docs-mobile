@@ -16,7 +16,7 @@ breadcrumbText: Camera Control
 | API Name | Description |
 |---|---|
 | [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [selectCamera()](#selectcamera) | Chooses a camera as the video source. |
 | [getSelectedCamera()](#getselectedcamera) | Returns information about the selected / current camera. |
@@ -54,7 +54,11 @@ ifSkipCameraInspection: boolean;
 
 ## ifSaveLastUsedCamera
 
-Returns or sets whether to save the last used camera. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+
+> NOTE
+> 
+> This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
 
 ```typescript
 ifSaveLastUsedCamera: boolean;
