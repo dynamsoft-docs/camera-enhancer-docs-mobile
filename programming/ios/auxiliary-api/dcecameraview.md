@@ -56,6 +56,7 @@ let dceView = DCECameraView.init(frame self.view.bounds)
 
 ## cameraWithFrame
 
+
 Statically init the DCECameraView.
 
 ```objc
