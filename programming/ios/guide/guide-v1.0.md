@@ -67,7 +67,7 @@ Objective-C code sample:
 }
 
 - (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    _dceView = [DCECaptureView cameraWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     
@@ -154,7 +154,7 @@ For Objective-C users, please add the following code:
 }
 
 - (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    _dceView = [DCECaptureView cameraWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     
@@ -262,7 +262,7 @@ Add this code snippet to the Objective-C project.
 }
 
 - (void)configurationDCE{
-    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    _dceView = [DCECaptureView cameraWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     

@@ -20,7 +20,7 @@ breadcrumbText: iOS DCECameraView Class
 | Method/Property Name | Description |
 | ----------- | ----------- |
 | [`initWithFrame`](#initwithframe) | Init the `DCECameraView`. |
-| [`captureWithFrame`](#capturewithframe) | Init the `DCECameraView` with a static method. |
+| [`cameraWithFrame`](#camerawithframe) | Init the `DCECameraView` with a static method. |
 | [`overlayVisible`](#overlayvisible) | The property stores the BOOL value that controls the visibility of the overlays. |
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
 | [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
@@ -54,12 +54,12 @@ let dceView = DCECameraView.init(frame self.view.bounds)
 
 &nbsp;
 
-## captureWithFrame
+## cameraWithFrame
 
 Statically init the DCECameraView.
 
 ```objc
-+ (instancetype)captureWithFrame:(CGRect)frame NS_SWIFT_NAME(init(frame:));
++ (instancetype)cameraWithFrame:(CGRect)frame NS_SWIFT_NAME(init(frame:));
 ```
 
 **Code Snippet**
