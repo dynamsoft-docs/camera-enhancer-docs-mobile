@@ -198,9 +198,9 @@ Set the position, size and image for the torch button.
 
 **Parameters**
 
-`frame`: The frame of torch button. It includes the width, height and top-left corner coordinate of the torch button.  
-`torchOnImage`: Set the image to be displayed when the torch is on.  
-`torchOffImage`: Set the image to be displayed when the torch is off.
+`frame`: The frame of torch button. It includes the width, height and top-left corner coordinate of the torch button. You can input a nil value to apply no changes on the frame of button.  
+`torchOnImage`: Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
+`torchOffImage`: Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
 
 **Code Snippet**
 
