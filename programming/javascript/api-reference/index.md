@@ -45,7 +45,7 @@ breadcrumbText: API Reference
 |---|---|
 | [setFrameRate()](camera-control.md#setframerate) | Adjusts the frame rate. |
 | [getFrameRate()](camera-control.md#getframerate) | Returns the real-time frame rate. |
-| [turnOnTorch()](camera-control.md#turnontorch) | Turns on the torch/flashlight. |
+| [turnOnTorch()](camera-control.md#turnontorch) | Turns on the torch/flashlight if the current camera supports it. |
 | [turnOffTorch()](camera-control.md#turnofftorch) | Turns off the torch/flashlight. |
 | [setZoom()](camera-control.md#setzoom) | Sets the zoom level of the video. |
 | [setFocus()](camera-control.md#setfocus) | Sets the focus mode and focus distance of the camera. |
