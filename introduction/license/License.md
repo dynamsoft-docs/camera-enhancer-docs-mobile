@@ -35,7 +35,7 @@ The following code snippets are using the public trial key to initialize the lic
 ```java
 // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
 // After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request for 30 days extension.
-mCamera.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
+CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
     @Override
     public void DCELicenseVerificationCallback(boolean b, Exception e) {
         if(!b && e != null){
@@ -68,7 +68,7 @@ You can add the following code to the `DCELicenseVerificationCallback` to displa
 **Android Code Snippet**
 
 ```java
-mCamera.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
+CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
     @Override
     public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e) {
         if (!isSuccess) {
