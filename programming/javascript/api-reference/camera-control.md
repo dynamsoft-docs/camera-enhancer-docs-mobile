@@ -16,7 +16,7 @@ breadcrumbText: Camera Control
 | API Name | Description |
 |---|---|
 | [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [selectCamera()](#selectcamera) | Chooses a camera as the video source. |
 | [getSelectedCamera()](#getselectedcamera) | Returns information about the selected / current camera. |
@@ -54,7 +54,11 @@ ifSkipCameraInspection: boolean;
 
 ## ifSaveLastUsedCamera
 
-Returns or sets whether to save the last used camera. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+
+> NOTE
+> 
+> This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
 
 ```typescript
 ifSaveLastUsedCamera: boolean;
@@ -123,7 +127,7 @@ if (cameras.length) {
 Returns information about the selected / current camera.
 
 ```typescript
-getSelectedCamera(): Promise<VideoDeviceInfo | null>;
+getSelectedCamera(): VideoDeviceInfo;
 ```
 
 **Parameters**
@@ -132,12 +136,13 @@ None.
 
 **Return value**
 
-A promise resolving to a `VideoDeviceInfo` object.
+A `VideoDeviceInfo` object with details about the selected camera.
 
 **Code Snippet**
 
 ```js
-let camera = await enhancer.getSelectedCamera();
+let camera = enhancer.getSelectedCamera();
+console.log(camera.label);
 ```
 
 **See also**
@@ -307,7 +312,7 @@ console.log(resolution.width + " x " + resolution.height);
 
 Adjusts the frame rate.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setFrameRate(rate: number): Promise<void>;
@@ -357,7 +362,7 @@ await enhancer.getFrameRate();
 
 Turns on the torch/flashlight.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 turnOnTorch(): Promise<void>;
@@ -386,7 +391,7 @@ await enhancer.turnOnTorch();
 
 Turns off the torch/flashlight.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 turnOffTorch(): Promise<void>;
@@ -415,7 +420,7 @@ await enhancer.turnOffTorch();
 
 Sets the focus mode and focus distance of the camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setZoom(zoomValue: number): Promise<void>;
@@ -443,7 +448,7 @@ await enhancer.setZoom(400);
 
 Sets the focus mode and focus distance of the camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setFocus(mode: string, distance?: number): Promise<void>;
@@ -472,8 +477,6 @@ await enhancer.setFocus("manual", 400);
 
 Gets the focus mode and the focus distance.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
-
 ```typescript
 getFocus(): {mode: string, distance?: number};
 ```
@@ -500,7 +503,7 @@ await enhancer.getFocus();
 
 Inspects and returns the capabilities of the selected camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 getCapabilities(): MediaTrackCapabilities;
@@ -550,8 +553,6 @@ enhancer.getCapabilities();
 
 Returns the current values for each constrainable property of the selected camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
-
 ```typescript
 getCameraSettings(): any;
 ```
@@ -599,7 +600,7 @@ enhancer.getCameraSettings();
 
 Adjusts the color temperature of the selected camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setColorTemperature(colorTemperatur: number): Promise<void>;
@@ -627,7 +628,7 @@ await enhancer.setColorTemperature(5000);
 
 Sets the exposure compensation index of the selected camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setExposureCompensation(exposureCompensation: number): Promise<void>;

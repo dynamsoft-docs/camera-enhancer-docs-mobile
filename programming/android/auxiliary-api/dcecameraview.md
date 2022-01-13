@@ -186,11 +186,11 @@ void setTorchButton(Point torchButtonPosition, int width, int height, Drawable t
 
 **Parameters**
 
-`torchButtonPosition`: The coordinate of the top-left corner of the torch button.  
-`width`: The width of the torch button.  
-`height`: The height of the torch button.  
-`torchOnImage`: Display this image when the torch is on.  
-`torchOffImage`: Display this image when the torch is off.
+`torchButtonPosition`: The coordinate of the top-left corner of the torch button. You can input a null value to apply no changes to the position of the torch button.  
+`width`: The width of the torch button. You can input a null value to apply no changes to the width of the torch button.  
+`height`: The height of the torch button. You can input a null value to apply no changes to the height of the torch button.  
+`torchOnImage`: Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
+`torchOffImage`: Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
 
 **Code Snippet**
 

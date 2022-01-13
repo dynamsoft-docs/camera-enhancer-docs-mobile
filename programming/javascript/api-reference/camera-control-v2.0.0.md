@@ -289,7 +289,7 @@ console.log(resolution.width + " x " + resolution.height);
 
 Adjusts the frame rate.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setFrameRate(rate: number): Promise<void>
@@ -339,7 +339,7 @@ await enhancer.getFrameRate();
 
 Turns on the torch/flashlight.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 turnOnTorch(): Promise<void>
@@ -368,7 +368,7 @@ await enhancer.turnOnTorch();
 
 Turns off the torch/flashlight.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 turnOffTorch(): Promise<void>
@@ -397,7 +397,7 @@ await enhancer.turnOffTorch();
 
 Sets the zoom level of the video.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setZoom(zoomValue: number): Promise<void>
@@ -424,8 +424,6 @@ await enhancer.setZoom(400);
 ## getCapabilities
 
 Inspects and returns the capabilities of the selected camera.
-
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
 
 ```typescript
 getCapabilities(): MediaTrackCapabilities
@@ -523,7 +521,7 @@ enhancer.getCameraSettings();
 
 Adjusts the color temperature of the selected camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setColorTemperature(colorTemperatur: number): Promise<void>
@@ -551,7 +549,7 @@ await enhancer.setColorTemperature(5000);
 
 Sets the exposure compensation index of the selected camera.
 
-> Right now, this method only works in Chrome or other Chromium-based browsers and should be called when a camera is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setExposureCompensation(exposureCompensation: number): Promise<void>
