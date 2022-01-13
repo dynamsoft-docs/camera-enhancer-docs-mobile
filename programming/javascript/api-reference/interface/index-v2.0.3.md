@@ -12,7 +12,6 @@ breadcrumbText: Interface Index
 
 Dynamsoft Camera Enhancer JavaScript SDK has the following interfaces.
 
-* [Area](area.md)
 * [DCEFrame](dceframe.md)
 * [PlayCallbackInfo](playcallbackinfo.md)
 * [Region](region.md)
