@@ -13,6 +13,8 @@ breadcrumbText: Release Note
 
 ## 2.1
 
+> First released: 12-16-2021
+
 ### Highlights
 
 - Added class scan region configuration APIs and `RegionDefinition` for users to set the region of interest. The frames will be cropped based on the scan region to accelerate further frame processing.
@@ -20,12 +22,14 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.1.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12162021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12162021) |
 | 2.1.1 | [Android]({{ site.android-release-note }}release-notes-2.x.html#211-12282021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#211-12282021) |
+| 2.1.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12162021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12162021) |
 
 &nbsp;
 
 ## 2.0
+
+> First released: 10-19-2021
 
 ### Highlights
 
@@ -50,6 +54,8 @@ breadcrumbText: Release Note
 
 ### 1.0
 
+> First released: 04-29-2021
+
 #### Highlights
 
 - Dynamsoft Camera Enhancer is released. The following features are available:
@@ -61,8 +67,8 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.0 | [Android]({{ site.android-release-note }}release-notes-1.x.html#100-04292021) / [iOS]({{ site.ios-release-note }}release-notes-1.x.html#100-04292021) |
-| 1.0.1 | [Android]({{ site.android-release-note }}release-notes-1.x.html#101-06102021) / [iOS]({{ site.ios-release-note }}release-notes-1.x.html#101-06102021) |
 | 1.0.3 | [Android]({{ site.android-release-note }}release-notes-1.x.html#103-07202021) / [iOS]({{ site.ios-release-note }}release-notes-1.x.html#103-07202021) |
+| 1.0.1 | [Android]({{ site.android-release-note }}release-notes-1.x.html#101-06102021) / [iOS]({{ site.ios-release-note }}release-notes-1.x.html#101-06102021) |
+| 1.0.0 | [Android]({{ site.android-release-note }}release-notes-1.x.html#100-04292021) / [iOS]({{ site.ios-release-note }}release-notes-1.x.html#100-04292021) |
 
 <div class="fold-panel-end"></div>
