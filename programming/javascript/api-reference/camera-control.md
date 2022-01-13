@@ -34,7 +34,7 @@ breadcrumbText: Camera Control
 |---|---|
 | [setFrameRate()](#setframerate) | Adjusts the frame rate. |
 | [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
-| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
+| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight if the current camera supports it. |
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 | [setZoom()](#setzoom) | Sets the zoom level of the video. |
 | [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
@@ -360,7 +360,7 @@ await enhancer.getFrameRate();
 
 ## turnOnTorch
 
-Turns on the torch/flashlight.
+Turns on the torch/flashlight if the current camera supports it.
 
 > At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 

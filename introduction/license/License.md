@@ -51,6 +51,8 @@ CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELi
 // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
 // After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request for 30 days extension.
 [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+}
 ```
 
 **Swift Code Snippet**
@@ -59,6 +61,8 @@ CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELi
 // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
 // After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request for 30 days extension.
 DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
+func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+}
 ```
 
 ## Optional Codes -- Display License Verification Message on the UI

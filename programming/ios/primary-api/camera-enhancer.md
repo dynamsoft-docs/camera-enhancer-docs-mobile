@@ -72,12 +72,16 @@ Objective-C:
 
 ```objc
 [DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate: self];
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+}
 ```
 
 Swift:
 
 ```swift
 DynamsoftCameraEnhancer.initLicense("Put your license here", verificationDelegate: self)
+func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+}
 ```
 
 &nbsp;
