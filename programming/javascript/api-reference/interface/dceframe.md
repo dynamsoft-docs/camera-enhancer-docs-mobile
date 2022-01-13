@@ -12,42 +12,38 @@ breadcrumbText: DCEFrame
 
 `interface` DCEFrame
 
-* canvas: `HTMLCanvasElement`
+* canvas: *HTMLCanvasElement | OffscreenCanvas*
 
   A canvas element that holds the image data of the frame.
 
-* data: `Uint8Array | Uint8ClampedArray | File`
+* data: *Uint8Array | Uint8ClampedArray*
 
   The raw image data.
 
-* region: `Region`
+* region: *Region*
 
   The region based on which the original frame is cropped.
 
-* croppingRegionIndex: `number`
-
-  The index of the region  
-
-* sx: `number`
+* sx: *number*
 
   The horizontal coordinate of the upper left point of the `data` on the original frame. If the frame was not cropped, the coordinate is 0.
 
-* sy: `number`
+* sy: *number*
 
   The vertical coordinate of the upper left point of the `data` on the original frame. If the frame was not cropped, the coordinate is 0.
 
-* width: `number`
+* width: *number*
 
   The width of the image data.
 
-* height: `number`
+* height: *number*
 
   The height of the image data.
 
-* timeSpent: `number`
+* timeSpent: *number*
 
   The time in miniseconds spent in acquiring the frame.
 
-* timeStamp: `number`
+* timeStamp: *number*
 
   The timeStamp at which point the frame acquisition finished.
