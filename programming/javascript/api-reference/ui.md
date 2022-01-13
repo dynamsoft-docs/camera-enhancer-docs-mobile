@@ -175,11 +175,11 @@ setViewDecorator(type: string | string[], area: Area): void;
 
 **Parameters**
 
-`type` : specify the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"].
+`type` : specify the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"]. If passed an empty string, the decorator is cleared.
 
 `area` : specify where to place the decorator. It accepts 4 values:
-* `x`,  `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
-* `width`,  `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
+* `x`,    `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
+* `width`,    `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
 
 **Return value**
 
