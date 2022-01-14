@@ -197,35 +197,6 @@ None.
 
 `true` means the camera is turned on and `false` the opposite.
 
-## onPlayed
-
-Defines a callback which is triggered when the video streaming first starts or restarts when its source (camera) or resolution changes.
-
-```typescript
-onPlayed: (playCallBackInfo:PlayCallBackInfo) => {};
-```
-
-**Arguments**
-
-playCallBackInfo: returns the resolution of the video input.
-
-**Code Snippet**
-
-```js
-let pEnhancer = null;
-(async () => {
-    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-    enhancer.onPlayed = playCallBackInfo => {
-        console.log(playCallBackInfo.width);
-    };
-    await enhancer.open();
-})();
-```
-
-**See also**
-
-* [PlayCallbackInfo](interface/playcallbackinfo.md)
-
 ## pause
 
 Pauses video streaming without releasing the camera.
