@@ -154,7 +154,7 @@ console.log(camera.label);
 Turns on the camera to start streaming live video.
 
 ```typescript
-open(appendOrShowUI?: boolean): void;
+open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
@@ -163,7 +163,7 @@ open(appendOrShowUI?: boolean): void;
 
 **Return value**
 
-None.
+A promise resolving to a `PlayCallbackInfo` object.
 
 ## close
 
@@ -234,12 +234,12 @@ None.
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
 ```typescript
-setResolution(width: number, height: number): Promise<PlayCallbackInfo>;
+setResolution(widthOrResolution: number | number[], height: number): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
 
-`width` : specifies the horizontal resolution.
+`widthOrResolution` : if passed a number, it specifies the horizontal resolution. If passed an array of two numbers, it specifies both the horizontal and the vertial resolutions.
 `height` : specifies the vertical resolution.
 
 **Return value**
