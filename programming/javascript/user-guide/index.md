@@ -127,7 +127,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
 ```html
 <div id="div-video-container">
-    <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
+    <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
     let pEnhancer = null;
