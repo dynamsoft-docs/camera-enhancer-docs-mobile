@@ -723,14 +723,14 @@ try {
 **Remarks**
 
 - The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the camera view.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the camera view.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the camera view.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the camera view.
+  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
+  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
+  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
+  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
 - You will still get the original [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{site.android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- You can set the `viewfinder` and the `scanRegion` with the same [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) value so that the `viewfinder` will be displayed exactly on the `scanRegion`.
+- When you trigger `setScanRegion`, the **scanRegion** will be displayed on the UI automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;
 
