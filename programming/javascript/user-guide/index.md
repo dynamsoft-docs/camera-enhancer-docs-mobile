@@ -20,7 +20,6 @@ In this guide, you will learn step by step on how to integrate this library into
 **Table of Contents**
 
 * [Getting Started](#getting-started)
-* [Building your own page](#building-your-own-page)
   - [Include the library](#include-the-library)
   - [Interact with the library](#interact-with-the-library)
 * [Hosting the Library](#hosting-the-library)
