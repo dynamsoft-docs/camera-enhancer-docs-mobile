@@ -34,3 +34,13 @@ int getErrorCode()
 **Return Value**
 
 The error code. See also [`Error Code List`]({{ site.enumerations }}errorcode.html).
+
+**Code Snippet**
+
+```java
+try {
+    mCameraEnhancer.setResolution(EnumResolution.RESOLUTION_1080P);
+} catch (CameraEnhancerException e) {
+    Log.e("DCE", "onCreate: Resolution setting error is:"+e.getErrorCode());
+}
+```
