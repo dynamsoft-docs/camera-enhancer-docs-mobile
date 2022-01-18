@@ -27,9 +27,9 @@ In this guide, you will learn step by step on how to integrate this library into
 
 **Example Usage**
 
-Read the user guide of Dynamsoft Label Recognition on how DCE helps the SDK achieve video recognition:
+Read the user guide of Dynamsoft Label Recognizer on how DCE helps the SDK achieve video recognition:
 
-* [Dynamsoft Label Recognition User Guide](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest&utm_source=dceguide)
+* [Dynamsoft Label Recognizer User Guide](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest&utm_source=dceguide)
 
 ## Getting Started
 
