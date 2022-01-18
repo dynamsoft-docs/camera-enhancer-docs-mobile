@@ -165,6 +165,10 @@ open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 
 A promise resolving to a `PlayCallbackInfo` object.
 
+**See also**
+
+* [PlayCallbackInfo](interface/playcallbackinfo.md)
+
 ## close
 
 Stops video streaming and releases the camera.
@@ -525,7 +529,7 @@ enhancer.getCapabilities();
 Returns the current values for each constrainable property of the selected camera.
 
 ```typescript
-getCameraSettings(): any;
+getCameraSettings(): MediaTrackSettings;
 ```
 
 **Parameters**
@@ -534,7 +538,7 @@ None.
 
 **Return value**
 
-The current values for each constrainable property of the current camera
+The current values for each constrainable property of the current camera in the form of a [MediaTrackSettings](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings) object.
 
 **Code Snippet**
 

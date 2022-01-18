@@ -24,7 +24,7 @@ breadcrumbText: Auxiliary
 Attach an event handler function for a built-in event.
 
 ```typescript
-on(eventName: EventName, listener: Function<any[]>): void;
+on(eventName: EventName, listener: Function): void;
 ```
 
 **Parameters**
@@ -67,7 +67,7 @@ enhancer.on("singleFrameAcquired", dceFrame => {
 Remove an event handler.
 
 ```typescript
-off(eventName: EventName, listener: Function<any[]>): void;
+off(eventName: EventName, listener: Function): void;
 ```
 
 **Parameters**
