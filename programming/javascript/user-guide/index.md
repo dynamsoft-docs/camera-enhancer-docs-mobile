@@ -17,6 +17,21 @@ Once integrated, your users can open your website in a browser, access their cam
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
+**Table of Contents**
+
+* [Getting Started](#getting-started)
+* [Building your own page](#building-your-own-page)
+  - [Include the library](#include-the-library)
+  - [Interact with the library](#interact-with-the-library)
+* [Hosting the Library](#hosting-the-library)
+* [FAQ](#faq)
+
+**Example Usage**
+
+Read the user guide of Dynamsoft Label Recognition on how DCE helps the SDK achieve video recognition:
+
+* [Dynamsoft Label Recognition User Guide](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest&utm_source=guide)
+
 ## Getting Started
 
 ### Include the library
