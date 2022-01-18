@@ -509,8 +509,8 @@ dce.removeListener(self)
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
@@ -860,10 +860,10 @@ dce.setScanRegion(scanRegion, error: &error)
 **Remarks**
 
 - The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video.
+  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
+  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
+  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
+  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
 - You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the **scanRegion** when `setScanRegion` is triggered.
