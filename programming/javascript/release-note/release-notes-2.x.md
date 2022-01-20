@@ -10,7 +10,7 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
-## 2.1.0 (01/19/2022)
+## 2.1.0 (01/20/2022)
 
 <div class="fold-panel-prefix"></div>
 
