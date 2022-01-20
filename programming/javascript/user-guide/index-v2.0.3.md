@@ -17,20 +17,6 @@ Once integrated, your users can open your website in a browser, access their cam
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
-**Table of Contents**
-
-* [Getting Started](#getting-started)
-  - [Include the library](#include-the-library)
-  - [Interact with the library](#interact-with-the-library)
-* [Hosting the Library](#hosting-the-library)
-* [FAQ](#faq)
-
-**Example Usage**
-
-Read the user guide of Dynamsoft Label Recognizer on how DCE helps the SDK achieve video recognition:
-
-* [Dynamsoft Label Recognizer User Guide](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest&utm_source=dceguide)
-
 ## Getting Started
 
 ### Include the library
@@ -106,7 +92,7 @@ As shown in the code snippet below, before opening the video stream, we need to 
 <script>
     let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
-    await enhancer.open(true);
+    await enhancer.open();
 </script>
 ```
 
@@ -141,14 +127,14 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
 ```html
 <div id="div-video-container">
-    <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
+    <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
     let pEnhancer = null;
     (async () => {
         let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
         await enhancer.setUIElement(document.getElementById('div-video-container'));
-        await enhancer.open(true);
+        await enhancer.open();
     })();
 </script>
 ```
@@ -185,7 +171,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 Once you have downloaded the library, you can locate the "dist" directory and copy it to your project (usually as part of your website / web application). The following shows some of the files in this directory:
 
 * `dce.js` // The main library file
-* `dce.mjs` // For using the library as a module (`<script type="module">`)
+* `dce.browser.mjs` // For using the library as a module (`<script type="module">`)
 * `dce.ui.html` // Defines the default enhancer UI
 
 ### Step Two: Configure the Server
@@ -212,7 +198,7 @@ Yes, for simple testing purposes, it's perfectly fine to open the file directly 
 
 ### Why can't I use my camera?
 
-If you open the web page as `http://` , the camera may not work and you see the following error in the browser console:
+If you open the web page as `file:///` or `http://` , the camera may not work and you see the following error in the browser console:
 
 > [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
 
@@ -221,6 +207,8 @@ If you open the web page as `http://` , the camera may not work and you see the 
 > Trying to call getUserMedia from an insecure document.
 
 You get this error because the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) requires HTTPS to access the camera.
+
+* If you use Chrome or Firefox, you might not get the error, because these two browsers allow camera access via file:/// and http://localhost.
 
 To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
 

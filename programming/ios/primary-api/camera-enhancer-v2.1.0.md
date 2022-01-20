@@ -541,11 +541,11 @@ The `EnumEnhancerFeatures` members:
 
 |  Members | Value |
 | -------- | ----- |
-| `FRAME_FILTER` | 0x01 |
-| `SENSOR_CONTROL` | 0x02 |
-| `ENHANCED_FOCUS` | 0x04 |
-| `FAST_MODE` | 0x08 |
-| `AUTO_ZOOM` | 0x10 |
+| `EnumFRAME_FILTER` | 0x01 |
+| `EnumSENSOR_CONTROL` | 0x02 |
+| `EnumENHANCED_FOCUS` | 0x04 |
+| `EnumFAST_MODE` | 0x08 |
+| `EnumAUTO_ZOOM` | 0x10 |
 
 The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 
@@ -853,10 +853,10 @@ dce.setScanRegion(scanRegion, error: &error)
 **Remarks**
 
 - The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video.
+  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
+  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
+  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
+  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
 - You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the **scanRegion** when `setScanRegion` is triggered.

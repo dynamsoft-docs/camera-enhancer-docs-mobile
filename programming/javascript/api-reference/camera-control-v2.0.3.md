@@ -15,14 +15,13 @@ breadcrumbText: Camera Control
 
 | API Name | Description |
 |---|---|
-| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [selectCamera()](#selectcamera) | Chooses a camera as the video source. |
 | [getSelectedCamera()](#getselectedcamera) | Returns information about the selected / current camera. |
 | [open()](#open) | Turns on the camera to start streaming live video. |
 | [close()](#close) | Stops video streaming and releases the camera. |
-| [isOpen()](#isopen) | Returns whether the selected camera is turned on / occupied. |
+| [isOpen()](#isOpen) | Returns whether the selected camera is turned on / occupied. |
+| [onPlayed](#onplayed) | Defines a callback which is triggered when the video streaming first starts or restarts when its source (camera) or resolution changes. |
 | [pause()](#pause) | Pauses video streaming without releasing the camera. |
 | [resume()](#resume) | Resumes video streaming. |
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
@@ -34,42 +33,21 @@ breadcrumbText: Camera Control
 |---|---|
 | [setFrameRate()](#setframerate) | Adjusts the frame rate. |
 | [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
-| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight if the current camera supports it. |
+| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 | [setZoom()](#setzoom) | Sets the zoom level of the video. |
-| [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
-| [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
-| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
 
-## ifSkipCameraInspection
-
-Returns or sets whether to skip camera inspection at initialization to save time. Note that if a previously used camera is already available in the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), the inspection is skipped automatically. Read more on [ifSaveLastUsedCamera](#ifsavelastusedcamera).
-
-```typescript
-ifSkipCameraInspection: boolean;
-```
-
-## ifSaveLastUsedCamera
-
-Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
-
-> NOTE
-> 
-> This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
-
-```typescript
-ifSaveLastUsedCamera: boolean;
-```
+<!--| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |-->
 
 ## getAllCameras
 
 Returns infomation of all available cameras on the device.
 
 ```typescript
-getAllCameras(): Promise<VideoDeviceInfo[]>;
+getAllCameras(): Promise<VideoDeviceInfo[]>
 ```
 
 **Parameters**
@@ -98,7 +76,7 @@ if (cameras.length) {
 Chooses a camera as the video source.
 
 ```typescript
-selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>;
+selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>
 ```
 
 **Parameters**
@@ -127,7 +105,7 @@ if (cameras.length) {
 Returns information about the selected / current camera.
 
 ```typescript
-getSelectedCamera(): VideoDeviceInfo;
+getSelectedCamera(): Promise<VideoDeviceInfo | null>
 ```
 
 **Parameters**
@@ -136,13 +114,12 @@ None.
 
 **Return value**
 
-A `VideoDeviceInfo` object with details about the selected camera.
+A promise resolving to a `VideoDeviceInfo` object.
 
 **Code Snippet**
 
 ```js
-let camera = enhancer.getSelectedCamera();
-console.log(camera.label);
+let camera = await enhancer.getSelectedCamera();
 ```
 
 **See also**
@@ -154,32 +131,28 @@ console.log(camera.label);
 Turns on the camera to start streaming live video.
 
 ```typescript
-open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
+open(): void
 ```
 
 **Parameters**
 
-`appendOrShowUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
+None.
 
 **Return value**
 
-A promise resolving to a `PlayCallbackInfo` object.
-
-**See also**
-
-* [PlayCallbackInfo](interface/playcallbackinfo.md)
+None.
 
 ## close
 
 Stops video streaming and releases the camera.
 
 ```typescript
-close(hideUI?: boolean): void;
+close(): void
 ```
 
 **Parameters**
 
-`hideUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
+None.
 
 **Return value**
 
@@ -190,7 +163,7 @@ None.
 Returns whether the selected camera is turned on / occupied.
 
 ```typescript
-isOpen(): boolean;
+isOpen(): boolean
 ```
 
 **Parameters**
@@ -201,12 +174,41 @@ None.
 
 `true` means the camera is turned on and `false` the opposite.
 
+## onPlayed
+
+Defines a callback which is triggered when the video streaming first starts or restarts when its source (camera) or resolution changes.
+
+```typescript
+onPlayed: (playCallBackInfo:PlayCallBackInfo) => {}
+```
+
+**Arguments**
+
+playCallBackInfo: returns the resolution of the video input.
+
+**Code Snippet**
+
+```js
+let pEnhancer = null;
+(async () => {
+    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
+    enhancer.onPlayed = playCallBackInfo => {
+        console.log(playCallBackInfo.width);
+    };
+    await enhancer.open();
+})();
+```
+
+**See also**
+
+* [PlayCallbackInfo](interface/playcallbackinfo.md)
+
 ## pause
 
 Pauses video streaming without releasing the camera.
 
 ```typescript
-pause(): void;
+pause(): void
 ```
 
 **Parameters**
@@ -217,12 +219,12 @@ None.
 
 None.
 
-## resume
+## resume()
 
 Resumes video streaming.
 
 ```typescript
-resume(): void;
+resume(): void
 ```
 
 **Parameters**
@@ -238,12 +240,12 @@ None.
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
 ```typescript
-setResolution(widthOrResolution: number | number[], height: number): Promise<PlayCallbackInfo>;
+setResolution(width: number, height: number): Promise<PlayCallbackInfo>
 ```
 
 **Parameters**
 
-`widthOrResolution` : if passed a number, it specifies the horizontal resolution. If passed an array of two numbers, it specifies both the horizontal and the vertial resolutions.
+`width` : specifies the horizontal resolution.
 `height` : specifies the vertical resolution.
 
 **Return value**
@@ -265,7 +267,7 @@ await enhancer.setResolution(width, height);
 Returns the resolution of the current video input.
 
 ```typescript
-getResolution(): number[];
+getResolution(): number[]
 ```
 
 **Parameters**
@@ -290,7 +292,7 @@ Adjusts the frame rate.
 > At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
-setFrameRate(rate: number): Promise<void>;
+setFrameRate(rate: number): Promise<void>
 ```
 
 **Parameters**
@@ -335,12 +337,12 @@ await enhancer.getFrameRate();
 
 ## turnOnTorch
 
-Turns on the torch/flashlight if the current camera supports it.
+Turns on the torch/flashlight.
 
 > At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
-turnOnTorch(): Promise<void>;
+turnOnTorch(): Promise<void>
 ```
 
 **Parameters**
@@ -369,7 +371,7 @@ Turns off the torch/flashlight.
 > At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
-turnOffTorch(): Promise<void>;
+turnOffTorch(): Promise<void>
 ```
 
 **Parameters**
@@ -393,12 +395,12 @@ await enhancer.turnOffTorch();
 
 ## setZoom
 
-Sets the focus mode and focus distance of the camera.
+Sets the zoom level of the video.
 
 > At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
-setZoom(zoomValue: number): Promise<void>;
+setZoom(zoomValue: number): Promise<void>
 ```
 
 **Parameters**
@@ -419,69 +421,12 @@ await enhancer.setZoom(400);
 
 * [getCapabilities](#getcapabilities)
 
-## setFocus
-
-Sets the focus mode and focus distance of the camera.
-
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
-
-```typescript
-setFocus(mode: string, distance?: number): Promise<void>;
-```
-
-**Parameters**
-
-`mode` : specifies the focus mode, the available values include `continuous` and `manual` .
-`distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
-
-**Return value**
-
-A promise that resolves when the operation succeeds.
-
-**Code Snippet**
-
-```js
-await enhancer.setFocus("manual", 400);
-```
-
-**See also**
-
-* [getCapabilities](#getcapabilities)
-
-## getFocus
-
-Gets the focus mode and the focus distance.
-
-```typescript
-getFocus(): {mode: string, distance?: number};
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise that resolves when the operation succeeds.
-
-**Code Snippet**
-
-```js
-await enhancer.getFocus();
-```
-
-**See also**
-
-* [getCapabilities](#getcapabilities)
-
 ## getCapabilities
 
 Inspects and returns the capabilities of the selected camera.
 
-> At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
-
 ```typescript
-getCapabilities(): MediaTrackCapabilities;
+getCapabilities(): MediaTrackCapabilities
 ```
 
 **Parameters**
@@ -524,12 +469,13 @@ enhancer.getCapabilities();
 
 * [MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)
 
+<!--
 ## getCameraSettings
 
 Returns the current values for each constrainable property of the selected camera.
 
 ```typescript
-getCameraSettings(): MediaTrackSettings;
+getCameraSettings(): any
 ```
 
 **Parameters**
@@ -538,7 +484,7 @@ None.
 
 **Return value**
 
-The current values for each constrainable property of the current camera in the form of a [MediaTrackSettings](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings) object.
+The current values for each constrainable property of the current camera
 
 **Code Snippet**
 
@@ -570,7 +516,7 @@ enhancer.getCameraSettings();
 **See also**
 
 * [getCapabilities](#getcapabilities)
-
+-->
 ## setColorTemperature
 
 Adjusts the color temperature of the selected camera.
@@ -578,7 +524,7 @@ Adjusts the color temperature of the selected camera.
 > At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
-setColorTemperature(colorTemperatur: number): Promise<void>;
+setColorTemperature(colorTemperatur: number): Promise<void>
 ```
 
 **Parameters**
@@ -606,7 +552,7 @@ Sets the exposure compensation index of the selected camera.
 > At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
-setExposureCompensation(exposureCompensation: number): Promise<void>;
+setExposureCompensation(exposureCompensation: number): Promise<void>
 ```
 
 **Parameters**
