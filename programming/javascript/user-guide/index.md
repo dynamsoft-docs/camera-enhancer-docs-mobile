@@ -20,8 +20,8 @@ In this guide, you will learn step by step on how to integrate this library into
 **Table of Contents**
 
 * [Getting Started](#getting-started)
-  - [Include the library](#include-the-library)
-  - [Interact with the library](#interact-with-the-library)
+  + [Include the library](#include-the-library)
+  + [Interact with the library](#interact-with-the-library)
 * [Hosting the Library](#hosting-the-library)
 * [FAQ](#faq)
 
@@ -102,11 +102,13 @@ As shown in the code snippet below, before opening the video stream, we need to 
 
 ```html
 <!-- Define an element to hold the UI element -->
-<div id="enhancerUIContainer"></div>
+<div id="enhancerUIContainer" style="width:640px; height:500px; position: relative;"></div>
 <script>
-    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-    document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
-    await enhancer.open(true);
+    (async () => {
+        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+        await enhancer.open(true);
+    })();
 </script>
 ```
 
@@ -126,28 +128,34 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
   > You must set `defaultUIElementURL` before you call `createInstance()` .
 
-* Append the default UI element to your page, customize it before showing it.
+* Append the default UI element to your page as shown in [Configure the CameraEnhancer object](#configure-the-cameraenhancer-object), customize it before showing it.
 
 ```html
-<div id="enhancerUIContainer"></div>
+<!-- Define an element to hold the UI element -->
+<div id="enhancerUIContainer" style="width:640px; height:500px; position: relative;"></div>
 <script>
-    document.getElementById('enhancerUIContainer').appendChild(enhancer.getUIElement());
+    (async () => {
+        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+        // The following line hides the close button
+        document.getElementsByClassName("dce-btn-close")[0].style.display = "none";
+        await enhancer.open(true);
+    })();
 </script>
 ```
 
 * Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
-  + Embed the video
+  + Embed only the video
 
 ```html
-<div id="div-video-container">
+<div id="enhancerUIContainer" style="width:640px; height:500px; position: relative;">
     <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
-    let pEnhancer = null;
     (async () => {
-        let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-        await enhancer.setUIElement(document.getElementById('div-video-container'));
+        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        await enhancer.setUIElement(document.getElementById("enhancerUIContainer"));
         await enhancer.open(true);
     })();
 </script>
@@ -158,25 +166,25 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   + Add the camera list and resolution list. If the class names for these lists match the default ones,  `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-<select class="dce-sel-camera"></select>
+<select class="dce-sel-camera" style="position:relative"></select>
 ```
 
 ```html
-<select class="dce-sel-resolution"></select>
+<select class="dce-sel-resolution" style="position:relative"></select>
 ```
 
   > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
 ```html
-<select class="dce-sel-resolution">
+<select class="dce-sel-resolution" style="position:relative">
     <option class="dce-opt-gotResolution" value="got"></option>
-    <option data-width="1280" data-height="720">1280 x 720</option>
-    <option data-width="800" data-height="600">800 x 600</option>
-    <option data-width="640" data-height="480">640 x 480</option>
+    <option data-width="1280" data-height="720">1280x720</option>
+    <option data-width="800" data-height="600">800x600</option>
+    <option data-width="640" data-height="480">640x480</option>
 </select>
 ```
 
-  > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
+  > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the library will then use it to show the **actual resolution**.
 
 ## Hosting the library
 
