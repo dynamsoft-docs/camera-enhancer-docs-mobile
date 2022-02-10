@@ -51,7 +51,7 @@ Swift:
 ```swift
 dce.addListener(self)
 
-func frameOutPutCallback(_ frame: FramePackage, timeStamp: TimeInterval){
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
     // TODO add your code
 }
 ```
