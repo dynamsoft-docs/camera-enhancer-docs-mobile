@@ -166,17 +166,17 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   + Add the camera list and resolution list. If the class names for these lists match the default ones,  `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-<select class="dce-sel-camera" style="position:relative"></select>
+<select class="dce-sel-camera" style="position:absolute;left:0;top:0;"></select>
 ```
 
 ```html
-<select class="dce-sel-resolution" style="position:relative"></select>
+<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;"></select>
 ```
 
   > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
 ```html
-<select class="dce-sel-resolution" style="position:relative">
+<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;">
     <option class="dce-opt-gotResolution" value="got"></option>
     <option data-width="1280" data-height="720">1280x720</option>
     <option data-width="800" data-height="600">800x600</option>
