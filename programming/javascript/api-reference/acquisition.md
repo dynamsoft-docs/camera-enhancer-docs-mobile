@@ -165,7 +165,7 @@ None.
 
 ## stopFetchingLoop
 
-Stops the fetching loop.
+Stops the fetching loop and clears the frames buffer.
 
 ```typescript
 stopFetchingLoop(): void;
