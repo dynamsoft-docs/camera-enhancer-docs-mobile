@@ -1,3 +1,3 @@
 ---
-breadcrumbText: iOS Focus & Zoom Methods
+layout: default-layout
 ---
