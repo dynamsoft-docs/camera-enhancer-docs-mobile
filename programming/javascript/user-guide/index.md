@@ -102,7 +102,7 @@ As shown in the code snippet below, before opening the video stream, we need to 
 
 ```html
 <!-- Define an element to hold the UI element -->
-<div id="enhancerUIContainer" style="width:640px; height:500px; position: relative;"></div>
+<div id="enhancerUIContainer" style="width:640px; height:500px;"></div>
 <script>
     (async () => {
         let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
@@ -132,7 +132,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
 ```html
 <!-- Define an element to hold the UI element -->
-<div id="enhancerUIContainer" style="width:640px; height:500px; position: relative;"></div>
+<div id="enhancerUIContainer" style="width:640px; height:500px;"></div>
 <script>
     (async () => {
         let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
