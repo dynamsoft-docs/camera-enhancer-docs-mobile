@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android Initialization Methods
 ---
 
-# Initialization Methods v1.0.3
+# Initialization Methods
 
 | Method | Description |
 | ------ | ----------- |
