@@ -17,6 +17,44 @@ On this page, you will read:
 - All available features of Dynamsoft Camera Enhancer.
 - How to use these features.
 
+## How to Enable DCE Features
+
+`enableFeatures` and `disableFeatures` is the method designed for controlling DCE features. The required parameter of the method is a combined value of `EnumEnhancerFeatures` members. Currently, the members of `EnumEnhancerFeatures` are available as follow:
+
+| Feature | Enumeration Member | Value |
+| ------- | ------ | ----- |
+| [Frame Filter](#frame-filter) | `EnumFRAME_FILTER` | 0x01 |
+| [Sensor Control](#sensor-control) | `EnumSENSOR_CONTROL` | 0x02 |
+| [Enhanced Focus](#enhanced-focus) | `EnumENHANCED_FOCUS` | 0x04 |
+| [Fast Mode](#fast-mode) | `EnumFAST_MODE` | 0x08 |
+| [Auto Zoom](#auto-zoom) | `EnumAUTO_ZOOM` | 0x10 |
+| [Smart Torch](#smart-torch) | `EnumSMART_TORCH` | 0x20 |
+
+Sample code:
+
+Objective-C:
+
+```objc
+// To enable features
+[_dce enableFeatures:EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL error: &error];
+// To disable features
+[_dce disableFeatures:EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL];
+```
+
+Swift:
+
+```swift
+// To enable features
+dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL, error: &error)
+// To disable features
+dce.disableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL)
+```
+
+- An valid license is required to enable these features.
+- You can enable or disable multiple features at one time.
+- When an enabled feature is enabled again, it remains enabled.
+- When a feature is disabled more than once, it remains disabled.
+
 ## Frame Filter
 
 All the frames in the video streaming are quickly evaluated and the majority of the blurry frames will be filtered out. You can enable this feature when your mobile device is always moving. The average time consumption on evaluating each video frame is less than 10ms.
@@ -40,38 +78,3 @@ The video frames are cropped into small sizes when the **Fast Mode** is enabled.
 ## Smart Torch
 
 **Smart Torch** feature controls the visibility of the torch button created by `setTorchButton` method. The torch button will be displayed automatically when the environment light level is low. Otherwise, the torch button is hidden. The feature doesn't control the status of the mobile torch. Users have to click on the torch button to turn on the torch.
-
-## How to Enable DCE Features
-
-`enableFeatures` and `disableFeatures` is the method designed for controlling DCE features. The required parameter of the method is a combined value of `EnumEnhancerFeatures` members. Currently, the members of `EnumEnhancerFeatures` are available as follow:
-
-| Member | Value |
-| ------ | ----- |
-| `EnumFRAME_FILTER` | 0x01 |
-| `EnumSENSOR_CONTROL` | 0x02 |
-| `EnumENHANCED_FOCUS` | 0x04 |
-| `EnumFAST_MODE` | 0x08 |
-| `EnumAUTO_ZOOM` | 0x10 |
-| `EnumSMART_TORCH` | 0x20 |
-| `EnumALL` | 0x3f |
-
-Sample code:
-
-```objc
-// To enable features
-[_dce enableFeatures:EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL error: &error];
-// To disable features
-[_dce disableFeatures:EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL];
-```
-
-```swift
-// To enable features
-dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL, error: &error)
-// To disable features
-dce.disableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL)
-```
-
-- An valid license is required to enable these features.
-- You can enable or disable multiple features at one time.
-- When an enabled feature is enabled again, it remains enabled.
-- When a feature is disabled more than once, it remains disabled.
