@@ -10,7 +10,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
-## 2.1.3 (03/01/2022)
+## 2.1.3 (03/02/2022)
 
 ### Fixed
 
