@@ -10,6 +10,12 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.1.3 (03/02/2022)
+
+### Fixed
+
+- Fixed a bug that might offset the position of highlight overlays on the decoded barcodes when used together with `DynamsoftBarcodeReader`.
+
 ## 2.1.1 (12/28/2021)
 
 ### New

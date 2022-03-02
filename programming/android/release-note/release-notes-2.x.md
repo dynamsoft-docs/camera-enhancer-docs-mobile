@@ -10,6 +10,12 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.1.3 (03/02/2022)
+
+### Fixed
+
+- Fixed a bug that might cause a crash on Android emulator when used together with `DynamsoftBarcodeReader`.
+
 ## 2.1.1 (12/28/2021)
 
 ### New
