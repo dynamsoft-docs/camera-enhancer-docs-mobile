@@ -33,11 +33,13 @@ The following sample will demonstrate how to acquire a frame from video streamin
 
 1. Create a new Objective-C or Swift project.
 
-2. Drag and drop the `DynamsoftCameraEnhancer.framework` into your Xcode project. Make sure to `check Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
+2. Drag and drop the **DynamsoftCameraEnhancer.framework** into your Xcode project. Make sure to **check Copy items if needed** and **Create groups** to copy the framework into your project's folder.
 
-3. Click on the project. Go to the `General --> Frameworks --> Libraries and Embedded Content`. Set the `embed type` to `Embed & Sign`.
+3. Click on the project. Go to the **General --> Frameworks --> Libraries and Embedded Content**. Set the **Embed type** to **Embed & Sign**.
 
-4. Import Dynamsoft Camera Enhancer
+4. Go to the **Build Settings --> Build Options --> Validate Workspace**. Set the **Validate Workspace** to **yes**.
+
+5. Import Dynamsoft Camera Enhancer
 
 Objective-C:
 
@@ -82,11 +84,10 @@ Objective-C:
 ```objc
 - (void)configurationDCE{
   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-  [self.view.addSubView:_dceView];
+  [self.view addSubView:_dceView];
   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
   [_dce open];
   [_dce addListener:self];
-  [_dce setFrameRate:30];
 }
 ```
 
@@ -96,31 +97,89 @@ Swift:
 func configurationDCE() {
   dceView = DCECameraView.init(frame: self.view.bounds)
   self.view.addSubview(dceView)
-  // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=docs to request for 30 days extension.
-  DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
   dce = DynamsoftCameraEnhancer.init(view: dceView)
   dce.open()
-  dce.setFrameRate(30)
   dce.addListener(self)
 }
 ```
 
-Now, DCE and CameraView instance are created. You can control the and add elements on the view via DCE high-level APIs.
-
-### Capture Frame(s)
-
-Dynamsoft Camera Enhancer provides two solutions on fetching the video frames:
-
-- Use the method [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) to fetch a single frame from the video buffer.
-- Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
-
-On this page, you will be guide on how to get a raw frame from the video streaming and convert it into a system built-in image so that you can display it on the UI.
-
-1. Add a capture button on the UI.
+Remember to add the `configurationDCE` to the `viewDidLoad` method
 
 Objective-C:
 
 ```objc
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self configurationDCE];
+}
+```
+
+Swift:
+
+```swift
+override func viewDidLoad() {
+  super.viewDidLoad()
+  configurationDCE()
+}
+```
+
+3. Go to info.plist. Under **Information Property List**, add **Privacy - Camera Usage Description**.
+
+4. Build the app. Now, a simple camera app is created. After permitting the camera usage, you will see the camera view on the app.
+
+### Capture Frames From the Video Streaming
+
+Since you have created a simple camera app, you can go on to acquire images from the camera. Dynamsoft Camera Enhancer provides two solutions for fetching the video frames:
+
+- Use the method [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) to fetch a single frame from the video buffer.
+- Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
+
+1. Add `DCEFrameListener` to your class so that you can use `FrameOutputCallback` on your project.
+
+Objective-C:
+
+```objc
+@interface ViewController ()<DCEFrameListener>
+```
+
+Swift:
+
+```swift
+class ViewController: UIViewController,DCEFrameListener{
+  //...
+}
+```
+
+Add `FrameOutputCallback` to your project to get frames from camera output. DCEFrame is the class that stores frame data. You can use Image processing tools to parse the image information from a DCEFrame object or use `DCEFrame.toUIImage` to convert it into a UIImage for other usages.
+
+```objc
+- (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
+  // In  the callback method, we will add code to convert and save video frames to UIImage.
+}
+```
+
+Swift:
+
+```swift
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
+  // In  the callback method, we will add code to convert and save video frames to UIImage.
+}
+```
+
+2. Add the trigger of the capture button.
+
+Objective-C:
+
+```objc
+
+@implementation ViewController{
+  // Add these varibles to capture and display images.
+  UIButton *photoButton;
+  UIImageView* imageView;
+  bool isview;
+}
+
+// The UI for displaying the captured image.
 - (void)configurationUI{
   CGFloat w = [[UIScreen mainScreen] bounds].size.width;
   CGFloat h = [[UIScreen mainScreen] bounds].size.height;
@@ -134,11 +193,33 @@ Objective-C:
     [self.view addSubview:self->photoButton];
   });
 }
+
+// Method for capturing image
+- (void)takePictures{
+  isview = true;
+}
+
+// The captured image will be display on another view. Add back button to get back to the camera.
+- (void)addBack{
+  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
+}
+
+- (void)BackToHome{
+  [imageView removeFromSuperview];
+  self.navigationItem.leftBarButtonItem = nil;
+  [photoButton setEnabled:true];
+}
 ```
 
 Swift:
 
 ```swift
+// Add these varibles to capture and display images.
+var photoButton:UIButton! = UIButton()
+var imageView:UIImageView!
+var isview:Bool = false
+
+// The UI for displaying the captured image.
 func configurationUI() {
   let w = UIScreen.main.bounds.size.width
   let h = UIScreen.main.bounds.size.height
@@ -149,36 +230,28 @@ func configurationUI() {
   self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
   photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
   DispatchQueue.main.async {
-    self.view.addSubview(self.photoButton)
+  self.view.addSubview(self.photoButton)
   }
 }
-```
 
-2. Add the trigger of the capture button.
+// Method for capturing image
+@objc func takePictures() {
+  isview  = true
+}
 
-Objective-C:
+// The captured image will be display on another view. Add back button to get back to the camera.
+func addBack(){
+  self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
+}
 
-```objc
-/*Declare a BOOL value to control the capture*/
-bool isview;
-/*Add a method to trigger the capture*/
-- (void)takePictures{
-  isview = true;
+@objc func backToHome(){
+  self.imageView.removeFromSuperview()
+  self.photoButton?.isEnabled = true
+  self.navigationItem.leftBarButtonItem = nil
 }
 ```
 
-Swift:
-
-```swift
-/*Declare a BOOL value to control the capture*/
-var isview:Bool = false
-/*Add a method to trigger the capture*/
-func takePictures() {
-  isview = true;
-}
-```
-
-3. Fetch the frames from the callback. Convert the frame to a visible image and display it on the view if the capture button is triggered.
+3. Add code in the callback to Convert the frame to a visible image and display it on the view if the capture button is triggered.
 
 Objective-C:
 
@@ -218,37 +291,7 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
 }
 ```
 
-4. Configure a BackToHome button.
-
-Objective-C:
-
-```objc
-- (void)addBack{
-  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
-}
-
-- (void)BackToHome{
-  [imageView removeFromSuperview];
-  self.navigationItem.leftBarButtonItem = nil;
-  [photoButton setEnabled:true];
-}
-```
-
-Swift:
-
-```swift
-func addBack(){
-  self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
-}
-    
-@objc func backToHome(){
-  self.imageView.removeFromSuperview()
-  self.photoButton?.isEnabled = true
-  self.navigationItem.leftBarButtonItem = nil
-}
-```
-
-Run the project. Now, your first app with Dynamsoft Camera Enhancer is completed.
+Run the project. Now, you try to capture video frames with Dynamsoft Camera Enhancer is completed.
 
 > Note:
 > - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).

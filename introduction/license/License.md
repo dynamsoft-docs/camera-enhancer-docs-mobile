@@ -19,8 +19,8 @@ breadcrumbText: License Initialization
 
 ## Get a trial key
 
-- A 7-day public trial key is available for every new device for first use of Dynamsoft Camera Enhancer. The public trial key is the default key used in samples. You can also find the public trial key on the following parts of this page.
-- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
+- A time-limited public trial key is available for every new device for the first use of Dynamsoft Camera Enhancer. The public trial key is the default key used in samples. You can also find the public trial key on the following parts of this page.
+- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce" target="_blank">Private Trial License Page</a> to get an extension.
 
 ## Get a full license
 
@@ -33,8 +33,8 @@ The following code snippets are using the public trial key to initialize the lic
 **Android Code Snippet**
 
 ```java
-// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
-// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request for 30 days extension.
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request an extension.
 CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
     @Override
     public void DCELicenseVerificationCallback(boolean b, Exception e) {
@@ -48,8 +48,8 @@ CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELi
 **Objective-C Code Snippet**
 
 ```objc
-// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
-// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request for 30 days extension.
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request an extension.
 [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
 - (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
 }
@@ -58,8 +58,8 @@ CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELi
 **Swift Code Snippet**
 
 ```swift
-// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days.
-// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request for 30 days extension.
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request an extension.
 DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
 func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
