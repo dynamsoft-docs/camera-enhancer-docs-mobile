@@ -40,7 +40,7 @@ The following sample will demonstrate how to acquire a frame from video streamin
 
 4. Go to the **Build Settings --> Build Options --> Validate Workspace**. Set the **Validate Workspace** to **yes**.
 
-5. Import Dynamsoft Camera Enhancer
+5. In the `ViewController.m` or `ViewController.swift` Import Dynamsoft Camera Enhancer.
 
 Objective-C:
 
@@ -59,6 +59,8 @@ Now Dynamsoft Camera Enhancer is added to your project.
 &nbsp;
 
 ### Initialize the Camera View and Control the Camera
+
+In this section, we continue working on the `ViewController` file in the project. You will learn how to create a simple camera app.
 
 #### Step 1.1
 
@@ -140,14 +142,19 @@ Build the app. Now, a simple camera app is created. After permitting the camera 
 
 ### Capture Frames From the Video Streaming
 
-Since you have created a simple camera app, you can go on to acquire images from the camera. Dynamsoft Camera Enhancer provides two solutions for fetching the video frames:
+In this section, you will learn how to capture video frames with `DynamsoftCameraEnhancer`.
+
+Dynamsoft Camera Enhancer provides two solutions for fetching the video frames:
 
 - Use the method [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) to fetch a single frame from the video buffer.
 - Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
 
+> Note:
+> - All the following code will be added to the `ViewController` file in your project.
+
 #### Step 2.1
 
-Add `DCEFrameListener` to your class so that you can use `FrameOutputCallback` on your project.
+Add `DCEFrameListener` to your `ViewController` so that you can use `FrameOutputCallback` to get video frames.
 
 Objective-C:
 
