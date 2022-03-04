@@ -5,6 +5,7 @@ description: This is the documentation - Guide on Android page of Dynamsoft Came
 keywords:  Camera Enhancer, Guide on Android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: true
 breadcrumbText: Android Guide
 ---
 
