@@ -166,7 +166,18 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
 
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
-  // In  the callback method, we will add code to convert and save video frames to UIImage.
+  if (isview) {
+    isview = false;
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self->photoButton setEnabled:false];
+      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+                                                  scale: 1.0
+                                            orientation: UIImageOrientationRight];
+      [self->imageView setImage:image];
+      [self.view addSubview:self->imageView];
+      [self addBack];
+    });
+  }
 }
 ```
 
@@ -174,7 +185,18 @@ Swift:
 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
-  // In  the callback method, we will add code to convert and save video frames to UIImage.
+  if isview {
+    isview = false
+    DispatchQueue.main.async {
+      self.photoButton?.isEnabled = false
+      var image:UIImage!
+      image = frame.toUIImage()
+      image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+      self.imageView.image = image
+      self.view.addSubview(self.imageView)
+      self.addBack()
+    }
+  }
 }
 ```
 
@@ -262,48 +284,6 @@ func addBack(){
   self.imageView.removeFromSuperview()
   self.photoButton?.isEnabled = true
   self.navigationItem.leftBarButtonItem = nil
-}
-```
-
-#### Step 2.3
-
-Add code in the callback to Convert the frame to a visible image and display it on the view if the capture button is triggered.
-
-Objective-C:
-
-```objc
-- (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
-  if (isview) {
-    isview = false;
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [self->photoButton setEnabled:false];
-      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
-                                                  scale: 1.0
-                                            orientation: UIImageOrientationRight];
-      [self->imageView setImage:image];
-      [self.view addSubview:self->imageView];
-      [self addBack];
-    });
-  }
-}
-```
-
-Swift:
-
-```swift
-func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
-  if isview {
-    isview = false
-    DispatchQueue.main.async {
-      self.photoButton?.isEnabled = false
-      var image:UIImage!
-      image = frame.toUIImage()
-      image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
-      self.imageView.image = image
-      self.view.addSubview(self.imageView)
-      self.addBack()
-    }
-  }
 }
 ```
 
