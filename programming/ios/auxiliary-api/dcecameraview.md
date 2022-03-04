@@ -124,16 +124,18 @@ Set the stroke and fill in colour of the overlay(s).
 Objective-C:
 
 ```objc
-UIColor* strokeColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
-UIColor* fillColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
+// RGB 0 ~ 255, alpha 0 ~ 1
+UIColor* strokeColor = [UIColor colorWithRed:0 green:245 blue:255 alpha:0.5];
+UIColor* fillColor = [UIColor colorWithRed:0 green:245 blue:255 alpha:0.5];
 [_dceView setOverlayColour:strokeColor fill:fillColor];
 ```
 
 Swift:
 
 ```swift
-let strokeColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
-let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
+// RGB 0 ~ 255, alpha 0 ~ 1
+let strokeColour = UIColor(red: 0, green: 245, blue: 255, alpha: 0.5)
+let fillColour = UIColor(red: 0, green: 245, blue: 255, alpha: 0.5)
 _dceView.setOverlayColour(strokeColour, fill: fillcolour)
 ```
 
