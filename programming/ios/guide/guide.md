@@ -55,6 +55,8 @@ import DynamsoftCameraEnhancer
 
 Now Dynamsoft Camera Enhancer is added to your project.
 
+&nbsp;
+
 ### Initialize the Camera View and Control the Camera
 
 #### Step 1.1
@@ -132,6 +134,8 @@ override func viewDidLoad() {
 Go to the file **info.plist** under your project folder. Under **Information Property List**, add **Privacy - Camera Usage Description**.
 
 Build the app. Now, a simple camera app is created. After permitting the camera usage, you will see the camera view on the app.
+
+&nbsp;
 
 ### Capture Frames From the Video Streaming
 
@@ -304,6 +308,8 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
 ```
 
 Run the project. Now, you try to capture video frames with Dynamsoft Camera Enhancer is completed.
+
+&nbsp;
 
 > Note:
 > - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).
