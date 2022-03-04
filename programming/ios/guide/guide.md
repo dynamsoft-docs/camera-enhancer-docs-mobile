@@ -287,7 +287,7 @@ func addBack(){
 }
 ```
 
-Run the project. Now, you try to capture video frames with Dynamsoft Camera Enhancer is completed.
+Run the project. Now, you can try to capture video frames with Dynamsoft Camera Enhancer.
 
 &nbsp;
 
