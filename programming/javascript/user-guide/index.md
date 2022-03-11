@@ -76,7 +76,7 @@ $ npm install dynamsoft-camera-enhancer --save
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/DCE-JS-2.1.0/dist/dce.js"></script>
+<script src="/dce-js-2.1.0/dist/dce.js"></script>
 
 or
 
@@ -102,7 +102,7 @@ As shown in the code snippet below, before opening the video stream, we need to 
 
 ```html
 <!-- Define an element to hold the UI element -->
-<div id="enhancerUIContainer" style="width:640px; height:500px;"></div>
+<div id="enhancerUIContainer" style="width:100%;height:500px;"></div>
 <script>
     (async () => {
         let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
@@ -132,7 +132,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
 ```html
 <!-- Define an element to hold the UI element -->
-<div id="enhancerUIContainer" style="width:640px; height:500px;"></div>
+<div id="enhancerUIContainer" style="width:100%;height:500px;"></div>
 <script>
     (async () => {
         let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
@@ -149,8 +149,8 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   + Embed only the video
 
 ```html
-<div id="enhancerUIContainer" style="width:640px; height:500px; position: relative;">
-    <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
+<div id="enhancerUIContainer" style="width:100%;height:100%;">
+    <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 </div>
 <script>
     (async () => {
@@ -161,22 +161,22 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 </script>
 ```
 
-  > The video element must have the class `dce-video` .
+  > The inner div element must have the class `dce-video-container`, and the CSS property `position` must be `relative` or `absolute`.
 
   + Add the camera list and resolution list. If the class names for these lists match the default ones,  `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-<select class="dce-sel-camera" style="position:absolute;left:0;top:0;"></select>
+<select class="dce-sel-camera"></select>
 ```
 
 ```html
-<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;"></select>
+<select class="dce-sel-resolution"></select>
 ```
 
   > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
 ```html
-<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;">
+<select class="dce-sel-resolution">
     <option class="dce-opt-gotResolution" value="got"></option>
     <option data-width="1280" data-height="720">1280x720</option>
     <option data-width="800" data-height="600">800x600</option>
