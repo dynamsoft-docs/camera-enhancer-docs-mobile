@@ -12,21 +12,17 @@ breadcrumbText: DCEFrame
 
 `interface` DCEFrame
 
-* colorMode: `string`
+* canvas: `HTMLCanvasElement`
 
-  The color mode of the image data.
+  A canvas element that holds the image data of the frame.
 
-* data: `Uint8Array`
+* data: `Uint8Array | Uint8ClampedArray | File`
 
   The raw image data.
 
 * region: `Region`
 
   The region based on which the original frame is cropped.
-
-* isCropped: `boolean`
-
-  Whether the image was cropped from the original frame.
 
 * sx: `number`
 
@@ -51,7 +47,3 @@ breadcrumbText: DCEFrame
 * timeStamp: `number`
 
   The timeStamp at which point the frame acquisition finished.
-
-* toCanvas(): `HTMLCanvasElement`
- 
-  Converts the image data to an `HTMLCanvasElement` object.
