@@ -9,7 +9,7 @@ breadcrumbText: Release Notes
 ---
 
 # Release Notes
-* [2.3.0 (03/21/2022)](release-notes-2.x.md/#230-03212022)
+* [2.3.1 (03/21/2022)](release-notes-2.x.md/#231-03212022)
 * [2.1.0 (01/20/2022)](release-notes-2.x.md/#210-01202022)
 * [2.0.3 (10/29/2021)](release-notes-2.x.md/#203-10292021)
 * [2.0.1 (10/26/2021)](release-notes-2.x.md/#201-10262021)
