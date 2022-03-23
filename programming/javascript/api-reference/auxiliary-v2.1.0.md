@@ -58,11 +58,7 @@ enhancer.on("played", playCallBackInfo => {
     console.log(playCallBackInfo.deviceId);
 });
 enhancer.on("singleFrameAcquired", dceFrame => {
-    document.body.appendChild(dceFrame.toCanvas());
-});
-enhancer.on("frameAddedToBuffer", () => {
-    let dceFrame = enhancer.getFrameFromBuffer();
-    document.body.appendChild(dceFrame.toCanvas());
+    document.body.appendChild(dceFrame.canvas);
 });
 ```
 
