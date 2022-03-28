@@ -288,7 +288,7 @@ console.log(resolution.width + " x " + resolution.height);
 
 Returns the resolutions supported by the current video input.
 
-> The returned resolutions are limited to these values "160 by 120", "320 by 240", "480 by 360", "640 by 480", "800 by 600", "960 by 720", "1280 by 720", "1920 by 1080", "3840 by 2160".
+> The returned resolutions are limited to these values "160 by 120", "320 by 240", "480 by 360", "640 by 480", "800 by 600", "960 by 720", "1280 by 720", "1920 by 1080", "2560 by 1440", "3840 by 2160".
 
 ```typescript
 getResolutions(): Promise<Array<Array<number>>>;
@@ -305,7 +305,8 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await enhancer.getResolutions();
+const resolutions = await enhancer.getResolutions();
+console.log(resolutions);
 ```
 
 ## setFrameRate

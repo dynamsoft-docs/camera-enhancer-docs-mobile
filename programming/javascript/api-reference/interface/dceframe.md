@@ -52,6 +52,6 @@ breadcrumbText: DCEFrame
 
   The timeStamp at which point the frame acquisition finished.
 
-* toCanvas(): `HTMLCanvasElement`
+* toCanvas: `()=>HTMLCanvasElement`
  
-  Converts the image data to an `HTMLCanvasElement` object.
+  A `Function` which converts the image data to an `HTMLCanvasElement` object.
