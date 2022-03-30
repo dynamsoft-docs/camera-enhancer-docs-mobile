@@ -498,7 +498,7 @@ Objective-C:
 Swift:
 
 ```swift
-dce.setResolution(Resolution.RESOLUTION_1080P)
+dce.setResolution(EnumResolution.EnumRESOLUTION_1080P)
 ```
 
 **Remarks**

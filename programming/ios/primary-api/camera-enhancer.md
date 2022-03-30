@@ -532,13 +532,13 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 Objective-C:
 
 ```objc
-[_dce enableFeatures:0x01 error: &error];
+[_dce enableFeatures:EnumFRAME_FILTER error: &error];
 ```
 
 Swift:
 
 ```swift
-dce.enableFeatures(0x01, error: &error)
+dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue, error: &error)
 ```
 
 **Remarks**
@@ -575,13 +575,13 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.en
 Objective-C:
 
 ```objc
-[_dce disableFeatures:0x02];
+[_dce disableFeatures:EnumFRAME_FILTER];
 ```
 
 Swift:
 
 ```swift
-dce.disableFeatures(0x02)
+dce.disableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
 ```
 
 **Remarks**
@@ -614,13 +614,13 @@ A BOOL value refers to whether all the features you input are enabled.
 Objective-C:
 
 ```objc
-BOOL featureEnabled = [_dce isFeatureEnabled:0x02];
+BOOL featureEnabled = [_dce isFeatureEnabled:EnumFRAME_FILTER];
 ```
 
 Swift:
 
 ```swift
-let featureEnabled = dce.isFeatureEnabled(0x02)
+let featureEnabled = dce.isFeatureEnabled(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
 ```
 
 **Remarks**
@@ -728,7 +728,7 @@ Objective-C:
 Swift:
 
 ```swift
-dce.setResolution(Resolution.EnumRESOLUTION_1080P)
+dce.setResolution(EnumResolution.EnumRESOLUTION_1080P)
 ```
 
 &nbsp;
@@ -932,7 +932,7 @@ Objective-C:
 Swift:
 
 ```swift
-dce.updateAdvancedSettingsFromFile("Put your JSON file path here.", error: &error)
+dce.updateAdvancedSettings(fromFile: "Put your JSON file path here.", error: &error)
 ```
 
 **Remarks**
@@ -964,5 +964,5 @@ Objective-C:
 Swift:
 
 ```swift
-dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.", error: &error)
+dce.updateAdvancedSettings(from: "Put your stringified JSON data here.", error: &error)
 ```

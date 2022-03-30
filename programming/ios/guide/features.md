@@ -36,18 +36,18 @@ Objective-C:
 
 ```objc
 // To enable features
-[_dce enableFeatures:EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL error: &error];
+[_dce enableFeatures:EnumFRAME_FILTER | EnumSENSOR_CONTROL error: &error];
 // To disable features
-[_dce disableFeatures:EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL];
+[_dce disableFeatures:EnumFRAME_FILTER | EnumSENSOR_CONTROL];
 ```
 
 Swift:
 
 ```swift
 // To enable features
-dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL, error: &error)
+dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancerFeatures.EnumSENSOR_CONTROL.rawValue, error: &error)
 // To disable features
-dce.disableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER | EnumEnhancerFeatures.EnumSENSOR_CONTROL)
+dce.disableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancerFeatures.EnumSENSOR_CONTROL.rawValue)
 ```
 
 - An valid license is required to enable these features.
