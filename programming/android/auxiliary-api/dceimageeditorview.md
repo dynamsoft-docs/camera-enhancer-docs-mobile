@@ -15,12 +15,16 @@ breadcrumbText: Android DCEImageEditorView Class
 
 | Method Name | Description |
 | ----------- | ----------- |
+| [`setOriginalImage`](#setoriginalimage) | Set the background image of the view with an original image. |
+| [`getOriginalImage`](#getoriginalimage) | Get the current backgroud image. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the `DCEDrawingLayer` instance with the layer ID. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a user defined `DCEDrawingLayer` instance. |
 | [`getSelectedDrawingItem`](#getselecteddrawingitem) | Get the selected drawing item. |
 | [`getDrawingStyle`](#getdrawingstyle) | Get the `DrawingStyle` instance with the style ID. |
 | [`getAllDrawingStyles`](#getalldrawingstyles) | Get all the available `DrawingStyle` in a list. |
 | [`createDrawingStyle`](#createdrawingstyle) | Create a user defined `DrawingStyle` instance. |
+
+&nbsp;
 
 ## setOriginalImage
 
@@ -30,6 +34,20 @@ Set the background image of the view with an original image.
 public void setOriginalImage(ImageData imageData);
 ```
 
+**Parameters**
+
+`imageData`: The `imageData` of the image.
+
+**Code Snippet**
+
+```java
+mIEV = (DCEImageEditorView) findViewById(R.id.iev);
+mImgData = getIntent().getIntExtra("imagedata");
+mIEV.setOriginalImage(mImgData);
+```
+
+&nbsp;
+
 ## getOriginalImage
 
 Get the current backgroud image.
@@ -37,6 +55,18 @@ Get the current backgroud image.
 ```java
 public ImageData getOriginalImage();
 ```
+
+**Return Value**
+
+The `imageData` of the image.
+
+**Code Snippet**
+
+```java
+DCEDrawingLayer layer = imageEditorView.getDrawingLayer();
+```
+
+&nbsp;
 
 ## getDrawingLayer
 
@@ -65,6 +95,8 @@ An instance of `DCEDrawingLayer`.
 DCEDrawingLayer drawingLayer = dceImageEditorView.getDrawingLayer(2);
 ```
 
+&nbsp;
+
 ## createDrawingLayer
 
 Create a user defined `DrawingLayer` instance.
@@ -83,6 +115,8 @@ An instance of `DCEDrawingLayer`.
 DCEDrawingLayer drawingLayer = dceImageEditorView.createDrawingLayer();
 ```
 
+&nbsp;
+
 ## getSelectedDrawingItem
 
 Get the user selected `DrawingItem`.
@@ -100,6 +134,8 @@ An instance of `DrawingItem`.
 ```java
 DrawingItem drawingItem = dceImageEditorView.getSelectedDrawingItem();
 ```
+
+&nbsp;
 
 ## getDrawingStyle
 
@@ -123,6 +159,8 @@ An instance of `DrawingStyle`.
 DrawingStyle style = dceImageEditorView.getDrawingStyle(0);
 ```
 
+&nbsp;
+
 ## getAllDrawingStyles
 
 Get all the available `DrawingStyle` in a list.
@@ -140,6 +178,8 @@ An `ArrayList` that includes all the available `DrawingStyles`.
 ```java
 ArrayList<DrawingStyle> drawingStyles = dceImageEditorView.getAllDrawingStyles();
 ```
+
+&nbsp;
 
 ## createDrawingStyle
 

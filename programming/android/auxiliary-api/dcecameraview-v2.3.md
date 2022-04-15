@@ -247,6 +247,8 @@ A boolean value. When the value is true, the torch button should be displayed. O
 Boolean isTorchButtonVisible = dceCameraView.getTorchButtonVisible();
 ```
 
+&nbsp;
+
 ## getDrawingLayer
 
 Get the `DCEDrawingLayer` instance with the layer ID.
@@ -265,6 +267,8 @@ public DCEDrawingLayer getDrawingLayer(int id);
 DCEDrawingLayer layer = dceCameraView.getDrawingLayer(0);
 ```
 
+&nbsp;
+
 ## createDrawingLayer
 
 Create a user defined `DCEDrawingLayer` instance.
@@ -282,6 +286,8 @@ An instance of `DCEDrawingLayer`.
 ```java
 DCEDrawingLayer layer = dceCameraView.createDrawingLayer();
 ```
+
+&nbsp;
 
 ## getDrawingStyle
 
@@ -305,6 +311,8 @@ An instance of `DrawingStyle`.
 DrawingStyle style = dceCameraView.getDrawingStyle(0);
 ```
 
+&nbsp;
+
 ## getAllDrawingStyles
 
 Get all the available `DrawingStyle` in a list.
@@ -322,6 +330,8 @@ An `ArrayList` that includes all the available `DrawingStyles`.
 ```java
 ArrayList<DrawingStyle> drawingStyles = dceCameraView.getAllDrawingStyles();
 ```
+
+&nbsp;
 
 ## createDrawingStyle
 
