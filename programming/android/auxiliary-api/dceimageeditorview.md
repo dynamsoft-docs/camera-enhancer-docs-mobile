@@ -11,6 +11,8 @@ breadcrumbText: Android DCEImageEditorView Class
 
 # DCEImageEditorView
 
+`DCEImageEditorView` is the class that enable users to add UI configurations on a static image.
+
 | Method Name | Description |
 | ----------- | ----------- |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the `DCEDrawingLayer` instance with the layer ID. |
@@ -24,9 +26,17 @@ breadcrumbText: Android DCEImageEditorView Class
 
 Set the background image of the view with an original image.
 
+```java
+public void setOriginalImage(ImageData imageData);
+```
+
 ## getOriginalImage
 
 Get the current backgroud image.
+
+```java
+public ImageData getOriginalImage();
+```
 
 ## getDrawingLayer
 
@@ -47,16 +57,109 @@ public DCEDrawingLayer getDrawingLayer(int id);
 
 **Return Value**
 
+An instance of `DCEDrawingLayer`.
+
 **Code Snippet**
+
+```java
+DCEDrawingLayer drawingLayer = dceImageEditorView.getDrawingLayer(2);
+```
 
 ## createDrawingLayer
 
 Create a user defined `DrawingLayer` instance.
 
+```java
+public DCEDrawingLayer createDrawingLayer();
+```
+
+**Return Value**
+
+An instance of `DCEDrawingLayer`.
+
+**Code Snippet**
+
+```java
+DCEDrawingLayer drawingLayer = dceImageEditorView.createDrawingLayer();
+```
+
 ## getSelectedDrawingItem
+
+Get the user selected `DrawingItem`.
+
+```java
+public DrawingItem getSelectedDrawingItem();
+```
+
+**Return Value**
+
+An instance of `DrawingItem`.
+
+**Code Snippet**
+
+```java
+DrawingItem drawingItem = dceImageEditorView.getSelectedDrawingItem();
+```
 
 ## getDrawingStyle
 
+Get the `DrawingStyle` instance with the style ID.
+
+```java
+public DrawingStyle getDrawingStyle(int styleId);
+```
+
+**Parameters**
+
+`styleId`: The ID of the target `DrawingStyle`.
+
+**Return Value**
+
+An instance of `DrawingStyle`.
+
+**Code Snippet**
+
+```java
+DrawingStyle style = dceImageEditorView.getDrawingStyle(0);
+```
+
 ## getAllDrawingStyles
 
+Get all the available `DrawingStyle` in a list.
+
+```java
+public ArrayList<DrawingStyle> getAllDrawingStyles();
+```
+
+**Return Value**
+
+An `ArrayList` that includes all the available `DrawingStyles`.
+
+**Code Snippet**
+
+```java
+ArrayList<DrawingStyle> drawingStyles = dceImageEditorView.getAllDrawingStyles();
+```
+
 ## createDrawingStyle
+
+Create a user defined `DrawingStyle` instance.
+
+```java
+public DrawingStyle createDrawingStyle(int strokeColour, int strokeWidth, int fillColour, int textColour, int fontSize, String fontFamily);
+```
+
+**Parameters**
+
+`strokeColour`: The stroke colour.
+`strokeWidth`: The width of the stroke (measured by px).
+`fillColour`: The fill colour.
+`textColour`: The text colour.
+`fontSize`: The font size (measured by sp).
+`fontFamily`: The font family.
+
+**Code Snippet**
+
+```java
+DrawingStyle drawingStyle = dceImageEditorView.createDrawingStyle(0xff00ff00,2,0xff00ff00,0xff00ff00,12,"sans-serif")
+```
