@@ -17,6 +17,8 @@ breadcrumbText: iOS TextDrawingItem Class
 @interface TextDrawingItem (DrawingItem)
 ```
 
+&nbsp;
+
 ## initWithText
 
 The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingItem`.
@@ -45,6 +47,8 @@ The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingIte
 
 ```
 
+&nbsp;
+
 ## text
 
 The property that indicates the text of the `TextDrawingItem`.
@@ -67,6 +71,8 @@ The property that indicates the text of the `TextDrawingItem`.
 ```swift
 
 ```
+
+&nbsp;
 
 ## textRect
 

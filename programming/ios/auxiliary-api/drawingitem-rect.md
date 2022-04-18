@@ -17,6 +17,8 @@ breadcrumbText: iOS RectDrawingItem Class
 @interface RectDrawingItem (DrawingItem)
 ```
 
+&nbsp;
+
 ## initWithRect
 
 The constructor of `RectDrawingItem`. Initialize the instance of `RectDrawingItem`.
@@ -43,6 +45,8 @@ The constructor of `RectDrawingItem`. Initialize the instance of `RectDrawingIte
 ```swift
 
 ```
+
+&nbsp;
 
 ## rect
 

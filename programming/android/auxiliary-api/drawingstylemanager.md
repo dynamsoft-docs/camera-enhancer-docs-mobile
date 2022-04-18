@@ -11,6 +11,8 @@ breadcrumbText: Android DrawingStyleManager Class
 
 # DrawingStyleManager
 
+&nbsp;
+
 ## getDrawingStyle
 
 Get the `DrawingStyle` instance with the style ID.

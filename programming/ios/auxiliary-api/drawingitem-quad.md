@@ -17,6 +17,8 @@ breadcrumbText: iOS QuadDrawingItem Class
 @interface QuadDrawingItem (DrawingItem)
 ```
 
+&nbsp;
+
 ## initWithQuad
 
 The constructor of `QuadDrawingItem`. Initialize the instance of `QuadDrawingItem`.
@@ -43,6 +45,8 @@ The constructor of `QuadDrawingItem`. Initialize the instance of `QuadDrawingIte
 ```swift
 
 ```
+
+&nbsp;
 
 ## quad
 

@@ -17,6 +17,8 @@ breadcrumbText: Android RectDrawingItem Class
 class RectDrawingItem extends DrawingItem
 ```
 
+&nbsp;
+
 ## RectDrawingItem
 
 The constructor of `RectDrawingItem`. Create an instance of `RectDrawingItem`.
@@ -35,6 +37,8 @@ public RectDrawingItem(android.graphics.Rect rect);
 DrawingItem drawingItem = new RectDrawingItem(rect);
 ```
 
+&nbsp;
+
 ## getMediaType
 
 Get the media type of the `RectDrawingItem`.
@@ -52,6 +56,8 @@ The media type of the `RectDrawingItem`.
 ```java
 EnumDrawingItemMediaType mediaType = drawingItem.getMediaType();
 ```
+
+&nbsp;
 
 ## getRect
 

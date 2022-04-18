@@ -11,6 +11,8 @@ breadcrumbText: iOS DrawingStyleManager Class
 
 # DrawingStyleManager
 
+&nbsp;
+
 ## getDrawingStyle
 
 Get the `DrawingStyle` instance with the style ID.
@@ -58,7 +60,7 @@ There are 5 preset types of drawing styles.
 
 ## createDrawingStyle
 
-Create a user defined `DrawingStyle` instance.
+Create a user-defined `DrawingStyle` instance.
 
 ```objc
 +(NSInteger)createDrawingStyle:(UIColor*)strokeColor strokeWidth:(CGFloat)strokeWidth 

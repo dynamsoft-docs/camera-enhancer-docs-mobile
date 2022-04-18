@@ -17,6 +17,8 @@ breadcrumbText: Android TextDrawingItem Class
 class TextDrawingItem extends DrawingItem
 ```
 
+&nbsp;
+
 ## TextDrawingItem
 
 The constructor of `TextDrawingItem`. Create an instance of `TextDrawingItem`.
@@ -36,6 +38,8 @@ public TextDrawingItem(String text, android.graphics.Rect textRect);
 DrawingItem drawingItem = new TextDrawingItem(Text);
 ```
 
+&nbsp;
+
 ## getMediaType
 
 Get the media type of the `TextDrawingItem`.
@@ -54,6 +58,8 @@ The media type of the `TextDrawingItem`.
 EnumDrawingItemMediaType mediaType = drawingItem.getMediaType();
 ```
 
+&nbsp;
+
 ## getText
 
 Get the `Text` of the `TextDrawingItem`.
@@ -71,6 +77,8 @@ The text content of the `TextDrawingItem`.
 ```java
 String text = drawingItem.getText();
 ```
+
+&nbsp;
 
 ## getTextRect
 

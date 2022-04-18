@@ -17,21 +17,37 @@ class com.dynamsoft.dce.DCEDrawingLayer
 
 | Method Name | Description |
 | ----------- | ----------- |
-| [`getId`](#getid) | Get the layer ID of the layer. |
-| [`addDrawingItems`](#adddrawingitems) | Add a list of drawing items to the layer. These drawing items will be appended to the drawing item list of the current layer. |
-| [`setDrawingItems`](#setdrawingitems) | Set a list of drawing items to the layer. These drawing items will replace the previous drawing items of the current layer. |
-| [`getDrawingItems`](#getdrawingitems) | Get all available drawing items in the layer. |
-| [`clearDrawingItems`](#cleardrawingitems) | Clear all available drawing items in the layer. |
-| [`setDrawingStyle`](#setdrawingstyle) |  |
-| [`getDrawingStyle`] |  |
-| [`setVisible`](#setvisible) | Set the visibility of the layer. |
-| [`isVisible`](#isvisible) | Get the visibility of the layer. |
+| [`DCEDrawingLayer`](#dcedrawinglayer) | The constructor of the `DCEDrawingLayer` class. |
+| [`getId`](#getid) | Get the `DrawingLayer` ID of the `DrawingLayer`. |
+| [`addDrawingItems`](#adddrawingitems) | Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the drawing item list of the current `DrawingLayer`. |
+| [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
+| [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
+| [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
+| [`setDrawingStyleId`](#setdrawingstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setVisible`](#setvisible) | Set the visibility of the `DrawingLayer`. |
+| [`isVisible`](#isvisible) | Get the visibility of the `DrawingLayer`. |
+
+&nbsp;
+
+## DCEDrawingLayer
+
+The constructor of the `DCEDrawingLayer` class.
+
+**Parameters**
+
+`id`: Indicate the ID of the `DrawingLayer`.
+
+**Code Snippet**
+
+```java
+DCEDrawingLayer drawingLayer = new DCEDrawingLayer(0);
+```
 
 &nbsp;
 
 ## getId
 
-Get the layer ID of the layer.
+Get the ID of the `DrawingLayer`.
 
 ```java
 public int getId();
@@ -57,7 +73,7 @@ int id = drawingLayer.getId();
 
 ## addDrawingItems
 
-Add a list of drawing items to the layer. These drawing items will be appended to the drawing item list of the current layer.
+Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the drawing item list of the current `DrawingLayer`.
 
 ```java
 public void addDrawingItems(Arraylist<DrawingItem> items); 
@@ -65,7 +81,7 @@ public void addDrawingItems(Arraylist<DrawingItem> items);
 
 **Parameters**
 
-`items`: A list of drawing items.
+`items`: A list of `DrawingItems`.
 
 **Code Snippet**
 
@@ -81,7 +97,7 @@ drawingLayer.addDrawingItems(drawingItems);
 
 ## setDrawingItems
 
-Set a list of drawing items to the layer. These drawing items will replace the previous drawing items of the current layer.
+Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`.
 
 ```java
 public void setDrawingItems(Arraylist<DrawingItem> items); 
@@ -89,7 +105,7 @@ public void setDrawingItems(Arraylist<DrawingItem> items);
 
 **Parameters**
 
-`items`: A list of drawing items.
+`items`: A list of `DrawingItems`.
 
 **Code Snippet**
 
@@ -105,7 +121,7 @@ drawingLayer.setDrawingItems(drawingItems);
 
 ## getDrawingItems
 
-Get all available drawing items in the layer.
+Get all available `DrawingItems` in the `DrawingLayer`.
 
 ```java
 public Arraylist<DrawingItem> getDrawingItems();
@@ -113,7 +129,7 @@ public Arraylist<DrawingItem> getDrawingItems();
 
 **Return Value**
 
-A list that includes all available drawing items.
+A list that includes all available `DrawingItems`.
 
 **Code Snippet**
 
@@ -125,7 +141,7 @@ ArrayList<DrawingItem> drawingItems = dceDrawingLayer.getDrawingItems();
 
 ## clearDrawingItems
 
-Clear all available drawing items in the layer.
+Clear all available `DrawingItems` in the `DrawingLayer`.
 
 ```java
 public void clearDrawingItems();
@@ -139,17 +155,39 @@ drawingLayer.clearDrawingItems();
 
 &nbsp;
 
-## setDrawingStyle
+## setDrawingStyleId
 
-&nbsp;
+Set the `DrawingStyle` of the layer by ID.
 
-## getDrawingStyle
+```java
+public void setDrawingStyleId(int styleId);
+// Or
+public void setDrawingStyleId(int styleId, EnumDrawingItemState state);
+// Or
+public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawingItemMediaType[] mediaTypes);
+```
+
+**Parameters**
+
+`id`: The Style ID.  
+`state`: The state of the `DrawingLayer`.  
+`mediaType`: The media type of the `DrawingLayer`.
+
+**Code Snippet**
+
+```java
+drawingLayer.setDrawingStyleId(0);
+// Or
+drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED);
+// Or
+drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED, new EnumDrawingItemMediaType[]{EnumDrawingItemMediaType.DIMT_RECTANGLE ,EnumDrawingItemMediaType.DIMT_QUADRILATERAL});
+```
 
 &nbsp;
 
 ## setVisible
 
-Set the visibility of the layer.
+Set the visibility of the `DrawingLayer`.
 
 ```java
 public void setVisible(boolean visible);
@@ -159,8 +197,8 @@ public void setVisible(boolean visible);
 
 `visible`:
 
-- true: The layer will be visible
-- false: The layer will be invisible.
+- true: The `DrawingLayer` will be visible
+- false: The `DrawingLayer` will be invisible.
 
 **Code Snippet**
 
@@ -172,7 +210,7 @@ drawingLayer.setVisible(true);
 
 ## isVisible
 
-Get the visibility of the layer.
+Get the visibility of the `DrawingLayer`.
 
 ```java
 public boolean isVisible();
@@ -180,8 +218,8 @@ public boolean isVisible();
 
 **Return Value**
 
-- true: The layer is visible.
-- false: The layer is invisible.
+- true: The `DrawingLayer` is visible.
+- false: The `DrawingLayer` is invisible.
 
 **Code Snippet**
 

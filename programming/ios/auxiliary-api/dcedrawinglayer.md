@@ -13,18 +13,47 @@ breadcrumbText: iOS DCEDrawingLayer Class
 
 | Method Name | Description |
 | ----------- | ----------- |
-| [`id`](#id) | Get the layer ID of the layer. |
-| [`addDrawingItems`](#adddrawingitems) | Add a list of drawing items to the layer. These drawing items will be appended to the drawing item list of the current layer. |
-| [`setDrawingItems`](#setdrawingitems) | Set a list of drawing items to the layer. These drawing items will replace the previous drawing items of the current layer. |
-| [`getDrawingItems`](#getdrawingitems) | Get all available drawing items in the layer. |
-| [`clearDrawingItems`](#cleardrawingitems) | Clear all available drawing items in the layer. |
-| [`setDrawingStyle`](#setdrawingstyle) |  |
-| [`getDrawingStyle`] |  |
-| [`visible`](#visible) | The property that stores the visibility of the layer. |
+| [`initWithId`](#dcedrawinglayer) | The constructor of the `DCEDrawingLayer` class. |
+| [`id`](#id) | Get the `DrawingLayer` ID of the `DrawingLayer`. |
+| [`addDrawingItems`](#adddrawingitems) | Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the `DrawingItem` list of the current `DrawingLayer`. |
+| [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
+| [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
+| [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
+| [`setDrawingStyleId`](#setdrawingstyle) | Set the style of the `DrawingLayer` by ID. |
+| [`visible`](#visible) | The property that stores the visibility of the `DrawingLayer`. |
+
+&nbsp;
+
+## initWithId
+
+The constructor of the `DCEDrawingLayer` class. Initialize the instance of the `DCEDrawingLayer` class.
+
+```objc
+- (instancetype) initWithId:(NSInteger)id;
+```
+
+**Parameters**
+
+`id`: Indicates the id of the layer.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+
+```
+2. 
+```swift
+
+```
 
 ## id
 
-Get the layer ID of the layer.
+Get the ID of the `DrawingLayer`.
 
 ```objc
 @property (assign, nonatomic) NSInteger id;
@@ -45,9 +74,11 @@ Get the layer ID of the layer.
 
 ```
 
+&nbsp;
+
 ## addDrawingItems
 
-Add a list of drawing items to the layer. These drawing items will be appended to the drawing item list of the current layer.
+Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the `DrawingItem` list of the current `DrawingLayer`.
 
 ```objc
 - (void) addDrawingItems:(NSArray<DrawingItem*>*)items; 
@@ -55,7 +86,7 @@ Add a list of drawing items to the layer. These drawing items will be appended t
 
 **Parameters**
 
-`items`: A list of drawing items.
+`items`: A list of `DrawingItems`.
 
 **Code Snippet**
 
@@ -72,9 +103,11 @@ Add a list of drawing items to the layer. These drawing items will be appended t
 
 ```
 
+&nbsp;
+
 ## setDrawingItems
 
-Set a list of drawing items to the layer. These drawing items will replace the previous drawing items of the current layer.
+Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`.
 
 ```objc
 - (void) setDrawingItems:(NSArray<DrawingItem*>*)items; 
@@ -82,7 +115,7 @@ Set a list of drawing items to the layer. These drawing items will replace the p
 
 **Parameters**
 
-`items`: A list of drawing items.
+`items`: A list of `DrawingItems`.
 
 **Code Snippet**
 
@@ -99,9 +132,11 @@ Set a list of drawing items to the layer. These drawing items will replace the p
 
 ```
 
+&nbsp;
+
 ## getDrawingItems
 
-Get all available drawing items in the layer.
+Get all available `DrawingItems` in the `DrawingLayer`.
 
 ```objc
 - (NSArray<DrawingItem*>* _Nullable) getDrawingItems;
@@ -109,7 +144,7 @@ Get all available drawing items in the layer.
 
 **Return Value**
 
-A list that includes all available drawing items.
+A list that includes all available `DrawingItems`.
 
 **Code Snippet**
 
@@ -126,9 +161,11 @@ A list that includes all available drawing items.
 
 ```
 
+&nbsp;
+
 ## clearDrawingItems
 
-Clear all available drawing items in the layer.
+Clear all available `DrawingItems` in the `DrawingLayer`.
 
 ```objc
 - (void) clearDrawingItems;
@@ -149,17 +186,49 @@ Clear all available drawing items in the layer.
 
 ```
 
-## setDrawingStyle
+&nbsp;
 
-## getDrawingStyle
+## setDrawingStyleId
+
+Set the style of the `DrawingLayer` by ID.
+
+```objc
+- (void) setDrawingStyleId:(NSInteger)styleId;
+// Or
+- (void) setDrawingStyleId:(NSInteger)styleId
+                     state:(EnumDrawingItemState)state;
+// Or
+- (void) setDrawingStyleId:(NSInteger)styleId
+                     state:(EnumDrawingItemState)state
+                mediaTypes:(NSArray*)mediaTypes;
+```
+
+**Parameters**
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+
+```
+2. 
+```swift
+
+```
+
+&nbsp;
 
 ## visible
 
-The property that stores the visibility of the layer.
+The property that stores the visibility of the `DrawingLayer`.
 
 ```objc
-// When visible is true, the layer is visible.
-// Otherwise, the layer is invisible.
+// When visible is true, the `DrawingLayer` is visible.
+// Otherwise, the `DrawingLayer` is invisible.
 @property (assign, nonatomic) BOOL visible;
 ```
 

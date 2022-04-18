@@ -17,6 +17,24 @@ breadcrumbText: Android QuadDrawingItem Class
 class QuadDrawingItem extends DrawingItem
 ```
 
+<div class="fold-panel-prefix"></div>
+
+## Inherited Methods <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include api-reference/drawing-item-android.md -%}
+
+<div class="fold-panel-end"></div>
+
+&nbsp;
+
+| Method | Descriptions |
+| ------ | ------------ |
+| [`QuadDrawingItem`](#quaddrawingitem) | The constructor of `QuadDrawingItem`. Create an instance of `QuadDrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `QuadDrawingItem`. |
+| [`getQuad`](#getquad) | Get the `Quad` of the `QuadDrawingItem`. |
+
 ## QuadDrawingItem
 
 The constructor of `QuadDrawingItem`. Create an instance of `QuadDrawingItem`.
@@ -35,6 +53,8 @@ public QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad;
 DrawingItem drawingItem = new QuadDrawingItem(quad);
 ```
 
+&nbsp;
+
 ## getMediaType
 
 Get the media type of the `QuadDrawingItem`.
@@ -52,6 +72,8 @@ The media type of the `QuadDrawingItem`.
 ```java
 EnumDrawingItemMediaType mediaType = drawingItem.getMediaType();
 ```
+
+&nbsp;
 
 ## getQuad
 
