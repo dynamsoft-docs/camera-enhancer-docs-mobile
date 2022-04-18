@@ -28,7 +28,6 @@ class QuadDrawingItem extends DrawingItem
 | [`setState`](#setstate) | Set the state of the current drawing item. |
 | [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
 | [`setCoordinateSystem`](#setcoordinatesystem) | Set the coordinate system of the current drawing item. |
-| [`getMediaType`](#getmediatype) | Get the media type of the current drawing item. |
 
 ## QuadDrawingItem
 

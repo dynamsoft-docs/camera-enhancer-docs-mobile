@@ -111,19 +111,3 @@ drawingItem.setCoordinateSystem(EnumCoordinateSystem.CS_IMAGE);
 
 &nbsp;
 
-## getMediaType
-
-```java
-public EnumDrawingItemMeidaType getMediaType();
-```
-
-**Return Value**
-
-The media type of the drawing item.
-
-**Code Snippet**
-
-```java
-EnumDrawingItemMeidaType mediaType = drawingItem.getMediaType();
-```
-
