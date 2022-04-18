@@ -236,3 +236,57 @@ Method `- (void)setTorchButton:(CGPoint)torchButtonPosition` is deprecated. Plea
 **Parameters**
 
 When the property value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
+
+## getDrawingLayer
+
+```objc
+- (DCEDrawingLayer*) getDrawingLayer:(NSInteger)id;
+```
+
+**Parameters**
+
+`id`: The id of the drawing layer.
+
+**Return Value**
+
+The targeting instance of `DCEDrawingLayer`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+
+```
+2. 
+```swift
+
+```
+
+## createDrawingLayer
+
+```objc
+- (DCEDrawingLayer*) createDrawingLayer;
+```
+
+**Return Value**
+
+A user-defined drawing layer.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+
+```
+2. 
+```swift
+
+```

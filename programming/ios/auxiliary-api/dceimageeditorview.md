@@ -77,12 +77,16 @@ The `imageData` of the image.
 ## getDrawingLayer
 
 ```objc
-- (DCEDrawingLayer) getDrawingLayer:(NSInteger)id;
+- (DCEDrawingLayer*) getDrawingLayer:(NSInteger)id;
 ```
 
 **Parameters**
 
+`id`: The id of the drawing layer.
+
 **Return Value**
+
+The targeting instance of `DCEDrawingLayer`.
 
 **Code Snippet**
 
@@ -102,10 +106,12 @@ The `imageData` of the image.
 ## createDrawingLayer
 
 ```objc
-- (DCEDrawingLayer) createDrawingLayer;
+- (DCEDrawingLayer*) createDrawingLayer;
 ```
 
 **Return Value**
+
+A user-defined drawing layer.
 
 **Code Snippet**
 

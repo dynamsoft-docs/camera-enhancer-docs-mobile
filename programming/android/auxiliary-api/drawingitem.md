@@ -13,8 +13,8 @@ breadcrumbText: Android DrawingItem Class
 
 | Method Name | Description |
 | ----------- | ----------- |
-| [`getDrawingStyle`](#getdrawingstyle) | Get the drawing style of the current drawing item. |
-| [`setDrawingStyle`](#setdrawingstyle) | Set the drawing style of the current drawing item. |
+| [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
+| [`setDrawingStyleId`](#setdrawingstyleid) | Set the drawing style of the current drawing item. |
 | [`getState`](#getstate) | Get the state of the current drawing item. |
 | [`setState`](#setstate) | Set the state of the current drawing item. |
 | [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
@@ -23,7 +23,7 @@ breadcrumbText: Android DrawingItem Class
 
 &nbsp;
 
-## getDrawingStyle
+## getDrawingStyleId
 
 ```java
 public int getDrawingStyleId();
@@ -41,7 +41,7 @@ int styleId = drawingItem.getDrawingStyleId();
 
 &nbsp;
 
-## setDrawingStyle
+## setDrawingStyleId
 
 ```java
 public void setDrawingStyleId(int style);
@@ -54,7 +54,7 @@ public void setDrawingStyleId(int style);
 **Code Snippet**
 
 ```java
-drawingItem.setDrawingStyle(0);
+drawingItem.setDrawingStyleId(0);
 ```
 
 &nbsp;
