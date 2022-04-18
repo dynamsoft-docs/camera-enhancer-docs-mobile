@@ -17,6 +17,18 @@ breadcrumbText: Android TextDrawingItem Class
 class TextDrawingItem extends DrawingItem
 ```
 
+| Method | Descriptions |
+| ------ | ------------ |
+| [`TextDrawingItem`](#Textdrawingitem) | The constructor of `TextDrawingItem`. Create an instance of `TextDrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `TextDrawingItem`. |
+| [`getText`](#gettext) | Get the `Text` of the `TextDrawingItem`. |
+| [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
+| [`setDrawingStyleId`](#setdrawingstyleid) | Set the drawing style of the current drawing item. |
+| [`getState`](#getstate) | Get the state of the current drawing item. |
+| [`setState`](#setstate) | Set the state of the current drawing item. |
+| [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
+| [`setCoordinateSystem`](#setcoordinatesystem) | Set the coordinate system of the current drawing item. |
+
 &nbsp;
 
 ## TextDrawingItem
@@ -97,3 +109,5 @@ The Rect of the `TextDrawingItem`.
 ```java
 android.graphics.Rect rect = drawingItem.getTextRect();
 ```
+
+{%- include api-reference/drawing-item-android.md -%}

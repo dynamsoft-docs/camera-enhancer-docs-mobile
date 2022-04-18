@@ -1,18 +1,9 @@
 
 
-| Method Name | Description |
-| ----------- | ----------- |
-| [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
-| [`setDrawingStyleId`](#setdrawingstyleid) | Set the drawing style of the current drawing item. |
-| [`getState`](#getstate) | Get the state of the current drawing item. |
-| [`setState`](#setstate) | Set the state of the current drawing item. |
-| [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
-| [`setCoordinateSystem`](#setcoordinatesystem) | Set the coordinate system of the current drawing item. |
-| [`getMediaType`](#getmediatype) | Get the media type of the current drawing item. |
 
 &nbsp;
 
-### getDrawingStyleId
+## getDrawingStyleId
 
 ```java
 public int getDrawingStyleId();
@@ -30,7 +21,7 @@ int styleId = drawingItem.getDrawingStyleId();
 
 &nbsp;
 
-### setDrawingStyleId
+## setDrawingStyleId
 
 ```java
 public void setDrawingStyleId(int style);
@@ -48,7 +39,7 @@ drawingItem.setDrawingStyleId(0);
 
 &nbsp;
 
-### getState
+## getState
 
 ```java
 public EnumDrawingItemState getState();
@@ -66,7 +57,7 @@ EnumDrawingItemState state = drawingItem.getState();
 
 &nbsp;
 
-### setState
+## setState
 
 ```java
 public void setState(EnumDrawingItemState state);
@@ -84,7 +75,7 @@ drawingItem.setState(EnumDrawingItemState.DIS_SELECTED)
 
 &nbsp;
 
-### getCoordinateSystem
+## getCoordinateSystem
 
 ```java
 public EnumCoordinateSystem getCoordinateSystem();
@@ -102,7 +93,7 @@ EnumCoordinateSystem coordinateSystem = drawingItem.getCoordinateSystem();
 
 &nbsp;
 
-### setCoordinateSystem
+## setCoordinateSystem
 
 ```java
 public void setCoordinateSystem(EnumCoordinateSystem coordinateSystem);
@@ -120,7 +111,7 @@ drawingItem.setCoordinateSystem(EnumCoordinateSystem.CS_IMAGE);
 
 &nbsp;
 
-### getMediaType
+## getMediaType
 
 ```java
 public EnumDrawingItemMeidaType getMediaType();

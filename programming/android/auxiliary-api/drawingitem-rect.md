@@ -17,6 +17,18 @@ breadcrumbText: Android RectDrawingItem Class
 class RectDrawingItem extends DrawingItem
 ```
 
+| Method | Descriptions |
+| ------ | ------------ |
+| [`RectDrawingItem`](#Rectdrawingitem) | The constructor of `RectDrawingItem`. Create an instance of `RectDrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `RectDrawingItem`. |
+| [`getRect`](#getrect) | Get the `Rect` of the `RectDrawingItem`. |
+| [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
+| [`setDrawingStyleId`](#setdrawingstyleid) | Set the drawing style of the current drawing item. |
+| [`getState`](#getstate) | Get the state of the current drawing item. |
+| [`setState`](#setstate) | Set the state of the current drawing item. |
+| [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
+| [`setCoordinateSystem`](#setcoordinatesystem) | Set the coordinate system of the current drawing item. |
+
 &nbsp;
 
 ## RectDrawingItem
@@ -76,3 +88,5 @@ The `Rect` that indicates the location of the `RectDrawingItem`.
 ```java
 android.graphics.Rect rect = drawingItem.getRect();
 ```
+
+{%- include api-reference/drawing-item-android.md -%}

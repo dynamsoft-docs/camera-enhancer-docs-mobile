@@ -17,23 +17,18 @@ breadcrumbText: Android QuadDrawingItem Class
 class QuadDrawingItem extends DrawingItem
 ```
 
-<div class="fold-panel-prefix"></div>
-
-## Inherited Methods <i class="fa fa-caret-down"></i>
-
-<div class="fold-panel-start"></div>
-
-{%- include api-reference/drawing-item-android.md -%}
-
-<div class="fold-panel-end"></div>
-
-&nbsp;
-
 | Method | Descriptions |
 | ------ | ------------ |
 | [`QuadDrawingItem`](#quaddrawingitem) | The constructor of `QuadDrawingItem`. Create an instance of `QuadDrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `QuadDrawingItem`. |
 | [`getQuad`](#getquad) | Get the `Quad` of the `QuadDrawingItem`. |
+| [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
+| [`setDrawingStyleId`](#setdrawingstyleid) | Set the drawing style of the current drawing item. |
+| [`getState`](#getstate) | Get the state of the current drawing item. |
+| [`setState`](#setstate) | Set the state of the current drawing item. |
+| [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
+| [`setCoordinateSystem`](#setcoordinatesystem) | Set the coordinate system of the current drawing item. |
+| [`getMediaType`](#getmediatype) | Get the media type of the current drawing item. |
 
 ## QuadDrawingItem
 
@@ -92,3 +87,5 @@ The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
 ```java
 com.dynamsoft.core.Quadrilateral quad = drawingItem.getRect();
 ```
+
+{%- include api-reference/drawing-item-android.md -%}
