@@ -17,6 +17,16 @@ breadcrumbText: iOS TextDrawingItem Class
 @interface TextDrawingItem (DrawingItem)
 ```
 
+| Method Name | Description |
+| ----------- | ----------- |
+| [`initWithText`](#initwithtext) | The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingItem`. |
+| [`text`](#text) | The property that indicates the text of the `TextDrawingItem`. |
+| [`textRect`](#textrect) | The `CGRect` property that indicates the location of the `TextDrawingItem`. |
+| [`drawingStyleId`](#drawingstyle) | Get the drawing style of the current `DrawingItem`. |
+| [`state`](#state) | Set the state of the current `DrawingItem`. |
+| [`coordinateSystem`](#coordinatesystem) | Get the coordinate system of the current `DrawingItem`. |
+| [`mediaType`](#mediatype) | Get the media type of the current `DrawingItem`. |
+
 &nbsp;
 
 ## initWithText
@@ -96,3 +106,5 @@ The `CGRect` property that indicates the location of the `TextDrawingItem`.
 ```swift
 
 ```
+
+{%- include api-reference/drawing-item-ios.md -%}

@@ -17,6 +17,15 @@ breadcrumbText: iOS RectDrawingItem Class
 @interface RectDrawingItem (DrawingItem)
 ```
 
+| Method Name | Description |
+| ----------- | ----------- |
+| [`initWithRect`](#initwithrect) | The constructor of `RectDrawingItem`. Initialize the instance of `RectDrawingItem`. |
+| [`rect`](#rect) | The property that indicates the `Rect` of the `RectDrawingItem`. |
+| [`drawingStyleId`](#drawingstyle) | Get the drawing style of the current `DrawingItem`. |
+| [`state`](#state) | Set the state of the current `DrawingItem`. |
+| [`coordinateSystem`](#coordinatesystem) | Get the coordinate system of the current `DrawingItem`. |
+| [`mediaType`](#mediatype) | Get the media type of the current `DrawingItem`. |
+
 &nbsp;
 
 ## initWithRect
@@ -70,3 +79,5 @@ The property that indicates the `Rect` of the `RectDrawingItem`.
 ```swift
 
 ```
+
+{%- include api-reference/drawing-item-ios.md -%}

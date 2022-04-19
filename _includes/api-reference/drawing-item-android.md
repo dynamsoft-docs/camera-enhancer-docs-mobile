@@ -110,4 +110,3 @@ drawingItem.setCoordinateSystem(EnumCoordinateSystem.CS_IMAGE);
 ```
 
 &nbsp;
-
