@@ -261,11 +261,11 @@ The targeting instance of `DCEDrawingLayer`.
 >
 >1. 
 ```objc
-
+DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:1];
 ```
 2. 
 ```swift
-
+let drawingLayer = try? dceView.getDrawingLayer(1)
 ```
 
 &nbsp;
@@ -288,9 +288,9 @@ A user-defined drawing layer.
 >
 >1. 
 ```objc
-
+DCEDrawingLayer *drawingLayer = [_dceView createDrawingLayer:1];
 ```
 2. 
 ```swift
-
+let drawingLayer = try? dceView.createDrawingLayer(1)
 ```

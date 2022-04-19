@@ -68,21 +68,10 @@ breadcrumbText: iOS API references
 | [`updateAdvancedSettingsFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
-## UI Classes
-
-- [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
-- [`DCEImageEditorView`]({{ site.ios-api-auxiliary }}dceimageeditorview.html )
-
 ## Auxiliary Classes
 
 - [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
-- [`DCEDrawingLayer`]({{site.ios-api-auxiliary}}dcedrawinglayer.html)
-- [`DrawingItem`]({{site.ios-api-auxiliary}}drawingitem.html)
-- [`RectDrawingItem`]({{site.ios-api-auxiliary}}rectdrawingitem.html)
-- [`QuadDrawingItem`]({{site.ios-api-auxiliary}}quaddrawingitem.html)
-- [`TextDrawingItem`]({{site.ios-api-auxiliary}}textdrawingitem.html)
-- [`DrawingStyleManager`]({{site.ios-api-auxiliary}}drawingstylemanager.html)
-- [`DrawingStyle`]({{site.ios-api-auxiliary}}drawingstyle.html)
+- [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
 - [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html)
 
 ## Interfaces

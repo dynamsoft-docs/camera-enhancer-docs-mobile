@@ -19,14 +19,14 @@ class DrawingStyle
 
 | Method | Description |
 | ------ | ----------- |
-| `initWithId` | The constructor of the `initWithId`. |
-| `id` | The id of the drawing style. |
-| `strokeColor` | The stroke color of the drawing style. |
-| `fillColor` | The fill color of the drawing style. |
-| `textColor` | The text color of the drawing style. |
-| `strokeWidth` | The stroke width of the drawing style. |
-| `fontSize` | The font size of the drawing style. |
-| `fontFamily` | The font-Family of the drawing style. |
+| [`initWithId`](#initwithid) | The constructor of the `initWithId`. |
+| [`id`](#id) | The id of the `DrawingStyle`. |
+| [`strokeColor`](#strokecolor) | The stroke color of the `DrawingStyle`. |
+| [`fillColor`](#fillcolor) | The fill color of the `DrawingStyle`. |
+| [`textColor`](#textcolor) | The text color of the `DrawingStyle`. |
+| [`strokeWidth`](#strokewidth) | The stroke width of the `DrawingStyle`. |
+| [`fontSize`](#fontsize) | The font size of the `DrawingStyle`. |
+| [`fontFamily`](#fontfamily) | The font-Family of the `DrawingStyle`. |
 
 &nbsp;
 
@@ -52,18 +52,18 @@ The constructor of the `DrawingStyle`.
 >
 >1. 
 ```objc
-
+DrawingStyle* drawingStyle = [[DrawingStyle alloc] initWithId:0 strokeColor:strokeColor strokeWidth:1 fillColor:fillColor textColor:textColor fontSize:12 fontFamily:"Your-Targeting-Font-Family"];
 ```
 2. 
 ```swift
-
+var drawingStyle:DrawingStyle! = DrawingStyle.init(id:0, strokeColor:strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, fontSize:12, fontFamily:"Your-Targeting-Font-Family")
 ```
 
 &nbsp;
 
 ## id
 
-The id of the drawing style.
+The id of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic, readonly) NSInteger id;
@@ -73,7 +73,7 @@ The id of the drawing style.
 
 ## strokeColor
 
-The stroke color of the drawing style.
+The stroke color of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic) UIColor strokeColor;
@@ -83,7 +83,7 @@ The stroke color of the drawing style.
 
 ## fillColor
 
-The fill color of the drawing style.
+The fill color of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic) UIColor fillColor;
@@ -93,7 +93,7 @@ The fill color of the drawing style.
 
 ## textColor
 
-The text color of the drawing style.
+The text color of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic) UIColor textColor;
@@ -103,7 +103,7 @@ The text color of the drawing style.
 
 ## strokeWidth
 
-The stroke width of the drawing style.
+The stroke width of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic) CGFloat strokeWidth;
@@ -113,7 +113,7 @@ The stroke width of the drawing style.
 
 ## fontSize
 
-The font size of the drawing style.
+The font size of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic) NSInteger fontSize;
@@ -123,7 +123,7 @@ The font size of the drawing style.
 
 ## fontFamily
 
-The font-Family of the drawing style.
+The font-Family of the `DrawingStyle`.
 
 ```objc
 @property (assign, nonatomic) NSString* fontFamily;

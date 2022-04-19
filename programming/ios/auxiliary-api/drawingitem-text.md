@@ -50,11 +50,11 @@ The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingIte
 >
 >1. 
 ```objc
-
+DrawingItem* drawingItem = [[TextDrawingItem alloc] initWithText:@"" rect:rect];
 ```
 2. 
 ```swift
-
+let drawingItem = TextDrawingItem.init(text:"Your-Text", rect:rect)
 ```
 
 &nbsp;
@@ -67,21 +67,6 @@ The property that indicates the text of the `TextDrawingItem`.
 @property (assign, nonatomic, readonly) NSString* text;
 ```
 
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
-```
-
 &nbsp;
 
 ## textRect
@@ -90,21 +75,6 @@ The `CGRect` property that indicates the location of the `TextDrawingItem`.
 
 ```objc
 @property (assign, nonatomic, readonly) CGRect textRect;
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
 ```
 
 {%- include api-reference/drawing-item-ios.md -%}

@@ -20,9 +20,6 @@ breadcrumbText: iOS DCEImageEditorView Class
 | [`getDrawingLayer`](#getdrawinglayer) | Get the `DCEDrawingLayer` instance with the layer ID. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a user defined `DCEDrawingLayer` instance. |
 | [`getSelectedDrawingItem`](#getselecteddrawingitem) | Get the selected drawing item. |
-| [`getDrawingStyle`](#getdrawingstyle) | Get the `DrawingStyle` instance with the style ID. |
-| [`getAllDrawingStyles`](#getalldrawingstyles) | Get all the available `DrawingStyle` in a list. |
-| [`createDrawingStyle`](#createdrawingstyle) | Create a user defined `DrawingStyle` instance. |
 
 ## setOriginalImage
 
@@ -42,11 +39,11 @@ breadcrumbText: iOS DCEImageEditorView Class
 >
 >1. 
 ```objc
-
+[_imageEditorView setOriginalImage:imageData];
 ```
 2. 
 ```swift
-
+imageEditorView.setOriginalImage(imageData)
 ```
 
 ## getOriginalImage
@@ -67,11 +64,11 @@ The `imageData` of the image.
 >
 >1. 
 ```objc
-
+ImageData* imageData = [imageEditorView getOriginalImage];
 ```
 2. 
 ```swift
-
+let imageData = imageEditorView.getOriginalImage()
 ```
 
 ## getDrawingLayer
@@ -96,11 +93,11 @@ The targeting instance of `DCEDrawingLayer`.
 >
 >1. 
 ```objc
-
+DCEDrawingLayer* drawingLayer = [imageEditorView getDrawingLayer];
 ```
 2. 
 ```swift
-
+let drawingLayer = imageEditorView.getDrawingLayer()
 ```
 
 ## createDrawingLayer
@@ -121,11 +118,11 @@ A user-defined drawing layer.
 >
 >1. 
 ```objc
-
+DCEDrawingLayer* drawingLayer = [imageEditorView createDrawingLayer];
 ```
 2. 
 ```swift
-
+let drawingLayer = imageEditorView.createDrawingLayer()
 ```
 
 ## getSelectedDrawingItem
@@ -144,45 +141,9 @@ A user-defined drawing layer.
 >
 >1. 
 ```objc
-
+DrawingItem* item = [imageEditorView getSelectedDrawingItem];
 ```
 2. 
 ```swift
-
+let item = imageEditorView.getSelectedDrawingItem()
 ```
-
-## getDrawingStyle
-
-```objc
-
-```
-
-**Parameters**
-
-**Return Value**
-
-**Code Snippet**
-
-## getAllDrawingStyles
-
-```objc
-
-```
-
-**Parameters**
-
-**Return Value**
-
-**Code Snippet**
-
-## createDrawingStyle
-
-```objc
-
-```
-
-**Parameters**
-
-**Return Value**
-
-**Code Snippet**

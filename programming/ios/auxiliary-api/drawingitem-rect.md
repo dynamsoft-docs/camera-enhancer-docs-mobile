@@ -48,11 +48,11 @@ The constructor of `RectDrawingItem`. Initialize the instance of `RectDrawingIte
 >
 >1. 
 ```objc
-
+DrawingItem* drawingItem = [[RectDrawingItem alloc] initWithRect:rect];
 ```
 2. 
 ```swift
-
+let drawingItem = RectDrawingItem.init(rect:rect)
 ```
 
 &nbsp;
@@ -63,21 +63,6 @@ The property that indicates the `Rect` of the `RectDrawingItem`.
 
 ```objc
 @property (assign, nonatomic, readonly) CGRect rect;
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
 ```
 
 {%- include api-reference/drawing-item-ios.md -%}

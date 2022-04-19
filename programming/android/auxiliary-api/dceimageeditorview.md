@@ -20,9 +20,6 @@ breadcrumbText: Android DCEImageEditorView Class
 | [`getDrawingLayer`](#getdrawinglayer) | Get the `DCEDrawingLayer` instance with the layer ID. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a user defined `DCEDrawingLayer` instance. |
 | [`getSelectedDrawingItem`](#getselecteddrawingitem) | Get the selected drawing item. |
-| [`getDrawingStyle`](#getdrawingstyle) | Get the `DrawingStyle` instance with the style ID. |
-| [`getAllDrawingStyles`](#getalldrawingstyles) | Get all the available `DrawingStyle` in a list. |
-| [`createDrawingStyle`](#createdrawingstyle) | Create a user defined `DrawingStyle` instance. |
 
 &nbsp;
 
@@ -136,70 +133,3 @@ DrawingItem drawingItem = dceImageEditorView.getSelectedDrawingItem();
 ```
 
 &nbsp;
-
-## getDrawingStyle
-
-Get the `DrawingStyle` instance with the style ID.
-
-```java
-public DrawingStyle getDrawingStyle(int styleId);
-```
-
-**Parameters**
-
-`styleId`: The ID of the target `DrawingStyle`.
-
-**Return Value**
-
-An instance of `DrawingStyle`.
-
-**Code Snippet**
-
-```java
-DrawingStyle style = dceImageEditorView.getDrawingStyle(0);
-```
-
-&nbsp;
-
-## getAllDrawingStyles
-
-Get all the available `DrawingStyle` in a list.
-
-```java
-public ArrayList<DrawingStyle> getAllDrawingStyles();
-```
-
-**Return Value**
-
-An `ArrayList` that includes all the available `DrawingStyles`.
-
-**Code Snippet**
-
-```java
-ArrayList<DrawingStyle> drawingStyles = dceImageEditorView.getAllDrawingStyles();
-```
-
-&nbsp;
-
-## createDrawingStyle
-
-Create a user defined `DrawingStyle` instance.
-
-```java
-public DrawingStyle createDrawingStyle(int strokeColour, int strokeWidth, int fillColour, int textColour, int fontSize, String fontFamily);
-```
-
-**Parameters**
-
-`strokeColour`: The stroke colour.
-`strokeWidth`: The width of the stroke (measured by px).
-`fillColour`: The fill colour.
-`textColour`: The text colour.
-`fontSize`: The font size (measured by sp).
-`fontFamily`: The font family.
-
-**Code Snippet**
-
-```java
-DrawingStyle drawingStyle = dceImageEditorView.createDrawingStyle(0xff00ff00,2,0xff00ff00,0xff00ff00,12,"sans-serif")
-```

@@ -19,20 +19,20 @@ class DrawingStyle
 
 | Method | Description |
 | ------ | ----------- |
-| `DrawingStyle` | The constructor of the `DrawingStyle`. |
-| `getId` | Get the id of the drawing style. |
-| `getStrokeColor` | Get the stroke color of the drawing style. |
-| `setStrokeColor` | Set the stroke color of the drawing style. |
-| `getFillColor` | Get the fill color of the drawing style. |
-| `setFillColor` | Set the fill color of the drawing style. |
-| `getTextColor` | Get the text color of the drawing style. |
-| `setTextColor` | Set the text color of the drawing style. |
-| `getStrokeWidth` | Get the stroke width of the drawing style. |
-| `setStrokeWidth` | Set the stroke width of the drawing style. |
-| `getFontSize` | Get the font size of the drawing style. |
-| `setFontSize` | Set the font size of the drawing style. |
-| `getFontFamily` | Get the font-Family of the drawing style. |
-| `setFontFamily` | Set the font-Family of the drawing style. |
+| [`DrawingStyle`](#drawingstyle) | The constructor of the `DrawingStyle`. |
+| [`getId`](#getid) | Get the id of the drawing style. |
+| [`getStrokeColor`](#getstrokecolor) | Get the stroke color of the drawing style. |
+| [`setStrokeColor`](#setstrokecolor) | Set the stroke color of the drawing style. |
+| [`getFillColor`](#getfillcolor) | Get the fill color of the drawing style. |
+| [`setFillColor`](#setfillcolor) | Set the fill color of the drawing style. |
+| [`getTextColor`](#gettextcolor) | Get the text color of the drawing style. |
+| [`setTextColor`](#settextcolor) | Set the text color of the drawing style. |
+| [`getStrokeWidth`](#getstrokewidth) | Get the stroke width of the drawing style. |
+| [`setStrokeWidth`](#setstrokewidth) | Set the stroke width of the drawing style. |
+| [`getFontSize`](#getfontsize) | Get the font size of the drawing style. |
+| [`setFontSize`](#setfontsize) | Set the font size of the drawing style. |
+| [`getFontFamily`](#getfontfamily) | Get the font-Family of the drawing style. |
+| [`setFontFamily`](#setfontfamily) | Set the font-Family of the drawing style. |
 
 &nbsp;
 

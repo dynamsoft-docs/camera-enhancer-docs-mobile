@@ -48,11 +48,11 @@ The constructor of `QuadDrawingItem`. Initialize the instance of `QuadDrawingIte
 >
 >1. 
 ```objc
-
+DrawingItem* drawingItem = [[QuadDrawingItem alloc] initWithQuad:quad];
 ```
 2. 
 ```swift
-
+let drawingItem = QuadDrawingItem.init(quad:quad)
 ```
 
 &nbsp;
@@ -63,21 +63,6 @@ The `Quadrilateral` property that indicates the position of the `QuadDrawingItem
 
 ```objc
 @property (assign, nonatomic, readonly) Quadrilateral* quad; 
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
 ```
 
 {%- include api-reference/drawing-item-ios.md -%}

@@ -47,11 +47,11 @@ An instance of `DrawingStyle`.
 >
 >1. 
 ```objc
-
+DrawingStyle* style = [DrawingStyleManager getDrawingStyle];
 ```
 2. 
 ```swift
-
+let style = DrawingStyleManager.getDrawingStyle()
 ```
 
 **Remarks**
@@ -94,9 +94,9 @@ fillColor:(UIColor*) fillColor
 >
 >1. 
 ```objc
-
+NSInteger myStyleID = [DrawingStyleManager createDrawingStyle:0 strokeColor:strokeColor strokeWidth:1 fillColor:fillColor textColor:textColor fontSize:12 fontFamily:"Your-Targeting-Font-Family"];
 ```
 2. 
 ```swift
-
+let myStyleID = DrawingStyleManager.createDrawingStyle(strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, fontSize:12, fontFamily:"Your-Targeting-Font-Family")
 ```

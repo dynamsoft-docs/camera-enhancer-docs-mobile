@@ -19,7 +19,9 @@ breadcrumbText: iOS DCEDrawingLayer Class
 | [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
 | [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
 | [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
-| [`setDrawingStyleId`](#setdrawingstyle) | Set the style of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
 | [`visible`](#visible) | The property that stores the visibility of the `DrawingLayer`. |
 
 &nbsp;
@@ -44,34 +46,19 @@ The constructor of the `DCEDrawingLayer` class. Initialize the instance of the `
 >
 >1. 
 ```objc
-
+DCEDrawingLayer* drawingLayer = [[DCEDrawingLayer alloc] initWithId: 0];
 ```
 2. 
 ```swift
-
+var drawingLayer:DCEDrawingLayer! = DCEDrawingLayer.init(id:0)
 ```
 
 ## id
 
-Get the ID of the `DrawingLayer`.
+The ID of the `DrawingLayer`.
 
 ```objc
 @property (assign, nonatomic) NSInteger id;
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
 ```
 
 &nbsp;
@@ -96,11 +83,21 @@ Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be
 >
 >1. 
 ```objc
-
+NSMutableArray<DrawingItem*>* drawingItems = [drawingLayer getDrawingItems];
+DrawingItem* rectDrawingItem = [[RectDrawingItem alloc] initWithRect: CGRectMake(100,100,300,300)];
+DrawingItem* textDrawingItem = [[TextDrawingItem alloc] initWithText:@"Your-Text" textRect:CGRectMake(100,100,300,300)];
+[drawingItems insertObject:rectDrawingItem atIndex:0];
+[drawingItems insertObject:textDrawingItem atIndex:0];
+[drawingLayer addDrawingItems:drawingItems coordinateSystem:EnumCoordinateSystemImage];
 ```
 2. 
 ```swift
-
+let drawingItems = drawingLayer.getDrawingItems()
+let rectDrawingItem = RectDrawingItem.init(rect: CGRect(x:100, y:100, width:300, height:300))
+let textDrawingItem = TextDrawingItem.init(text:"Your-Text" rect: CGRect(x:100, y:100, width:300, height:300))
+drawingItems.add(rectDrawingItem)
+drawingItems.add(textDrawingItem)
+drawingLayer.addDrawingItems(drawingItems)
 ```
 
 &nbsp;
@@ -125,11 +122,21 @@ Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will re
 >
 >1. 
 ```objc
-
+NSMutableArray<DrawingItem*>* drawingItems = [drawingLayer getDrawingItems];
+DrawingItem* rectDrawingItem = [[RectDrawingItem alloc] initWithRect: CGRectMake(100,100,300,300)];
+DrawingItem* textDrawingItem = [[TextDrawingItem alloc] initWithText:@"Your-Text" textRect:CGRectMake(100,100,300,300)];
+[drawingItems insertObject:rectDrawingItem atIndex:0];
+[drawingItems insertObject:textDrawingItem atIndex:0];
+[drawingLayer setDrawingItems:drawingItems coordinateSystem:EnumCoordinateSystemImage];
 ```
 2. 
 ```swift
-
+let drawingItems = drawingLayer.getDrawingItems()
+let rectDrawingItem = RectDrawingItem.init(rect: CGRect(x:100, y:100, width:300, height:300))
+let textDrawingItem = TextDrawingItem.init(text:"Your-Text" rect: CGRect(x:100, y:100, width:300, height:300))
+drawingItems.add(rectDrawingItem)
+drawingItems.add(textDrawingItem)
+drawingLayer.setDrawingItems(drawingItems)
 ```
 
 &nbsp;
@@ -148,18 +155,7 @@ A list that includes all available `DrawingItems`.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
-```
+Please view the code snippet in [`setDrawingItems`](#setdrawingitems).
 
 &nbsp;
 
@@ -179,31 +175,26 @@ Clear all available `DrawingItems` in the `DrawingLayer`.
 >
 >1. 
 ```objc
-
+[drawingLayer clearDrawingItems];
 ```
 2. 
 ```swift
-
+drawingLayer.clearDrawingItems()
 ```
 
 &nbsp;
 
-## setDrawingStyleId
+## setDrawingStyleId(styleId)
 
-Set the style of the `DrawingLayer` by ID.
+Specify a style ID for all available `DrawingItems`.
 
 ```objc
 - (void) setDrawingStyleId:(NSInteger)styleId;
-// Or
-- (void) setDrawingStyleId:(NSInteger)styleId
-                     state:(EnumDrawingItemState)state;
-// Or
-- (void) setDrawingStyleId:(NSInteger)styleId
-                     state:(EnumDrawingItemState)state
-                mediaTypes:(NSArray*)mediaTypes;
 ```
 
 **Parameters**
+
+`styleId`: The style ID.  
 
 **Code Snippet**
 
@@ -213,11 +204,75 @@ Set the style of the `DrawingLayer` by ID.
 >
 >1. 
 ```objc
-
+[drawingLayer setDrawingStyleId:0];
 ```
 2. 
 ```swift
+drawingLayer.setDrawingStyleId(0)
+```
 
+&nbsp;
+
+## setDrawingStyleId(styleId,state)
+
+Specify a style ID for the targeting `DrawingItems`.
+
+```objc
+- (void) setDrawingStyleId:(NSInteger)styleId
+                     state:(EnumDrawingItemState)state;
+```
+
+**Parameters**
+
+`styleId`: The style ID.  
+`state`: The state of the `DrawingLayer`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[drawingLayer setDrawingStyleId:0 state:EnumDrawingItemStateSelected];
+```
+2. 
+```swift
+drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected)
+```
+
+&nbsp;
+
+## setDrawingStyleId(styleId,state,mediaType)
+
+Specify a style ID for the targeting `DrawingItems`.
+
+```objc
+- (void) setDrawingStyleId:(NSInteger)styleId
+                     state:(EnumDrawingItemState)state
+                mediaTypes:(NSArray*)mediaTypes;
+```
+
+**Parameters**
+
+`styleId`: The style ID.  
+`state`: The state of the `DrawingLayer`.  
+`mediaType`: The media type of the `DrawingLayer`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[drawingLayer setDrawingStyleId:0 state:EnumDrawingItemStateSelected mediaType:@[@(EnumDrawingItemMediaTypeRectangle), @(EnumDrawingItemMediaTypeQuadrilateral)]];
+```
+2. 
+```swift
+drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected, mediaType:[EnumDrawingItemMediaType.quadrilateral.rawValue, EnumDrawingItemMediaType.rectangle.rawValue])
 ```
 
 &nbsp;
@@ -230,19 +285,4 @@ The property that stores the visibility of the `DrawingLayer`.
 // When visible is true, the `DrawingLayer` is visible.
 // Otherwise, the `DrawingLayer` is invisible.
 @property (assign, nonatomic) BOOL visible;
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-
-```
-2. 
-```swift
-
 ```

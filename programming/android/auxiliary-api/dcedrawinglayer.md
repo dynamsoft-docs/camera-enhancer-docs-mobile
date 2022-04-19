@@ -23,7 +23,9 @@ class com.dynamsoft.dce.DCEDrawingLayer
 | [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
 | [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
 | [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
-| [`setDrawingStyleId`](#setdrawingstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
 | [`setVisible`](#setvisible) | Set the visibility of the `DrawingLayer`. |
 | [`isVisible`](#isvisible) | Get the visibility of the `DrawingLayer`. |
 
@@ -155,31 +157,64 @@ drawingLayer.clearDrawingItems();
 
 &nbsp;
 
-## setDrawingStyleId
+## setDrawingStyleId(styleId)
 
-Set the `DrawingStyle` of the layer by ID.
+Specify a style ID for all available `DrawingItems`.
 
 ```java
 public void setDrawingStyleId(int styleId);
-// Or
+```
+
+**Parameters**
+
+`id`: The style ID.
+
+**Code Snippet**
+
+```java
+drawingLayer.setDrawingStyleId(0);
+```
+
+&nbsp;
+
+## setDrawingStyleId(styleId,state)
+
+Specify a style ID for the targeting `DrawingItems`.
+
+```java
 public void setDrawingStyleId(int styleId, EnumDrawingItemState state);
-// Or
+```
+
+**Parameters**
+
+`id`: The style ID.  
+`state`: The state of the `DrawingLayer`.
+
+**Code Snippet**
+
+```java
+drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED);
+```
+
+&nbsp;
+
+## setDrawingStyleId(styleId,state,mediaType)
+
+Specify a style ID for the targeting `DrawingItems`.
+
+```java
 public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawingItemMediaType[] mediaTypes);
 ```
 
 **Parameters**
 
-`id`: The Style ID.  
+`id`: The style ID.  
 `state`: The state of the `DrawingLayer`.  
 `mediaType`: The media type of the `DrawingLayer`.
 
 **Code Snippet**
 
 ```java
-drawingLayer.setDrawingStyleId(0);
-// Or
-drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED);
-// Or
 drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED, new EnumDrawingItemMediaType[]{EnumDrawingItemMediaType.DIMT_RECTANGLE ,EnumDrawingItemMediaType.DIMT_QUADRILATERAL});
 ```
 
