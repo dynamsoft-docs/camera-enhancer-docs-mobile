@@ -11,6 +11,16 @@ breadcrumbText: iOS DrawingStyleManager Class
 
 # DrawingStyleManager
 
+The class that stores the `DrawingStyles`.
+
+```objc
+```
+
+| Method | Description |
+| ------ | ----------- |
+| [`getDrawingStyle`](#getdrawingstyle) | Get the `DrawingStyle` instance with the style ID. |
+| [`createDrawingStyle`](#createdrawingstyle) | Create a user-defined `DrawingStyle` instance. |
+
 &nbsp;
 
 ## getDrawingStyle
@@ -46,15 +56,15 @@ An instance of `DrawingStyle`.
 
 **Remarks**
 
-There are 5 preset types of drawing styles.
+There are 5 preset drawing styles.
 
-| ID | Style Name |
-| -- | ---------- |
-| 0 | `DEFAULT_STYLE_ID_0` |
-| 1 | `DEFAULT_STYLE_ID_1` |
-| 2 | `DEFAULT_STYLE_ID_2` |
-| 3 | `DEFAULT_STYLE_ID_3` |
-| 4 | `DEFAULT_STYLE_ID_4` |
+| ID | Style Name | Description |
+| -- | ---------- | ----------- |
+| 1 | `DEFAULT_STYLE_ID_1` | The default style of the `DrawingLayer` with id 1. |
+| 2 | `DEFAULT_STYLE_ID_2` | The default style of the `DrawingLayer` with id 2. |
+| 3 | `DEFAULT_STYLE_ID_3` | The default style of the `DrawingLayer` with id 3. |
+| 4 | `DEFAULT_STYLE_ID_4` | The default style of user defined `DrawingLayer`. |
+| 5 | `SELECTED_STYLE_ID` | The default style of selected `DrawingItem`. |
 
 &nbsp;
 

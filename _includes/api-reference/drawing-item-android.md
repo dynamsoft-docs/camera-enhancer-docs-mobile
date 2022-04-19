@@ -47,7 +47,7 @@ public EnumDrawingItemState getState();
 
 **Return Value**
 
-The state of the drawing item. View all available drawing item states in [`EnumDrawingItemState`]().
+The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html).
 
 **Code Snippet**
 
@@ -65,7 +65,7 @@ public void setState(EnumDrawingItemState state);
 
 **Parameters**
 
-`state`: The state of the drawing item. View all available drawing item states in [`EnumDrawingItemState`]().
+`state`: The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html).
 
 **Code Snippet**
 
