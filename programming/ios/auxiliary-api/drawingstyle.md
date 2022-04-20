@@ -44,20 +44,9 @@ The constructor of the `DrawingStyle`.
                 fontFamily:(NSString*)fontFamily
 ```
 
-**Code Snippet**
+**Remarks**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DrawingStyle* drawingStyle = [[DrawingStyle alloc] initWithId:0 strokeColor:strokeColor strokeWidth:1 fillColor:fillColor textColor:textColor fontSize:12 fontFamily:"Your-Targeting-Font-Family"];
-```
-2. 
-```swift
-var drawingStyle:DrawingStyle! = DrawingStyle.init(id:0, strokeColor:strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, fontSize:12, fontFamily:"Your-Targeting-Font-Family")
-```
+Please use [`DrawingStyleManager.createDrawingStyle`](drawingstylemanager.md#createdrawingstyle) to create the drawing style.
 
 &nbsp;
 

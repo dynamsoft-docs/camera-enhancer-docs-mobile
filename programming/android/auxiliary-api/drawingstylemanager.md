@@ -37,17 +37,18 @@ DrawingStyle defaultStyle = DrawingStyleManager.getDrawingStyle(0);
 
 **Remarks**
 
-**Remarks**
+There are 8 preset drawing styles.
 
-There are 5 preset drawing styles.
-
-| ID | Style Name | Description |
-| -- | ---------- | ----------- |
-| 1 | `DEFAULT_STYLE_ID_1` | The default style of the `DrawingLayer` with id 1. |
-| 2 | `DEFAULT_STYLE_ID_2` | The default style of the `DrawingLayer` with id 2. |
-| 3 | `DEFAULT_STYLE_ID_3` | The default style of the `DrawingLayer` with id 3. |
-| 4 | `DEFAULT_STYLE_ID_4` | The default style of user defined `DrawingLayer`. |
-| 5 | `SELECTED_STYLE_ID` | The default style of selected `DrawingItem`. |
+| ID | Style Name |
+| -- | ---------- |
+| 1 | `DEFAULT_STYLE_ID_1` |
+| 2 | `DEFAULT_STYLE_ID_2` |
+| 3 | `DEFAULT_STYLE_ID_3` |
+| 4 | `DEFAULT_STYLE_ID_4` |
+| 5 | `SELECTED_STYLE_ID_1` |
+| 6 | `SELECTED_STYLE_ID_2` |
+| 7 | `SELECTED_STYLE_ID_3` |
+| 8 | `SELECTED_STYLE_ID_4` |
 
 &nbsp;
 

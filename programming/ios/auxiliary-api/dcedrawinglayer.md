@@ -19,9 +19,9 @@ breadcrumbText: iOS DCEDrawingLayer Class
 | [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
 | [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
 | [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
-| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
-| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
-| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId`](#setdrawingstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId:state:`](#setdrawingstyleidstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId:state:mediaType:`](#setdrawingstyleidstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
 | [`visible`](#visible) | The property that stores the visibility of the `DrawingLayer`. |
 
 &nbsp;
@@ -34,24 +34,16 @@ The constructor of the `DCEDrawingLayer` class. Initialize the instance of the `
 - (instancetype) initWithId:(NSInteger)id;
 ```
 
+**Remarks**
+
+Please initialize the DrawingLayers via the following methods:
+
+- [`DCEImageEditorView.createDrawingLayer`](dceimageeditorview.md#createdrawinglayer)
+- [`DCECameraView.createDrawingLayer`](dcecameraview.md#createdrawinglayer)
+
 **Parameters**
 
 `id`: Indicates the id of the layer.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DCEDrawingLayer* drawingLayer = [[DCEDrawingLayer alloc] initWithId: 0];
-```
-2. 
-```swift
-var drawingLayer:DCEDrawingLayer! = DCEDrawingLayer.init(id:0)
-```
 
 ## id
 
@@ -184,7 +176,7 @@ drawingLayer.clearDrawingItems()
 
 &nbsp;
 
-## setDrawingStyleId(styleId)
+## setDrawingStyleId
 
 Specify a style ID for all available `DrawingItems`.
 
@@ -213,7 +205,7 @@ drawingLayer.setDrawingStyleId(0)
 
 &nbsp;
 
-## setDrawingStyleId(styleId,state)
+## setDrawingStyleId:state:
 
 Specify a style ID for the targeting `DrawingItems`.
 
@@ -244,7 +236,7 @@ drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected)
 
 &nbsp;
 
-## setDrawingStyleId(styleId,state,mediaType)
+## setDrawingStyleId:state:mediaType:
 
 Specify a style ID for the targeting `DrawingItems`.
 

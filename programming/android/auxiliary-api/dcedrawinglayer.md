@@ -23,9 +23,9 @@ class com.dynamsoft.dce.DCEDrawingLayer
 | [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
 | [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
 | [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
-| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
-| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
-| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Specify a style ID for all available `DrawingItems`. |
+| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Specify a style ID for the targeting `DrawingItems`. |
+| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Specify a style ID for the targeting `DrawingItems`. |
 | [`setVisible`](#setvisible) | Set the visibility of the `DrawingLayer`. |
 | [`isVisible`](#isvisible) | Get the visibility of the `DrawingLayer`. |
 

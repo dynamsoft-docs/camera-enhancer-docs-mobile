@@ -75,12 +75,16 @@ public DCEDrawingLayer getDrawingLayer(int id);
 
 **Parameters**
 
-`id`: The id of the `DrawingLayer`. It should be one of the following:
+`id`: The id of the `DrawingLayer`.
 
-- `DEFAULT_LAYER_ID`
-- `DDN_LAYER_ID`
-- `DBR_LAYER_ID`
-- `DLR_LAYER_ID`
+**Available ID List**
+
+| Layer | ID |
+| ----- | -- |
+| DDN_LAYER_ID | 1 |
+| DBR_LAYER_ID | 2 |
+| DLR_LAYER_ID | 3 |
+| USER_DEFINED_LAYER_BASE_ID | 100 |
 
 **Return Value**
 

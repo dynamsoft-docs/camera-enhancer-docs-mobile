@@ -258,6 +258,19 @@ public DCEDrawingLayer getDrawingLayer(int id);
 
 `id`: The id of the target `DCEDrawingLayer`.
 
+**Parameters**
+
+`id`: The id of the `DrawingLayer`.
+
+**Available ID List**
+
+| Layer | ID |
+| ----- | -- |
+| DDN_LAYER_ID | 1 |
+| DBR_LAYER_ID | 2 |
+| DLR_LAYER_ID | 3 |
+| USER_DEFINED_LAYER_BASE_ID | 100 |
+
 **Code Snippet**
 
 ```java

@@ -44,6 +44,10 @@ The constructor of the `DrawingStyle`.
 public DrawingStyle(int id, int strokeColor, float strokeWidth, int fillColor, int textColor, int fontSize, String fontFamily);
 ```
 
+**Remarks**
+
+Please use [`DrawingStyleManager.createDrawingStyle`](drawingstylemanager.md#createdrawingstyle) to create the drawing style.
+
 &nbsp;
 
 ## getId
