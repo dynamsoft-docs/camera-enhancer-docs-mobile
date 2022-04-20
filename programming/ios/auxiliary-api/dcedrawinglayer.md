@@ -34,6 +34,10 @@ The constructor of the `DCEDrawingLayer` class. Initialize the instance of the `
 - (instancetype) initWithId:(NSInteger)id;
 ```
 
+**Parameters**
+
+`id`: Indicates the id of the layer.
+
 **Remarks**
 
 Please initialize the DrawingLayers via the following methods:
@@ -41,9 +45,7 @@ Please initialize the DrawingLayers via the following methods:
 - [`DCEImageEditorView.createDrawingLayer`](dceimageeditorview.md#createdrawinglayer)
 - [`DCECameraView.createDrawingLayer`](dcecameraview.md#createdrawinglayer)
 
-**Parameters**
-
-`id`: Indicates the id of the layer.
+&nbsp;
 
 ## id
 

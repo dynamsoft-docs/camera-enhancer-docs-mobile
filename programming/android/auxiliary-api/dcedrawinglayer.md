@@ -35,15 +35,20 @@ class com.dynamsoft.dce.DCEDrawingLayer
 
 The constructor of the `DCEDrawingLayer` class.
 
+```java
+public DCEDrawingLayer(int id);
+```
+
 **Parameters**
 
 `id`: Indicate the ID of the `DrawingLayer`.
 
-**Code Snippet**
+**Remarks**
 
-```java
-DCEDrawingLayer drawingLayer = new DCEDrawingLayer(0);
-```
+Please initialize the DrawingLayers via the following methods:
+
+- [`DCEImageEditorView.createDrawingLayer`](dceimageeditorview.md#createdrawinglayer)
+- [`DCECameraView.createDrawingLayer`](dcecameraview.md#createdrawinglayer)
 
 &nbsp;
 
