@@ -11,6 +11,12 @@ breadcrumbText: iOS DCEDrawingLayer Class
 
 # DCEDrawingLayer
 
+The layers that contains `DrawingItems`. Users can add configurations for the `DrawingItems` via `DCEDrawingLayer`
+
+```objc
+@interface DCEDrawingLayer
+```
+
 | Method Name | Description |
 | ----------- | ----------- |
 | [`initWithId`](#dcedrawinglayer) | The constructor of the `DCEDrawingLayer` class. |

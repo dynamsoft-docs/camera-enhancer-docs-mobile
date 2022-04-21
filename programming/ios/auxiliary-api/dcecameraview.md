@@ -27,6 +27,8 @@ breadcrumbText: iOS DCECameraView Class
 | [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
 | [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
 | [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
+| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
 
 &nbsp;
 

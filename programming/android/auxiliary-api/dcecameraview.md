@@ -30,7 +30,7 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
-| [`createDrawingLayer`](#createdrawinglayer) | Create a user defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
 
 &nbsp;
 
@@ -281,7 +281,7 @@ DCEDrawingLayer layer = dceCameraView.getDrawingLayer(0);
 
 ## createDrawingLayer
 
-Create a user defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance.
+Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance.
 
 ```java
 public DCEDrawingLayer createDrawingLayer();

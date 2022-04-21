@@ -14,6 +14,7 @@ breadcrumbText: iOS DrawingStyleManager Class
 The class that stores the `DrawingStyles`.
 
 ```objc
+@interface DrawingStyleManager
 ```
 
 | Method | Description |

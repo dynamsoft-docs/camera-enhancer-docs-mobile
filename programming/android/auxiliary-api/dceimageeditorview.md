@@ -17,8 +17,8 @@ breadcrumbText: Android DCEImageEditorView Class
 | ----------- | ----------- |
 | [`setOriginalImage`](#setoriginalimage) | Set the background image of the view with an original image. |
 | [`getOriginalImage`](#getoriginalimage) | Get the current backgroud image. |
-| [`getDrawingLayer`](#getdrawinglayer) | Get the [[`DCEDrawingLayer`](dcedrawinglayer.md)](dcedrawinglayer.md) instance with the layer ID. |
-| [`createDrawingLayer`](#createdrawinglayer) | Create a user defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
 | [`getSelectedDrawingItem`](#getselecteddrawingitem) | Get the selected drawing item. |
 
 &nbsp;
@@ -100,7 +100,7 @@ DCEDrawingLayer drawingLayer = dceImageEditorView.getDrawingLayer(2);
 
 ## createDrawingLayer
 
-Create a user defined `DrawingLayer` instance.
+Create a user-defined `DrawingLayer` instance.
 
 ```java
 public DCEDrawingLayer createDrawingLayer();

@@ -54,7 +54,7 @@ There are 8 preset drawing styles.
 
 ## createDrawingStyle
 
-Create a user defined `DrawingStyle` instance.
+Create a user-defined `DrawingStyle` instance.
 
 ```java
 public static int createDrawingStyle(int strokeColor, float strokeWidth, int fillColor, int textColor, int fontSize, String fontFamily);

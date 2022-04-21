@@ -11,6 +11,8 @@ breadcrumbText: Android DCEDrawingLayer Class
 
 # DCEDrawingLayer
 
+The layers that contains `DrawingItems`. Users can add configurations for the `DrawingItems` via `DCEDrawingLayer`
+
 ```java
 class com.dynamsoft.dce.DCEDrawingLayer
 ```
@@ -19,13 +21,13 @@ class com.dynamsoft.dce.DCEDrawingLayer
 | ----------- | ----------- |
 | [`DCEDrawingLayer`](#dcedrawinglayer) | The constructor of the `DCEDrawingLayer` class. |
 | [`getId`](#getid) | Get the `DrawingLayer` ID of the `DrawingLayer`. |
-| [`addDrawingItems`](#adddrawingitems) | Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the drawing item list of the current `DrawingLayer`. |
-| [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
-| [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
-| [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
-| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Specify a style ID for all available `DrawingItems`. |
-| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Specify a style ID for the targeting `DrawingItems`. |
-| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Specify a style ID for the targeting `DrawingItems`. |
+| [`addDrawingItems`](#adddrawingitems) | Add a list of [`DrawingItems`](drawingitem.md) to the `DrawingLayer`. These [`DrawingItems`](drawingitem.md) will be appended to the drawing item list of the current `DrawingLayer`. |
+| [`setDrawingItems`](#setdrawingitems) | Set a list of [`DrawingItems`](drawingitem.md) to the `DrawingLayer`. These [`DrawingItems`](drawingitem.md) will replace the previous [`DrawingItems`](drawingitem.md) of the current `DrawingLayer`. |
+| [`getDrawingItems`](#getdrawingitems) | Get all available [`DrawingItems`](drawingitem.md) in the `DrawingLayer`. |
+| [`clearDrawingItems`](#cleardrawingitems) | Clear all available [`DrawingItems`](drawingitem.md) in the `DrawingLayer`. |
+| [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Specify a style ID for all available [`DrawingItems`](drawingitem.md). |
+| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). |
+| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). |
 | [`setVisible`](#setvisible) | Set the visibility of the `DrawingLayer`. |
 | [`isVisible`](#isvisible) | Get the visibility of the `DrawingLayer`. |
 
@@ -80,7 +82,7 @@ int id = drawingLayer.getId();
 
 ## addDrawingItems
 
-Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the drawing item list of the current `DrawingLayer`.
+Add a list of [`DrawingItems`](drawingitem.md) to the `DrawingLayer`. These [`DrawingItems`](drawingitem.md) will be appended to the drawing item list of the current `DrawingLayer`.
 
 ```java
 public void addDrawingItems(Arraylist<DrawingItem> items); 
@@ -88,7 +90,7 @@ public void addDrawingItems(Arraylist<DrawingItem> items);
 
 **Parameters**
 
-`items`: A list of `DrawingItems`.
+`items`: A list of [`DrawingItems`](drawingitem.md).
 
 **Code Snippet**
 
@@ -104,7 +106,7 @@ drawingLayer.addDrawingItems(drawingItems);
 
 ## setDrawingItems
 
-Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`.
+Set a list of [`DrawingItems`](drawingitem.md) to the `DrawingLayer`. These [`DrawingItems`](drawingitem.md) will replace the previous [`DrawingItems`](drawingitem.md) of the current `DrawingLayer`.
 
 ```java
 public void setDrawingItems(Arraylist<DrawingItem> items); 
@@ -112,7 +114,7 @@ public void setDrawingItems(Arraylist<DrawingItem> items);
 
 **Parameters**
 
-`items`: A list of `DrawingItems`.
+`items`: A list of [`DrawingItems`](drawingitem.md).
 
 **Code Snippet**
 
@@ -128,7 +130,7 @@ drawingLayer.setDrawingItems(drawingItems);
 
 ## getDrawingItems
 
-Get all available `DrawingItems` in the `DrawingLayer`.
+Get all available [`DrawingItems`](drawingitem.md) in the `DrawingLayer`.
 
 ```java
 public Arraylist<DrawingItem> getDrawingItems();
@@ -136,7 +138,7 @@ public Arraylist<DrawingItem> getDrawingItems();
 
 **Return Value**
 
-A list that includes all available `DrawingItems`.
+A list that includes all available [`DrawingItems`](drawingitem.md).
 
 **Code Snippet**
 
@@ -148,7 +150,7 @@ ArrayList<DrawingItem> drawingItems = dceDrawingLayer.getDrawingItems();
 
 ## clearDrawingItems
 
-Clear all available `DrawingItems` in the `DrawingLayer`.
+Clear all available [`DrawingItems`](drawingitem.md) in the `DrawingLayer`.
 
 ```java
 public void clearDrawingItems();
@@ -164,7 +166,7 @@ drawingLayer.clearDrawingItems();
 
 ## setDrawingStyleId(styleId)
 
-Specify a style ID for all available `DrawingItems`.
+Specify a style ID for all available [`DrawingItems`](drawingitem.md).
 
 ```java
 public void setDrawingStyleId(int styleId);
@@ -184,7 +186,7 @@ drawingLayer.setDrawingStyleId(0);
 
 ## setDrawingStyleId(styleId,state)
 
-Specify a style ID for the targeting `DrawingItems`.
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.md).
 
 ```java
 public void setDrawingStyleId(int styleId, EnumDrawingItemState state);
@@ -205,7 +207,7 @@ drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED);
 
 ## setDrawingStyleId(styleId,state,mediaType)
 
-Specify a style ID for the targeting `DrawingItems`.
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.md).
 
 ```java
 public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawingItemMediaType[] mediaTypes);
