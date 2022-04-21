@@ -251,7 +251,7 @@ When the property value is true, the torch button should be displayed. Otherwise
 
 **Return Value**
 
-The targeting instance of `DCEDrawingLayer`.
+The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
 
 **Code Snippet**
 

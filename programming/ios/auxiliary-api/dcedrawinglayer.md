@@ -28,7 +28,7 @@ breadcrumbText: iOS DCEDrawingLayer Class
 
 ## initWithId
 
-The constructor of the `DCEDrawingLayer` class. Initialize the instance of the `DCEDrawingLayer` class.
+The constructor of the [`DCEDrawingLayer`](dcedrawinglayer.md) class. Initialize the instance of the [`DCEDrawingLayer`](dcedrawinglayer.md) class.
 
 ```objc
 - (instancetype) initWithId:(NSInteger)id;
