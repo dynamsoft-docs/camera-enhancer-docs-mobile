@@ -77,8 +77,13 @@ There are 8 preset drawing styles.
 Create a user-defined `DrawingStyle` instance.
 
 ```objc
-+(NSInteger)createDrawingStyle:(UIColor*)strokeColor strokeWidth:(CGFloat)strokeWidth 
-fillColor:(UIColor*) fillColor
++(NSInteger)createDrawingStyle:(UIColor*)strokeColor
+                   strokeWidth:(CGFloat)strokeWidth
+                     fillColor:(UIColor*) fillColor
+                     textColor:(UIColor*) textColor 
+                      fontSize:(NSInteger)fontSize 
+                    fontFamily:(NString*) fontFamily;
+
 ```
 
 **Parameters**

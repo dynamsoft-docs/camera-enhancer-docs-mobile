@@ -22,20 +22,30 @@ The property that indicates the state of the `DrawingItem`. View all available `
 
 &nbsp;
 
-## coordinateSystem
+## getMediaType
 
-The property that indicates the coordinate system of the `DrawingItem`. It can be the image coordinate or the view coordinate. View all available `DrawingItem` coordinate systems in [`EnumCoordinateSystem`]({{ site.enumerations }}enum-coordinate-system.html).
-
-```objc
-@property (assign, nonatomic) EnumCoordinateSystem coordinateSystem;
-```
-
-## mediaType
-
-The property that indicates the media type of the `DrawingItem`.
+Get the media type of the `DrawingItem`.
 
 ```objc
-@property (assign, nonatomic, readonly) EnumDrawingItemMeidaType mediaType;
+- (EnumDrawingItemMediaType) getMediaType;
 ```
 
+**Return Value**
+
+The media type of the `DrawingItem`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+EnumDrawingItemMediaType mediaType = [drawingItem getMediaType];
+```
+2. 
+```swift
+let mediaType = drawingItem.getMediaType()
+```
 
