@@ -50,14 +50,15 @@ The camera setting JSON Strings.
 
 To update from JSON string:
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce updateCameraSettingFromJson:@"json string"];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.updateCameraSetting(fromJson: "Your json string")
 ```
@@ -78,14 +79,15 @@ The camera setting JSON Strings.
 
 To update from JSON file:
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce updateCameraSettingFromFile:@"your json file path"];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.updateCameraSettingFromFile(fromFile: "Your file path")
 ```
@@ -127,14 +129,15 @@ Users can check the current DCE version by using this API.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getVersion];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getVersion()
 ```
@@ -153,14 +156,15 @@ Get the current status (on/off) of the camera.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getCameraCurrentState];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getCameraCurrentState()
 ```
@@ -179,14 +183,15 @@ Get the desired status (on/off)of the camera.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getCameraDesiredState];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getCameraDesiredState()
 ```
@@ -205,14 +210,15 @@ Set the camera state.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setCameraDesiredState:CAMERA_STATE_ON];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setCameraDesiredState(CAMERA_STATE_ON)
 ```
@@ -228,15 +234,16 @@ Note: these APIs are created for pausing & resuming the camera but the camera mo
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce pauseCamera];
 [dce resumeCamera];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.pauseCamera()
 dce.resumeCamera()
@@ -253,15 +260,16 @@ Control the stopping & starting of the camera module.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce startScanning];
 [dce stopScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.startScanning()
 dce.stopScanning()
@@ -281,14 +289,15 @@ Add Camera Listener
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce addCameraListener:self];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addCameraListener(self)
 ```
@@ -307,14 +316,15 @@ Get the current torch state.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getTorchCurrentState];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getTorchCurrentState()
 ```
@@ -333,14 +343,15 @@ Get desired torch state (on/off)
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getTorchDesiredState];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getTorchDesiredState()
 ```
@@ -359,14 +370,15 @@ Set the torch on/off.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setTorchDesiredState:TorchState.on];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setTorchDesiredState(TorchState.on)
 ```
@@ -385,14 +397,15 @@ Add the torch listener.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce addTorchListener:self];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
 ```
@@ -411,14 +424,15 @@ Get the camera position. DCE will use the back camera as default.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getCameraPosition];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getCameraPosition()
 ```
@@ -437,14 +451,15 @@ Change the camera (front/back).
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce switchCameraPosition];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.switchCameraPosition()
 ```
@@ -463,14 +478,15 @@ Get the current resolution setting.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce getResolution];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.getResolution()
 ```
@@ -489,14 +505,15 @@ Set the resolution.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setResolution:RESOLUTION_1080P];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setResolution(EnumResolution.EnumRESOLUTION_1080P)
 ```

@@ -42,15 +42,16 @@ The following sample will demonstrate how to acquire a frame from video streamin
 
 5. In the `ViewController.m` or `ViewController.swift` Import Dynamsoft Camera Enhancer.
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 import DynamsoftCameraEnhancer
 ```
 
@@ -66,8 +67,11 @@ In this section, we continue working on the `ViewController` file in the project
 
 Delcare the DCE & DCECameraView property.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface ViewController ()<DCEFrameListener>
 
@@ -76,9 +80,7 @@ Objective-C:
 
 @end
 ```
-
-Swift:
-
+2. 
 ```swift
 var dce:DynamsoftCameraEnhancer! = nil
 var dceView:DCECameraView! = nil
@@ -88,8 +90,11 @@ var dceView:DCECameraView! = nil
 
 Initialize the DCE & DCECameraView in a method.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)configurationDCE{
   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
@@ -99,9 +104,7 @@ Objective-C:
   [_dce addListener:self];
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 func configurationDCE() {
   dceView = DCECameraView.init(frame: self.view.bounds)
@@ -114,8 +117,11 @@ func configurationDCE() {
 
 Remember to add the `configurationDCE` to the `viewDidLoad` method
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -156,14 +162,15 @@ Dynamsoft Camera Enhancer provides two solutions for fetching the video frames:
 
 Add `DCEFrameListener` to your `ViewController` so that you can use `FrameOutputCallback` to get video frames.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface ViewController ()<DCEFrameListener>
 ```
-
-Swift:
-
+2. 
 ```swift
 class ViewController: UIViewController,DCEFrameListener{
   //...
@@ -188,9 +195,7 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
   }
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
   if isview {
@@ -212,8 +217,11 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
 
 Add the trigger of the capture button.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 
 @implementation ViewController{
@@ -254,9 +262,7 @@ Objective-C:
   [photoButton setEnabled:true];
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // Add these varibles to capture and display images.
 var photoButton:UIButton! = UIButton()

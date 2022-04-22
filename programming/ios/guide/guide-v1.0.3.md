@@ -26,15 +26,16 @@ breadcrumbText: iOS Guide
 
 4. Import Dynamsoft Camera Enhancer
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 import DynamsoftCameraEnhancer
 ```
 

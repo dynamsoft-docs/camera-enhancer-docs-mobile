@@ -26,8 +26,8 @@ The layers that contains `DrawingItems`. Users can add configurations for the `D
 | [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
 | [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
 | [`setDrawingStyleId`](#setdrawingstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
-| [`setDrawingStyleId:state:`](#setdrawingstyleidstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
-| [`setDrawingStyleId:state:mediaType:`](#setdrawingstyleidstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId:state:`](#setdrawingstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
+| [`setDrawingStyleId:state:mediaType:`](#setdrawingstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
 | [`visible`](#visible) | The property that stores the visibility of the `DrawingLayer`. |
 
 &nbsp;

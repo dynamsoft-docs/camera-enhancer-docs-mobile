@@ -39,14 +39,15 @@ The instance of DynamsoftCameraEnhancer.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
 ```
-
-Swift:
-
+2. 
 ```swift
 let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 ```
@@ -66,14 +67,15 @@ Set product key and activate the SDK. It is recommended to initialize the licens
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate: self];
 ```
-
-Swift:
-
+2. 
 ```swift
 DynamsoftCameraEnhancer.initLicense("Put your license here", verificationDelegate: self)
 ```
@@ -94,14 +96,15 @@ A string value that stands for the Camera Enhancer SDK version.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSString* version = [_dce getVersion];
 ```
-
-Swift:
-
+2. 
 ```swift
 let version = dce.getVersion()
 ```
@@ -139,14 +142,15 @@ An NSArray that includes all available cameras. Users can clearly read whether t
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSArray<NSString*>* allCameras = [_dce getAllCameras];
 ```
-
-Swift:
-
+2. 
 ```swift
 let allCameraList = dce.getAllCameras()
 ```
@@ -167,14 +171,15 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce selectCamera:@"BACK_FACING_CAMERA" error: &error];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.selectCamera("BACK_FACING_CAMERA", error: &error)
 ```
@@ -202,14 +207,15 @@ The ID of the current selected camera.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSString* cameraID = [_dce getSelectedCamera];
 ```
-
-Swift:
-
+2. 
 ```swift
 let selectedCamera = dce.getSelectedCamera()
 ```
@@ -230,14 +236,15 @@ One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumera
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 EnumCameraState state = [_dce getCameraState];
 ```
-
-Swift:
-
+2. 
 ```swift
 let cameraState = dce.getCameraState()
 ```
@@ -255,14 +262,15 @@ let cameraState = dce.getCameraState()
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce open];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.open()
 ```
@@ -280,14 +288,15 @@ dce.open()
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce close];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.close()
 ```
@@ -305,14 +314,15 @@ dce.close()
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce pause];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.pause()
 ```
@@ -339,14 +349,15 @@ If the `pause` method is triggered:
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce resume];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.resume()
 ```
@@ -363,14 +374,15 @@ Turn on the torch (if the torch of the mobile device is available).
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce turnOnTorch];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.turnOnTorch()
 ```
@@ -387,14 +399,15 @@ Turn off the torch.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce turnOffTorch];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.turnOffTorch()
 ```
@@ -429,14 +442,15 @@ The latest frame in the video buffer.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 dceFrame = [_dce getFrameFromBuffer:true];
 ```
-
-Swift:
-
+2. 
 ```swift
 let dceFrame = dce.getFrameFromBuffer()
 ```
@@ -457,14 +471,15 @@ Add a listener to the `CameraEnhancer` instance. This method will have no effect
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addListener:self];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addListener(self)
 ```
@@ -485,14 +500,15 @@ Remove a previously added listener from the `CameraEnhancer` instance. This meth
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce removeListener:self];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.removeListener(self)
 ```
@@ -523,14 +539,15 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce enableFeatures:EnumFRAME_FILTER error: &error];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue, error: &error)
 ```
@@ -565,14 +582,15 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.en
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce disableFeatures:EnumFRAME_FILTER];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.disableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
 ```
@@ -604,14 +622,15 @@ A BOOL value refers to whether all the features you input are enabled.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 BOOL featureEnabled = [_dce isFeatureEnabled:EnumFRAME_FILTER];
 ```
-
-Swift:
-
+2. 
 ```swift
 let featureEnabled = dce.isFeatureEnabled(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
 ```
@@ -652,14 +671,15 @@ Set the frame rate to the input value (if the input value is available for the d
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce setFrameRate:15];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setFrameRate(15)
 ```
@@ -684,14 +704,15 @@ The current frame rate.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger frameRate = [_dce getFrameRate];
 ```
-
-Swift:
-
+2. 
 ```swift
 let frameRate = dce.getFrameRate()
 ```
@@ -712,14 +733,15 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce setResolution:EnumRESOLUTION_1080P];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setResolution(EnumResolution.EnumRESOLUTION_1080P)
 ```
@@ -740,14 +762,15 @@ The size of the current resolution.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSString* resolution = [_dce getResolution];
 ```
-
-Swift:
-
+2. 
 ```swift
 let resolution = dce.getResolution()
 ```
@@ -768,14 +791,15 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce setZoom:3.0f];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setZoom(3.0)
 ```
@@ -796,15 +820,16 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 CGPoint focusPoint = {0.4, 0.5};
 [_dce setFocus:focusPoint];
 ```
-
-Swift:
-
+2. 
 ```swift
 let focusPoint = CGPoint(x:0.4, y:0.5)
 dce.setFocus(focusPoint)
@@ -826,8 +851,11 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
 scanRegion.regionTop = 25;
@@ -837,9 +865,7 @@ scanRegion.regionRight = 75;
 scanRegion.regionMeasuredByPercentage = 1
 [_dce setScanRegion:scanRegion error: &error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let scanRegion = iRegionDefinition()
 scanRegion.regionTop = 25
@@ -876,15 +902,16 @@ The return value of `getScanRegion` is always the actual parameter of the `scanR
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iRegionDefinition* myScanRegion = [[iRegionDefinition alloc] init];
 myScanRegion = [_dce getScanRegion];
 ```
-
-Swift:
-
+2. 
 ```swift
 let scanRegion = iRegionDefinition()
 scanRegion = dce.getScanRegion()
@@ -916,14 +943,15 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce updateAdvancedSettingsFromFile:@"Put your JSON file path here." error: &error];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.updateAdvancedSettings(fromFile:"Put your JSON file path here.", error: &error)
 ```
@@ -948,14 +976,15 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce updateAdvancedSettingsFromString:@"Put your stringified JSON data here." error: &error];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.updateAdvancedSettings(from:"Put your stringified JSON data here.", error: &error)
 ```
