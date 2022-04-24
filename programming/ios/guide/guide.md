@@ -74,10 +74,8 @@ Delcare the DCE & DCECameraView property.
 >1. 
 ```objc
 @interface ViewController ()<DCEFrameListener>
-
 @property (nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property (nonatomic, strong) DCECameraView *dceView;
-
 @end
 ```
 2. 
@@ -223,14 +221,12 @@ Add the trigger of the capture button.
 >
 >1. 
 ```objc
-
 @implementation ViewController{
   // Add these varibles to capture and display images.
   UIButton *photoButton;
   UIImageView* imageView;
   bool isview;
 }
-
 // The UI for displaying the captured image.
 - (void)configurationUI{
   CGFloat w = [[UIScreen mainScreen] bounds].size.width;
@@ -245,17 +241,14 @@ Add the trigger of the capture button.
     [self.view addSubview:self->photoButton];
   });
 }
-
 // Method for capturing image
 - (void)takePictures{
   isview = true;
 }
-
 // The captured image will be displayed on another view. Add back button to get back to the camera.
 - (void)addBack{
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
 }
-
 - (void)BackToHome{
   [imageView removeFromSuperview];
   self.navigationItem.leftBarButtonItem = nil;
@@ -268,7 +261,6 @@ Add the trigger of the capture button.
 var photoButton:UIButton! = UIButton()
 var imageView:UIImageView!
 var isview:Bool = false
-
 // The UI for displaying the captured image.
 func configurationUI() {
   let w = UIScreen.main.bounds.size.width
@@ -283,17 +275,14 @@ func configurationUI() {
   self.view.addSubview(self.photoButton)
   }
 }
-
 // Method for capturing image
 @objc func takePictures() {
   isview  = true
 }
-
 // The captured image will be displayed on another view. Add back button to get back to the camera.
 func addBack(){
   self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
 }
-
 @objc func backToHome(){
   self.imageView.removeFromSuperview()
   self.photoButton?.isEnabled = true
