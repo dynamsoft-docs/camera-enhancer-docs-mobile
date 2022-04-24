@@ -179,7 +179,6 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
 >- Objective-C
 >- Swift
 >
->1. 
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
    if (isview) {
@@ -196,7 +195,6 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
    }
 }
 ```
-2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
    if isview {
