@@ -175,6 +175,12 @@ class ViewController: UIViewController,DCEFrameListener{
 
 Add `FrameOutputCallback` to your project to get frames from camera output. DCEFrame is the class that stores frame data. You can use Image processing tools to parse the image information from a DCEFrame object or use `DCEFrame.toUIImage` to convert it into a UIImage for other usages.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
   if (isview) {
