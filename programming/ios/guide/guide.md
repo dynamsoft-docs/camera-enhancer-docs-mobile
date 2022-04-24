@@ -175,38 +175,40 @@ class ViewController: UIViewController,DCEFrameListener{
 
 Add `FrameOutputCallback` to your project to get frames from camera output. DCEFrame is the class that stores frame data. You can use Image processing tools to parse the image information from a DCEFrame object or use `DCEFrame.toUIImage` to convert it into a UIImage for other usages.
 
-<div class="sample-code-prefix template2"></div>
+<div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
+>1. 
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
    if (isview) {
       isview = false;
       dispatch_async(dispatch_get_main_queue(), ^{
-         [self->photoButton setEnabled:false];
-         UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+             [self->photoButton setEnabled:false];
+             UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
                                                   scale: 1.0
                                             orientation: UIImageOrientationRight];
-         [self->imageView setImage:image];
-         [self.view addSubview:self->imageView];
-         [self addBack];
+             [self->imageView setImage:image];
+             [self.view addSubview:self->imageView];
+             [self addBack];
       });
    }
 }
 ```
+2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
    if isview {
       isview = false
       DispatchQueue.main.async {
-         self.photoButton?.isEnabled = false
-         var image:UIImage!
-         image = frame.toUIImage()
-         image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
-         self.imageView.image = image
-         self.view.addSubview(self.imageView)
-         self.addBack()
+             self.photoButton?.isEnabled = false
+             var image:UIImage!
+             image = frame.toUIImage()
+             image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+             self.imageView.image = image
+             self.view.addSubview(self.imageView)
+             self.addBack()
       }
    }
 }
@@ -273,7 +275,7 @@ func configurationUI() {
   self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
   photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
   DispatchQueue.main.async {
-  self.view.addSubview(self.photoButton)
+    self.view.addSubview(self.photoButton)
   }
 }
 // Method for capturing image
