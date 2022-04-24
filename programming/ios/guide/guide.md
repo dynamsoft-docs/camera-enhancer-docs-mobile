@@ -183,34 +183,34 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
   if (isview) {
-    isview = false;
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [self->photoButton setEnabled:false];
-      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
-                                                  scale: 1.0
-                                            orientation: UIImageOrientationRight];
-      [self->imageView setImage:image];
-      [self.view addSubview:self->imageView];
-      [self addBack];
-    });
+        isview = false;
+        dispatch_async(dispatch_get_main_queue(), ^{
+          [self->photoButton setEnabled:false];
+          UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+                                                      scale: 1.0
+                                                orientation: UIImageOrientationRight];
+          [self->imageView setImage:image];
+          [self.view addSubview:self->imageView];
+          [self addBack];
+        });
   }
 }
 ```
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
-        if isview {
-            isview = false
-            DispatchQueue.main.async {
-                self.photoButton?.isEnabled = false
-                var image:UIImage!
-                image = frame.toUIImage()
-                image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
-                self.imageView.image = image
-                self.view.addSubview(self.imageView)
-                self.addBack()
-            }
+  if isview {
+        isview = false
+        DispatchQueue.main.async {
+            self.photoButton?.isEnabled = false
+            var image:UIImage!
+            image = frame.toUIImage()
+            image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+            self.imageView.image = image
+            self.view.addSubview(self.imageView)
+            self.addBack()
         }
+  }
 }
 ```
 
@@ -241,7 +241,7 @@ Add the trigger of the capture button.
   self->imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
   [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
   dispatch_async(dispatch_get_main_queue(), ^{
-          [self.view addSubview:self->photoButton];
+        [self.view addSubview:self->photoButton];
   });
 }
 // Method for capturing image
