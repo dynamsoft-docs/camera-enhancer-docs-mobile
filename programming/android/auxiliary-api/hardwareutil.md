@@ -29,7 +29,7 @@ class com.dynamsoft.dce.HardwareUtil
 
 **Related API**
 
-[`getDeviceLevel`]({{ site.android-api }}camera.html#getdevicelevel)
+[`getDeviceLevel`]({{ site.android-api }}camera-enhancer.html#getdevicelevel)
 
 **Code Snippet**
 
@@ -41,4 +41,3 @@ if (level == HardwareUtil.DEVICE_LEVEL_LOW){
     mCamera.enableDCEAutoFocus(true);
 }
 ```
-

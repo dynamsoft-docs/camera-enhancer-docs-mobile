@@ -100,7 +100,7 @@ func onPreviewFilterFrame(_ frame: FramePackage){
 **See also**
 
 - [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
-- [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter)
+- [`enableFrameFilter`]({{site.ios-api}}camera-enhancer.html#enableframefilter)
 
 ## onPreviewFastFrame
 
@@ -140,4 +140,4 @@ func onPreviewFastFrame(_ frame: FramePackage){
 **See also**
 
 - [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
-- [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode)
+- [`enableFastMode`]({{site.ios-api}}camera-enhancer.html#enablefastmode)
