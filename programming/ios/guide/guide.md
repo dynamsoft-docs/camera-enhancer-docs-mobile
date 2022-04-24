@@ -126,9 +126,7 @@ Remember to add the `configurationDCE` to the `viewDidLoad` method
   [self configurationDCE];
 }
 ```
-
-  Swift:
-
+2. 
 ```swift
 override func viewDidLoad() {
   super.viewDidLoad()
