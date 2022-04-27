@@ -37,8 +37,11 @@ The previewed original frame callback. Add code to use the original frames.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addCameraListener:self];
 
@@ -46,9 +49,7 @@ Objective-C:
     // TODO add your code for original frame
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
 
@@ -75,8 +76,11 @@ The previewed filtered frame callback. Add code to use the filtered frames.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addCameraListener:self];
 
@@ -84,9 +88,7 @@ Objective-C:
     // TODO add your code for filter frame
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
 
@@ -98,7 +100,7 @@ func onPreviewFilterFrame(_ frame: FramePackage){
 **See also**
 
 - [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
-- [`enableFrameFilter`]({{site.ios-api}}preprocess.html#enableframefilter)
+- [`enableFrameFilter`]({{site.ios-api}}camera-enhancer.html#enableframefilter)
 
 ## onPreviewFastFrame
 
@@ -114,8 +116,11 @@ The previewed fast frame callback. Add code to use the cropped frames.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addCameraListener:self];
 
@@ -123,9 +128,7 @@ Objective-C:
     // TODO add your code for fast frame
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
 
@@ -137,4 +140,4 @@ func onPreviewFastFrame(_ frame: FramePackage){
 **See also**
 
 - [`FramePackage`]({{ site.ios-api-auxiliary }}dceframe.html)
-- [`enableFastMode`]({{site.ios-api}}preprocess.html#enablefastmode)
+- [`enableFastMode`]({{site.ios-api}}camera-enhancer.html#enablefastmode)

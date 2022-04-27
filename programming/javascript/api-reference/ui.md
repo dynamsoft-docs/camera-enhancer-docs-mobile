@@ -128,7 +128,7 @@ enhancer.setScanRegionMaskStyle({
 Sets the `object-fit` CSS property of the video element.
 
 ```typescript
-setVideoFit(objectFit: string ): void;
+setVideoFit(objectFit: string): void;
 ```
 
 **Parameters**

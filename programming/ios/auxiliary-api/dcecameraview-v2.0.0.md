@@ -36,14 +36,15 @@ Init the DCECameraView.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 _dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds]
 ```
-
-Swift:
-
+2. 
 ```swift
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
@@ -58,14 +59,15 @@ Statically init the DCECameraView.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
 ```
-
-Swift:
-
+2. 
 ```swift
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
@@ -84,14 +86,15 @@ If the property value is `true`, the `cameraView` will try to draw and display o
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dceView setOverlayVisible:true];
 ```
-
-Swift:
-
+2. 
 ```swift
 dceView.overlayVisible = true
 ```
@@ -111,16 +114,17 @@ Set the stroke and fill in colour of the overlay(s).
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 UIColor* strokeColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
 UIColor* fillColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
 [_dceView setOverlayColour:strokeColor fill:fillColor];
 ```
-
-Swift:
-
+2. 
 ```swift
 let strokeColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
 let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
@@ -156,14 +160,15 @@ Set the attribute of the viewfinder. Currently only available for position and s
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dceView setViewfinder:0.1 top: 0.3 right: 0.9 bottom: 0.7];
 ```
-
-Swift:
-
+2. 
 ```swift
 _dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 ```
