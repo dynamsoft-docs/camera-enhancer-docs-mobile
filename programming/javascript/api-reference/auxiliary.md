@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Main Page
+title: Dynamsoft Camera Enhancer JavaScript API - Auxiliary APIs
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Auxiliary.
 keywords: camera enhancer, auxiliary, javascript, js
 needAutoGenerateSidebar: true

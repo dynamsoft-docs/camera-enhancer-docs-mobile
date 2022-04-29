@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Introduction
-description: This is the documentation - introduction page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, introduction
+title: Dynamsoft Camera Enhancer - Documentation
+description: This is the documentation - Main page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer
 needAutoGenerateSidebar: true
 breadcrumbText: Documentation
 ---
