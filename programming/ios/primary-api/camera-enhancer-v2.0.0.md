@@ -12,7 +12,7 @@ breadcrumbText: iOS CameraEnhancer Class
 # CameraEnhancer Class
 
 ```objc
-class com.dynamsoft.dce.CameraEnhancer
+@interface DynamsoftCameraEnhancer:NSObject
 ```
 
 ## Initialization
