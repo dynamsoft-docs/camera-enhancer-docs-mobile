@@ -86,5 +86,3 @@ The `Rect` that indicates the location of the `RectDrawingItem`.
 ```java
 android.graphics.Rect rect = drawingItem.getRect();
 ```
-
-{%- include api-reference/drawing-item-android.md -%}

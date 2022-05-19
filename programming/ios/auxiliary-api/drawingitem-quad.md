@@ -63,5 +63,3 @@ The `Quadrilateral` property that indicates the position of the `QuadDrawingItem
 ```objc
 @property (assign, nonatomic, readonly) Quadrilateral* quad; 
 ```
-
-{%- include api-reference/drawing-item-ios.md -%}

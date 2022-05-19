@@ -18,5 +18,3 @@ breadcrumbText: Android DrawingItem Class
 | [`getState`](#getstate) | Get the state of the current drawing item. |
 | [`setState`](#setstate) | Set the state of the current drawing item. |
 | [`getMediaType`](#getmediatype) | Get the media type of the current drawing item. |
-
-{%- include api-reference/drawing-item-android.md -%}

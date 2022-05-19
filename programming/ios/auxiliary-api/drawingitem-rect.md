@@ -63,5 +63,3 @@ The property that indicates the `Rect` of the `RectDrawingItem`.
 ```objc
 @property (assign, nonatomic, readonly) CGRect rect;
 ```
-
-{%- include api-reference/drawing-item-ios.md -%}

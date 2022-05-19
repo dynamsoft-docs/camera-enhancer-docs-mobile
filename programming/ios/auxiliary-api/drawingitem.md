@@ -20,5 +20,3 @@ breadcrumbText: iOS DrawingItem Class
 | [`drawingStyleId`](#drawingstyle) | Get the drawing style of the current `DrawingItem`. |
 | [`state`](#state) | Set the state of the current `DrawingItem`. |
 | [`mediaType`](#mediatype) | Get the media type of the current `DrawingItem`. |
-
-{%- include api-reference/drawing-item-ios.md -%}

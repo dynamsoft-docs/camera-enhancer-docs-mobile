@@ -75,5 +75,3 @@ The `CGRect` property that indicates the location of the `TextDrawingItem`.
 ```objc
 @property (assign, nonatomic, readonly) CGRect textRect;
 ```
-
-{%- include api-reference/drawing-item-ios.md -%}

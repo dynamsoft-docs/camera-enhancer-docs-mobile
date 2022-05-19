@@ -107,5 +107,3 @@ The Rect of the `TextDrawingItem`.
 ```java
 android.graphics.Rect rect = drawingItem.getTextRect();
 ```
-
-{%- include api-reference/drawing-item-android.md -%}
