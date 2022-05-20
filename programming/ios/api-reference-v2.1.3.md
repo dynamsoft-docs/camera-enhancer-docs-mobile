@@ -56,6 +56,7 @@ breadcrumbText: iOS API references
 
 | Method | Description |
 | ------ | ----------- |
+| [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
 | [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
 | [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
@@ -66,7 +67,6 @@ breadcrumbText: iOS API references
 | [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
-| [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ## Auxiliary Classes
 

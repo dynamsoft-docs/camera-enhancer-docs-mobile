@@ -645,7 +645,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 
 | Method | Description |
 | ------ | ----------- |
-| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
 | [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
@@ -656,38 +655,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
-
-### setFrameRate
-
-Set the frame rate to the input value (if the input value is available for the device).
-
-```objc
-- (void)setFrameRate:(NSInteger)frameRate;
-```
-
-**Parameters**
-
-`frameRate`: An int value that refers to the target frame rate.  
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[_dce setFrameRate:15];
-```
-
-Swift:
-
-```swift
-dce.setFrameRate(15)
-```
-
-**Remarks**
-
-The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
-
-&nbsp;
+| [`setFrameRate`](#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ### getFrameRate
 
@@ -978,3 +946,40 @@ Swift:
 ```swift
 dce.updateAdvancedSettings(from: "Put your stringified JSON data here.", error: &error)
 ```
+
+&nbsp;
+
+### setFrameRate
+
+> Note:
+> The method is deprecated in v9.0.2 and will be removed in v10.0 release.
+
+Set the frame rate to the input value (if the input value is available for the device).
+
+```objc
+- (void)setFrameRate:(NSInteger)frameRate;
+```
+
+**Parameters**
+
+`frameRate`: An int value that refers to the target frame rate.  
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+[_dce setFrameRate:15];
+```
+
+Swift:
+
+```swift
+dce.setFrameRate(15)
+```
+
+**Remarks**
+
+The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
+
+&nbsp;
