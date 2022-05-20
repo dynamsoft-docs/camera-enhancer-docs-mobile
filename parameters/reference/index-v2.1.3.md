@@ -104,29 +104,3 @@ The fast-mode parameters store four groups of frame cropping parameters. The cro
     }]
 }
 ```
-
-## ISO & ExposureTime
-
-Set the ISO and exposure time of the camera.
-
-For iOS users:
-
-```json
-{
-    // The 'value' and 'timescale' will be generated to a CMTime object.
-    'iOSExposureTime':{
-        'value': int64,
-        'timescale': int32,
-    },
-    'iso':30
-}
-```
-
-For Android users:
-
-```json
-{
-    'androidExposureTime': long,
-    'iso':30
-}
-```
