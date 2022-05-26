@@ -25,4 +25,4 @@ breadcrumbText: Enumerations Enhancer Features
 | `EF_ENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
 | `EF_FAST_MODE` | `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
 | `EF_AUTO_ZOOM` | `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EF_ALL` | `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
+| `EF_ALL` | `EnumALL` | `EnumALL` | 0x1f | Enable all the above features. |
