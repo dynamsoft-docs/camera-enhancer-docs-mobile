@@ -10,6 +10,23 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.1.4 (05/26/2022)
+
+### New
+
+- Added support for ISO and exposure time settings.
+
+### Fixed
+
+- Fixed a bug that might cause memory leak.
+
+### Deprecated
+
+- `CameraEnhancer.setFrameRate`
+- `EnumResolution.EnumResolution_HIGH`
+- `EnumResolution.EnumResolution_MID`
+- `EnumResolution.EnumResolution_LOW`
+
 ## 2.1.3 (03/02/2022)
 
 ### Fixed
