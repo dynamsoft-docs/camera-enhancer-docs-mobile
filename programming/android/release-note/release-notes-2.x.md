@@ -19,6 +19,7 @@ breadcrumbText: Android 2.x Release Notes
 ### Fixed
 
 - Fixed a bug that might cause memory leak.
+- Fixed a bug might occur when fetching the license.
 
 ### Deprecated
 
