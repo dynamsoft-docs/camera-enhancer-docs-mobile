@@ -113,12 +113,12 @@ For iOS users:
 
 ```json
 {
-    // The 'value' and 'timescale' will be generated to a CMTime object.
-    'iOSExposureTime':{
-        'value': 4,
-        'timescale': 2,
+    // The "value" and "timescale" will be generated to a CMTime object.
+    "iOSExposureTime":{
+        "value": 4,
+        "timescale": 2,
     },
-    'iso':30
+    "iso":30
 }
 ```
 
@@ -126,7 +126,7 @@ For Android users:
 
 ```json
 {
-    'androidExposureTime': 2,
-    'iso':30
+    "androidExposureTime": 2,
+    "iso":30
 }
 ```
