@@ -14,12 +14,12 @@ breadcrumbText: Android 2.x Release Notes
 
 ### New
 
-- Added support for ISO and exposure time settings.
+- Added support for [ISO and exposure time settings]({{ site.reference }}).
 
 ### Fixed
 
-- Fixed a bug that might cause memory leak.
-- Fixed a bug might occur when fetching the license.
+- Fixed the memory leaks caused by the misuse of the Context instance.
+- Fixed a bug might occur when Camera Enhancer shares one license with Dynamsoft Barcode Reader.
 
 ### Deprecated
 
