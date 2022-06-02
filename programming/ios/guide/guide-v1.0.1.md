@@ -28,13 +28,13 @@ breadcrumbText: iOS Guide
 
 Objective-C:
 
-```objc
+```objectivec
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
 
 Swift:
 
-```swift
+```Swift
 import DynamsoftCameraEnhancer
 ```
 

@@ -150,11 +150,8 @@ The converted image.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 @property(nonatomic, strong) DCEFrame *dceFrame;
 /*
@@ -162,7 +159,9 @@ The converted image.
 */
 [dceFrame toUIImage];
 ```
-2. 
+
+Swift:
+
 ```swift
 var dceFrame:DCEFrame! = nil
 /*

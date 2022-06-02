@@ -42,16 +42,15 @@ The following sample will demonstrate how to acquire a frame from video streamin
 
 5. In the `ViewController.m` or `ViewController.swift` Import Dynamsoft Camera Enhancer.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
+Objective-C:
+
+```objectivec
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
-2. 
-```swift
+
+Swift:
+
+```Swift
 import DynamsoftCameraEnhancer
 ```
 
@@ -67,18 +66,19 @@ In this section, we continue working on the `ViewController` file in the project
 
 Delcare the DCE & DCECameraView property.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 @interface ViewController ()<DCEFrameListener>
+
 @property (nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property (nonatomic, strong) DCECameraView *dceView;
+
 @end
 ```
-2. 
+
+Swift:
+
 ```swift
 var dce:DynamsoftCameraEnhancer! = nil
 var dceView:DCECameraView! = nil
@@ -88,11 +88,8 @@ var dceView:DCECameraView! = nil
 
 Initialize the DCE & DCECameraView in a method.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 - (void)configurationDCE{
   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
@@ -102,7 +99,9 @@ Initialize the DCE & DCECameraView in a method.
   [_dce addListener:self];
 }
 ```
-2. 
+
+Swift:
+
 ```swift
 func configurationDCE() {
   dceView = DCECameraView.init(frame: self.view.bounds)
@@ -115,18 +114,17 @@ func configurationDCE() {
 
 Remember to add the `configurationDCE` to the `viewDidLoad` method
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self configurationDCE];
 }
 ```
-2. 
+
+  Swift:
+
 ```swift
 override func viewDidLoad() {
   super.viewDidLoad()
@@ -158,15 +156,14 @@ Dynamsoft Camera Enhancer provides two solutions for fetching the video frames:
 
 Add `DCEFrameListener` to your `ViewController` so that you can use `FrameOutputCallback` to get video frames.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 @interface ViewController ()<DCEFrameListener>
 ```
-2. 
+
+Swift:
+
 ```swift
 class ViewController: UIViewController,DCEFrameListener{
   //...
@@ -175,41 +172,38 @@ class ViewController: UIViewController,DCEFrameListener{
 
 Add `FrameOutputCallback` to your project to get frames from camera output. DCEFrame is the class that stores frame data. You can use Image processing tools to parse the image information from a DCEFrame object or use `DCEFrame.toUIImage` to convert it into a UIImage for other usages.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
   if (isview) {
-        isview = false;
-        dispatch_async(dispatch_get_main_queue(), ^{
-          [self->photoButton setEnabled:false];
-          UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
-                                                      scale: 1.0
-                                                orientation: UIImageOrientationRight];
-          [self->imageView setImage:image];
-          [self.view addSubview:self->imageView];
-          [self addBack];
-        });
+    isview = false;
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self->photoButton setEnabled:false];
+      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+                                                  scale: 1.0
+                                            orientation: UIImageOrientationRight];
+      [self->imageView setImage:image];
+      [self.view addSubview:self->imageView];
+      [self addBack];
+    });
   }
 }
 ```
-2. 
+
+Swift:
+
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
   if isview {
-        isview = false
-        DispatchQueue.main.async {
-            self.photoButton?.isEnabled = false
-            var image:UIImage!
-            image = frame.toUIImage()
-            image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
-            self.imageView.image = image
-            self.view.addSubview(self.imageView)
-            self.addBack()
-        }
+    isview = false
+    DispatchQueue.main.async {
+      self.photoButton?.isEnabled = false
+      var image:UIImage!
+      image = frame.toUIImage()
+      image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+      self.imageView.image = image
+      self.view.addSubview(self.imageView)
+      self.addBack()
+    }
   }
 }
 ```
@@ -218,18 +212,17 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
 
 Add the trigger of the capture button.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
+
 @implementation ViewController{
   // Add these varibles to capture and display images.
   UIButton *photoButton;
   UIImageView* imageView;
   bool isview;
 }
+
 // The UI for displaying the captured image.
 - (void)configurationUI{
   CGFloat w = [[UIScreen mainScreen] bounds].size.width;
@@ -241,29 +234,35 @@ Add the trigger of the capture button.
   self->imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
   [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
   dispatch_async(dispatch_get_main_queue(), ^{
-        [self.view addSubview:self->photoButton];
+    [self.view addSubview:self->photoButton];
   });
 }
+
 // Method for capturing image
 - (void)takePictures{
   isview = true;
 }
+
 // The captured image will be displayed on another view. Add back button to get back to the camera.
 - (void)addBack{
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
 }
+
 - (void)BackToHome{
   [imageView removeFromSuperview];
   self.navigationItem.leftBarButtonItem = nil;
   [photoButton setEnabled:true];
 }
 ```
-2. 
+
+Swift:
+
 ```swift
 // Add these varibles to capture and display images.
 var photoButton:UIButton! = UIButton()
 var imageView:UIImageView!
 var isview:Bool = false
+
 // The UI for displaying the captured image.
 func configurationUI() {
   let w = UIScreen.main.bounds.size.width
@@ -275,17 +274,20 @@ func configurationUI() {
   self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
   photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
   DispatchQueue.main.async {
-        self.view.addSubview(self.photoButton)
+  self.view.addSubview(self.photoButton)
   }
 }
+
 // Method for capturing image
 @objc func takePictures() {
   isview  = true
 }
+
 // The captured image will be displayed on another view. Add back button to get back to the camera.
 func addBack(){
   self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
 }
+
 @objc func backToHome(){
   self.imageView.removeFromSuperview()
   self.photoButton?.isEnabled = true

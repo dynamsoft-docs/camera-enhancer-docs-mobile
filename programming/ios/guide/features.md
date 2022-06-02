@@ -32,18 +32,17 @@ On this page, you will read:
 
 Sample code:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 // To enable features
 [_dce enableFeatures:EnumFRAME_FILTER | EnumSENSOR_CONTROL error: &error];
 // To disable features
 [_dce disableFeatures:EnumFRAME_FILTER | EnumSENSOR_CONTROL];
 ```
-2. 
+
+Swift:
+
 ```swift
 // To enable features
 dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancerFeatures.EnumSENSOR_CONTROL.rawValue, error: &error)

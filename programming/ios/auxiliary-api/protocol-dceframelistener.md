@@ -36,11 +36,8 @@ Callback when the `DCEFrame` is output.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 [_dce addListener:self];
 
@@ -48,7 +45,9 @@ Callback when the `DCEFrame` is output.
     // TODO add your code
 }
 ```
-2. 
+
+Swift:
+
 ```swift
 dce.addListener(self)
 

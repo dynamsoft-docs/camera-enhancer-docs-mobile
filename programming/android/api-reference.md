@@ -77,21 +77,10 @@ noTitleIndex: true
 | [`setCameraView`]({{site.android-api}}camera-enhancer.html#setcameraview) | Sets camera video streaming UI. Read more from [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html). |
 | [`getCameraView`]({{site.android-api}}camera-enhancer.html#setcameraview) | Gets camera video streaming UI. Read more from [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html). |
 
-## UI Classes
-
-- [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html)
-- [`DCEImageEditorView`]({{site.android-api-auxiliary}}dceimageeditorview.html)
-
 ## Auxiliary Classes
 
 - [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
-- [`DCEDrawingLayer`]({{site.android-api-auxiliary}}dcedrawinglayer.html)
-- [`DrawingItem`]({{site.android-api-auxiliary}}drawingitem.html)
-- [`RectDrawingItem`]({{site.android-api-auxiliary}}rectdrawingitem.html)
-- [`QuadDrawingItem`]({{site.android-api-auxiliary}}quaddrawingitem.html)
-- [`TextDrawingItem`]({{site.android-api-auxiliary}}textdrawingitem.html)
-- [`DrawingStyleManager`]({{site.android-api-auxiliary}}drawingstylemanager.html)
-- [`DrawingStyle`]({{site.android-api-auxiliary}}drawingstyle.html)
+- [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html)
 - [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
 
@@ -107,5 +96,3 @@ noTitleIndex: true
 - [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
 - [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
 - [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
-- [`EnumDrawingItemMediaType`]({{ site.enumerations }}enum-drawing-item-media-type.html)
-- [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html)

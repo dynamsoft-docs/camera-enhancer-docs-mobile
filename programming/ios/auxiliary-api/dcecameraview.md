@@ -27,8 +27,6 @@ breadcrumbText: iOS DCECameraView Class
 | [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
 | [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
 | [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
-| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
-| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
 
 &nbsp;
 
@@ -42,15 +40,14 @@ Init the DCECameraView.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 _dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds]
 ```
-2. 
+
+Swift:
+
 ```swift
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
@@ -67,15 +64,14 @@ Statically init the DCECameraView.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
 ```
-2. 
+
+Swift:
+
 ```swift
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
@@ -96,15 +92,14 @@ If the property value is `true`, the `cameraView` will try to draw and display o
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 [_dceView setOverlayVisible:true];
 ```
-2. 
+
+Swift:
+
 ```swift
 dceView.overlayVisible = true
 ```
@@ -126,18 +121,17 @@ Set the stroke and fill in colour of the overlay(s).
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 // RGB 0 ~ 255, alpha 0 ~ 1
 UIColor* strokeColor = [UIColor colorWithRed:0 green:245 blue:255 alpha:0.5];
 UIColor* fillColor = [UIColor colorWithRed:0 green:245 blue:255 alpha:0.5];
 [_dceView setOverlayColour:strokeColor fill:fillColor];
 ```
-2. 
+
+Swift:
+
 ```swift
 // RGB 0 ~ 255, alpha 0 ~ 1
 let strokeColour = UIColor(red: 0, green: 245, blue: 255, alpha: 0.5)
@@ -178,15 +172,14 @@ Set the attribute of the viewfinder. Currently only available for position and s
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 [_dceView setViewfinder:0.1 top: 0.3 right: 0.9 bottom: 0.7];
 ```
-2. 
+
+Swift:
+
 ```swift
 _dceView.setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 ```
@@ -213,16 +206,15 @@ Set the position, size and image for the torch button.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 CGRect rect = {0, 0, 30, 30};
 [_dceView setTorchButton:(rect) torchOnImage: image torchOffImage: image];
 ```
-2. 
+
+Swift:
+
 ```swift
 _dceView.setTorchButton(CGRect.init(x: 0, y: 0, width: 500, height: 500), torchOnImage: image, torchOffImage:image)
 ```
@@ -244,61 +236,3 @@ Method `- (void)setTorchButton:(CGPoint)torchButtonPosition` is deprecated. Plea
 **Parameters**
 
 When the property value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
-
-&nbsp;
-
-## getDrawingLayer
-
-```objc
-- (DCEDrawingLayer*) getDrawingLayer:(NSInteger)id;
-```
-
-**Parameters**
-
-`id`: The id of the drawing layer.
-
-**Return Value**
-
-The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:1];
-```
-2. 
-```swift
-let drawingLayer = try? dceView.getDrawingLayer(1)
-```
-
-&nbsp;
-
-## createDrawingLayer
-
-```objc
-- (DCEDrawingLayer*) createDrawingLayer;
-```
-
-**Return Value**
-
-A user-defined drawing layer.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DCEDrawingLayer *drawingLayer = [_dceView createDrawingLayer:1];
-```
-2. 
-```swift
-let drawingLayer = try? dceView.createDrawingLayer(1)
-```

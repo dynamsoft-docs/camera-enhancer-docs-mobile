@@ -35,11 +35,8 @@ The method for user to add code when torch state is changed.
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 [_dce addTorchListener:self];
 // Add protocol requirements
@@ -47,7 +44,9 @@ The method for user to add code when torch state is changed.
     // TODO add your code for torch listener
 }
 ```
-2. 
+
+Swift:
+
 ```swift
 dce.addTorchListener(self)
 // Add protocol requirements

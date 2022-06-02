@@ -89,7 +89,7 @@ cameraEnhancer.addCameraListener(new CameraListener() {
 **See also**
 
 - [`class Frame`]({{site.android-api-auxiliary}}dceframe.html)  
-- [`enableFrameFilter`]({{site.android-api}}camera-enhancer.html#enableframefilter)
+- [`enableFrameFilter`]({{site.android-api}}preprocess.html#enableframefilter)
 
 &nbsp;
 
@@ -123,4 +123,4 @@ cameraEnhancer.addCameraListener(new CameraListener() {
 **See also**
 
 - [`class Frame`]({{site.android-api-auxiliary}}dceframe.html)
-- [`enableFastMode`]({{site.android-api}}camera-enhancer.html#enablefastmode)
+- [`enableFastMode`]({{site.android-api}}preprocess.html#enablefastmode)

@@ -20,8 +20,8 @@ In this guide, you will learn step by step on how to integrate this library into
 **Table of Contents**
 
 * [Getting Started](#getting-started)
-  * [Include the library](#include-the-library)
-  * [Interact with the library](#interact-with-the-library)
+  + [Include the library](#include-the-library)
+  + [Interact with the library](#interact-with-the-library)
 * [Hosting the Library](#hosting-the-library)
 * [FAQ](#faq)
 
@@ -42,13 +42,13 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.1/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.1/dist/dce.js"></script>
 ```
 
 #### Host the library yourself (recommended)
@@ -76,7 +76,7 @@ $ npm install dynamsoft-camera-enhancer --save
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dce-js-2.3.2/dist/dce.js"></script>
+<script src="/dce-js-2.3.1/dist/dce.js"></script>
 
 or
 

@@ -13,7 +13,7 @@ The `HardwareUtil` is an Android enumeration that stores the device level.
 
 **Related APIs**
 
-- [`getDeviceLevel`]({{site.android-api}}camera-enhancer.html#getdevicelevel)
+- [`getDeviceLevel`]({{site.android-api}}camera.html#getdevicelevel)
 
 ## Declarations
 

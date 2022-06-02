@@ -36,18 +36,17 @@ The callback of license server. Add the code in the callback function to react w
 
 **Code Snippet**
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
+Objective-C:
+
 ```objc
 - (void)DCEDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
     //TODO add your code for license verification
 }
 ```
-2. 
+
+Swift:
+
 ```swift
 func dcedlsLicenseVerificationCallback(_ isSuccess: bool, error: Error?){
     //TODO add your code for license verification
