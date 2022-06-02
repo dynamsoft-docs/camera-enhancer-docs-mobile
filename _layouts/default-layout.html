@@ -27,12 +27,7 @@
                 </div>
                 <div class="main row">
                     <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10" style="margin-bottom: 20px;">
-                        <!--
-                        <div class="dceThanksDownloading">
-                            <p class="thanksDownloadTitle">Thanks for downloading Dynamsoft Camera Enhancer <span class="editionName"></span> Package!</p>
-                            <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
-                        </div>
-                        -->
+                        
                         {{ content }}
 
                     </div>
@@ -92,18 +87,18 @@
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-android-2.1.3.zip?ver=latest');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dynamsoft-camera-enhancer-android-2.1.4.zip?ver=latest');
                     $('.dceThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
                     $('.editionName').html('iOS');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-ios-2.1.3.zip?ver=latest');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dynamsoft-camera-enhancer-ios-2.1.4.zip?ver=latest');
                     $('.dceThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/javascript/') > -1) {
                     $('.editionName').html('Javascript');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-js-2.3.2.zip?ver=latest');
-                    $('.dbrThanksDownloading').show();
+                    $('.dceThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 }
             }

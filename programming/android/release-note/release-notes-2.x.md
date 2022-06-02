@@ -10,6 +10,21 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.1.4 (05/26/2022)
+
+### New
+
+- Added support for [ISO and exposure time settings]({{ site.reference }}).
+
+### Fixed
+
+- Fixed the memory leaks caused by the misuse of the Context instance.
+- Fixed a bug where some delay might happen in initiating licenses when using along with Dynamsoft Barcode Reader Mobile Edition.
+
+### Deprecated
+
+- `CameraEnhancer.setFrameRate`
+
 ## 2.1.3 (03/02/2022)
 
 ### Fixed

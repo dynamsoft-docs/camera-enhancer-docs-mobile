@@ -77,56 +77,30 @@ The fast-mode parameters store four groups of frame cropping parameters. The cro
 **Default Value**
 
 ```json
-"FastMode": {
-    "cropRegions": [{
-        "top": 0,
-        "right": 100,
-        "bottom": 100,
-        "left": 0
+“FastMode”: {
+    “cropRegions”: [{
+        “top”: 0,
+        “right”: 100,
+        “bottom”: 100,
+        “left”: 0
     },
     {
-        "top": 25,
-        "right": 100,
-        "bottom": 75,
-        "left": 0
+        “top”: 25,
+        “right”: 100,
+        “bottom”: 75,
+        “left”: 0
     },
     {
-        "top": 25,
-        "right": 75,
-        "bottom": 75,
-        "left": 25
+        “top”: 25,
+        “right”: 75,
+        “bottom”: 75,
+        “left”: 25
     },
     {
-        "top": 25,
-        "right": 75,
-        "bottom": 75,
-        "left": 25
+        “top”: 25,
+        “right”: 75,
+        “bottom”: 75,
+        “left”: 25
     }]
-}
-```
-
-## ISO & ExposureTime
-
-Set the ISO and exposure time of the camera.
-
-For iOS users:
-
-```json
-{
-    // The "value" and "timescale" will be generated to a CMTime object.
-    "iOSExposureTime":{
-        "value": 4,
-        "timescale": 2,
-    },
-    "iso":30
-}
-```
-
-For Android users:
-
-```json
-{
-    "androidExposureTime": 2,
-    "iso":30
 }
 ```

@@ -10,6 +10,24 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.1.4 (05/26/2022)
+
+### New
+
+- Added support for [ISO and exposure time settings]({{ site.reference }}).
+
+### Fixed
+
+- Fixed the memory leaks caused by incorrectly destroying NSTimer instances.
+- Fixed a bug where some delay might happen in initiating licenses when using along with Dynamsoft Barcode Reader Mobile Edition.
+
+### Deprecated
+
+- `CameraEnhancer.setFrameRate`
+- `EnumResolution.EnumResolution_HIGH`
+- `EnumResolution.EnumResolution_MID`
+- `EnumResolution.EnumResolution_LOW`
+
 ## 2.1.3 (03/02/2022)
 
 ### Fixed

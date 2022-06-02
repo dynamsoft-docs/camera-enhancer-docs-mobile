@@ -34,6 +34,8 @@ class com.dynamsoft.dce.DCECameraView extends RelativeLayout
 
 &nbsp;
 
+
+
 ## DCECameraView
 
 Initialize the `DCECameraView` object.

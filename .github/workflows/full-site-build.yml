@@ -48,6 +48,7 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DCEDocPreview ] && rm -rf DCEDocPreview
+          [ -d camera-enhancer-docs-preview ] && rm -rf camera-enhancer-docs-preview
           [ ! -d DCEDocPreview ] && mkdir -p DCEDocPreview
           [ ! -d camera-enhancer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/camera-enhancer-docs.git camera-enhancer-docs-preview
           cd camera-enhancer-docs-preview && git pull && cd .. && cp -rfp ./camera-enhancer-docs-preview/* ./DCEDocPreview/
