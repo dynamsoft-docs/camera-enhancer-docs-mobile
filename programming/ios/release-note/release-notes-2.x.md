@@ -19,7 +19,7 @@ breadcrumbText: iOS 2.x Release Notes
 ### Fixed
 
 - Fixed the memory leaks caused by incorrectly destroying NSTimer instances.
-- Fixed a bug might occur when Camera Enhancer shares one license with Dynamsoft Barcode Reader.
+- Fixed a bug where some delay might happen in initiating licenses when using along with the Dynamsoft Barcode Reader Mobile Edition.
 
 ### Deprecated
 
