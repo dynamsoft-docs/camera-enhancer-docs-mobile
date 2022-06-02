@@ -19,7 +19,7 @@ breadcrumbText: Android 2.x Release Notes
 ### Fixed
 
 - Fixed the memory leaks caused by the misuse of the Context instance.
-- Fixed a bug where some delay might happen in initiating licenses when using along with the Dynamsoft Barcode Reader Mobile Edition.
+- Fixed a bug where some delay might happen in initiating licenses when using along with Dynamsoft Barcode Reader Mobile Edition.
 
 ### Deprecated
 
