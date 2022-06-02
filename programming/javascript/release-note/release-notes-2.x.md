@@ -10,6 +10,10 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+## 2.3.2 (03/28/2022)
+
+* Fixed bug in API `setVideoFit()` so that it works correctly with canvases created by `addScanRegionOverlayCanvas()`.
+
 ## 2.3.1 (03/21/2022)
 
 <div class="fold-panel-prefix"></div>
