@@ -91,6 +91,8 @@ ifShowScanRegionMask: boolean;
 
 Returns or sets whether the laser indicator is shown in the scan region.
 
+> This API only works when the viewer element contains the elements with the class names `dce-scanarea` and `dce-scanlight` (like the built-in viewer).
+
 ```typescript
 ifShowScanRegionLaser: boolean;
 ```
