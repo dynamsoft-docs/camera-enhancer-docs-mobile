@@ -43,6 +43,7 @@ breadcrumbText: iOS API references
 | [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`]({{site.ios-api}}camera-enhancer.html#addlistener) | Add a listener to the Camera Enhancer instance. |
 | [`removeListener`]({{site.ios-api}}camera-enhancer.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
+| [`takePhoto`]({{site.ios-api}}camera-enhancer.html#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 ### Enhanced Features
 
@@ -60,6 +61,7 @@ breadcrumbText: iOS API references
 | [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
 | [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
@@ -72,11 +74,13 @@ breadcrumbText: iOS API references
 
 - [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
 - [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
+- [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html)
 - [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html)
 
 ## Interfaces
 
 - [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
+- [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)
 - [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
 
 ## Enumerations

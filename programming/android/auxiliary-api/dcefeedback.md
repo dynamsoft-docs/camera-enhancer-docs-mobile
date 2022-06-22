@@ -13,8 +13,8 @@ breadcrumbText: Android DCEFeedback Class
 
 | Method | Description |
 | ------ | ----------- |
-| `vibrate` | Trigger a vibration when the method is called. |
-| `beep` | Trigger a beep when the method is called. |
+| [`vibrate`](#vibrate) | Trigger a vibration when the method is called. |
+| [`beep`](#beep) | Trigger a beep when the method is called. |
 
 ## vibrate
 

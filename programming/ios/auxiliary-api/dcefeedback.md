@@ -19,8 +19,8 @@ With DCEFeedback APIs, user can trigger feedback on the device to respond for so
 
 | Method | Description |
 | ------ | ----------- |
-| `vibrate` | Trigger a vibration when the method is called. |
-| `beep` | Trigger a beep when the method is called. |
+| [`vibrate`](#vibrate) | Trigger a vibration when the method is called. |
+| [`beep`](#beep) | Trigger a beep when the method is called. |
 
 ## vibrate
 
