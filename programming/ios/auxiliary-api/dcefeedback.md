@@ -19,12 +19,12 @@ With DCEFeedback APIs, user can trigger feedback on the device to respond for so
 
 | Method | Description |
 | ------ | ----------- |
-| `vibrate` | Trigger a vibration when the methoded is called. |
-| `beep` | Trigger a beep when the methoded is called. |
+| `vibrate` | Trigger a vibration when the method is called. |
+| `beep` | Trigger a beep when the method is called. |
 
 ## vibrate
 
-Trigger a vibrate when the methoded is called.
+Trigger a vibrate when the method is called.
 
 ```objc
 + (void)vibrate;
@@ -55,7 +55,7 @@ func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextRe
 
 ## beep
 
-Trigger a beep when the methoded is called.
+Trigger a beep when the method is called.
 
 ```objc
 + (void)beep;

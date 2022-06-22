@@ -13,12 +13,12 @@ breadcrumbText: Android DCEFeedback Class
 
 | Method | Description |
 | ------ | ----------- |
-| `vibrate` | Trigger a vibration when the methoded is called. |
-| `beep` | Trigger a beep when the methoded is called. |
+| `vibrate` | Trigger a vibration when the method is called. |
+| `beep` | Trigger a beep when the method is called. |
 
 ## vibrate
 
-Trigger a vibration when the methoded is called.
+Trigger a vibration when the method is called.
 
 ```java
 static void vibrate(Context context)
@@ -40,7 +40,7 @@ mReader.setTextResultListener(new TextResultListener() {
 
 ## beep
 
-Trigger a beep when the methoded is called.
+Trigger a beep when the method is called.
 
 ```java
 static void beep(Context context)
