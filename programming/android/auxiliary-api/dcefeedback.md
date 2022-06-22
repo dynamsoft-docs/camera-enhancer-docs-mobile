@@ -13,12 +13,12 @@ breadcrumbText: Android DCEFeedback Class
 
 | Method | Description |
 | ------ | ----------- |
-| `vibrate` |  |
-| `beep` |  |
+| `vibrate` | Trigger a vibration when the methoded is called. |
+| `beep` | Trigger a beep when the methoded is called. |
 
 ## vibrate
 
-Trigger a vibrate when the methoded is called.
+Trigger a vibration when the methoded is called.
 
 ```java
 static void vibrate(Context context)
