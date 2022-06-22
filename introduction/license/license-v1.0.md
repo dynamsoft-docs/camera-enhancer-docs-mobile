@@ -42,7 +42,7 @@ For iOS users:
 
 Objective-C sample
 
-```objectivec
+```objc
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Your organizationID";
     dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];

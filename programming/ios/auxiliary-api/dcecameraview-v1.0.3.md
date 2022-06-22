@@ -34,18 +34,19 @@ Add a torch controlling icon on the view.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 @property(nonatomic, strong) DCECaptureView *dceView;
 //Add a default torch icon
 [_dceView addTorch];
 //Or add a personalized torch icon
 [_dceView addTorchWith:(nonnull UIImage *) TorchOffImg:(nonnull UIImage *) frame:(CGRect)];
 ```
-
-Swift:
-
+2. 
 ```swift
 var dceView:DCECaptureView! = nil
 //Add a default torch icon
@@ -64,18 +65,19 @@ Add overlay on the view.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 @property(nonatomic, strong) DCECaptureView *dceView;
 //Add a default overlay
 [_dceView addOverlay];
 //Add a personalized overlay
 [_dceView addOverlay:(nonnull UIColor *) fill:(nonnull UIColor *)];
 ```
-
-Swift:
-
+2. 
 ```swift
 var dceView:DCECaptureView! = nil
 //Add a default overlay
@@ -98,15 +100,16 @@ Add view Listener.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 @property(nonatomic, strong) DCECaptureView *dceView;
 [_dceView addListener:(nonnull id<DCECaptureViewListener>)];
 ```
-
-Swift:
-
+2. 
 ```swift
 var dceView:DCECaptureView! = nil
 dceView.addListener(listener: DCECaptureViewListener)
@@ -122,15 +125,16 @@ Remove view listener.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 @property(nonatomic, strong) DCECaptureView *dceView;
 [_dceView removeListener];
 ```
-
-Swift:
-
+2. 
 ```swift
 var dceView:DCECaptureView! = nil
 dceView.removeListener()

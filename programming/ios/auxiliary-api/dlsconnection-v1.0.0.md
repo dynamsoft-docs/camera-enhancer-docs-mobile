@@ -30,7 +30,7 @@ Defines a struct to configure the parameters to connect to the license tracking 
 
 The URL of the license tracking server.
 
-```objectivec
+```objc
 NSString* mainServerURL
 ```
 
@@ -38,7 +38,7 @@ NSString* mainServerURL
 
 The URL of the standby license tracking server.
 
-```objectivec
+```objc
 NSString* standbyServerURL
 ```
 
@@ -46,7 +46,7 @@ NSString* standbyServerURL
 
 Set the organization ID.
 
-```objectivec
+```objc
 NSString* organizationID
 ```
 
@@ -54,7 +54,7 @@ NSString* organizationID
 
 The handshake code.
 
-```objectivec
+```objc
 NSString* handshakeCode
 ```
 
@@ -62,7 +62,7 @@ NSString* handshakeCode
 
 The session password of the handshake code set in license tracking server.
 
-```objectivec
+```objc
 NSString* sessionPassword
 ```
 
@@ -70,7 +70,7 @@ NSString* sessionPassword
 
 Set the charge way.
 
-```objectivec
+```objc
 EnumDMChargeWay chargeWay
 ```
 
@@ -78,7 +78,7 @@ EnumDMChargeWay chargeWay
 
 Set the method to generate UUID.
 
-```objectivec
+```objc
 EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 
@@ -86,7 +86,7 @@ EnumDMUUIDGenerationMethod UUIDGenerationMethod
 
 Set the max days to buffer the license info.
 
-```objectivec
+```objc
 NSInteger maxBufferDays
 ```
 
@@ -94,7 +94,7 @@ NSInteger maxBufferDays
 
 Set the count of license modules to use.
 
-```objectivec
+```objc
 NSArray* limitedLicenseModules
 ```
 
@@ -102,6 +102,6 @@ NSArray* limitedLicenseModules
 
 Set the products. This is a combined value of Product Enumration items.
 
-```objectivec
+```objc
 NSInteger products
 ```

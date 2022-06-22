@@ -26,15 +26,16 @@ breadcrumbText: iOS Guide
 
 4. Import Dynamsoft Camera Enhancer
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 import DynamsoftCameraEnhancer
 ```
 
@@ -44,7 +45,7 @@ This section is the guide for users to create a camera module in Objective-C or 
 
 Objective-C code sample:
 
-```objectivec
+```objc
 #import "ViewController.h"
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 
@@ -87,7 +88,7 @@ Objective-C code sample:
 
 Swift code sample:
 
-```Swift
+```swift
 import UIKit
 import DynamsoftCameraEnhancer
 
@@ -127,7 +128,7 @@ This section is displaying how to add DCE functions to the camera module we buil
 
 For Objective-C users, please add the following code:
 
-```objectivec
+```objc
 #import "ViewController.h"
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 
@@ -227,7 +228,7 @@ This section is the guide for users to add a video stream decoder to the camera 
 
 Add this code snippet to the Objective-C project.
 
-```objectivec
+```objc
 #import "ViewController.h"
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 //import Dynamsoft Barcode Reader for decoding
