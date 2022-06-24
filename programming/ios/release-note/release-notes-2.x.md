@@ -10,6 +10,26 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.0 (06/30/2022)
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.3.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+- Added the following APIs for capturing photos:
+  - [`DCEPhotoListener`]({{site.ios-api-auxiliary}}interface-dcephotolistener.html): The protocol that includes method [`photoOutputCallback`]({{site.ios-api-auxiliary}}interface-dcephotolistener.html#photooutputcallback) which is triggered when a photo is captured. JPEG-encoded photo can be received via the method [`photoOutputCallback`]({{site.ios-api-auxiliary}}interface-dcephotolistener.html#photooutputcallback).
+  - [`takePhoto`]({{site.ios-api}}camera-enhancer.html#takephoto): Triggers photo capturing.
+- Added a new class [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html). The following APIs are available in the class:
+  - [`vibrate`]({{site.ios-api-auxiliary}}dcefeedback.html#vibrate): Triggers a vibration.
+  - [`Beep`]({{site.ios-api-auxiliary}}dcefeedback.html#beep): Triggers a beep sound.
+- Added a new method [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) which returns the maximum available zoom factor of the device.
+
 ## 2.1.4 (05/26/2022)
 
 ### New
