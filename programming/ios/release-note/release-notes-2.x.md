@@ -25,7 +25,7 @@ breadcrumbText: iOS 2.x Release Notes
 ### Changelog
 
 - Added the following APIs for capturing photos:
-  - [`DCEPhotoListener`]({{site.ios-api-auxiliary}}interface-dcephotolistener.html): The protocol that includes method [`photoOutputCallback`]({{site.ios-api-auxiliary}}interface-dcephotolistener.html#photooutputcallback) which is triggered when a photo is captured. JPEG-encoded photo can be received via the method [`photoOutputCallback`]({{site.ios-api-auxiliary}}interface-dcephotolistener.html#photooutputcallback).
+  - [`DCEPhotoListener`]({{site.ios-api-auxiliary}}protocol-dcephotolistener.html): The protocol that includes method [`photoOutputCallback`]({{site.ios-api-auxiliary}}protocol-dcephotolistener.html#photooutputcallback) which is triggered when a photo is captured. JPEG-encoded photo can be received via the method [`photoOutputCallback`]({{site.ios-api-auxiliary}}protocol-dcephotolistener.html#photooutputcallback).
   - [`takePhoto`]({{site.ios-api}}camera-enhancer.html#takephoto): Triggers photo capturing.
 - Added a new class [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html). The following APIs are available in the class:
   - [`vibrate`]({{site.ios-api-auxiliary}}dcefeedback.html#vibrate): Triggers a vibration.
