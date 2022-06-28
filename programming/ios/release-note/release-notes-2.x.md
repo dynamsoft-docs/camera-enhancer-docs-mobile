@@ -10,7 +10,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
-## 2.3.0 (06/30/2022)
+## 2.3.0 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>
 
