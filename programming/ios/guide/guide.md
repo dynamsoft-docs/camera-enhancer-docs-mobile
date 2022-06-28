@@ -74,10 +74,8 @@ Delcare the DCE & DCECameraView property.
 >1. 
 ```objc
 @interface ViewController ()<DCEFrameListener>
-
 @property (nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property (nonatomic, strong) DCECameraView *dceView;
-
 @end
 ```
 2. 
@@ -97,21 +95,21 @@ Initialize the DCE & DCECameraView in a method.
 >1. 
 ```objc
 - (void)configurationDCE{
-  _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-  [self.view addSubView:_dceView];
-  _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
-  [_dce open];
-  [_dce addListener:self];
+   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
+   [self.view addSubView:_dceView];
+   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+   [_dce open];
+   [_dce addListener:self];
 }
 ```
 2. 
 ```swift
 func configurationDCE() {
-  dceView = DCECameraView.init(frame: self.view.bounds)
-  self.view.addSubview(dceView)
-  dce = DynamsoftCameraEnhancer.init(view: dceView)
-  dce.open()
-  dce.addListener(self)
+   dceView = DCECameraView.init(frame: self.view.bounds)
+   self.view.addSubview(dceView)
+   dce = DynamsoftCameraEnhancer.init(view: dceView)
+   dce.open()
+   dce.addListener(self)
 }
 ```
 
@@ -124,17 +122,15 @@ Remember to add the `configurationDCE` to the `viewDidLoad` method
 >1. 
 ```objc
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  [self configurationDCE];
+   [super viewDidLoad];
+   [self configurationDCE];
 }
 ```
-
-  Swift:
-
+2. 
 ```swift
 override func viewDidLoad() {
-  super.viewDidLoad()
-  configurationDCE()
+   super.viewDidLoad()
+   configurationDCE()
 }
 ```
 
@@ -173,7 +169,7 @@ Add `DCEFrameListener` to your `ViewController` so that you can use `FrameOutput
 2. 
 ```swift
 class ViewController: UIViewController,DCEFrameListener{
-  //...
+   //...
 }
 ```
 
@@ -181,35 +177,35 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
 
 ```objc
 - (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
-  if (isview) {
-    isview = false;
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [self->photoButton setEnabled:false];
-      UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
-                                                  scale: 1.0
-                                            orientation: UIImageOrientationRight];
-      [self->imageView setImage:image];
-      [self.view addSubview:self->imageView];
-      [self addBack];
-    });
-  }
+   if (isview) {
+          isview = false;
+          dispatch_async(dispatch_get_main_queue(), ^{
+             [self->photoButton setEnabled:false];
+             UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
+                                                         scale: 1.0
+                                                   orientation: UIImageOrientationRight];
+             [self->imageView setImage:image];
+             [self.view addSubview:self->imageView];
+             [self addBack];
+          });
+   }
 }
 ```
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
-  if isview {
-    isview = false
-    DispatchQueue.main.async {
-      self.photoButton?.isEnabled = false
-      var image:UIImage!
-      image = frame.toUIImage()
-      image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
-      self.imageView.image = image
-      self.view.addSubview(self.imageView)
-      self.addBack()
-    }
-  }
+   if isview {
+          isview = false
+          DispatchQueue.main.async {
+             self.photoButton?.isEnabled = false
+             var image:UIImage!
+             image = frame.toUIImage()
+             image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
+             self.imageView.image = image
+             self.view.addSubview(self.imageView)
+             self.addBack()
+          }
+   }
 }
 ```
 
@@ -223,43 +219,38 @@ Add the trigger of the capture button.
 >
 >1. 
 ```objc
-
 @implementation ViewController{
-  // Add these varibles to capture and display images.
-  UIButton *photoButton;
-  UIImageView* imageView;
-  bool isview;
+   // Add these varibles to capture and display images.
+   UIButton *photoButton;
+   UIImageView* imageView;
+   bool isview;
 }
-
 // The UI for displaying the captured image.
 - (void)configurationUI{
-  CGFloat w = [[UIScreen mainScreen] bounds].size.width;
-  CGFloat h = [[UIScreen mainScreen] bounds].size.height;
-  CGFloat SafeAreaBottomHeight = [[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 34 : 0;
-  photoButton = [[UIButton alloc] initWithFrame:CGRectMake(w / 2 - 60, h - 170 - SafeAreaBottomHeight, 120, 120)];
-  photoButton.adjustsImageWhenDisabled = NO;
-  [photoButton setImage:[UIImage imageNamed:@"icon_capture"] forState:UIControlStateNormal];
-  self->imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
-  [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [self.view addSubview:self->photoButton];
-  });
+   CGFloat w = [[UIScreen mainScreen] bounds].size.width;
+   CGFloat h = [[UIScreen mainScreen] bounds].size.height;
+   CGFloat SafeAreaBottomHeight = [[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 34 : 0;
+   photoButton = [[UIButton alloc] initWithFrame:CGRectMake(w / 2 - 60, h - 170 - SafeAreaBottomHeight, 120, 120)];
+   photoButton.adjustsImageWhenDisabled = NO;
+   [photoButton setImage:[UIImage imageNamed:@"icon_capture"] forState:UIControlStateNormal];
+   self->imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
+   [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
+   dispatch_async(dispatch_get_main_queue(), ^{
+          [self.view addSubview:self->photoButton];
+   });
 }
-
 // Method for capturing image
 - (void)takePictures{
-  isview = true;
+   isview = true;
 }
-
 // The captured image will be displayed on another view. Add back button to get back to the camera.
 - (void)addBack{
-  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
+   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(BackToHome)];
 }
-
 - (void)BackToHome{
-  [imageView removeFromSuperview];
-  self.navigationItem.leftBarButtonItem = nil;
-  [photoButton setEnabled:true];
+   [imageView removeFromSuperview];
+   self.navigationItem.leftBarButtonItem = nil;
+   [photoButton setEnabled:true];
 }
 ```
 2. 
@@ -268,36 +259,32 @@ Add the trigger of the capture button.
 var photoButton:UIButton! = UIButton()
 var imageView:UIImageView!
 var isview:Bool = false
-
 // The UI for displaying the captured image.
 func configurationUI() {
-  let w = UIScreen.main.bounds.size.width
-  let h = UIScreen.main.bounds.size.height
-  let safeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
-  photoButton = UIButton(frame: CGRect(x:w / 2 - 60, y: h - 170 - safeAreaBottomHeight, width: 120, height: 120))
-  photoButton.adjustsImageWhenDisabled = false
-  photoButton.setImage(UIImage(named: "icon_capture"), for: .normal)
-  self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
-  photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
-  DispatchQueue.main.async {
-  self.view.addSubview(self.photoButton)
-  }
+   let w = UIScreen.main.bounds.size.width
+   let h = UIScreen.main.bounds.size.height
+   let safeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
+   photoButton = UIButton(frame: CGRect(x:w / 2 - 60, y: h - 170 - safeAreaBottomHeight, width: 120, height: 120))
+   photoButton.adjustsImageWhenDisabled = false
+   photoButton.setImage(UIImage(named: "icon_capture"), for: .normal)
+   self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
+   photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
+   DispatchQueue.main.async {
+          self.view.addSubview(self.photoButton)
+   }
 }
-
 // Method for capturing image
 @objc func takePictures() {
-  isview  = true
+   isview  = true
 }
-
 // The captured image will be displayed on another view. Add back button to get back to the camera.
 func addBack(){
-  self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
+   self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .reply, target: self, action: #selector(backToHome))
 }
-
 @objc func backToHome(){
-  self.imageView.removeFromSuperview()
-  self.photoButton?.isEnabled = true
-  self.navigationItem.leftBarButtonItem = nil
+   self.imageView.removeFromSuperview()
+   self.photoButton?.isEnabled = true
+   self.navigationItem.leftBarButtonItem = nil
 }
 ```
 

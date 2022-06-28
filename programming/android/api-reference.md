@@ -90,7 +90,7 @@ noTitleIndex: true
 ## Interfaces
 
 - [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
-- [`DCEPhotoListener`]({{ site.android-api-auxiliary }}protocol-dcephotolistener.html)
+- [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)
 - [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 
 ## Enumerations
