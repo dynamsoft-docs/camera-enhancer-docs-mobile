@@ -70,7 +70,7 @@ Trigger a beep when the method is called.
 >1. 
 ```objc
 [DCEFeedback beep];
-// For example, if `vibrate` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
+// For example, if `beep` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
    [DCEFeedback beep];
 }
@@ -78,7 +78,7 @@ Trigger a beep when the method is called.
 2. 
 ```swift
 DCEFeedback.beep()
-// For example, if `vibrate` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
+// For example, if `beep` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
 func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
    DCEFeedback.beep()
 }
