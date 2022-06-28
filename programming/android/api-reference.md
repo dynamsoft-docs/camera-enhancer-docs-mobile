@@ -43,6 +43,7 @@ noTitleIndex: true
 | [`getFrameFromBuffer`]({{site.android-api}}camera-enhancer.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`]({{site.android-api}}camera-enhancer.html#addlistener) | Add a listener to the Camera Enhancer instance. |
 | [`removeListener`]({{site.android-api}}camera-enhancer.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
+| [`takePhoto`]({{site.android-api}}camera-enhancer.html#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 ### Enhanced Features
 
@@ -61,6 +62,7 @@ noTitleIndex: true
 | [`setResolution`]({{site.android-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`]({{site.android-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.android-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`getMaxZoomFactor`]({{site.android-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
 | [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
@@ -81,12 +83,14 @@ noTitleIndex: true
 
 - [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html)
+- [`DCEFeedback`]({{site.android-api-auxiliary}}dcefeedback.html)
 - [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html)
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
 
 ## Interfaces
 
 - [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
+- [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)
 - [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 
 ## Enumerations

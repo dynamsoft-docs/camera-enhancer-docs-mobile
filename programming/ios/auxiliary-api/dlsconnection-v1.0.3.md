@@ -44,7 +44,7 @@ null
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSString* mainServerURL
 ```
 
@@ -66,7 +66,7 @@ null
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSString* standbyServerURL
 ```
 
@@ -84,7 +84,7 @@ null
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSString* organizationID
 ```
 
@@ -102,7 +102,7 @@ null
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSString* handshakeCode
 ```
 
@@ -120,7 +120,7 @@ null
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSString* sessionPassword
 ```
 
@@ -138,7 +138,7 @@ DM_CW_AUTO
 
 **Code Snippet**
 
-```objectivec
+```objc
 EnumDMChargeWay chargeWay
 ```
 
@@ -160,7 +160,7 @@ DM_UUIDGM_RANDOM
 
 **Code Snippet**
 
-```objectivec
+```objc
 EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 
@@ -182,7 +182,7 @@ Set the max days to buffer the license info.
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSInteger maxBufferDays
 ```
 
@@ -190,7 +190,7 @@ NSInteger maxBufferDays
 
 Set the count of license modules to use.
 
-```objectivec
+```objc
 NSArray* limitedLicenseModules
 ```
 
@@ -204,7 +204,7 @@ Any one of the [`EnumProduct`]({{ site.enumerations }}enumproduct.html) Enumerat
 
 **Code Snippet**
 
-```objectivec
+```objc
 NSInteger products
 ```
 

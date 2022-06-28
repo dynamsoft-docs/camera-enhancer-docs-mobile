@@ -17,12 +17,13 @@ breadcrumbText: Release Note
 
 ### Highlights
 
-* The same camera enhancer instance can now be used by multiple products.
+{%- include release-notes/product-highlight-2.3.0.md -%}
 
 | Versions | Available Editions |
 | -------- | ------------------ |
 | 2.3.2 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#232-03282022)|
 | 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022)|
+| 2.3.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#230-06282022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#230-06282022) |
 
 &nbsp;
 

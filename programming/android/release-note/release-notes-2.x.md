@@ -10,6 +10,28 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.3.0 (06/28/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.3.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+- Added the following APIs for capturing photos:
+  - [`DCEPhotoListener`]({{site.android-api-auxiliary}}interface-dcephotolistener.html): The interface that includes method [`photoOutputCallback`]({{site.android-api-auxiliary}}interface-dcephotolistener.html#photooutputcallback) which is triggered when a photo is captured. JPEG-encoded photo can be received via the method [`photoOutputCallback`]({{site.android-api-auxiliary}}interface-dcephotolistener.html#photooutputcallback).
+  - [`takePhoto`]({{site.android-api}}camera-enhancer.html#takephoto): Triggers photo capturing.
+- Added a new class [`DCEFeedback`]({{site.android-api-auxiliary}}dcefeedback.html). The following APIs are available in the class:
+  - [`vibrate`]({{site.android-api-auxiliary}}dcefeedback.html#vibrate): Triggers a vibration.
+  - [`Beep`]({{site.android-api-auxiliary}}dcefeedback.html#beep): Triggers a beep sound.
+- Added a new method [`getMaxZoomFactor`]({{site.android-api}}camera-enhancer.html#getmaxzoomfactor) which returns the maximum available zoom factor of the device.
+
 ## 2.1.4 (05/26/2022)
 
 ### New

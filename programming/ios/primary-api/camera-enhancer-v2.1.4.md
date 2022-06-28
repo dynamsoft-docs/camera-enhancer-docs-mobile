@@ -439,7 +439,6 @@ dce.turnOffTorch()
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 &nbsp;
 
@@ -530,48 +529,6 @@ Remove a previously added listener from the `CameraEnhancer` instance. This meth
 2. 
 ```swift
 dce.removeListener(self)
-```
-
-&nbsp;
-
-### takePhoto
-
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/protocol-dcephotolistener.md#photooutputcallback).
-
-```objc
-- (void)takePhoto:(nonnull id<DCEPhotoListener>)listener API_AVAILABLE(ios(11.0));
-```
-
-**Parameters**
-
-`listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.md).
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface ViewController ()<DCEPhotoListener>
-- (void)configurationDCE(){
-   [_dce takePhoto:self]
-}
-- (void)photoOutputCallback:(NSData *)jpegBytes{
-   // Add your code to execute when photo is captured.
-}
-```
-2. 
-```swift
-class ViewController: UIViewController, DCEPhotoListener {
-   func configurationDCE(){
-          dce.takePhoto()
-   }
-   func photoOutputCallback(_ jpegByte: Data){
-          // Add your code to execute when photo is captured.
-   }
-}
 ```
 
 &nbsp;
@@ -711,7 +668,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
-| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
@@ -832,35 +788,6 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 2. 
 ```swift
 dce.setZoom(3.0)
-```
-
-&nbsp;
-
-### getMaxZoomFactor
-
-Get the maximum available zoom factor.
-
-```objc
-- (CGFloat)getMaxZoomFactor;
-```
-
-**Return Value**
-
-A **CGFloat** value that indicates the maximum available zoom factor of the device.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-CGFloat maxZoomFactor = [_dce getMaxZoomFactor];
-```
-2. 
-```swift
-let maxZoomFactor = dce.getMaxZoomFactor()
 ```
 
 &nbsp;

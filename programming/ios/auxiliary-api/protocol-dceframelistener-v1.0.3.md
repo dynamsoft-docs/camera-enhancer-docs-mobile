@@ -37,21 +37,20 @@ The previewed original frame callback. Add code to use the original frames.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addCameraListener:self];
-
 - (void)onPreviewOriginalFrame:(FramePackage *) frame{
     // TODO add your code for original frame
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
-
 func onPreviewOriginalFrame(_ frame: FramePackage){
     // TODO add your code for original frame
 }
@@ -75,21 +74,20 @@ The previewed filtered frame callback. Add code to use the filtered frames.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addCameraListener:self];
-
 - (void)onPreviewFilterFrame:(FramePackage *) frame{
     // TODO add your code for filter frame
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
-
 func onPreviewFilterFrame(_ frame: FramePackage){
     // TODO add your code for filter frame
 }
@@ -114,21 +112,20 @@ The previewed fast frame callback. Add code to use the cropped frames.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addCameraListener:self];
-
 - (void)onPreviewFastFrame:(FramePackage *) frame{
     // TODO add your code for fast frame
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addTorchListener(self)
-
 func onPreviewFastFrame(_ frame: FramePackage){
     // TODO add your code for fast frame
 }
