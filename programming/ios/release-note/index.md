@@ -10,6 +10,7 @@ breadcrumbText: iOS Release Note
 
 # Dynamsoft Camera Enhancer iOS SDK - Release Notes
 
+- [2.3.1 (07/11/2022)](release-notes-2.x.md/#231-07112022)
 - [2.3.0 (06/28/2022)](release-notes-2.x.md/#230-06282022)
 - [2.1.4 (05/26/2022)](release-notes-2.x.md/#214-05262022)
 - [2.1.3 (03/02/2022)](release-notes-2.x.md/#213-03022022)

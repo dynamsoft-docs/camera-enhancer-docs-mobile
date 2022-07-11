@@ -10,6 +10,12 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.1 (07/11/2022)
+
+### Fixed
+
+- Added x86_64 architecture back to the framework which was missing in 2.3.0.
+
 ## 2.3.0 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>

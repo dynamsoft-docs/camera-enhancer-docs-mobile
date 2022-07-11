@@ -736,6 +736,11 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 `scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
 
+<div align="center">
+    <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
+    <p>How to set scan region</p>
+</div>
+
 **Code Snippet**
 
 ```java
@@ -744,7 +749,7 @@ scanRegion.regionTop = 25;
 scanRegion.regionBottom = 75;
 scanRegion.regionLeft = 25;
 scanRegion.regionRight = 75;
-regionDefinition.regionMeasuredByPercentage = 1;
+scanRegion.regionMeasuredByPercentage = 1;
 
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 try {

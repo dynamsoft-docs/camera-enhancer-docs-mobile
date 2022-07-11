@@ -908,6 +908,11 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 `scanRegion`: Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
 
+<div align="center">
+    <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
+    <p>How to set scan region</p>
+</div>
+
 **Code Snippet**
 
 <div class="sample-code-prefix"></div>
