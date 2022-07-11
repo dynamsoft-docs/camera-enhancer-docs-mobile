@@ -14,7 +14,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Fixed
 
-- Fixed a bug that could cause iOS apps to be rejected by the App Stores.
+- Fixed a bug that could cause iOS apps to be rejected by the App Stores when the **Build Options - Enable BitCode** is set to **Yes**.
 
 ## 2.3.0 (06/28/2022)
 
