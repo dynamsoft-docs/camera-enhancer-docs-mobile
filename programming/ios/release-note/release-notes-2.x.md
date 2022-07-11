@@ -14,7 +14,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Fixed
 
-- Fixed a bug that x86_64 architecture is not included in the framework.
+- Added x86_64 architecture back to the framework which was missing in 2.3.0.
 
 ## 2.3.0 (06/28/2022)
 
