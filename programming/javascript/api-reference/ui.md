@@ -9,17 +9,185 @@ noTitleIndex: true
 breadcrumbText: UI
 ---
 
+# UI Class
+
+## DrawingItem
+
+```typescript
+type DrawingItem = DT_Rect | DT_Arc | DT_Text | DT_Line | DT_Polygon | DT_Group | DT_Image;
+```
+
+## DT_Rect
+
+```typescript
+class DT_Rect { 
+
+  public constructor(point: Point, width: number, height: number, styleId?: number) { }; 
+
+  point: Point; 
+
+  width: number; 
+
+  height: number; 
+
+  mediaType: EnumDrawingItemMediaType.Rect; 
+
+  styleSelector?: string; 
+
+  styleId?: number; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
+## DT_Arc
+
+```typescript
+class DT_Arc { 
+
+  constructor(point: Point, radius: number, startAngle: number, endAngle: number, styleId?: number) { }; 
+
+  point: Point; 
+
+  radius: number; 
+
+  startAngle: number; 
+
+  endAngle: number; 
+
+  mediaType: EnumDrawingItemMediaType.Arc; 
+
+  styleSelector?: string; 
+
+  styleId?: number; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
+## DT_Text
+
+```typescript
+class DT_Text { 
+
+  public constructor(text: string, point: Point, styleId?: number) { } 
+
+  point: Point; 
+
+  text: string; 
+
+  mediaType: EnumDrawingItemMediaType.Text; 
+
+  styleSelector?: string; 
+
+  styleId?: number; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
+## DT_Line
+
+```typescript
+class DT_Line { 
+
+  public constructor(startPoint: Point, endPoint: Point, styleId?: number) { } 
+
+  startPoint: c; 
+
+  endPoint: : Point; 
+
+  mediaType: EnumDrawingItemMediaType.Line; 
+
+  styleSelector?: string; 
+
+  styleId?: number; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
+## DT_Polygon
+
+```typescript
+class DT_Polygon { 
+
+  public constructor(vertices: Array<Point>, styleId?: number) { } 
+
+  vertices: Array<Point>; 
+
+  mediaType: EnumDrawingItemMediaType.Polygon; 
+
+  styleSelector?: string; 
+
+  styleId?: number; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
+## DT_Group
+
+```typescript
+class DT_Group { 
+
+  public constructor(childItems: Array<DrawingItem>) { } 
+
+  childItems: Array<DT_Rect | DT_Line | DT_Arc | DT_Text | DT_Polygon>; 
+
+  mediaType: EnumDrawingItemMediaType.Group; 
+
+  styleSelector?: string; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
+## DT_Image
+
+```typescript
+class DT_Image { 
+
+  //NOTE: If an DT_Image instance has been constructed with an image, it can be replaced later with either an HTMLImageElement or an HTMLCanvasElement. In other words, an HTMLVideoElement can only be used during the constructing. 
+
+  public constructor(HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, point: Point, styleId?: number) { } 
+
+  point: Point; 
+
+  image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement; 
+
+  mediaType: EnumDrawingItemMediaType.Image; 
+
+  styleSelector?: string; 
+
+  styleId?: number; 
+
+  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
+
+} 
+```
+
 # UI APIs
 
 | API Name | Description |
 |---|---|
 | [getVisibleRegion()](#getvisibleregion) | Returns a `Region` object which specifies which part of the original video is shown in the video element. |
-| [addScanRegionOverlayCanvas()](#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area.. |
+| [addScanRegionOverlayCanvas()](#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area. |
 | [ifShowScanRegionMask](#ifshowscanregionmask) | Returns or sets whether the scan region mask is shown. |
 | [ifShowScanRegionLaser](#ifshowscanregionlaser) | Returns or sets whether the laser indicator is shown in the scan region. |
 | [setScanRegionMaskStyle()](#setscanregionmaskstyle) | Sets the styles for the scan region mask. |
 | [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 | [getVideoFit()](#getvideofit) | Returns the value of the `object-fit` CSS property of the video element. |
+
+## ViewDecorator Setting
+| API Name | Description |
+|---|---|
 | [setViewDecorator()](#setviewdecorator) | Sets and shows the view decorator. |
 | [getViewDecorator()](#getviewdecorator) | Gets what view decorator is shown. |
 | [setViewDecoratorLineWidth()](#setviewdecoratorlinewidth) | Sets the line width for drawing the view decorator. |
@@ -27,9 +195,34 @@ breadcrumbText: UI
 | [setViewDecoratorFillStyle()](#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 
+## DrawingLayer Setting
+| API Name | Description |
+|---|---|
+| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
+| [getDrawingLayer()](#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
+| [clearDrawingLayers()](#cleardrawinglayers) | Removes all DrawingLayers. |
+
+## DrawingStyle Setting
+| API Name | Description |
+|---|---|
+| [createDrawingStyle()](#createdrawingstyle) | Creates a new DrawingStyle object and returns its ID. |
+| [getDrawingStyle()](#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
+| [getDrawingStyles()](#getdrawingstyles) | Returns all DrawingStyle objects. |
+| [updateDrawingStyle()](#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
+
+## UI Mode Setting
+| API Name | Description |
+|---|---|
+| [switchUIMode()](#switchuimode) | Switch between editor and viewer. |
+| [getUIMode()](#getuimode) | Returns the current UI mode. between editor and viewer. |
+| [setOriginalImage()](#setoriginalimage) | Set the original image to be drawn on the editor canvas.  |
+| [getOriginalImage()](#getoriginalimage) | Return the original image shown on the editor. |
+| [deleteOriginalImage()](#deleteoriginalimage) | Delete the original image and remove the canvas that shows it. |
+| [getSelectedDrawingItems()](#getselecteddrawingitems) | Return the selected DrawingItem object(s). |
+
 ## getVisibleRegion
 
-Returns a `Region` object which specifies which part of the original video is shown in the video element
+Returns a `Region` object which specifies which part of the original video is shown in the video element.
 
 ```typescript
 getVisibleRegion(inPixels?: boolean): Region;
@@ -338,3 +531,147 @@ let area = {
 enhancer.setViewDecoratorMaskFillStyle("rectangle", "rgba(50,50,50,0.3)");
 enhancer.setViewDecorator(["rectangle", "crosshair"], area);
 ```
+
+## createDrawingLayer
+
+Creates a `DrawingLayer` object and put it in an array of DrawingLayers.
+
+```typescript
+createDrawingLayer(): DrawingLayer;
+```
+
+**Return value**
+
+The visible layer represented by a `DrawingLayer` object.
+
+**Code Snippet**
+
+```js
+enhancer.createDrawingLayer();
+```
+
+## getDrawingLayer
+
+Returns the `DrawingLayer` specified by its ID. If not found, and the ID is 1, 2 or 3, the layer will be created and returned. 
+
+```typescript
+getDrawingLayer(drawingLayerId: number): DrawingLayer;
+```
+
+**Parameters**
+
+`drawingLayerId` : specify the `DrawingLayer` id.
+
+**Return value**
+
+The `DrawingLayer` object specified by its input id.
+
+**Code Snippet**
+
+```js
+enhancer.getDrawingLayer(YOUR_LAYER_ID);
+```
+
+**See also**
+
+* [DrawingLayer](interface/drawinglayer.md)
+
+## clearDrawingLayers
+
+Removes all the `DrawingLayer`s.
+
+```typescript
+clearDrawingLayers(): void;
+```
+
+**Code Snippet**
+
+```js
+enhancer.clearDrawingLayers();
+```
+
+## createDrawingStyle
+
+Creates a new `DrawingStyle` object and returns its ID. 
+
+```typescript
+createDrawingStyle(styleDefinition: DrawingStyle): number; 
+```
+
+**Parameters**
+
+`styleDefinition` : Define a `DrawingStyle` object.
+
+**Return value**
+
+The id of the created `DrawingStyle`.
+
+**Code Snippet**
+
+```js
+var drawingStyleId = enhancer.createDrawingStyle(YOUR_DRAWING_STYLE);
+```
+
+## getDrawingStyle
+
+Returns the `DrawingStyle` object specified by its Id.
+
+```typescript
+getDrawingStyle(styleId: number): DrawingStyle; 
+```
+**Parameters**
+
+`styleId` : specify a `DrawingStyle`.
+
+**Return value**
+
+The `DrawingStyle` specified by the input id.
+
+**Code Snippet**
+
+```js
+var drawingStyle = enhancer.getDrawingStyle(YOUR_STYLE_ID);
+```
+
+## getDrawingStyles
+
+Returns all `DrawingStyle` objects.
+
+```typescript
+getDrawingStyles(): Array<DrawingStyle>; 
+```
+
+**Return value**
+
+An array of all of the `DrawingStyle` objects.
+
+**Code Snippet**
+
+```js
+var drawingStyles = enhancer.getDrawingStyles();
+```
+
+## updateDrawingStyle
+
+Updates an existing `DrawingStyle` specified by its ID.
+
+```typescript
+updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): number; 
+```
+
+**Parameters**
+
+`styleId` : specify a `DrawingStyle` which needs to be updated.
+
+`styleDefinition` : Define a new `DrawingStyle` object.
+
+**Return value**
+
+The id of the updated `DrawingStyle`.
+
+**Code Snippet**
+
+```js
+enhancer.updateDrawingStyle(YOUR_STYLE_ID, YOUR_NEW_DRAWING_STYLE);
+```
+
