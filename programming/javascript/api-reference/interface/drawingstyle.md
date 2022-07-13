@@ -14,28 +14,28 @@ breadcrumbText: DrawingStyle
 
 * id: `number`
 
-  The ID of the currently used DrawingStyle.
+  The ID of the current `DrawingStyle`.
 
 * lineWidth: `number`
 
-  The line width (in pixels) of the currently used DrawingStyle. Default: 1.0.
+  The line width (in pixels) of the current `DrawingStyle`. Default: 1.0.
 
 * fillStyle: `string`
 
-  The fill color of the currently used DrawingStyle. Default: #000(black). 
+  The fill color of the current `DrawingStyle`. Default: #000(black). 
 
 * strokeStyle: `string`
 
-  The stroke color of the currently used DrawingStyle. Default: #000(black). 
+  The stroke color of the current `DrawingStyle`. Default: #000(black). 
 
-* paintMode: `string`
+* paintMode: "fill" | "stroke" | "strokeAndFill"
 
-  Optional choices: "fill" | "stroke" | "strokeAndFill".
+  Three paint modes provided.
 
 * fontSize: `number`
 
-  The fontSize of the currently used DrawingStyle. 
+  The fontSize of the current `DrawingStyle`. 
 
 * fontFamily: `string`
 
-  The fontFamily of the currently used DrawingStyle. 
+  The fontFamily of the current `DrawingStyle`. 

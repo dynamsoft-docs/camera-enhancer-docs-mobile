@@ -22,9 +22,11 @@ type DrawingItem = DT_Rect | DT_Arc | DT_Text | DT_Line | DT_Polygon | DT_Group 
 ```typescript
 class DT_Rect { 
 
-  public constructor(point: Point, width: number, height: number, styleId?: number) { }; 
+  public constructor(x: number, y: number, width: number, height: number, styleId?: number) { }; 
 
-  point: Point; 
+  x: number; 
+
+  y: number;
 
   width: number; 
 
@@ -46,9 +48,11 @@ class DT_Rect {
 ```typescript
 class DT_Arc { 
 
-  constructor(point: Point, radius: number, startAngle: number, endAngle: number, styleId?: number) { }; 
+  constructor(x: number, y: number, radius: number, startAngle: number, endAngle: number, styleId?: number) { }; 
 
-  point: Point; 
+  x: number; 
+
+  y: number; 
 
   radius: number; 
 
@@ -72,9 +76,11 @@ class DT_Arc {
 ```typescript
 class DT_Text { 
 
-  public constructor(text: string, point: Point, styleId?: number) { } 
+  public constructor(text: string, x: number, y: number, styleId?: number) { } 
 
-  point: Point; 
+  x: number; 
+
+  y: number;
 
   text: string; 
 
@@ -156,9 +162,11 @@ class DT_Image {
 
   //NOTE: If an DT_Image instance has been constructed with an image, it can be replaced later with either an HTMLImageElement or an HTMLCanvasElement. In other words, an HTMLVideoElement can only be used during the constructing. 
 
-  public constructor(HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, point: Point, styleId?: number) { } 
+  public constructor(HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, x: number, y: number, styleId?: number) { } 
 
-  point: Point; 
+  x: number; 
+
+  y: number;
 
   image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement; 
 
@@ -213,12 +221,12 @@ class DT_Image {
 ## UI Mode Setting
 | API Name | Description |
 |---|---|
-| [switchUIMode()](#switchuimode) | Switch between editor and viewer. |
-| [getUIMode()](#getuimode) | Returns the current UI mode. between editor and viewer. |
-| [setOriginalImage()](#setoriginalimage) | Set the original image to be drawn on the editor canvas.  |
-| [getOriginalImage()](#getoriginalimage) | Return the original image shown on the editor. |
-| [deleteOriginalImage()](#deleteoriginalimage) | Delete the original image and remove the canvas that shows it. |
-| [getSelectedDrawingItems()](#getselecteddrawingitems) | Return the selected DrawingItem object(s). |
+| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
+| [getUIMode()](#getuimode) | Returns the current UI mode. |
+| [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
+| [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor. |
+| [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
+| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
 
 ## getVisibleRegion
 
@@ -656,7 +664,7 @@ var drawingStyles = enhancer.getDrawingStyles();
 Updates an existing `DrawingStyle` specified by its ID.
 
 ```typescript
-updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): number; 
+updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void; 
 ```
 
 **Parameters**
@@ -665,13 +673,116 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): number;
 
 `styleDefinition` : Define a new `DrawingStyle` object.
 
-**Return value**
-
-The id of the updated `DrawingStyle`.
-
 **Code Snippet**
 
 ```js
 enhancer.updateDrawingStyle(YOUR_STYLE_ID, YOUR_NEW_DRAWING_STYLE);
 ```
 
+## switchUIMode
+
+Switches between editor mode and viewer mode.
+
+```typescript
+switchUIMode(newMode: string): void; 
+```
+
+**Parameters**
+
+`newMode` : specify the mode to switch to. Allowed values are ""editor" and "viewer". 
+
+**Code Snippet**
+
+```js
+enhancer.switchUIMode("editor");
+```
+
+## getUIMode
+
+Returns the current UI mode.
+
+```typescript
+getUIMode(): "editor" | "viewer"; 
+```
+
+**Return value**
+
+A string of the current mode's name.
+
+**Code Snippet**
+
+```js
+var mode = enhancer.getUIMode();
+```
+
+## setOriginalImage
+
+Sets an original image to be drawn on the editor canvas.
+
+```typescript
+setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number): void; 
+```
+
+**Parameters**
+
+`imageData` : specifies the image data in format of `Uint8Array`, `Uint8ClampedArray` or `HTMLCanvasElement`.
+
+`width`: specifies the width of the image data.
+
+`height`: specifies the height of the image data.
+
+**Code Snippet**
+
+```js
+enhancer.setOriginalImage(AN_IMAGE_DATA);
+```
+
+## getOriginalImage
+
+Returns the original image shown on the editor.
+
+```typescript
+getOriginalImage(): Uint8Array; 
+```
+
+**Return value**
+
+The current original image in `Uint8Array` format.
+
+**Code Snippet**
+
+```js
+var image = enhancer.getOriginalImage();
+```
+
+## deleteOriginalImage
+
+Deletes the original image and remove the canvas that shows it. 
+
+```typescript
+deleteOriginalImage(): void; 
+```
+
+**Code Snippet**
+
+```js
+enhancer.deleteOriginalImage();
+```
+
+## getSelectedDrawingItems
+
+Returns the selected `DrawingItem` object(s).
+
+```typescript
+getSelectedDrawingItems(): Array<DrawingItem>; 
+```
+
+**Return value**
+
+An array of current selected `DrawingItem` object(s).
+
+**Code Snippet**
+
+```js
+var drawingItems = enhancer.getSelectedDrawingItems();
+```
