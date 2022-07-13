@@ -681,7 +681,7 @@ enhancer.updateDrawingStyle(YOUR_STYLE_ID, YOUR_NEW_DRAWING_STYLE);
 
 ## switchUIMode
 
-Switches between editor mode and viewer mode.
+Switches between editor and viewer mode. Default UI mode is viewer. 
 
 ```typescript
 switchUIMode(newMode: string): void; 
