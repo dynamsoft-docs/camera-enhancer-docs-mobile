@@ -213,15 +213,15 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 
 **Parameters**
 
-`selectedDrawingItems`: Specifies the style by its ID.
+`selectedDrawingItems`: Specifies the selected `DrawingItem` objects.
 
-`deselectedDrawingItems`: Specifies the mediaType. 
+`deselectedDrawingItems`: Specifies the deselected `DrawingItem` objects. 
 
 **Code Snippet**
 
 ```js
 drawingLayer.onSelectionChange = (SELECTED_DRAWING_ITEMS, DESELECTED_DRAWING_ITEMS) => {
-
+    
 }
 ```
 
