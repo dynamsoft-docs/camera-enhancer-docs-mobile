@@ -19,11 +19,10 @@ breadcrumbText: DrawingLayer
 | [removeDrawingItems()](#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
 | [setDrawingItems()](#setdrawingitems) | Replaces all DrawingItem(s) of the DrawingLayer with new ones. |
 | [getDrawingItems()](#getdrawingitems) | Returns all DrawingItem(s) of the DrawingLayer. |
-| [hasDrawingItem()](#hasDrawingItem) | Check if a DrawingItem belongs to the layer. |
+| [hasDrawingItem()](#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
 | [clearDrawingItems()](#cleardrawingitems) | Removes all DrawingItem(s) of the DrawingLayer. |
-
 | [setDrawingStyle()](#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
-| [setVisible()](#setvisible) | Show or hide the DrawingLayer. |
+| [setVisible()](#setvisible) | Shows or hides the DrawingLayer. |
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
 | [onSelectionChange()](#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
@@ -104,7 +103,7 @@ var arr = drawingLayer.getDrawingItems();
 
 ## hasDrawingItem
 
-Check if a `DrawingItem` belongs to the layer.
+Checks out if a `DrawingItem` belongs to the layer.
 
 ```typescript
 hasDrawingItem(drawingItem: DrawingItem): Boolean;
@@ -159,7 +158,7 @@ drawingLayer.setDrawingStyle(DRAWING_STYLE_ID, MEDIA_TYPE_ENUM, STYLE_SELECTOR);
 
 ## setVisible
 
-Show or hide the `DrawingLayer`. 
+Shows or hides the `DrawingLayer`. 
 
 ```typescript
 setVisible(visible: boolean): void;
@@ -221,7 +220,7 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 
 ```js
 drawingLayer.onSelectionChange = (SELECTED_DRAWING_ITEMS, DESELECTED_DRAWING_ITEMS) => {
-    
+    //do ...
 }
 ```
 

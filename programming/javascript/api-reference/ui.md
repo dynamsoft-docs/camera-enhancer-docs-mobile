@@ -186,7 +186,8 @@ class DT_Image {
 | API Name | Description |
 |---|---|
 | [getVisibleRegion()](#getvisibleregion) | Returns a `Region` object which specifies which part of the original video is shown in the video element. |
-| [addScanRegionOverlayCanvas()](#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area. |
+| [addScanRegionOverlayCanvas()](#addscanregionoverlaycanvas) | Adds a canvas of the same size as the scan area directly above the scan area. |
+| [removeScanRegionOverlayCanvas()](#removescanregionoverlaycanvas) | Removes the specified Canvas element. |
 | [ifShowScanRegionMask](#ifshowscanregionmask) | Returns or sets whether the scan region mask is shown. |
 | [ifShowScanRegionLaser](#ifshowscanregionlaser) | Returns or sets whether the laser indicator is shown in the scan region. |
 | [setScanRegionMaskStyle()](#setscanregionmaskstyle) | Sets the styles for the scan region mask. |
@@ -280,6 +281,28 @@ ctx.font = '50px serif';
 ctx.fillText('Dynamsoft Camera Enhancer', 50, 90);
 ```
 
+## removeScanRegionOverlayCanvas
+
+Removes the specified Canvas element.
+
+```typescript
+removeScanRegionOverlayCanvas(cvs: HTMLCanvasELement): void;
+```
+
+**Parameters**
+
+`cvs` : specifies the canvas.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```js
+enhancer.removeScanRegionOverlayCanvas(YOUR_CVS);
+```
+
 ## ifShowScanRegionMask
 
 Returns or sets whether the scan region mask is shown.
@@ -308,7 +331,7 @@ setScanRegionMaskStyle(maskStyle: any): void;
 
 **Parameters**
 
-`maskStyle` : specify the new style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+`maskStyle` : specifies the new style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 **Return value**
 
@@ -334,7 +357,7 @@ setVideoFit(objectFit: string): void;
 
 **Parameters**
 
-`objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed. Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
+`objectFit` : specifies the new fit type. At present, only "cover" and "contain" are allowed. Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
 
 **Return value**
 
@@ -378,9 +401,9 @@ setViewDecorator(type: string | string[], area: Area): void;
 
 **Parameters**
 
-`type` : specify the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"]. If passed an empty string, the decorator is cleared.
+`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"]. If passed an empty string, the decorator is cleared.
 
-`area` : specify where to place the decorator. It accepts 4 values:
+`area` : specifies where to place the decorator. It accepts 4 values:
 * `x`,     `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
 * `width`,     `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
 
@@ -426,9 +449,9 @@ setViewDecoratorLineWidth(type: string, width: number): void;
 
 **Parameters**
 
-`type` : specify the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".
+`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".
 
-`width` : specify the line width.
+`width` : specifies the line width.
 
 **Return value**
 
@@ -457,9 +480,9 @@ setViewDecoratorStrokeStyle(type: string, strokeStyle: string): void;
 
 **Parameters**
 
-`type` : specify the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".
+`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".
 
-`strokeStyle` : specify the stroke style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle).
+`strokeStyle` : specifies the stroke style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle).
 
 **Return value**
 
@@ -488,9 +511,9 @@ setViewDecoratorFillStyle(type: string, fillStyle: string): void;
 
 **Parameters**
 
-`type` : specify the decorator type. Allowed values are "rectangle" and "focus".
+`type` : specifies the decorator type. Allowed values are "rectangle" and "focus".
 
-`fillStyle` : specify the fill style. Read more on [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+`fillStyle` : specifies the fill style. Read more on [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 **Return value**
 
@@ -519,9 +542,9 @@ setViewDecoratorMaskFillStyle(type: string, fillStyle: string): void;
 
 **Parameters**
 
-`type` : specify the decorator type. Allowed values are "rectangle" and "focus".
+`type` : specifies the decorator type. Allowed values are "rectangle" and "focus".
 
-`fillStyle` : specify the fill style. Read more on [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+`fillStyle` : specifies the fill style. Read more on [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 **Return value**
 
@@ -568,7 +591,7 @@ getDrawingLayer(drawingLayerId: number): DrawingLayer;
 
 **Parameters**
 
-`drawingLayerId` : specify the `DrawingLayer` id.
+`drawingLayerId` : specifies the `DrawingLayer` id.
 
 **Return value**
 
@@ -608,7 +631,7 @@ createDrawingStyle(styleDefinition: DrawingStyle): number;
 
 **Parameters**
 
-`styleDefinition` : Define a `DrawingStyle` object.
+`styleDefinition` : Defines a `DrawingStyle` object.
 
 **Return value**
 
@@ -617,7 +640,7 @@ The id of the created `DrawingStyle`.
 **Code Snippet**
 
 ```js
-var drawingStyleId = enhancer.createDrawingStyle(YOUR_DRAWING_STYLE);
+let drawingStyleId = enhancer.createDrawingStyle(YOUR_DRAWING_STYLE);
 ```
 
 ## getDrawingStyle
@@ -629,7 +652,7 @@ getDrawingStyle(styleId: number): DrawingStyle;
 ```
 **Parameters**
 
-`styleId` : specify a `DrawingStyle`.
+`styleId` : specifies a `DrawingStyle`.
 
 **Return value**
 
@@ -638,7 +661,7 @@ The `DrawingStyle` specified by the input id.
 **Code Snippet**
 
 ```js
-var drawingStyle = enhancer.getDrawingStyle(YOUR_STYLE_ID);
+let drawingStyle = enhancer.getDrawingStyle(YOUR_STYLE_ID);
 ```
 
 ## getDrawingStyles
@@ -656,7 +679,7 @@ An array of all of the `DrawingStyle` objects.
 **Code Snippet**
 
 ```js
-var drawingStyles = enhancer.getDrawingStyles();
+let drawingStyles = enhancer.getDrawingStyles();
 ```
 
 ## updateDrawingStyle
@@ -669,9 +692,9 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void;
 
 **Parameters**
 
-`styleId` : specify a `DrawingStyle` which needs to be updated.
+`styleId` : specifies a `DrawingStyle` which needs to be updated.
 
-`styleDefinition` : Define a new `DrawingStyle` object.
+`styleDefinition` : Defines a new `DrawingStyle` object.
 
 **Code Snippet**
 
@@ -689,7 +712,7 @@ switchUIMode(newMode: string): void;
 
 **Parameters**
 
-`newMode` : specify the mode to switch to. Allowed values are ""editor" and "viewer". 
+`newMode` : specifies the mode to switch to. Allowed values are ""editor" and "viewer". 
 
 **Code Snippet**
 
@@ -712,7 +735,7 @@ A string of the current mode's name.
 **Code Snippet**
 
 ```js
-var mode = enhancer.getUIMode();
+let mode = enhancer.getUIMode();
 ```
 
 ## setOriginalImage
@@ -752,7 +775,7 @@ The current original image in `Uint8Array` format.
 **Code Snippet**
 
 ```js
-var image = enhancer.getOriginalImage();
+let image = enhancer.getOriginalImage();
 ```
 
 ## deleteOriginalImage
@@ -784,5 +807,5 @@ An array of current selected `DrawingItem` object(s).
 **Code Snippet**
 
 ```js
-var drawingItems = enhancer.getSelectedDrawingItems();
+let drawingItems = enhancer.getSelectedDrawingItems();
 ```
