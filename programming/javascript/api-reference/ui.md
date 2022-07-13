@@ -225,7 +225,7 @@ class DT_Image {
 | [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
 | [getUIMode()](#getuimode) | Returns the current UI mode. |
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
-| [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor. |
+| [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
 | [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
 
@@ -762,7 +762,7 @@ enhancer.setOriginalImage(AN_IMAGE_DATA);
 
 ## getOriginalImage
 
-Returns the original image shown on the editor.
+Returns the original image shown on the editor canvas.
 
 ```typescript
 getOriginalImage(): Uint8Array; 
