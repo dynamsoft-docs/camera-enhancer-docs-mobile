@@ -31,6 +31,6 @@ UNDERSTANDING DCE
 USEFUL RESOURCES
 <hr>
 
-* [Release Notes]({{site.frontPageFolder}}release-notes.html)
-* [License]({{site.introduction-license}}License.html)
+* [Release Notes]({{site.release_notes}}index.html)
+* [License]({{site.license_activation}}License.html)
 * [FAQ]({{site.contact-us}})
