@@ -18,7 +18,7 @@ breadcrumbText: v3.x Release Notes
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-3.0.0.md -%}
+<!-- {%- include release-notes/product-highlight-3.0.0.md -%} -->
 
 <div class="fold-panel-end"></div>
 
