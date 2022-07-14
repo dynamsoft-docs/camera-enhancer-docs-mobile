@@ -23,8 +23,6 @@ ios-api-auxiliary: /camera-enhancer/docs/programming/ios/auxiliary-api/
 ios-release-note: /camera-enhancer/docs/programming/ios/release-note/
 ios-cameraenhancer: /camera-enhancer/docs/programming/ios/api/cameraenhancer/
 
-introduction-license: /camera-enhancer/docs/introduction/license/
-
 android: /camera-enhancer/docs/programming/android/
 android-guide: /camera-enhancer/docs/programming/android/guide/
 android-api: /camera-enhancer/docs/programming/android/primary-api/
