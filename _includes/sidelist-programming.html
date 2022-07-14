@@ -1,19 +1,68 @@
 <li class="category">DEVELOPMENT</li>
-<li>
-    <a target="_blank" href="{{ site.js }}" class="otherLinkColour refreshLink">Web (Client Side)</a></li>
-<li>
-    <a class="otherLinkColour">Mobile</a>
+<li><a href="{{ site.js }}" class="otherLinkColour">Web (Client Side)</a>
     <ul>
-        <li><a target="_blank" href="{{ site.android }}" class="otherLinkColour refreshLink">Android</a></li>
-        <li><a target="_blank" href="{{ site.ios }}" class="otherLinkColour refreshLink">iOS</a></li>
+        <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js-guide }}index.html" class="otherLinkColour">User Guide</a>
+        </li>
+        <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js-api }}index.html" class="otherLinkColour">API Reference</a>
+            <ul>
+                <li><a href="{{ site.js-api }}initialization.html" class="otherLinkColour">Initialization</a></li>
+                <li><a href="{{ site.js-api }}camera-control.html" class="otherLinkColour">Camera Control</a></li>
+                <li><a href="{{ site.js-api }}acquisition.html" class="otherLinkColour">Acquisition</a></li>
+                <li><a href="{{ site.js-api }}camera-control.html" class="otherLinkColour">UI</a></li>
+                <li><a href="{{ site.js-api }}acquisition.html" class="otherLinkColour">Auxiliary APIs</a></li>
+                <li><a href="{{ site.js-api }}interface/index.html" class="otherLinkColour">Interfaces</a>
+                    <!-- <ul>
+                        <li><a href="{{ site.javascript-api-interface }}BasicPersonalInfo.html" class="otherLinkColour">BasicPersonalInfo</a></li>
+                        <li><a href="{{ site.javascript-api-interface }}CodeParserException.html" class="otherLinkColour">CodeParserException</a></li>
+                        <li><a href="{{ site.javascript-api-interface }}ParseResult.html" class="otherLinkColour">ParseResult</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="{{ site.js-api }}enum/index.html" class="otherLinkColour">Enums</a>
+                    <!-- <ul>
+                        <li><a href="{{ site.javascript-api-enum }}EnumCodeFormat.html" class="otherLinkColour">EnumCodeFormat</a></li>
+                        <li><a href="{{ site.javascript-api-enum }}EnumErrorCode.html" class="otherLinkColour">EnumErrorCode</a></li>
+                        <li><a href="{{ site.javascript-api-enum }}EnumResultInfoType.html" class="otherLinkColour">EnumResultInfoType</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+        </li>
+        <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js }}release-note/index.html" class="otherLinkColour">Release Notes</a>
+        </li>
     </ul>
 </li>
-
-
-<!-- <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
+<li><a class="otherLinkColour">Mobile</a>
     <ul>
-        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-javascript.html" -%}
-        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-android.html" -%}
-        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-oc.html" -%}             
+        <li><a href="{{ site.android }}" class="otherLinkColour refreshLink">Android</a>
+            <ul>
+                <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.android-guide }}index.html" class="otherLinkColour">User Guide</a>
+                </li>
+                <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.android }}api-reference.html" class="otherLinkColour">API Reference</a>
+                    <ul>
+                        <li><a href="{{ site.android-api }}camera-enhancer.html" class="otherLinkColour">CameraEnhancer Class</a></li>
+                        <li><a class="otherLinkColour">Auxiliary Classes</a>
+                            <ul>
+                                <li><a href="{{ site.android-api-auxiliary }}dceframe.html"  class="otherLinkColour">DCEFrame</a></li>
+                                <li><a href="{{ site.android-api-auxiliary }}dcecameraview.html" class="otherLinkColour">DCECameraView</a></li>
+                                <li><a href="{{ site.android-api-auxiliary }}dcefeedback.html" class="otherLinkColour">DCEFeedback</a></li>
+                                <li><a href="{{ site.android-api-auxiliary }}region-definition.html" class="otherLinkColour">RegionDefinition</a></li>
+                                <li><a href="{{ site.android-api-auxiliary }}camera-enhancer-exception.html" class="otherLinkColour">CameraEnhancerException</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.js-api }}interface/index.html" class="otherLinkColour">Interfaces</a>
+                            <!-- <ul>
+                                <li><a href="{{ site.javascript-api-interface }}BasicPersonalInfo.html" class="otherLinkColour">BasicPersonalInfo</a></li>
+                                <li><a href="{{ site.javascript-api-interface }}CodeParserException.html" class="otherLinkColour">CodeParserException</a></li>
+                                <li><a href="{{ site.javascript-api-interface }}ParseResult.html" class="otherLinkColour">ParseResult</a></li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </li>
+                <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js }}release-note/index.html" class="otherLinkColour">Release Notes</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="{{ site.ios }}" class="otherLinkColour refreshLink">iOS</a>
+            
+        </li>
     </ul>
-</li> -->
+</li>

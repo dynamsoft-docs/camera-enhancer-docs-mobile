@@ -2,7 +2,6 @@
 <html lang="en-US">
 
 {%- include head.html -%}
-{%- include head.html -%}
 {%- assign noTitleIndex = "" -%}
 {%- if page.noTitleIndex or page.url contains 'release-notes' -%}
     {%- assign noTitleIndex = "noTitleIndex" -%}
@@ -91,9 +90,15 @@
 
     <!-- for dce -->
     <script type="text/javascript">
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
+        }
+
+
         $(document).ready(function() {
             var download = getUrlParam('download');
-            if (download == 'true') {
+            if (download == 'true' && (getCookie('DynamsoftEmail') || getCookie('SourceServer') == '1')) {
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');

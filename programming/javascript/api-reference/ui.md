@@ -459,6 +459,10 @@ clearDrawingLayers(): void;
 enhancer.clearDrawingLayers();
 ```
 
+**See also**
+
+* [DrawingLayer](interface/drawinglayer.md)
+
 ## createDrawingStyle
 
 Creates a new `DrawingStyle` object and returns its ID. 
@@ -481,6 +485,10 @@ The id of the created `DrawingStyle`.
 let drawingStyleId = enhancer.createDrawingStyle(YOUR_DRAWING_STYLE);
 ```
 
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
+
 ## getDrawingStyle
 
 Returns the `DrawingStyle` object specified by its Id.
@@ -502,6 +510,10 @@ The `DrawingStyle` specified by the input id.
 let drawingStyle = enhancer.getDrawingStyle(YOUR_STYLE_ID);
 ```
 
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
+
 ## getDrawingStyles
 
 Returns all `DrawingStyle` objects.
@@ -519,6 +531,10 @@ An array of all of the `DrawingStyle` objects.
 ```js
 let drawingStyles = enhancer.getDrawingStyles();
 ```
+
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
 
 ## updateDrawingStyle
 
@@ -539,6 +555,10 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void;
 ```js
 enhancer.updateDrawingStyle(YOUR_STYLE_ID, YOUR_NEW_DRAWING_STYLE);
 ```
+
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
 
 ## switchUIMode
 
@@ -647,3 +667,7 @@ An array of current selected `DrawingItem` object(s).
 ```js
 let drawingItems = enhancer.getSelectedDrawingItems();
 ```
+
+**See also**
+
+* [DrawingItem](interface/drawingitem.md)
