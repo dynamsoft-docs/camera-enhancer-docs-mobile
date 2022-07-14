@@ -11,7 +11,7 @@ breadcrumbText: Camera Control
 
 # Camera Control
 
-## Basic Control
+**Basic Control**
 
 | API Name | Description |
 |---|---|
@@ -29,7 +29,7 @@ breadcrumbText: Camera Control
 | [getResolution()](#getresolution) | Returns the resolution of the current video input. |
 | [getResolutions()](#getresolutions) | Returns the resolutions supported by the current video input. |
 
-### Advanced Control
+**Advanced Control**
 
 | API Name | Description |
 |---|---|

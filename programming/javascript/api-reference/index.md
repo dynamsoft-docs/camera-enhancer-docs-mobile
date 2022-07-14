@@ -122,4 +122,3 @@ breadcrumbText: API Reference
 | [isDisposed](auxiliary.md#isdisposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
 | [getVersion()](auxiliary.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](auxiliary.md#detectenvironment) | Returns a report on the current running environments. |
-

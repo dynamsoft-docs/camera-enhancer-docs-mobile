@@ -9,179 +9,9 @@ noTitleIndex: true
 breadcrumbText: UI
 ---
 
-# UI Class
+# UI Manipulation
 
-## DrawingItem
-
-```typescript
-type DrawingItem = DT_Rect | DT_Arc | DT_Text | DT_Line | DT_Polygon | DT_Group | DT_Image;
-```
-
-## DT_Rect
-
-```typescript
-class DT_Rect { 
-
-  public constructor(x: number, y: number, width: number, height: number, styleId?: number) { }; 
-
-  x: number; 
-
-  y: number;
-
-  width: number; 
-
-  height: number; 
-
-  mediaType: EnumDrawingItemMediaType.Rect; 
-
-  styleSelector?: string; 
-
-  styleId?: number; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-## DT_Arc
-
-```typescript
-class DT_Arc { 
-
-  constructor(x: number, y: number, radius: number, startAngle: number, endAngle: number, styleId?: number) { }; 
-
-  x: number; 
-
-  y: number; 
-
-  radius: number; 
-
-  startAngle: number; 
-
-  endAngle: number; 
-
-  mediaType: EnumDrawingItemMediaType.Arc; 
-
-  styleSelector?: string; 
-
-  styleId?: number; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-## DT_Text
-
-```typescript
-class DT_Text { 
-
-  public constructor(text: string, x: number, y: number, styleId?: number) { } 
-
-  x: number; 
-
-  y: number;
-
-  text: string; 
-
-  mediaType: EnumDrawingItemMediaType.Text; 
-
-  styleSelector?: string; 
-
-  styleId?: number; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-## DT_Line
-
-```typescript
-class DT_Line { 
-
-  public constructor(startPoint: Point, endPoint: Point, styleId?: number) { } 
-
-  startPoint: c; 
-
-  endPoint: : Point; 
-
-  mediaType: EnumDrawingItemMediaType.Line; 
-
-  styleSelector?: string; 
-
-  styleId?: number; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-## DT_Polygon
-
-```typescript
-class DT_Polygon { 
-
-  public constructor(vertices: Array<Point>, styleId?: number) { } 
-
-  vertices: Array<Point>; 
-
-  mediaType: EnumDrawingItemMediaType.Polygon; 
-
-  styleSelector?: string; 
-
-  styleId?: number; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-## DT_Group
-
-```typescript
-class DT_Group { 
-
-  public constructor(childItems: Array<DrawingItem>) { } 
-
-  childItems: Array<DT_Rect | DT_Line | DT_Arc | DT_Text | DT_Polygon>; 
-
-  mediaType: EnumDrawingItemMediaType.Group; 
-
-  styleSelector?: string; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-## DT_Image
-
-```typescript
-class DT_Image { 
-
-  //NOTE: If an DT_Image instance has been constructed with an image, it can be replaced later with either an HTMLImageElement or an HTMLCanvasElement. In other words, an HTMLVideoElement can only be used during the constructing. 
-
-  public constructor(HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, x: number, y: number, styleId?: number) { } 
-
-  x: number; 
-
-  y: number;
-
-  image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement; 
-
-  mediaType: EnumDrawingItemMediaType.Image; 
-
-  styleSelector?: string; 
-
-  styleId?: number; 
-
-  readonly drawingLayerId: number; //Only assigned after it's added to a layer 
-
-} 
-```
-
-# UI APIs
+**Region and Video**
 
 | API Name | Description |
 |---|---|
@@ -194,7 +24,8 @@ class DT_Image {
 | [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 | [getVideoFit()](#getvideofit) | Returns the value of the `object-fit` CSS property of the video element. |
 
-## ViewDecorator Setting
+**ViewDecorator**
+
 | API Name | Description |
 |---|---|
 | [setViewDecorator()](#setviewdecorator) | Sets and shows the view decorator. |
@@ -204,30 +35,33 @@ class DT_Image {
 | [setViewDecoratorFillStyle()](#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 
-## DrawingLayer Setting
+**DrawingLayer**
+
 | API Name | Description |
 |---|---|
-| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
-| [getDrawingLayer()](#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
-| [clearDrawingLayers()](#cleardrawinglayers) | Removes all DrawingLayers. |
+| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of `DrawingLayer`s. |
+| [getDrawingLayer()](#getdrawinglayer) | Gets the `DrawingLayer` specified by its ID. |
+| [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer`s. |
 
-## DrawingStyle Setting
+**DrawingStyle**
+
 | API Name | Description |
 |---|---|
 | [createDrawingStyle()](#createdrawingstyle) | Creates a new DrawingStyle object and returns its ID. |
-| [getDrawingStyle()](#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
+| [getDrawingStyle()](#getdrawingstyle) | Returns the DrawingStyle object specified by its ID. |
 | [getDrawingStyles()](#getdrawingstyles) | Returns all DrawingStyle objects. |
 | [updateDrawingStyle()](#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
 
-## UI Mode Setting
+**View or Edit**
+
 | API Name | Description |
 |---|---|
 | [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
 | [getUIMode()](#getuimode) | Returns the current UI mode. |
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
-| [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
-| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
+| [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
+| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected `DrawingItem` object(s). |
 
 ## getVisibleRegion
 
@@ -257,7 +91,7 @@ enhancer.getVisibleRegion();
 
 ## addScanRegionOverlayCanvas
 
-Add a canvas of the same size as the scan area directly above the scan area.
+Adds a canvas of the same size as the scan region directly above the scan region.
 
 ```typescript
 addScanRegionOverlayCanvas(): Canvas;
@@ -580,6 +414,10 @@ The visible layer represented by a `DrawingLayer` object.
 ```js
 enhancer.createDrawingLayer();
 ```
+
+**See also**
+
+* [DrawingLayer](interface/drawinglayer.md)
 
 ## getDrawingLayer
 
