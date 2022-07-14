@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Protocol DCEFrameListener
-description: This is the documentation - iOS Protocol DCEFrameListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS Protocol DCEFrameListener
+title: Dynamsoft Camera Enhancer - iOS Protocol DCEPhotoListener
+description: This is the documentation - iOS Protocol DCEPhotoListener page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, iOS Protocol DCEPhotoListener
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
-breadcrumbText: iOS Protocol DCEFrameListener
+breadcrumbText: iOS Protocol DCEPhotoListener
 ---
 
-# DCEFrameListener
+# DCEPhotoListener
 
 The interface that provide method for capturing photo from the camera.
 
