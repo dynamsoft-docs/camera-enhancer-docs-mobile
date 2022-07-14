@@ -123,10 +123,3 @@ breadcrumbText: API Reference
 | [getVersion()](auxiliary.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](auxiliary.md#detectenvironment) | Returns a report on the current running environments. |
 
-## Interfaces
-
-* [Area](interface/area.md)
-* [Region](interface/region.md)
-* [DCEFrame](interface/dceframe.md)
-* [VideoDeviceInfo](interface/videodeviceinfo.md)
-* [PlayCallbackInfo](interface/playcallbackinfo.md)
