@@ -63,7 +63,7 @@ breadcrumbText: API Reference
 | [croppingRegionIndex](acquisition.md#singleframemode) | Returns or sets which of the cropping regions is to be used in cropping the next frame. |
 | [refreshInterval](acquisition.md#singleframemode) | Returns or sets how often the buffer is refreshed when the buffer is full. |
 -->
-
+    
 | API Name | Description |
 |---|---|
 | [setScanRegion()](acquisition.md#setscanregion) | Specifies which part of the original video is considered when processing frames. |
@@ -84,8 +84,7 @@ breadcrumbText: API Reference
 | API Name | Description |
 |---|---|
 | [getVisibleRegion()](ui.md#getvisibleregion) | Returns a `Region` object which specifies which part of the original video is shown in the video element. |
-| [addScanRegionOverlayCanvas()](ui.md#addscanregionoverlaycanvas) | Adds a canvas of the same size as the scan area directly above the scan area. |
-| [removeScanRegionOverlayCanvas()](ui.md#removescanregionoverlaycanvas) | Removes the specified Canvas element. |
+| [addScanRegionOverlayCanvas()](ui.md#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area.. |
 | [ifShowScanRegionMask](ui.md#ifshowscanregionmask) | Returns or sets whether the scan region mask is shown. |
 | [ifShowScanRegionLaser](ui.md#ifshowscanregionlaser) | Returns or sets whether the laser indicator is shown in the scan region. |
 | [setScanRegionMaskStyle()](ui.md#setscanregionmaskstyle) | Sets the styles for the scan region mask. |
@@ -97,29 +96,21 @@ breadcrumbText: API Reference
 | [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
-| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
-| [getDrawingLayer()](#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
-| [clearDrawingLayers()](#cleardrawinglayers) | Removes all DrawingLayers. |
-| [createDrawingStyle()](#createdrawingstyle) | Creates a new DrawingStyle object and returns its ID. |
-| [getDrawingStyle()](#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
-| [getDrawingStyles()](#getdrawingstyles) | Returns all DrawingStyle objects. |
-| [updateDrawingStyle()](#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
-| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
-| [getUIMode()](#getuimode) | Returns the current UI mode. |
-| [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
-| [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor. |
-| [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
-| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
 
 ### Auxiliary APIs
 
 | API Name | Description |
 |---|---|
-| [on()](auxiliary.md#on) | Attaches an event handler function for a built-in event. |
-| [off()](auxiliary.md#off) | Removes an event handler. |
-| [offAll()](auxiliary.md#offall) | Removes all event handlers from the specified event. If no event is specified, remove all event handlers. |
+| [on()](auxiliary.md#on) | Attach an event handler function for a built-in event. |
+| [off()](auxiliary.md#off) | Remove an event handler. |
 | [dispose()](auxiliary.md#dispose) | Releases all resources used by the CameraEnhancer instance. |
-| [isDisposed](auxiliary.md#isdisposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
 | [getVersion()](auxiliary.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](auxiliary.md#detectenvironment) | Returns a report on the current running environments. |
 
+## Interfaces
+
+* [Area](interface/area.md)
+* [Region](interface/region.md)
+* [DCEFrame](interface/dceframe.md)
+* [VideoDeviceInfo](interface/videodeviceinfo.md)
+* [PlayCallbackInfo](interface/playcallbackinfo.md)
