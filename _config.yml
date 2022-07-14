@@ -11,8 +11,10 @@ productName: Dynamsoft Camera Enhancer
 introduction: /camera-enhancer/docs/introduction/
 programming: /camera-enhancer/docs/programming/
 parameters: /camera-enhancer/docs/parameters/
+license_activation: /camera-enhancer/docs/license-activation/
+release_notes: /camera-enhancer/docs/release-notes/
 parameter-reference: /camera-enhancer/docs/parameters/reference/
-trouble-shooting: /camera-enhancer/docs/trouble-shooting/
+faq: /camera-enhancer/docs/faq/
 
 ios: /camera-enhancer/docs/programming/ios/
 ios-guide: /camera-enhancer/docs/programming/ios/guide/
@@ -38,9 +40,8 @@ js-rn: /camera-enhancer/docs/programming/javascript/release-note/
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/
 
-trouble-shooting: /camera-enhancer/docs/trouble-shooting/
-license-error: /camera-enhancer/docs/trouble-shooting/license-error/
-contact-us: /camera-enhancer/docs/trouble-shooting/contact-us/
+license-error: /camera-enhancer/docs/faq/license-error/
+contact-us: /camera-enhancer/docs/faq/contact-us/
 gallery: /camera-enhancer/docs/resources/code-gallery/
 all-release-note: /camera-enhancer/docs/resources/release-notes/
 resource: /camera-enhancer/docs/resources/
