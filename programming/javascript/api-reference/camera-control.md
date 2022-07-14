@@ -58,7 +58,7 @@ ifSkipCameraInspection: boolean;
 Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
 
 > NOTE
-> 
+>
 > This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
 
 ```typescript
