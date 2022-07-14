@@ -11,8 +11,7 @@ breadcrumbText: Documentation
 
 ## Introduction
 
-- [Overview]({{site.introduction}})
-- [License introduction]({{site.introduction-license}}License.html)
+- [introduction]({{site.introduction}}index.html)
 
 ## Programming
 
@@ -28,6 +27,8 @@ breadcrumbText: Documentation
 - [Parameter reference]({{site.reference}})
 - [Enumerations]({{site.enumerations}})
 
-## Trouble shooting
+## Useful Resources
 
-- [Contact us]({{site.contact-us}})
+- [Release Notes]({{site.frontPageFolder}}release-notes.html)
+- [License]({{site.introduction-license}}License.html)
+- [FAQ]({{site.contact-us}})
