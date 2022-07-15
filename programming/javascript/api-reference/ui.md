@@ -41,7 +41,7 @@ breadcrumbText: UI
 |---|---|
 | [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object. |
 | [getDrawingLayer()](#getdrawinglayer) | Gets the `DrawingLayer` specified by its ID. |
-| [getDrawingLayers()](#getdrawinglayers) | Gets all the `DrawingLayer`s. |
+| [getDrawingLayers()](#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
 | [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer` objects. |
 
 **DrawingStyle**
@@ -614,7 +614,9 @@ enhancer.updateDrawingStyle(100, { fontSize: 30 });
 
 ## setOriginalImage
 
-Sets an original image to be drawn on the editor canvas.
+Sets an image to be drawn on a canvas built into the UI.
+
+> When the image is set, the video element and related controllers such as the camera selection box will be hidden. When the image is deleted with deleteOriginalImage(), the video element will show up again with accompanying controllers.
 
 ```typescript
 setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number): void; 
@@ -631,7 +633,9 @@ setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, 
 **Code Snippet**
 
 ```js
-enhancer.setOriginalImage(AN_IMAGE_DATA);
+let currentFrame = enhancer.getFrame();
+let cvs = currentFrame.toCanvas();
+enhancer.setOriginalImage(cvs, cvs.width, cvs.height);
 ```
 
 ## getOriginalImage
