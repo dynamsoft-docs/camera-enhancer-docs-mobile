@@ -26,6 +26,8 @@ breadcrumbText: DrawingLayer
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
 | [onSelectionChange()](#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
+| [setMode()](#setmode) | Specifies the new mode. |
+| [getMode()](#getmode) | Returns the current mode. |
 
 ## getId
 
@@ -178,17 +180,20 @@ setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSele
 
 **Parameters**
 
-`styleId`: Specifies the style by its ID.
+`styleId`: specifies the style by its ID.
 
-`mediaType`: Specifies the mediaType. If undefined, the style applies to all `DrawingItem`s with the specified styleSelector. 
+`mediaType`: specifies the mediaType. If undefined, the style applies to all `DrawingItem`s with the specified styleSelector. 
 
-`styleSelector`: Specifies a selector. If undefined, it means "default". The selector is a pact between the `DrawingLayer` and the one passing in the `DrawingItem`s. 
+`styleSelector`: specifies a selector. If undefined, it means "default". The selector is a pact between the `DrawingLayer` and the one passing in the `DrawingItem`s. 
 
 **Code Snippet**
 
 ```js
-let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect);
+//or
+drawingLayer.setDrawingStyle(1, "selected");
+//or
+drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect, "selected");
 ```
 
 **See also**
@@ -255,9 +260,9 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 
 **Parameters**
 
-`selectedDrawingItems`: Specifies the selected `DrawingItem` objects.
+`selectedDrawingItems`: specifies the selected `DrawingItem` objects.
 
-`deselectedDrawingItems`: Specifies the deselected `DrawingItem` objects. 
+`deselectedDrawingItems`: specifies the deselected `DrawingItem` objects. 
 
 **Code Snippet**
 
@@ -268,3 +273,40 @@ drawingLayer.onSelectionChange = (selected, deselected) => {
 }
 ```
 
+## setMode
+
+Changes the mode of the layer. 
+
+```typescript
+setMode(newMode: string): void;
+```
+
+**Parameters**
+
+`newMode`: specifies the new mode. At present, the allowed values are "editor" and "viewer" and the default is "viewer".
+
+**Code Snippet**
+
+```js
+let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.setMode("editor");
+```
+
+## getMode
+
+Returns the current mode.  
+
+```typescript
+getMode(): "editor" | "viewer"; 
+```
+
+**Return value**
+
+The mode of current `DrawingLayer`.
+
+**Code Snippet**
+
+```js
+let drawingLayer = enhancer.getDrawingLayer(100);
+let mode = drawingLayer.getMode();
+```

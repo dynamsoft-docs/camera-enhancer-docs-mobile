@@ -41,6 +41,7 @@ breadcrumbText: UI
 |---|---|
 | [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object. |
 | [getDrawingLayer()](#getdrawinglayer) | Gets the `DrawingLayer` specified by its ID. |
+| [getDrawingLayers()](#getdrawinglayers) | Gets all the `DrawingLayer`s. |
 | [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer` objects. |
 
 **DrawingStyle**
@@ -56,8 +57,6 @@ breadcrumbText: UI
 
 | API Name | Description |
 |---|---|
-| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
-| [getUIMode()](#getuimode) | Returns the current UI mode. |
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
@@ -441,6 +440,32 @@ The `DrawingLayer` object specified by its input id.
 
 ```js
 let drawingLayer = enhancer.getDrawingLayer(100);
+```
+
+**See also**
+
+* [DrawingLayer](interface/drawinglayer.md)
+
+## getDrawingLayers
+
+Returns all the `DrawingLayer`s.
+
+```typescript
+getDrawingLayer(): Array<DrawingLayer>;
+```
+
+**Parameters**
+
+none.
+
+**Return value**
+
+The array of all the `DrawingLayer` objects.
+
+**Code Snippet**
+
+```js
+let drawingLayers = enhancer.getDrawingLayers();
 ```
 
 **See also**
