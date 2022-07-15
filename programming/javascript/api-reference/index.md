@@ -104,8 +104,6 @@ breadcrumbText: API Reference
 | [getDrawingStyle()](#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
 | [getDrawingStyles()](#getdrawingstyles) | Returns all DrawingStyle objects. |
 | [updateDrawingStyle()](#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
-| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
-| [getUIMode()](#getuimode) | Returns the current UI mode. |
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
