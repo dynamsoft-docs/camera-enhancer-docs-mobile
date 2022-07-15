@@ -134,7 +134,9 @@ None.
 **Code Snippet**
 
 ```js
-enhancer.removeScanRegionOverlayCanvas(YOUR_CVS);
+let cvs = enhancer.addScanRegionOverlayCanvas();
+//...
+enhancer.removeScanRegionOverlayCanvas(cvs);
 ```
 
 ## ifShowScanRegionMask
