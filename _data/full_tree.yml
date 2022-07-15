@@ -3,6 +3,7 @@ tree_file_list:
   - sidelist-introduction.html
   - sidelist-programming.html
   - sidelist-parameters.html
+  - sidelist-useful.html
   - sidelist-parameters-v1.0.3.html
   - sidelist-release-notes.html
   - sidelist-license-activation.html
