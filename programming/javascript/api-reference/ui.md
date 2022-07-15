@@ -59,6 +59,8 @@ breadcrumbText: UI
 |---|---|
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
+| [showOriginalImage()](#showoriginalimage) | Shows the original image. |
+| [hideOriginalImage()](#hideoriginalimage) | Hides the original image. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
 | [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected `DrawingItem` objects. |
 
@@ -610,42 +612,6 @@ enhancer.updateDrawingStyle(100, { fontSize: 30 });
 
 * [DrawingStyle](interface/drawingstyle.md)
 
-## switchUIMode
-
-Switches between editor and viewer mode. Default UI mode is viewer. 
-
-```typescript
-switchUIMode(newMode: string): void; 
-```
-
-**Parameters**
-
-`newMode` : specifies the mode to switch to. Allowed values are ""editor" and "viewer". 
-
-**Code Snippet**
-
-```js
-enhancer.switchUIMode("editor");
-```
-
-## getUIMode
-
-Returns the current UI mode.
-
-```typescript
-getUIMode(): "editor" | "viewer"; 
-```
-
-**Return value**
-
-A string of the current mode's name.
-
-**Code Snippet**
-
-```js
-let mode = enhancer.getUIMode();
-```
-
 ## setOriginalImage
 
 Sets an original image to be drawn on the editor canvas.
@@ -684,6 +650,42 @@ The current original image in `Uint8Array` format.
 
 ```js
 let image = enhancer.getOriginalImage();
+```
+
+## showOriginalImage
+
+Shows the original image. 
+
+```typescript
+showOriginalImage(): void; 
+```
+
+**Return value**
+
+none.
+
+**Code Snippet**
+
+```js
+enhancer.showOriginalImage();
+```
+
+## hideOriginalImage
+
+Hides the original image. 
+
+```typescript
+hideOriginalImage(): void; 
+```
+
+**Return value**
+
+none.
+
+**Code Snippet**
+
+```js
+enhancer.hideOriginalImage();
 ```
 
 ## deleteOriginalImage

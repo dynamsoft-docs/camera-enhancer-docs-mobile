@@ -26,7 +26,7 @@ breadcrumbText: DrawingLayer
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
 | [onSelectionChange()](#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
-| [setMode()](#setmode) | Specifies the new mode. |
+| [setMode()](#setmode) | Changes the mode of the layer. |
 | [getMode()](#getmode) | Returns the current mode. |
 
 ## getId
@@ -172,7 +172,7 @@ drawingLayer.clearDrawingItems();
 
 ## setDrawingStyle
 
-Sets the style for the `DrawingLayer` or for a particular mediaType.
+Sets the style for the `DrawingLayer` or for a particular mediaType or for a specific status.
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSelector?: string): void;
@@ -189,10 +189,13 @@ setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSele
 **Code Snippet**
 
 ```js
+//set style 1 for all the DrawingItems on the `DrawingLayer`
+drawingLayer.setDrawingStyle(1);
+//set style 1 for all Rect-shape DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect);
-//or
+//set style 1 for all selected DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1, "selected");
-//or
+//set style 1 for all Rect-shape and selected DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect, "selected");
 ```
 
