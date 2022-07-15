@@ -39,10 +39,10 @@ breadcrumbText: UI
 
 | API Name | Description |
 |---|---|
-| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of `DrawingLayer`s. |
+| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object. |
 | [getDrawingLayer()](#getdrawinglayer) | Gets the `DrawingLayer` specified by its ID. |
 | [getDrawingLayers()](#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
-| [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer`s. |
+| [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer` objects. |
 
 **DrawingStyle**
 
@@ -60,7 +60,7 @@ breadcrumbText: UI
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
-| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected `DrawingItem` object(s). |
+| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected `DrawingItem` objects. |
 
 ## getVisibleRegion
 
@@ -133,7 +133,9 @@ None.
 **Code Snippet**
 
 ```js
-enhancer.removeScanRegionOverlayCanvas(YOUR_CVS);
+let cvs = enhancer.addScanRegionOverlayCanvas();
+//...
+enhancer.removeScanRegionOverlayCanvas(cvs);
 ```
 
 ## ifShowScanRegionMask
@@ -444,9 +446,35 @@ let drawingLayer = enhancer.getDrawingLayer(100);
 
 * [DrawingLayer](interface/drawinglayer.md)
 
+## getDrawingLayers
+
+Returns all the `DrawingLayer`s.
+
+```typescript
+getDrawingLayer(): Array<DrawingLayer>;
+```
+
+**Parameters**
+
+none.
+
+**Return value**
+
+The array of all the `DrawingLayer` objects.
+
+**Code Snippet**
+
+```js
+let drawingLayers = enhancer.getDrawingLayers();
+```
+
+**See also**
+
+* [DrawingLayer](interface/drawinglayer.md)
+
 ## clearDrawingLayers
 
-Removes all the `DrawingLayer`s.
+Removes all the `DrawingLayer` objects.
 
 ```typescript
 clearDrawingLayers(): void;
@@ -472,7 +500,7 @@ createDrawingStyle(styleDefinition: DrawingStyle): number;
 
 **Parameters**
 
-`styleDefinition` : Defines a `DrawingStyle` object.
+`styleDefinition` : defines a `DrawingStyle` object.
 
 **Return value**
 
@@ -534,7 +562,7 @@ getDrawingStyles(): Array<DrawingStyle>;
 
 **Return value**
 
-An array of all of the `DrawingStyle` objects.
+The array of all of the `DrawingStyle` objects of current `CameraEnhancer`.
 
 **Code Snippet**
 
@@ -678,7 +706,7 @@ enhancer.deleteOriginalImage();
 
 ## getSelectedDrawingItems
 
-Returns the selected `DrawingItem` object(s).
+Returns the selected `DrawingItem` objects.
 
 ```typescript
 getSelectedDrawingItems(): Array<DrawingItem>; 
@@ -686,7 +714,7 @@ getSelectedDrawingItems(): Array<DrawingItem>;
 
 **Return value**
 
-An array of current selected `DrawingItem` object(s).
+The array of current selected `DrawingItem` objects.
 
 **Code Snippet**
 
