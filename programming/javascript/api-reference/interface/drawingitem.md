@@ -117,6 +117,10 @@ class DT_Line {
 } 
 ```
 
+**See also**
+
+* [Point](point.md)
+
 ## DT_Polygon
 
 ```typescript
@@ -136,6 +140,10 @@ class DT_Polygon {
 
 } 
 ```
+
+**See also**
+
+* [Point](point.md)
 
 ## DT_Group
 

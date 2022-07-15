@@ -16,11 +16,11 @@ breadcrumbText: DrawingLayer
 |---|---|
 | [getId()](#getid) | Returns the ID of the DrawingLayer. |
 | [addDrawingItems()](#adddrawingitems) | Adds DrawingItem(s) to the DrawingLayer. |
-| [removeDrawingItems()](#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
-| [setDrawingItems()](#setdrawingitems) | Replaces all DrawingItem(s) of the DrawingLayer with new ones. |
 | [getDrawingItems()](#getdrawingitems) | Returns all DrawingItem(s) of the DrawingLayer. |
+| [setDrawingItems()](#setdrawingitems) | Replaces all DrawingItem(s) of the DrawingLayer with new ones. |
 | [hasDrawingItem()](#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
-| [clearDrawingItems()](#cleardrawingitems) | Removes all DrawingItem(s) of the DrawingLayer. |
+| [removeDrawingItems()](#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
+| [clearDrawingItems()](#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
 | [setDrawingStyle()](#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
 | [setVisible()](#setvisible) | Shows or hides the DrawingLayer. |
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
@@ -38,7 +38,9 @@ getId(): number;
 **Code Snippet**
 
 ```js
-let id = drawingLayer.getId();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+let drawingLayer = enhancer.createDrawingLayer();
+let drawingLayerId = drawingLayer.getId();
 ```
 
 ## addDrawingItems
@@ -52,40 +54,18 @@ addDrawingItems(drawingItems: Array<DrawingItem>): void;
 **Code Snippet**
 
 ```js
-drawingLayer.addDrawingItems(YOUR_DRAWING_ITEMS);
+let drawingItems = new Array(
+    new DT_Rect(10, 10, 100, 100, 1),
+    new DT_Text("label 1", 40, 40, 2),
+    new DT_Line({x: 10, y: 50}, {x: 90, y: 50}, 3)
+)
+let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.addDrawingItems(drawingItems);
 ```
 
 **See also**
 
-* [DrawingItem](../ui.md#drawingitem)
-
-## removeDrawingItems
-
-Removes specific `DrawingItem`(s) from the `DrawingLayer`.
-
-```typescript
-removeDrawingItems(drawingItems: Array<DrawingItem>): void;
-```
-
-**Code Snippet**
-
-```js
-drawingLayer.removeDrawingItems(YOUR_DRAWING_ITEMS);
-```
-
-## setDrawingItems
-
-Replaces all `DrawingItem`(s) of the `DrawingLayer` with new ones.
-
-```typescript
-setDrawingItems(drawingItems: Array<DrawingItem>): void;
-```
-
-**Code Snippet**
-
-```js
-drawingLayer.setDrawingItems(YOUR_DRAWING_ITEMS);
-```
+* [DrawingItem](drawingitem.md)
 
 ## getDrawingItems
 
@@ -98,8 +78,37 @@ getDrawingItems(drawingItems: Array<DrawingItem>): void;
 **Code Snippet**
 
 ```js
-var arr = drawingLayer.getDrawingItems();
+let drawingLayer = enhancer.getDrawingLayer(100);
+let drawingItems = drawingLayer.getDrawingItems();
 ```
+
+**See also**
+
+* [DrawingItem](drawingitem.md)
+
+## setDrawingItems
+
+Replaces all `DrawingItem`(s) of the `DrawingLayer` with new ones.
+
+```typescript
+setDrawingItems(drawingItems: Array<DrawingItem>): void;
+```
+
+**Code Snippet**
+
+```js
+let newDrawingItems = new Array(
+    new DT_Rect(10, 10, 100, 100, 1),
+    new DT_Text("label 1", 40, 40, 2),
+    new DT_Line({x: 10, y: 50}, {x: 90, y: 50}, 3)
+)
+let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.setDrawingItems(newDrawingItems);
+```
+
+**See also**
+
+* [DrawingItem](drawingitem.md)
 
 ## hasDrawingItem
 
@@ -112,12 +121,41 @@ hasDrawingItem(drawingItem: DrawingItem): Boolean;
 **Code Snippet**
 
 ```js
-var flag = drawingLayer.hasDrawingItem();
+let drawingItem = new DT_Rect(10, 10, 100, 100, 1);
+let drawingLayer = enhancer.getDrawingLayer(100);
+let hasDrawingItem = drawingLayer.hasDrawingItem(drawingItem);
 ```
+
+**See also**
+
+* [DrawingItem](drawingitem.md)
+
+## removeDrawingItems
+
+Removes specific `DrawingItem`(s) from the `DrawingLayer`.
+
+```typescript
+removeDrawingItems(drawingItems: Array<DrawingItem>): void;
+```
+
+**Code Snippet**
+
+```js
+let drawingItems = new Array(
+    new DT_Rect(10, 10, 100, 100, 1),
+    new DT_Text("label 1", 40, 40, 2)
+)
+let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.removeDrawingItems(drawingItems);
+```
+
+**See also**
+
+* [DrawingItem](drawingitem.md)
 
 ## clearDrawingItems
 
-Removes all `DrawingItem`(s) of this `DrawingLayer`.
+Removes all `DrawingItem`(s) from the `DrawingLayer`.
 
 ```typescript
 clearDrawingItems(): void;
@@ -126,12 +164,13 @@ clearDrawingItems(): void;
 **Code Snippet**
 
 ```js
+let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.clearDrawingItems();
 ```
 
 ## setDrawingStyle
 
-Sets the style for this `DrawingLayer` or for a particular mediaType.
+Sets the style for the `DrawingLayer` or for a particular mediaType.
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSelector?: string): void;
@@ -148,7 +187,8 @@ setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSele
 **Code Snippet**
 
 ```js
-drawingLayer.setDrawingStyle(DRAWING_STYLE_ID, MEDIA_TYPE_ENUM, STYLE_SELECTOR);
+let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect);
 ```
 
 **See also**
@@ -171,6 +211,7 @@ setVisible(visible: boolean): void;
 **Code Snippet**
 
 ```js
+let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.setVisible(flase);
 ```
 
@@ -185,7 +226,8 @@ isVisible(): boolean;
 **Code Snippet**
 
 ```js
-var flag = drawingLayer.isVisible();
+let drawingLayer = enhancer.getDrawingLayer(100);
+let isVisible = drawingLayer.isVisible();
 ```
 
 ## renderAll
@@ -199,7 +241,8 @@ renderAll(): boolean;
 **Code Snippet**
 
 ```js
-drawingLayer.renderAll();
+let drawingLayer = enhancer.getDrawingLayer(100);
+let isRenderedAll = drawingLayer.renderAll();
 ```
 
 ## onSelectionChange
@@ -219,7 +262,8 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 **Code Snippet**
 
 ```js
-drawingLayer.onSelectionChange = (SELECTED_DRAWING_ITEMS, DESELECTED_DRAWING_ITEMS) => {
+let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.onSelectionChange = (selected, deselected) => {
     //do ...
 }
 ```
