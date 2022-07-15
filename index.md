@@ -15,12 +15,11 @@ DEVELOPMENT
 <hr>
 
 * [Web (Client Side)]({{site.js}})
-* Mobile
-  * [Android]({{site.android}})
-  * [iOS]({{site.ios}})
+* [Android]({{site.android}})
+* [iOS]({{site.ios}})
 
 <hr>
-UNDERSTANDING DCE
+PARAMETERS
 <hr>
 
 * [Parameter reference]({{site.reference}})
