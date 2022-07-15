@@ -59,6 +59,8 @@ breadcrumbText: UI
 |---|---|
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
+| [showOriginalImage()](#showoriginalimage) | Shows the original image. |
+| [hideOriginalImage()](#hideoriginalimage) | Hides the original image. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
 | [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected `DrawingItem` objects. |
 
@@ -610,47 +612,9 @@ enhancer.updateDrawingStyle(100, { fontSize: 30 });
 
 * [DrawingStyle](interface/drawingstyle.md)
 
-## switchUIMode
-
-Switches between editor and viewer mode. The default UI mode is viewer.
-
-```typescript
-switchUIMode(newMode: string): void; 
-```
-
-**Parameters**
-
-`newMode` : specifies the mode to switch to. Allowed values are ""editor" and "viewer".
-
-**Code Snippet**
-
-```js
-enhancer.switchUIMode("editor");
-```
-
-## getUIMode
-
-Returns the current UI mode.
-
-```typescript
-getUIMode(): "editor" | "viewer"; 
-```
-
-**Return value**
-
-A string of the current mode's name.
-
-**Code Snippet**
-
-```js
-let mode = enhancer.getUIMode();
-```
-
 ## setOriginalImage
 
-Sets an image to be drawn on a canvas built into the UI.
-
-> When the image is set, the video element and related controllers such as the camera selection box will be hidden. When the image is deleted with deleteOriginalImage(), the video element will show up again with accompanying controllers.
+Sets an image to be drawn on a canvas built into the UI. Call showOriginalImage() to show it.
 
 ```typescript
 setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number): void; 
@@ -674,15 +638,15 @@ enhancer.setOriginalImage(cvs, cvs.width, cvs.height);
 
 ## getOriginalImage
 
-Returns the original image shown on the editor canvas.
+Returns the original image.
 
 ```typescript
-getOriginalImage(): Uint8Array; 
+getOriginalImage(): {imageData: Uint8Array, width: number, height: number}; 
 ```
 
 **Return value**
 
-The current original image in `Uint8Array` format.
+The current original image in `Uint8Array` format and its dimensions.
 
 **Code Snippet**
 
@@ -692,7 +656,7 @@ let image = enhancer.getOriginalImage();
 
 ## deleteOriginalImage
 
-Deletes the original image and remove the canvas that shows it. 
+Deletes the original image.
 
 ```typescript
 deleteOriginalImage(): void; 
@@ -704,9 +668,37 @@ deleteOriginalImage(): void;
 enhancer.deleteOriginalImage();
 ```
 
+## showOriginalImage
+
+Shows the original image.
+
+```typescript
+showOriginalImage(): void; 
+```
+
+**Code Snippet**
+
+```js
+enhancer.showOriginalImage();
+```
+
+## hideOriginalImage
+
+Hides the original image.
+
+```typescript
+hideOriginalImage(): void; 
+```
+
+**Code Snippet**
+
+```js
+enhancer.hideOriginalImage();
+```
+
 ## getSelectedDrawingItems
 
-Returns the selected `DrawingItem` objects.
+Returns the selected `DrawingItem` objects. These items can be from any `drawingLayer`.
 
 ```typescript
 getSelectedDrawingItems(): Array<DrawingItem>; 

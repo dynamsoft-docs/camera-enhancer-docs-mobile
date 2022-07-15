@@ -107,6 +107,8 @@ breadcrumbText: API Reference
 | [updateDrawingStyle()](ui.md#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
 | [setOriginalImage()](ui.md#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](ui.md#getoriginalimage) | Returns the original image shown on the editor. |
+| [showOriginalImage()](ui.md#showoriginalimage) | Shows the original image. |
+| [hideOriginalImage()](ui.md#hideoriginalimage) | Hides the original image. |
 | [deleteOriginalImage()](ui.md#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
 | [getSelectedDrawingItems()](ui.md#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
 
