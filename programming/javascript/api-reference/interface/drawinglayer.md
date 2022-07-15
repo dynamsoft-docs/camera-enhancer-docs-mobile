@@ -131,7 +131,7 @@ drawingLayer.clearDrawingItems();
 
 ## setDrawingStyle
 
-Sets the style for this `DrawingLayer` or for a particular mediaType. 
+Sets the style for this `DrawingLayer` or for a particular mediaType.
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSelector?: string): void;

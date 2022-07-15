@@ -399,7 +399,7 @@ enhancer.setViewDecorator(["rectangle", "crosshair"], area);
 
 ## createDrawingLayer
 
-Creates a `DrawingLayer` object and put it in an array of DrawingLayers.
+Creates a `DrawingLayer` object.
 
 ```typescript
 createDrawingLayer(): DrawingLayer;
@@ -412,7 +412,7 @@ The visible layer represented by a `DrawingLayer` object.
 **Code Snippet**
 
 ```js
-enhancer.createDrawingLayer();
+let newDrawingLayer = enhancer.createDrawingLayer();
 ```
 
 **See also**
@@ -421,7 +421,7 @@ enhancer.createDrawingLayer();
 
 ## getDrawingLayer
 
-Returns the `DrawingLayer` specified by its ID. If not found, and the ID is 1, 2 or 3, the layer will be created and returned. 
+Returns an existing `DrawingLayer` specified by its ID. IDs start at 100 for the first custom `DrawingLayer`, 101 for the next, and so on.
 
 ```typescript
 getDrawingLayer(drawingLayerId: number): DrawingLayer;
@@ -438,7 +438,7 @@ The `DrawingLayer` object specified by its input id.
 **Code Snippet**
 
 ```js
-enhancer.getDrawingLayer(YOUR_LAYER_ID);
+let drawingLayer = enhancer.getDrawingLayer(100);
 ```
 
 **See also**
@@ -461,7 +461,7 @@ enhancer.clearDrawingLayers();
 
 ## createDrawingStyle
 
-Creates a new `DrawingStyle` object and returns its ID. 
+Creates a new `DrawingStyle` object and returns its ID.
 
 ```typescript
 createDrawingStyle(styleDefinition: DrawingStyle): number; 
@@ -478,16 +478,30 @@ The id of the created `DrawingStyle`.
 **Code Snippet**
 
 ```js
-let drawingStyleId = enhancer.createDrawingStyle(YOUR_DRAWING_STYLE);
+let styleID = enhancer.createDrawingStyle({    
+    lineWidth: 1.0,
+    fillStyle: " rgba(73, 173, 245, 0.8)",
+    strokeStyle: " rgba(73, 173, 245, 1)",
+    paintMode: "fill",
+    fontSize: 100, 
+    fontFamily: "sans-serif"
+});
 ```
+
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
 
 ## getDrawingStyle
 
 Returns the `DrawingStyle` object specified by its Id.
 
+> The SDK comes with 8 default styles with the IDs 1 ~ 8, check [DrawingStyle](interface/drawingstyle.md) for more information.
+
 ```typescript
 getDrawingStyle(styleId: number): DrawingStyle; 
 ```
+
 **Parameters**
 
 `styleId` : specifies a `DrawingStyle`.
@@ -499,8 +513,13 @@ The `DrawingStyle` specified by the input id.
 **Code Snippet**
 
 ```js
-let drawingStyle = enhancer.getDrawingStyle(YOUR_STYLE_ID);
+// Change `styleId` to one that you know exists at runtime. 
+let drawingStyle = enhancer.getDrawingStyle(100);
 ```
+
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
 
 ## getDrawingStyles
 
@@ -520,9 +539,15 @@ An array of all of the `DrawingStyle` objects.
 let drawingStyles = enhancer.getDrawingStyles();
 ```
 
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
+
 ## updateDrawingStyle
 
-Updates an existing `DrawingStyle` specified by its ID.
+Updates an existing `DrawingStyle` specified by its ID. You can update all properties of the `DrawingStyle` or you can update just a few of them. Check the code snippet for more information.
+
+> The update takes effect immediately.
 
 ```typescript
 updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void; 
@@ -537,8 +562,22 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void;
 **Code Snippet**
 
 ```js
-enhancer.updateDrawingStyle(YOUR_STYLE_ID, YOUR_NEW_DRAWING_STYLE);
+// Change the whole style
+enhancer.updateDrawingStyle(100,  {
+    fillStyle: "rgba(100, 75, 245, 0.3)",
+    fontFamily: "sans-serif",
+    fontSize: 25,
+    lineWidth: 2,
+    paintMode: "strokeAndFill",
+    strokeStyle: "rgba(73, 173, 245, 1)"
+});
+// Only change the fontSize
+enhancer.updateDrawingStyle(100, { fontSize: 30 });
 ```
+
+**See also**
+
+* [DrawingStyle](interface/drawingstyle.md)
 
 ## switchUIMode
 
