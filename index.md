@@ -3,7 +3,6 @@ layout: default-layout
 title: Dynamsoft Camera Enhancer SDK Documentation
 description: Dynamsoft Camera Enhancer SDK Documentation Homepage
 keywords:  Camera Enhancer
-needAutoGenerateSidebar: true
 breadcrumbText: HomePage
 ---
 
