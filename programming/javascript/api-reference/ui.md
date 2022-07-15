@@ -459,6 +459,10 @@ clearDrawingLayers(): void;
 enhancer.clearDrawingLayers();
 ```
 
+**See also**
+
+* [DrawingLayer](interface/drawinglayer.md)
+
 ## createDrawingStyle
 
 Creates a new `DrawingStyle` object and returns its ID.
@@ -686,3 +690,7 @@ An array of current selected `DrawingItem` object(s).
 ```js
 let drawingItems = enhancer.getSelectedDrawingItems();
 ```
+
+**See also**
+
+* [DrawingItem](interface/drawingitem.md)
