@@ -26,6 +26,8 @@ breadcrumbText: DrawingLayer
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
 | [onSelectionChange()](#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
+| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
+| [getUIMode()](#getuimode) | Returns the current UI mode. |
 
 ## getId
 

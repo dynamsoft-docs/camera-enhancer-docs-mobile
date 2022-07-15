@@ -48,89 +48,89 @@ breadcrumbText: DrawingStyle
   // DrawingStyle 1
   // Used by Dynamsoft Document Normalizer
   {
-      fillStyle: "rgba(73, 173, 245, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 1
-      lineWidth: 1
-      paintMode: "stroke"
+      fillStyle: "rgba(73, 173, 245, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 1,
+      lineWidth: 1,
+      paintMode: "stroke",
       strokeStyle: "rgba(73, 173, 245, 1)"
   }
   // DrawingStyle 2
   // Used by Dynamsoft Label Recognizer
   {
-      fillStyle: "rgba(73, 245, 73, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 2
-      lineWidth: 1
-      paintMode: "strokeAndFill"
+      fillStyle: "rgba(73, 245, 73, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 2,
+      lineWidth: 1,
+      paintMode: "strokeAndFill",
       strokeStyle: "rgba(73, 245, 73, 0.9)"
   }
   // DrawingStyle 3
   // Used by Dynamsoft Barcode Reader
   {
-      fillStyle: "rgba(254, 180, 32, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 3
-      lineWidth: 1
-      paintMode: "strokeAndFill"
+      fillStyle: "rgba(254, 180, 32, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 3,
+      lineWidth: 1,
+      paintMode: "strokeAndFill",
       strokeStyle: "rgba(254, 180, 32, 0.9)"
   }
   // DrawingStyle 4
   // One of two default styles for custom DrawingLayers
   {
-      fillStyle: "rgba(245, 236, 73, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 4
-      lineWidth: 1
-      paintMode: "stroke"
+      fillStyle: "rgba(245, 236, 73, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 4,
+      lineWidth: 1,
+      paintMode: "stroke",
       strokeStyle: "rgba(245, 236, 73, 1)"
   }
   // DrawingStyle 5
   // Used by Dynamsoft Document Normalizer
   {
-      fillStyle: "rgba(73, 173, 245, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 5
+      fillStyle: "rgba(73, 173, 245, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 5,
       lineWidth: 1
-      paintMode: "strokeAndFill"
+      paintMode: "strokeAndFill",
       strokeStyle: "rgba(73, 173, 245, 1)"
   }
   // DrawingStyle 6
   // Used by Dynamsoft Label Recognizer
   {
-      fillStyle: "rgba(73, 245, 73, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 6
-      lineWidth: 2
-      paintMode: "strokeAndFill"
+      fillStyle: "rgba(73, 245, 73, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 6,
+      lineWidth: 2,
+      paintMode: "strokeAndFill",
       strokeStyle: "rgba(73, 245, 73, 0.9)"
   }
   // DrawingStyle 7
   // Used by Dynamsoft Barcode Reader
   {
-      fillStyle: "rgba(254, 180, 32, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 7
-      lineWidth: 2
-      paintMode: "strokeAndFill"
+      fillStyle: "rgba(254, 180, 32, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 7,
+      lineWidth: 2,
+      paintMode: "strokeAndFill",
       strokeStyle: "rgba(254, 180, 32, 1)"
   }
   // DrawingStyle 8
   // One of two default styles for custom DrawingLayers
   {
-      fillStyle: "rgba(245, 236, 73, 0.3)"
-      fontFamily: "sans-serif"
-      fontSize: 10
-      id: 8
-      lineWidth: 1
-      paintMode: "strokeAndFill"
+      fillStyle: "rgba(245, 236, 73, 0.3)",
+      fontFamily: "sans-serif",
+      fontSize: 10,
+      id: 8,
+      lineWidth: 1,
+      paintMode: "strokeAndFill",
       strokeStyle: "rgba(245, 236, 73, 1)"
   }
   ```

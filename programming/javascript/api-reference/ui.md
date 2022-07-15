@@ -41,6 +41,7 @@ breadcrumbText: UI
 |---|---|
 | [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of `DrawingLayer`s. |
 | [getDrawingLayer()](#getdrawinglayer) | Gets the `DrawingLayer` specified by its ID. |
+| [getDrawingLayers()](#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
 | [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer`s. |
 
 **DrawingStyle**
@@ -56,8 +57,6 @@ breadcrumbText: UI
 
 | API Name | Description |
 |---|---|
-| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
-| [getUIMode()](#getuimode) | Returns the current UI mode. |
 | [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
 | [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor canvas. |
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
@@ -585,7 +584,7 @@ enhancer.updateDrawingStyle(100, { fontSize: 30 });
 
 ## switchUIMode
 
-Switches between editor and viewer mode. Default UI mode is viewer. 
+Switches between editor and viewer mode. The default UI mode is viewer.
 
 ```typescript
 switchUIMode(newMode: string): void; 
@@ -593,7 +592,7 @@ switchUIMode(newMode: string): void;
 
 **Parameters**
 
-`newMode` : specifies the mode to switch to. Allowed values are ""editor" and "viewer". 
+`newMode` : specifies the mode to switch to. Allowed values are ""editor" and "viewer".
 
 **Code Snippet**
 
@@ -621,7 +620,9 @@ let mode = enhancer.getUIMode();
 
 ## setOriginalImage
 
-Sets an original image to be drawn on the editor canvas.
+Sets an image to be drawn on a canvas built into the UI.
+
+> When the image is set, the video element and related controllers such as the camera selection box will be hidden. When the image is deleted with deleteOriginalImage(), the video element will show up again with accompanying controllers.
 
 ```typescript
 setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number): void; 
@@ -638,7 +639,9 @@ setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, 
 **Code Snippet**
 
 ```js
-enhancer.setOriginalImage(AN_IMAGE_DATA);
+let currentFrame = enhancer.getFrame();
+let cvs = currentFrame.toCanvas();
+enhancer.setOriginalImage(cvs, cvs.width, cvs.height);
 ```
 
 ## getOriginalImage

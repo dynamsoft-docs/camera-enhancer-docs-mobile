@@ -97,19 +97,18 @@ breadcrumbText: API Reference
 | [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
-| [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
-| [getDrawingLayer()](#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
-| [clearDrawingLayers()](#cleardrawinglayers) | Removes all DrawingLayers. |
-| [createDrawingStyle()](#createdrawingstyle) | Creates a new DrawingStyle object and returns its ID. |
-| [getDrawingStyle()](#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
-| [getDrawingStyles()](#getdrawingstyles) | Returns all DrawingStyle objects. |
-| [updateDrawingStyle()](#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
-| [switchUIMode()](#switchuimode) | Switches between editor mode and viewer mode. |
-| [getUIMode()](#getuimode) | Returns the current UI mode. |
-| [setOriginalImage()](#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
-| [getOriginalImage()](#getoriginalimage) | Returns the original image shown on the editor. |
-| [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
-| [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
+| [createDrawingLayer()](ui.md#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
+| [getDrawingLayer()](ui.md#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
+| [getDrawingLayers()](ui.md#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
+| [clearDrawingLayers()](ui.md#cleardrawinglayers) | Removes all DrawingLayers. |
+| [createDrawingStyle()](ui.md#createdrawingstyle) | Creates a new DrawingStyle object and returns its ID. |
+| [getDrawingStyle()](ui.md#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
+| [getDrawingStyles()](ui.md#getdrawingstyles) | Returns all DrawingStyle objects. |
+| [updateDrawingStyle()](ui.md#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
+| [setOriginalImage()](ui.md#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
+| [getOriginalImage()](ui.md#getoriginalimage) | Returns the original image shown on the editor. |
+| [deleteOriginalImage()](ui.md#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
+| [getSelectedDrawingItems()](ui.md#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
 
 ### Auxiliary APIs
 
