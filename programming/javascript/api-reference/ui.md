@@ -614,7 +614,13 @@ enhancer.updateDrawingStyle(100, { fontSize: 30 });
 
 ## setOriginalImage
 
+<<<<<<< HEAD
 Sets an image to be drawn on a canvas built into the UI. Call showOriginalImage() to show it.
+=======
+Sets an image to be drawn on a canvas built into the UI.
+
+> When the image is set, the video element and related controllers such as the camera selection box will be hidden. When the image is deleted with deleteOriginalImage(), the video element will show up again with accompanying controllers.
+>>>>>>> 5011ae24e8d7d0822f8b713ddb83b775c6a39b61
 
 ```typescript
 setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number): void; 
