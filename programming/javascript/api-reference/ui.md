@@ -614,13 +614,7 @@ enhancer.updateDrawingStyle(100, { fontSize: 30 });
 
 ## setOriginalImage
 
-<<<<<<< HEAD
 Sets an image to be drawn on a canvas built into the UI. Call showOriginalImage() to show it.
-=======
-Sets an image to be drawn on a canvas built into the UI.
-
-> When the image is set, the video element and related controllers such as the camera selection box will be hidden. When the image is deleted with deleteOriginalImage(), the video element will show up again with accompanying controllers.
->>>>>>> 5011ae24e8d7d0822f8b713ddb83b775c6a39b61
 
 ```typescript
 setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number): void; 
@@ -665,13 +659,13 @@ let image = enhancer.getOriginalImage();
 Deletes the original image.
 
 ```typescript
-deleteOriginalImage(): void; 
+async deleteOriginalImage(): Promise<void>; 
 ```
 
 **Code Snippet**
 
 ```js
-enhancer.deleteOriginalImage();
+await enhancer.deleteOriginalImage();
 ```
 
 ## showOriginalImage
@@ -693,18 +687,18 @@ enhancer.showOriginalImage();
 Hides the original image.
 
 ```typescript
-hideOriginalImage(): void; 
+async hideOriginalImage(): Promise<void>; 
 ```
 
 **Code Snippet**
 
 ```js
-enhancer.hideOriginalImage();
+await enhancer.hideOriginalImage();
 ```
 
 ## getSelectedDrawingItems
 
-Returns the selected `DrawingItem` objects. These items can be from any `drawingLayer`.
+Returns the selected `DrawingItem` objects. These items can be from any `drawingLayer` but they share the same `styleSelector` which is "selected".
 
 ```typescript
 getSelectedDrawingItems(): Array<DrawingItem>; 

@@ -27,7 +27,6 @@ breadcrumbText: v3.x Release Notes
 
 * Added type `DrawingItem` to define items to be drawn.
 * Added class `DT_Rect`, `DT_Arc`, `DT_Text`, `DT_Line`, `DT_Polygon`, `DT_Group` and `DT_Image` to define different shapes of `DrawingItem`.
-* Added enum `EnumDrawingItemMediaType ` to specify types for different `DrawingItem`.
 * Added interface `Point` to simplify input coordinate arguments when construct objects of `DT_Line` and `DT_Polygon`.
 
 * Added interface `DrawingStyle` to customize styles for `DrawingItem`.

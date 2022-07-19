@@ -39,7 +39,7 @@ class DT_Rect {
   // The dimentions of the rectangle, in pixels.
   width: number; height: number;
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "rect"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string; 
   // The style ID expected to use for drawing this item. If left blank, the SDK will decide which style to use.
@@ -65,7 +65,7 @@ class DT_Arc {
   // The ending angle, in radians.
   endAngle: number; 
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "arc"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string; 
   // The style ID expected to use for drawing this item. If left blank, the SDK will decide which style to use.
@@ -87,14 +87,13 @@ class DT_Line {
   // The coordinates of the end point, in pixels.
   endPoint: : Point; 
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "line"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string; 
   // The style ID expected to use for drawing this item. If left blank, the SDK will decide which style to use.
   styleId?: number;
   // The ID of a drawingLayer where the DrawingItem is drawn. Only assigned after it's added to the drawingLayer.
   readonly drawingLayerId: number;
-
 } 
 ```
 
@@ -112,14 +111,13 @@ class DT_Polygon {
   // The coordinates of all the vertices, in pixels.
   vertices: Array<Point>; 
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "polygon"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string; 
   // The style ID expected to use for drawing this item. If left blank, the SDK will decide which style to use.
   styleId?: number;
   // The ID of a drawingLayer where the DrawingItem is drawn. Only assigned after it's added to the drawingLayer.
   readonly drawingLayerId: number;
-
 } 
 ```
 
@@ -139,14 +137,13 @@ class DT_Text {
   // The text to be drawn.
   text: string; 
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "text"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string; 
   // The style ID expected to use for drawing this item. If left blank, the SDK will decide which style to use.
   styleId?: number;
   // The ID of a drawingLayer where the DrawingItem is drawn. Only assigned after it's added to the drawingLayer.
   readonly drawingLayerId: number;
-
 } 
 ```
 
@@ -162,7 +159,7 @@ class DT_Image {
   x: number; y: number;
   image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement; 
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "image"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string; 
   // The style ID expected to use for drawing this item. If left blank, the SDK will decide which style to use.
@@ -182,7 +179,7 @@ class DT_Group {
   // An array of drawingItems that form this drawingItem group.
   childItems: Array<DT_Rect | DT_Line | DT_Arc | DT_Text | DT_Polygon>; 
   // The media type.
-  mediaType: EnumDrawingItemMediaType.Rect; 
+  mediaType: "group"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
   styleSelector?: string;
   // The ID of a drawingLayer where the DrawingItem is drawn. Only assigned after it's added to the drawingLayer.

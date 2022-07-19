@@ -44,6 +44,8 @@ breadcrumbText: DrawingStyle
 
   The SDK comes with 8 default Drawing styles. Their style definition are listed below
 
+  //TODO: add a picture to demonstrate the 8 styles
+
   ```js
   // DrawingStyle 1
   // Used by Dynamsoft Document Normalizer
@@ -52,7 +54,7 @@ breadcrumbText: DrawingStyle
       fontFamily: "sans-serif",
       fontSize: 10,
       id: 1,
-      lineWidth: 1,
+      lineWidth: 2,
       paintMode: "stroke",
       strokeStyle: "rgba(73, 173, 245, 1)"
   }
@@ -63,7 +65,7 @@ breadcrumbText: DrawingStyle
       fontFamily: "sans-serif",
       fontSize: 10,
       id: 2,
-      lineWidth: 1,
+      lineWidth: 2,
       paintMode: "strokeAndFill",
       strokeStyle: "rgba(73, 245, 73, 0.9)"
   }
@@ -74,7 +76,7 @@ breadcrumbText: DrawingStyle
       fontFamily: "sans-serif",
       fontSize: 10,
       id: 3,
-      lineWidth: 1,
+      lineWidth: 2,
       paintMode: "strokeAndFill",
       strokeStyle: "rgba(254, 180, 32, 0.9)"
   }
@@ -85,7 +87,7 @@ breadcrumbText: DrawingStyle
       fontFamily: "sans-serif",
       fontSize: 10,
       id: 4,
-      lineWidth: 1,
+      lineWidth: 2,
       paintMode: "stroke",
       strokeStyle: "rgba(245, 236, 73, 1)"
   }
@@ -129,7 +131,7 @@ breadcrumbText: DrawingStyle
       fontFamily: "sans-serif",
       fontSize: 10,
       id: 8,
-      lineWidth: 1,
+      lineWidth: 2,
       paintMode: "strokeAndFill",
       strokeStyle: "rgba(245, 236, 73, 1)"
   }

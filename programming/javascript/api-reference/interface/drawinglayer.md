@@ -175,7 +175,7 @@ drawingLayer.clearDrawingItems();
 Sets the style for the `DrawingLayer` or for a particular mediaType or for a specific status.
 
 ```typescript
-setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSelector?: string): void;
+setDrawingStyle(styleId: number, mediaType?: "text", styleSelector?: string): void;
 ```
 
 **Parameters**
@@ -192,35 +192,34 @@ setDrawingStyle(styleId: number, mediaType?: EnumDrawingItemMediaType, styleSele
 //set style 1 for all the DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1);
 //set style 1 for all Rect-shape DrawingItems on the `DrawingLayer`
-drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect);
+drawingLayer.setDrawingStyle(1, "rect");
 //set style 1 for all selected DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1, "selected");
 //set style 1 for all Rect-shape and selected DrawingItems on the `DrawingLayer`
-drawingLayer.setDrawingStyle(1, EnumDrawingItemMediaType.Rect, "selected");
+drawingLayer.setDrawingStyle(1, "rect", "selected");
 ```
 
 **See also**
 
 * [DrawingStyle](drawingstyle.md)
-* [EnumDrawingItemMediaType](../enum/enumdrawingitemmediatype.md)
 
 ## setVisible
 
-Shows or hides the `DrawingLayer`. 
+Shows or hides the `DrawingLayer`.
 
 ```typescript
-setVisible(visible: boolean): void;
+setVisible(visibility: boolean): void;
 ```
 
 **Parameters**
 
-`visible`: True means show, false means hide the `DrawingLayer`.
+`visibility`: Specifies true to show and false to hide the `DrawingLayer`.
 
 **Code Snippet**
 
 ```js
 let drawingLayer = enhancer.getDrawingLayer(100);
-drawingLayer.setVisible(flase);
+drawingLayer.setVisible(false);
 ```
 
 ## isVisible

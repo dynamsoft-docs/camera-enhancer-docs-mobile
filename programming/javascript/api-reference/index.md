@@ -123,3 +123,15 @@ breadcrumbText: API Reference
 | [isDisposed](auxiliary.md#isdisposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
 | [getVersion()](auxiliary.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](auxiliary.md#detectenvironment) | Returns a report on the current running environments. |
+
+## Interfaces
+
+* [Area](interface/area.md)
+* [DCEFrame](interface/dceframe.md)
+* [DrawingItem](interface/drawingitem.md)
+* [DrawingLayer](interface/drawinglayer.md)
+* [DrawingStyle](interface/drawingstyle.md)
+* [PlayCallbackInfo](interface/playcallbackinfo.md)
+* [Point](interface/point.md)
+* [Region](interface/region.md)
+* [VideoDeviceInfo](interface/videodeviceinfo.md)

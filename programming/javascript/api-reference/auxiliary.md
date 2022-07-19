@@ -108,7 +108,7 @@ enhancer.on("cameraChange", cameraChanged);
 Removes all event handlers from the specified event. If no event is specified, remove all event handlers.
 
 ```typescript
-off(eventName?: EventName): void;
+offAll(eventName?: EventName): void;
 ```
 
 **Parameters**
@@ -163,6 +163,7 @@ readonly isDisposed: boolean;
 
 ```js
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+//...
 let flag = enhancer.isDisposed;
 ```
 
