@@ -151,4 +151,4 @@ Next, click on the **DrawingItem** you want to modify and you will see its "corn
 
 You can try the shape drawing feature on the following link:
 
-[Draw Shapes with DCEJS]{https://jsfiddle.net/DynamsoftTeam/mjnq07Lp/)
+[Draw Shapes with DCEJS](https://jsfiddle.net/DynamsoftTeam/mjnq07Lp/)
