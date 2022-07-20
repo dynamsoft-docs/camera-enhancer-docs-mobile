@@ -1,25 +1,5 @@
 <li class="category">DEVELOPMENT</li>
-<li><a href="{{ site.js }}" class="otherLinkColour">Web (Client Side)</a>
-    <ul>
-        <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js-guide }}index.html" class="otherLinkColour">User Guide</a>
-        </li>
-        <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js-api }}index.html" class="otherLinkColour">API Reference</a>
-            <ul>
-                <li><a href="{{ site.js-api }}initialization.html" class="otherLinkColour">Initialization</a></li>
-                <li><a href="{{ site.js-api }}camera-control.html" class="otherLinkColour">Camera Control</a></li>
-                <li><a href="{{ site.js-api }}acquisition.html" class="otherLinkColour">Acquisition</a></li>
-                <li><a href="{{ site.js-api }}ui.html" class="otherLinkColour">UI</a></li>
-                <li><a href="{{ site.js-api }}auxiliary.html" class="otherLinkColour">Auxiliary APIs</a></li>
-                <li><a href="{{ site.js-api }}interface/index.html" class="otherLinkColour">Interfaces</a>
-                </li>
-                <li><a href="{{ site.js-api }}enum/index.html" class="otherLinkColour">Enums</a>
-                </li>
-            </ul>
-        </li>
-        <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.js }}release-note/index.html" class="otherLinkColour">Release Notes</a>
-        </li>
-    </ul>
-</li>
+{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-javascript.html" -%}
 <li><a href="{{ site.android }}" class="otherLinkColour">Android</a>
     <ul>
         <li><a style="cursor:pointer;color:#3c3c3c" href="{{ site.android-guide }}guide.html" class="otherLinkColour">User Guide</a>
