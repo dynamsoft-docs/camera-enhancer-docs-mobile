@@ -9,7 +9,6 @@ breadcrumbText: DrawingStyle
 ---
 
 # DrawingStyle
-
 `interface` DrawingStyle
 
 * id: `number`
@@ -18,27 +17,27 @@ breadcrumbText: DrawingStyle
 
 * lineWidth: `number`
 
-  The line width (in pixels) of the current `DrawingStyle` . Default: 1.0.
+  The line width (in pixels) of the current `DrawingStyle` . Default: `2`.
 
 * fillStyle: `string`
 
-  The fill color of the current `DrawingStyle` . Default: #000(black).
+  The fill color of the current `DrawingStyle` . Default: `rgba(245, 236, 73, 0.3)`.
 
 * strokeStyle: `string`
 
-  The stroke color of the current `DrawingStyle` . Default: #000(black).
+  The stroke color of the current `DrawingStyle` . Default: `rgba(245, 236, 73, 1)`.
 
 * paintMode: "fill" | "stroke" | "strokeAndFill"
 
-  Three paint modes provided.
+  Three paint modes provided. Default: `stroke`.
 
 * fontSize: `number`
 
-  The fontSize of the current `DrawingStyle` .
+  The fontSize of the current `DrawingStyle` . Default: `10`.
 
 * fontFamily: `string`
 
-  The fontFamily of the current `DrawingStyle` .
+  The fontFamily of the current `DrawingStyle` . Default: `sans-serif`.
 
 ## Built-in DrawingStyles
 
