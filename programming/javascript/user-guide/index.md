@@ -176,7 +176,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   <select class="dce-sel-resolution"></select>
   ```
 
-  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
+  > By default, only 4 hard-coded resolutions (3840 x 2160, 1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
   ```html
   <select class="dce-sel-resolution">

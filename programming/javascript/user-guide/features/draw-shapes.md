@@ -18,7 +18,7 @@ The following content is based on this code that defines a page:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>DBRJS - Draw Shapes</title>
+    <title>DCEJS - Draw Shapes</title>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.0/dist/dce.js"></script>
 </head>
 <body style="width:80vw; height:600px; margin: 0 auto">
