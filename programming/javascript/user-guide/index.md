@@ -85,6 +85,12 @@ or
 <script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
 ```
 
+or 
+
+```typescript
+import { CameraEnhancer } from 'dynamsoft-camera-enhancer';
+```
+
 Read more on [how to host the SDK](#hosting-the-sdk).
 
 ### Interact with the SDK
@@ -129,7 +135,7 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
   > You must set `defaultUIElementURL` before you call `createInstance()` .
 
-* Append the default UI element to your page as shown in [Configure the CameraEnhancer object](#configure-the-cameraenhancer-object), customize it before showing it.
+* Append the default UI element to your page as shown in [Configure the CameraEnhancer object](#configure-the-cameraenhancer-object), customize it if necessary.
 
 ```html
 <!-- Define an element to hold the UI element -->

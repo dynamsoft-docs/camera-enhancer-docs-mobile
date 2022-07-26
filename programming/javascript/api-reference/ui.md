@@ -502,7 +502,14 @@ createDrawingStyle(styleDefinition: DrawingStyle): number;
 
 **Parameters**
 
-`styleDefinition` : defines a `DrawingStyle` object.
+`styleDefinition` : defines a `DrawingStyle` object. If a property is left blank, it uses the default value. The default values are listed below
+
+* lineWidth: `1.0`
+* fillStyle: `rgba(245, 236, 73, 0.3)`
+* strokeStyle: `rgba(245, 236, 73, 1)`
+* paintMode: `stroke`
+* fontSize: `10`
+* fontFamily: `sans-serif`
 
 **Return value**
 
@@ -641,12 +648,12 @@ enhancer.setOriginalImage(cvs, cvs.width, cvs.height);
 Returns the original image.
 
 ```typescript
-getOriginalImage(): {imageData: Uint8Array, width: number, height: number}; 
+getOriginalImage(): {imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, width: number, height: number}; 
 ```
 
 **Return value**
 
-The current original image in `Uint8Array` format and its dimensions.
+The current original image in the format that it was passed in and its dimensions.
 
 **Code Snippet**
 

@@ -21,3 +21,4 @@ Dynamsoft Camera Enhancer JavaScript SDK has the following interfaces.
 * [Point](point.md)
 * [Region](region.md)
 * [VideoDeviceInfo](videodeviceinfo.md)
+* [Warning](warning.md)

@@ -135,3 +135,4 @@ breadcrumbText: API Reference
 * [Point](interface/point.md)
 * [Region](interface/region.md)
 * [VideoDeviceInfo](interface/videodeviceinfo.md)
+* [Warning](interface/warning.md)
