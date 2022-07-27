@@ -32,8 +32,8 @@ jobs:
           cd /home/ubuntu
           [ ! -d DCEDoc ] && mkdir -p DCEDoc
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
-          cd DCEDoc && bundle exec jekyll build
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCEDoc/
+          cd DCEDoc && bundle exec jekyll build --incremental
           python3 /home/ubuntu/ftp.py /home/ubuntu/DCEDoc/_site/ ./www.dynamsoft.com/camera-enhancer/docs/ prod
 
   Build-Preview:
