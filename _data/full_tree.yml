@@ -3,9 +3,11 @@ tree_file_list:
   - sidelist-introduction.html
   - sidelist-programming.html
   - sidelist-parameters.html
+  - sidelist-useful.html
   - sidelist-parameters-v1.0.3.html
   - sidelist-release-notes.html
-  - sidelist-trouble-shooting.html
+  - sidelist-license-activation.html
+  - sidelist-faq.html
   - sidelist-programming/programming-oc.html
   - sidelist-programming/programming-oc-v1.0.0.html
   - sidelist-programming/programming-oc-v1.0.1.html
@@ -16,5 +18,6 @@ tree_file_list:
   - sidelist-programming/programming-android-v1.0.1.html
   - sidelist-programming/programming-android-v1.0.3.html
   - sidelist-programming/programming-android-v2.0.0.html
+  - sidelist-programming/programming-javascript-v2.0.3.html
+  - sidelist-programming/programming-javascript-v2.3.2.html
   - sidelist-programming/programming-javascript.html
-  - sidelist-programming/ios-reference/reference.html

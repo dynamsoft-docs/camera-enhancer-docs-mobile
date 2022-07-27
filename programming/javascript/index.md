@@ -20,4 +20,5 @@ noTitleIndex: true
 
 ## Release Notes
 
+* [Version 3.x](release-note/index.md)
 * [Version 2.x](release-note/index.md)

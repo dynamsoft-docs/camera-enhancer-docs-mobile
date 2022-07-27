@@ -9,27 +9,19 @@ noTitleIndex: true
 breadcrumbText: Auxiliary
 ---
 
-# Auxiliary
+# Auxiliary APIs
 
 | API Name | Description |
 |---|---|
-| [on()](#on) | Attaches an event handler function for a built-in event. |
-| [off()](#off) | Removes an event handler. |
-| [offAll()](#offall) | Removes all event handlers from the specified event. If no event is specified, remove all event handlers. |
+| [on()](#on) | Attach an event handler function for a built-in event. |
+| [off()](#off) | Remove an event handler. |
 | [dispose()](#dispose) | Releases all resources used by the CameraEnhancer instance. |
-| [isDisposed](#isdisposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
 | [getVersion()](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Returns a report on the current running environments. |
 
-**Type definition used on this page**:
-
-```typescript
-type EventName = "cameraChange" | "cameraOpen" | "cameraClose" | "resolutionChange" | "played" | "singleFrameAcquired" | "frameAddedToBuffer";
-```
-
 ## on
 
-Attaches an event handler function for a built-in event.
+Attach an event handler function for a built-in event.
 
 ```typescript
 on(eventName: EventName, listener: Function): void;
@@ -76,7 +68,7 @@ enhancer.on("frameAddedToBuffer", () => {
 
 ## off
 
-Removes an event handler.
+Remove an event handler.
 
 ```typescript
 off(eventName: EventName, listener: Function): void;
@@ -103,28 +95,6 @@ let cameraChanged = playCallBackInfo => {
 enhancer.on("cameraChange", cameraChanged);
 ```
 
-## offAll
-
-Removes all event handlers from the specified event. If no event is specified, remove all event handlers.
-
-```typescript
-offAll(eventName?: EventName): void;
-```
-
-**Parameters**
-
-`eventName` : specifies the event.
-
-**Return value**
-
-None.
-
-**Code Snippet**
-
-```js
-enhancer.offAll("cameraChange");
-```
-
 ## dispose
 
 Releases all resources used by the CameraEnhancer instance. 
@@ -149,22 +119,6 @@ None.
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 // Use the object to perform some tasks
 enhancer.dispose();
-```
-
-## isDisposed
-
-A readonly boolean value indicating whether the `CameraEnhancer` instance has been disposed.
-
-```typescript
-readonly isDisposed: boolean; 
-```
-
-**Code Snippet**
-
-```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-//...
-let flag = enhancer.isDisposed;
 ```
 
 ## getVersion
