@@ -11,6 +11,20 @@ breadcrumbText: Release Note
 
 # Release Notes
 
+## 3.0
+
+> First released: 07-27-2022
+
+### Highlights
+
+* Added flexible shape drawing logic.
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 3.0.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#300-07272022) |
+
+&nbsp;
+
 ## 2.3
 
 > First released: 03-21-2022
