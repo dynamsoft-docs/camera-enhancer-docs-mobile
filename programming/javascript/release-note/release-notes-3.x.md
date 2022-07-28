@@ -16,6 +16,7 @@ breadcrumbText: v3.x Release Notes
 
 #### New
 
+* Added callback [onWarning](../api-reference/initialization.md#onwarning) which is triggered when the running environment is not ideal.
 * Added property [`isDisposed`](../api-reference/auxiliary.md#isdisposed) to indicate whether the `CameraEnhancer` instance has been disposed.
 * Added method [`offAll()`](../api-reference/auxiliary.md#offall) to remove all event handlers from the specified event. If no event is specified, remove all event handlers.
 * Added method [`removeScanRegionOverlayCanvas()`](../api-reference/ui.md#removescanregionoverlaycanvas) to remove the specified Canvas element which was added with `addScanRegionOverlayCanvas()`.

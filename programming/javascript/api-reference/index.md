@@ -21,6 +21,7 @@ breadcrumbText: API Reference
 | [defaultUIElementURL](initialization.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [getUIElement()](initialization.md#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
 | [setUIElement()](initialization.md#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
+| [onWarning](initialization.md#onwarning) | A callback which is triggered when the running environment is not ideal. |
 
 ### Camera Control
 
