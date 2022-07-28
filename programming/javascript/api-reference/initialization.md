@@ -17,6 +17,7 @@ breadcrumbText: Initialization
 | [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [getUIElement()](#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
 | [setUIElement()](#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
+| [onWarning](#onwarning) | A callback which is triggered when the running environment is not ideal. |
 
 ## createInstance
 
@@ -146,3 +147,33 @@ A promise that resolves when the operation succeeds.
     })();
 </script>
 ```
+
+## onWarning
+
+A callback which is triggered when the running environment is not ideal. In this version, it may get triggered in two scenarios:
+
+1. If the page is opened from the disk
+2. The page is hosted in a HTTP site without SSL
+
+The following two warnings are returned respectively:
+
+```js
+{
+    id: 1,
+    message: "Not using HTTP protocol, the SDK may not work correctly."
+}
+{
+    id: 2,
+    message: "Not connected via SSL (HTTPS), the SDK may not work correctly."
+}
+```
+
+**Code Snippet**
+
+```js
+Dynamsoft.DCE.CameraEnhancer.onWarning = warning => console.log(warning);
+```
+
+**See Also**
+
+[Warning](interface/warning.md)
