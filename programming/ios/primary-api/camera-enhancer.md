@@ -34,6 +34,7 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
 | [`initLicense`](#initlicense) | Set product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
+| [`cameraView`](#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
 &nbsp;
 
@@ -129,11 +130,39 @@ let version = dce.getVersion()
 
 &nbsp;
 
+### cameraView
+
+Bind a `DCECameraView` to the camera enhancer.
+
+```objc
+@property (strong, nonatomic) DCECameraView cameraView; 
+```
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+_dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds]
+[_dce setCameraView:_dceView];
+```
+2. 
+```swift
+let dceView = DCECameraView.init(frame self.view.bounds)
+dce.cameraView = dceView
+```
+
+&nbsp;
+
 ## Basic Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
 | [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
@@ -171,6 +200,35 @@ NSArray<NSString*>* allCameras = [_dce getAllCameras];
 2. 
 ```swift
 let allCameraList = dce.getAllCameras()
+```
+
+&nbsp;
+
+### selectCameraWithPosition
+
+Select the camera position (front-facing or back-facing).
+
+```objc
+- (void)selectCameraWithPosition:(EnumCameraPosition)position error:(NSError * _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[_dce selectCamera:EnumCameraPositionBack error: &error];
+```
+2. 
+```swift
+try? dce.selectCamera(EnumCameraPosition.back)
 ```
 
 &nbsp;

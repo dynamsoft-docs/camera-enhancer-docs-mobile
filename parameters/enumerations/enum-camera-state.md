@@ -1,26 +1,24 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Camera State
-description: This is the documentation - Enumerations Camera State page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Enumerations Camera State
+title: Dynamsoft Camera Enhancer - Enumerations Camera Position
+description: This is the documentation - Enumerations Camera Position page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Enumerations Camera Position
 needAutoGenerateSidebar: true
-breadcrumbText: Enumerations Camera State
+breadcrumbText: Enumerations Camera Position
 ---
 
-# EnumCameraState
+# EnumCameraPosition
 
 ## Declarations
 
 | Language | Declaration |
 |----------|-------------|
-| Java(Android) | `class EnumCameraState` |
-| Objective-C & Swift | `enum EnumCameraState` |
+| Java(Android) | `class EnumCameraPosition` |
+| Objective-C & Swift | `enum EnumCameraPosition` |
 
 ## Members
 
 | Member (Android) | Member (Objective-C) | Member (Swift) | Value | Description |
 | ---------------- | -------------------- | -------------- | ----- | ----------- |
-| `CAMERA_STATE_OPENED` | `EnumCAMERA_STATE_OPENED` | `EnumCAMERA_STATE_OPENED` | 1 | The selected camera is opened. |
-| `CAMERA_STATE_CLOSED` | `EnumCAMERA_STATE_CLOSED` | `EnumCAMERA_STATE_CLOSED` | 2 | The selected camera is closed. |
-| `CAMERA_STATE_OPENING` | `EnumCAMERA_STATE_OPENING` | `EnumCAMERA_STATE_OPENING` | 0 | The selected camera is currently closed but will be opened soon. |
-| `CAMERA_STATE_CLOSING` | `EnumCAMERA_STATE_CLOSING` | `EnumCAMERA_STATE_CLOSING` | 3 | The selected camera is currently closed but will be closed soon. |
+| `CP_BACK` | `EnumCameraPositionBack` | `back` | 0 | Back-facing camera. |
+| `CP_FRONT` | `EnumCameraPositionFront` | `front` | 1 | Front-facing camera. |
