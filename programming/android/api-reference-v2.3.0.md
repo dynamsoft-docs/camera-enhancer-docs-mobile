@@ -26,10 +26,8 @@ noTitleIndex: true
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`]({{site.android-api}}camera-enhancer.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera(EnumCameraPosition)`]({{site.android-api}}camera-enhancer.html#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`selectCamera(String)`]({{site.android-api}}camera-enhancer.html#selectcamerastring) | Select a camera from the camera list with the camera ID. |
+| [`selectCamera`]({{site.android-api}}camera-enhancer.html#selectcamera) | Select and active a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`]({{site.android-api}}camera-enhancer.html#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraPosition`]({{site.android-api}}camera-enhancer.html#getcameraposition) | Returns whether the device uses a front-facing or rear-facing camera. |
 | [`getCameraState`]({{site.android-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`]({{site.android-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
 | [`close`]({{site.android-api}}camera-enhancer.html#close) | Turn off the current selected camera. |
@@ -102,4 +100,3 @@ noTitleIndex: true
 - [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
 - [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
 - [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
-- [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html)

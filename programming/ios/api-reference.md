@@ -20,13 +20,15 @@ breadcrumbText: iOS API references
 | [`initWithView`]({{site.ios-api}}camera-enhancer.html#initwithview) | Initialize the camera enhancer with the `DCECameraView`. |
 | [`initLicense`]({{site.ios-api}}camera-enhancer.html#initlicense) | Sets product key and activate the SDK. |
 | [`getVersion`]({{site.ios-api}}camera-enhancer.html#getversion) | Get the SDK version. |
+| [`cameraView`]({{site.ios-api}}camera-enhancer.html#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
 ### Basic Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`]({{site.ios-api}}camera-enhancer.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera`]({{site.ios-api}}camera-enhancer.html#selectcamera) | Select and active a camera from the camera list with the camera ID. |
+| [`selectCamera(EnumCameraPosition)`]({{site.ios-api}}camera-enhancer.html#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`selectCamera(String)`]({{site.ios-api}}camera-enhancer.html#selectcamerastring) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`]({{site.ios-api}}camera-enhancer.html#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`]({{site.ios-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`]({{site.ios-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
@@ -90,3 +92,4 @@ breadcrumbText: iOS API references
 - [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
 - [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
 - [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
+- [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html)
