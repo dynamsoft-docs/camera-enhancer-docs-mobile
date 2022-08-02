@@ -15,7 +15,7 @@ breadcrumbText: Android 2.x Release Notes
 ### New
 
 - Added methods [`selectCamera(EnumCameraPosition)`](../primary-api/camera-enhancer.md#selectcameraenumcameraposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
-- Added enumeration `EnumCameraPosition`.
+- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
 
 ### Fixed
 
