@@ -10,6 +10,18 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.2 (08/02/2022)
+
+### New
+
+- Added a property [`cameraView`](../primary-api/camera-enhancer.md#cameraview) for users to bind a `DCECameraView` object to the `DynamsoftCameraEnhancer` object.
+- Added methods [`selectCameraWithPosition`](../primary-api/camera-enhancer.md#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
+- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
+
+### Changed
+
+- Changed the rotation control of `DCECameraView` from manual handling to system handling.
+
 ## 2.3.1 (07/11/2022)
 
 ### Fixed

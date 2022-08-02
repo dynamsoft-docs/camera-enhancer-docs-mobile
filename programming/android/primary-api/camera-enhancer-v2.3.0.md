@@ -112,9 +112,9 @@ String DCEVersion = cameraEnhancer.getVersion();
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
 | [`selectCamera(EnumCameraPosition)`](#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
 | [`selectCamera(String)`](#selectcamerastring) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the device uses a front-facing or back-facing camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`](#open) | Turn on the current selected camera. |
 | [`close`](#close) | Turn off the current selected camera. |
@@ -165,28 +165,6 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 cameraEnhancer.selectCamera(EnumCameraPosition.CP_BACK);
 ```
 
-&nbsp;
-
-### getCameraPosition
-
-Returns whether the front-facing camera or back-facing camera is selected.
-
-```java
-EnumCameraPosition getCameraPosition()
-```
-
-**Return Value**
-
-An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
-
-**Code Snippet**
-
-```java
-EnumCameraPosition camera = mCameraEnhancer.getCameraPosition();
-```
-
-&nbsp;
-
 ### selectCamera(String)
 
 Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings applied to this camera will be inherited by the newly selected camera.
@@ -232,6 +210,27 @@ The ID of the current selected camera.
 ```java
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
 String selectedCameraID = cameraEnhancer.getSelectedCamera();
+```
+
+&nbsp;
+
+### getCameraPosition
+
+Returns whether the device uses a front-facing or back-facing camera.
+
+```java
+EnumCameraPosition getCameraPosition() 
+```
+
+**Return Value**
+
+One of the `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**CodeSnippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+EnumCameraPosition cameraPosition = cameraEnhancer.getCameraPosition();
 ```
 
 &nbsp;

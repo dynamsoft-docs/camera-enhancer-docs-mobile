@@ -64,7 +64,7 @@ let pEnhancer = null;
 
 ## getUIElement
 
-Returns the HTML element that is used by the [CameraEnhancer](#CameraEnhancer) instance. Only valid after the method `open()` has been called.
+Returns the HTML element that is used by the [CameraEnhancer](#CameraEnhancer) instance.
 
 ```typescript
 getUIElement(): HTMLElement;

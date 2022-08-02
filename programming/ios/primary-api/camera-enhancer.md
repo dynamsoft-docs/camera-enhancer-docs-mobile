@@ -224,11 +224,40 @@ Select the camera position (front-facing or back-facing).
 >
 >1. 
 ```objc
-[_dce selectCamera:EnumCameraPositionBack error: &error];
+[_dce selectCameraWithPosition:EnumCameraPositionBack error: &error];
 ```
 2. 
 ```swift
-try? dce.selectCamera(EnumCameraPosition.back)
+try? dce.selectCameraWithPosition(EnumCameraPosition.back)
+```
+
+&nbsp;
+
+### getCameraPosition
+
+Returns whether the front-facing camera or back-facing camera is selected.
+
+```objc
+- (EnumCameraPosition) getCameraPosition;
+```
+
+**Return Value**
+
+An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+EnumCameraPosition cameraPosition = [_dce getCameraPosition];
+```
+2. 
+```swift
+let cameraPosition = dce.getCameraPosition()
 ```
 
 &nbsp;

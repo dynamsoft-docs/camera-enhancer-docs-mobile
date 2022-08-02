@@ -10,6 +10,18 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.3.2 (08/02/2022)
+
+### New
+
+- Added methods [`selectCamera(EnumCameraPosition)`](../primary-api/camera-enhancer.md#selectcameraenumcameraposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
+- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
+
+### Fixed
+
+- Fixed a null pointer bug that might occur when rotating the `DCECameraView`.
+- Fixed a crash bug when some methods are called in child thread.
+
 ## 2.3.0 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>

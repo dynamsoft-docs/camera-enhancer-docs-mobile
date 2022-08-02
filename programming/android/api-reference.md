@@ -27,6 +27,7 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`getAllCameras`]({{site.android-api}}camera-enhancer.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
 | [`selectCamera(EnumCameraPosition)`]({{site.android-api}}camera-enhancer.html#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`]({{site.android-api}}camera-enhancer.html#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
 | [`selectCamera(String)`]({{site.android-api}}camera-enhancer.html#selectcamerastring) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`]({{site.android-api}}camera-enhancer.html#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraPosition`]({{site.android-api}}camera-enhancer.html#getcameraposition) | Returns whether the device uses a front-facing or rear-facing camera. |
