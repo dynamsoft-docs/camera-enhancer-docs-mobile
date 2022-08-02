@@ -27,8 +27,9 @@ breadcrumbText: iOS API references
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`]({{site.ios-api}}camera-enhancer.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera(EnumCameraPosition)`]({{site.ios-api}}camera-enhancer.html#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`selectCamera(String)`]({{site.ios-api}}camera-enhancer.html#selectcamerastring) | Select a camera from the camera list with the camera ID. |
+| [`selectCameraWithPosition`]({{site.ios-api}}camera-enhancer.html#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`]({{site.ios-api}}camera-enhancer.html#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
+| [`selectCamera`]({{site.ios-api}}camera-enhancer.html#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`]({{site.ios-api}}camera-enhancer.html#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`]({{site.ios-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`]({{site.ios-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
