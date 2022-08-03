@@ -64,6 +64,17 @@ let image = new Dynamsoft.DCE.DrawingItem.DT_Image(document.getElementById('test
 let polygon = new Dynamsoft.DCE.DrawingItem.DT_Polygon([{x: 640, y: 100}, {x: 500, y: 300}, {x: 780, y: 300}, {x: 690, y: 100}]);
 ```
 
+Alternatively, the code might be like this
+
+```javascript
+import { DrawingItem } from "dynamsoft-camera-enhancer";
+let arc = new DrawingItem.DT_Arc(840, 150, 100, 0, 360);
+let line = new DrawingItem.DT_Line({x: 600, y: 600}, {x: 1050, y: 400});
+let text = new DrawingItem.DT_Text("TESTING...", 360, 360);
+let image = new DrawingItem.DT_Image(document.getElementById('testIMG'), 150, 600);
+let polygon = new DrawingItem.DT_Polygon([{x: 640, y: 100}, {x: 500, y: 300}, {x: 780, y: 300}, {x: 690, y: 100}]);
+```
+
 > NOTE:
 >
 > `document.getElementById('testIMG')` is an image on the page defined in an `HTMLImageElement`.
