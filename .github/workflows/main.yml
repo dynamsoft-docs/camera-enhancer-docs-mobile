@@ -31,6 +31,7 @@ jobs:
         run: |
           cd /home/ubuntu
           [ ! -d DCEDoc ] && mkdir -p DCEDoc
+          [ ! -d camera-enhancer-docs ] && git clone --depth 1 https://github.com/Dynamsoft/camera-enhancer-docs.git camera-enhancer-docs
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
           cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build --incremental
