@@ -19,7 +19,7 @@ The following content is based on this code that defines a page:
 <html lang="en">
 <head>
     <title>DCEJS - Draw Shapes</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.0/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
 </head>
 <body style="width:80vw; height:600px; margin: 0 auto">
     <br />
@@ -62,6 +62,17 @@ let line = new Dynamsoft.DCE.DrawingItem.DT_Line({x: 600, y: 600}, {x: 1050, y: 
 let text = new Dynamsoft.DCE.DrawingItem.DT_Text("TESTING...", 360, 360);
 let image = new Dynamsoft.DCE.DrawingItem.DT_Image(document.getElementById('testIMG'), 150, 600);
 let polygon = new Dynamsoft.DCE.DrawingItem.DT_Polygon([{x: 640, y: 100}, {x: 500, y: 300}, {x: 780, y: 300}, {x: 690, y: 100}]);
+```
+
+Alternatively, the code might be like this
+
+```javascript
+import { DrawingItem } from "dynamsoft-camera-enhancer";
+let arc = new DrawingItem.DT_Arc(840, 150, 100, 0, 360);
+let line = new DrawingItem.DT_Line({x: 600, y: 600}, {x: 1050, y: 400});
+let text = new DrawingItem.DT_Text("TESTING...", 360, 360);
+let image = new DrawingItem.DT_Image(document.getElementById('testIMG'), 150, 600);
+let polygon = new DrawingItem.DT_Polygon([{x: 640, y: 100}, {x: 500, y: 300}, {x: 780, y: 300}, {x: 690, y: 100}]);
 ```
 
 > NOTE:
@@ -123,7 +134,7 @@ For each **DrawingLayer**, `DrawingStyles` can be used in three ways
 2. Use a specific **DrawingStyle** for a specific type of **DrawingItems**;
 3. Use a specific **DrawingStyle** for a specific type of **DrawingItems** which are in a particular state.
 
-> As of version 3.0.0, the only available states for a **DrawingStyle** are "default" and "selected".
+> As of version 3.0.1, the only available states for a **DrawingStyle** are "default" and "selected".
 
 The following shows how to do the different settings with the method [`setDrawingStyle`](../../api-reference/interface/drawinglayer.md#setdrawingstyle):
 

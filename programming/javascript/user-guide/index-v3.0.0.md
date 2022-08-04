@@ -45,13 +45,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.0/dist/dce.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.0.0/dist/dce.js"></script>
   ```
 
 #### Host the SDK yourself
@@ -79,7 +79,7 @@ The following shows a few ways to download the SDK.
 Depending on how you downloaded the SDK and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dce-js-3.0.1/dist/dce.js"></script>
+<script src="/dce-js-3.0.0/dist/dce.js"></script>
 ```
 
 or
