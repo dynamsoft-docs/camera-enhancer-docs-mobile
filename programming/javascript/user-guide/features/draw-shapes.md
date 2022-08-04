@@ -19,7 +19,7 @@ The following content is based on this code that defines a page:
 <html lang="en">
 <head>
     <title>DCEJS - Draw Shapes</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.0/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
 </head>
 <body style="width:80vw; height:600px; margin: 0 auto">
     <br />
@@ -134,7 +134,7 @@ For each **DrawingLayer**, `DrawingStyles` can be used in three ways
 2. Use a specific **DrawingStyle** for a specific type of **DrawingItems**;
 3. Use a specific **DrawingStyle** for a specific type of **DrawingItems** which are in a particular state.
 
-> As of version 3.0.0, the only available states for a **DrawingStyle** are "default" and "selected".
+> As of version 3.0.1, the only available states for a **DrawingStyle** are "default" and "selected".
 
 The following shows how to do the different settings with the method [`setDrawingStyle`](../../api-reference/interface/drawinglayer.md#setdrawingstyle):
 
