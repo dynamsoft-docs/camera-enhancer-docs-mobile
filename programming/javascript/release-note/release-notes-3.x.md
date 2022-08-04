@@ -14,6 +14,12 @@ breadcrumbText: v3.x Release Notes
 
 ### Changelog
 
+* Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa.
+
+## 3.0.0 (07/27/2022)
+
+### Changelog
+
 #### New
 
 * Added callback [`onWarning`](../api-reference/initialization.md#onwarning) which is triggered when the running environment is not ideal.
