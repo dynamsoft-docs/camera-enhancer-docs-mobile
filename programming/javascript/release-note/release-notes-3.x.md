@@ -12,7 +12,7 @@ breadcrumbText: v3.x Release Notes
 
 ## 3.0.1 (08/04/2022)
 
-* Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa.
+* Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
 
 ## 3.0.0 (07/27/2022)
 
