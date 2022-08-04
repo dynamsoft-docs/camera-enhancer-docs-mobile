@@ -30,6 +30,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
+          [ -d camera-enhancer-docs ] && rm -rf camera-enhancer-docs
           [ ! -d DCEDoc ] && mkdir -p DCEDoc
           [ ! -d camera-enhancer-docs ] && git clone --depth 1 https://github.com/Dynamsoft/camera-enhancer-docs.git camera-enhancer-docs
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
