@@ -162,6 +162,15 @@ open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 
 `appendOrShowUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
+> NOTE: if `setUIElement()` is not called before `open()`, the default UI Element will be used, which is equivalent to the following code:
+>
+> ```js
+> await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
+> await cameraEnhancer.open(appendOrShowUI);
+> ```
+>
+> If you want to use a different UI element, call API [`setUIElement()`](initialization.md#setuielement) beforehand.
+
 **Return value**
 
 A promise resolving to a `PlayCallbackInfo` object.

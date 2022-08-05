@@ -133,10 +133,9 @@ The built-in UI of the `CameraEnhancer` object is defined in the file `dist/dce.
 * Copy the file `dist/dce.ui.html` to your project, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
 
 ```javascript
+// To make sure the following line takes effect, put it before the API `open()` is called.
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 ```
-
-  > You must set `defaultUIElementURL` before you call `createInstance()` .
 
 * Append the default UI element to your page as shown in [Configure the CameraEnhancer object](#configure-the-cameraenhancer-object), customize it if necessary.
 
