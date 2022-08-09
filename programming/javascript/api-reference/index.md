@@ -11,7 +11,7 @@ breadcrumbText: API Reference
 
 # JavaScript API Reference
 
-## Methods and Properties
+## CameraEnhancer
 
 ### Initialization
 
@@ -125,12 +125,41 @@ breadcrumbText: API Reference
 | [getVersion()](auxiliary.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](auxiliary.md#detectenvironment) | Returns a report on the current running environments. |
 
+## DrawingLayer
+
+| API Name | Description |
+|---|---|
+| [getId()](drawinglayer.md#getid) | Returns the ID of the DrawingLayer. |
+| [addDrawingItems()](drawinglayer.md#adddrawingitems) | Adds DrawingItem(s) to the DrawingLayer. |
+| [getDrawingItems()](drawinglayer.md#getdrawingitems) | Returns all DrawingItem(s) of the DrawingLayer. |
+| [setDrawingItems()](drawinglayer.md#setdrawingitems) | Replaces all DrawingItem(s) of the DrawingLayer with new ones. |
+| [hasDrawingItem()](drawinglayer.md#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
+| [removeDrawingItems()](drawinglayer.md#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
+| [clearDrawingItems()](drawinglayer.md#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
+| [setDrawingStyle()](drawinglayer.md#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
+| [setVisible()](drawinglayer.md#setvisible) | Shows or hides the DrawingLayer. |
+| [isVisible()](drawinglayer.md#isvisible) | Returns whether the DrawingLayer is visible. |
+| [renderAll()](drawinglayer.md#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
+| [onSelectionChange()](drawinglayer.md#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
+| [setMode()](drawinglayer.md#setmode) | Changes the mode of the layer. |
+| [getMode()](drawinglayer.md#getmode) | Returns the current mode. |
+
+## DrawingItem
+
+| Type Name | Description |
+|---|---|
+| [DT_Rect](drawingitem.md#dtrect) | Defines a DrawingItem the shape of a rectangle. |
+| [DT_Arc](drawingitem.md#dtarc)   | Defines a DrawingItem the shape of a arc. |
+| [DT_Line](drawingitem.md#dtline) | Defines a DrawingItem the shape of a line. |
+| [DT_Polygon](drawingitem.md#dtpolygon) | Defines a DrawingItem the shape of a polygon. |
+| [DT_Text](drawingitem.md#dttext) | Defines a DrawingItem that draws text. |
+| [DT_Image](drawingitem.md#dtimage) | Defines a DrawingItem that draws an image. |
+| [DT_Group](drawingitem.md#dtgroup) | Defines a DrawingItem which is a combination of more than one DrawingItem of the other six types.  |
+
 ## Interfaces
 
 * [Area](interface/area.md)
 * [DCEFrame](interface/dceframe.md)
-* [DrawingItem](interface/drawingitem.md)
-* [DrawingLayer](interface/drawinglayer.md)
 * [DrawingStyle](interface/drawingstyle.md)
 * [PlayCallbackInfo](interface/playcallbackinfo.md)
 * [Point](interface/point.md)
