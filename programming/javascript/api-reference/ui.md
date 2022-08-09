@@ -421,7 +421,7 @@ let newDrawingLayer = enhancer.createDrawingLayer();
 
 **See also**
 
-* [DrawingLayer](interface/drawinglayer.md)
+* [DrawingLayer](drawinglayer.md)
 
 ## getDrawingLayer
 
@@ -447,7 +447,7 @@ let drawingLayer = enhancer.getDrawingLayer(100);
 
 **See also**
 
-* [DrawingLayer](interface/drawinglayer.md)
+* [DrawingLayer](drawinglayer.md)
 
 ## getDrawingLayers
 
@@ -473,7 +473,7 @@ let drawingLayers = enhancer.getDrawingLayers();
 
 **See also**
 
-* [DrawingLayer](interface/drawinglayer.md)
+* [DrawingLayer](drawinglayer.md)
 
 ## clearDrawingLayers
 
@@ -491,7 +491,7 @@ enhancer.clearDrawingLayers();
 
 **See also**
 
-* [DrawingLayer](interface/drawinglayer.md)
+* [DrawingLayer](drawinglayer.md)
 
 ## createDrawingStyle
 
@@ -616,6 +616,27 @@ enhancer.updateDrawingStyle(100,  {
 enhancer.updateDrawingStyle(100, { fontSize: 30 });
 ```
 
+**Remarks**
+
+If you are using Dynamsoft Camera Enhancer with Dynamsoft Barcode Reader, Dynamsoft Label Recognizer or Dynamsoft Document Normalizer, you can use `updateDrawingStyle()` to update their dedicated styles. These SDKs use the styles of the following IDs:
+
+| SDK Name | Style IDs |
+|--|--|
+|Dynamsoft Document Normalizer | 1 (default), 5 (selected) |
+|Dynamsoft Label Recognizer | 2 (default), 6 (selected) |
+|Dynamsoft Barcode Reader|  3 (default), 7 (selected) |
+
+You can update these styles to apply changes to the DrawingLayers used by these products, for example, the following code changes the style for highlighting found barcodes:
+
+```js
+enhancer.updateDrawingStyle(3,  {
+    fillStyle: "rgba(100, 75, 245, 0.3)",
+    lineWidth: 5,
+    paintMode: "strokeAndFill",
+    strokeStyle: "rgba(73, 173, 245, 1)"
+});
+```
+
 **See also**
 
 * [DrawingStyle](interface/drawingstyle.md)
@@ -724,4 +745,4 @@ let drawingItems = enhancer.getSelectedDrawingItems();
 
 **See also**
 
-* [DrawingItem](interface/drawingitem.md)
+* [DrawingItem](drawingitem.md)

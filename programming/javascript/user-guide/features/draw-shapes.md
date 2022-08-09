@@ -41,7 +41,7 @@ The following content is based on this code that defines a page:
 
 ## Add a DrawingLayer
 
-All shapes are drawn on specific [`DrawingLayer`](../../api-reference/interface/drawinglayer.md)s. The first step in drawing a shape is to create a **DrawingLayer**.
+All shapes are drawn on specific [`DrawingLayer`](../../api-reference/drawinglayer.md)s. The first step in drawing a shape is to create a **DrawingLayer**.
 
 ```javascript
 function drawShapes(){
@@ -51,7 +51,7 @@ function drawShapes(){
 
 ## Define DrawingItems
 
-An `DrawingItem` is the basic shape that can be drawn. The SDK classify **DrawingItems** in different types: [`DT_Rect`](../../api-reference/interface/drawingitem.md#dtrect), [`DT_Arc`](../../api-reference/interface/drawingitem.md#dtarc), [`DT_Line`](../../api-reference/interface/drawingitem.md#dtline), [`DT_Polygon`](../../api-reference/interface/drawingitem.md#dtpolygon), [`DT_Text`](../../api-reference/interface/drawingitem.md#dttext), and [`DT_Image`](../../api-reference/interface/drawingitem.md#dtimage). The SDK also allow multiple items to be joined together and form the type called [`DT_Group`](../../api-reference/interface/drawingitem.md#dtgroup).
+An `DrawingItem` is the basic shape that can be drawn. The SDK classify **DrawingItems** in different types: [`DT_Rect`](../../api-reference/drawingitem.md#dtrect), [`DT_Arc`](../../api-reference/drawingitem.md#dtarc), [`DT_Line`](../../api-reference/drawingitem.md#dtline), [`DT_Polygon`](../../api-reference/drawingitem.md#dtpolygon), [`DT_Text`](../../api-reference/drawingitem.md#dttext), and [`DT_Image`](../../api-reference/drawingitem.md#dtimage). The SDK also allow multiple items to be joined together and form the type called [`DT_Group`](../../api-reference/drawingitem.md#dtgroup).
 
 The following code shows how to define these types of **DrawingItems**:
 
@@ -136,7 +136,7 @@ For each **DrawingLayer**, `DrawingStyles` can be used in three ways
 
 > As of version 3.0.1, the only available states for a **DrawingStyle** are "default" and "selected".
 
-The following shows how to do the different settings with the method [`setDrawingStyle`](../../api-reference/interface/drawinglayer.md#setdrawingstyle):
+The following shows how to do the different settings with the method [`setDrawingStyle`](../../api-reference/drawinglayer.md#setdrawingstyle):
 
 ```javascript
 // The following code assumes we have defined 3 different DrawingStyles with IDs 100, 101 and 102.
@@ -150,7 +150,7 @@ drawingLayer.setDrawingStyle(102, "rect", "selected");
 
 ## Modify existing DrawingItems
 
-The SDK allows **DrawingItems** to be modified after they are drawn on the UI. To do this, we first change the **DrawingLayer** to "editor" mode with the method [`setMode()`](../../api-reference/interface/drawinglayer.md#setmode).
+The SDK allows **DrawingItems** to be modified after they are drawn on the UI. To do this, we first change the **DrawingLayer** to "editor" mode with the method [`setMode()`](../../api-reference/drawinglayer.md#setmode).
 
 ```javascript
 drawingLayer.setMode("editor");
