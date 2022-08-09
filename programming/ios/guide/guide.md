@@ -11,6 +11,17 @@ breadcrumbText: iOS Guide
 
 # User Guide on Objective-C & Swift
 
+The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from your iOS applications to stream live video and acquire realtime frames. 
+
+> **Example Usage**
+> 
+> See how Dynamsoft Camera Enhancer helps in camera control and video recognition:
+> - **Barcode scanning from video stream**: check [Dynamsoft Barcode Reader iOS User Guide](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/user-guide.html?ver=latest)
+
+Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your iOS app:
+
+## App prerequisites
+
 - System Requirements:
   - macOS 10.11 and above.
   - iOS 9.0 and above.
