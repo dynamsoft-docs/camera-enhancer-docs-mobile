@@ -10,8 +10,6 @@ breadcrumbText: DrawingLayer
 
 # DrawingLayer
 
-`interface` DrawingLayer
-
 | API Name | Description |
 |---|---|
 | [getId()](#getid) | Returns the ID of the DrawingLayer. |
