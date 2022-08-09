@@ -75,6 +75,8 @@ if (cameras.length) {
 
 Chooses a camera as the video source.
 
+> If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
+
 ```typescript
 selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>
 ```
@@ -184,7 +186,7 @@ onPlayed: (playCallBackInfo:PlayCallBackInfo) => {}
 
 **Arguments**
 
-playCallBackInfo: returns the resolution of the video input.
+`playCallBackInfo`: returns the resolution of the video input.
 
 **Code Snippet**
 
@@ -246,6 +248,7 @@ setResolution(width: number, height: number): Promise<PlayCallbackInfo>
 **Parameters**
 
 `width` : specifies the horizontal resolution.
+
 `height` : specifies the vertical resolution.
 
 **Return value**

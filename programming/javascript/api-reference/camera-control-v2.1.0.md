@@ -97,6 +97,9 @@ if (cameras.length) {
 
 Chooses a camera as the video source.
 
+> If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
+
+
 ```typescript
 selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>;
 ```
@@ -244,6 +247,7 @@ setResolution(widthOrResolution: number | number[], height: number): Promise<Pla
 **Parameters**
 
 `widthOrResolution` : if passed a number, it specifies the horizontal resolution. If passed an array of two numbers, it specifies both the horizontal and the vertial resolutions.
+
 `height` : specifies the vertical resolution.
 
 **Return value**
@@ -432,6 +436,7 @@ setFocus(mode: string, distance?: number): Promise<void>;
 **Parameters**
 
 `mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+
 `distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
 
 **Return value**

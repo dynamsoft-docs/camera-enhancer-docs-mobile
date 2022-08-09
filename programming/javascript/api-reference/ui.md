@@ -241,6 +241,7 @@ setViewDecorator(type: string | string[], area: Area): void;
 `type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"]. If passed an empty string, the decorator is cleared.
 
 `area` : specifies where to place the decorator. It accepts 4 values:
+
 * `x`,     `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
 * `width`,     `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
 
@@ -458,7 +459,7 @@ getDrawingLayer(): Array<DrawingLayer>;
 
 **Parameters**
 
-none.
+None.
 
 **Return value**
 
