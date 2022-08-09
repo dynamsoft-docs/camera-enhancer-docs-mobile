@@ -616,17 +616,21 @@ enhancer.updateDrawingStyle(100,  {
 enhancer.updateDrawingStyle(100, { fontSize: 30 });
 ```
 
-**Remarks**
+**See also**
 
-If you are using Dynamsoft Camera Enhancer with Dynamsoft Barcode Reader, Dynamsoft Label Recognizer or Dynamsoft Document Normalizer, you can use `updateDrawingStyle()` to update their dedicated styles. These SDKs use the styles of the following IDs:
+* [DrawingStyle](interface/drawingstyle.md)
+
+**Special Notice**
+
+If you are using **Dynamsoft Camera Enhancer** with **Dynamsoft Barcode Reader**, **Dynamsoft Label Recognizer** or **Dynamsoft Document Normalizer**, you can use `updateDrawingStyle()` to update their dedicated styles. These SDKs use the styles of the following IDs:
 
 | SDK Name | Style IDs |
 |--|--|
-|Dynamsoft Document Normalizer | 1 (default), 5 (selected) |
-|Dynamsoft Label Recognizer | 2 (default), 6 (selected) |
-|Dynamsoft Barcode Reader|  3 (default), 7 (selected) |
+|Dynamsoft Document Normalizer | 1 (*default*), 5 (*selected*) |
+|Dynamsoft Label Recognizer | 2 (*default*), 6 (*selected*) |
+|Dynamsoft Barcode Reader|  3 (*default*), 7 (*selected*) |
 
-You can update these styles to apply changes to the DrawingLayers used by these products, for example, the following code changes the style for highlighting found barcodes:
+You can update these styles to apply changes to the DrawingLayers used by these products. For example, the following code changes the style for highlighting found barcodes:
 
 ```js
 enhancer.updateDrawingStyle(3,  {
@@ -636,10 +640,6 @@ enhancer.updateDrawingStyle(3,  {
     strokeStyle: "rgba(73, 173, 245, 1)"
 });
 ```
-
-**See also**
-
-* [DrawingStyle](interface/drawingstyle.md)
 
 ## setOriginalImage
 
