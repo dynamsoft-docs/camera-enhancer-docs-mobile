@@ -9,7 +9,18 @@ needGenerateH3Content: true
 breadcrumbText: Android Guide
 ---
 
-# User Guide on Android (Java)
+# Dynamsoft Camera Enhancer User Guide for Android (Java)
+
+The Dynamsoft Camera Enhancer Android SDK enables you to easily control cameras from your Android applications to stream live video and acquire realtime frames. 
+
+> **Example Usage**
+> 
+> See how Dynamsoft Camera Enhancer helps in camera control and video recognition:
+> - **Barcode scanning from video stream**: check [Dynamsoft Barcode Reader Android User Guide](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/user-guide.html?ver=latest)
+
+Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your Android app:
+
+## App prerequisites
 
 - System Requirements:
   - Supported OS: Android 5 or higher (Android 7 or higher recommended).
@@ -271,11 +282,3 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 >Note: 
 >- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
 >- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
-
-## What's next?
-
-### How to integration with barcode reader
-
-<a href="https://www.dynamsoft.com/barcode-reader/programming/android/user-guide.html?utm_source=docs" target="_blank">This article</a> guides you to integrate barcode reader function into your app.
-
-
