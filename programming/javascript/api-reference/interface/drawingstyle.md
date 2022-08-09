@@ -44,11 +44,9 @@ breadcrumbText: DrawingStyle
 
   The SDK comes with 8 default Drawing styles. Their style definition are listed below
 
-  //TODO: add a picture to demonstrate the 8 styles
-
   ```js
   // DrawingStyle 1
-  // Used by Dynamsoft Document Normalizer
+  // Used by Dynamsoft Document Normalizer for DrawingItems in "default" state.
   {
       fillStyle: "rgba(73, 173, 245, 0.3)",
       fontFamily: "sans-serif",
@@ -59,7 +57,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(73, 173, 245, 1)"
   }
   // DrawingStyle 2
-  // Used by Dynamsoft Label Recognizer
+  // Used by Dynamsoft Label Recognizer for DrawingItems in "default" state.
   {
       fillStyle: "rgba(73, 245, 73, 0.3)",
       fontFamily: "sans-serif",
@@ -70,7 +68,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(73, 245, 73, 0.9)"
   }
   // DrawingStyle 3
-  // Used by Dynamsoft Barcode Reader
+  // Used by Dynamsoft Barcode Reader for DrawingItems in "default" state.
   {
       fillStyle: "rgba(254, 180, 32, 0.3)",
       fontFamily: "sans-serif",
@@ -81,7 +79,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(254, 180, 32, 0.9)"
   }
   // DrawingStyle 4
-  // One of two default styles for custom DrawingLayers
+  // Used by all custom DrawingLayers for DrawingItems in "default" state.
   {
       fillStyle: "rgba(245, 236, 73, 0.3)",
       fontFamily: "sans-serif",
@@ -92,7 +90,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(245, 236, 73, 1)"
   }
   // DrawingStyle 5
-  // Used by Dynamsoft Document Normalizer
+  // Used by Dynamsoft Document Normalizer for DrawingItems in "selected" state.
   {
       fillStyle: "rgba(73, 173, 245, 0.3)",
       fontFamily: "sans-serif",
@@ -103,7 +101,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(73, 173, 245, 1)"
   }
   // DrawingStyle 6
-  // Used by Dynamsoft Label Recognizer
+  // Used by Dynamsoft Label Recognizer for DrawingItems in "selected" state.
   {
       fillStyle: "rgba(73, 245, 73, 0.3)",
       fontFamily: "sans-serif",
@@ -114,7 +112,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(73, 245, 73, 0.9)"
   }
   // DrawingStyle 7
-  // Used by Dynamsoft Barcode Reader
+  // Used by Dynamsoft Barcode Reader for DrawingItems in "selected" state.
   {
       fillStyle: "rgba(254, 180, 32, 0.3)",
       fontFamily: "sans-serif",
@@ -125,7 +123,7 @@ breadcrumbText: DrawingStyle
       strokeStyle: "rgba(254, 180, 32, 1)"
   }
   // DrawingStyle 8
-  // One of two default styles for custom DrawingLayers
+  // Used by custom DrawingLayers for DrawingItems in "selected" state.
   {
       fillStyle: "rgba(245, 236, 73, 0.3)",
       fontFamily: "sans-serif",
