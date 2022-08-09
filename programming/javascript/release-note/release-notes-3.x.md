@@ -27,11 +27,11 @@ breadcrumbText: v3.x Release Notes
 
 The following APIs are for the new feature of drawing shapes. Read more on [Draw Shapes with DCE JS](../user-guide/features/draw-shapes.md).
 
-* Added type [`DrawingItem`](../api-reference/interface/drawingitem.md) to define basic shapes to be drawn.
+* Added type [`DrawingItem`](../api-reference/drawingitem.md) to define basic shapes to be drawn.
 * Added class `DT_Rect`, `DT_Arc`, `DT_Text`, `DT_Line`, `DT_Polygon`, `DT_Image`, and `DT_Group` to define different shapes of **DrawingItem**.
 * Added interface `Point` to describe the vertices when constructing objects of `DT_Line` and `DT_Polygon`.
 
-* Added interface [`DrawingLayer`](../api-reference/interface/drawinglayer.md) to organize items.
+* Added interface [`DrawingLayer`](../api-reference/drawinglayer.md) to organize items.
 * Added method [`createDrawingLayer()`](../api-reference/ui.md#createdrawinglayer) to create a **DrawingLayer** object.
 * Added method [`getDrawingLayer()`](../api-reference/ui.md#getdrawinglayer) to get the **DrawingLayer** specified by its ID.
 * Added method [`clearDrawingLayers()`](../api-reference/ui.md#cleardrawinglayers) to remove all **DrawingLayer** objects.
@@ -51,17 +51,17 @@ The following APIs are for the new feature of drawing shapes. Read more on [Draw
 
 On the **DrawingLayer** interface:
 
-* Added method [`addDrawingItems()`](../api-reference/interface/drawinglayer.md#adddrawingitems) to add one or multiple **DrawingItems**.
-* Added method [`getDrawingItems()`](../api-reference/interface/drawinglayer.md#getdrawingitems) to return all **DrawingItems**.
-* Added method [`removeDrawingItems()`](../api-reference/interface/drawinglayer.md#removedrawingitems) to remove one or multiple **DrawingItems**.
-* Added method [`setDrawingItems()`](../api-reference/interface/drawinglayer.md#setdrawingitems) to set new **DrawingItems** which means old  **DrawingItems** will be removed.
-* Added method [`hasDrawingItem()`](../api-reference/interface/drawinglayer.md#hasdrawingitem) to determine whether a **DrawingItem** exists on this **DrawingLayer**.
-* Added method [`clearDrawingItems()`](../api-reference/interface/drawinglayer.md#cleardrawingitems) to remove all **DrawingItems** from this **DrawingLayer**.
-* Added method [`setMode()`](../api-reference/interface/drawinglayer.md#setmode) to switch the **DrawingLayer** between editor and viewer mode.
-* Added method [`getMode()`](../api-reference/interface/drawinglayer.md#getmode) to get the current mode the **DrawingLayer** is in.
-* Added method [`getId()`](../api-reference/interface/drawinglayer.md#getid) to return the ID of the **DrawingLayer**.
-* Added method [`setDrawingStyle()`](../api-reference/interface/drawinglayer.md#setdrawingstyle) to use different **DrawingStyles** on the **DrawingLayer**.
-* Added method [`setVisible()`](../api-reference/interface/drawinglayer.md#setvisible) to show or hide the **DrawingLayer**.
-* Added method [`isVisible()`](../api-reference/interface/drawinglayer.md#isvisible) to return whether the **DrawingLayer** is visible.
-* Added method [`renderAll()`](../api-reference/interface/drawinglayer.md#renderall) to redraw all **DrawingItems**.
-* Added event [`onSelectionChange()`](../api-reference/interface/drawinglayer.md#onselectionchange) to listen on the selection or deselection of **DrawingItems** on the **DrawingLayer**.
+* Added method [`addDrawingItems()`](../api-reference/drawinglayer.md#adddrawingitems) to add one or multiple **DrawingItems**.
+* Added method [`getDrawingItems()`](../api-reference/drawinglayer.md#getdrawingitems) to return all **DrawingItems**.
+* Added method [`removeDrawingItems()`](../api-reference/drawinglayer.md#removedrawingitems) to remove one or multiple **DrawingItems**.
+* Added method [`setDrawingItems()`](../api-reference/drawinglayer.md#setdrawingitems) to set new **DrawingItems** which means old  **DrawingItems** will be removed.
+* Added method [`hasDrawingItem()`](../api-reference/drawinglayer.md#hasdrawingitem) to determine whether a **DrawingItem** exists on this **DrawingLayer**.
+* Added method [`clearDrawingItems()`](../api-reference/drawinglayer.md#cleardrawingitems) to remove all **DrawingItems** from this **DrawingLayer**.
+* Added method [`setMode()`](../api-reference/drawinglayer.md#setmode) to switch the **DrawingLayer** between editor and viewer mode.
+* Added method [`getMode()`](../api-reference/drawinglayer.md#getmode) to get the current mode the **DrawingLayer** is in.
+* Added method [`getId()`](../api-reference/drawinglayer.md#getid) to return the ID of the **DrawingLayer**.
+* Added method [`setDrawingStyle()`](../api-reference/drawinglayer.md#setdrawingstyle) to use different **DrawingStyles** on the **DrawingLayer**.
+* Added method [`setVisible()`](../api-reference/drawinglayer.md#setvisible) to show or hide the **DrawingLayer**.
+* Added method [`isVisible()`](../api-reference/drawinglayer.md#isvisible) to return whether the **DrawingLayer** is visible.
+* Added method [`renderAll()`](../api-reference/drawinglayer.md#renderall) to redraw all **DrawingItems**.
+* Added event [`onSelectionChange()`](../api-reference/drawinglayer.md#onselectionchange) to listen on the selection or deselection of **DrawingItems** on the **DrawingLayer**.
