@@ -15,7 +15,13 @@ Allow your website to easily control cameras on desktop and mobile devices.
 
 Once integrated, your users can open your website in a browser, access their cameras to stream live video and acquire realtime frames.
 
-In this guide, you will learn step by step on how to integrate this SDK into your website.
+> **Example Usage**
+> 
+> See how Dynamsoft Camera Enhancer helps in camera control and video recognition:
+> - **Barcode scanning from video stream**: check [Dynamsoft Barcode Reader JS User Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/?ver=latest)
+> - **MRZ scanning and OCR from video stream**: check [Dynamsoft Label Recognizer JS User Guide](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest&utm_source=dceguide)
+
+In this guide, you will learn step by step on how to integrate the Dynamsoft Camera Enhancer SDK into your website.
 
 **Table of Contents**
 
@@ -27,12 +33,6 @@ In this guide, you will learn step by step on how to integrate this SDK into you
 * [API Documentation](#api-documentation)
 * [Release Notes](#release-notes)
 * [Next Steps](#next-steps)
-
-> **Example Usage**
->
-> Read the user guide of Dynamsoft Label Recognizer on how DCE helps the SDK achieve video recognition:
->
-> * [Dynamsoft Label Recognizer User Guide](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest&utm_source=dceguide)
 
 ## Getting Started
 
