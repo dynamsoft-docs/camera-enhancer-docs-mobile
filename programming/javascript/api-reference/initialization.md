@@ -121,7 +121,9 @@ A promise that resolves when the operation succeeds.
 
 ```html
 <!-- Define an element to hold the video input -->
-<div class="dce-video-container" style="position:relative;width:100%;height:70vh;"></div>
+<!-- The video element will be created and appended to the DIV element with the class 'dce-video-container' , make sure the class name is the same.
+Besides, the CSS property 'position' of the DIV element must be either 'relative', 'absolute', 'fixed', or 'sticky'. -->
+<div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
     (async () => {
         let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
@@ -149,8 +151,8 @@ A promise that resolves when the operation succeeds.
 
 A callback which is triggered when the running environment is not ideal. In this version, it may get triggered in two scenarios:
 
-1. If the page is opened from the disk
-2. The page is hosted in a HTTP site without SSL
+1. If the page is opened from the disk;
+2. The page is hosted in a HTTP site without SSL;
 
 The following two warnings are returned respectively:
 

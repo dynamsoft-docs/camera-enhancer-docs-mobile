@@ -112,7 +112,7 @@ A `DCEFrame` object which contains the image data of the frame and related infor
 
 ```js
 let frameData = enhancer.getFrame();
-document.body.appendChild(frameData.canvas);
+document.body.appendChild(frameData.toCanvas());
 ```
 
 **See also**
@@ -139,7 +139,7 @@ A `DCEFrame` object which contains the image data of the frame and related infor
 
 ```js
 let frameData = enhancer.getFrameFromBuffer();
-document.body.appendChild(frameData.canvas);
+document.body.appendChild(frameData.toCanvas());
 ```
 
 **See also**
@@ -273,13 +273,12 @@ singleFrameMode: boolean;
 **Code Snippet**
 
 ```js
-let pEnhancer = null;
 (async () => {
-    let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-    enhancer.on('singleFrameAcquired', frame => {
-        document.body.appendChild(frameData.canvas);
+    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+    enhancer.on('singleFrameAcquired', frameData => {
+        document.body.appendChild(frameData.toCanvas());
     });
     enhancer.singleFrameMode = true;
-    await enhancer.open();
+    await enhancer.open(true);
 })();
 ```
