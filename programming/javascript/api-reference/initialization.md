@@ -17,6 +17,7 @@ breadcrumbText: Initialization
 | [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [getUIElement()](#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
 | [setUIElement()](#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
+| [onWarning](#onwarning) | A callback which is triggered when the running environment is not ideal. |
 
 ## createInstance
 
@@ -47,6 +48,14 @@ let pEnhancer = null;
 
 Returns or sets the URL of the *.html* file that defines the default UI Element. The URL can only be set before the API [createInstance](#createinstance) is called.
 
+> Note that the SDK comes with 3 default UI definitions:
+>
+> | Definition Name | Notes |
+> | ---             | ----- |
+> | dce.ui.html     | Used by default if the CameraEnhancer instance is used on its own. |
+> | dbr.ui.html     | Used by default if the CameraEnhancer instance is used as an image source for Dynamsoft Barcode Reader. |
+> | dlr.ui.html     | Used by default if the CameraEnhancer instance is used as an image source for Dynamsoft Label Recognizer. |
+
 ```typescript
 static defaultUIElementURL: string;
 ```
@@ -54,7 +63,7 @@ static defaultUIElementURL: string;
 **Code Snippet**
 
 ```js
-Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.1.0/dist/dce.ui.html";
+Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.ui.html";
 let pEnhancer = null;
 (async () => {
     let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
@@ -65,6 +74,8 @@ let pEnhancer = null;
 ## getUIElement
 
 Returns the HTML element that is used by the [CameraEnhancer](#CameraEnhancer) instance.
+
+> In 2.3.2 or earlier, you could call getUIElement() right after creating an instance of CameraEnhancer and it would return the default HTML element. In 3.0.0 or later, you should call getUIElement() after calling setUIElement() or calling open(). Otherwise, it will return undefined.
 
 ```typescript
 getUIElement(): HTMLElement;
@@ -87,8 +98,8 @@ The HTML element used as the UI by the [CameraEnhancer](#CameraEnhancer) instanc
     let pEnhancer = null;
     (async () => {
         let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
         await enhancer.open();
+        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
     })();
 </script>
 ```
@@ -112,26 +123,59 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```html
-<!-- Define an element that shows only the video input -->
-<video class="dce-video" playsinline="true"></video>
+<!-- Define an element to hold the video input -->
+<div class="dce-video-container" style="position:absolute;left:0;top:0;width:100%;height:100%;"></div>
 <script>
     let pEnhancer = null;
     (async () => {
         let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-        await enhancer.setUIElement(document.getElementsByClassName("dce-video")[0]);
+        await enhancer.setUIElement(document.getElementsByClassName("dce-video-container")[0]);
         await enhancer.open();
     })();
 </script>
 ```
 
 ```html
-<!-- Use the default official UI element definition -->
+<!-- Use a UI element defined in a HTML file. -->
 <script>
     let pEnhancer = null;
     (async () => {
         let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
-        await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.1.0/dist/dce.ui.html");
-        await enhancer.open();
+        // The following line is not needed if you just want to use the official UI element for CameraEnhancer.
+        // Only use it when you want to specify a different HTML page that contains a different UI definition.
+        await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.ui.html");
+        // Note that because the element is not on the current page, you need to pass "true" when calling open() in order to show it.
+        await enhancer.open(true);
     })();
 </script>
 ```
+
+## onWarning
+
+A callback which is triggered when the running environment is not ideal. In this version, it may get triggered in two scenarios:
+
+1. If the page is opened from the disk
+2. The page is hosted in a HTTP site without SSL
+
+The following two warnings are returned respectively:
+
+```js
+{
+    id: 1,
+    message: "Not using HTTP protocol, the SDK may not work correctly."
+}
+{
+    id: 2,
+    message: "Not connected via SSL (HTTPS), the SDK may not work correctly."
+}
+```
+
+**Code Snippet**
+
+```js
+Dynamsoft.DCE.CameraEnhancer.onWarning = warning => console.log(warning);
+```
+
+**See Also**
+
+[Warning](interface/warning.md)

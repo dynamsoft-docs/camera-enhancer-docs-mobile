@@ -27,9 +27,11 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DCEDoc ] && rm -rf DCEDoc
+          [ -d camera-enhancer-docs ] && rm -rf camera-enhancer-docs
           [ ! -d DCEDoc ] && mkdir -p DCEDoc
+          [ ! -d camera-enhancer-docs ] && git clone --depth 1 https://github.com/Dynamsoft/camera-enhancer-docs.git camera-enhancer-docs
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDoc/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DCEDoc/_site/ ./www.dynamsoft.com/camera-enhancer/docs/ prod
 
@@ -48,10 +50,13 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DCEDocPreview ] && rm -rf DCEDocPreview
+          [ -d camera-enhancer-docs-preview ] && rm -rf camera-enhancer-docs-preview
+          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
           [ ! -d DCEDocPreview ] && mkdir -p DCEDocPreview
           [ ! -d camera-enhancer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/camera-enhancer-docs.git camera-enhancer-docs-preview
           cd camera-enhancer-docs-preview && git pull && cd .. && cp -rfp ./camera-enhancer-docs-preview/* ./DCEDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCEDocPreview/
+          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCEDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCEDocPreview/_config.yml
           cd DCEDocPreview && bundle exec jekyll build

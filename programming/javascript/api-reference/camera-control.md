@@ -11,7 +11,7 @@ breadcrumbText: Camera Control
 
 # Camera Control
 
-## Basic Control
+**Basic Control**
 
 | API Name | Description |
 |---|---|
@@ -29,7 +29,7 @@ breadcrumbText: Camera Control
 | [getResolution()](#getresolution) | Returns the resolution of the current video input. |
 | [getResolutions()](#getresolutions) | Returns the resolutions supported by the current video input. |
 
-### Advanced Control
+**Advanced Control**
 
 | API Name | Description |
 |---|---|
@@ -58,7 +58,7 @@ ifSkipCameraInspection: boolean;
 Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
 
 > NOTE
-> 
+>
 > This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
 
 ```typescript
@@ -97,6 +97,8 @@ if (cameras.length) {
 ## selectCamera
 
 Chooses a camera as the video source.
+
+> If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
 
 ```typescript
 selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>;
@@ -161,6 +163,15 @@ open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 **Parameters**
 
 `appendOrShowUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
+
+> NOTE: if `setUIElement()` is not called before `open()`, the default UI Element will be used, which is equivalent to the following code:
+>
+> ```js
+> await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
+> await cameraEnhancer.open(appendOrShowUI);
+> ```
+>
+> If you want to use a different UI element, call API [`setUIElement()`](initialization.md#setuielement) beforehand.
 
 **Return value**
 
@@ -238,13 +249,16 @@ None.
 
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
+> If called before `open()` or `show()`, the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720.
+
 ```typescript
 setResolution(widthOrResolution: number | number[], height: number): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
 
-`widthOrResolution` : if passed a number, it specifies the horizontal resolution. If passed an array of two numbers, it specifies both the horizontal and the vertial resolutions.
+`width` : specifies the horizontal resolution.
+
 `height` : specifies the vertical resolution.
 
 **Return value**
@@ -458,6 +472,7 @@ setFocus(mode: string, distance?: number): Promise<void>;
 **Parameters**
 
 `mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+
 `distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
 
 **Return value**

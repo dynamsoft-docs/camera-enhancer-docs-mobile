@@ -11,6 +11,18 @@ breadcrumbText: Android CameraEnhancer Class
 
 # CameraEnhancer Class
 
+The main class of `CameraEnhancer` library. It contains APIs that enable user to:
+
+- Implement basic camera control like open, close, change resolution, etc.
+- Get frames from the video streaming.
+- Enable advanced features including:
+  - Frame filtering by sharpness
+  - Frame filtering by sensor
+  - Enhanced focus
+  - Frame cropping
+  - Auto zoom
+  - Smart torch control
+
 ```java
 class com.dynamsoft.dce.CameraEnhancer
 ```
@@ -30,12 +42,12 @@ class com.dynamsoft.dce.CameraEnhancer
 Initialize the `CameraEnhancer` Object.
 
 ```java
-CameraEnhancer(android.content.Context context)
+CameraEnhancer(Activity activity)
 ```
 
 **Parameters**
 
-`context`: An instance of global information about an application environment.
+`activity`: An instance of `android.app.Activity`.
 
 **Code Snippet**
 
@@ -99,7 +111,9 @@ String DCEVersion = cameraEnhancer.getVersion();
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
+| [`selectCamera(EnumCameraPosition)`](#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
+| [`selectCamera(String)`](#selectcamerastring) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`](#open) | Turn on the current selected camera. |
@@ -132,7 +146,48 @@ String[] cameraIds = cameraEnhancer.getAllCameras();
 
 &nbsp;
 
-### selectCamera
+### selectCamera(EnumCameraPosition)
+
+Select the camera position (front-facing or back-facing).
+
+```java
+void selectCamera(EnumCameraPosition cameraPosition) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.selectCamera(EnumCameraPosition.CP_BACK);
+```
+
+&nbsp;
+
+### getCameraPosition
+
+Returns whether the front-facing camera or back-facing camera is selected.
+
+```java
+EnumCameraPosition getCameraPosition()
+```
+
+**Return Value**
+
+An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**Code Snippet**
+
+```java
+EnumCameraPosition camera = mCameraEnhancer.getCameraPosition();
+```
+
+&nbsp;
+
+### selectCamera(String)
 
 Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings applied to this camera will be inherited by the newly selected camera.
 
@@ -324,6 +379,7 @@ cameraEnhancer.turnOffTorch();
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
+| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 &nbsp;
 
@@ -406,6 +462,33 @@ DCEFrameListener listener = new DCEFrameListener(){
 cameraEnhancer.addListener(listener);
 // ......
 cameraEnhancer.removeListener(listener);
+```
+
+&nbsp;
+
+### takePhoto
+
+Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/interface-dcephotolistener.md#photooutputcallback).
+
+```java
+void takePhoto(DCEPhotoListener listener)
+```
+
+**Parameters**
+
+`listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/interface-dcephotolistener.md).
+
+**Code Snippet**
+
+```java
+// Create an instance of DCEPhotoListener
+DCEPhotoListener photoListener = new DCEPhotoListener() {
+    @Override
+    public void photoOutputCallback(byte[] bytes) {
+        // Add your code to execute when photo is captured.
+    }
+};
+mCameraEnhancer.takePhoto(photoListener);
 ```
 
 &nbsp;
@@ -518,12 +601,12 @@ If the features you input are all enabled but don't cover all the enabled featur
 
 | Method | Description |
 | ------ | ----------- |
-| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
 | [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
 | [`setFocus`](#setfocus) | Focus once at the input position. |
 | [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
@@ -531,32 +614,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
-
-### setFrameRate
-
-Camera Enhancer will try to set the frame rate around the input value.
-
-```java
-void setFrameRate(int frameRate) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`frameRate`: An int value that refers to the target frame rate.  
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setFrameRate(25);
-```
-
-**Remarks**
-
-The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
-
-&nbsp;
+| [`setFrameRate`](#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ### getFrameRate
 
@@ -668,6 +726,24 @@ cameraEnhancer.setZoom(2.5)
 
 &nbsp;
 
+### getMaxZoomFactor
+
+Get the maximum available zoom factor.
+
+```java
+float getMaxZoomFactor()
+```
+
+**Return Value**
+
+A float value that indicates the maximum available zoom factor of the device.
+
+**Code Snippet**
+
+```java
+float maxZoomFactor = cameraEnhancer.getMaxZoomFactor();
+```
+
 ### setFocus
 
 Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
@@ -703,6 +779,11 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 `scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
 
+<div align="center">
+    <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
+    <p>How to set scan region</p>
+</div>
+
 **Code Snippet**
 
 ```java
@@ -711,7 +792,7 @@ scanRegion.regionTop = 25;
 scanRegion.regionBottom = 75;
 scanRegion.regionLeft = 25;
 scanRegion.regionRight = 75;
-regionDefinition.regionMeasuredByPercentage = 1;
+scanRegion.regionMeasuredByPercentage = 1;
 
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 try {
@@ -847,6 +928,35 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 
 cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthreshold':30,'conversioncountthreshold':30,'sharpnessthreshold':0.2,'sharpnessthresholdlarge':0.4,'abssharpnessthreshold':200,'absgraythreshold':35,'claritythreshold':0.1}");
 ```
+
+&nbsp;
+
+### setFrameRate
+
+> Note:
+> The method is deprecated in v9.0.2 and will be removed in v10.0 release.
+
+Camera Enhancer will try to set the frame rate around the input value.
+
+```java
+void setFrameRate(int frameRate) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`frameRate`: An int value that refers to the target frame rate.  
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setFrameRate(25);
+```
+
+**Remarks**
+
+The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
 
 &nbsp;
 

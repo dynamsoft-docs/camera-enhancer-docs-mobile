@@ -36,21 +36,20 @@ Callback when the `DCEFrame` is output.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_dce addListener:self];
-
 - (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
     // TODO add your code
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.addListener(self)
-
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
     // TODO add your code
 }

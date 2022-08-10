@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Main Page
+title: Dynamsoft Camera Enhancer JavaScript API - Acquisition
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Acquisition.
 keywords: camera enhancer, acquisition, javascript, js
 needAutoGenerateSidebar: true

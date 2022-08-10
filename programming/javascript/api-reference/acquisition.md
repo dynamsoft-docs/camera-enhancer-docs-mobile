@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Main Page
+title: Dynamsoft Camera Enhancer JavaScript API - Acquisition
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Acquisition.
 keywords: camera enhancer, acquisition, javascript, js
 needAutoGenerateSidebar: true
@@ -18,7 +18,6 @@ breadcrumbText: Acquisition
 | [croppingRegionIndex](#singleframemode) | Returns or sets which of the cropping regions is to be used in cropping the next frame. |
 -->
 
-
 | API Name | Description |
 |---|---|
 | [setScanRegion()](#setscanregion) | Specifies which part of the original video is considered when processing frames. |
@@ -33,7 +32,6 @@ breadcrumbText: Acquisition
 | [numberOfFramesInBuffer](#numberofframesinbuffer) | Returns how many frames there are in the buffer. |
 | [loopInterval](#loopinterval) | Returns or sets the start time of the next fetch operation. |
 | [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
-
 
 ## setScanRegion
 

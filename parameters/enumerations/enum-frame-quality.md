@@ -18,8 +18,8 @@ breadcrumbText: Enumerations Frame Quality
 
 ## Members
 
-| Member | Value | Description |
-|--------|-------|-------------|
-| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
-| `FQ_LOW` | 1 | The DCEFrame quality is low. |
-| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
+| Member (Android) | Member (Objective-C) | Member (Swift) | Value | Description |
+| ---------------- | -------------------- | -------------- | ----- | ----------- |
+| `FQ_HIGH` | `EnumFRAME_QUALITY_HIGH` | `EnumFRAME_QUALITY_HIGH` | 0 | The DCEFrame quality is high. |
+| `FQ_LOW` | `EnumFRAME_QUALITY_LOW` | `EnumFRAME_QUALITY_LOW` | 1 | The DCEFrame quality is low. |
+| `FQ_UNKNOWN` | `EnumFRAME_QUALITY_UNKNOWN` | `EnumFRAME_QUALITY_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |

@@ -40,15 +40,16 @@ Set the position you want to auto focus at. This setting will replace the defaul
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setAutoFocusPosition:CGPointMake(0.5, 0.5)];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.setAutoFocusPosition(CGPoint(x: 0.5, y: 0.5))
 ```
 
@@ -67,15 +68,16 @@ Set the position you want to manually focus at. This focus position only takes e
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setManualFocusPosition:CGPointMake(0.5, 0.5)];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.setManualFocusPosition(CGPoint(x: 0.5, y: 0.5))
 ```
 
@@ -93,15 +95,16 @@ Set focal length (float). The range of focal length is from 0 to 1. The value is
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setFocalLength:0.8];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.setFocalLength = 0.8
 ```
 
@@ -120,17 +123,18 @@ This API is designed to turn on DCE autofocus mode which is specially designed a
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableDCEAutoFocus:true];
 //To check the status of DCE autofocus.
 bool res = [dce enableDCEAutoFocus];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.enableDCEAutoFocus = true
 //To check the status of DCE autofocus.
 let res = dce.enableDCEAutoFocus
@@ -151,17 +155,18 @@ This API is designed for controlling the system default autofocus. To turn off d
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableDefaultAutoFocus:false];
 //To check the status of system default autofocus.
 bool res = [dce enableDefaultAutoFocus];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.enableDefaultAutoFocus = false
 //To check the status of system default autofocus.
 let res = dce.enableDefaultAutoFocus
@@ -182,17 +187,18 @@ Regular autofocus is an advanced setting that enables the camera to autofocus fo
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableRegularAutoFocus:false];
 //To check the status of DCE autofocus.
 bool res = [dce enableRegularAutoFocus];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.enableRegularAutoFocus = false
 //To check the status of DCE regular autofocus.
 let res = dce.enableRegularAutoFocus
@@ -213,14 +219,12 @@ Set the focus interval and termination time for the regular autofocus.
 
 **Code Snippet**
 
-```objectivec
+```objc
 //The camera will autofocus for every 3s. It won't focus for a second time within 500ms.
 [_dce setRegularAutoFocusParam:3000 terminateFocusByTime:500];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.setRegularAutoFocusParam(3000, terminateFocusByTime: 500)
 ```
 
@@ -239,17 +243,18 @@ This API is another advanced setting that enables the camera to autofocus when a
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableAutoFocusOnSharpnessChange:false];
 //To check the status of DCE sharpness focus.
 bool res = [dce enableAutoFocusOnSharpnessChange];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.enableAutoFocusOnSharpnessChange = false
 //To check the status of DCE sharpness focus.
 let res = dce.enableAutoFocusOnSharpnessChange
@@ -270,17 +275,18 @@ DCE auto zoom mode can be enabled if user is using DCE to enhance decode perform
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableAutoZoom:true];
 //To check the status of DCE autozoom.
 bool res = [dce enableAutoZoom];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.enableAutoZoom = true
 //To check the status of DCE autozoom.
 let res = dce.enableAutoZoom
@@ -300,14 +306,15 @@ To set the zoom factor (float).
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setZoomFactor:1.5];
 ```
-
-Swift:
-
-```Swift
+2. 
+```swift
 dce.setZoomFactor = 1.5
 ```

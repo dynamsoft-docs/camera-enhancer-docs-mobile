@@ -11,19 +11,36 @@ breadcrumbText: Release Note
 
 # Release Notes
 
+## 3.0
+
+> First released: 07-27-2022
+
+### Highlights
+
+* Added flexible shape drawing logic.
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 3.0.1 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#301-08042022) |
+| 3.0.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#300-07272022) |
+
+&nbsp;
+
 ## 2.3
 
 > First released: 03-21-2022
 
 ### Highlights
 
-* The same camera enhancer instance can now be used by multiple products.
+{%- include release-notes/product-highlight-2.3.0.md -%}
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022)|
+| 2.3.2 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#232-03282022) / [Android]({{ site.android-release-note }}release-notes-2.x.html#232-08022022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#232-08022022) |
+| 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#231-07112022) |
+| 2.3.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#230-06282022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#230-06282022) |
 
-&nbsp; 
+&nbsp;
 
 ## 2.1
 
@@ -36,6 +53,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 2.1.4 | [Android]({{ site.android-release-note }}release-notes-2.x.html#214-05262022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#214-05262022) |
 | 2.1.3 | [Android]({{ site.android-release-note }}release-notes-2.x.html#213-03022022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#213-03022022) |
 | 2.1.1 | [Android]({{ site.android-release-note }}release-notes-2.x.html#211-12282021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#211-12282021) |
 | 2.1.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#210-12162021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#210-12162021) / [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-01202022)|

@@ -23,7 +23,6 @@ interface com.dynamsoft.dce.DCELicenseVerificationListener
 
 &nbsp;
 
-
 ## DCELicenseVerificationCallback
 
 The call back of the license server. Add the code in the callback function to react when the license server connection is successful or failed.

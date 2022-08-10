@@ -32,7 +32,7 @@ The `FramePackage` is the class that stores pixel data and further information.
 
 Store the buffered frame data in NSData.
 
-```objectivec
+```objc
 NSData* buffer
 ```
 
@@ -40,7 +40,7 @@ NSData* buffer
 
 Store the width of the frame.
 
-```objectivec
+```objc
 NSNumber* width
 ```
 
@@ -48,7 +48,7 @@ NSNumber* width
 
 Store the height of the frame.
 
-```objectivec
+```objc
 NSNumber* height
 ```
 
@@ -56,7 +56,7 @@ NSNumber* height
 
 Store the stride of the frame.
 
-```objectivec
+```objc
 NSNumber* stride
 ```
 
@@ -64,7 +64,7 @@ NSNumber* stride
 
 Store the pixel format of the frame.
 
-```objectivec
+```objc
 NSString* pixelFormat
 ```
 
@@ -72,7 +72,7 @@ NSString* pixelFormat
 
 Store the frame ID of the frame.
 
-```objectivec
+```objc
 NSNumber* frameID
 ```
 
@@ -80,7 +80,7 @@ NSNumber* frameID
 
 Store the fast frame ID of the frame.
 
-```objectivec
+```objc
 NSNumber* fastFrameID
 ```
 
@@ -88,6 +88,6 @@ NSNumber* fastFrameID
 
 Store the buffered frame data in CVImageBufferRef.
 
-```objectivec
+```objc
 CVImageBufferRef imageBuffer
 ```

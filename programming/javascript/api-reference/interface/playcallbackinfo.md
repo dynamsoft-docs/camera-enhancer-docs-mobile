@@ -23,4 +23,3 @@ breadcrumbText: PlayCallbackInfo
 * height: `number`
 
   The height (in pixels) of the video input.
-  

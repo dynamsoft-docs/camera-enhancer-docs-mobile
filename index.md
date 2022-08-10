@@ -1,33 +1,34 @@
 ---
-layout: default-layout
-title: Dynamsoft Camera Enhancer - Introduction
-description: This is the documentation - introduction page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, introduction
-needAutoGenerateSidebar: true
-breadcrumbText: Documentation
+layout: home-page
+title: Dynamsoft Camera Enhancer SDK Documentation
+description: Dynamsoft Camera Enhancer SDK Documentation Homepage
+keywords:  Camera Enhancer
+breadcrumbText: HomePage
 ---
 
-# Dynamsoft Camera Enhancer - Documentation
+# Dynamsoft Camera Enhancer Documentation
 
-## Introduction
+* [Introduction]({{site.introduction}}index.html)
 
-- [Overview]({{site.introduction}})
-- [License introduction]({{site.introduction-license}}License.html)
+<hr>
+DEVELOPMENT
+<hr>
 
-## Programming
+* [Web (Client Side)]({{site.js}})
+* [Android]({{site.android}})
+* [iOS]({{site.ios}})
 
-- [Android]({{site.android}})
-  - [Android user guide]({{site.android-guide}}guide.html)
-  - [Android API reference]({{site.android}}api-reference.html)
-- [iOS]({{site.ios}})
-  - [iOS user guide]({{site.ios-guide}}guide.html)
-  - [iOS API reference]({{site.ios}}api-reference.html)
+<hr>
+PARAMETERS
+<hr>
 
-## Parameters
+* [Parameter reference]({{site.reference}})
+* [Enumerations]({{site.enumerations}})
 
-- [Parameter reference]({{site.reference}})
-- [Enumerations]({{site.enumerations}})
+<hr>
+USEFUL RESOURCES
+<hr>
 
-## Trouble shooting
-
-- [Contact us]({{site.contact-us}})
+* [Release Notes]({{site.release_notes}}index.html)
+* [License]({{site.license_activation}}License.html)
+* [FAQ]({{site.contact-us}})

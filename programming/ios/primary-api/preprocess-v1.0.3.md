@@ -25,22 +25,23 @@ noTitleIndex: true
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame queue.
 
-```objectivec
+```objc
 - (FramePackage*)AcquireListFrame;
 ```
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 FramePackage *fg = [self.camera AcquireListFrame];
 ```
-
-Swift:
-
+2. 
 ```swift
-let fg = self.dce.acquireListFrame() 
+let fg = self.dce.acquireListFrame()
 ```
 
 ## enableFastMode
@@ -58,16 +59,17 @@ This API is designed for users to setup DCE fast mode. DCE fast mode will cut fr
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableFastMode:true];
 //To check the status of DCE fast mode
 [dce getEnableFastMode];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.enableFastMode = true
 ```
@@ -87,16 +89,17 @@ Turn on (off) sensor control
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableSensorControl:true];
 //To check the status of the DCE sensor control
 BOOL res= [dce enableSensorControl];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.enableSensorControl(true)
 //To check the status of the DCE sensor control
@@ -107,7 +110,7 @@ let res = dce.enableSensorControl
 
 This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50.
 
-```objectivec
+```objc
 - (void)setSensorControlThreshold:(double)sensor NS_SWIFT_NAME(setSensorControlThreshold(_:));
 ```
 
@@ -117,14 +120,15 @@ This API is designed for developers to apply different sensor sensitivity settin
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setSensorControlThreshold:55];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setSensorControlThreshold(55)
 ```
@@ -140,16 +144,17 @@ Turn on(off) DCE filter (recommended to be true).
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce enableFrameFilter:true];
 //To check the status of the DCE frame filter
 BOOL res= [dce enableFrameFilter];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.enableFrameFilter(true)
 //To check the status of the DCE frame filter
@@ -160,7 +165,7 @@ let res = dce.enableFrameFilter
 
 Set max frame rate.
 
-```objectivec
+```objc
 - (void)setMaxFrameRate:(int)maxFrameRate NS_SWIFT_NAME(setMaxFrameRate(_:));
 ```
 
@@ -170,14 +175,15 @@ Set max frame rate.
 
 **Code Snippet**
 
-Objective-C:
-
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 [dce setMaxFrameRate:24];
 ```
-
-Swift:
-
+2. 
 ```swift
 dce.setMaxFrameRate(24)
 ```

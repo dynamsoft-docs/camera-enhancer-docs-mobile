@@ -10,6 +10,64 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.2 (08/02/2022)
+
+### New
+
+- Added a property [`cameraView`](../primary-api/camera-enhancer.md#cameraview) for users to bind a `DCECameraView` object to the `DynamsoftCameraEnhancer` object.
+- Added methods [`selectCameraWithPosition`](../primary-api/camera-enhancer.md#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
+- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
+
+### Changed
+
+- Changed the rotation control of `DCECameraView` from manual handling to system handling.
+
+## 2.3.1 (07/11/2022)
+
+### Fixed
+
+- Added x86_64 architecture back to the framework which was missing in 2.3.0.
+
+## 2.3.0 (06/28/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.3.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+- Added the following APIs for capturing photos:
+  - [`DCEPhotoListener`]({{site.ios-api-auxiliary}}protocol-dcephotolistener.html): The protocol that includes method [`photoOutputCallback`]({{site.ios-api-auxiliary}}protocol-dcephotolistener.html#photooutputcallback) which is triggered when a photo is captured. JPEG-encoded photo can be received via the method [`photoOutputCallback`]({{site.ios-api-auxiliary}}protocol-dcephotolistener.html#photooutputcallback).
+  - [`takePhoto`]({{site.ios-api}}camera-enhancer.html#takephoto): Triggers photo capturing.
+- Added a new class [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html). The following APIs are available in the class:
+  - [`vibrate`]({{site.ios-api-auxiliary}}dcefeedback.html#vibrate): Triggers a vibration.
+  - [`Beep`]({{site.ios-api-auxiliary}}dcefeedback.html#beep): Triggers a beep sound.
+- Added a new method [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) which returns the maximum available zoom factor of the device.
+
+## 2.1.4 (05/26/2022)
+
+### New
+
+- Added support for [ISO and exposure time settings]({{ site.reference }}).
+
+### Fixed
+
+- Fixed the memory leaks caused by incorrectly destroying NSTimer instances.
+- Fixed a bug where some delay might happen in initiating licenses when using along with Dynamsoft Barcode Reader Mobile Edition.
+
+### Deprecated
+
+- `CameraEnhancer.setFrameRate`
+- `EnumResolution.EnumResolution_HIGH`
+- `EnumResolution.EnumResolution_MID`
+- `EnumResolution.EnumResolution_LOW`
+
 ## 2.1.3 (03/02/2022)
 
 ### Fixed
