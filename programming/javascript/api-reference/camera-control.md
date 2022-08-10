@@ -249,7 +249,7 @@ None.
 
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
-> If called before `open()` or `show()`, the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720 on mobile devices or 1920 x 1080 on desktop.
+> If called before `open()` or `show()`, the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720.
 
 ```typescript
 setResolution(widthOrResolution: number | number[], height: number): Promise<PlayCallbackInfo>;
@@ -260,13 +260,6 @@ setResolution(widthOrResolution: number | number[], height: number): Promise<Pla
 `width` : specifies the horizontal resolution.
 
 `height` : specifies the vertical resolution.
-
-> To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically.
->
-> * The limit is 2048 pixels on mobile devices and 4096 on other devices.
-> * If the template "dense" or "distance" is used, the limit is 4096 regardless of which device is used.
->
-> Therefore, setting a very high resolution will not help with the scanning.
 
 **Return value**
 
