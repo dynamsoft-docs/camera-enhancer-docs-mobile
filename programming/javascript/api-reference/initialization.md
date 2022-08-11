@@ -46,9 +46,20 @@ let pEnhancer = null;
 
 ## defaultUIElementURL
 
-Returns or sets the URL of the *.html* file that defines the default UI Element. The URL can only be set before the API [createInstance](#createinstance) is called.
+Returns or sets the URL of the *.html* file that defines the default UI Element.
 
-> Note that the SDK comes with 3 default UI definitions:
+```typescript
+static defaultUIElementURL: string;
+```
+
+> NOTE: if `defaultUIElementURL` is not set before `open()`, it will not take effect and the preset one, which is "dce.ui.html" will be used. If you want to use a different UI element, set `defaultUIElementURL` beforehand like this:
+>
+> ```js
+> Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "URL-TO-NEW-UIELEMENT";
+> await cameraEnhancer.open(true);
+> ```
+>
+> Also note that the SDK comes with 3 default UI definitions which takes effect automatically (no need to change `defaultUIElementURL`):
 >
 > | Definition Name | Notes |
 > | ---             | ----- |
@@ -56,13 +67,10 @@ Returns or sets the URL of the *.html* file that defines the default UI Element.
 > | dbr.ui.html     | Used by default if the CameraEnhancer instance is used as an image source for Dynamsoft Barcode Reader. |
 > | dlr.ui.html     | Used by default if the CameraEnhancer instance is used as an image source for Dynamsoft Label Recognizer. |
 
-```typescript
-static defaultUIElementURL: string;
-```
-
 **Code Snippet**
 
 ```js
+// The following line is redundant and is for demonstration purposes only.
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.ui.html";
 let pEnhancer = null;
 (async () => {

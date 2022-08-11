@@ -40,6 +40,7 @@ breadcrumbText: API Reference
 | [setResolution()](camera-control.md#setresolution) | Sets the resolution of the current video input. |
 | [getResolution()](camera-control.md#getresolution) | Returns the resolution of the current video input. |
 | [getResolutions()](camera-control.md#getresolutions) | Returns the resolutions supported by the current video input. |
+| [videoSrc](camera-control.md#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 

@@ -28,6 +28,7 @@ breadcrumbText: Camera Control
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
 | [getResolution()](#getresolution) | Returns the resolution of the current video input. |
 | [getResolutions()](#getresolutions) | Returns the resolutions supported by the current video input. |
+| [videoSrc](#videosrc) | Sets or returns the source of the video. |
 
 **Advanced Control**
 
@@ -667,3 +668,13 @@ await enhancer.setExposureCompensation(-0.7);
 **See also**
 
 * [getCapabilities](#getcapabilities)
+
+## videoSrc
+
+Sets or returns the source of the video.
+
+> You can use this property to specify an existing video as the source to play which will be processed the same way as the video feed from a live camera.
+
+```typescript
+videoSrc: string | MediaStream | MediaSource | Blob;
+```
