@@ -95,7 +95,7 @@ enhancer.getVisibleRegion();
 Adds a canvas of the same size as the scan region directly above the scan region.
 
 ```typescript
-addScanRegionOverlayCanvas(): Canvas;
+addScanRegionOverlayCanvas(): HTMLCanvasElement;
 ```
 
 **Parameters**
@@ -104,7 +104,7 @@ None.
 
 **Return value**
 
-The added `Canvas` object.
+The added `HTMLCanvasElement` object.
 
 **Code Snippet**
 
@@ -270,7 +270,7 @@ enhancer.setViewDecorator(["rectangle", "crosshair"], area);
 Gets what view decorator is shown.
 
 ```typescript
-getViewDecorator(): {type: string[], area: Area, canvas: Canvas};
+getViewDecorator(): {type: string[], area: Area, canvas: HTMLCanvasElement};
 ```
 
 **See also**

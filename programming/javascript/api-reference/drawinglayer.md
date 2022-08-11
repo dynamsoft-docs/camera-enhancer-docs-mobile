@@ -173,7 +173,7 @@ drawingLayer.clearDrawingItems();
 Sets the style for the `DrawingLayer` or for a particular mediaType or for a specific status.
 
 ```typescript
-setDrawingStyle(styleId: number, mediaType?: "text", styleSelector?: string): void;
+setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): void;
 ```
 
 **Parameters**
@@ -247,6 +247,8 @@ renderAll(): boolean;
 
 ```js
 let drawingLayer = enhancer.getDrawingLayer(100);
+drawingLayer.getDrawingItems()[0].styleId = customId;
+drawingLayer.getDrawingItems()[0].set("x", 100);
 let isRenderedAll = drawingLayer.renderAll();
 ```
 

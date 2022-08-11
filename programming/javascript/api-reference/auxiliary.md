@@ -186,7 +186,7 @@ The version string of the library.
 **Code Snippet**
 
 ```js
-Dynamsoft.DCE.CameraEnhancer.getVersion(); // 'JS 1.0.0.20210628'
+Dynamsoft.DCE.CameraEnhancer.getVersion();
 ```
 
 ## detectEnvironment
