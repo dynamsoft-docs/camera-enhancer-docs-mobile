@@ -151,6 +151,8 @@ document.body.appendChild(frameData.canvas);
 
 Starts a fetching loop that continuously put frames in a buffer.
 
+> When the API is called, the SDK immediately fetches a frame and puts it into the buffer, then waits for the time set by "loopInterval" before fetching the next frame, and so on.
+
 ```typescript
 startFetchingLoop(): void;
 ```
@@ -162,6 +164,11 @@ None.
 **Return value**
 
 None.
+
+**See Also**
+
+* [DCEFrame](interface/dceframe.md)
+* [loopInterval](#loopinterval)
 
 ## stopFetchingLoop
 
@@ -218,6 +225,11 @@ Returns or sets the start time of the next fetch operation.
 ```typescript
 loopInterval: number;
 ```
+
+**See also**
+
+* [startFetchingLoop](#startfetchingloop)
+
 <!--
 ## refreshInterval
 

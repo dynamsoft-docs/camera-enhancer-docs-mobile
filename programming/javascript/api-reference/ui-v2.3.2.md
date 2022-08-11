@@ -81,7 +81,7 @@ ctx.fillText('Dynamsoft Camera Enhancer', 50, 90);
 
 ## ifShowScanRegionMask
 
-Returns or sets whether the scan region mask is shown.
+Returns or sets whether the scan region mask is shown. The default is `true`.
 
 ```typescript
 ifShowScanRegionMask: boolean;
@@ -89,7 +89,7 @@ ifShowScanRegionMask: boolean;
 
 ## ifShowScanRegionLaser
 
-Returns or sets whether the laser indicator is shown in the scan region.
+Returns or sets whether the laser indicator is shown in the scan region.  The default is `true`.
 
 > This API only works when the viewer element contains the elements with the class names `dce-scanarea` and `dce-scanlight` (like the built-in viewer).
 
@@ -108,6 +108,14 @@ setScanRegionMaskStyle(maskStyle: any): void;
 **Parameters**
 
 `maskStyle` : specify the new style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+
+> The default value is
+>
+> ```js
+> lineWidth = 2;
+> strokeStyle = "rgb(254,142,20)";
+> fillStyle = "rgba(0,0,0,0.5)";
+> ```
 
 **Return value**
 
@@ -133,7 +141,7 @@ setVideoFit(objectFit: string): void;
 
 **Parameters**
 
-`objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed. Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
+`objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed and the default is "contain". Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
 
 **Return value**
 

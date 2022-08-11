@@ -27,6 +27,34 @@ breadcrumbText: DrawingLayer
 | [setMode()](#setmode) | Changes the mode of the layer. |
 | [getMode()](#getmode) | Returns the current mode. |
 
+**Special Notice**
+
+If you are using **Dynamsoft Camera Enhancer** with **Dynamsoft Barcode Reader**, **Dynamsoft Label Recognizer** or **Dynamsoft Document Normalizer**, note that there are dedicated DrawingLayers for them as shown below:
+
+| SDK Name | DrawingLayer ID |
+|--|--|
+|Dynamsoft Document Normalizer | 1 |
+|Dynamsoft Label Recognizer | 2 |
+|Dynamsoft Barcode Reader| 3 |
+
+You can manipulate these DrawingLayers directly, for example, the following code applies a different DrawingStyle to the DrawingLayer used by **Dynamsoft Label Recognizer**:
+
+> Alternatively, you can directly change the style already in use instead of replacing it with a new one. Learn more at [updateDrawingStyle](ui.md#updatedrawingstyle).
+
+```js
+// Gets the DrawingLayer used by the Dynamsoft Label Recognizer instance to which enhancer is bound.
+let dlrDrawingLayer = enhancer.getDrawingLayer(2);
+// Creates a new style to be used.
+let newStyleId = enhancer.createDrawingStyle({
+    fillStyle: "rgba(100, 75, 245, 0.3)",
+    lineWidth: 5,
+    paintMode: "strokeAndFill",
+    strokeStyle: "rgba(73, 173, 245, 1)"
+});
+// Replaces the old style with the new one.
+dlrDrawingLayer.setDrawingStyle(newStyleId)
+```
+
 ## getId
 
 Returns the Id of the `DrawingLayer`.
