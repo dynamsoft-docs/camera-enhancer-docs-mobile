@@ -11,8 +11,6 @@ breadcrumbText: Acquisition
 
 # Frame Acquisition
 
-<!--| [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |-->
-
 | API Name | Description |
 |---|---|
 | [getFrame()](#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
@@ -54,34 +52,6 @@ document.body.appendChild(frameData.canvas);
 * [DCEFrame](interface/dceframe.md)
 * [Region](interface/region.md)
 
-<!--
-## getFrameFromBuffer
-
-Returns a `DCEFrame` object which contains the image data of the latest buffered frame.
-
-```typescript
-getFrameFromBuffer(): DCEFrame
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A `DCEFrame` object which contains the image data of the frame and related information.
-
-**Code Snippet**
-
-```js
-let frameData = enhancer.getFrameFromBuffer();
-document.body.appendChild(frameData.canvas);
-```
-
-**See also**
-
-* [DCEFrame](interface/dceframe.md)
--->
 ## singleFrameMode
 
 Returns or sets whether to enable the singe-frame mode. When the single-frame mode is enabled, the video will not stream in the built-in UI of the library. Instead, the user can click the UI to invoke the system camera interface to catch a frame or select an existing image from the device storage.

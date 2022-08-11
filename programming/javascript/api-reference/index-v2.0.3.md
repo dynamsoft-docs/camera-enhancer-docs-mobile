@@ -54,8 +54,6 @@ breadcrumbText: API Reference
 
 ### Frame Acquisition
 
-<!--| [getFrameFromBuffer()](acquisition.md#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |-->
-
 | API Name | Description |
 |---|---|
 | [getFrame()](acquisition.md#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
