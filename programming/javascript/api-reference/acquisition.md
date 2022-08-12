@@ -145,6 +145,7 @@ document.body.appendChild(frameData.toCanvas());
 **See also**
 
 * [DCEFrame](interface/dceframe.md)
+* [startFetchingLoop](#startfetchingloop)
 
 ## startFetchingLoop
 
