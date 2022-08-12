@@ -40,6 +40,7 @@ breadcrumbText: API Reference
 | [setResolution()](camera-control.md#setresolution) | Sets the resolution of the current video input. |
 | [getResolution()](camera-control.md#getresolution) | Returns the resolution of the current video input. |
 | [getResolutions()](camera-control.md#getresolutions) | Returns the resolutions supported by the current video input. |
+| [videoSrc](camera-control.md#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 
@@ -70,7 +71,7 @@ breadcrumbText: API Reference
 | [setScanRegion()](acquisition.md#setscanregion) | Specifies which part of the original video is considered when processing frames. |
 | [getScanRegion()](acquisition.md#getscanregion) | Returns the scan region. |
 | [getFrame()](acquisition.md#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
-| [getFrameFromBuffer()](acquisition.md#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the latest buffered frame. |
+| [getFrameFromBuffer()](acquisition.md#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the first buffered frame. |
 | [startFetchingLoop()](acquisition.md#startfetchingloop) | Starts a fetching loop that continuously put frames in a buffer. |
 | [stopFetchingLoop()](acquisition.md#stopfetchingloop) | Stops the fetching loop. |
 | [isFetchingLoopStarted()](acquisition.md#isfetchingloopstarted) | Returns the state of the fetching loop. |
@@ -136,7 +137,7 @@ breadcrumbText: API Reference
 | [hasDrawingItem()](drawinglayer.md#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
 | [removeDrawingItems()](drawinglayer.md#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
 | [clearDrawingItems()](drawinglayer.md#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
-| [setDrawingStyle()](drawinglayer.md#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
+| [setDrawingStyle()](drawinglayer.md#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType or for a particular mediaType in a particular state. |
 | [setVisible()](drawinglayer.md#setvisible) | Shows or hides the DrawingLayer. |
 | [isVisible()](drawinglayer.md#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](drawinglayer.md#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |

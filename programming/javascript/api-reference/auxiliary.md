@@ -127,7 +127,7 @@ enhancer.offAll("cameraChange");
 
 ## dispose
 
-Releases all resources used by the CameraEnhancer instance. 
+Releases all resources used by the CameraEnhancer instance. After that, the instance will be left with only the property `isDisposed` (the value is `true`).
 
 > The HTML elements used by the instance's UI element are only removed when `removeUIElement` is set to `true`. Otherwise, they are only hidden.
 

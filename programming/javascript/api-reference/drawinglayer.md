@@ -19,13 +19,41 @@ breadcrumbText: DrawingLayer
 | [hasDrawingItem()](#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
 | [removeDrawingItems()](#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
 | [clearDrawingItems()](#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
-| [setDrawingStyle()](#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
+| [setDrawingStyle()](#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType or for a particular mediaType in a particular state. |
 | [setVisible()](#setvisible) | Shows or hides the DrawingLayer. |
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
 | [onSelectionChange()](#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
 | [setMode()](#setmode) | Changes the mode of the layer. |
 | [getMode()](#getmode) | Returns the current mode. |
+
+**Special Notice**
+
+If you are using **Dynamsoft Camera Enhancer** with **Dynamsoft Barcode Reader**, **Dynamsoft Label Recognizer** or **Dynamsoft Document Normalizer**, note that there are dedicated DrawingLayers for them as shown below:
+
+| SDK Name | DrawingLayer ID |
+|--|--|
+|Dynamsoft Document Normalizer | 1 |
+|Dynamsoft Label Recognizer | 2 |
+|Dynamsoft Barcode Reader| 3 |
+
+You can manipulate these DrawingLayers directly, for example, the following code applies a different DrawingStyle to the DrawingLayer used by **Dynamsoft Label Recognizer**:
+
+> Alternatively, you can directly change the style already in use instead of replacing it with a new one. Learn more at [updateDrawingStyle](ui.md#updatedrawingstyle).
+
+```js
+// Gets the DrawingLayer used by the Dynamsoft Label Recognizer instance to which enhancer is bound.
+let dlrDrawingLayer = enhancer.getDrawingLayer(2);
+// Creates a new style to be used.
+let newStyleId = enhancer.createDrawingStyle({
+    fillStyle: "rgba(100, 75, 245, 0.3)",
+    lineWidth: 5,
+    paintMode: "strokeAndFill",
+    strokeStyle: "rgba(73, 173, 245, 1)"
+});
+// Replaces the old style with the new one.
+dlrDrawingLayer.setDrawingStyle(newStyleId)
+```
 
 ## getId
 
@@ -170,7 +198,7 @@ drawingLayer.clearDrawingItems();
 
 ## setDrawingStyle
 
-Sets the style for the `DrawingLayer` or for a particular mediaType or for a specific status.
+Sets the style for the `DrawingLayer` or for a particular mediaType or for a particular mediaType in a particular state.
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: "text", styleSelector?: string): void;
@@ -180,9 +208,9 @@ setDrawingStyle(styleId: number, mediaType?: "text", styleSelector?: string): vo
 
 `styleId`: specifies the style by its ID.
 
-`mediaType`: specifies the mediaType. If undefined, the style applies to all `DrawingItem`s with the specified styleSelector. 
+`mediaType`: specifies the mediaType.
 
-`styleSelector`: specifies a selector. If undefined, it means "default". The selector is a pact between the `DrawingLayer` and the one passing in the `DrawingItem`s. 
+`styleSelector`: specifies a selector.
 
 **Code Snippet**
 
@@ -222,7 +250,7 @@ drawingLayer.setVisible(false);
 
 ## isVisible
 
-Returns whether the `DrawingLayer` is visible. 
+Returns whether the `DrawingLayer` is visible.
 
 ```typescript
 isVisible(): boolean;
@@ -237,7 +265,7 @@ let isVisible = drawingLayer.isVisible();
 
 ## renderAll
 
-Renders all `DrawingItem`s, usually required when the style for one or more items is changed.
+Renders all `DrawingItems`, usually required after one or multiple `DrawingItems` have altered their `DrawingStyle` IDs.
 
 ```typescript
 renderAll(): boolean;
@@ -262,7 +290,7 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 
 `selectedDrawingItems`: specifies the selected `DrawingItem` objects.
 
-`deselectedDrawingItems`: specifies the deselected `DrawingItem` objects. 
+`deselectedDrawingItems`: specifies the deselected `DrawingItem` objects.
 
 **Code Snippet**
 
@@ -275,7 +303,7 @@ drawingLayer.onSelectionChange = (selected, deselected) => {
 
 ## setMode
 
-Changes the mode of the layer. 
+Changes the mode of the layer.
 
 ```typescript
 setMode(newMode: string): void;
@@ -284,6 +312,8 @@ setMode(newMode: string): void;
 **Parameters**
 
 `newMode`: specifies the new mode. At present, the allowed values are "editor" and "viewer" and the default is "viewer".
+
+> Compared with the "viewer" mode, the "editor" mode shows the "corners" and a "rotate control point" for a selected DrawingItem, which, when dragged, modify the original shape in different ways.
 
 **Code Snippet**
 
