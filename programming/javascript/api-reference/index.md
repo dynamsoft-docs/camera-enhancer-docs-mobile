@@ -137,7 +137,7 @@ breadcrumbText: API Reference
 | [hasDrawingItem()](drawinglayer.md#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
 | [removeDrawingItems()](drawinglayer.md#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
 | [clearDrawingItems()](drawinglayer.md#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
-| [setDrawingStyle()](drawinglayer.md#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
+| [setDrawingStyle()](drawinglayer.md#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType or for a particular mediaType in a particular state. |
 | [setVisible()](drawinglayer.md#setvisible) | Shows or hides the DrawingLayer. |
 | [isVisible()](drawinglayer.md#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](drawinglayer.md#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |

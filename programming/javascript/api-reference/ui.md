@@ -532,7 +532,7 @@ createDrawingStyle(styleDefinition: DrawingStyle): number;
 
 **Parameters**
 
-`styleDefinition` : defines a `DrawingStyle` object. If a property is left blank, it uses the default value. The default values are listed below
+`styleDefinition` : defines a `DrawingStyle` object. The following are all the allowed properties and their default values. All of them are optional, if a property is not included in the definition, it uses the default value.
 
 * lineWidth: `1.0`
 * fillStyle: `rgba(245, 236, 73, 0.3)`

@@ -19,7 +19,7 @@ breadcrumbText: DrawingLayer
 | [hasDrawingItem()](#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
 | [removeDrawingItems()](#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
 | [clearDrawingItems()](#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
-| [setDrawingStyle()](#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType. |
+| [setDrawingStyle()](#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType or for a particular mediaType in a particular state. |
 | [setVisible()](#setvisible) | Shows or hides the DrawingLayer. |
 | [isVisible()](#isvisible) | Returns whether the DrawingLayer is visible. |
 | [renderAll()](#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
@@ -198,7 +198,7 @@ drawingLayer.clearDrawingItems();
 
 ## setDrawingStyle
 
-Sets the style for the `DrawingLayer` or for a particular mediaType or for a specific status.
+Sets the style for the `DrawingLayer` or for a particular mediaType or for a particular mediaType in a particular state.
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: "text", styleSelector?: string): void;
@@ -208,9 +208,9 @@ setDrawingStyle(styleId: number, mediaType?: "text", styleSelector?: string): vo
 
 `styleId`: specifies the style by its ID.
 
-`mediaType`: specifies the mediaType. If undefined, the style applies to all `DrawingItem`s with the specified styleSelector. 
+`mediaType`: specifies the mediaType.
 
-`styleSelector`: specifies a selector. If undefined, it means "default". The selector is a pact between the `DrawingLayer` and the one passing in the `DrawingItem`s. 
+`styleSelector`: specifies a selector.
 
 **Code Snippet**
 
@@ -250,7 +250,7 @@ drawingLayer.setVisible(false);
 
 ## isVisible
 
-Returns whether the `DrawingLayer` is visible. 
+Returns whether the `DrawingLayer` is visible.
 
 ```typescript
 isVisible(): boolean;
@@ -265,7 +265,7 @@ let isVisible = drawingLayer.isVisible();
 
 ## renderAll
 
-Renders all `DrawingItem`s, usually required when the style for one or more items is changed.
+Renders all `DrawingItems`, usually required after one or multiple `DrawingItems` have altered their `DrawingStyle` IDs.
 
 ```typescript
 renderAll(): boolean;
@@ -290,7 +290,7 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 
 `selectedDrawingItems`: specifies the selected `DrawingItem` objects.
 
-`deselectedDrawingItems`: specifies the deselected `DrawingItem` objects. 
+`deselectedDrawingItems`: specifies the deselected `DrawingItem` objects.
 
 **Code Snippet**
 
@@ -303,7 +303,7 @@ drawingLayer.onSelectionChange = (selected, deselected) => {
 
 ## setMode
 
-Changes the mode of the layer. 
+Changes the mode of the layer.
 
 ```typescript
 setMode(newMode: string): void;
@@ -312,6 +312,8 @@ setMode(newMode: string): void;
 **Parameters**
 
 `newMode`: specifies the new mode. At present, the allowed values are "editor" and "viewer" and the default is "viewer".
+
+> Compared with the "viewer" mode, the "editor" mode shows the "corners" and a "rotate control point" for a selected DrawingItem, which, when dragged, modify the original shape in different ways.
 
 **Code Snippet**
 
