@@ -163,6 +163,7 @@ dce.cameraView = dceView
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
 | [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
 | [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
