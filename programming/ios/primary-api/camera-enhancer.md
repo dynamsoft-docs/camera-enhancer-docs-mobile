@@ -229,7 +229,7 @@ Select the camera position (front-facing or back-facing).
 ```
 2. 
 ```swift
-try? dce.selectCameraWithPosition(EnumCameraPosition.back)
+dce.selectCamera(with: EnumCameraPosition.back, error: nil)
 ```
 
 &nbsp;
