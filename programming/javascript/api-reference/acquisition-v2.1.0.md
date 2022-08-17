@@ -125,12 +125,12 @@ document.body.appendChild(frameData.canvas);
 Returns a `DCEFrame` object which contains the image data of the first buffered frame.
 
 ```typescript
-getFrameFromBuffer(): DCEFrame;
+getFrameFromBuffer(index?: number): DCEFrame;
 ```
 
 **Parameters**
 
-None.
+`index`: specifies which buffered frame to return when `maxNumberOfFramesInBuffer` is bigger than 1. If not specified, the latest frame is returned.
 
 **Return value**
 

@@ -170,6 +170,14 @@ setScanRegionMaskStyle(maskStyle: any): void;
 
 `maskStyle` : specifies the new style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
+> The default value is
+>
+> ```js
+> lineWidth = 2;
+> strokeStyle = "rgb(254,142,20)";
+> fillStyle = "rgba(0,0,0,0.5)";
+> ```
+
 **Return value**
 
 None.

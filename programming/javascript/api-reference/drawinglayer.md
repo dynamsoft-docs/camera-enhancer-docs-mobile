@@ -198,7 +198,11 @@ drawingLayer.clearDrawingItems();
 
 ## setDrawingStyle
 
-Sets the style for the `DrawingLayer` or for a particular mediaType or for a particular mediaType in a particular state.
+Sets the style for `DrawingItems` on the `DrawingLayer`
+
+* If both mediaType and styleSelector are ignored, the style will apply to all `DrawingItems`;
+* If mediaType is specified, the style only applies to `DrawingItems` of that mediaType;
+* If both mediaType and styleSelector are specified, the style only applies to `DrawingItems` of the specified mediaType which have the specified styleSelector.
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): void;
@@ -206,9 +210,9 @@ setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): vo
 
 **Parameters**
 
-`styleId`: specifies the style by its ID.
+`styleId`: specifies a style by its ID.
 
-`mediaType`: specifies the mediaType.
+`mediaType`: specifies a mediaType.
 
 `styleSelector`: specifies a selector.
 
@@ -265,7 +269,10 @@ let isVisible = drawingLayer.isVisible();
 
 ## renderAll
 
-Renders all `DrawingItems`, usually required after one or multiple `DrawingItems` have altered their `DrawingStyle` IDs.
+Renders all `DrawingItems`, usually required when
+
+* One or multiple `DrawingItems` have altered their `DrawingStyle` IDs;
+* One or multiple `DrawingItems` have changed their properties such as the coordinates for the top-left corner of a `DT_Rect` item.
 
 ```typescript
 renderAll(): boolean;
