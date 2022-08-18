@@ -10,6 +10,7 @@ breadcrumbText: Android Release Note
 
 # Dynamsoft Camera Enhancer Android SDK - Release Notes
 
+- [2.3.3 (08/18/2022)](release-notes-2.x.md/#233-08182022)
 - [2.3.2 (08/02/2022)](release-notes-2.x.md/#232-08022022)
 - [2.3.0 (06/28/2022)](release-notes-2.x.md/#230-06282022)
 - [2.1.4 (05/26/2022)](release-notes-2.x.md/#214-05262022)

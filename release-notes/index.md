@@ -36,6 +36,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 2.3.3 | [Android]({{ site.android-release-note }}release-notes-2.x.html#233-08182022) |
 | 2.3.2 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#232-03282022) / [Android]({{ site.android-release-note }}release-notes-2.x.html#232-08022022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#232-08022022) |
 | 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#231-07112022) |
 | 2.3.0 | [Android]({{ site.android-release-note }}release-notes-2.x.html#230-06282022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#230-06282022) |

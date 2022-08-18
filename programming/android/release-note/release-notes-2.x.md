@@ -10,6 +10,14 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.3.3 (08/18/2022)
+
+### Fixed
+
+- Fixed a bug that might cause camera crash when the `DCECameraView` is quit without destroying.
+
+- Fixed a deformation bug of `DCECameraView` when the screen rotated.
+
 ## 2.3.2 (08/02/2022)
 
 ### New
