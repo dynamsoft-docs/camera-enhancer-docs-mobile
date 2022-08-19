@@ -102,7 +102,7 @@ Chooses a camera as the video source.
 > If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
 
 ```typescript
-selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>;
+selectCamera(cameraObjectOrDeviceID: VideoDeviceInfo | string): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
@@ -281,7 +281,7 @@ await enhancer.setResolution(width, height);
 Returns the resolution of the current video input.
 
 ```typescript
-getResolution(): number[];
+getResolution(): [number, number];
 ```
 
 **Parameters**
@@ -295,8 +295,8 @@ An array of two numbers representing the resolution in the sequence of [width, h
 **Code Snippet**
 
 ```js
-let resolution = await enhancer.getResolution();
-console.log(resolution.width + " x " + resolution.height);
+let resolution = enhancer.getResolution();
+console.log(resolution[0] + " x " + resolution[1]);
 ```
 
 ## getResolutions
@@ -306,7 +306,7 @@ Returns the resolutions supported by the current video input.
 > The returned resolutions are limited to these values "160 by 120", "320 by 240", "480 by 360", "640 by 480", "800 by 600", "960 by 720", "1280 by 720", "1920 by 1080", "2560 by 1440", "3840 by 2160".
 
 ```typescript
-getResolutions(): Promise<Array<Array<number>>>;
+getResolutions(): Promise<Array<[number, number]>>;
 ```
 
 **Parameters**

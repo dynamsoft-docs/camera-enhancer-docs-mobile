@@ -101,7 +101,7 @@ Chooses a camera as the video source.
 
 
 ```typescript
-selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>;
+selectCamera(cameraObjectOrDeviceID: VideoDeviceInfo | string): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
@@ -269,7 +269,7 @@ await enhancer.setResolution(width, height);
 Returns the resolution of the current video input.
 
 ```typescript
-getResolution(): number[];
+getResolution(): [number, number];
 ```
 
 **Parameters**
