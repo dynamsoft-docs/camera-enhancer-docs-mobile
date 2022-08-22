@@ -27,6 +27,18 @@ breadcrumbText: Auxiliary
 type EventName = "cameraChange" | "cameraOpen" | "cameraClose" | "resolutionChange" | "played" | "singleFrameAcquired" | "frameAddedToBuffer";
 ```
 
+**Built-in Event Reference Table**
+
+| Event Name | Description |
+| --| --|
+| cameraChange | Triggered when a differnt camera is used. |
+| cameraOpen | Triggered when the camera opens. |
+| cameraClose | Triggered when the camera closes. |
+| resolutionChange | Triggered when the resolution changes. |
+| played | Triggered when the video starts playing/streaming. |
+| singleFrameAcquired | Triggered when an image is acquired under the single-frame mode. |
+| frameAddedToBuffer | Triggered each time a new frame is added to the buffer. |
+
 ## on
 
 Attaches an event handler function for a built-in event.

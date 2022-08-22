@@ -130,7 +130,7 @@ getFrameFromBuffer(index?: number): DCEFrame;
 
 **Parameters**
 
-`index`: specifies which buffered frame to return when `maxNumberOfFramesInBuffer` is bigger than 1. If not specified, the latest frame is returned.
+`index`: specifies which buffered frame to return when `maxNumberOfFramesInBuffer` is bigger than 1. If not specified, the first buffered frame is returned.
 
 **Return value**
 
