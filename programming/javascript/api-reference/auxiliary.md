@@ -35,7 +35,7 @@ type EventName = "cameraChange" | "cameraOpen" | "cameraClose" | "resolutionChan
 | cameraOpen | Triggered when the camera opens. |
 | cameraClose | Triggered when the camera closes. |
 | resolutionChange | Triggered when the resolution changes. |
-| played | Triggered when the camera starts to play. |
+| played | Triggered when the video starts playing/streaming. |
 | singleFrameAcquired | Triggered when an image is acquired under the single-frame mode. |
 | frameAddedToBuffer | Triggered each time a new frame is added to the buffer. |
 
