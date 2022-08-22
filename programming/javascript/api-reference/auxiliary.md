@@ -32,11 +32,11 @@ type EventName = "cameraChange" | "cameraOpen" | "cameraClose" | "resolutionChan
 | Event Name | Description |
 | --| --|
 | cameraChange | Triggered when a differnt camera is used. |
-| cameraOpen | Triggered when the current camera is opened.
-| cameraClose | Triggered when the current camera is closed. |
-| resolutionChange | Triggered when the resolution for the current camera changes. |
-| played | Triggered when the current camera starts to play. |
-| singleFrameAcquired | Triggered when an image is acquired under the singlef frame mode. |
+| cameraOpen | Triggered when the camera opens. |
+| cameraClose | Triggered when the camera closes. |
+| resolutionChange | Triggered when the resolution changes. |
+| played | Triggered when the camera starts to play. |
+| singleFrameAcquired | Triggered when an image is acquired under the single-frame mode. |
 | frameAddedToBuffer | Triggered each time a new frame is added to the buffer. |
 
 ## on
