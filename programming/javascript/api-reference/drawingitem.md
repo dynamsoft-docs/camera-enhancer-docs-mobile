@@ -154,7 +154,7 @@ Defines a DrawingItem that draws an image.
 ```typescript
 class DT_Image { 
   //NOTE: If an DT_Image instance has been constructed with an image, it can be replaced later with either an HTMLImageElement or an HTMLCanvasElement. However, an HTMLVideoElement can only be used during the constructing. 
-  public constructor(HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, x: number, y: number, styleId?: number) { } 
+  public constructor(image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, x: number, y: number, styleId?: number) { } 
   // The coordinates of the point at which to begin drawing the image, in pixels.
   x: number; y: number;
   image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement; 
