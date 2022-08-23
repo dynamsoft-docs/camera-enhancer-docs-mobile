@@ -85,7 +85,7 @@ class DT_Line {
   // The coordinates of the staring point, in pixels.
   startPoint: Point; 
   // The coordinates of the end point, in pixels.
-  endPoint: : Point; 
+  endPoint: Point; 
   // The media type.
   mediaType: "line"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
