@@ -85,7 +85,7 @@ class DT_Line {
   // The coordinates of the staring point, in pixels.
   startPoint: Point; 
   // The coordinates of the end point, in pixels.
-  endPoint: : Point; 
+  endPoint: Point; 
   // The media type.
   mediaType: "line"; 
   // The style selector. If left blank, the SDK will assume it's "default". Available values are "default" and "selected".
@@ -154,7 +154,7 @@ Defines a DrawingItem that draws an image.
 ```typescript
 class DT_Image { 
   //NOTE: If an DT_Image instance has been constructed with an image, it can be replaced later with either an HTMLImageElement or an HTMLCanvasElement. However, an HTMLVideoElement can only be used during the constructing. 
-  public constructor(HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, x: number, y: number, styleId?: number) { } 
+  public constructor(image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, x: number, y: number, styleId?: number) { } 
   // The coordinates of the point at which to begin drawing the image, in pixels.
   x: number; y: number;
   image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement; 
