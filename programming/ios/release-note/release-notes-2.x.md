@@ -10,6 +10,16 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.3 (09/22/2022)
+
+### Changed
+
+- The `video buffer` will be cleared when camera is paused or closed.
+
+### Fixed
+
+- Fixed a bug that scanRegion is not correctly set when device was placed horizontally.
+
 ## 2.3.2 (08/02/2022)
 
 ### New
