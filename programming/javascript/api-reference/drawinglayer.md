@@ -200,9 +200,10 @@ drawingLayer.clearDrawingItems();
 
 Sets the style for `DrawingItems` on the `DrawingLayer`
 
-* If both mediaType and styleSelector are ignored, the style will apply to all `DrawingItems`;
-* If mediaType is specified, the style only applies to `DrawingItems` of that mediaType;
-* If both mediaType and styleSelector are specified, the style only applies to `DrawingItems` of the specified mediaType which have the specified styleSelector.
+* If both "mediaType" and "styleSelector" are ignored, the style will apply to all `DrawingItems`;
+* If "mediaType" is specified, the style will only apply to `DrawingItems` of that "mediaType";
+* If "mediaType" is "all" and "styleSelector" is specified, the style will apply to all types of `DrawingItems` which  have the specified "styleSelector";
+* If both "mediaType" and "styleSelector" are specified, the style only applies to `DrawingItems` of the specified "mediaType" which have the specified "styleSelector".
 
 ```typescript
 setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): void;
@@ -212,9 +213,9 @@ setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): vo
 
 `styleId`: specifies a style by its ID.
 
-`mediaType`: specifies a mediaType.
+`mediaType`: specifies a mediaType, allowed values are "rect", "arc", "line", "polygon", "text", "image", "group" and "all".
 
-`styleSelector`: specifies a selector.
+`styleSelector`: specifies a selector, allowed values are "default", "selected" and "all".
 
 **Code Snippet**
 
@@ -224,7 +225,7 @@ drawingLayer.setDrawingStyle(1);
 //set style 1 for all Rect-shape DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1, "rect");
 //set style 1 for all selected DrawingItems on the `DrawingLayer`
-drawingLayer.setDrawingStyle(1, "selected");
+drawingLayer.setDrawingStyle(1, "all", "selected");
 //set style 1 for all Rect-shape and selected DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1, "rect", "selected");
 ```
