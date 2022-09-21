@@ -213,7 +213,7 @@ setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): vo
 
 `styleId`: specifies a style by its ID.
 
-`mediaType`: specifies a mediaType, allowed values are "rect", "arc", "line", "polygon", "text", "image", "group" and "all".
+`mediaType`: specifies a mediaType, allowed values are "rect", "arc", "line", "polygon", "text", "image" and "all".
 
 `styleSelector`: specifies a selector, allowed values are "default", "selected" and "all".
 
