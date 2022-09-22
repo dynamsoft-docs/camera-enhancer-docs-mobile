@@ -18,7 +18,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 ### Fixed
 
-- Fixed a bug that scanRegion is not correctly set when device was placed horizontally.
+- Fixed a bug that `scanRegion` is not correctly set when device was rotated horizontally.
 
 ## 2.3.2 (08/02/2022)
 
