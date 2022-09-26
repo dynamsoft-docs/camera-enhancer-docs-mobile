@@ -39,7 +39,7 @@ class DT_Rect {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the following properties of the DrawingItem:
@@ -65,7 +65,7 @@ class DT_Arc {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the following properties of the DrawingItem:
@@ -93,7 +93,7 @@ class DT_Line {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the following properties of the DrawingItem:
@@ -123,7 +123,7 @@ class DT_Polygon {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the property vertices: Array<Point>; 
@@ -149,7 +149,7 @@ class DT_Text {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the following properties of the DrawingItem:
@@ -176,7 +176,7 @@ class DT_Image {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the following properties of the DrawingItem:
@@ -202,7 +202,7 @@ class DT_Group {
   // The media type.
   readonly mediaType: "rect"; 
   // The style selector. If left blank, the drawingLayer will assume it's "default". Available values are "default" and "selected".
-  styleSelector?: string; 
+  styleSelector: string; 
   // The style ID expected to be used to paint this item. If left blank, the drawingLayer will decide which style to use.
   styleId?: number;
   // Sets the coordinates of the upper-left corner of the DrawingItem:
