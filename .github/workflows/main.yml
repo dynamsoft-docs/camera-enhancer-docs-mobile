@@ -33,6 +33,7 @@ jobs:
           [ -d camera-enhancer-docs ] && rm -rf camera-enhancer-docs
           [ ! -d DCEDoc ] && mkdir -p DCEDoc
           [ ! -d camera-enhancer-docs ] && git clone --depth 1 https://github.com/Dynamsoft/camera-enhancer-docs.git camera-enhancer-docs
+          [ ! -d Docs-Template-Repo ] && git clone --depth 1 --branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo
           cd camera-enhancer-docs && git pull && cd .. && cp -rfp ./camera-enhancer-docs/* ./DCEDoc/
           cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCEDoc/
           cd DCEDoc && bundle exec jekyll build --incremental
