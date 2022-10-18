@@ -17,7 +17,7 @@ breadcrumbText: Auxiliary
 | [off()](#off) | Removes an event handler. |
 | [offAll()](#offall) | Removes all event handlers from the specified event. If no event is specified, remove all event handlers. |
 | [dispose()](#dispose) | Releases all resources used by the CameraEnhancer instance. |
-| [disposed](#disposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
+| [isDisposed](#isdisposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
 | [getVersion()](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Returns a report on the current running environments. |
 
@@ -139,7 +139,7 @@ enhancer.offAll("cameraChange");
 
 ## dispose
 
-Releases all resources used by the CameraEnhancer instance. After that, the instance will be left with only the property `disposed` (the value is `true`).
+Releases all resources used by the CameraEnhancer instance. After that, the instance will be left with only the property `isDisposed` (the value is `true`).
 
 > The HTML elements used by the instance's UI element are only removed when `removeUIElement` is set to `true`. Otherwise, they are only hidden.
 
@@ -163,14 +163,12 @@ let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 enhancer.dispose();
 ```
 
-## disposed
+## isDisposed
 
 A readonly boolean value indicating whether the `CameraEnhancer` instance has been disposed.
 
-> This property replaces the deprecated old property `isDisposed`.
-
 ```typescript
-readonly disposed: boolean; 
+readonly isDisposed: boolean; 
 ```
 
 **Code Snippet**
@@ -178,7 +176,7 @@ readonly disposed: boolean;
 ```js
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 //...
-let flag = enhancer.disposed;
+let flag = enhancer.isDisposed;
 ```
 
 ## getVersion

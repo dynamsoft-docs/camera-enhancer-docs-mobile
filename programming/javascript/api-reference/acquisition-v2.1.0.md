@@ -24,7 +24,7 @@ breadcrumbText: Acquisition
 | [setScanRegion()](#setscanregion) | Specifies which part of the original video is considered when processing frames. |
 | [getScanRegion()](#getscanregion) | Returns the scan region. |
 | [getFrame()](#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
-| [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the first buffered frame. |
+| [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the specified buffered frame. |
 | [startFetchingLoop()](#startfetchingloop) | Starts a fetching loop that continuously put frames in a buffer. |
 | [stopFetchingLoop()](#stopfetchingloop) | Stops the fetching loop. |
 | [isFetchingLoopStarted()](#isfetchingloopstarted) | Returns the state of the fetching loop. |
@@ -122,7 +122,7 @@ document.body.appendChild(frameData.canvas);
 
 ## getFrameFromBuffer
 
-Returns a `DCEFrame` object which contains the image data of the first buffered frame.
+Returns a `DCEFrame` object which contains the image data of the specified buffered frame.
 
 ```typescript
 getFrameFromBuffer(index?: number): DCEFrame;

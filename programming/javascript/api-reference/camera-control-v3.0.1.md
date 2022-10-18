@@ -38,15 +38,12 @@ breadcrumbText: Camera Control
 | [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
 | [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight if the current camera supports it. |
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
-| [getZoom()](#getzoom) | Returns the zoom level of the video. |
 | [setZoom()](#setzoom) | Sets the zoom level of the video. |
 | [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
 | [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
 | [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
-| [getColorTemperature()](#getcolortemperature) | Returns the color temperature of the selected camera. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature of the selected camera. |
-| [getExposureCompensation()](#getexposurecompensation) | Returns the exposure compensation index of the selected camera. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera. |
 
 ## ifSkipCameraInspection
@@ -435,19 +432,11 @@ await enhancer.turnOffTorch();
 * [turnOnTorch](#turnontorch)
 * [getCapabilities](#getcapabilities)
 
-## getZoom
-
-Returns the zoom level of the video.
-
-```typescript
-getZoom(): number;
-```
-
 ## setZoom
 
 Sets the zoom level of the video.
 
-> If the camera supports zooming and the zoom level is within its supported range, zooming is done directly by the camera. If the camera does not support zooming, WebGL is used instead. If the camera supports zooming but the zoom level is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 setZoom(zoomValue: number): Promise<void>;
@@ -624,16 +613,6 @@ enhancer.getCameraSettings();
 
 * [getCapabilities](#getcapabilities)
 
-## getColorTemperature
-
-Returns the color temperature of the selected camera.
-
-> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-
-```typescript
-getColorTemperature(): number;
-```
-
 ## setColorTemperature
 
 Adjusts the color temperature of the selected camera.
@@ -661,16 +640,6 @@ await enhancer.setColorTemperature(5000);
 **See also**
 
 * [getCapabilities](#getcapabilities)
-
-## getExposureCompensation
-
-Returns the exposure compensation index of the selected camera.
-
-> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-
-```typescript
-getExposureCompensation(): number;
-```
 
 ## setExposureCompensation
 
@@ -705,8 +674,6 @@ await enhancer.setExposureCompensation(-0.7);
 Sets or returns the source of the video.
 
 > You can use this property to specify an existing video as the source to play which will be processed the same way as the video feed from a live camera.
->
-> When playing an existing video, the camera selection and video selection boxes will be hidden.
 
 ```typescript
 videoSrc: string | MediaStream | MediaSource | Blob;

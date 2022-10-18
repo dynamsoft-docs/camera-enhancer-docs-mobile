@@ -397,7 +397,7 @@ await enhancer.turnOffTorch();
 
 ## setZoom
 
-Sets the focus mode and focus distance of the camera.
+Sets the zoom level of the video.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
