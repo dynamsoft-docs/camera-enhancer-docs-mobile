@@ -14,7 +14,7 @@ breadcrumbText: DCEFrame
 
 * pixelFormat: `string`
 
-  The pixel format of the image data.
+  The pixel format of the image data. The value is limited to "rgba" (default), "rbga", "grba", "gbra", "brga", "bgra", "grey" or "grey32".
 
 * stride: `number`
 

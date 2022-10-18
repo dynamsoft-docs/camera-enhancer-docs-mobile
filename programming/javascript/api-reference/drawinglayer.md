@@ -103,7 +103,7 @@ drawingLayer.addDrawingItems(drawingItems);
 
 ## getDrawingItems
 
-Returns all DrawingItem(s) or just some of them based on a filter function
+Returns all DrawingItem(s) or just some of them based on a filter function.
 
 ```typescript
 getDrawingItems(filter?: (item: DrawingItem) => boolean) :Array<DrawingItem>);

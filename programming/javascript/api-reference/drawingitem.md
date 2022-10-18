@@ -19,13 +19,13 @@ type DrawingItem = DT_Rect | DT_Arc | DT_Line | DT_Polygon | DT_Text | DT_Image 
 
 | Type Name | Description |
 |---|---|
-| [DT_Rect](#dtrect) | Defines a DrawingItem the shape of a rectangle. |
-| [DT_Arc](#dtarc)   | Defines a DrawingItem the shape of a arc. |
-| [DT_Line](#dtline) | Defines a DrawingItem the shape of a line. |
-| [DT_Polygon](#dtpolygon) | Defines a DrawingItem the shape of a polygon. |
-| [DT_Text](#dttext) | Defines a DrawingItem that draws text. |
-| [DT_Image](#dtimage) | Defines a DrawingItem that draws an image. |
-| [DT_Group](#dtgroup) | Defines a DrawingItem which is a combination of more than one DrawingItem of the other six types.  |
+| [DT_Rect](#dt_rect) | Defines a DrawingItem the shape of a rectangle. |
+| [DT_Arc](#dt_arc)   | Defines a DrawingItem the shape of a arc. |
+| [DT_Line](#dt_line) | Defines a DrawingItem the shape of a line. |
+| [DT_Polygon](#dt_polygon) | Defines a DrawingItem the shape of a polygon. |
+| [DT_Text](#dt_text) | Defines a DrawingItem that draws text. |
+| [DT_Image](#dt_image) | Defines a DrawingItem that draws an image. |
+| [DT_Group](#dt_group) | Defines a DrawingItem which is a combination of more than one DrawingItem of the other six types.  |
 
 ## DT_Rect
 
@@ -50,7 +50,7 @@ class DT_Rect {
   setAttribute: (property:string, value:any) => void;
   // Returns the values for the properties x, y, width & height.
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
@@ -101,7 +101,7 @@ class DT_Arc {
   setAttribute: (property:string, value:any) => void;
   // Returns the values for the properties x, y, radius, startAngle & endAngle.
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
@@ -150,7 +150,7 @@ class DT_Line {
   setAttribute: (property:string, value:any) => void;
   // Returns the values for the properties startPoint and endPoint.
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
@@ -196,7 +196,7 @@ class DT_Polygon {
   setAttribute: (property:string, value:any) => void;
   // Returns the value for the property vertices: Array<Point>; 
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
@@ -254,7 +254,7 @@ class DT_Text {
   setAttribute: (property:string, value:any) => void;
   // Returns the values for the properties x, y, width or text.
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
@@ -304,7 +304,7 @@ class DT_Image {
   setAttribute: (property:string, value:any) => void;
   // Returns the values for the properties x, y or image.
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
@@ -350,7 +350,7 @@ class DT_Group {
   setAttribute: (property:string, value:any) => void;
   // Returns the values for the properties x or y.
   getAttribute: (property:string) => any;
-  // Adds an event listener to the DrawingItem for the event specified by eventName.
+  // Adds an event listener to the DrawingItem for the event specified by eventName. Allowed events are: mousedown, mouseup, dblclick, mouseover, mouseout (the last three don't work on mobile devices).
   on: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;
   // Removes an event listener to the DrawingItem for the event specified by eventName.
   off: (eventName: string, listener: (event: DrawingItemEvent) => void) => void;

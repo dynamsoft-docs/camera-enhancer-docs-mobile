@@ -19,13 +19,13 @@ type DrawingItem = DT_Rect | DT_Arc | DT_Line | DT_Polygon | DT_Text | DT_Image 
 
 | Type Name | Description |
 |---|---|
-| [DT_Rect](#dtrect) | Defines a DrawingItem the shape of a rectangle. |
-| [DT_Arc](#dtarc)   | Defines a DrawingItem the shape of a arc. |
-| [DT_Line](#dtline) | Defines a DrawingItem the shape of a line. |
-| [DT_Polygon](#dtpolygon) | Defines a DrawingItem the shape of a polygon. |
-| [DT_Text](#dttext) | Defines a DrawingItem that draws text. |
-| [DT_Image](#dtimage) | Defines a DrawingItem that draws an image. |
-| [DT_Group](#dtgroup) | Defines a DrawingItem which is a combination of more than one DrawingItem of the other six types.  |
+| [DT_Rect](#dt_rect) | Defines a DrawingItem the shape of a rectangle. |
+| [DT_Arc](#dt_arc)   | Defines a DrawingItem the shape of a arc. |
+| [DT_Line](#dt_line) | Defines a DrawingItem the shape of a line. |
+| [DT_Polygon](#dt_polygon) | Defines a DrawingItem the shape of a polygon. |
+| [DT_Text](#dt_text) | Defines a DrawingItem that draws text. |
+| [DT_Image](#dt_image) | Defines a DrawingItem that draws an image. |
+| [DT_Group](#dt_group) | Defines a DrawingItem which is a combination of more than one DrawingItem of the other six types.  |
 
 ## DT_Rect
 
