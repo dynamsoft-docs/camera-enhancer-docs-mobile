@@ -249,7 +249,7 @@ drawingLayer.setDrawingStyle(1, "rect", "selected");
 
 **See also**
 
-* [DrawingStyle](drawingstyle.md)
+* [DrawingStyle](interface/drawingstyle.md)
 
 ## setVisible
 
