@@ -10,6 +10,26 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.1.0 (10/20/2022)
+
+### New
+
+* Added methods `getZoom()`, `getColorTemperature()`, `getExposureCompensation()` for better camera control.
+* Added the "Note" feature to DrawingItems to allow extra information to be added to them for timely interation. Related methods include `addNote()`, `getNote()`, `hasNote()`, `updateNote()`, `deleteNote()`, `getNotes()`, and `clearNotes()`.
+* Added methods `setAttribute()` and `getAttribute()` to DrawingItems to allow the change and retrieval of their properties.
+* Added methods `on()` and `off()` to DrawingItems to allow binding and unbinding of event listeners to the events **mousedown**, **mouseup**, **dblclick**, **mouseover**, **mouseout** (the last three don't work on mobile devices).
+
+### Changed
+
+* The method `setZoom()` now uses both the camera and WebGL, so it works on all browsers and devices.
+* The method `getDrawingItems()` now accepts a filter function to allow the returning of only a selected few of all DrawingItems on the DrawingLayer.
+* The property `isDisposed` has been deprecated in favor of `disposed`.
+* The property `frameColorMode` has been deprecated in favor of `framePixelFormat`.
+* The field name `colorMode` has been deprecated in favor of `pixelFormat` in the interface `DCEFrame`.
+* The DrawingItem Type `DT_Text` now has a fixed width and the text within is wrapped.
+* The DrawingItem Type `DT_Text` now allows line breaks (`\n`) and tabs (`\t`) in the content of the text.
+* When playing a static video, the camera selection and resolution selection boxes are hidden.
+
 ## 3.0.1 (08/04/2022)
 
 * Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.

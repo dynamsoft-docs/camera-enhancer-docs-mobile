@@ -12,13 +12,9 @@ breadcrumbText: DCEFrame
 
 `interface` DCEFrame
 
-* pixelFormat: `string`
+* colorMode: `string`
 
-  The pixel format of the image data. The value is limited to "rgba" (default), "rbga", "grba", "gbra", "brga", "bgra", "grey" or "grey32".
-
-* stride: `number`
-
-  The stride is the width of a single row of pixels (a scan line), rounded up to a four-byte boundary.
+  The color mode of the image data.
 
 * data: `Uint8Array`
 
@@ -59,4 +55,3 @@ breadcrumbText: DCEFrame
 * toCanvas: `()=>HTMLCanvasElement`
 
   A `Function` which converts the image data to an `HTMLCanvasElement` object.
-  

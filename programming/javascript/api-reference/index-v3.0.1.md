@@ -11,7 +11,7 @@ breadcrumbText: API Reference
 
 # JavaScript API Reference
 
-## Methods and Properties
+## CameraEnhancer
 
 ### Initialization
 
@@ -21,6 +21,7 @@ breadcrumbText: API Reference
 | [defaultUIElementURL](initialization.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [getUIElement()](initialization.md#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
 | [setUIElement()](initialization.md#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
+| [onWarning](initialization.md#onwarning) | A callback which is triggered when the running environment is not ideal. |
 
 ### Camera Control
 
@@ -39,6 +40,7 @@ breadcrumbText: API Reference
 | [setResolution()](camera-control.md#setresolution) | Sets the resolution of the current video input. |
 | [getResolution()](camera-control.md#getresolution) | Returns the resolution of the current video input. |
 | [getResolutions()](camera-control.md#getresolutions) | Returns the resolutions supported by the current video input. |
+| [videoSrc](camera-control.md#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 
@@ -63,7 +65,7 @@ breadcrumbText: API Reference
 | [croppingRegionIndex](acquisition.md#singleframemode) | Returns or sets which of the cropping regions is to be used in cropping the next frame. |
 | [refreshInterval](acquisition.md#singleframemode) | Returns or sets how often the buffer is refreshed when the buffer is full. |
 -->
-    
+
 | API Name | Description |
 |---|---|
 | [setScanRegion()](acquisition.md#setscanregion) | Specifies which part of the original video is considered when processing frames. |
@@ -84,7 +86,8 @@ breadcrumbText: API Reference
 | API Name | Description |
 |---|---|
 | [getVisibleRegion()](ui.md#getvisibleregion) | Returns a `Region` object which specifies which part of the original video is shown in the video element. |
-| [addScanRegionOverlayCanvas()](ui.md#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area.. |
+| [addScanRegionOverlayCanvas()](ui.md#addscanregionoverlaycanvas) | Adds a canvas of the same size as the scan area directly above the scan area. |
+| [removeScanRegionOverlayCanvas()](ui.md#removescanregionoverlaycanvas) | Removes the specified Canvas element. |
 | [ifShowScanRegionMask](ui.md#ifshowscanregionmask) | Returns or sets whether the scan region mask is shown. |
 | [ifShowScanRegionLaser](ui.md#ifshowscanregionlaser) | Returns or sets whether the laser indicator is shown in the scan region. |
 | [setScanRegionMaskStyle()](ui.md#setscanregionmaskstyle) | Sets the styles for the scan region mask. |
@@ -96,21 +99,71 @@ breadcrumbText: API Reference
 | [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
+| [createDrawingLayer()](ui.md#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
+| [getDrawingLayer()](ui.md#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
+| [getDrawingLayers()](ui.md#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
+| [clearDrawingLayers()](ui.md#cleardrawinglayers) | Removes all DrawingLayers. |
+| [createDrawingStyle()](ui.md#createdrawingstyle) | Creates a new DrawingStyle object and returns its ID. |
+| [getDrawingStyle()](ui.md#getdrawingstyle) | Returns the DrawingStyle object specified by its Id. |
+| [getDrawingStyles()](ui.md#getdrawingstyles) | Returns all DrawingStyle objects. |
+| [updateDrawingStyle()](ui.md#updatedrawingstyle) | Updates an existing DrawingStyle specified by its ID. |
+| [setOriginalImage()](ui.md#setoriginalimage) | Sets the original image to be drawn on the editor canvas.  |
+| [getOriginalImage()](ui.md#getoriginalimage) | Returns the original image shown on the editor. |
+| [showOriginalImage()](ui.md#showoriginalimage) | Shows the original image. |
+| [hideOriginalImage()](ui.md#hideoriginalimage) | Hides the original image. |
+| [deleteOriginalImage()](ui.md#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
+| [getSelectedDrawingItems()](ui.md#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
 
 ### Auxiliary APIs
 
 | API Name | Description |
 |---|---|
-| [on()](auxiliary.md#on) | Attach an event handler function for a built-in event. |
-| [off()](auxiliary.md#off) | Remove an event handler. |
+| [on()](auxiliary.md#on) | Attaches an event handler function for a built-in event. |
+| [off()](auxiliary.md#off) | Removes an event handler. |
+| [offAll()](auxiliary.md#offall) | Removes all event handlers from the specified event. If no event is specified, remove all event handlers. |
 | [dispose()](auxiliary.md#dispose) | Releases all resources used by the CameraEnhancer instance. |
+| [isDisposed](auxiliary.md#isdisposed) | A readonly boolean value indicating whether the CameraEnhancer instance has been disposed. |
 | [getVersion()](auxiliary.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](auxiliary.md#detectenvironment) | Returns a report on the current running environments. |
+
+## DrawingLayer
+
+| API Name | Description |
+|---|---|
+| [getId()](drawinglayer.md#getid) | Returns the ID of the DrawingLayer. |
+| [addDrawingItems()](drawinglayer.md#adddrawingitems) | Adds DrawingItem(s) to the DrawingLayer. |
+| [getDrawingItems()](drawinglayer.md#getdrawingitems) | Returns all DrawingItem(s) of the DrawingLayer. |
+| [setDrawingItems()](drawinglayer.md#setdrawingitems) | Replaces all DrawingItem(s) of the DrawingLayer with new ones. |
+| [hasDrawingItem()](drawinglayer.md#hasDrawingItem) | Checks out if a DrawingItem belongs to the layer. |
+| [removeDrawingItems()](drawinglayer.md#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
+| [clearDrawingItems()](drawinglayer.md#cleardrawingitems) | Removes all DrawingItem(s) from the DrawingLayer. |
+| [setDrawingStyle()](drawinglayer.md#setdrawingstyle) | Sets the style for the DrawingLayer or for a particular mediaType or for a particular mediaType in a particular state. |
+| [setVisible()](drawinglayer.md#setvisible) | Shows or hides the DrawingLayer. |
+| [isVisible()](drawinglayer.md#isvisible) | Returns whether the DrawingLayer is visible. |
+| [renderAll()](drawinglayer.md#renderall) | Renders all DrawingItems, usually required when the style for one or more items is changed. |
+| [onSelectionChange()](drawinglayer.md#onselectionchange) | An event handler that is triggered when different DrawingItem(s) gets selected/deselected on the DrawingLayer. |
+| [setMode()](drawinglayer.md#setmode) | Changes the mode of the layer. |
+| [getMode()](drawinglayer.md#getmode) | Returns the current mode. |
+
+## DrawingItem
+
+| Type Name | Description |
+|---|---|
+| [DT_Rect](drawingitem.md#dtrect) | Defines a DrawingItem the shape of a rectangle. |
+| [DT_Arc](drawingitem.md#dtarc)   | Defines a DrawingItem the shape of a arc. |
+| [DT_Line](drawingitem.md#dtline) | Defines a DrawingItem the shape of a line. |
+| [DT_Polygon](drawingitem.md#dtpolygon) | Defines a DrawingItem the shape of a polygon. |
+| [DT_Text](drawingitem.md#dttext) | Defines a DrawingItem that draws text. |
+| [DT_Image](drawingitem.md#dtimage) | Defines a DrawingItem that draws an image. |
+| [DT_Group](drawingitem.md#dtgroup) | Defines a DrawingItem which is a combination of more than one DrawingItem of the other six types.  |
 
 ## Interfaces
 
 * [Area](interface/area.md)
-* [Region](interface/region.md)
 * [DCEFrame](interface/dceframe.md)
-* [VideoDeviceInfo](interface/videodeviceinfo.md)
+* [DrawingStyle](interface/drawingstyle.md)
 * [PlayCallbackInfo](interface/playcallbackinfo.md)
+* [Point](interface/point.md)
+* [Region](interface/region.md)
+* [VideoDeviceInfo](interface/videodeviceinfo.md)
+* [Warning](interface/warning.md)
