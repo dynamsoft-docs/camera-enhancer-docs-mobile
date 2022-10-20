@@ -173,7 +173,7 @@ class DT_Line {
 
 **See also**
 
-* [Point](point.md)
+* [Point](interface/point.md)
 * [Note](interface/note.md)
 * [DrawingItemEvent](interface/drawingitemevent.md)
 
@@ -219,7 +219,7 @@ class DT_Polygon {
 
 **See also**
 
-* [Point](point.md)
+* [Point](interface/point.md)
 * [Note](interface/note.md)
 * [DrawingItemEvent](interface/drawingitemevent.md)
 

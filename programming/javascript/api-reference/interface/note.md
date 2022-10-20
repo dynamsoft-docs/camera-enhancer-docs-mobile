@@ -18,6 +18,6 @@ Note objects contain information about a DrawingItem. Each DrawingItem can have 
 
   The name that identifies the Note. The names for the Notes of a DrawingItem should all be different.
 
-* content: `string`
+* content: `any`
 
-  The content of the Note which could be a string or an array of strings.
+  The content of the Note. It is usually a string.
