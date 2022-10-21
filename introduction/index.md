@@ -69,7 +69,7 @@ With these features, users can easily integrate the camera and enable certain fe
 
 ### Continuous barcode decoding
 
-In traditional scan modes, the scanning process are always intermittent because the scanner can’t continue the scan process before it receives a new frame from the camera. DCE frame queue tried to make this intermittent process continuous. The frame queue takes over and saves the new frames captured during the time that the scanner is processing on the former frame. Immediately when the former frame is processed, the scanner will fetch the newest frame in the queue and restart the scanning process. These behaviors will make the scanning experience of the application more fluent and stable.
+In traditional scan modes, the scanning process are always intermittent because the scanner can't continue the scan process before it receives a new frame from the camera. DCE frame queue tried to make this intermittent process continuous. The frame queue takes over and saves the new frames captured during the time that the scanner is processing on the former frame. Immediately when the former frame is processed, the scanner will fetch the newest frame in the queue and restart the scanning process. These behaviors will make the scanning experience of the application more fluent and stable.
 
 ### Long-distance decoding
 

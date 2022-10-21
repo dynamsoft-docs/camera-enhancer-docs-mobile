@@ -77,30 +77,30 @@ The fast-mode parameters store four groups of frame cropping parameters. The cro
 **Default Value**
 
 ```json
-“FastMode”: {
-    “cropRegions”: [{
-        “top”: 0,
-        “right”: 100,
-        “bottom”: 100,
-        “left”: 0
+"FastMode": {
+    "cropRegions": [{
+        "top": 0,
+        "right": 100,
+        "bottom": 100,
+        "left": 0
     },
     {
-        “top”: 25,
-        “right”: 100,
-        “bottom”: 75,
-        “left”: 0
+        "top": 25,
+        "right": 100,
+        "bottom": 75,
+        "left": 0
     },
     {
-        “top”: 25,
-        “right”: 75,
-        “bottom”: 75,
-        “left”: 25
+        "top": 25,
+        "right": 75,
+        "bottom": 75,
+        "left": 25
     },
     {
-        “top”: 25,
-        “right”: 75,
-        “bottom”: 75,
-        “left”: 25
+        "top": 25,
+        "right": 75,
+        "bottom": 75,
+        "left": 25
     }]
 }
 ```
