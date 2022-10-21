@@ -14,7 +14,7 @@ breadcrumbText: DrawingLayer
 |---|---|
 | [getId()](#getid) | Returns the ID of the DrawingLayer. |
 | [addDrawingItems()](#adddrawingitems) | Adds DrawingItem(s) to the DrawingLayer. |
-| [getDrawingItems()](#getdrawingitems) | Returns all DrawingItem(s) or just some of them based on a filter function. |
+| [getDrawingItems()](#getdrawingitems) | Returns all DrawingItem(s) of the DrawingLayer. |
 | [setDrawingItems()](#setdrawingitems) | Replaces all DrawingItem(s) of the DrawingLayer with new ones. |
 | [hasDrawingItem()](#hasdrawingitem) | Checks out if a DrawingItem belongs to the layer. |
 | [removeDrawingItems()](#removedrawingitems) | Removes DrawingItem(s) from the DrawingLayer. |
@@ -103,22 +103,17 @@ drawingLayer.addDrawingItems(drawingItems);
 
 ## getDrawingItems
 
-Returns all DrawingItem(s) or just some of them based on a filter function.
+Returns all `DrawingItem` (s) of the `DrawingLayer` .
 
 ```typescript
-getDrawingItems(filter?: (item: DrawingItem) => boolean) :Array<DrawingItem>);
+getDrawingItems() :Array<DrawingItem>);
 ```
-
-**Parameters**
-
-`filter` : specifies a function which checks each DrawingItem to determine whether it should be returned.
 
 **Code Snippet**
 
 ```js
 let drawingLayer = enhancer.getDrawingLayer(100);
-// Return only DrawingItems belong to the type DT_Rect.
-let drawingItems = drawingLayer.getDrawingItems(item => item.getAttribute("type") === "rect");
+let drawingItems = drawingLayer.getDrawingItems();
 ```
 
 **See also**

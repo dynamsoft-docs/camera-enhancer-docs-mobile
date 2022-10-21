@@ -78,7 +78,7 @@ Chooses a camera as the video source.
 > If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
 
 ```typescript
-selectCamera(cameraObjectOrDeviceID: videodeviceinfo | string): Promise<PlayCallbackInfo>
+selectCamera(cameraObjectOrDeviceID: VideoDeviceInfo | string): Promise<PlayCallbackInfo>
 ```
 
 **Parameters**
@@ -270,7 +270,7 @@ await enhancer.setResolution(width, height);
 Returns the resolution of the current video input.
 
 ```typescript
-getResolution(): number[]
+getResolution(): [number, number]
 ```
 
 **Parameters**
@@ -284,8 +284,8 @@ An array of two numbers representing the resolution in the sequence of [width, h
 **Code Snippet**
 
 ```js
-let resolution = await enhancer.getResolution();
-console.log(resolution.width + " x " + resolution.height);
+let resolution = enhancer.getResolution();
+console.log(resolution[0] + " x " + resolution[1]);
 ```
 
 ## setFrameRate
@@ -342,7 +342,7 @@ await enhancer.getFrameRate();
 
 Turns on the torch/flashlight.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 turnOnTorch(): Promise<void>
@@ -371,7 +371,7 @@ await enhancer.turnOnTorch();
 
 Turns off the torch/flashlight.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 turnOffTorch(): Promise<void>
@@ -400,7 +400,7 @@ await enhancer.turnOffTorch();
 
 Sets the zoom level of the video.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 setZoom(zoomValue: number): Promise<void>
@@ -524,7 +524,7 @@ enhancer.getCameraSettings();
 
 Adjusts the color temperature of the selected camera.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 setColorTemperature(colorTemperatur: number): Promise<void>
@@ -552,7 +552,7 @@ await enhancer.setColorTemperature(5000);
 
 Sets the exposure compensation index of the selected camera.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 setExposureCompensation(exposureCompensation: number): Promise<void>
