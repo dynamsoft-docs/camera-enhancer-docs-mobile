@@ -116,8 +116,9 @@ As shown in the code snippet below, before opening the video stream, we need to 
 <script>
   (async () => {
       let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-      await enhancer.open();
+      await enhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
       document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+      await enhancer.open();
   })();
 </script>
 ```
@@ -145,10 +146,11 @@ Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 <script>
   (async () => {
     let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-    // In order to get the UIElement to put on the page, call open() first.
-    await enhancer.open();
-    // Gets the internally built UI element and bind it to an element on the page.
+    //  Sets the internally built UI element
+    await enhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
+    // Gets the internally built UI element and add it to the page.
     document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+    await enhancer.open();
     // The following line hides the close button
     document.getElementsByClassName("dce-btn-close")[0].style.display = "none";
   })();
