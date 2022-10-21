@@ -30,8 +30,9 @@ The following content is based on this code that defines a page:
         document.getElementById('drawShapes').onclick = drawShapes;
         (async () => {
             enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-            await enhancer.open();
+            await enhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
             document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
+            await enhancer.open();
         })();
         function drawShapes(){}
     </script>
