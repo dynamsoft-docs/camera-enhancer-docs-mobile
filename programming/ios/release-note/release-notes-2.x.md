@@ -10,6 +10,14 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.4 (11/03/2022)
+
+### Fixed
+
+- Fixed a scan region deviation bug.
+- Fixed an overlay offset bug when `DCECamearView` is smaller than the screen size.
+- Fixed a bug that might cause high CPU occupancy when the camera is opened.
+
 ## 2.3.3 (09/22/2022)
 
 ### Changed
