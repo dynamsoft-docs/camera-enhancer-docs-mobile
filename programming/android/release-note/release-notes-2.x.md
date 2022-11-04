@@ -10,6 +10,10 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.3.5 (11/04/2022)
+
+- Fixed a bug that might throws exception when triggering `CameraEnhancer.close` after triggering `CameraEnhancer.pause`.
+
 ## 2.3.4 (09/22/2022)
 
 - Fixed a bug that camera might not be opened after camera permission is allowed.
