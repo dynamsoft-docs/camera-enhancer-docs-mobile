@@ -41,7 +41,7 @@ enumerations: /camera-enhancer/docs/parameters/enumerations/
 license-error: /camera-enhancer/docs/faq/license-error/
 contact-us: /camera-enhancer/docs/faq/contact-us/
 gallery: /camera-enhancer/docs/resources/code-gallery/
-all-release-note: /camera-enhancer/docs/resources/release-notes/
+all-release-note: /camera-enhancer/docs/release-notes/
 resource: /camera-enhancer/docs/resources/
 
 barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhancer/
