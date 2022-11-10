@@ -36,8 +36,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`getVersion`](#getversion) | Get the SDK version. |
 | [`cameraView`](#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
-&nbsp;
-
 ## Basic Camera Control Methods Summary
 
 | Method | Description |
@@ -55,8 +53,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-&nbsp;
-
 ## Frame Acquiring Methods Summary
 
 | Method | Description |
@@ -66,8 +62,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
 | [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
-&nbsp;
-
 ## Enhanced Features Methods Summary
 
 | Method | Description |
@@ -75,8 +69,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
-
-&nbsp;
 
 ## Advanced Camera Control Methods Summary
 
@@ -260,7 +252,7 @@ Select the camera position (front-facing or back-facing).
 **Parameters**
 
 `[in] cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
-`[in out] error` The error occurs when trying to switch the camera. You may specify nil for this parameter if you do not want the error information.
+`[in out] error` The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -319,7 +311,7 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 **Parameters**
 
 `[in] cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
-`[in out] error` The error occurs when trying to switch the camera. You may specify nil for this parameter if you do not want the error information.
+`[in out] error` The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -705,7 +697,7 @@ class ViewController: UIViewController, DCEPhotoListener {
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value. When the license verification is failed, the enabled features will be recorded but not actived. Once a valid license is verified, the features you enabled will be recovered.
 
 ```objc
 - (void)enableFeatures:(EnumEnhancerFeatures)features  error:(NSError * _Nullable * _Nullable)error;
@@ -714,7 +706,7 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 **Parameters**
 
 `[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
-`[in out] error` The error occurs when fail to access to the sensor. You may specify nil for this parameter if you do not want the error information.
+`[in out] error` The error occurs when the license is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 

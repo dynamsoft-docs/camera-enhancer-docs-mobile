@@ -35,8 +35,6 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`initLicense`](#initlicense) | Sets product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
-&nbsp;
-
 ## Basic Camera Control Methods Summary
 
 | Method | Description |
@@ -54,8 +52,6 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-&nbsp;
-
 ## Frame Acquiring Methods Summary
 
 | Method | Description |
@@ -65,8 +61,6 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
 | [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
-&nbsp;
-
 ## Enhanced Features Methods Summary
 
 | Method | Description |
@@ -74,8 +68,6 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
-
-&nbsp;
 
 ## Advanced Camera Control Methods Summary
 
@@ -95,8 +87,6 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 | [`setFrameRate`](#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
-
-&nbsp;
 
 ## Camera UI Methods Summary
 
