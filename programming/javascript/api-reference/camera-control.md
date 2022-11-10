@@ -447,7 +447,11 @@ getZoom(): number;
 
 Sets the zoom level of the video.
 
-> If the camera supports zooming and the zoom level is within its supported range, zooming is done directly by the camera. If the camera does not support zooming, WebGL is used instead. If the camera supports zooming but the zoom level is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest.
+> How it works:
+>
+> 1. If the camera supports zooming and the zoom level is within its supported range, zooming is done directly by the camera. 
+> 2. If the camera does not support zooming, WebGL is used instead.
+> 3. If the camera supports zooming but the zoom level is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest. (In this case, you may see a brief video flicker between the two zooming processes).
 
 ```typescript
 setZoom(zoomValue: number): Promise<void>;
