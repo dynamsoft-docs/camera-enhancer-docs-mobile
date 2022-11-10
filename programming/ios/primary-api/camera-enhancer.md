@@ -27,7 +27,7 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 @interface DynamsoftCameraEnhancer:NSObject
 ```
 
-## Initialization
+## Initialization Methods Summary
 
 | Method | Description |
 | ------ | ----------- |
@@ -37,6 +37,67 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`cameraView`](#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
 &nbsp;
+
+## Basic Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
+| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
+| [`open`](#open) | Turn on the current selected camera. |
+| [`close`](#close) | Turn off the current selected camera. |
+| [`pause`](#pause) | Pause the current selected  camera. |
+| [`resume`](#resume) | Resume the current selected camera. |
+| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
+
+&nbsp;
+
+## Frame Acquiring Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
+| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
+| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
+
+&nbsp;
+
+## Enhanced Features Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
+
+&nbsp;
+
+## Advanced Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameRate`](#getframerate) | Get the current frame rate. |
+| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`](#getresolution) | Get the current resolution. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
+| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
+| [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
+| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
+| [`setFrameRate`](#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
+
+&nbsp;
+
+## Initialization Methods Details
 
 ### initWithView
 
@@ -77,8 +138,8 @@ Set product key and activate the SDK. It is recommended to initialize the licens
 
 **Parameters**
 
-`license`: The product key.  
-`verificationListener`: The listener that handles callback when the license server returns. See also [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html).
+`[in] license`: The product key.  
+`[in out] verificationListener`: The listener that handles callback when the license server returns. See also [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html).
 
 **Code Snippet**
 
@@ -157,24 +218,7 @@ dce.cameraView = dceView
 
 &nbsp;
 
-## Basic Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
-| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
-| [`open`](#open) | Turn on the current selected camera. |
-| [`close`](#close) | Turn off the current selected camera. |
-| [`pause`](#pause) | Pause the current selected  camera. |
-| [`resume`](#resume) | Resume the current selected camera. |
-| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
-| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
-
-&nbsp;
+## Basic Camera Control Methods Details
 
 ### getAllCameras
 
@@ -215,7 +259,8 @@ Select the camera position (front-facing or back-facing).
 
 **Parameters**
 
-`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+`[in] cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+`[in out] error` The error occurs when trying to switch the camera. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -273,7 +318,8 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Parameters**
 
-`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`[in] cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`[in out] error` The error occurs when trying to switch the camera. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -520,16 +566,7 @@ dce.turnOffTorch()
 
 &nbsp;
 
-## Frame Acquiring Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
-| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
-
-&nbsp;
+## Frame Acquiring Methods Details
 
 ### getFrameFromBuffer
 
@@ -541,7 +578,7 @@ Get the latest frame from the buffer. The boolean value determines whether the f
 
 **Parameters**
 
-`Keep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
+`[in] Keep` If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -574,7 +611,7 @@ Add a listener to the `CameraEnhancer` instance. This method will have no effect
 
 **Parameters**
 
-`listener`: An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
+`[in] listener` An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
 
 **Code Snippet**
 
@@ -603,7 +640,7 @@ Remove a previously added listener from the `CameraEnhancer` instance. This meth
 
 **Parameters**
 
-`listener`: The input listener will be removed from the Camera Enhancer instance.
+`[in] listener` The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -632,7 +669,7 @@ Take a photo from the camera and save the image in the memory. The photo will be
 
 **Parameters**
 
-`listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.md).
+`[in] listener` An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.md).
 
 **Code Snippet**
 
@@ -664,15 +701,7 @@ class ViewController: UIViewController, DCEPhotoListener {
 
 &nbsp;
 
-## Enhanced Features
-
-| Method | Description |
-| ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
-
-&nbsp;
+## Enhanced Features Methods Details
 
 ### enableFeatures
 
@@ -684,7 +713,8 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`[in out] error` The error occurs when fail to access to the sensor. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -728,7 +758,7 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.en
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
 
 **Code Snippet**
 
@@ -761,7 +791,7 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
 
 **Return Value**
 
@@ -791,22 +821,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 
 &nbsp;
 
-## Advanced Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameRate`](#getframerate) | Get the current frame rate. |
-| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
-| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
-| [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
-| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
-| [`setFrameRate`](#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
+## Advanced Camera Control Methods Details
 
 ### getFrameRate
 
@@ -847,7 +862,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
+`[in] resolution` One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
 
 **Code Snippet**
 
@@ -905,7 +920,7 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 
 **Parameters**
 
-`factor`: The target zoom factor.
+`[in] factor` The target zoom factor.
 
 **Code Snippet**
 
@@ -963,7 +978,7 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 
 **Parameters**
 
-`focusPosition`: A CGPoint that stores the x and y coordinate of the targeting focus position.
+`[in] focusPosition` A CGPoint that stores the x and y coordinate of the targeting focus position.
 
 **Code Snippet**
 
@@ -994,7 +1009,8 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`scanRegion`: Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
+`[in] scanRegion` Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
+`[in out] error` The error occurs when the region parameters are invalid. You may specify nil for this parameter if you do not want the error information.
 
 <div align="center">
     <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
@@ -1091,7 +1107,8 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`filePath`: The file path of the JSON file.
+`[in] filePath` The file path of the JSON file.
+`[in out] error`  The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -1124,7 +1141,8 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`jsonString`: A stringified JSON data.
+`[in] jsonString` A stringified JSON data.
+`[in out] error` The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -1156,7 +1174,7 @@ Set the frame rate to the input value (if the input value is available for the d
 
 **Parameters**
 
-`frameRate`: An int value that refers to the target frame rate.  
+`[in] frameRate` An int value that refers to the target frame rate.  
 
 **Code Snippet**
 
