@@ -251,7 +251,7 @@ Select the camera position (front-facing or back-facing).
 
 **Parameters**
 
-`[in] cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+`[in] cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.  
 `[in out] error` The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -310,7 +310,7 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Parameters**
 
-`[in] cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`[in] cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.  
 `[in out] error` The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -1001,7 +1001,7 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`[in] scanRegion` Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
+`[in] scanRegion` Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).  
 `[in out] error` The error occurs when the region parameters are invalid. You may specify nil for this parameter if you do not want the error information.
 
 <div align="center">
@@ -1099,7 +1099,7 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`[in] filePath` The file path of the JSON file.
+`[in] filePath` The file path of the JSON file.  
 `[in out] error`  The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -1133,7 +1133,7 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`[in] jsonString` A stringified JSON data.
+`[in] jsonString` A stringified JSON data.  
 `[in out] error` The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
