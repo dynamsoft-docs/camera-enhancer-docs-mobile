@@ -26,7 +26,7 @@ interface com.dynamsoft.dce.DCEPhotoListener
 The callback method for user to receive the captured photo. User can complete the method by adding code to execute with the capture image.
 
 ```java
-photoOutputCallback(byte[] var1)
+photoOutputCallback(byte[] bytes)
 ```
 
 **Parameters**
