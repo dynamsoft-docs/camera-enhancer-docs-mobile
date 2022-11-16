@@ -10,6 +10,12 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.5 (11/15/2022)
+
+### Fixed
+
+- Fixed a bug that `torchButton` was not clickable when it appeared outside `scanRegion`.
+
 ## 2.3.4 (11/04/2022)
 
 ### Fixed
