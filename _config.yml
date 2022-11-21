@@ -37,6 +37,7 @@ js-rn: /camera-enhancer/docs/programming/javascript/release-note/
 
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/
+mobile-enum: /camera-enhancer/docs/programming/enumerations/
 
 license-error: /camera-enhancer/docs/faq/license-error/
 contact-us: /camera-enhancer/docs/faq/contact-us/
