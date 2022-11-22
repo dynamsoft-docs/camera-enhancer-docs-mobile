@@ -23,7 +23,7 @@ breadcrumbText: Android 1.x Release Note
 ### New
 
 - Added a new property [`products`]({{ site.android-api-auxiliary }}dlsconnection.html#products) in class `DMLTSConnectionParameters`.
-- Added a new enumeration [`EnumProduct`]({{ site.enumerations }}enumproduct.html).
+- Added a new enumeration [`EnumProduct`]({{ site.mobile-enum }}enum-1.html?lang=android#enumproduct).
 
 ## 1.0.0 (04/29/2021)
 

@@ -35,6 +35,17 @@ noTitleIndex: true
 | [`resume`]({{site.android-api}}camera-enhancer.html#resume) | Resume the current selected camera. |
 | [`turnOnTorch`]({{site.android-api}}camera-enhancer.html#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`]({{site.android-api}}camera-enhancer.html#turnofftorch) | Turn off the torch. |
+| [`setFrameRate`]({{site.android-api}}camera-enhancer.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
+| [`getFrameRate`]({{site.android-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
+| [`getResolutionList`]({{site.android-api}}camera-enhancer.html#getresolutionlist) | Get all available resolutions. |
+| [`setResolution`]({{site.android-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`]({{site.android-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
+| [`setZoom`]({{site.android-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
+| [`setScanRegionVisible`]({{site.android-api}}camera-enhancer.html#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`getScanRegionVisible`]({{site.android-api}}camera-enhancer.html#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
 
 ### Frame Acquiring Methods
 
@@ -52,30 +63,19 @@ noTitleIndex: true
 | [`disableFeatures`]({{site.android-api}}camera-enhancer.html#disablefeatures) | Disable DCE features with Enumeration value. |
 | [`isFeatureEnabled`]({{site.android-api}}camera-enhancer.html#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
 
-### Advanced Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`setFrameRate`]({{site.android-api}}camera-enhancer.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
-| [`getFrameRate`]({{site.android-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
-| [`getResolutionList`]({{site.android-api}}camera-enhancer.html#getresolutionlist) | Get all available resolutions. |
-| [`setResolution`]({{site.android-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`]({{site.android-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
-| [`setZoom`]({{site.android-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
-| [`setScanRegionVisible`]({{site.android-api}}camera-enhancer.html#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`getScanRegionVisible`]({{site.android-api}}camera-enhancer.html#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
-| [`updateAdvancedSettingsFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
-| [`updateAdvancedSettingsFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
-
 ### Camera UI Methods
 
 | Method | Description |
 | ------ | ----------- |
 | [`setCameraView`]({{site.android-api}}camera-enhancer.html#setcameraview) | Sets camera video streaming UI. Read more from [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html). |
 | [`getCameraView`]({{site.android-api}}camera-enhancer.html#setcameraview) | Gets camera video streaming UI. Read more from [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html). |
+
+### Advanced Camera Control Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`updateAdvancedSettingsFromFile`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingsFromString`]({{site.android-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
 ## Auxiliary Classes
 
@@ -91,8 +91,8 @@ noTitleIndex: true
 
 ## Enumerations
 
-- [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
-- [`EnumFrameQuality`]({{ site.enumerations }}enum-frame-quality.html)
-- [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
-- [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
-- [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
+- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=android)
+- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=android)
+- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=android)
+- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=android)
+- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=android)

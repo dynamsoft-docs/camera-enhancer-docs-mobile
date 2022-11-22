@@ -34,7 +34,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
 | [`initLicense`](#initlicense) | Set product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
-| [`cameraView`](#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
 ## Basic Camera Control Methods Summary
 
@@ -57,14 +56,10 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
-| [`getAutoZoomRange`](#getautozoomrange) | Get the range of auto zoom. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
 | [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
-| [`setCameraStateListener`](#setcamerastatelistener) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
-| [`scanRegionVisible`](#scanregionvisible) | **Deprecated, will be removed in v3.0**. Set whether to display the **scanRegion** on the UI. |
+| [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`setFrameRate`](#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ## Frame Acquiring Methods Summary
@@ -99,7 +94,7 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 
 Initialize the camera enhancer with the `DCECameraView`.
 
-```objc
+```java
 - (instancetype)initWithView:(DCECameraView *)view;
 ```
 
@@ -255,8 +250,8 @@ Select the camera position (front-facing or back-facing).
 
 **Parameters**
 
-`[in] cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.  
-`[in out] error`: The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
+`[in] cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.  
+`[in out] error` The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -314,8 +309,8 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Parameters**
 
-`[in] cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.  
-`[in out] error`: The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
+`[in] cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.  
+`[in out] error` The error occurs when the input value is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -601,7 +596,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`[in] resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.mobile-enum}}enum-resolution.html?lang=objc,swift).
+`[in] resolution` One of the int value that preset in Enumeration [`EnumResolution`]({{site.mobile-enum}}enum-resolution.html?lang=objc,swift).
 
 **Code Snippet**
 
@@ -659,7 +654,7 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 
 **Parameters**
 
-`[in] factor`: The target zoom factor.
+`[in] factor` The target zoom factor.
 
 **Code Snippet**
 
@@ -707,64 +702,6 @@ let maxZoomFactor = dce.getMaxZoomFactor()
 
 &nbsp;
 
-### setAutoZoomRange
-
-Set the range of auto zoom.
-
-```objc
-- (void) setAutoZoomRange:(UIFloatRange)zoomRange;
-```
-
-**Parameters**
-
-`[in] zoomRange`: A `UIFloatRange` value that defines the range of auto zoom.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[_dce setAutoZoomRange:UIFloatRangeMake(1.5,4)];
-```
-2. 
-```swift
-dce.setAutoZoomRange(UIFloatRange(1.5,4))
-```
-
-&nbsp;
-
-### getAutoZoomRange
-
-Get the range of auto zoom.
-
-```objc
-- (UIFloatRange) getAutoZoomRange;
-```
-
-**Return Value**
-
-A `UIFloatRange` value that defines the range of auto zoom.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-UIFloatRange currentZoomRange = [_dce getAutoZoomRange];
-```
-2. 
-```swift
-let currentZoomRange = dce.getAutoZoomRange()
-```
-
-&nbsp;
-
 ### setFocus
 
 Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
@@ -775,7 +712,7 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 
 **Parameters**
 
-`[in] focusPosition`: A CGPoint that stores the x and y coordinate of the targeting focus position.
+`[in] focusPosition` A CGPoint that stores the x and y coordinate of the targeting focus position.
 
 **Code Snippet**
 
@@ -796,38 +733,6 @@ dce.setFocus(focusPoint)
 
 &nbsp;
 
-### setFocus(subsequentFocusMode)
-
-Trigger a focus at the targeting point and set the subsequent focus mode after focused.
-
-```objc
-- (Void)setFocus:(CGPoint)focusPosition subsequentFocusMode:(EnumFocusMode)subsequentFocusMode; 
-```
-
-**Parameters**
-
-`[in] focusPosition`: A `CGPoint` indicates the interest area.
-`[in] subsequentFocusMode`: If you set the focus mode to `FM_LOCKED`, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-CGPoint focusPoint = {0.4, 0.5};
-[_dce setFocus:focusPoint subsequentFocusMode:EnumFocusMode.FM_LOCKED];
-```
-2. 
-```swift
-let focusPoint = CGPoint(x:0.4, y:0.5)
-dce.setFocus(focusPoint, subsequentFocusMode:EnumFocusMode.FM_LOCKEDD)
-```
-
-&nbsp;
-
 ### setScanRegion
 
 Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRegion` before they are stored in the video buffer.
@@ -838,8 +743,8 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`[in] scanRegion`: Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).  
-`[in out] error`: The error occurs when the region parameters are invalid. You may specify nil for this parameter if you do not want the error information.
+`[in] scanRegion` Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).  
+`[in out] error` The error occurs when the region parameters are invalid. You may specify nil for this parameter if you do not want the error information.
 
 <div align="center">
     <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
@@ -916,49 +821,7 @@ scanRegion = dce.getScanRegion()
 
 &nbsp;
 
-### setCameraStateListener
-
-Set a `DCECameraStateListener` to receive notifications when the camera state changes.
-
-```objc
-- (void) setCameraStateListener:(nonnull id<DCECameraStateListener>)listener;
-```
-
-**Parameters**
-
-`[in] listener`: A `DCECameraStateListener` object.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface ViewController ()<DCECameraStateListener>
-- (void)configurationDCE{
-   [_dce setCameraStateListener:self];
-}
-- (void)stateChangeCallback:(EnumCameraState)state{
-   // Add your code to do when camera state changes.
-}
-```
-2. 
-```swift
-class ViewController: UIViewController,DCECameraStateListener{
-   func configurationDCE(){
-          dce.setCameraStateListener(self)
-   }
-   func stateChangeCallback(EnumCameraState currentState){
-          // Add your code to do when camera state changes.
-   }
-}
-```
-
 ### scanRegionVisible
-
-> Deprecated. Will be removed in v3.0.
 
 Set whether to display the **scanRegion** on the UI. The default value of the property is false. When the property value is set to true, the scan region will be drawn on the UI. The **scanRegion** will not be displayed if its value is null
 
@@ -970,7 +833,8 @@ Set whether to display the **scanRegion** on the UI. The default value of the pr
 
 ### setFrameRate
 
-> Deprecated. Will be removed in v3.0.
+> Note:
+> The method is deprecated in v9.0.2 and will be removed in v10.0 release.
 
 Set the frame rate to the input value (if the input value is available for the device).
 
@@ -980,7 +844,7 @@ Set the frame rate to the input value (if the input value is available for the d
 
 **Parameters**
 
-`[in] frameRate`: An int value that refers to the target frame rate.  
+`[in] frameRate` An int value that refers to the target frame rate.  
 
 **Code Snippet**
 
@@ -1015,7 +879,7 @@ Get the latest frame from the buffer. The boolean value determines whether the f
 
 **Parameters**
 
-`[in] Keep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
+`[in] Keep` If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -1048,7 +912,7 @@ Add a listener to the `CameraEnhancer` instance. This method will have no effect
 
 **Parameters**
 
-`[in] listener`: An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
+`[in] listener` An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
 
 **Code Snippet**
 
@@ -1077,7 +941,7 @@ Remove a previously added listener from the `CameraEnhancer` instance. This meth
 
 **Parameters**
 
-`[in] listener`: The input listener will be removed from the Camera Enhancer instance.
+`[in] listener` The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -1106,7 +970,7 @@ Take a photo from the camera and save the image in the memory. The photo will be
 
 **Parameters**
 
-`[in] listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.md).
+`[in] listener` An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.md).
 
 **Code Snippet**
 
@@ -1150,8 +1014,8 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mob
 
 **Parameters**
 
-`[in] enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).  
-`[in out] error`: The error occurs when the license is invalid. You may specify nil for this parameter if you do not want the error information.
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).  
+`[in out] error` The error occurs when the license is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -1195,7 +1059,7 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mo
 
 **Parameters**
 
-`[in] enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).  
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).  
 
 **Code Snippet**
 
@@ -1228,7 +1092,7 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`[in] enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).
 
 **Return Value**
 
@@ -1270,8 +1134,8 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`[in] filePath`: The file path of the JSON file.  
-`[in out] error`:  The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
+`[in] filePath` The file path of the JSON file.  
+`[in out] error`  The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 
@@ -1304,8 +1168,8 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`[in] jsonString`: A stringified JSON data.  
-`[in out] error`: The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
+`[in] jsonString` A stringified JSON data.  
+`[in out] error` The error occurs when the JSON data is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
 

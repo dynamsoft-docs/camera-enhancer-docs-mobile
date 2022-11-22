@@ -83,7 +83,4 @@ breadcrumbText: iOS API references
 
 ## Enumerations
 
-- [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
-- [`EnumCameraDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
-- [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
-- [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
+- [View all Enumerations]({{ site.mobile-enum }}enum-1.html?lang=android)

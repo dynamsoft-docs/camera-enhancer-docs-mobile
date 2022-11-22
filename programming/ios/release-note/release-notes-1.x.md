@@ -27,7 +27,7 @@ breadcrumbText: iOS Release Note
 ### New
 
 - Added a new property [`products`]({{ site.ios-api-auxiliary }}dlsconnection.html#products) in class `iDCELTSConnectionParameters`.
-- Added a new enumeration [`EnumProduct`]({{ site.enumerations }}enumproduct.html).
+- Added a new enumeration [`EnumProduct`]({{ site.mobile-enum }}enum-1.html?lang=android#enumproduct).
 
 ## 1.0.0 (04/29/2021)
 

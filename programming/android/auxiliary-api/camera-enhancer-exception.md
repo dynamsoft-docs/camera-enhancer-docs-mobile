@@ -33,7 +33,7 @@ int getErrorCode()
 
 **Return Value**
 
-The error code. See also [`Error Code List`]({{ site.enumerations }}errorcode.html).
+The error code. See also [`Error Code List`]({{ site.mobile-enum }}errorcode.html?lang=android).
 
 **Code Snippet**
 

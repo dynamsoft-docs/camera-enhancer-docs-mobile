@@ -991,7 +991,6 @@ The advanced settings are as follow:
 | [`autoFocusTerminateTime`](#autofocusterminatetime) | *int* | Set the minimum terminate time of auto focus. |
 | [`sensorControlSensitivity`](#sensorcontrolsensitivity) | *int* | Set the sensitivity of the mobile sensor. |
 | [`FastMode`](#fastmode) | *JSON data* | Set a group of crop regions. |
-| [`ISO & ExposureTime`](#iso--exposuretime) | *JSON data* | Set the ISO and exposure time. |
 
 #### focalLength
 
@@ -1057,18 +1056,5 @@ Example:
         "bottom": 75,
         "left": 25
     }]
-}
-```
-
-#### ISO & ExposureTime
-
-Set the ISO and exposure time of the camera.
-
-Example:
-
-```json
-{
-    "androidExposureTime": 2,
-    "iso":30
 }
 ```

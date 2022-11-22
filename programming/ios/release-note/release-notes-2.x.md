@@ -40,7 +40,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 - Added a property [`cameraView`](../primary-api/camera-enhancer.md#cameraview) for users to bind a `DCECameraView` object to the `DynamsoftCameraEnhancer` object.
 - Added methods [`selectCameraWithPosition`](../primary-api/camera-enhancer.md#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
-- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
+- Added enumeration [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift).
 
 ### Changed
 

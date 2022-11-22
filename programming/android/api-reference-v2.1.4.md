@@ -35,13 +35,17 @@ noTitleIndex: true
 | [`resume`]({{site.android-api}}camera-enhancer.html#resume) | Resume the current selected camera. |
 | [`turnOnTorch`]({{site.android-api}}camera-enhancer.html#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`]({{site.android-api}}camera-enhancer.html#turnofftorch) | Turn off the torch. |
-| [`setFrameRate`]({{site.android-api}}camera-enhancer.html#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
 | [`getFrameRate`]({{site.android-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
 | [`getResolutionList`]({{site.android-api}}camera-enhancer.html#getresolutionlist) | Get all available resolutions. |
 | [`setResolution`]({{site.android-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`]({{site.android-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.android-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
+| [`setScanRegionVisible`]({{site.android-api}}camera-enhancer.html#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`getScanRegionVisible`]({{site.android-api}}camera-enhancer.html#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
+| [`setFrameRate`]({{site.android-api}}camera-enhancer.html#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ### Frame Acquiring Methods
 
@@ -83,6 +87,7 @@ noTitleIndex: true
 ## Interfaces
 
 - [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
+- [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)
 - [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 
 ## Enumerations

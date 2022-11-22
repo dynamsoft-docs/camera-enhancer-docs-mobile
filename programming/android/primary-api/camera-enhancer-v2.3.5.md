@@ -40,6 +40,8 @@ class com.dynamsoft.dce.CameraEnhancer
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCamera(EnumCameraPosition)`](#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
 | [`selectCamera(String)`](#selectcamerastring) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
@@ -54,6 +56,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
 | [`setFocus`](#setfocus) | Focus once at the input position. |
 | [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
@@ -68,6 +71,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
+| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 ## Enhanced Features Methods Summary
 
@@ -183,6 +187,51 @@ An array list that inclueds all available cameras. Users can clearly read whethe
 ```java
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
 String[] cameraIds = cameraEnhancer.getAllCameras();
+```
+
+&nbsp;
+
+### selectCamera(EnumCameraPosition)
+
+Select the camera position (front-facing or back-facing).
+
+```java
+void selectCamera(EnumCameraPosition cameraPosition) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**Exception**
+
+An exception thrown to indicate an error has occurred when switching the camera.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+cameraEnhancer.selectCamera(EnumCameraPosition.CP_BACK);
+```
+
+&nbsp;
+
+### getCameraPosition
+
+Returns whether the front-facing camera or back-facing camera is selected.
+
+```java
+EnumCameraPosition getCameraPosition()
+```
+
+**Return Value**
+
+An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+
+**Code Snippet**
+
+```java
+EnumCameraPosition camera = mCameraEnhancer.getCameraPosition();
 ```
 
 &nbsp;
@@ -518,6 +567,24 @@ cameraEnhancer.setZoom(2.5)
 
 &nbsp;
 
+### getMaxZoomFactor
+
+Get the maximum available zoom factor.
+
+```java
+float getMaxZoomFactor()
+```
+
+**Return Value**
+
+A float value that indicates the maximum available zoom factor of the device.
+
+**Code Snippet**
+
+```java
+float maxZoomFactor = cameraEnhancer.getMaxZoomFactor();
+```
+
 ### setFocus
 
 Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
@@ -779,6 +846,33 @@ DCEFrameListener listener = new DCEFrameListener(){
 cameraEnhancer.addListener(listener);
 // ......
 cameraEnhancer.removeListener(listener);
+```
+
+&nbsp;
+
+### takePhoto
+
+Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/interface-dcephotolistener.md#photooutputcallback).
+
+```java
+void takePhoto(DCEPhotoListener listener)
+```
+
+**Parameters**
+
+`listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/interface-dcephotolistener.md).
+
+**Code Snippet**
+
+```java
+// Create an instance of DCEPhotoListener
+DCEPhotoListener photoListener = new DCEPhotoListener() {
+    @Override
+    public void photoOutputCallback(byte[] bytes) {
+        // Add your code to execute when photo is captured.
+    }
+};
+mCameraEnhancer.takePhoto(photoListener);
 ```
 
 &nbsp;
