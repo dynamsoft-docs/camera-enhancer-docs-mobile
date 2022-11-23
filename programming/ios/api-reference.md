@@ -79,23 +79,23 @@ breadcrumbText: iOS API references
 
 ## Auxiliary Classes
 
-- [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
 - [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
 - [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html)
+- [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
 - [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html)
 
 ## Protocol
 
-- [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
-- [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)
-- [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
 - [`DCECameraStateListener`]({{ site.ios-api-auxiliary }}protocol-camerastatelistener.html)
+- [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
+- [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
+- [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)
 
 ## Enumerations
 
-- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=objc,swift)
-- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=objc,swift)
-- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=objc,swift)
-- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=objc,swift)
-- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=objc,swift)
 - [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift)
+- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=objc,swift)
+- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=objc,swift)
+- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=objc,swift)
+- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=objc,swift)
+- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=objc,swift)

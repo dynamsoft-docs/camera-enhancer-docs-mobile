@@ -84,24 +84,27 @@ noTitleIndex: true
 
 ## Auxiliary Classes
 
-- [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`DCECameraView`]({{site.android-api-auxiliary}}dcecameraview.html)
 - [`DCEFeedback`]({{site.android-api-auxiliary}}dcefeedback.html)
+- [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
 - [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html)
+
+## Exception
+
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
+- [`Error Code Reference`]({{ site.mobile-enum }}errorcode.html?lang=android)
 
 ## Interfaces
 
-- [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
-- [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)
-- [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 - [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-camerastatelistener.html)
+- [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
+- [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
+- [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)
 
 ## Enumerations
 
-- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=android)
-- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=android)
+- [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=android)
 - [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=android)
 - [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=android)
+- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=android)
 - [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=android)
-- [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=android)
