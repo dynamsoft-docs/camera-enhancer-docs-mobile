@@ -24,7 +24,6 @@ breadcrumbText: Acquisition
 | [getScanRegion()](#getscanregion) | Returns the scan region. |
 | [getFrame()](#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
 | [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the specified buffered frame. |
-| [clearFrameBuffer()](#clearframebuffer) | Removes all buffered frames. |
 | [startFetchingLoop()](#startfetchingloop) | Starts a fetching loop that continuously put frames in a buffer. |
 | [stopFetchingLoop()](#stopfetchingloop) | Stops the fetching loop. |
 | [isFetchingLoopStarted()](#isfetchingloopstarted) | Returns the state of the fetching loop. |
@@ -147,28 +146,6 @@ document.body.appendChild(frameData.toCanvas());
 
 * [DCEFrame](interface/dceframe.md)
 * [startFetchingLoop](#startfetchingloop)
-
-## clearFrameBuffer
-
-Removes all buffered frames.
-
-```typescript
-clearFrameBuffer(): void;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-None.
-
-**Code Snippet**
-
-```js
-enhancer.clearFrameBuffer();
-```
 
 ## startFetchingLoop
 
