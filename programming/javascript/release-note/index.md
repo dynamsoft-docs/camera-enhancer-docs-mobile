@@ -10,6 +10,7 @@ breadcrumbText: Release Notes
 
 # Release Notes
 
+* [3.2.0 (12/xx/2022)](release-notes-3.x.md/#320-12xx2022)
 * [3.1.0 (10/20/2022)](release-notes-3.x.md/#310-10202022)
 * [3.0.0 (07/27/2022)](release-notes-3.x.md/#300-07272022)
 * [2.3.2 (03/28/2022)](release-notes-2.x.md/#232-03282022)
