@@ -38,14 +38,10 @@ breadcrumbText: Camera Control
 | [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
 | [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight if the current camera supports it. |
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
-| [getZoomSettings()](#getzoomsettings) | Returns the zoom settings. |
-| [setZoom()](#setzoom) | Zooms the video stream. |
-| [resetZoom()](#resetzoom) | Resets the zoom level of the video. |
-| [getFocusSettings()](#getfocussettings) | Returns the focus settings. |
-| [setFocus()](#setfocus) | Sets how the camera focuses. |
-| [enableTapToFocus()](#enabletaptofocus) | Enables manual camera focus when clicking/tapping on the video. |
-| [disableTapToFocus()](#disabletaptofocus) | Disables manual camera focus when clicking/tapping on the video. |
-| [isTapToFocusEnabled()](#istaptofocusenabled) | Returns whether clicking/tapping on the video invokes the camera to focus. |
+| [getZoom()](#getzoom) | Returns the zoom level of the video. |
+| [setZoom()](#setzoom) | Sets the zoom level of the video. |
+| [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
+| [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
 | [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
 | [getColorTemperature()](#getcolortemperature) | Returns the color temperature of the selected camera. |
@@ -106,7 +102,7 @@ if (cameras.length) {
 
 Chooses a camera as the video source.
 
-> If called before `open()` or `show()` , the selected camera will be used. Otherwise, the system will decide which one to use.
+> If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
 
 ```typescript
 selectCamera(cameraObjectOrDeviceID: VideoDeviceInfo | string): Promise<PlayCallbackInfo>;
@@ -172,17 +168,14 @@ open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 
 `appendOrShowUI` : this parameter specifies how to handle the UI. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
-> NOTE: if `setUIElement()` is not called before `open()` , the default UI Element will be used, which is equivalent to the following code:
+> NOTE: if `setUIElement()` is not called before `open()`, the default UI Element will be used, which is equivalent to the following code:
 >
->  
-
-```js
-> await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL); >
-await cameraEnhancer.open(appendOrShowUI); >
-```
-
+> ```js
+> await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
+> await cameraEnhancer.open(appendOrShowUI);
+> ```
 >
-> If you want to use a different UI element, call API [ `setUIElement()` ](initialization.md#setuielement) beforehand.
+> If you want to use a different UI element, call API [`setUIElement()`](initialization.md#setuielement) beforehand.
 
 **Return value**
 
@@ -260,7 +253,7 @@ None.
 
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
-> If called before `open()` or `show()` , the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720.
+> If called before `open()` or `show()`, the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720.
 
 ```typescript
 setResolution(widthOrResolution: number | number[], height: number): Promise<PlayCallbackInfo>;
@@ -442,45 +435,31 @@ await enhancer.turnOffTorch();
 * [turnOnTorch](#turnontorch)
 * [getCapabilities](#getcapabilities)
 
-## getZoomSettings
+## getZoom
 
-Returns the zoom settings.
+Returns the zoom level of the video.
 
 ```typescript
-getZoomSettings(): { factor: number };;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-An object that describes the zoom settings. As of version 3.2, it contains only the zoom factor.
-
-**Code Snippet**
-
-```js
-console.log(enhancer.getZoomSettings().factor);
+getZoom(): number;
 ```
 
 ## setZoom
 
-Zooms the video.
+Sets the zoom level of the video.
 
 > How it works:
 >
-> 1. If the camera supports zooming and the zoom factor is within its supported range, zooming is done directly by the camera.
+> 1. If the camera supports zooming and the zoom level is within its supported range, zooming is done directly by the camera. 
 > 2. If the camera does not support zooming, WebGL is used instead.
-> 3. If the camera supports zooming but the zoom factor is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest. (In this case, you may see a brief video flicker between the two zooming processes).
+> 3. If the camera supports zooming but the zoom level is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest. (In this case, you may see a brief video flicker between the two zooming processes).
 
 ```typescript
-setZoom(settings:{factor: number}): Promise<void>;
+setZoom(zoomValue: number): Promise<void>;
 ```
 
 **Parameters**
 
-`settings` : specifies how to zoom the video. As of version 3.2, the setting only contains a zoom factor.
+`zoomValue` : specifies the zoom level.
 
 **Return value**
 
@@ -489,67 +468,7 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await enhancer.setZoom({
-    factor: 3
-});
-```
-
-**See also**
-
-* [getCapabilities](#getcapabilities)
-
-## resetZoom
-
-Resets the zoom level of the video.
-
-```typescript
-resetZoom(): Promise<void>;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise that resolves when the operation succeeds.
-
-**Code Snippet**
-
-```js
-await enhancer.resetZoom();
-```
-
-## getFocusSettings
-
-Returns the focus settings.
-
-```typescript
-type FocusArea = {
-    centerPoint: { x: string, y: string };
-    width: string;
-    height: string;
-};
-type FocusSettings = {
-    mode: string;
-    distance: number;
-    area: FocusArea;
-};
-getFocusSettings(): FocusSettings;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-The current focus settings.
-
-**Code Snippet**
-
-```js
-enhancer.getFocusSettings();
+await enhancer.setZoom(400);
 ```
 
 **See also**
@@ -558,27 +477,19 @@ enhancer.getFocusSettings();
 
 ## setFocus
 
-Sets how the camera focuses.
+Sets the focus mode and focus distance of the camera.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
-type FocusArea = {
-    centerPoint: { x: string, y: string };
-    width: string;
-    height: string;
-};
-type FocusSettings = {
-    mode: string;
-    distance: number;
-    area: FocusArea;
-};
-setFocus(settings:FocusSettings) : Promise<void>;
+setFocus(mode: string, distance?: number): Promise<void>;
 ```
 
 **Parameters**
 
-`settings` : specifies the focus settings. Available `mode` options are `continuous` and `manual` . `distance` and `area` are only effective when `mode` is set to `manual` and they should not coexist. The combinations are shown in the code snippet.
+`mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+
+`distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
 
 **Return value**
 
@@ -586,61 +497,20 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-> The "continuous" mode invokes the camera to focus automatically and continuously. Use [getCapabilities()](#getcapabilities) to inspect whether the camera supports "continuous" mode.
-
 ```js
-if (enhancer.getCapabilities().focusMode.find(mode => mode.localeCompare('continuous') == 0)) {
-    await enhancer.setFocus({
-        mode: "continuous"
-    });
-}
-```
-
-> The "manual" mode means manually specifying the focus distance.
-> Use [getCapabilities()](#getcapabilities) to inspect the distance range.
->
-> ```js
-> enhancer.getCapabilities().focusDistance;
-> //{max: 1024, min: 0, step: 10}
-> ```
->
-> NOTE: If the set distance is between two allowed values, it will be rounded to the nearest value.
-
-```js
-await enhancer.setFocus({
-    mode: "manual",
-    distance: 200
-});
-```
-
-> The SDK also has a built-in algorithm that adjusts focus distance based on the blurriness of a particular area. Specify the area with the parameter `area`.
->
-> NOTE:the area is a rectangle defined by its center point and its width and height. All coordinates can be in pixels or percentages, such as "500px" or "50%". Percentages are based on stream dimensions.
-
-```js
-await enhancer.setFocus({
-    mode: "manual",
-    area: {
-        centerPoint: {
-            x: "50%",
-            y: "50%"
-        },
-        width: "50%",
-        height: "50%"
-    }
-});
+await enhancer.setFocus("manual", 400);
 ```
 
 **See also**
 
 * [getCapabilities](#getcapabilities)
 
-## enableTapToFocus
+## getFocus
 
-Enables manual camera focus when clicking/tapping on the video.
+Gets the focus mode and the focus distance.
 
 ```typescript
-enableTapToFocus() : void;
+getFocus(): {mode: string, distance?: number};
 ```
 
 **Parameters**
@@ -649,59 +519,17 @@ None.
 
 **Return value**
 
-None.
+A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
 ```js
-enhancer.enableTapToFocus();
+await enhancer.getFocus();
 ```
 
-## disableTapToFocus
+**See also**
 
-Disables manual camera focus when clicking/tapping on the video.
-
-```typescript
-disableTapToFocus() : void;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-None.
-
-**Code Snippet**
-
-```js
-enhancer.disableTapToFocus();
-```
-
-## isTapToFocusEnabled
-
-Returns whether clicking/tapping on the video invokes the camera to focus.
-
-```typescript
-isTapToFocusEnabled() : boolean;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-`true` means clicking/tapping on the video will invoke the camera to focus. `false` means clicking/tapping on the video does nothing.
-
-**Code Snippet**
-
-```js
-if(enhancer.isTapToFocusEnabled()){
-  console.log("You can tap or click on the video to focus!");
-}
-```
+* [getCapabilities](#getcapabilities)
 
 ## getCapabilities
 

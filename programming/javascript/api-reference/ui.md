@@ -69,10 +69,10 @@ breadcrumbText: UI
 
 | API Name | Description |
 |---|---|
-|[showTip()]()| Shows a Tip message. |
-|[hideTip()]()| Hides the Tip message. |
-|[updateTipMessage()]()| Changes the Tip message. |
-|[onTipSuggested()]()| An event that gets triggered whenever a Tip is suggested. |
+|[showTip()](#showtip)| Shows a Tip message. |
+|[hideTip()](#hidetip)| Hides the Tip message. |
+|[updateTipMessage()](#updatetipmessage)| Changes the Tip message. |
+|[onTipSuggested()](#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
 
 ## getVisibleRegion
 
@@ -84,7 +84,7 @@ getVisibleRegion(inPixels?: boolean): Region;
 
 **Parameters**
 
-`inPixels` : [optional] The coordinate type. If omitted or set to `false` , the returned coordinates are represented by percentage, otherwise, by pixels.
+`inPixels` : [optional] the coordinate type. If omitted or set to `false` , the returned coordinates are represented by percentage, otherwise, by pixels.
 
 **Return value**
 
@@ -262,8 +262,8 @@ setViewDecorator(type: string | string[], area: Area): void;
 
 `area` : specifies where to place the decorator. It accepts 4 values:
 
-* `x`,       `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
-* `width`,       `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
+* `x`,        `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
+* `width`,        `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
 
 **Return value**
 
@@ -826,15 +826,16 @@ let drawingItems = enhancer.getSelectedDrawingItems();
 Shows a Tip message.
 
 ```typescript
-showTip(x: number, y: number, width: number, initialMessage?: string, autoShowSuggestedTip?: boolean) => void;
+showTip(x: number, y: number, width: number, initialMessage?: string, duration: number, autoShowSuggestedTip?: boolean) => void;
 ```
 
 **Parameters**
 
-`x`, `y`: Specifies where to put the Tip message.
-`width`: Specifies the width of the Tip message, wrapping if the message is too long.
-`initialMessage`: The initial message.
-`autoShowSuggestedTip`: Whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
+`x` , `y` : pecifies where to put the Tip message.
+`width` : specifies the width of the Tip message, wrapping if the message is too long.
+`initialMessage` : the initial message.
+`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
+`autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
 
 **Return value**
 
@@ -896,8 +897,8 @@ onTipSuggested: (occasion: string, message: string) => any;
 
 **Arguments**
 
-`occasion`: Specifies the occasion for the Tip.
-`message`: The Tip message for the occasion.
+`occasion` : specifies the occasion for the Tip.
+`message` : the Tip message for the occasion.
 
 **Code Snippet**
 
