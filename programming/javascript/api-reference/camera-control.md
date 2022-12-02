@@ -560,7 +560,10 @@ enhancer.getFocusSettings();
 
 Sets how the camera focuses.
 
-> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+> NOTE:
+>
+> 1. This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+> 2. Typically, `continuous` mode works best. `manual` mode based on a specific area helps the camera focus on that particular area which may seem blurry under `continuous` mode. `manual` mode with specified distances is for those rare cases where the camera distance must be fine-tuned to get the best results.
 
 ```typescript
 type FocusArea = {
@@ -615,7 +618,7 @@ await enhancer.setFocus({
 
 > The SDK also has a built-in algorithm that adjusts focus distance based on the blurriness of a particular area. Specify the area with the parameter `area`.
 >
-> NOTE:the area is a rectangle defined by its center point and its width and height. All coordinates can be in pixels or percentages, such as "500px" or "50%". Percentages are based on stream dimensions.
+> NOTE: the area is a rectangle defined by its center point and its width and height. All coordinates can be in pixels or percentages, such as "500px" or "50%". Percentages are based on stream dimensions.
 
 ```js
 await enhancer.setFocus({
