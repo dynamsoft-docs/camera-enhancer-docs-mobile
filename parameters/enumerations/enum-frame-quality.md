@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Frame Quality
+title: Enumerations Frame Quality - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations Frame Quality page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Frame Quality
 needAutoGenerateSidebar: true

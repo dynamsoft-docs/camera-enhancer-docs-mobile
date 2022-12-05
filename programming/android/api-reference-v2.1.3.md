@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references
+title: Android API references - Dynamsoft Camera Enhancer
 description: This is the documentation - Android API reference page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, API
 needAutoGenerateSidebar: true

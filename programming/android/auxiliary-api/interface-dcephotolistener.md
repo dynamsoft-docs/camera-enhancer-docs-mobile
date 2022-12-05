@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DCEPhotoListener - Dynamsoft Camera Enhancer
+title: Android DCEPhotoListener - Dynamsoft Camera Enhancer
 description: This is the documentation - DCEPhotoListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, DCEPhotoListener
 needAutoGenerateSidebar: true

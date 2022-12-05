@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android HardwareUtil Class
+title: Android HardwareUtil Class - Dynamsoft Camera Enhancer
 description: This is the documentation - Android HardwareUtil Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, HardwareUtil
 needAutoGenerateSidebar: true

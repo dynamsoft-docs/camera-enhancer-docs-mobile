@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android Release Note
+title: Android Release Note - Dynamsoft Camera Enhancer
 description: This is the documentation - Android Release Note page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android Release Note
 needAutoGenerateSidebar: true

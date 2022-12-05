@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Introduction
+title: Introduction - Dynamsoft Camera Enhancer
 description: This is the documentation - introduction page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, introduction
 needAutoGenerateSidebar: true

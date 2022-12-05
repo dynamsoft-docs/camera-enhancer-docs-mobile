@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface Area
+title: Interface Area - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the Area Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: Area, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

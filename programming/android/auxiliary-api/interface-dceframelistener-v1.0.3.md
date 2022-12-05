@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - CameraListener
+title: Android CameraListener - Dynamsoft Camera Enhancer
 description: This is the documentation - CameraListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, CameraListener
 needAutoGenerateSidebar: true

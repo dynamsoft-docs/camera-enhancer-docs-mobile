@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Camera State
+title: Enumerations Camera State - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations Camera State page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Camera State
 needAutoGenerateSidebar: true

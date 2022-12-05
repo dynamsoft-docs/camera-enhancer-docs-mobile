@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - Initialization Methods
+title: Initialization Methods - Dynamsoft Camera Enhancer Android API references
 description: This is the documentation - Android API references - Initialization Methods page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android API references, Initialization Methods
 needAutoGenerateSidebar: true

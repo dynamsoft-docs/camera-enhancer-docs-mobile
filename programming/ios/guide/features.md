@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enable Features on iOS
+title: Enable Features on iOS - Dynamsoft Camera Enhancer
 description: This is the documentation - Enable Dynamsoft Camera Enhancer Features on iOS.
 keywords:  Camera Enhancer, Enable Features on iOS
 needAutoGenerateSidebar: true

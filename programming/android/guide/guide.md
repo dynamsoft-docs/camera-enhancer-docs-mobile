@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Android
+title: Guide on Android - Dynamsoft Camera Enhancer
 description: This is the documentation - Guide on Android page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Android
 needAutoGenerateSidebar: true

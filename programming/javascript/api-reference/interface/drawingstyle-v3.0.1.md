@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface DrawingStyle
+title: Interface DrawingStyle - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the DrawingStyle Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: DrawingStyle, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

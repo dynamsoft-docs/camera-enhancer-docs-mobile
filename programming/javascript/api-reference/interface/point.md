@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface Point
+title: Interface Point - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the Point Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: Point, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

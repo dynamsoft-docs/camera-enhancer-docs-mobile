@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Resolution
+title: Enumerations Resolution - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations Resolution page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Resolution
 needAutoGenerateSidebar: true

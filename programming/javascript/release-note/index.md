@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - JavaScript Release Notes
+title: JavaScript Release Notes - Dynamsoft Camera Enhancer
 description: This is the Release Notes of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords:  camera enhancer, release notes, javascript
 needAutoGenerateSidebar: true

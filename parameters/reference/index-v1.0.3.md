@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Parameter reference
+title: Parameter reference - Dynamsoft Camera Enhancer
 description: This is the documentation - Parameter reference page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Parameters reference
 needAutoGenerateSidebar: true

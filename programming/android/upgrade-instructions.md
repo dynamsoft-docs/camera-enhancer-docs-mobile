@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Upgrade Instructions for Android
+title: Android Upgrade Instructions - Dynamsoft Camera Enhancer
 description: This is the upgrade instructions for Dynamsoft Camera Enhancer Android edition.
 keywords:  Camera Enhancer, upgrade
 needAutoGenerateSidebar: true

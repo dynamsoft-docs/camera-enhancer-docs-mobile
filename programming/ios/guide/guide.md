@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Objective-C & Swift
+title: Guide on iOS - Dynamsoft Camera Enhancer
 description: This is the documentation - Guide on Objective-C & Swift page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: iOS Guide
 ---
 
-# User Guide on Objective-C & Swift
+# User Guide on iOS
 
 The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from your iOS applications to stream live video and acquire realtime frames. 
 
