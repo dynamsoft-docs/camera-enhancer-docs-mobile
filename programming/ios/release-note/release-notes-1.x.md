@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Release Note V1.X
+title: iOS Release Note V1.X - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS Release Note page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Release Note
 needAutoGenerateSidebar: true

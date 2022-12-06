@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Protocol DCELicenseVerificationListener
+title: iOS Protocol DCELicenseVerificationListener - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS Protocol DCELicenseVerificationListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Protocol DCELicenseVerificationListener
 needAutoGenerateSidebar: true

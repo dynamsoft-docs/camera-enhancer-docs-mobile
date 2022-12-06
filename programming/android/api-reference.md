@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references
+title: Android API references - Dynamsoft Camera Enhancer
 description: This is the documentation - Android API reference page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, API
 needAutoGenerateSidebar: true
@@ -49,6 +49,7 @@ noTitleIndex: true
 | [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
 | [`setScanRegionVisible`]({{site.android-api}}camera-enhancer.html#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`getScanRegionVisible`]({{site.android-api}}camera-enhancer.html#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
+| [`setCameraStateListener`]({{site.android-api}}camera-enhancer.html#setcamerastatelistener ) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
 | [`setFrameRate`]({{site.android-api}}camera-enhancer.html#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ### Frame Acquiring Methods

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS API references
+title: iOS API references - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS API references page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Regular Camera Methods
+title: Regular Camera Methods - Dynamsoft Camera Enhancer - Objective-C & Swift API references
 description: This is the documentation - Objective-C & Swift API references - Regular Camera Methods page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Objective-C & Swift API references, Regular Camera Methods
 needAutoGenerateSidebar: true

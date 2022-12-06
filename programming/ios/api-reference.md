@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS API references
+title: iOS API references - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS API references page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
@@ -34,8 +34,6 @@ breadcrumbText: iOS API references
 | [`getCameraState`]({{site.ios-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`]({{site.ios-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
 | [`close`]({{site.ios-api}}camera-enhancer.html#close) | Turn off the current selected camera. |
-| [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | Pause the current selected  camera. |
-| [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | Resume the current selected camera. |
 | [`turnOnTorch`]({{site.ios-api}}camera-enhancer.html#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`]({{site.ios-api}}camera-enhancer.html#turnofftorch) | Turn off the torch. |
 | [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
@@ -49,9 +47,11 @@ breadcrumbText: iOS API references
 | [`setFocus(subsequentFocusMode)`]({{site.ios-api}}camera-enhancer.html#setfocussubsequentFocusMode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
 | [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
-| [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | **Deprecated, will be removed in v3.0**. Set whether to display the **scanRegion** on the UI. |
+| [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`setCameraStateListener`]({{site.ios-api}}camera-enhancer.md#setcamerastatelistener) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
 | [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
+| [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | **Deprecated, will be removed in v3.0**. Pause the current selected  camera. |
+| [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | **Deprecated, will be removed in v3.0**. Resume the current selected camera. |
 
 ### Frame Acquiring Methods
 

@@ -23,8 +23,12 @@ breadcrumbText: iOS DCECameraView Class
 | [`cameraWithFrame`](#camerawithframe) | Init the `DCECameraView` with a static method. |
 | [`overlayVisible`](#overlayvisible) | The property stores the BOOL value that controls the visibility of the overlays. |
 | [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill in colour of the overlay(s). |
-| [`viewfinderVisible`](#setoverlaycolour) | The property stores the BOOL value that controls the visibility of the viewfinder. |
-| [`setViewfinder`](#setoverlaycolour) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
+| [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
+| [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
+| [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
+| [`torchButtonVisible`](#torchbuttonvisible) | The property controls the visibility of the torch Button. |
+
+&nbsp;
 
 ## initWithFrame
 
@@ -49,6 +53,8 @@ _dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds]
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
+&nbsp;
+
 ## cameraWithFrame
 
 Statically init the DCECameraView.
@@ -72,12 +78,14 @@ _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
 let dceView = DCECameraView.init(frame self.view.bounds)
 ```
 
+&nbsp;
+
 ## overlayVisible
 
 The property stores the BOOL value that controls the visibility of the overlays.
 
 ```objc
-BOOL overlayVisible
+@property (assign, nonatomic) BOOL overlayVisible;
 ```
 
 **Remarks**
@@ -98,6 +106,8 @@ If the property value is `true`, the `cameraView` will try to draw and display o
 ```swift
 dceView.overlayVisible = true
 ```
+
+&nbsp;
 
 ## setOverlayColour
 
@@ -120,28 +130,34 @@ Set the stroke and fill in colour of the overlay(s).
 >
 >1. 
 ```objc
-UIColor* strokeColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
-UIColor* fillColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
+// RGB 0 ~ 255, alpha 0 ~ 1
+UIColor* strokeColor = [UIColor colorWithRed:0 green:245 blue:255 alpha:0.5];
+UIColor* fillColor = [UIColor colorWithRed:0 green:245 blue:255 alpha:0.5];
 [_dceView setOverlayColour:strokeColor fill:fillColor];
 ```
 2. 
 ```swift
-let strokeColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
-let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
-_dceView = setOverlayColour(strokeColour, fill: fillcolour)
+// RGB 0 ~ 255, alpha 0 ~ 1
+let strokeColour = UIColor(red: 0, green: 245, blue: 255, alpha: 0.5)
+let fillColour = UIColor(red: 0, green: 245, blue: 255, alpha: 0.5)
+_dceView.setOverlayColour(strokeColour, fill: fillcolour)
 ```
+
+&nbsp;
 
 ## viewfinderVisible
 
 The property stores the BOOL value that controls the visibility of the viewfinder.
 
 ```objc
-BOOL viewfinderVisible
+@property (assign, nonatomic) BOOL viewfinderVisible;
 ```
 
 **Remarks**
 
 If the property value is `true`, the `cameraView` will try to create and display a viewfinder. Otherwise, the `cameraView` will not create the viewfinder.
+
+&nbsp;
 
 ## setViewfinder
 
@@ -170,9 +186,59 @@ Set the attribute of the viewfinder. Currently only available for position and s
 ```
 2. 
 ```swift
-_dceView = setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
+_dceView.setViewfinder(0.1, top: 0.3, right: 0.9, bottom: 0.7)
 ```
 
 **Remarks**
 
 The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
+
+&nbsp;
+
+## setTorchButton
+
+Set the position, size and image for the torch button.
+
+```objc
+- (void)setTorchButton:(CGRect)torchButton torchOnImage:(UIImage*)torchOnImage torchOffImage:(UIImage*)torchOffImage;
+```
+
+**Parameters**
+
+`frame`: The frame of torch button. It includes the width, height and top-left corner coordinate of the torch button. You can input a nil value to apply no changes on the frame of button.  
+`torchOnImage`: Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
+`torchOffImage`: Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+CGRect rect = {0, 0, 30, 30};
+[_dceView setTorchButton:(rect) torchOnImage: image torchOffImage: image];
+```
+2. 
+```swift
+_dceView.setTorchButton(CGRect.init(x: 0, y: 0, width: 500, height: 500), torchOnImage: image, torchOffImage:image)
+```
+
+**Remarks**
+
+Method `- (void)setTorchButton:(CGPoint)torchButtonPosition` is deprecated. Please use the new `setTorchButton` method.
+
+&nbsp;
+
+## torchButtonVisible
+
+`torchButtonVisible` is a property that controls the visibility of the `torchButton`. The torch button icon is preset in the SDK. If the `torchButtonPosition` has never been configured, the `torchButton` will be displayed on the default position. Currently, the icon and the size of the button are not available for setting.
+
+```objc
+@property (assign, nonatomic) BOOL torchVisible;
+```
+
+**Parameters**
+
+When the property value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.

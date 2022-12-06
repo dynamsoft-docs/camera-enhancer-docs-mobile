@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Protocol DCECameraStateListener
+title: iOS Protocol DCECameraStateListener - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS Protocol DCECameraStateListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Protocol DCECameraStateListener
 needAutoGenerateSidebar: true

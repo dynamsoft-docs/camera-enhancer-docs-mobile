@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Enhancer Features
+title: Enumerations Enhancer Features - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations Enhancer Features page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Enhancer Features
 needAutoGenerateSidebar: true

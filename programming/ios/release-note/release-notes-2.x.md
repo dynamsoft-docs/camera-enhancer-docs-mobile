@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS 2.x Release Notes 
+title: iOS 2.x Release Notes  - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS 2.x Release Notes page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS 2.x Release Notes
 needAutoGenerateSidebar: true
@@ -9,6 +9,25 @@ breadcrumbText: iOS 2.x Release Notes
 ---
 
 # Release Notes - iOS 2.x
+
+## 2.3.10 (12/13/2022)
+
+### New
+
+- Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.mobile-enum }}enum-focus-mode.html?lang=objc,swift) is added to specify the focus mode.
+- Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.md#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
+- Added a protocol [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive callback when camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
+- Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.md#getvisibleregionofvideo) in `DCECameraView` class
+
+### Fix
+
+- Fixed a bug that might caused thread blocking when using an offline license.
+
+### Deprecated
+
+- Deprecated method `pause` and `resume` in `CameraEnhancer` class.
+
+### New
 
 ## 2.3.5 (11/15/2022)
 

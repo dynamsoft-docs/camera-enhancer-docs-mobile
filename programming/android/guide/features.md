@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enable Features on Android
+title: Enable Features on Android - Dynamsoft Camera Enhancer
 description: This is the documentation - Enable Dynamsoft Camera Enhancer Features on Android.
 keywords:  Camera Enhancer, Enable Features on Android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Advanced Setting Parameters
+title: Advanced Setting Parameters - Dynamsoft Camera Enhancer
 description: This is the documentation - Advanced Setting Parameters Page of Dynamsoft Camera Enhancer.
 keywords:  Advanced Setting Parameters
 needAutoGenerateSidebar: true

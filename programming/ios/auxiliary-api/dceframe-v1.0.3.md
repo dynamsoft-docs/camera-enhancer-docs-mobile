@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS FramePackage Class
+title: iOS FramePackage Class - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS FramePackage Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS FramePackage Class
 needAutoGenerateSidebar: true

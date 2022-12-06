@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - CameraEnhancer Class
+title: CameraEnhancer Class - Dynamsoft Camera Enhancer Android API references
 description: This is the documentation - Android API references - CameraEnhancer Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android API references, CameraEnhancer Class
 needAutoGenerateSidebar: true
@@ -63,9 +63,9 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
 | [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
-| [`setCameraStateListener `](#setcamerastatelistener ) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
-| [`setScanRegionVisible`](#setscanregionvisible) | **Deprecated, will be removed in v3.0**. Set whether to display the **scanRegion** on the UI. |
-| [`getScanRegionVisible`](#getscanregionvisible) |**Deprecated, will be removed in v3.0**.  Get whether the **scanRegion** will be displayed on the UI. |
+| [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
+| [`setCameraStateListener`](#setcamerastatelistener ) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
 | [`setFrameRate`](#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ## Frame Acquiring Methods Summary

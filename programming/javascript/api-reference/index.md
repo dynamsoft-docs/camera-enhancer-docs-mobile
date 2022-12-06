@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API Reference
+title: JavaScript API Reference - Dynamsoft Camera Enhancer
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK API Reference.
 keywords: camera enhancer, api reference, javascript, js
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DCEFeedback Class - Dynamsoft Camera Enhancer
+title: Android DCEFeedback Class - Dynamsoft Camera Enhancer
 description: This is the documentation - Android DCEFeedback Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DCEFeedback
 needAutoGenerateSidebar: true

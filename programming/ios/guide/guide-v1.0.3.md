@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Objective-C & Swift
+title: Guide on Objective-C & Swift - Dynamsoft Camera Enhancer
 description: This is the documentation - Guide on Objective-C & Swift page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS Protocol CameraTorchListener
+title: iOS Protocol CameraTorchListener - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS Protocol CameraTorchListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Protocol CameraTorchListener
 needAutoGenerateSidebar: true

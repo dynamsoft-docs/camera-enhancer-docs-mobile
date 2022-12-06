@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer Android API Reference - RegionDefinition Class
+title: Android RegionDefinition Class - Dynamsoft Camera Enhancer Android API Reference
 description: This page shows the RegionDefinition Class of Dynamsoft Camera Enhancer for Android SDK.
 keywords: RegionDefinition, class, api reference, android
 needAutoGenerateSidebar: true

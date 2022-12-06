@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations HardwareUtil
+title: Enumerations HardwareUtil - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations HardwareUtil page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations HardwareUtil
 needAutoGenerateSidebar: true

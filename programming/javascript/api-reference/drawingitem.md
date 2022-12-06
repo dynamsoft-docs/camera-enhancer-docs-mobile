@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - DrawingItem
+title: DrawingItem - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the DrawingItem definitions of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: camera enhancer, drawingitem, javascript, js
 needAutoGenerateSidebar: true

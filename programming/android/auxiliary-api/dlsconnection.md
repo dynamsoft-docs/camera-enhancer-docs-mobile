@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android DMDLSConnectionParameters Class
+title: Android DMDLSConnectionParameters Class - Dynamsoft Camera Enhancer
 description: This is the documentation - Android DMDLSConnectionParameters Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android DMDLSConnectionParameters Class
 needAutoGenerateSidebar: true

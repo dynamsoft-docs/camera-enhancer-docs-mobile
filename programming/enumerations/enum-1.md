@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations for version 1.x
+title: Enumerations for version 1.x - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations for version 1.x of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations
 needAutoGenerateSidebar: true
