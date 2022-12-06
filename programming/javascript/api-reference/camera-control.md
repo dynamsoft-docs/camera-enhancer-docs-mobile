@@ -566,17 +566,15 @@ Sets how the camera focuses.
 > 2. Typically, `continuous` mode works best. `manual` mode based on a specific area helps the camera focus on that particular area which may seem blurry under `continuous` mode. `manual` mode with specified distances is for those rare cases where the camera distance must be fine-tuned to get the best results.
 
 ```typescript
-type FocusArea = {
-    centerPoint: { x: string, y: string };
-    width: string;
-    height: string;
-};
-type FocusSettings = {
-    mode: string;
-    distance: number;
-    area: FocusArea;
-};
-setFocus(settings:FocusSettings) : Promise<void>;
+setFocus(settings: { mode: "continuous" } | { mode: 'manual', distance: number } | {
+    mode: 'manual', area: {
+        centerPoint: { x: string, y: string };
+        // If not specified, the width is 1/6 of the video width or height, whichever is narrower
+        width?: string;
+        // If not specified, the height is 1/6 of the video width or height, whichever is narrower
+        height?: string;
+    }
+}) => Promise<void>;
 ```
 
 **Parameters**
@@ -602,10 +600,13 @@ if (enhancer.getCapabilities().focusMode.find(mode => mode.localeCompare('contin
 > The "manual" mode means manually specifying the focus distance.
 > Use [getCapabilities()](#getcapabilities) to inspect the distance range.
 >
-> ```js
-> enhancer.getCapabilities().focusDistance;
-> //{max: 1024, min: 0, step: 10}
-> ```
+>  
+
+```js
+> enhancer.getCapabilities().focusDistance; > //{max: 1024, min: 0, step: 10}
+>
+```
+
 >
 > NOTE: If the set distance is between two allowed values, it will be rounded to the nearest value.
 
@@ -616,7 +617,7 @@ await enhancer.setFocus({
 });
 ```
 
-> The SDK also has a built-in algorithm that adjusts focus distance based on the blurriness of a particular area. Specify the area with the parameter `area`.
+> The SDK also has a built-in algorithm that adjusts focus distance based on the blurriness of a particular area. Specify the area with the parameter `area` .
 >
 > NOTE: the area is a rectangle defined by its center point and its width and height. All coordinates can be in pixels or percentages, such as "500px" or "50%". Percentages are based on stream dimensions.
 
@@ -701,8 +702,8 @@ None.
 **Code Snippet**
 
 ```js
-if(enhancer.isTapToFocusEnabled()){
-  console.log("You can tap or click on the video to focus!");
+if (enhancer.isTapToFocusEnabled()) {
+    console.log("You can tap or click on the video to focus!");
 }
 ```
 
