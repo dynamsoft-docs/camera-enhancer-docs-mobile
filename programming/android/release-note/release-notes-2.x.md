@@ -25,7 +25,7 @@ breadcrumbText: Android 2.x Release Notes
 
 ### Fixed
 
-- Fixed a bug that might be caused by thread blocking when using an offline license.
+- Fixed a bug that might cause thread blocking when using an offline license.
 - Fixed a bug that UI might be blocked when the screen is locked and reopened.
 - Fixed a bug that might cause memory churn when the instance/thread was created frequently.
 
