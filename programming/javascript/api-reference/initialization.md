@@ -165,11 +165,15 @@ A callback which is triggered when the running environment is not ideal. In this
 
 The following two warnings are returned respectively:
 
-```javascript
+```json
 {
     id: 1,
     message: "Not using HTTP protocol, the SDK may not work correctly."
-} {
+}
+```
+
+```json
+{
     id: 2,
     message: "Not connected via SSL (HTTPS), the SDK may not work correctly."
 }
@@ -210,37 +214,49 @@ interface CameraTestResponse {
 
 The possible responses are
 
-```javascript
+```json
 {
     ok: false,
     message: "Insecure context."
 }
+```
 
+```json
 {
     ok: false,
     message: "No camera detected."
 }
+```
 
+```json
 {
     ok: false,
     message: "No permission to access camera."
 }
+```
 
+```json
 {
     ok: false,
     message: "Some problem occurred which prevented the device from being used."
 }
+```
 
+```json
 {
     ok: false,
     message: "A hardware error occurred."
 }
+```
 
+```json
 {
     ok: false,
     message: "User media support is disabled."
 }
+```
 
+```json
 {
     ok: true,
     message: " Successfully accessed the camera."
