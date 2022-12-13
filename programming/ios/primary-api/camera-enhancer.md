@@ -926,8 +926,6 @@ class ViewController: UIViewController,DCECameraStateListener{
 
 ### scanRegionVisible
 
-> Deprecated. Will be removed in v3.0.
-
 Set whether to display the **scanRegion** on the UI. The default value of the property is false. When the property value is set to true, the scan region will be drawn on the UI. The **scanRegion** will not be displayed if its value is null
 
 ```objc
