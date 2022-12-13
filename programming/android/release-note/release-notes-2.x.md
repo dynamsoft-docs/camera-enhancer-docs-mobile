@@ -16,12 +16,18 @@ breadcrumbText: Android 2.x Release Notes
 
 - Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.mobile-enum }}enum-focus-mode.html?lang=android) is added to specify the focus mode.
 - Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.md#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
-- Added a interface [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive callback when camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
+- Added an interface [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
 - Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.md#getvisibleregionofvideo) in `DCECameraView` class
 
 ### Deprecated
 
 - Deprecated method `pause` and `resume` in `CameraEnhancer` class.
+
+### Fixed
+
+- Fixed a bug that might cause thread blocking when using an offline license.
+- Fixed a bug that UI might be blocked when the screen is locked and reopened.
+- Fixed a bug that might cause memory churn when the instance/thread was created frequently.
 
 ## 2.3.5 (11/04/2022)
 
