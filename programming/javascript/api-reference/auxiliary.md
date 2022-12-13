@@ -175,7 +175,7 @@ readonly disposed: boolean;
 
 **Code Snippet**
 
-```json
+```javascript
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 //...
 let flag = enhancer.disposed;
