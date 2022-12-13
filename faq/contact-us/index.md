@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Contact Us
+title: Contact Us - Dynamsoft Camera Enhancer
 description: This is the documentation - Contact Us page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Contact Us
 needAutoGenerateSidebar: true

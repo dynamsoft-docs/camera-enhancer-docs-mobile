@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS 2.x Release Notes 
+title: iOS 2.x Release Notes  - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS 2.x Release Notes page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS 2.x Release Notes
 needAutoGenerateSidebar: true
@@ -9,6 +9,39 @@ breadcrumbText: iOS 2.x Release Notes
 ---
 
 # Release Notes - iOS 2.x
+
+## 2.3.10 (12/13/2022)
+
+### New
+
+- Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.mobile-enum }}enum-focus-mode.html?lang=objc,swift) is added to specify the focus mode.
+- Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.md#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
+- Added a protocol [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
+- Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.md#getvisibleregionofvideo) in `DCECameraView` class
+
+### Fix
+
+- Fixed a bug that might be caused by thread blocking when using an offline license.
+
+### Deprecated
+
+- Deprecated method `pause` and `resume` in `CameraEnhancer` class.
+
+### New
+
+## 2.3.5 (11/15/2022)
+
+### Fixed
+
+- Fixed a bug that `torchButton` was not clickable when it appeared outside `scanRegion`.
+
+## 2.3.4 (11/04/2022)
+
+### Fixed
+
+- Fixed a scan region deviation bug.
+- Fixed an overlay offset bug when `DCECamearView` is smaller than the screen size.
+- Fixed a bug that might cause high CPU occupancy when the camera is opened.
 
 ## 2.3.3 (09/22/2022)
 
@@ -26,7 +59,7 @@ breadcrumbText: iOS 2.x Release Notes
 
 - Added a property [`cameraView`](../primary-api/camera-enhancer.md#cameraview) for users to bind a `DCECameraView` object to the `DynamsoftCameraEnhancer` object.
 - Added methods [`selectCameraWithPosition`](../primary-api/camera-enhancer.md#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
-- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
+- Added enumeration [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift).
 
 ### Changed
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Acquisition
+title: Acquisition - Dynamsoft Camera Enhancer JavaScript API
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Acquisition.
 keywords: camera enhancer, acquisition, javascript, js
 needAutoGenerateSidebar: true
@@ -24,6 +24,7 @@ breadcrumbText: Acquisition
 | [getScanRegion()](#getscanregion) | Returns the scan region. |
 | [getFrame()](#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
 | [getFrameFromBuffer()](#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the specified buffered frame. |
+| [clearFrameBuffer()](#clearframebuffer) | Removes all buffered frames. |
 | [startFetchingLoop()](#startfetchingloop) | Starts a fetching loop that continuously put frames in a buffer. |
 | [stopFetchingLoop()](#stopfetchingloop) | Stops the fetching loop. |
 | [isFetchingLoopStarted()](#isfetchingloopstarted) | Returns the state of the fetching loop. |
@@ -51,13 +52,13 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let region = {
-	regionLeft: 25,
-	regionTop: 25, 
-	regionRight: 75, 
-	regionBottom: 75, 
-	regionMeasuredByPercentage: true
+    regionLeft: 25,
+    regionTop: 25, 
+    regionRight: 75, 
+    regionBottom: 75, 
+    regionMeasuredByPercentage: true
 };
 enhancer.setScanRegion(region); 
 ```
@@ -84,7 +85,7 @@ A `Region` object which specifies the scan region.
 
 **Code Snippet**
 
-```js
+```javascript
 let region = enhancer.getScanRegion();
 ```
 
@@ -110,7 +111,7 @@ A `DCEFrame` object which contains the image data of the frame and related infor
 
 **Code Snippet**
 
-```js
+```javascript
 let frameData = enhancer.getFrame();
 document.body.appendChild(frameData.toCanvas());
 ```
@@ -137,7 +138,7 @@ A `DCEFrame` object which contains the image data of the frame and related infor
 
 **Code Snippet**
 
-```js
+```javascript
 let frameData = enhancer.getFrameFromBuffer();
 document.body.appendChild(frameData.toCanvas());
 ```
@@ -146,6 +147,28 @@ document.body.appendChild(frameData.toCanvas());
 
 * [DCEFrame](interface/dceframe.md)
 * [startFetchingLoop](#startfetchingloop)
+
+## clearFrameBuffer
+
+Removes all buffered frames.
+
+```typescript
+clearFrameBuffer(): void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+enhancer.clearFrameBuffer();
+```
 
 ## startFetchingLoop
 
@@ -285,7 +308,7 @@ singleFrameMode: boolean;
 
 **Code Snippet**
 
-```js
+```javascript
 (async () => {
     let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     enhancer.on('singleFrameAcquired', frameData => {

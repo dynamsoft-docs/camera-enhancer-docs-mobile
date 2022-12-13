@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API Reference
+title: JavaScript API Reference - Dynamsoft Camera Enhancer
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK API Reference.
 keywords: camera enhancer, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -22,6 +22,7 @@ breadcrumbText: API Reference
 | [getUIElement()](initialization.md#getuielement) | Returns the HTML element that is used by the `CameraEnhancer` instance. |
 | [setUIElement()](initialization.md#setuielement) | Specifies an HTML element for the `CameraEnhancer` instance to use as its UI element. |
 | [onWarning](initialization.md#onwarning) | A callback which is triggered when the running environment is not ideal. |
+| [testCameraAccess](initialization.md#testcameraaccess) | Test whether there is an available camera. |
 
 ### Camera Control
 
@@ -50,10 +51,14 @@ breadcrumbText: API Reference
 | [getFrameRate()](camera-control.md#getframerate) | Returns the real-time frame rate. |
 | [turnOnTorch()](camera-control.md#turnontorch) | Turns on the torch/flashlight if the current camera supports it. |
 | [turnOffTorch()](camera-control.md#turnofftorch) | Turns off the torch/flashlight. |
-| [getZoom()](camera-control.md#getzoom) | Returns the zoom level of the video. |
-| [setZoom()](camera-control.md#setzoom) | Sets the zoom level of the video. |
-| [setFocus()](camera-control.md#setfocus) | Sets the focus mode and focus distance of the camera. |
-| [getFocus()](camera-control.md#getfocus) | Gets the focus mode and focus distance of the camera. |
+| [getZoomSettings()](camera-control.md#getzoomsettings) | Returns the zoom settings. |
+| [setZoom()](camera-control.md#setzoom) | Zooms the video stream. |
+| [resetZoom()](camera-control.md#resetzoom) | Resets the zoom level of the video. |
+| [getFocusSettings()](camera-control.md#getfocussettings) | Returns the focus settings. |
+| [setFocus()](camera-control.md#setfocus) | Sets how the camera focuses. |
+| [enableTapToFocus()](camera-control.md#enabletaptofocus) | Enables manual camera focus when clicking/tapping on the video. |
+| [disableTapToFocus()](camera-control.md#disabletaptofocus) | Disables manual camera focus when clicking/tapping on the video. |
+| [isTapToFocusEnabled()](camera-control.md#istaptofocusenabled) | Returns whether clicking/tapping on the video invokes the camera to focus. |
 | [getCapabilities()](camera-control.md#getcapabilities) | Inspects and returns the capabilities of the selected camera. |
 | [getCameraSettings()](camera-control.md#getcamerasettings) | Returns the current values for each constrainable property of the selected camera. |
 | [getColorTemperature()](camera-control.md#getcolortemperature) | Returns the color temperature of the selected camera. |
@@ -75,6 +80,7 @@ breadcrumbText: API Reference
 | [getScanRegion()](acquisition.md#getscanregion) | Returns the scan region. |
 | [getFrame()](acquisition.md#getframe) | Returns a `DCEFrame` object which contains the image data of the latest frame from the video input. |
 | [getFrameFromBuffer()](acquisition.md#getframefrombuffer) | Returns a `DCEFrame` object which contains the image data of the specified buffered frame. |
+| [clearFrameBuffer()](acquisition.md#clearframebuffer) | Removes all buffered frames. |
 | [startFetchingLoop()](acquisition.md#startfetchingloop) | Starts a fetching loop that continuously put frames in a buffer. |
 | [stopFetchingLoop()](acquisition.md#stopfetchingloop) | Stops the fetching loop. |
 | [isFetchingLoopStarted()](acquisition.md#isfetchingloopstarted) | Returns the state of the fetching loop. |
@@ -103,6 +109,7 @@ breadcrumbText: API Reference
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 | [createDrawingLayer()](ui.md#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
+| [deleteDrawingLayer()](ui.md#deletedrawinglayer) | Deletes a DrawingLayer object specified by its ID. |
 | [getDrawingLayer()](ui.md#getdrawinglayer) | Gets the DrawingLayer specified by its ID. |
 | [getDrawingLayers()](ui.md#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
 | [clearDrawingLayers()](ui.md#cleardrawinglayers) | Removes all DrawingLayers. |
@@ -116,6 +123,10 @@ breadcrumbText: API Reference
 | [hideOriginalImage()](ui.md#hideoriginalimage) | Hides the original image. |
 | [deleteOriginalImage()](ui.md#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
 | [getSelectedDrawingItems()](ui.md#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
+| [showTip()](ui.md#showtip)| Shows a Tip message. |
+| [hideTip()](ui.md#hidetip)| Hides the Tip message. |
+| [updateTipMessage()](ui.md#updatetipmessage)| Changes the Tip message. |
+| [onTipSuggested()](ui.md#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
 
 ### Auxiliary APIs
 

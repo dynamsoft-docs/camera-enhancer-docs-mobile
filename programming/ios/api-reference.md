@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS API references
+title: iOS API references - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS API references page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
@@ -34,10 +34,23 @@ breadcrumbText: iOS API references
 | [`getCameraState`]({{site.ios-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`]({{site.ios-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
 | [`close`]({{site.ios-api}}camera-enhancer.html#close) | Turn off the current selected camera. |
-| [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | Pause the current selected  camera. |
-| [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | Resume the current selected camera. |
 | [`turnOnTorch`]({{site.ios-api}}camera-enhancer.html#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`]({{site.ios-api}}camera-enhancer.html#turnofftorch) | Turn off the torch. |
+| [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
+| [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
+| [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
+| [`autoZoomRange`](#autozoomrange) | The property for getting/setting the range of auto zoom. |
+| [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setFocus(subsequentFocusMode)`]({{site.ios-api}}camera-enhancer.html#setfocussubsequentFocusMode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
+| [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
+| [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`setCameraStateListener`]({{site.ios-api}}camera-enhancer.md#setcamerastatelistener) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
+| [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
+| [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | **Deprecated, will be removed in v3.0**. Pause the current selected  camera. |
+| [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | **Deprecated, will be removed in v3.0**. Resume the current selected camera. |
 
 ### Frame Acquiring Methods
 
@@ -52,45 +65,36 @@ breadcrumbText: iOS API references
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
+| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
 | [`isFeatureEnabled`]({{site.ios-api}}camera-enhancer.html#isfeatureenabled) | Check whether the input features are enabled. |
 
 ### Advanced Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
-| [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
-| [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
-| [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
-| [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ## Auxiliary Classes
 
-- [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
 - [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
 - [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html)
+- [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
 - [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html)
 
-## Interfaces
+## Protocol
 
+- [`DCECameraStateListener`]({{ site.ios-api-auxiliary }}protocol-camerastatelistener.html)
 - [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
-- [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)
 - [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
+- [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)
 
 ## Enumerations
 
-- [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
-- [`EnumFrameQuality`]({{ site.enumerations }}enum-frame-quality.html)
-- [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
-- [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
-- [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
-- [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html)
+- [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift)
+- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=objc,swift)
+- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=objc,swift)
+- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=objc,swift)
+- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=objc,swift)
+- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=objc,swift)

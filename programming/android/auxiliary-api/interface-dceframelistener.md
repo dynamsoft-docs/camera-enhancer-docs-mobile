@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - DCEFrameListener
+title: Android DCEFrameListener - Dynamsoft Camera Enhancer
 description: This is the documentation - DCEFrameListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, DCEFrameListener
 needAutoGenerateSidebar: true
@@ -37,8 +37,7 @@ void frameOutputCallback(DCEFrame frame, long timeStamp);
 **Code Snippet**
 
 ```java
-DCEFrameListener listener = new DCEFrameListener;
-cameraEnhancer.addListener(listener) {
+cameraEnhancer.addListener(new DCEFrameListener() {
     @Override
     public void frameOutputCallback(DCEFrame frame, long timeStamp) {
         // Add your code

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Customize Camera Settings on Android
+title: Customize Camera Settings on Android - Dynamsoft Camera Enhancer
 description: This is the documentation - Customize Camera Settings on Android.
 keywords:  Camera Enhancer, Customize Camera Settings
 needAutoGenerateSidebar: true

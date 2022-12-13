@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations DMChargeWay
+title: Enumerations DMChargeWay - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations DMChargeWay page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations DMChargeWay
 needAutoGenerateSidebar: true

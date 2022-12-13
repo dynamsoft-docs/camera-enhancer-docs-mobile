@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Release Note
+title: Release Note - Dynamsoft Camera Enhancer
 description: This is the documentation - Release Note page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Release Note
 needAutoGenerateSidebar: true
@@ -37,7 +37,9 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.3.4 | [Android]({{ site.android-release-note }}release-notes-2.x.html#234-09222022) |
+| 2.3.10 | [Android]({{ site.android-release-note }}release-notes-2.x.html#2310-12132022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#2310-12132022) |
+| 2.3.5 | [Android]({{ site.android-release-note }}release-notes-2.x.html#235-11042022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#235-11152022) |
+| 2.3.4 | [Android]({{ site.android-release-note }}release-notes-2.x.html#234-09222022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#234-11042022) |
 | 2.3.3 | [Android]({{ site.android-release-note }}release-notes-2.x.html#233-08182022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#233-09222022) |
 | 2.3.2 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#232-03282022) / [Android]({{ site.android-release-note }}release-notes-2.x.html#232-08022022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#232-08022022) |
 | 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#231-07112022) |

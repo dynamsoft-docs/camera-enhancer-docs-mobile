@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Android
+title: Guide on Android - Dynamsoft Camera Enhancer
 description: This is the documentation - Guide on Android page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Android
 needAutoGenerateSidebar: true
@@ -30,7 +30,7 @@ Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your And
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) SDK from the <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don't have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) SDK from the <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build Your First Application
 
@@ -44,14 +44,14 @@ The following sample will demonstrate how to acquire a frame from video streamin
 
 1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
 
-2. Choose the correct template for your project. In this sample, we’ll use `Empty Activity`.
+2. Choose the correct template for your project. In this sample, we'll use `Empty Activity`.
 
 3. When prompted, choose your app name (`HelloWorld`) and set the Save location, Language, and Minimum SDK (21)
     >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 ### Include the library
 
-There are two ways to include the Dynamsoft Camera Enhancer SDK into your project：
+There are two ways to include the Dynamsoft Camera Enhancer SDK into your project:
 
 #### Local Binary Dependency
 

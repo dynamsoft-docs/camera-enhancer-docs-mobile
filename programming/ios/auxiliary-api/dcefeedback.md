@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DCEFeedback Class - Dynamsoft Camera Enhancer
+title: iOS DCEFeedback Class - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS DCEFeedback Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, DCEFeedback
 needAutoGenerateSidebar: true

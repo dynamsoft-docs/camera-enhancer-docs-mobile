@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface Index
+title: Interface Index - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the Interfaces of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: interfaces, api reference, javascript, js
 needAutoGenerateSidebar: false

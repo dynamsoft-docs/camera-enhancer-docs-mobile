@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - UI APIs
+title: UI APIs - Dynamsoft Camera Enhancer JavaScript API
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK UI.
 keywords: camera enhancer, UI, javascript, js
 needAutoGenerateSidebar: true
@@ -40,6 +40,7 @@ breadcrumbText: UI
 | API Name | Description |
 |---|---|
 | [createDrawingLayer()](#createdrawinglayer) | Creates a DrawingLayer object. |
+| [deleteDrawingLayer()](#deletedrawinglayer) | Deletes a DrawingLayer object specified by its ID. |
 | [getDrawingLayer()](#getdrawinglayer) | Gets the `DrawingLayer` specified by its ID. |
 | [getDrawingLayers()](#getdrawinglayers) | Returns an array of all DrawingLayer objects. |
 | [clearDrawingLayers()](#cleardrawinglayers) | Removes all `DrawingLayer` objects. |
@@ -64,6 +65,15 @@ breadcrumbText: UI
 | [deleteOriginalImage()](#deleteoriginalimage) | Deletes the original image and removes the canvas that shows it. |
 | [getSelectedDrawingItems()](#getselecteddrawingitems) | Returns the selected `DrawingItem` objects. |
 
+**Auxiliary Features**
+
+| API Name | Description |
+|---|---|
+|[showTip()](#showtip)| Shows a Tip message. |
+|[hideTip()](#hidetip)| Hides the Tip message. |
+|[updateTipMessage()](#updatetipmessage)| Changes the Tip message. |
+|[onTipSuggested()](#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
+
 ## getVisibleRegion
 
 Returns a `Region` object which specifies which part of the original video is shown in the video element.
@@ -74,7 +84,7 @@ getVisibleRegion(inPixels?: boolean): Region;
 
 **Parameters**
 
-`inPixels`: [optional] The coordinate type. If omitted or set to `false`, the returned coordinates are represented by percentage, otherwise, by pixels.
+`inPixels` : [optional] the coordinate type. If omitted or set to `false` , the returned coordinates are represented by percentage, otherwise, by pixels.
 
 **Return value**
 
@@ -82,7 +92,7 @@ The visible region represented by a `Region` object.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getVisibleRegion();
 ```
 
@@ -108,7 +118,7 @@ The added `HTMLCanvasElement` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let cvs = enhancer.addScanRegionOverlayCanvas();
 let ctx = cvs.getContext('2d');
 ctx.fillStyle = "white";
@@ -134,7 +144,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let cvs = enhancer.addScanRegionOverlayCanvas();
 //...
 enhancer.removeScanRegionOverlayCanvas(cvs);
@@ -142,7 +152,7 @@ enhancer.removeScanRegionOverlayCanvas(cvs);
 
 ## ifShowScanRegionMask
 
-Returns or sets whether the scan region mask is shown. The default is `true`.
+Returns or sets whether the scan region mask is shown. The default is `true` .
 
 ```typescript
 ifShowScanRegionMask: boolean;
@@ -150,7 +160,7 @@ ifShowScanRegionMask: boolean;
 
 ## ifShowScanRegionLaser
 
-Returns or sets whether the laser indicator is shown in the scan region. The default is `true`.
+Returns or sets whether the laser indicator is shown in the scan region. The default is `true` .
 
 > This API only works when the viewer element contains the elements with the class names `dce-scanarea` and `dce-scanlight` (like the built-in viewer).
 
@@ -172,10 +182,10 @@ setScanRegionMaskStyle(maskStyle: any): void;
 
 > The default value is
 >
-> ```js
-> lineWidth = 2;
-> strokeStyle = "rgb(254,142,20)";
-> fillStyle = "rgba(0,0,0,0.5)";
+> ```javascript
+> lineWidth = 2; 
+> strokeStyle = "rgb(254,142,20)"; 
+> fillStyle = "rgba(0,0,0,0.5)"; 
 > ```
 
 **Return value**
@@ -184,7 +194,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.setScanRegionMaskStyle({
     lineWidth: 5,
     strokeStyle: "white",
@@ -204,14 +214,13 @@ setVideoFit(objectFit: string): void;
 
 `objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed and the default is "contain". Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
 
-
 **Return value**
 
 None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.setVideoFit("cover");
 ```
 
@@ -233,7 +242,7 @@ The value of the `object-fit` CSS property.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getVideoFit();
 ```
 
@@ -251,8 +260,8 @@ setViewDecorator(type: string | string[], area: Area): void;
 
 `area` : specifies where to place the decorator. It accepts 4 values:
 
-* `x`,     `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
-* `width`,     `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
+* `x`,        `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
+* `width`,        `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
 
 **Return value**
 
@@ -260,7 +269,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -306,7 +315,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -337,7 +346,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -368,7 +377,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -399,7 +408,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -424,8 +433,32 @@ The visible layer represented by a `DrawingLayer` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let newDrawingLayer = enhancer.createDrawingLayer();
+```
+
+**See also**
+
+* [DrawingLayer](drawinglayer.md)
+
+## deleteDrawingLayer
+
+Deletes a `DrawingLayer` object specified by its ID.
+
+```typescript
+deleteDrawingLayer(id: number): void;
+```
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+let newDrawingLayer = enhancer.createDrawingLayer();
+// Operate on the layer, when it is no longer needed, delete it.
+enhancer.deleteDrawingLayer(newDrawingLayer.getId());
 ```
 
 **See also**
@@ -434,7 +467,7 @@ let newDrawingLayer = enhancer.createDrawingLayer();
 
 ## getDrawingLayer
 
-Returns an existing `DrawingLayer` specified by its ID. IDs start at 100 for the first custom `DrawingLayer`, 101 for the next, and so on.
+Returns an existing `DrawingLayer` specified by its ID. IDs start at 100 for the first custom `DrawingLayer` , 101 for the next, and so on.
 
 ```typescript
 getDrawingLayer(drawingLayerId: number): DrawingLayer;
@@ -450,7 +483,7 @@ The `DrawingLayer` object specified by its input id.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 ```
 
@@ -468,7 +501,7 @@ You can manipulate these DrawingLayers directly, for example, the following code
 
 > Alternatively, you can directly change the style already in use instead of replacing it with a new one. Learn more at [updateDrawingStyle](ui.md#updatedrawingstyle).
 
-```js
+```javascript
 // Gets the DrawingLayer used by the Dynamsoft Label Recognizer instance to which enhancer is bound.
 let dlrDrawingLayer = enhancer.getDrawingLayer(2);
 // Creates a new style to be used.
@@ -488,7 +521,7 @@ dlrDrawingLayer.setDrawingStyle(newStyleId)
 
 ## getDrawingLayers
 
-Returns all the `DrawingLayer`s.
+Returns all the `DrawingLayer` s.
 
 ```typescript
 getDrawingLayer(): Array<DrawingLayer>;
@@ -504,7 +537,7 @@ The array of all the `DrawingLayer` objects.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayers = enhancer.getDrawingLayers();
 ```
 
@@ -522,7 +555,7 @@ clearDrawingLayers(): void;
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.clearDrawingLayers();
 ```
 
@@ -551,17 +584,17 @@ createDrawingStyle(styleDefinition: DrawingStyle): number;
 
 **Return value**
 
-The id of the created `DrawingStyle`.
+The id of the created `DrawingStyle` .
 
 **Code Snippet**
 
-```js
-let styleID = enhancer.createDrawingStyle({    
+```javascript
+let styleID = enhancer.createDrawingStyle({
     lineWidth: 1.0,
     fillStyle: " rgba(73, 173, 245, 0.8)",
     strokeStyle: " rgba(73, 173, 245, 1)",
     paintMode: "fill",
-    fontSize: 100, 
+    fontSize: 100,
     fontFamily: "sans-serif"
 });
 ```
@@ -582,7 +615,7 @@ getDrawingStyle(styleId: number): DrawingStyle;
 
 **Parameters**
 
-`styleId` : specifies a `DrawingStyle`.
+`styleId` : specifies a `DrawingStyle` .
 
 **Return value**
 
@@ -590,7 +623,7 @@ The `DrawingStyle` specified by the input id.
 
 **Code Snippet**
 
-```js
+```javascript
 // Change `styleId` to one that you know exists at runtime. 
 let drawingStyle = enhancer.getDrawingStyle(100);
 ```
@@ -609,11 +642,11 @@ getDrawingStyles(): Array<DrawingStyle>;
 
 **Return value**
 
-The array of all of the `DrawingStyle` objects of current `CameraEnhancer`.
+The array of all of the `DrawingStyle` objects of current `CameraEnhancer` .
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingStyles = enhancer.getDrawingStyles();
 ```
 
@@ -639,9 +672,9 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void;
 
 **Code Snippet**
 
-```js
+```javascript
 // Change the whole style
-enhancer.updateDrawingStyle(100,  {
+enhancer.updateDrawingStyle(100, {
     fillStyle: "rgba(100, 75, 245, 0.3)",
     fontFamily: "sans-serif",
     fontSize: 25,
@@ -650,7 +683,9 @@ enhancer.updateDrawingStyle(100,  {
     strokeStyle: "rgba(73, 173, 245, 1)"
 });
 // Only change the fontSize
-enhancer.updateDrawingStyle(100, { fontSize: 30 });
+enhancer.updateDrawingStyle(100, {
+    fontSize: 30
+});
 ```
 
 **See also**
@@ -669,8 +704,8 @@ If you are using **Dynamsoft Camera Enhancer** with **Dynamsoft Barcode Reader**
 
 You can update these styles to apply changes to the DrawingLayers used by these products. For example, the following code changes the style for highlighting found barcodes:
 
-```js
-enhancer.updateDrawingStyle(3,  {
+```javascript
+enhancer.updateDrawingStyle(3, {
     fillStyle: "rgba(100, 75, 245, 0.3)",
     lineWidth: 5,
     paintMode: "strokeAndFill",
@@ -688,15 +723,15 @@ setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, 
 
 **Parameters**
 
-`imageData` : specifies the image data in format of `Uint8Array`, `Uint8ClampedArray` or `HTMLCanvasElement`.
+`imageData` : specifies the image data in format of `Uint8Array` , `Uint8ClampedArray` or `HTMLCanvasElement` .
 
-`width`: specifies the width of the image data.
+`width` : specifies the width of the image data.
 
-`height`: specifies the height of the image data.
+`height` : specifies the height of the image data.
 
 **Code Snippet**
 
-```js
+```javascript
 let currentFrame = enhancer.getFrame();
 let cvs = currentFrame.toCanvas();
 enhancer.setOriginalImage(cvs, cvs.width, cvs.height);
@@ -716,7 +751,7 @@ The current original image in the format that it was passed in and its dimension
 
 **Code Snippet**
 
-```js
+```javascript
 let image = enhancer.getOriginalImage();
 ```
 
@@ -730,7 +765,7 @@ async deleteOriginalImage(): Promise<void>;
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.deleteOriginalImage();
 ```
 
@@ -744,7 +779,7 @@ showOriginalImage(): void;
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.showOriginalImage();
 ```
 
@@ -758,7 +793,7 @@ async hideOriginalImage(): Promise<void>;
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.hideOriginalImage();
 ```
 
@@ -776,10 +811,97 @@ The array of current selected `DrawingItem` objects.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingItems = enhancer.getSelectedDrawingItems();
 ```
 
 **See also**
 
 * [DrawingItem](drawingitem.md)
+
+## showTip
+
+Shows a Tip message.
+
+```typescript
+showTip(x: number, y: number, width: number, initialMessage?: string, duration: number, autoShowSuggestedTip?: boolean) => void;
+```
+
+**Parameters**
+
+`x` , `y` : pecifies where to put the Tip message.
+`width` : specifies the width of the Tip message, wrapping if the message is too long.
+`initialMessage` : the initial message.
+`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
+`autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+enhancer.showTip(500, 200, 500, "The camera is too far away, please move closer!", 3000, true);
+```
+
+## hideTip
+
+Hides the Tip message.
+
+```typescript
+hideTip(): void; 
+```
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+enhancer.hideTip();
+```
+
+## updateTipMessage
+
+Changes the Tip message.
+
+```typescript
+updateTipMessage:(message: string) => void;
+```
+
+**Parameters**
+
+`message` : specifies a new message as the Tip.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+enhancer.updateTipMessage("This is a new message!");
+```
+
+## onTipSuggested
+
+An event that gets triggered whenever a Tip is suggested.
+
+```typescript
+onTipSuggested: (occasion: string, message: string) => any;
+```
+
+**Arguments**
+
+`occasion` : specifies the occasion for the Tip.
+`message` : the Tip message for the occasion.
+
+**Code Snippet**
+
+```javascript
+enhancer.onTipSuggested = (occasion, message) {
+    console.log(message);
+}
+```

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android 2.x Release Notes 
+title: Android 2.x Release Notes  - Dynamsoft Camera Enhancer
 description: This is the documentation - Android 2.x Release Notes page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android 2.x Release Notes
 needAutoGenerateSidebar: true
@@ -9,6 +9,29 @@ breadcrumbText: Android 2.x Release Notes
 ---
 
 # Release Notes - Android 2.x
+
+## 2.3.10 (12/13/2022)
+
+### New
+
+- Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.mobile-enum }}enum-focus-mode.html?lang=android) is added to specify the focus mode.
+- Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.md#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
+- Added an interface [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
+- Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.md#getvisibleregionofvideo) in `DCECameraView` class
+
+### Deprecated
+
+- Deprecated method `pause` and `resume` in `CameraEnhancer` class.
+
+### Fixed
+
+- Fixed a bug that might cause thread blocking when using an offline license.
+- Fixed a bug that UI might be blocked when the screen is locked and reopened.
+- Fixed a bug that might cause memory churn when the instance/thread was created frequently.
+
+## 2.3.5 (11/04/2022)
+
+- Fixed a bug that might throws exception when triggering `CameraEnhancer.close` after triggering `CameraEnhancer.pause`.
 
 ## 2.3.4 (09/22/2022)
 
@@ -27,7 +50,7 @@ breadcrumbText: Android 2.x Release Notes
 ### New
 
 - Added methods [`selectCamera(EnumCameraPosition)`](../primary-api/camera-enhancer.md#selectcameraenumcameraposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
-- Added enumeration [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html).
+- Added enumeration [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=android).
 
 ### Fixed
 

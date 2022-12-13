@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Frame Preprocessing Methods
+title: Frame Preprocessing Methods - Dynamsoft Camera Enhancer - Objective-C & Swift API references
 description: This is the documentation - Objective-C & Swift API references - Frame Preprocessing Methods page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Objective-C & Swift, API references, Frame Preprocessing Methods
 needAutoGenerateSidebar: true

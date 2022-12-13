@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface DrawingStyle
+title: Interface DrawingStyle - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the DrawingStyle Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: DrawingStyle, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -44,7 +44,7 @@ breadcrumbText: DrawingStyle
 
   The SDK comes with 8 default Drawing styles. Their style definition are listed below
 
-  ```js
+  ```javascript
   // DrawingStyle 1
   // Used by Dynamsoft Document Normalizer for DrawingItems in "default" state.
   {

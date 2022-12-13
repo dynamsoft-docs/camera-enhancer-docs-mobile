@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS API references
+title: iOS API references - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS API references page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS API references
 needAutoGenerateSidebar: true
@@ -83,7 +83,4 @@ breadcrumbText: iOS API references
 
 ## Enumerations
 
-- [`EnumDMChargeWay`]({{ site.enumerations }}dmchargeway.html)
-- [`EnumCameraDMUUIDGenerationMethod`]({{ site.enumerations }}dmuuidgeneration.html)
-- [`EnumProduct`]({{ site.enumerations }}enumproduct.html)
-- [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
+- [View all Enumerations]({{ site.mobile-enum }}enum-1.html?lang=android)

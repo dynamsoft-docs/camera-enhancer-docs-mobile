@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Error code
+title: Enumerations Error code - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations Error code page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Error code
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS iDMLTSConnectionParameters Class
+title: iOS iDMLTSConnectionParameters Class - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS iDMLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS iDMLTSConnectionParameters Class
 needAutoGenerateSidebar: true

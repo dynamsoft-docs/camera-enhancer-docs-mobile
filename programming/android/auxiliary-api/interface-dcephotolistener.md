@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DCEPhotoListener - Dynamsoft Camera Enhancer
+title: Android DCEPhotoListener - Dynamsoft Camera Enhancer
 description: This is the documentation - DCEPhotoListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, DCEPhotoListener
 needAutoGenerateSidebar: true
@@ -26,12 +26,12 @@ interface com.dynamsoft.dce.DCEPhotoListener
 The callback method for user to receive the captured photo. User can complete the method by adding code to execute with the capture image.
 
 ```java
-photoOutputCallback(byte[] var1)
+photoOutputCallback(byte[] bytes)
 ```
 
 **Parameters**
 
-`var1`: The byte data of the captured image.
+`bytes`: The byte data of the captured image.
 
 **Code Snippet**
 

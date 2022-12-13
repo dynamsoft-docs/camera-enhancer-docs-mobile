@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - JavaScript 3.x Release Notes 
+title: JavaScript 3.x Release Notes  - Dynamsoft Camera Enhancer
 description: This is the Release Notes page for Dynamsoft Camera Enhancer JavaScript SDK.
 keywords:  camera enhancer, release notes, javascript
 needAutoGenerateSidebar: true
@@ -9,6 +9,21 @@ breadcrumbText: v3.x Release Notes
 ---
 
 # Release Notes - JavaScript 3.x
+
+## 3.2.0 (12/xx/2022)
+
+### New
+
+* Introduced the Tip feature with the new methods `showTip()`, `hideTip()`, `updateTipMessage()` and an event `onTipSuggested`.
+* Added method `deleteDrawingLayer()` to delete an existing DrawingLayer.
+* Added method `clearFrameBuffer()` to remove all buffered image frames.
+* Added methods `getZoomSettings()`, `resetZoom()`, `getFocusSettings()`, `enableTapToFocus()`, `disableTapToFocus()` and `isTapToFocusEnabled()` for better camera control.
+* Added method `testCameraAccess()` to help test the availability of cameras.
+
+### Changed
+
+* The method `setZoom()` now accepts an object as zoom settings.
+* The method `setFocus()` now accepts an object as focus settings.
 
 ## 3.1.0 (10/20/2022)
 
