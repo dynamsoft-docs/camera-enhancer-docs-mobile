@@ -57,8 +57,7 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
-| [`getAutoZoomRange`](#getautozoomrange) | Get the range of auto zoom. |
+| [`autoZoomRange`](#autozoomrange) | The property for getting/setting the range of auto zoom. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
 | [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
@@ -707,17 +706,13 @@ let maxZoomFactor = dce.getMaxZoomFactor()
 
 &nbsp;
 
-### setAutoZoomRange
+### autoZoomRange
 
-Set the range of auto zoom.
+The property for getting/setting the range of auto zoom.
 
 ```objc
-- (void) setAutoZoomRange:(UIFloatRange)zoomRange;
+@property (nonatomic, assign) UIFloatRange autoZoomRange;
 ```
-
-**Parameters**
-
-`[in] zoomRange`: A `UIFloatRange` value that defines the range of auto zoom.
 
 **Code Snippet**
 
@@ -728,39 +723,12 @@ Set the range of auto zoom.
 >1. 
 ```objc
 [_dce setAutoZoomRange:UIFloatRangeMake(1.5,4)];
+UIFloatRange currentZoomRange = [_dce autoZoomRange];
 ```
 2. 
 ```swift
-dce.setAutoZoomRange(UIFloatRange(1.5,4))
-```
-
-&nbsp;
-
-### getAutoZoomRange
-
-Get the range of auto zoom.
-
-```objc
-- (UIFloatRange) getAutoZoomRange;
-```
-
-**Return Value**
-
-A `UIFloatRange` value that defines the range of auto zoom.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-UIFloatRange currentZoomRange = [_dce getAutoZoomRange];
-```
-2. 
-```swift
-let currentZoomRange = dce.getAutoZoomRange()
+dce.autoZoomRange = UIFloatRange(minimum:1.5, maximum: 4)
+let currentZoomRange = dce.autoZoomRange()
 ```
 
 &nbsp;

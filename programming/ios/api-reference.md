@@ -41,8 +41,7 @@ breadcrumbText: iOS API references
 | [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setAutoZoomRange`]({{site.ios-api}}camera-enhancer.html#setautozoomrange) | Set the range of auto zoom. |
-| [`getAutoZoomRange`]({{site.ios-api}}camera-enhancer.html#getautozoomrange) | Get the range of auto zoom. |
+| [`autoZoomRange`](#autozoomrange) | The property for getting/setting the range of auto zoom. |
 | [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`setFocus(subsequentFocusMode)`]({{site.ios-api}}camera-enhancer.html#setfocussubsequentFocusMode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
 | [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
