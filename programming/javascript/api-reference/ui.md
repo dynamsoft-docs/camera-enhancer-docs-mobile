@@ -844,7 +844,7 @@ None.
 **Code Snippet**
 
 ```js
-enhancer.showTip(500, 200, 500, "The camera is too far away, please move closer!", true);
+enhancer.showTip(500, 200, 500, "The camera is too far away, please move closer!", 3000, true);
 ```
 
 ## hideTip

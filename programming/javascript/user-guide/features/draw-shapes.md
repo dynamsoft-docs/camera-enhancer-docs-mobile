@@ -19,7 +19,7 @@ The following content is based on this code that defines a page:
 <html lang="en">
 <head>
     <title>DCEJS - Draw Shapes</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer/dist/dce.js"></script>
 </head>
 <body style="width:80vw; height:600px; margin: 0 auto">
     <br />

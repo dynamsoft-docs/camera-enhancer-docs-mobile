@@ -70,7 +70,7 @@ static defaultUIElementURL: string;
 
 ```js
 // The following line is redundant and is for demonstration purposes only.
-Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.ui.html";
+Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.ui.html";
 (async () => {
     let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     await enhancer.open(true);
@@ -148,7 +148,7 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
         let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
         // The following line is not needed if you just want to use the official UI element for CameraEnhancer.
         // Only use it when you want to specify a different HTML page that contains a different UI definition.
-        await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.ui.html");
+        await enhancer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.ui.html");
         // Note that because the element is not on the current page, you need to pass "true" when calling open() in order to show it.
         await enhancer.open(true);
     })();

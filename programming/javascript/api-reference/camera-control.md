@@ -566,7 +566,7 @@ Sets how the camera focuses.
 > 2. Typically, `continuous` mode works best. `manual` mode based on a specific area helps the camera focus on that particular area which may seem blurry under `continuous` mode. `manual` mode with specified distances is for those rare cases where the camera distance must be fine-tuned to get the best results.
 
 ```typescript
-setFocus(settings: { mode: "continuous" } | { mode: 'manual', distance: number } | {
+setFocus(settings: { mode: string } | { mode: 'manual', distance: number } | {
     mode: 'manual', area: {
         centerPoint: { x: string, y: string };
         // If not specified, the width is 1/6 of the video width or height, whichever is narrower
