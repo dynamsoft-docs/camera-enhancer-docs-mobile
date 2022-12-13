@@ -51,7 +51,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let region = {
 	regionLeft: 25,
 	regionTop: 25, 
@@ -84,7 +84,7 @@ A `Region` object which specifies the scan region.
 
 **Code Snippet**
 
-```js
+```javascript
 let region = enhancer.getScanRegion();
 ```
 
@@ -110,7 +110,7 @@ A `DCEFrame` object which contains the image data of the frame and related infor
 
 **Code Snippet**
 
-```js
+```javascript
 let frameData = enhancer.getFrame();
 document.body.appendChild(frameData.toCanvas());
 ```
@@ -137,7 +137,7 @@ A `DCEFrame` object which contains the image data of the frame and related infor
 
 **Code Snippet**
 
-```js
+```javascript
 let frameData = enhancer.getFrameFromBuffer();
 document.body.appendChild(frameData.toCanvas());
 ```
@@ -285,7 +285,7 @@ singleFrameMode: boolean;
 
 **Code Snippet**
 
-```js
+```javascript
 (async () => {
     let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
     enhancer.on('singleFrameAcquired', frameData => {

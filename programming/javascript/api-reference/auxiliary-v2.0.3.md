@@ -34,7 +34,7 @@ The version string of the library.
 
 **Code Snippet**
 
-```js
+```javascript
 Dynamsoft.DCE.CameraEnhancer.getVersion(); // 'JS 1.0.0.20210628'
 ```
 
@@ -54,7 +54,7 @@ None.
 
 A JSON object about the running environment. For example
 
-```js
+```json
 {
     "wasm": true,
     "worker": true,
@@ -68,6 +68,6 @@ A JSON object about the running environment. For example
 
 **Code Snippet**
 
-```js
+```javascript
 await Dynamsoft.DCE.CameraEnhancer.detectEnvironment();
 ```

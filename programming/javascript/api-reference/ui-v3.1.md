@@ -82,7 +82,7 @@ The visible region represented by a `Region` object.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getVisibleRegion();
 ```
 
@@ -108,7 +108,7 @@ The added `HTMLCanvasElement` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let cvs = enhancer.addScanRegionOverlayCanvas();
 let ctx = cvs.getContext('2d');
 ctx.fillStyle = "white";
@@ -134,7 +134,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let cvs = enhancer.addScanRegionOverlayCanvas();
 //...
 enhancer.removeScanRegionOverlayCanvas(cvs);
@@ -172,7 +172,7 @@ setScanRegionMaskStyle(maskStyle: any): void;
 
 > The default value is
 >
-> ```js
+> ```javascript
 > lineWidth = 2;
 > strokeStyle = "rgb(254,142,20)";
 > fillStyle = "rgba(0,0,0,0.5)";
@@ -184,7 +184,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.setScanRegionMaskStyle({
     lineWidth: 5,
     strokeStyle: "white",
@@ -211,7 +211,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.setVideoFit("cover");
 ```
 
@@ -233,7 +233,7 @@ The value of the `object-fit` CSS property.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getVideoFit();
 ```
 
@@ -260,7 +260,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -306,7 +306,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -337,7 +337,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -368,7 +368,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -399,7 +399,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -424,7 +424,7 @@ The visible layer represented by a `DrawingLayer` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let newDrawingLayer = enhancer.createDrawingLayer();
 ```
 
@@ -450,7 +450,7 @@ The `DrawingLayer` object specified by its input id.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 ```
 
@@ -468,7 +468,7 @@ You can manipulate these DrawingLayers directly, for example, the following code
 
 > Alternatively, you can directly change the style already in use instead of replacing it with a new one. Learn more at [updateDrawingStyle](ui.md#updatedrawingstyle).
 
-```js
+```javascript
 // Gets the DrawingLayer used by the Dynamsoft Label Recognizer instance to which enhancer is bound.
 let dlrDrawingLayer = enhancer.getDrawingLayer(2);
 // Creates a new style to be used.
@@ -504,7 +504,7 @@ The array of all the `DrawingLayer` objects.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayers = enhancer.getDrawingLayers();
 ```
 
@@ -522,7 +522,7 @@ clearDrawingLayers(): void;
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.clearDrawingLayers();
 ```
 
@@ -555,7 +555,7 @@ The id of the created `DrawingStyle`.
 
 **Code Snippet**
 
-```js
+```javascript
 let styleID = enhancer.createDrawingStyle({    
     lineWidth: 1.0,
     fillStyle: " rgba(73, 173, 245, 0.8)",
@@ -590,7 +590,7 @@ The `DrawingStyle` specified by the input id.
 
 **Code Snippet**
 
-```js
+```javascript
 // Change `styleId` to one that you know exists at runtime. 
 let drawingStyle = enhancer.getDrawingStyle(100);
 ```
@@ -613,7 +613,7 @@ The array of all of the `DrawingStyle` objects of current `CameraEnhancer`.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingStyles = enhancer.getDrawingStyles();
 ```
 
@@ -639,7 +639,7 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void;
 
 **Code Snippet**
 
-```js
+```javascript
 // Change the whole style
 enhancer.updateDrawingStyle(100,  {
     fillStyle: "rgba(100, 75, 245, 0.3)",
@@ -669,7 +669,7 @@ If you are using **Dynamsoft Camera Enhancer** with **Dynamsoft Barcode Reader**
 
 You can update these styles to apply changes to the DrawingLayers used by these products. For example, the following code changes the style for highlighting found barcodes:
 
-```js
+```javascript
 enhancer.updateDrawingStyle(3,  {
     fillStyle: "rgba(100, 75, 245, 0.3)",
     lineWidth: 5,
@@ -696,7 +696,7 @@ setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, 
 
 **Code Snippet**
 
-```js
+```javascript
 let currentFrame = enhancer.getFrame();
 let cvs = currentFrame.toCanvas();
 enhancer.setOriginalImage(cvs, cvs.width, cvs.height);
@@ -716,7 +716,7 @@ The current original image in the format that it was passed in and its dimension
 
 **Code Snippet**
 
-```js
+```javascript
 let image = enhancer.getOriginalImage();
 ```
 
@@ -730,7 +730,7 @@ async deleteOriginalImage(): Promise<void>;
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.deleteOriginalImage();
 ```
 
@@ -744,7 +744,7 @@ showOriginalImage(): void;
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.showOriginalImage();
 ```
 
@@ -758,7 +758,7 @@ async hideOriginalImage(): Promise<void>;
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.hideOriginalImage();
 ```
 
@@ -776,7 +776,7 @@ The array of current selected `DrawingItem` objects.
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingItems = enhancer.getSelectedDrawingItems();
 ```
 

@@ -91,7 +91,7 @@ A promise resolving to an array of `VideoDeviceInfo` objects.
 
 **Code Snippet**
 
-```js
+```javascript
 let cameras = await enhancer.getAllCameras();
 if (cameras.length) {
     await enhancer.selectCamera(cameras[0]);
@@ -122,7 +122,7 @@ A promise resolving to a `PlayCallbackInfo` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let cameras = await enhancer.getAllCameras();
 if (cameras.length) {
     await enhancer.selectCamera(cameras[0]);
@@ -151,7 +151,7 @@ A `VideoDeviceInfo` object with details about the selected camera.
 
 **Code Snippet**
 
-```js
+```javascript
 let camera = enhancer.getSelectedCamera();
 console.log(camera.label);
 ```
@@ -174,7 +174,7 @@ open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 
 > NOTE: if `setUIElement()` is not called before `open()` , the default UI Element will be used, which is equivalent to the following code:
 >
-> ```js
+> ```javascript
 > await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL); 
 > await cameraEnhancer.open(appendOrShowUI); 
 > ```
@@ -275,7 +275,7 @@ A promise resolving to a `PlayCallbackInfo` object.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setResolution(width, height);
 ```
 
@@ -301,7 +301,7 @@ An array of two numbers representing the resolution in the sequence of [width, h
 
 **Code Snippet**
 
-```js
+```javascript
 let resolution = enhancer.getResolution();
 console.log(resolution[0] + " x " + resolution[1]);
 ```
@@ -326,7 +326,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 const resolutions = await enhancer.getResolutions();
 console.log(resolutions);
 ```
@@ -351,7 +351,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setFrameRate(10);
 ```
 
@@ -377,7 +377,7 @@ The calculated real-time frame rate.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.getFrameRate();
 ```
 
@@ -401,7 +401,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.turnOnTorch();
 ```
 
@@ -430,7 +430,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.turnOffTorch();
 ```
 
@@ -457,7 +457,7 @@ An object that describes the zoom settings. As of version 3.2, it contains only 
 
 **Code Snippet**
 
-```js
+```javascript
 console.log(enhancer.getZoomSettings().factor);
 ```
 
@@ -485,7 +485,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setZoom({
     factor: 3
 });
@@ -513,7 +513,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.resetZoom();
 ```
 
@@ -545,7 +545,7 @@ The current focus settings.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getFocusSettings();
 ```
 
@@ -586,7 +586,7 @@ A promise that resolves when the operation succeeds.
 
 > The "continuous" mode invokes the camera to focus automatically and continuously. Use [getCapabilities()](#getcapabilities) to inspect whether the camera supports "continuous" mode.
 
-```js
+```javascript
 if (enhancer.getCapabilities().focusMode.find(mode => mode.localeCompare('continuous') == 0)) {
     await enhancer.setFocus({
         mode: "continuous"
@@ -597,13 +597,13 @@ if (enhancer.getCapabilities().focusMode.find(mode => mode.localeCompare('contin
 > The "manual" mode means manually specifying the focus distance.
 > Use [getCapabilities()](#getcapabilities) to inspect the distance range.
 >
-> ```js
+> ```javascript
 > enhancer.getCapabilities().focusDistance; > //{max: 1024, min: 0, step: 10}
 > ```
 >
 > NOTE: If the set distance is between two allowed values, it will be rounded to the nearest value.
 
-```js
+```javascript
 await enhancer.setFocus({
     mode: "manual",
     distance: 200
@@ -614,7 +614,7 @@ await enhancer.setFocus({
 >
 > NOTE: the area is a rectangle defined by its center point and its width and height. All coordinates can be in pixels or percentages, such as "500px" or "50%". Percentages are based on stream dimensions.
 
-```js
+```javascript
 await enhancer.setFocus({
     mode: "manual",
     area: {
@@ -650,7 +650,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.enableTapToFocus();
 ```
 
@@ -672,7 +672,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.disableTapToFocus();
 ```
 
@@ -694,7 +694,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 if (enhancer.isTapToFocusEnabled()) {
     console.log("You can tap or click on the video to focus!");
 }
@@ -720,7 +720,7 @@ A `MediaTrackCapabilities` object which specifies the values or range of values 
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getCapabilities();
 /* Result sample
 {
@@ -768,7 +768,7 @@ The current values for each constrainable property of the current camera in the 
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getCameraSettings();
 /* Result sample
 {
@@ -827,7 +827,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setColorTemperature(5000);
 ```
 
@@ -865,7 +865,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setExposureCompensation(-0.7);
 ```
 

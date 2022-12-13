@@ -60,7 +60,7 @@ A promise resolving to an array of `VideoDeviceInfo` objects.
 
 **Code Snippet**
 
-```js
+```javascript
 let cameras = await enhancer.getAllCameras();
 if (cameras.length) {
     await enhancer.selectCamera(cameras[0]);
@@ -91,7 +91,7 @@ A promise resolving to a `PlayCallbackInfo` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let cameras = await enhancer.getAllCameras();
 if (cameras.length) {
     await enhancer.selectCamera(cameras[0]);
@@ -120,7 +120,7 @@ A promise resolving to a `VideoDeviceInfo` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let camera = await enhancer.getSelectedCamera();
 ```
 
@@ -190,7 +190,7 @@ onPlayed: (playCallBackInfo:PlayCallBackInfo) => {}
 
 **Code Snippet**
 
-```js
+```javascript
 let pEnhancer = null;
 (async () => {
     let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
@@ -257,7 +257,7 @@ A promise resolving to a `PlayCallbackInfo` object.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setResolution(width, height);
 ```
 
@@ -283,7 +283,7 @@ An array of two numbers representing the resolution in the sequence of [width, h
 
 **Code Snippet**
 
-```js
+```javascript
 let resolution = enhancer.getResolution();
 console.log(resolution[0] + " x " + resolution[1]);
 ```
@@ -308,7 +308,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setFrameRate(10);
 ```
 
@@ -334,7 +334,7 @@ The calculated real-time frame rate.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.getFrameRate();
 ```
 
@@ -358,7 +358,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.turnOnTorch();
 ```
 
@@ -387,7 +387,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.turnOffTorch();
 ```
 
@@ -416,7 +416,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setZoom(400);
 ```
 
@@ -442,7 +442,7 @@ A `MediaTrackCapabilities` object which specifies the values or range of values 
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getCapabilities();
 /* Result sample
 {
@@ -491,7 +491,7 @@ The current values for each constrainable property of the current camera
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getCameraSettings();
 /* Result sample
 {
@@ -540,7 +540,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setColorTemperature(5000);
 ```
 
@@ -568,7 +568,7 @@ A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
-```js
+```javascript
 await enhancer.setExposureCompensation(-0.7);
 ```
 

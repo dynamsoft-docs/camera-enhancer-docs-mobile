@@ -36,7 +36,7 @@ A promise resolving to the created `CameraEnhancer` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let pEnhancer = null;
 (async () => {
     let enhancer = await (pEnhancer = pEnhancer || Dynamsoft.DCE.CameraEnhancer.createInstance());
@@ -53,7 +53,7 @@ static defaultUIElementURL: string;
 
 **Code Snippet**
 
-```js
+```javascript
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.ui.html";
 let pEnhancer = null;
 (async () => {

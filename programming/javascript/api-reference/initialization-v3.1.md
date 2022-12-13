@@ -37,7 +37,7 @@ A promise resolving to the created `CameraEnhancer` object.
 
 **Code Snippet**
 
-```js
+```javascript
 (async () => {
     let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 })();
@@ -53,7 +53,7 @@ static defaultUIElementURL: string;
 
 > NOTE: if `defaultUIElementURL` is not set before `open()`, it will not take effect and the preset one, which is "dce.ui.html" will be used. If you want to use a different UI element, set `defaultUIElementURL` beforehand like this:
 >
-> ```js
+> ```javascript
 > Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "URL-TO-NEW-UIELEMENT";
 > await cameraEnhancer.open(true);
 > ```
@@ -68,7 +68,7 @@ static defaultUIElementURL: string;
 
 **Code Snippet**
 
-```js
+```javascript
 // The following line is redundant and is for demonstration purposes only.
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.ui.html";
 (async () => {
@@ -164,7 +164,7 @@ A callback which is triggered when the running environment is not ideal. In this
 
 The following two warnings are returned respectively:
 
-```js
+```javascript
 {
     id: 1,
     message: "Not using HTTP protocol, the SDK may not work correctly."
@@ -177,7 +177,7 @@ The following two warnings are returned respectively:
 
 **Code Snippet**
 
-```js
+```javascript
 Dynamsoft.DCE.CameraEnhancer.onWarning = warning => console.log(warning);
 ```
 

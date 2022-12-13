@@ -44,7 +44,7 @@ breadcrumbText: DrawingStyle
 
   The SDK comes with 8 default Drawing styles. Their style definition are listed below
 
-  ```js
+  ```javascript
   // DrawingStyle 1
   // Used by Dynamsoft Document Normalizer for DrawingItems in "default" state.
   {

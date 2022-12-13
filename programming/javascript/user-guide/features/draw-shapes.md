@@ -101,7 +101,7 @@ function drawShapes(){
 
 All new **DrawingLayer** objects come with the same predefined style definition
 
-```js
+```javascript
 {
   fillStyle: "rgba(245, 236, 73, 0.3)",
   fontFamily: "sans-serif",

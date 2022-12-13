@@ -41,7 +41,7 @@ You can manipulate these DrawingLayers directly, for example, the following code
 
 > Alternatively, you can directly change the style already in use instead of replacing it with a new one. Learn more at [updateDrawingStyle](ui.md#updatedrawingstyle).
 
-```js
+```javascript
 // Gets the DrawingLayer used by the Dynamsoft Label Recognizer instance to which enhancer is bound.
 let dlrDrawingLayer = enhancer.getDrawingLayer(2);
 // Creates a new style to be used.
@@ -65,7 +65,7 @@ getId(): number;
 
 **Code Snippet**
 
-```js
+```javascript
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 let drawingLayer = enhancer.createDrawingLayer();
 let drawingLayerId = drawingLayer.getId();
@@ -81,7 +81,7 @@ addDrawingItems(drawingItems: Array<DrawingItem>): void;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingItems = new Array(
     new DT_Rect(10, 10, 100, 100, 1),
     new DT_Text("label 1", 40, 40, 2),
@@ -111,7 +111,7 @@ getDrawingItems() :Array<DrawingItem>);
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 let drawingItems = drawingLayer.getDrawingItems();
 ```
@@ -130,7 +130,7 @@ setDrawingItems(drawingItems: Array<DrawingItem>): void;
 
 **Code Snippet**
 
-```js
+```javascript
 let newDrawingItems = new Array(
     new DT_Rect(10, 10, 100, 100, 1),
     new DT_Text("label 1", 40, 40, 2),
@@ -160,7 +160,7 @@ hasDrawingItem(drawingItem: DrawingItem): Boolean;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingItem = new DT_Rect(10, 10, 100, 100, 1);
 let drawingLayer = enhancer.getDrawingLayer(100);
 let hasDrawingItem = drawingLayer.hasDrawingItem(drawingItem);
@@ -180,7 +180,7 @@ removeDrawingItems(drawingItems: Array<DrawingItem>): void;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingItems = new Array(
     new DT_Rect(10, 10, 100, 100, 1),
     new DT_Text("label 1", 40, 40, 2)
@@ -203,7 +203,7 @@ clearDrawingItems(): void;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.clearDrawingItems();
 ```
@@ -231,7 +231,7 @@ setDrawingStyle(styleId: number, mediaType?: string, styleSelector?: string): vo
 
 **Code Snippet**
 
-```js
+```javascript
 //set style 1 for all the DrawingItems on the `DrawingLayer`
 drawingLayer.setDrawingStyle(1);
 //set style 1 for all Rect-shape DrawingItems on the `DrawingLayer`
@@ -260,7 +260,7 @@ setVisible(visibility: boolean): void;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.setVisible(false);
 ```
@@ -275,7 +275,7 @@ isVisible(): boolean;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 let isVisible = drawingLayer.isVisible();
 ```
@@ -293,7 +293,7 @@ renderAll(): boolean;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.getDrawingItems()[0].styleId = customId;
 drawingLayer.getDrawingItems()[0].set("x", 100);
@@ -316,7 +316,7 @@ onSelectionChange: (selectedDrawingItems: Array<DrawingItem>, deselectedDrawingI
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.onSelectionChange = (selected, deselected) => {
     //do ...
@@ -339,7 +339,7 @@ setMode(newMode: string): void;
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 drawingLayer.setMode("editor");
 ```
@@ -358,7 +358,7 @@ The mode of current `DrawingLayer` .
 
 **Code Snippet**
 
-```js
+```javascript
 let drawingLayer = enhancer.getDrawingLayer(100);
 let mode = drawingLayer.getMode();
 ```
