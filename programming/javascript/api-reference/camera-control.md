@@ -174,13 +174,10 @@ open(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 
 > NOTE: if `setUIElement()` is not called before `open()` , the default UI Element will be used, which is equivalent to the following code:
 >
->  
-
-```js
-> await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL); >
-await cameraEnhancer.open(appendOrShowUI); >
-```
-
+> ```js
+> await cameraEnhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL); 
+> await cameraEnhancer.open(appendOrShowUI); 
+> ```
 >
 > If you want to use a different UI element, call API [ `setUIElement()` ](initialization.md#setuielement) beforehand.
 
@@ -600,13 +597,9 @@ if (enhancer.getCapabilities().focusMode.find(mode => mode.localeCompare('contin
 > The "manual" mode means manually specifying the focus distance.
 > Use [getCapabilities()](#getcapabilities) to inspect the distance range.
 >
->  
-
-```js
+> ```js
 > enhancer.getCapabilities().focusDistance; > //{max: 1024, min: 0, step: 10}
->
-```
-
+> ```
 >
 > NOTE: If the set distance is between two allowed values, it will be rounded to the nearest value.
 
