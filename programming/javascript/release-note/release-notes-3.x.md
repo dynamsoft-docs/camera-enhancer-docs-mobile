@@ -10,7 +10,7 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
-## 3.2.0 (12/xx/2022)
+## 3.2.0 (12/13/2022)
 
 ### New
 
