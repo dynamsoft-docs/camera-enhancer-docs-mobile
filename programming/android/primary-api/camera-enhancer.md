@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references - CameraEnhancer Class
+title: CameraEnhancer Class - Dynamsoft Camera Enhancer Android API references
 description: This is the documentation - Android API references - CameraEnhancer Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android API references, CameraEnhancer Class
 needAutoGenerateSidebar: true
@@ -51,6 +51,22 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`resume`](#resume) | Resume the current selected camera. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
+| [`getFrameRate`](#getframerate) | Get the current frame rate. |
+| [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
+| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`](#getresolution) | Get the current resolution. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
+| [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
+| [`getAutoZoomRange`](#getautozoomrange) | Get the range of auto zoom. |
+| [`setFocus`](#setfocus) | Focus once at the input position. |
+| [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
+| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
+| [`setCameraStateListener`](#setcamerastatelistener ) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
+| [`setFrameRate`](#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ## Frame Acquiring Methods Summary
 
@@ -65,28 +81,9 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
-
-## Advanced Camera Control Methods Summary
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameRate`](#getframerate) | Get the current frame rate. |
-| [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
-| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setFocus`](#setfocus) | Focus once at the input position. |
-| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
-| [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
-| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
-| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
-| [`setFrameRate`](#setframerate) | **Deprecated**. Set the frame rate to the input value (if the input value is available for the device). |
 
 ## Camera UI Methods Summary
 
@@ -94,6 +91,13 @@ class com.dynamsoft.dce.CameraEnhancer
 | ------ | ----------- |
 | [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
 | [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
+
+## Advanced Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
 
 &nbsp;
 
@@ -299,7 +303,7 @@ EnumCameraState getCameraState()
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumerations}}enum-camera-state.html).
+One of the preset camera state in Enumeration [`EnumCameraState`]({{site.mobile-enum}}enum-camera-state.html).
 
 **Code Snippet**
 
@@ -449,6 +453,416 @@ cameraEnhancer.turnOffTorch();
 
 &nbsp;
 
+### getFrameRate
+
+Get the current frame rate.
+
+```java
+int getFrameRate()
+```
+
+**Return Value**
+
+The current frame rate.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+int frameRate = cameraEnhancer.getFrameRate();
+```
+
+&nbsp;
+
+### getResolutionList
+
+Check the available resolutions of the current device.
+
+```java
+List<Size> getResolutionList()
+```
+
+**Return Value**
+
+A list that contains all available resolutions.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+List<Size> resolutionList = cameraEnhancer.getResolutionList();
+```
+
+&nbsp;
+
+### setResolution
+
+Input a preset resolution value in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
+
+```java
+void setResolution(EnumResolution resolution) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.mobile-enum}}enum-resolution.html?lang=android).
+
+**Exception**
+
+An exception thrown to indicate an error has occurred when trying to change the resolution.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setResolution(EnumResolution.RESOLUTION_2K);
+```
+
+&nbsp;
+
+### getResolution
+
+Get the current resolution.
+
+```java
+Size getResolution()
+```
+
+**Return Value**
+
+The size of the current resolution.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+Size currentResolution = cameraEnhancer.getResolution();
+```
+
+&nbsp;
+
+### setZoom
+
+Set the zoom factor. The camera will zoom in/out immediately after this method is triggered.
+
+```java
+void setZoom(float factor) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`factor`: The target zoom factor.
+
+**Exception**
+
+An exception thrown to indicate an error has occurred when trying to zoom-in or zoom-out.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setZoom(2.5)
+```
+
+&nbsp;
+
+### getMaxZoomFactor
+
+Get the maximum available zoom factor.
+
+```java
+float getMaxZoomFactor()
+```
+
+**Return Value**
+
+A float value that indicates the maximum available zoom factor of the device.
+
+**Code Snippet**
+
+```java
+float maxZoomFactor = cameraEnhancer.getMaxZoomFactor();
+```
+
+&nbsp;
+
+### setAutoZoomRange
+
+Set the range of auto zoom.
+
+```java
+void setAutoZoomRange(android.util.Range zoomRange)
+```
+
+**Parameters**
+
+`[in] zoomRange`: A `UIFloatRange` value that defines the range of auto zoom.
+
+**Code Snippet**
+
+```java
+cameraEnhancer.setAutoZoomRange(new Range(1.5,4));
+```
+
+&nbsp;
+
+### getAutoZoomRange
+
+Get the range of auto zoom.
+
+```java
+Range getAutoZoomRange()
+```
+
+**Return Value**
+
+A `UIFloatRange` value that defines the range of auto zoom.
+
+**Code Snippet**
+
+```java
+Range range = cameraEnhancer.getAutoZoomRange();
+```
+
+&nbsp;
+
+### setFocus
+
+Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
+
+```java
+void setFocus(float x, float y) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`x`: The x-coordinate of the targeting focus position.  
+`y`: The y-coordinate of the targeting focus position.
+
+**Exception**
+
+An exception thrown to indicate an error has occurred when trying to trigger a focus.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setFocus(0.5,0.4);
+```
+
+&nbsp;
+
+### setFocus(subsequentFocusMode)
+
+Trigger a focus at the targeting point and set the subsequent focus mode after focused.
+
+```java
+void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusMode) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`[in] focusPosition`: A `CGPoint` indicates the interest area.
+`[in] subsequentFocusMode`: If you set the focus mode to `FM_LOCKED`, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
+
+**Exception**
+
+An exception thrown to indicate an error has occurred when trying to trigger a focus.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setFocus(new PointF(0.5f,0.5f), EnumFocusMode.FM_LOCKED);
+```
+
+&nbsp;
+
+### setScanRegion
+
+Specify the scan region. The DCEFrames will be cropped according to the scan region before they are stored in the video buffer.
+
+```java
+void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
+
+<div align="center">
+    <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
+    <p>How to set scan region</p>
+</div>
+
+**Exception**
+
+An exception thrown to indicate the region parameter is invalid.
+
+**Code Snippet**
+
+```java
+com.dynamsoft.dce.RegionDefinition scanRegion = new RegionDefinition();
+scanRegion.regionTop = 25;
+scanRegion.regionBottom = 75;
+scanRegion.regionLeft = 25;
+scanRegion.regionRight = 75;
+scanRegion.regionMeasuredByPercentage = 1;
+
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
+try {
+    cameraEnhancer.setScanRegion(scanRegion);;
+} catch (CameraEnhancerException e) {
+    e.printStackTrace();
+}
+```
+
+**Remarks**
+
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
+  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
+  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
+  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
+  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
+
+- When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
+- You will still get the original [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{site.android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
+- When you trigger `setScanRegion`, the **scanRegion** will be displayed on the UI automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
+
+&nbsp;
+
+### getScanRegion
+
+Get the scan region configurations. You will get a null value if the scan region is not set.
+
+```java
+RegionDefinition getScanRegion()
+```
+
+**Return Value**
+
+The return value of `getScanRegion` is always the actual parameter of the `scanRegion`, which might be different from the user input parameter. If `scanRegion` is not configured or the method `setScanRegion` is not approved, the return value will be null.
+
+**Code Snippet**
+
+```java
+com.dynamsoft.dce.RegionDefinition myScanRegion = new RegionDefinition();
+
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
+myScanRegion = cameraEnhancer.getScanRegion(scanRegion);
+```
+
+&nbsp;
+
+### setCameraStateListener
+
+Add a `DCECameraStateListener` to receive notification when the camera state changes.
+
+```java
+void setCameraStateListener (DCECameraStateListener listener)
+```
+
+**Parameters**
+
+`[in] listener`: A `DCECameraStateListener` object.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setCameraStateListener(new DCECameraStateListener(){
+    @Override
+    public void stateChangeCallback(EnumCameraState currentState) {
+        // Add your code to do when camera state changes.
+    }
+});
+```
+
+### setScanRegionVisible
+
+Set whether to display the **scanRegion** on the UI. The default value is false. When the value is set to true, the scan region will be displayed on the UI. The **scanRegion** will not be displayed if the **scanRegion** value is null.
+
+```java
+void setScanRegionVisible(boolean scanRegionVisible)
+```
+
+**Parameters**
+
+`scanRegionVisible`: When the value is set to true, the **scanRegion** will be displayed on the UI. Otherwise, the **scanRegion** will not be displayed.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setScanRegionVisible(true);
+```
+
+&nbsp;
+
+### getScanRegionVisible
+
+Get whether the **scanRegion** will be displayed on the UI.
+
+```java
+boolean getScanRegionVisible()
+```
+
+**Return Value**
+
+When the return value is true, the **scanRegion** will be displayed. Otherwise, the **scanRegion** will not be displayed.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+boolean scanRegionVisible = cameraEnhancer.getScanRegionVisible();
+```
+
+&nbsp;
+
+### setFrameRate
+
+> Note:
+> The method is deprecated in v9.0.2 and will be removed in v10.0 release.
+
+Camera Enhancer will try to set the frame rate around the input value.
+
+```java
+void setFrameRate(int frameRate) throws CameraEnhancerException
+```
+
+**Parameters**
+
+`frameRate`: An int value that refers to the target frame rate.  
+
+**Exception**
+
+An exception thrown to indicate the an error has occurred when trying to change the frame rate.
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+cameraEnhancer.setFrameRate(25);
+```
+
+**Remarks**
+
+The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
+
+&nbsp;
+
 ## Frame Acquiring Methods Details
 
 ### getFrameFromBuffer
@@ -565,7 +979,7 @@ mCameraEnhancer.takePhoto(photoListener);
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) value.
 
 ```java
 void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
@@ -573,7 +987,7 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android).  
 
 **Exception**
 
@@ -606,7 +1020,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) values.
 
 ```java
 void disableFeatures(int enhancerFeatures)
@@ -614,7 +1028,7 @@ void disableFeatures(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android).  
 
 **Code Snippet**
 
@@ -640,7 +1054,7 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android).
 
 **Return Value**
 
@@ -661,290 +1075,54 @@ If the features you input are all enabled but don't cover all the enabled featur
 
 &nbsp;
 
+## Camera UI Methods Details
+
+### setCameraView
+
+Set a [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object as the main UI view.
+
+```java
+void setCameraView(DCECameraView cameraView)
+```
+
+**Parameters**
+
+`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+DCECameraView cameraView = findViewById(R.id.cameraView);
+cameraEnhancer.setCameraView(cameraView);
+```
+
+&nbsp;
+
+### getCameraView
+
+Get the [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object of the current UI view.
+
+```java
+DCECameraView getCameraView()
+```
+
+**Return Value**
+
+The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
+
+**Code Snippet**
+
+```java
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
+
+DCECameraView cameraView =  cameraEnhancer.getCameraView();
+```
+
+&nbsp;
+
 ## Advanced Camera Control Methods Details
-
-### getFrameRate
-
-Get the current frame rate.
-
-```java
-int getFrameRate()
-```
-
-**Return Value**
-
-The current frame rate.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-int frameRate = cameraEnhancer.getFrameRate();
-```
-
-&nbsp;
-
-### getResolutionList
-
-Check the available resolutions of the current device.
-
-```java
-List<Size> getResolutionList()
-```
-
-**Return Value**
-
-A list that contains all available resolutions.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-List<Size> resolutionList = cameraEnhancer.getResolutionList();
-```
-
-&nbsp;
-
-### setResolution
-
-Input a preset resolution value in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
-
-```java
-void setResolution(EnumResolution resolution) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
-
-**Exception**
-
-An exception thrown to indicate an error has occurred when trying to change the resolution.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setResolution(EnumResolution.RESOLUTION_2K);
-```
-
-&nbsp;
-
-### getResolution
-
-Get the current resolution.
-
-```java
-Size getResolution()
-```
-
-**Return Value**
-
-The size of the current resolution.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-Size currentResolution = cameraEnhancer.getResolution();
-```
-
-&nbsp;
-
-### setZoom
-
-Set the zoom factor. The camera will zoom in/out immediately after this method is triggered.
-
-```java
-void setZoom(float factor) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`factor`: The target zoom factor.
-
-**Exception**
-
-An exception thrown to indicate an error has occurred when trying to zoom-in or zoom-out.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setZoom(2.5)
-```
-
-&nbsp;
-
-### getMaxZoomFactor
-
-Get the maximum available zoom factor.
-
-```java
-float getMaxZoomFactor()
-```
-
-**Return Value**
-
-A float value that indicates the maximum available zoom factor of the device.
-
-**Code Snippet**
-
-```java
-float maxZoomFactor = cameraEnhancer.getMaxZoomFactor();
-```
-
-### setFocus
-
-Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
-
-```java
-void setFocus(float x, float y) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`x`: The x-coordinate of the targeting focus position.  
-`y`: The y-coordinate of the targeting focus position.
-
-**Exception**
-
-An exception thrown to indicate an error has occurred when trying to trigger a focus.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setFocus(0.5,0.4);
-```
-
-&nbsp;
-
-### setScanRegion
-
-Specify the scan region. The DCEFrames will be cropped according to the scan region before they are stored in the video buffer.
-
-```java
-void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
-
-<div align="center">
-    <p><img src="../../assets/set-scan-region.png" width="40%" alt="region"></p>
-    <p>How to set scan region</p>
-</div>
-
-**Exception**
-
-An exception thrown to indicate the region parameter is invalid.
-
-**Code Snippet**
-
-```java
-com.dynamsoft.dce.RegionDefinition scanRegion = new RegionDefinition();
-scanRegion.regionTop = 25;
-scanRegion.regionBottom = 75;
-scanRegion.regionLeft = 25;
-scanRegion.regionRight = 75;
-scanRegion.regionMeasuredByPercentage = 1;
-
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
-try {
-    cameraEnhancer.setScanRegion(scanRegion);;
-} catch (CameraEnhancerException e) {
-    e.printStackTrace();
-}
-```
-
-**Remarks**
-
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
-  - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
-  - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
-  - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
-  - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
-
-- When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{site.android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
-- When you trigger `setScanRegion`, the **scanRegion** will be displayed on the UI automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
-
-&nbsp;
-
-### getScanRegion
-
-Get the scan region configurations. You will get a null value if the scan region is not set.
-
-```java
-RegionDefinition getScanRegion()
-```
-
-**Return Value**
-
-The return value of `getScanRegion` is always the actual parameter of the `scanRegion`, which might be different from the user input parameter. If `scanRegion` is not configured or the method `setScanRegion` is not approved, the return value will be null.
-
-**Code Snippet**
-
-```java
-com.dynamsoft.dce.RegionDefinition myScanRegion = new RegionDefinition();
-
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
-myScanRegion = cameraEnhancer.getScanRegion(scanRegion);
-```
-
-&nbsp;
-
-### setScanRegionVisible
-
-Set whether to display the **scanRegion** on the UI. The default value is false. When the value is set to true, the scan region will be displayed on the UI. The **scanRegion** will not be displayed if the **scanRegion** value is null.
-
-```java
-void setScanRegionVisible(boolean scanRegionVisible)
-```
-
-**Parameters**
-
-`scanRegionVisible`: When the value is set to true, the **scanRegion** will be displayed on the UI. Otherwise, the **scanRegion** will not be displayed.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setScanRegionVisible(true);
-```
-
-&nbsp;
-
-### getScanRegionVisible
-
-Get whether the **scanRegion** will be displayed on the UI.
-
-```java
-boolean getScanRegionVisible()
-```
-
-**Return Value**
-
-When the return value is true, the **scanRegion** will be displayed. Otherwise, the **scanRegion** will not be displayed.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-boolean scanRegionVisible = cameraEnhancer.getScanRegionVisible();
-```
-
-&nbsp;
 
 ### updateAdvancedSettingsFromFile
 
@@ -996,82 +1174,93 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthreshold':30,'conversioncountthreshold':30,'sharpnessthreshold':0.2,'sharpnessthresholdlarge':0.4,'abssharpnessthreshold':200,'absgraythreshold':35,'claritythreshold':0.1}");
 ```
 
-&nbsp;
+The advanced settings are as follow:
 
-### setFrameRate
+| Parameter Name | Type | Description |
+| -------------- | ---- | ----------- |
+| [`focalLength`](#focallength) | *float* | Set the fixed focal length. |
+| [`autoFocusInterval`](#autofocusinterval) | *int* | Set the time interval of the auto focus. |
+| [`autoFocusTerminateTime`](#autofocusterminatetime) | *int* | Set the minimum terminate time of auto focus. |
+| [`sensorControlSensitivity`](#sensorcontrolsensitivity) | *int* | Set the sensitivity of the mobile sensor. |
+| [`FastMode`](#fastmode) | *JSON data* | Set a group of crop regions. |
+| [`ISO & ExposureTime`](#iso--exposuretime) | *JSON data* | Set the ISO and exposure time. |
 
-> Note:
-> The method is deprecated in v9.0.2 and will be removed in v10.0 release.
+#### focalLength
 
-Camera Enhancer will try to set the frame rate around the input value.
+Set the fixed focal length with a float value. When this parameter is configured, the other focus methods and parameters will be disbaled and the focal length will be fixed. Users can reset the focalLength to -1 to disable the fixed focus settings. The closer to the 0, the further the focalLength will be.
 
-```java
-void setFrameRate(int frameRate) throws CameraEnhancerException
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [0,10] | -1 |
+
+#### autoFocusInterval
+
+Set the time interval of the auto-focus with an int value.
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [0,0x7fffffff] | 3000(ms) |
+
+#### autoFocusTerminateTime
+
+The minimum termination time of the auto-focus with an int value.
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [0,0x7fffffff] | 500(ms) |
+
+#### sensorControlSensitivity
+
+Set the sensitivity of the mobile sensor with an int value. A lower input value results in a higher sensitivity.
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [0,0x7fffffff] | 50 |
+
+#### FastMode
+
+The fast-mode parameters store four groups of frame cropping parameters. The cropping parameters will be implemented periodically when the fast mode is enabled. You can use the default cropping region settings or update your personalized crop regions via a JSON string or file.
+
+Example:
+
+```json
+"FastMode": {
+    "cropRegions": [{
+        "top": 0,
+        "right": 100,
+        "bottom": 100,
+        "left": 0
+    },
+    {
+        "top": 25,
+        "right": 100,
+        "bottom": 75,
+        "left": 0
+    },
+    {
+        "top": 25,
+        "right": 75,
+        "bottom": 75,
+        "left": 25
+    },
+    {
+        "top": 25,
+        "right": 75,
+        "bottom": 75,
+        "left": 25
+    }]
+}
 ```
 
-**Parameters**
+#### ISO & ExposureTime
 
-`frameRate`: An int value that refers to the target frame rate.  
+Set the ISO and exposure time of the camera.
 
-**Exception**
+Example:
 
-An exception thrown to indicate the an error has occurred when trying to change the frame rate.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setFrameRate(25);
-```
-
-**Remarks**
-
-The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
-
-&nbsp;
-
-## Camera UI Methods Details
-
-### setCameraView
-
-Set a [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object as the main UI view.
-
-```java
-void setCameraView(DCECameraView cameraView)
-```
-
-**Parameters**
-
-`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-DCECameraView cameraView = findViewById(R.id.cameraView);
-cameraEnhancer.setCameraView(cameraView);
-```
-
-&nbsp;
-
-### getCameraView
-
-Get the [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object of the current UI view.
-
-```java
-DCECameraView getCameraView()
-```
-
-**Return Value**
-
-The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-DCECameraView cameraView =  cameraEnhancer.getCameraView();
+```json
+{
+    "androidExposureTime": 2,
+    "iso":30
+}
 ```

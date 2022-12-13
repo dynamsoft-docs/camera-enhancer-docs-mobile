@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface Region
+title: Interface Region - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the Region Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: Region, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

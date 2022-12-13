@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - CameraLTSLicenseVerificationListener
+title: Android CameraLTSLicenseVerificationListener - Dynamsoft Camera Enhancer
 description: This is the documentation - CameraLTSLicenseVerificationListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, CameraLTSLicenseVerificationListener
 needAutoGenerateSidebar: true

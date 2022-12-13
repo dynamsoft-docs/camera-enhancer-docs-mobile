@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - UI APIs
+title: UI APIs - Dynamsoft Camera Enhancer JavaScript API
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK UI.
 keywords: camera enhancer, UI, javascript, js
 needAutoGenerateSidebar: true
@@ -45,7 +45,7 @@ The visible region represented by a `Region` object.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getVisibleRegion();
 ```
 
@@ -71,7 +71,7 @@ The added `Canvas` object.
 
 **Code Snippet**
 
-```js
+```javascript
 let cvs = enhancer.addScanRegionOverlayCanvas();
 let ctx = cvs.getContext('2d');
 ctx.fillStyle = "white";
@@ -111,7 +111,7 @@ setScanRegionMaskStyle(maskStyle: any): void;
 
 > The default value is
 >
-> ```js
+> ```javascript
 > lineWidth = 2;
 > strokeStyle = "rgb(254,142,20)";
 > fillStyle = "rgba(0,0,0,0.5)";
@@ -123,7 +123,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.setScanRegionMaskStyle({
     lineWidth: 5,
     strokeStyle: "white",
@@ -149,7 +149,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.setVideoFit("cover");
 ```
 
@@ -171,7 +171,7 @@ The value of the `object-fit` CSS property.
 
 **Code Snippet**
 
-```js
+```javascript
 enhancer.getVideoFit();
 ```
 
@@ -198,7 +198,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -244,7 +244,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -275,7 +275,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -306,7 +306,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,
@@ -337,7 +337,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let area = {
     x: 5,
     y: 10,

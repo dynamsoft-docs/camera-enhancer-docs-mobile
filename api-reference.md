@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - API reference for all edition
+title: API reference for all edition - Dynamsoft Camera Enhancer
 description: This is the documentation - API reference page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, APIs
 needAutoGenerateSidebar: true

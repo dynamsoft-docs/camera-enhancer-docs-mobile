@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS DCECameraView Class
+title: iOS DCECameraView Class - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS DCECameraView Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS DCECameraView Class
 needAutoGenerateSidebar: true
@@ -26,7 +26,8 @@ breadcrumbText: iOS DCECameraView Class
 | [`viewfinderVisible`](#viewfindervisible) | The property stores the BOOL value that controls the visibility of the viewfinder. |
 | [`setViewfinder`](#setviewfinder) | Set the attribute of the viewfinder. Currently only available for position and size setting. |
 | [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
-| [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
+| [`torchButtonVisible`](#torchbuttonvisible) | The property controls the visibility of the torch Button. |
+| [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the region of video that is visible on the camera. It help you to set the scan region when the shape of `DCECameraView` is quite different from the video streaming. |
 
 &nbsp;
 
@@ -242,3 +243,39 @@ Method `- (void)setTorchButton:(CGPoint)torchButtonPosition` is deprecated. Plea
 **Parameters**
 
 When the property value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
+
+## getVisibleRegionOfVideo
+
+Get the visible region of the video streaming.
+
+When the shape of your camera view is quite different from the shape of the video streaming, there might exist a large area that is invisible. You can use this method to get the region of this invisible area.
+
+<div align="center">
+    <p><img src="../../assets/visible-region.png" width="30%" alt="visible-region"></p>
+    <p>What's Visible Region</p>
+</div>
+
+```objc
+- (iRegionDefinition*) getVisibleRegionOfVideo;
+```
+
+**Return Value**
+
+An object of `iRegionDefinition`. You can use this `iRegionDefinition` object to set the scan region.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+iRegionDefinition *region = [_dceView getVisibleRegionOfVideo];
+[_dce setScanRegion:region error:nil];
+```
+2. 
+```swift
+let region = dceView.getVisibleRegionOfVideo()
+dce.setScanRegion(region, error: &error)
+```

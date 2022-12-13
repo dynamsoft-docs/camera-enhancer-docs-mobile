@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android Frame Class
+title: Android Frame Class - Dynamsoft Camera Enhancer
 description: This is the documentation - Android Frame Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, Frame
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface DrawingItemEvent
+title: Interface DrawingItemEvent - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the DrawingItemEvent Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: DrawingItemEvent, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

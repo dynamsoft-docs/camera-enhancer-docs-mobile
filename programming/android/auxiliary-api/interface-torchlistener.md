@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - TorchListener
+title: Android TorchListener - Dynamsoft Camera Enhancer
 description: This is the documentation - TorchListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, TorchListener
 needAutoGenerateSidebar: true

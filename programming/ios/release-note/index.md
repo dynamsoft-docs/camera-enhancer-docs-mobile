@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS SDK Release Note
+title: iOS SDK Release Note - Dynamsoft Camera Enhancer
 description: This is the documentation - iOS Release Note page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Release Note
 needAutoGenerateSidebar: true
@@ -10,6 +10,7 @@ breadcrumbText: iOS Release Note
 
 # Dynamsoft Camera Enhancer iOS SDK - Release Notes
 
+- [2.3.10 (12/13/2022)](release-notes-2.x.md/#2310-12132022)
 - [2.3.5 (11/15/2022)](release-notes-2.x.md/#235-11152022)
 - [2.3.4 (11/04/2022)](release-notes-2.x.md/#234-11042022)
 - [2.3.3 (09/22/2022)](release-notes-2.x.md/#233-09222022)

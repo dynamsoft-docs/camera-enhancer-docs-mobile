@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Auxiliary APIs
+title: Auxiliary APIs - Dynamsoft Camera Enhancer JavaScript API
 description: This is the main page of Dynamsoft Camera Enhancer JavaScript SDK Auxiliary.
 keywords: camera enhancer, auxiliary, javascript, js
 needAutoGenerateSidebar: true
@@ -39,7 +39,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 enhancer.on("cameraChange", playCallBackInfo => {
     console.log(playCallBackInfo.deviceId);
@@ -82,7 +82,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 let cameraChanged = playCallBackInfo => {
     console.log(playCallBackInfo.deviceId);
@@ -111,7 +111,7 @@ None.
 
 **Code Snippet**
 
-```js
+```javascript
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 // Use the object to perform some tasks
 enhancer.dispose();
@@ -135,7 +135,7 @@ The version string of the library.
 
 **Code Snippet**
 
-```js
+```javascript
 Dynamsoft.DCE.CameraEnhancer.getVersion(); // 'JS 1.0.0.20210628'
 ```
 
@@ -155,7 +155,7 @@ None.
 
 A JSON object about the running environment. For example
 
-```js
+```json
 {
     "wasm": true,
     "worker": true,
@@ -169,6 +169,6 @@ A JSON object about the running environment. For example
 
 **Code Snippet**
 
-```js
+```javascript
 await Dynamsoft.DCE.CameraEnhancer.detectEnvironment();
 ```

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer for JavaScript - Main Page
+title: Main Page - Dynamsoft Camera Enhancer for JavaScript
 description: This is the main page of Dynamsoft Camera Enhancer for JavaScript Language.
 keywords: javascript
 needAutoGenerateSidebar: true

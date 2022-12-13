@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface Note
+title: Interface Note - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the Note Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: Note, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

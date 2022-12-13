@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer JavaScript API - Interface Warning
+title: Interface Warning - Dynamsoft Camera Enhancer JavaScript API
 description: This page shows the Warning Interface of Dynamsoft Camera Enhancer JavaScript SDK.
 keywords: Warning, CameraEnhancer, api reference, javascript, js
 needAutoGenerateSidebar: false

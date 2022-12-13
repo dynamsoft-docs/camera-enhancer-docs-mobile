@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Camera DMUUID Generation Method
+title: Enumerations Camera DMUUID Generation Method - Dynamsoft Camera Enhancer
 description: This is the documentation - Enumerations Camera DMUUID Generation Method page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Camera DMUUID Generation Method
 needAutoGenerateSidebar: true

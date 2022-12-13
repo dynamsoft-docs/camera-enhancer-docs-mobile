@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Start on Android
+title: Start on Android - Dynamsoft Camera Enhancer
 description: This is the documentation - Start on Android page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Start on Android
 needAutoGenerateSidebar: true

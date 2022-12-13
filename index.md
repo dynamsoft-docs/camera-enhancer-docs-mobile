@@ -19,13 +19,6 @@ DEVELOPMENT
 * [iOS]({{site.ios}})
 
 <hr>
-PARAMETERS
-<hr>
-
-* [Parameter reference]({{site.reference}})
-* [Enumerations]({{site.enumerations}})
-
-<hr>
 USEFUL RESOURCES
 <hr>
 
