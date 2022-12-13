@@ -488,7 +488,7 @@ dlrDrawingLayer.setDrawingStyle(newStyleId)
 
 ## getDrawingLayers
 
-Returns all the `DrawingLayer`s.
+Returns all the DrawingLayer objects.
 
 ```typescript
 getDrawingLayer(): Array<DrawingLayer>;
