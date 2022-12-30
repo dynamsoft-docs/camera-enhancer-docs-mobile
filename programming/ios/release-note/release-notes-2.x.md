@@ -10,6 +10,10 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.11 (12/29/2022)
+
+- Fixed a bug that scan region is still displayed on the UI even if it is canceled.
+
 ## 2.3.10 (12/13/2022)
 
 ### New

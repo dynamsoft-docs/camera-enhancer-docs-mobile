@@ -833,7 +833,7 @@ boolean scanRegionVisible = cameraEnhancer.getScanRegionVisible();
 ### setFrameRate
 
 > Note:
-> The method is deprecated in v9.0.2 and will be removed in v10.0 release.
+> The method is deprecated in v2.1.4 and will be removed in v3.0 release.
 
 Camera Enhancer will try to set the frame rate around the input value.
 
