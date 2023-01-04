@@ -85,7 +85,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 2. Add reference in the dependencies:
     ```
     dependencies {
-        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}@aar'
+        implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.10@aar'
     }
     ```
     >Note:Please replace {version-number} with the correct version number.
@@ -143,7 +143,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
     DCECameraView mCameraView;
 
     mCameraView = findViewById(R.id.cameraView);
-    mCameraEnhancer.setCameraView(cameraView);
+    mCameraEnhancer.setCameraView(mCameraView);
     ```
 
 3. Override the MainActivity.onResume and MainActivity.onPause function to open and close camera.
