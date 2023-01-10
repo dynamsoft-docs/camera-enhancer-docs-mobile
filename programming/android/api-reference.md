@@ -44,7 +44,8 @@ noTitleIndex: true
 | [`getResolution`]({{site.android-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
 | [`setZoom`]({{site.android-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
 | [`getMaxZoomFactor`]({{site.android-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setFocus`]({{site.android-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and focus once at the configured position. |
+| [`setFocus(subsequentFocusMode)`]({{site.android-api}}camera-enhancer.html#setfocussubsequentfocusmode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
 | [`setScanRegion`]({{site.android-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`]({{site.android-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
 | [`setScanRegionVisible`]({{site.android-api}}camera-enhancer.html#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
