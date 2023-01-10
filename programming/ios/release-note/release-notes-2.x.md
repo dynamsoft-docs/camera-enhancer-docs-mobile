@@ -10,6 +10,12 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.11 (01/10/2023)
+
+### Fixed
+
+- Fixed a bug that the **scan region** is not removed from `DCECameraView` when it is canceled.
+
 ## 2.3.10 (12/13/2022)
 
 ### New
