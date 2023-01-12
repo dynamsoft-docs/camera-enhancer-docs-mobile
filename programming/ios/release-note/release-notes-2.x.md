@@ -33,8 +33,6 @@ breadcrumbText: iOS 2.x Release Notes
 
 - Deprecated method `pause` and `resume` in `CameraEnhancer` class.
 
-### New
-
 ## 2.3.5 (11/15/2022)
 
 ### Fixed
