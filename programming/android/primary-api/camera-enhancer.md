@@ -668,7 +668,7 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 
 **Parameters**
 
-`[in] focusPosition`: A `CGPoint` indicates the interest area.
+`[in] focusPosition`: An `android.graphics.PointF` object indicates the interest area.
 `[in] subsequentFocusMode`: If you set the focus mode to `FM_LOCKED`, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
 
 **Exception**
