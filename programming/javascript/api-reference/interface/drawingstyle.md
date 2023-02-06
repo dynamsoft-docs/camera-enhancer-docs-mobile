@@ -28,7 +28,7 @@ breadcrumbText: DrawingStyle
 
   The stroke color of the current `DrawingStyle` . Default: `rgba(245, 236, 73, 1)`.
 
-* paintMode: "fill" | "stroke" | "strokeAndFill"
+* paintMode: "fill" \| "stroke" \| "strokeAndFill"
 
   Three paint modes provided. Default: `stroke`.
 

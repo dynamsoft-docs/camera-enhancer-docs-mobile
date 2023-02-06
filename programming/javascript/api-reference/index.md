@@ -123,7 +123,7 @@ breadcrumbText: API Reference
 | [hideOriginalImage()](ui.md#hideoriginalimage) | Hides the original image. |
 | [deleteOriginalImage()](ui.md#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
 | [getSelectedDrawingItems()](ui.md#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
-| [showTip()](ui.md#showtip)| Shows a Tip message. |
+| [showfTip()](ui.md#showtip)| Shows a Tip message. |
 | [hideTip()](ui.md#hidetip)| Hides the Tip message. |
 | [updateTipMessage()](ui.md#updatetipmessage)| Changes the Tip message. |
 | [onTipSuggested()](ui.md#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
