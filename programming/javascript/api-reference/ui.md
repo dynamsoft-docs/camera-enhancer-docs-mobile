@@ -830,9 +830,13 @@ showTip(x: number, y: number, width: number, initialMessage?: string, duration: 
 **Parameters**
 
 `x` , `y` : pecifies where to put the Tip message.
+
 `width` : specifies the width of the Tip message, wrapping if the message is too long.
+
 `initialMessage` : the initial message.
+
 `duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
+
 `autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
 
 **Return value**
@@ -896,6 +900,7 @@ onTipSuggested: (occasion: string, message: string) => any;
 **Arguments**
 
 `occasion` : specifies the occasion for the Tip.
+
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
