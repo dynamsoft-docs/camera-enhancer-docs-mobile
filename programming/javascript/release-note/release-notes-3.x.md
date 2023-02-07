@@ -10,6 +10,19 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.3.0
+
+### Changed
+
+* Changed the behavior when opening a web page from the disk from trying to open the camera to enter the ingle-frame mode.
+* The DrawingLayer is placed over the scan region mask.
+
+### Fixed
+
+* Fixed a bug where resuming a video is not "resuming" but "replaying".
+* Fixed a bug where tip continues to show up after `hideTip()` is called.
+* Fixed a bug in Safari where video may stop playing when the web page's [`visibilityState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) changes to "visible" from "hidden".
+
 ## 3.2.0 (12/13/2022)
 
 ### New
