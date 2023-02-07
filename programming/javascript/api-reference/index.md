@@ -105,7 +105,7 @@ breadcrumbText: API Reference
 | [setViewDecorator()](ui.md#setviewdecorator) | Sets and shows the view decorator. |
 | [getViewDecorator()](ui.md#getviewdecorator) | Gets what view decorator is shown. |
 | [setViewDecoratorLineWidth()](ui.md#setviewdecoratorlinewidth) | Sets the line width for drawing the view decorator. |
-| [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
+| [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator. |
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 | [createDrawingLayer()](ui.md#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |
@@ -123,7 +123,7 @@ breadcrumbText: API Reference
 | [hideOriginalImage()](ui.md#hideoriginalimage) | Hides the original image. |
 | [deleteOriginalImage()](ui.md#deleteoriginalimage) | Deletes the original image and remove the canvas that shows it. |
 | [getSelectedDrawingItems()](ui.md#getselecteddrawingitems) | Returns the selected DrawingItem object(s). |
-| [showTip()](ui.md#showtip)| Shows a Tip message. |
+| [showfTip()](ui.md#showtip)| Shows a Tip message. |
 | [hideTip()](ui.md#hidetip)| Hides the Tip message. |
 | [updateTipMessage()](ui.md#updatetipmessage)| Changes the Tip message. |
 | [onTipSuggested()](ui.md#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |

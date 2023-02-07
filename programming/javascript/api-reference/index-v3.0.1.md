@@ -96,7 +96,7 @@ breadcrumbText: API Reference
 | [setViewDecorator()](ui.md#setviewdecorator) | Sets and shows the view decorator. |
 | [getViewDecorator()](ui.md#getviewdecorator) | Gets what view decorator is shown. |
 | [setViewDecoratorLineWidth()](ui.md#setviewdecoratorlinewidth) | Sets the line width for drawing the view decorator. |
-| [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
+| [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator. |
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 | [createDrawingLayer()](ui.md#createdrawinglayer) | Creates a DrawingLayer object and put it in an array of DrawingLayers. |

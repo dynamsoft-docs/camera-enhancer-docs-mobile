@@ -31,7 +31,7 @@ breadcrumbText: UI
 | [setViewDecorator()](#setviewdecorator) | Sets and shows the view decorator. |
 | [getViewDecorator()](#getviewdecorator) | Gets what view decorator is shown. |
 | [setViewDecoratorLineWidth()](#setviewdecoratorlinewidth) | Sets the line width for drawing the view decorator. |
-| [setViewDecoratorStrokeStyle()](#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
+| [setViewDecoratorStrokeStyle()](#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator. |
 | [setViewDecoratorFillStyle()](#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 

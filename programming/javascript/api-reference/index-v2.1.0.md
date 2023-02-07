@@ -82,7 +82,7 @@ breadcrumbText: API Reference
 | API Name | Description |
 |---|---|
 | [getVisibleRegion()](ui.md#getvisibleregion) | Returns a `Region` object which specifies which part of the original video is shown in the video element. |
-| [addScanRegionOverlayCanvas()](ui.md#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area.. |
+| [addScanRegionOverlayCanvas()](ui.md#addscanregionoverlaycanvas) | Add a canvas of the same size as the scan area directly above the scan area. |
 | [ifShowScanRegionMask](ui.md#ifshowscanregionmask) | Returns or sets whether the scan region mask is shown. |
 | [ifShowScanRegionLaser](ui.md#ifshowscanregionlaser) | Returns or sets whether the laser indicator is shown in the scan region. |
 | [setScanRegionMaskStyle()](ui.md#setscanregionmaskstyle) | Sets the styles for the scan region mask. |
@@ -91,7 +91,7 @@ breadcrumbText: API Reference
 | [setViewDecorator()](ui.md#setviewdecorator) | Sets and shows the view decorator. |
 | [getViewDecorator()](ui.md#getviewdecorator) | Gets what view decorator is shown. |
 | [setViewDecoratorLineWidth()](ui.md#setviewdecoratorlinewidth) | Sets the line width for drawing the view decorator. |
-| [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator.. |
+| [setViewDecoratorStrokeStyle()](ui.md#setviewdecoratorstrokestyle) | Sets the stroke style for drawing the view decorator. |
 | [setViewDecoratorFillStyle()](ui.md#setviewdecoratorfillstyle) | Sets the fill style for drawing the view decorator. |
 | [setViewDecoratorMaskFillStyle()](ui.md#setviewdecoratormaskfillstyle) | Sets the fill style for drawing the ask for the view decorator. |
 
