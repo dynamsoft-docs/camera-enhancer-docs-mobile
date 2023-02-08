@@ -265,8 +265,7 @@ setResolution(widthOrResolution: number | number[], height: number): Promise<Pla
 
 **Parameters**
 
-`width` : specifies the horizontal resolution.
-
+`width` : specifies the horizontal resolution.  
 `height` : specifies the vertical resolution.
 
 **Return value**

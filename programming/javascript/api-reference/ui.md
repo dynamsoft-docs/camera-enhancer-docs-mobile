@@ -256,12 +256,11 @@ setViewDecorator(type: string | string[], area: Area): void;
 
 **Parameters**
 
-`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"]. If passed an empty string, the decorator is cleared.
-
+`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" , "crosshair" , ["rectangle", "crossline"], ["rectangle", "crosshair"], ["focus", "crossline"] and ["focus", "crosshair"]. If passed an empty string, the decorator is cleared.  
 `area` : specifies where to place the decorator. It accepts 4 values:
 
-* `x`,        `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
-* `width`,        `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
+* `x`, `y`: top-left point of the decorator in percentage (0~100) of the width/height of the viewer.
+* `width`, `height`: size of the decorator in percentage (0~100) of the width/height of the viewer.
 
 **Return value**
 
@@ -305,8 +304,7 @@ setViewDecoratorLineWidth(type: string, width: number): void;
 
 **Parameters**
 
-`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".
-
+`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".  
 `width` : specifies the line width.
 
 **Return value**
@@ -336,8 +334,7 @@ setViewDecoratorStrokeStyle(type: string, strokeStyle: string): void;
 
 **Parameters**
 
-`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".
-
+`type` : specifies the decorator type. Allowed values are "rectangle" , "focus" , "crossline" and "crosshair".  
 `strokeStyle` : specifies the stroke style. Read more on [strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle).
 
 **Return value**
@@ -367,8 +364,7 @@ setViewDecoratorFillStyle(type: string, fillStyle: string): void;
 
 **Parameters**
 
-`type` : specifies the decorator type. Allowed values are "rectangle" and "focus".
-
+`type` : specifies the decorator type. Allowed values are "rectangle" and "focus".  
 `fillStyle` : specifies the fill style. Read more on [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 **Return value**
@@ -398,8 +394,7 @@ setViewDecoratorMaskFillStyle(type: string, fillStyle: string): void;
 
 **Parameters**
 
-`type` : specifies the decorator type. Allowed values are "rectangle" and "focus".
-
+`type` : specifies the decorator type. Allowed values are "rectangle" and "focus".  
 `fillStyle` : specifies the fill style. Read more on [fillStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 **Return value**
@@ -666,8 +661,7 @@ updateDrawingStyle(styleId: number, styleDefinition: DrawingStyle): void;
 
 **Parameters**
 
-`styleId` : specifies a `DrawingStyle` which needs to be updated.
-
+`styleId` : specifies a `DrawingStyle` which needs to be updated.  
 `styleDefinition` : Defines a new `DrawingStyle` object.
 
 **Code Snippet**
@@ -723,10 +717,8 @@ setOriginalImage(imageData: Uint8Array | Uint8ClampedArray | HTMLCanvasElement, 
 
 **Parameters**
 
-`imageData` : specifies the image data in format of `Uint8Array` , `Uint8ClampedArray` or `HTMLCanvasElement` .
-
-`width` : specifies the width of the image data.
-
+`imageData` : specifies the image data in format of `Uint8Array` , `Uint8ClampedArray` or `HTMLCanvasElement` .  
+`width` : specifies the width of the image data.  
 `height` : specifies the height of the image data.
 
 **Code Snippet**
@@ -829,14 +821,10 @@ showTip(x: number, y: number, width: number, initialMessage?: string, duration: 
 
 **Parameters**
 
-`x` , `y` : pecifies where to put the Tip message.
-
-`width` : specifies the width of the Tip message, wrapping if the message is too long.
-
-`initialMessage` : the initial message.
-
-`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
-
+`x` , `y` : pecifies where to put the Tip message.  
+`width` : specifies the width of the Tip message, wrapping if the message is too long.  
+`initialMessage` : the initial message.  
+`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.  
 `autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
 
 **Return value**
