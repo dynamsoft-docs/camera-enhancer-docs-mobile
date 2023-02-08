@@ -10,11 +10,10 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
-## 3.3.0
+## 3.3.0 (02/08/2023)
 
 ### Changed
 
-* Changed the behavior when opening a web page from the disk from trying to open the camera to enter the ingle-frame mode.
 * The DrawingLayer is placed over the scan region mask.
 
 ### Fixed

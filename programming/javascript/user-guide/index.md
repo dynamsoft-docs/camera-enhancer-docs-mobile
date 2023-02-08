@@ -240,7 +240,7 @@ Now that the SDK is hosted on your server, you can include it accordingly.
 
 ### Can I open the web page directly from the hard drive?
 
-No, when opening the file directly from the hard drive, you won't be able to access the camera. The recommendation is to deploy this page to your web server and run it over **HTTPS** ("http://localhost" may also work on browsers like Chrome, Edge, etc.).
+Yes, for simple testing purposes, it's ok to open the file directly from the hard drive (`file://`). However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS** or use "http://localhost" during development.
 
 If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server).
 

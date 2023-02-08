@@ -21,7 +21,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 3.3.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#330-02xx2023) |
+| 3.3.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#330-02082023) |
 | 3.2.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#320-12132022) |
 | 3.1.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#310-10202022) |
 | 3.0.1 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#301-08042022) |

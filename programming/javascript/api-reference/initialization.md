@@ -168,14 +168,14 @@ The following two warnings are returned respectively:
 ```json
 {
     id: 1,
-    message: "Not using HTTP protocol, the SDK may not work correctly."
+    message: "The page is opened over file:// and Dynamsoft Camera Enhancer may not work properly. Please open the page via https://."
 }
 ```
 
 ```json
 {
     id: 2,
-    message: "Not connected via SSL (HTTPS), the SDK may not work correctly."
+    message: "Dynamsoft Camera Enhancer may not work properly in a non-secure context. Please open the page via https://."
 }
 ```
 
