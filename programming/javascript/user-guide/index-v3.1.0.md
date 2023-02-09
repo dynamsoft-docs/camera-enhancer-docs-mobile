@@ -79,7 +79,7 @@ The following shows a few ways to download the SDK.
 Depending on how you downloaded the SDK and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dce-js-3.1.0/dist/dce.js"></script>
+<script src="/dynamsoft-camera-enhancer-js-3.1.0/dist/dce.js"></script>
 ```
 
 or

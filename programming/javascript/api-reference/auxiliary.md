@@ -49,8 +49,7 @@ on(eventName: EventName, listener: Function): void;
 
 **Parameters**
 
-`eventName` : specifies the event.
-
+`eventName` : specifies the event.  
 `listener` : specifies the handler function.
 
 **Return value**
@@ -96,8 +95,7 @@ off(eventName: EventName, listener: Function): void;
 
 **Parameters**
 
-`eventName` : specifies the event.
-
+`eventName` : specifies the event.  
 `listener` : specifies the handler function.
 
 **Return value**
