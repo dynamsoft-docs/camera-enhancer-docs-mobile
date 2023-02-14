@@ -10,6 +10,12 @@ breadcrumbText: Android 2.x Release Notes
 
 # Release Notes - Android 2.x
 
+## 2.3.11 (02/14/2023)
+
+### Fixed
+
+- Fixed a crash bug on the devices that do not support 16:9 size resolution.
+
 ## 2.3.10 (12/13/2022)
 
 ### New
