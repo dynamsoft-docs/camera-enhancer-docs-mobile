@@ -39,7 +39,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.3.11 | [iOS]({{ site.android-release-note }}release-notes-2.x.html#2311-02142023) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#2311-01102023) |
+| 2.3.11 | [Android]({{ site.android-release-note }}release-notes-2.x.html#2311-02142023) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#2311-01102023) |
 | 2.3.10 | [Android]({{ site.android-release-note }}release-notes-2.x.html#2310-12132022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#2310-12132022) |
 | 2.3.5 | [Android]({{ site.android-release-note }}release-notes-2.x.html#235-11042022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#235-11152022) |
 | 2.3.4 | [Android]({{ site.android-release-note }}release-notes-2.x.html#234-09222022) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#234-11042022) |
