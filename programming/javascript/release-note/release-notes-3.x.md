@@ -10,6 +10,12 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.3.1 (02/20/2023)
+
+### Fixed
+
+* Fixed a bug where tapping to focus the camera could go beyond the camera's supported range and throw an error.
+
 ## 3.3.0 (02/09/2023)
 
 ### Changed
