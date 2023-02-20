@@ -14,7 +14,7 @@ breadcrumbText: v3.x Release Notes
 
 ### Fixed
 
-* Fixed a bug where tapping to focus the camera could go beyond the camera's supported range and throw an error.
+* Fixed a bug where tapping to focus the camera could go beyond the camera's supported range.
 
 ## 3.3.0 (02/09/2023)
 
