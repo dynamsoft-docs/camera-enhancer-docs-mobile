@@ -8,18 +8,13 @@ noTitleIndex: true
 breadcrumbText: Enable Features
 ---
 
-# Enable Dynamsoft Camera Enhancer Features
+# Advanced Features
 
-DCE features can promote the quality of video streaming to improve the efficiency of image processing.
+On this page, you will read about how to use advanced features of Dynamsoft Camera Enhancer and how they help you on obtaining higher quality video streaming. A valid license is required when using the advanced features.
 
-On this page, you will read:
+## Advanced Features Summary
 
-- All available features of Dynamsoft Camera Enhancer.
-- How to use these features.
-
-## How to Enable DCE Features
-
-`enableFeatures` and `disableFeatures` is the method designed for controlling DCE features. The required parameter of the method is a combined value of `EnumEnhancerFeatures` members. Currently, the members of `EnumEnhancerFeatures` are available as follow:
+All the advanced feaatures are defined in enumeration `EnumEnhancerFeatures`. Currently, they are available as follow:
 
 | Feature | Enumeration Member | Value |
 | ------- | ------ | ----- |
@@ -29,6 +24,12 @@ On this page, you will read:
 | [Fast Mode](#fast-mode) | `EnumFAST_MODE` | 0x08 |
 | [Auto Zoom](#auto-zoom) | `EnumAUTO_ZOOM` | 0x10 |
 | [Smart Torch](#smart-torch) | `EnumSMART_TORCH` | 0x20 |
+
+## How to Use
+
+- Enable: Trigger method `enableFeatures` with the enumeration members of the features that you want to enable.
+- Disable: Trigger method `disableFeatures` with the enumeration members of the features that you want to disable.
+- Check status: Trigger method `isFeatureEnabled` with the enumeration members of the features that you want to check.
 
 Sample code:
 
@@ -51,7 +52,6 @@ dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancer
 dce.disableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancerFeatures.EnumSENSOR_CONTROL.rawValue)
 ```
 
-- An valid license is required to enable these features.
 - You can enable or disable multiple features at one time.
 - When an enabled feature is enabled again, it remains enabled.
 - When a feature is disabled more than once, it remains disabled.
