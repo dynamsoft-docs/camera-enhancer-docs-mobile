@@ -108,7 +108,7 @@ A valid license is required when using the following features:
 - Fast Mode
 - Smart torch
 
-The above features are enabled by triggering method `enableFeatures`. If you are not using these features, you can skip the license activation step.
+The above features are enabled by triggering method [`enableFeatures`](../primary-api/camera-enhancer.md#enablefeatures). If you are not using these features, you can skip the license activation step.
 
 Use the following code to activate the license:
 
