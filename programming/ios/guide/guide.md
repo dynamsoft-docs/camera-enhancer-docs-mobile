@@ -70,6 +70,52 @@ Now Dynamsoft Camera Enhancer is added to your project.
 
 &nbsp;
 
+### License Activation (Optional)
+
+A valid license is required when using the following features:
+
+- Frame Sharpness Filter
+- Sensor Filter
+- Auto Zoom
+- Enhanced Focus
+- Fast Mode
+- Smart torch
+
+The above features are enabled by triggering method `enableFeatures`. If you are not using these features, you can skip the license activation step.
+
+Use the following code to activate the license:
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface AppDelegate ()<DBRLicenseVerificationListener>
+...
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   [DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate:self];
+   ...
+}
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+   // Add you code to do when license activation is succeed or failed.
+}
+```
+2. 
+```swift
+class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
+   ...
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+          ...
+          DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+          ...
+   }
+   func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+          // Add you code to do when license activation is succeed or failed.
+   }
+}
+```
+
 ### Initialize the Camera View and Control the Camera
 
 In this section, we continue working on the `ViewController` file in the project. You will learn how to create a simple camera app.

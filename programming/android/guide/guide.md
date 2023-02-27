@@ -97,32 +97,45 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
     import com.dynamsoft.dce.*;
     ```
 
+### License Activation (Optional)
+
+A valid license is required when using the following features:
+
+- Frame Sharpness Filter
+- Sensor Filter
+- Auto Zoom
+- Enhanced Focus
+- Fast Mode
+- Smart torch
+
+The above features are enabled by triggering method `enableFeatures`. If you are not using these features, you can skip the license activation step.
+
+Use the following code to activate the license:
+
+```java
+CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
+   @Override
+   public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+      if(!isSuccess){
+         error.printStackTrace();
+      }
+   }
+});
+```
+
+>Note:
+>- Network connection is required for the license to work.
+>- "DLS2***" is a time-limited public trial license used in the sample.
+>- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+
 ### Initialize Dynamsoft Camera Enhancer
 
-1. Initialize the license
+Create an instance of Dynamsoft Camera Enhancer
 
-    ```java
-    CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
-        @Override
-        public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-            if(!isSuccess){
-                error.printStackTrace();
-            }
-        }
-    });
-    ```    
-
-    >Note:
-    >- Network connection is required for the license to work.
-    >- "DLS2***" is a time-limited public trial license used in the sample.
-    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
-
-2. Create an instance of Dynamsoft Camera Enhancer
-
-    ```java
-    CameraEnhancer mCameraEnhancer;
-    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-    ```
+```java
+CameraEnhancer mCameraEnhancer;
+mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+```
 
 ### Create Camera View And Control Camera
 
