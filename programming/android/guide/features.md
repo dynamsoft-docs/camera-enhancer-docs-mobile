@@ -44,26 +44,28 @@ mCameraEnhancer.disableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhan
 - When an enabled feature is enabled again, it remains enabled.
 - When a feature is disabled more than once, it remains disabled.
 
-## Frame Filter
+## Advanced Features Details
+
+### Frame Filter
 
 All the frames in the video streaming are quickly evaluated and the majority of the blurry frames will be filtered out. You can enable this feature when your mobile device is always moving. The average time consumption on evaluating each video frame is less than 10ms.
 
-## Sensor Control
+### Sensor Control
 
 The mobile sensor can help on filtering out all the frames that are produced when the device is shaking. It will get better effects when enabled together with **Frame Filter**.
 
-## Enhanced Focus
+### Enhanced Focus
 
 This feature can assist the camera in its focus. It is recommended to be enabled on low-end devices.
 
-## Fast Mode
+### Fast Mode
 
 The video frames are cropped into small sizes when the **Fast Mode** is enabled. The feature will sharply improve the processing efficiency When the targeting areas are always located in the middle of the video. The average time consumption on cropping each frame is less than 10ms.
 
-## Auto Zoom
+### Auto Zoom
 
 **Auto Zoom** feature is specially designed for decoding barcodes from long distances. The camera will zoom in automatically to enlarge the region of interest when a barcode is detected far away. The **Auto Zoom** feature might not work ideally when processing the documents or the text areas. Please disable this feature if the targets are not barcodes.
 
-## Smart Torch
+### Smart Torch
 
 **Smart Torch** feature controls the visibility of the torch button created by `setTorchButton` method. The torch button will be displayed automatically when the environment light level is low. Otherwise, the torch button is hidden. The feature doesn't control the status of the mobile torch. Users have to click on the torch button to turn on the torch.
