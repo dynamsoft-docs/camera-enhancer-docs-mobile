@@ -34,6 +34,9 @@ DCE can implement the sensor filter and frame sharpness filter on the camera vid
 
 The frame filter prevents the frame processing algorithm from spending too much time scanning blurry frames. This benefits the application on improves its working efficiency and accuracy.
 
+> Note:
+> Frame filtering is only available for mobile editions. A valid license is required when using this feature.
+
 ### Frame Cropping
 
 **Fast mode** is the pattern in which we process frames by cropping them. We call this pattern `Fast mode` because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
@@ -43,13 +46,22 @@ The frame filter prevents the frame processing algorithm from spending too much 
     <p>How fast mode is cropping frames</p>
 </div>
 
+> Note:
+> Frame cropping is only available for mobile editions. A valid license is required when using this feature.
+
 ### Auto Focus
 
 For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we will not stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
 
+> Note:
+> Auto focus is only available for mobile editions. A valid license is required when using this feature.
+
 ### Auto Zoom
 
 If the barcode reader is enabled at the same time when DCE is working, we can use the intermediate result of the barcode reader to predetermine the area of interest. DCE will let the camera zoom in to approach the interest area on the occasion that the system did not receive the final result but the intermediate result is available. The zoom factor will be reset if the application decodes on the barcode successfully.
+
+> Note:
+> Auto zoom is only available for mobile editions. A valid license is required when using this feature.
 
 ### Regular Camera Control
 
