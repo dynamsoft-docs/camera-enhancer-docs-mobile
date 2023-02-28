@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Enable Features on iOS - Dynamsoft Camera Enhancer
-description: This is the documentation - Enable Dynamsoft Camera Enhancer Features on iOS.
-keywords:  Camera Enhancer, Enable Features on iOS
+title: Advanced Features on iOS - Dynamsoft Camera Enhancer
+description: This is the documentation - Enable Advanced Features on iOS.
+keywords:  Camera Enhancer, Advanced Features on iOS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Enable Features
+breadcrumbText: Advanced Features
 ---
 
 # Advanced Features

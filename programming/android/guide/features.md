@@ -1,14 +1,15 @@
 ---
 layout: default-layout
-title: Enable Features on Android - Dynamsoft Camera Enhancer
-description: This is the documentation - Enable Dynamsoft Camera Enhancer Features on Android.
-keywords:  Camera Enhancer, Enable Features on Android
+title: Advanced Features on Android - Dynamsoft Camera Enhancer
+description: This is the documentation - Enable Advanced Features on Android.
+keywords:  Camera Enhancer, Advanced Features on Android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Enable Features
+breadcrumbText: Advanced Features
 ---
 
-# Enable Dynamsoft Camera Enhancer Features
+# Advanced Features
 
 On this page, you will read about how to use advanced features of Dynamsoft Camera Enhancer and how they help you on obtaining higher quality video streaming. A valid license is required when using the advanced features.
 
