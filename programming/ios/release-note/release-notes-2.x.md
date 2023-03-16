@@ -10,6 +10,12 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.12 (03/16/2023)
+
+### Fixed
+
+- Fixed a display bug when the display orientation is landscape.
+
 ## 2.3.11 (01/10/2023)
 
 ### Fixed
