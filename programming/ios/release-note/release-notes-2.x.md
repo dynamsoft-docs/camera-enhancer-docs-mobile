@@ -10,6 +10,12 @@ breadcrumbText: iOS 2.x Release Notes
 
 # Release Notes - iOS 2.x
 
+## 2.3.20 (03/27/2023)
+
+### Fixed
+
+- Fixed a bug that might cause thread blocking on the simulator.
+
 ## 2.3.12 (03/16/2023)
 
 ### Fixed
