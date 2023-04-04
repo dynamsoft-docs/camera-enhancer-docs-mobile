@@ -10,6 +10,17 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.3.2 (04/04/2023)
+
+### New
+
+* Added method `convertToPageCoordinates()` to convert the coordinates on image frames to coordinates on the HTML page.
+* Added method `convertToClientCoordinates()` to convert the coordinates on image frames to coordinates within the application's viewport (usually it means the browser window).
+
+### Improved
+
+* When `open()` is called, if there is no camera or the access is denied, an error is thrown right away (previously the error is thrown after a while).
+
 ## 3.3.1 (02/20/2023)
 
 ### Fixed
