@@ -10,6 +10,13 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.3.3 (04/11/2023)
+
+### Fixed
+
+* Fixed a bug that led to a wrong camera being 
+* Added method `convertToClientCoordinates()` to convert the coordinates on image frames to coordinates within the application's viewport (usually it means the browser window).
+
 ## 3.3.2 (04/04/2023)
 
 ### New
