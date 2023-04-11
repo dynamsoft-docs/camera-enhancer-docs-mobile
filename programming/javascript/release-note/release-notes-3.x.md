@@ -10,6 +10,13 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.3.3 (04/11/2023)
+
+### Fixed
+
+* Fixed a bug that led to a wrong camera being selected as the default camera when used on a device running iOS 16.4.
+* Fixed a bug that caused the scan region mask or the decorator to randomly appear and disappear when swiping the screen in Safari on iOS.
+
 ## 3.3.2 (04/04/2023)
 
 ### New
