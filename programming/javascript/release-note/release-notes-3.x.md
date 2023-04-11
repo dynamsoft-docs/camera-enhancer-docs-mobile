@@ -14,8 +14,8 @@ breadcrumbText: v3.x Release Notes
 
 ### Fixed
 
-* Fixed a bug that led to a wrong camera being 
-* Added method `convertToClientCoordinates()` to convert the coordinates on image frames to coordinates within the application's viewport (usually it means the browser window).
+* Fixed a bug that led to a wrong camera being selected as the default camera when used on a device running iOS 16.4.
+* Fixed a bug that caused the scan region mask or the decorator to randomly appear and disappear when swiping the screen in Safari on iOS.
 
 ## 3.3.2 (04/04/2023)
 
