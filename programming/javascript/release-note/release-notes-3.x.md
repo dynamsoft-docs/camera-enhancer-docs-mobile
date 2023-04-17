@@ -15,7 +15,7 @@ breadcrumbText: v3.x Release Notes
 ### Fixed
 
 * Fixed a bug that the `ScanRegionMask` and `ScanRegionLaser` might disappear when the camera is re-opened.
-* Fixed a bug that the `Resolution` might be change when the method `getResolutions()` is triggered.
+* Fixed a bug that the `Resolution` might be changed when the method `getResolutions()` is triggered.
 
 ## 3.3.3 (04/11/2023)
 
