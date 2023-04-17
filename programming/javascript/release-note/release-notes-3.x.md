@@ -10,6 +10,13 @@ breadcrumbText: v3.x Release Notes
 
 # Release Notes - JavaScript 3.x
 
+## 3.3.4 (04/17/2023)
+
+### Fixed
+
+* Fixed a bug that the `ScanRegionMask` and `ScanRegionLaser` might disappear when the camera is re-opened.
+* Fixed a bug that the `Resolution` might be change when the method `getResolutions()` is triggered.
+
 ## 3.3.3 (04/11/2023)
 
 ### Fixed
