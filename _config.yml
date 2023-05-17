@@ -1,9 +1,8 @@
 repositoryUrl: https://github.com/dynamsoft-docs/camera-enhancer-docs-mobile/blob/main
 repository: dynamsoft-docs/camera-enhancer-docs-mobile
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/mobile/
-firstLevelUrl: /camera-enhancer/docs/core
+firstLevelUrl: /camera-enhancer/docs/mobile
 docHomePage: /camera-enhancer/docs/core/introduction/
-frontPageFolder: /camera-enhancer/docs/core/
 
 productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
 productName: Dynamsoft Camera Enhancer
@@ -16,24 +15,19 @@ release_notes: /camera-enhancer/docs/core/release-notes/
 parameter-reference: /camera-enhancer/docs/core/parameters/reference/
 faq: /camera-enhancer/docs/core/faq/
 
-ios: /camera-enhancer/docs/mobile/ios/
-ios-guide: /camera-enhancer/docs/mobile/ios/guide/
-ios-api: /camera-enhancer/docs/mobile/ios/primary-api/
-ios-api-auxiliary: /camera-enhancer/docs/mobile/ios/auxiliary-api/
-ios-release-note: /camera-enhancer/docs/mobile/ios/release-note/
-ios-cameraenhancer: /camera-enhancer/docs/mobile/ios/api/cameraenhancer/
+ios: /camera-enhancer/docs/mobile/programming/ios/
+ios-guide: /camera-enhancer/docs/mobile/programming/ios/guide/
+ios-api: /camera-enhancer/docs/mobile/programming/ios/primary-api/
+ios-api-auxiliary: /camera-enhancer/docs/mobile/programming/ios/auxiliary-api/
+ios-release-note: /camera-enhancer/docs/mobile/programming/ios/release-note/
+ios-cameraenhancer: /camera-enhancer/docs/mobile/programming/ios/api/cameraenhancer/
 
-android: /camera-enhancer/docs/mobile/android/
-android-guide: /camera-enhancer/docs/mobile/android/guide/
-android-api: /camera-enhancer/docs/mobile/android/primary-api/
-android-api-auxiliary: /camera-enhancer/docs/mobile/android/auxiliary-api/
-android-release-note: /camera-enhancer/docs/mobile/android/release-note/
-android-cameraenhancer: /camera-enhancer/docs/mobile/android/primary-api/cameraenhancer/
-
-js: /camera-enhancer/docs/web/javascript/
-js-guide: /camera-enhancer/docs/web/javascript/user-guide/
-js-api: /camera-enhancer/docs/web/javascript/api-reference/
-js-rn: /camera-enhancer/docs/web/javascript/release-note/
+android: /camera-enhancer/docs/mobile/programming/android/
+android-guide: /camera-enhancer/docs/mobile/programming/android/guide/
+android-api: /camera-enhancer/docs/mobile/programming/android/primary-api/
+android-api-auxiliary: /camera-enhancer/docs/mobile/programming/android/auxiliary-api/
+android-release-note: /camera-enhancer/docs/mobile/programming/android/release-note/
+android-cameraenhancer: /camera-enhancer/docs/mobile/programming/android/primary-api/cameraenhancer/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
 flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
@@ -74,7 +68,7 @@ download: /camera-enhancer/downloads/1000021-confirmation/
 
 useVersionTree: true
 
-baseurl: "/camera-enhancer/docs/core/"
+baseurl: "/camera-enhancer/docs/mobile/"
 plugins:
   - jemoji
   - jekyll-sitemap
