@@ -37,7 +37,7 @@ jobs:
           cp -rfp ./camera-enhancer-docs-mobile/* ./DCEDocMobile/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCEDocMobile/
           cd DCEDocMobile && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DCEDocMobile/_site/ ./www.dynamsoft.com/camera-enhancer/docs/core/ prod
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DCEDocMobile/_site/ ./www.dynamsoft.com/camera-enhancer/docs/mobile/ prod
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
