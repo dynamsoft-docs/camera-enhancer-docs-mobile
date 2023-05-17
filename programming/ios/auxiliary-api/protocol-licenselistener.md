@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
 breadcrumbText: iOS Protocol DCELicenseVerificationListener
+permalink: /programming/ios/auxiliary-api/protocol-licenselistener.html
 ---
 
 # DCELicenseVerificationListener

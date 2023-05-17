@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations for version 1.x of Dynamso
 keywords:  Camera Enhancer, Enumerations
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations
+permalink: /programming/enumerations/enum-1.html
 ---
 
 # Enumerations

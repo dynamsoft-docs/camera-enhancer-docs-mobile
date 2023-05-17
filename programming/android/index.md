@@ -5,6 +5,7 @@ description: This is the documentation - Start on Android page of Dynamsoft Came
 keywords:  Camera Enhancer, Start on Android
 needAutoGenerateSidebar: true
 breadcrumbText: Start on Android
+permalink: /programming/android/index.html
 ---
 
 # Start on Android

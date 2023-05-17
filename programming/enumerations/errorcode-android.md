@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations Error code page of Dynamso
 keywords:  Camera Enhancer, Enumerations Error code
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations Error code
+permalink: /programming/enumerations/errorcode-android.html
 ---
 
 # Enumerations Error code

@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, Objective-C & Swift API references, Regular Camera M
 needAutoGenerateSidebar: true
 breadcrumbText: iOS Regular Camera Methods
 noTitleIndex: true
+permalink: /programming/ios/primary-api/camera-v1.0.3.html
 ---
 
 # iOS API Reference - Regular Camera Methods

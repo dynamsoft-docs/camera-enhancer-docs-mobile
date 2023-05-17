@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android Frame Class
+permalink: /programming/android/auxiliary-api/dceframe-v1.0.3.html
 ---
 
 # Frame

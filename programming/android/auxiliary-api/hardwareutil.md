@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android HardwareUtil Class
+permalink: /programming/android/auxiliary-api/hardwareutil.html
 ---
 
 # HardwareUtil

@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, Objective-C & Swift API references, Zoom, Focus
 needAutoGenerateSidebar: true
 breadcrumbText: iOS Focus & Zoom Methods
 noTitleIndex: true
+permalink: /programming/ios/primary-api/zoom-focus-v1.0.3.html
 ---
 
 # iOS API Reference - Focus & Zoom Methods

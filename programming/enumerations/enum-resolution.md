@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations Resolution page of Dynamso
 keywords:  Camera Enhancer, Enumerations Resolution
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations Resolution
+permalink: /programming/enumerations/enum-resolution.html
 ---
 
 # EnumResolution

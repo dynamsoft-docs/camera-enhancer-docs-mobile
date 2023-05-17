@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations Camera Position page of Dy
 keywords:  Camera Enhancer, Enumerations Camera Position
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations Camera Position
+permalink: /programming/enumerations/enum-camera-position.html
 ---
 
 # EnumCameraPosition

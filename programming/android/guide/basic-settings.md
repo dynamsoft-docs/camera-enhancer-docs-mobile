@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, Customize Camera Settings
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Customize Camera Settings
+permalink: /programming/android/guide/basic-settings.html
 ---
 
 # Customize the Basic Settings

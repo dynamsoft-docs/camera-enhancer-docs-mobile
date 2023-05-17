@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations Enhancer Features page of 
 keywords:  Camera Enhancer, Enumerations Enhancer Features
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations Enhancer Features
+permalink: /programming/enumerations/enum-enhancer-features.html
 ---
 
 # EnumEnhancerFeatures

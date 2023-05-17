@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, Objective-C & Swift, API references, Frame Preproces
 needAutoGenerateSidebar: true
 breadcrumbText: iOS Frame Preprocessing Methods
 noTitleIndex: true
+permalink: /programming/ios/primary-api/preprocess-v1.0.3.html
 ---
 
 # iOS API Reference - Frame Preprocessing Methods

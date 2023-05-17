@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android Guide
+permalink: /programming/android/guide/guide.html
 ---
 
 # Dynamsoft Camera Enhancer User Guide for Android (Java)

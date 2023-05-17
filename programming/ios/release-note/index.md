@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, iOS Release Note
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: iOS Release Note
+permalink: /programming/ios/release-note/index.html
 ---
 
 # Dynamsoft Camera Enhancer iOS SDK - Release Notes

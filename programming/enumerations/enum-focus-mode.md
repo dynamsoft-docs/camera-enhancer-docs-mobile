@@ -5,6 +5,7 @@ description: This is the documentation - EnumFocusMode page of Dynamsoft Camera 
 keywords:  Camera Enhancer, Enumerations Focus Mode
 needAutoGenerateSidebar: true
 breadcrumbText: EnumFocusMode
+permalink: /programming/enumerations/enum-focus-mode.html
 ---
 
 # EnumFocusMode

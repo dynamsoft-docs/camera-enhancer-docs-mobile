@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations Camera State page of Dynam
 keywords:  Camera Enhancer, Enumerations Camera State
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations Camera State
+permalink: /programming/enumerations/enum-camera-state.html
 ---
 
 # EnumCameraState

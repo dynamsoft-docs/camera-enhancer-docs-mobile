@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, iOS 2.x Release Notes
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: iOS 2.x Release Notes
+permalink: /programming/ios/release-note/release-notes-2.x.html
 ---
 
 # Release Notes - iOS 2.x

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS DCEFeedback Class
+permalink: /programming/ios/auxiliary-api/dcefeedback.html
 ---
 
 # DCEFeedback

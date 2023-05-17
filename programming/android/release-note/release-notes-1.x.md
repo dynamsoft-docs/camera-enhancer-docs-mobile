@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, Android 1.x Release Note
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Android 1.x Release Note
+permalink: /programming/android/release-note/release-notes-1.x.html
 ---
 
 # Release Notes - Android 1.x

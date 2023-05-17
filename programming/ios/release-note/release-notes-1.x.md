@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, iOS Release Note
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: iOS Release Note
+permalink: /programming/ios/release-note/release-notes-1.x.html
 ---
 
 # Release Note for iOS

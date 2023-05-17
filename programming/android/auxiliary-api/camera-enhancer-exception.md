@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android CameraEnhancerException Class
+permalink: /programming/android/auxiliary-api/camera-enhancer-exception.html
 ---
 
 # CameraEnhancerException

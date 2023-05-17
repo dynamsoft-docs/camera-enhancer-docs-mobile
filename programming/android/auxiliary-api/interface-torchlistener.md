@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: TorchListener
+permalink: /programming/android/auxiliary-api/interface-torchlistener.html
 ---
 
 # TorchListener

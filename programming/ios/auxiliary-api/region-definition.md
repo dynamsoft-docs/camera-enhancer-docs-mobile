@@ -5,6 +5,7 @@ description: This page shows the iRegionDefinition Class of Dynamsoft Camera Enh
 keywords: iRegionDefinition, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/ios/auxiliary-api/region-definition.html
 ---
 
 # Class iRegionDefinition

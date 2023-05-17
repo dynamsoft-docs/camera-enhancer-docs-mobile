@@ -5,6 +5,7 @@ description: This is the documentation - Enumerations Frame Quality page of Dyna
 keywords:  Camera Enhancer, Enumerations Frame Quality
 needAutoGenerateSidebar: true
 breadcrumbText: Enumerations Frame Quality
+permalink: /programming/enumerations/enum-frame-quality.html
 ---
 
 # EnumFrameQuality

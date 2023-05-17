@@ -5,6 +5,7 @@ description: This is the documentation - Get start on iOS page of Dynamsoft Came
 keywords:  Camera Enhancer, Objective-C & Swift
 needAutoGenerateSidebar: true
 breadcrumbText: Start on iOS
+permalink: /programming/ios/index.html
 ---
 
 # Get start on iOS

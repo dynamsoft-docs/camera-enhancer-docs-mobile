@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
 breadcrumbText: iOS Protocol CameraEnhancerListener
+permalink: /programming/ios/auxiliary-api/protocol-dceframelistener-v1.0.3.html
 ---
 
 # CameraEnhancerListener

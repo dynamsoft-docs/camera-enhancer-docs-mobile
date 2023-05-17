@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: DCEFrameListener
+permalink: /programming/android/auxiliary-api/interface-dceframelistener.html
 ---
 
 # DCEFrameListener

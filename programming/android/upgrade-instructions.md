@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, upgrade
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Upgrade Instructions
+permalink: /programming/android/upgrade-instructions.html
 ---
 
 # How to Upgrade

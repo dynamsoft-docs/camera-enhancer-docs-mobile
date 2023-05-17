@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS FramePackage Class
+permalink: /programming/ios/auxiliary-api/dceframe-v1.0.3.html
 ---
 
 # FramePackage

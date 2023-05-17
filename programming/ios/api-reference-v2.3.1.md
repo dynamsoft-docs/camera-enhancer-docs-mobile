@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS API references
+permalink: /programming/ios/api-reference-v2.3.1.html
 ---
 
 # iOS API references

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS CameraEnhancer Class
+permalink: /programming/ios/primary-api/camera-enhancer-v2.1.3.html
 ---
 
 # CameraEnhancer Class

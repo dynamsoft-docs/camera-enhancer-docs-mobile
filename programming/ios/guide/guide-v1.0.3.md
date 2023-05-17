@@ -6,6 +6,7 @@ keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: iOS Guide
+permalink: /programming/ios/guide/guide-v1.0.3.html
 ---
 
 # User Guide on Objective-C & Swift

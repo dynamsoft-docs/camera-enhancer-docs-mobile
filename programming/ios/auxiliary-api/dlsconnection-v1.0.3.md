@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS iDCEDLSConnectionParameters Class
+permalink: /programming/ios/auxiliary-api/dlsconnection-v1.0.3.html
 ---
 
 # iDCEDLSConnectionParameters
