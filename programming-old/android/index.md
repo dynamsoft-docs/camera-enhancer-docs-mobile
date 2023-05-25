@@ -8,7 +8,7 @@ breadcrumbText: Start on Android
 permalink: /programming/android/index.html
 ---
 
-# Start on Android 4.x Version
+# Start on Android 2.x Versions
 
 ## Getting started
 
