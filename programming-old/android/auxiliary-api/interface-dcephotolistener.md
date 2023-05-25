@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: DCEPhotoListener
-permalink: /programming/android/auxiliary-api/interface-dcephotolistener.html
+permalink: /programming-old/android/auxiliary-api/interface-dcephotolistener.html
 ---
 
 # DCEPhotoListener

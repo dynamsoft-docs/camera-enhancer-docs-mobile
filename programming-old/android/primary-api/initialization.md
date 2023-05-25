@@ -1,5 +1,5 @@
 ---
 layout: default-layout
 ignore: true
-permalink: /programming/android/primary-api/initialization.html
+permalink: /programming-old/android/primary-api/initialization.html
 ---

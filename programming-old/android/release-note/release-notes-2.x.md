@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android 2.x Release Notes
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Android 2.x Release Notes
-permalink: /programming/android/release-note/release-notes-2.x.html
+permalink: /programming-old/android/release-note/release-notes-2.x.html
 ---
 
 # Release Notes - Android 2.x

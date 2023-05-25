@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android Release Note
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Android Release Note
-permalink: /programming/android/release-note/index.html
+permalink: /programming-old/android/release-note/index.html
 ---
 
 # Dynamsoft Camera Enhancer Android SDK - Release Notes

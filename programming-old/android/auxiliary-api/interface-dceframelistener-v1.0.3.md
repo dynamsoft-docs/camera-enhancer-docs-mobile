@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: CameraListener
-permalink: /programming/android/auxiliary-api/interface-dceframelistener-v1.0.3.html
+permalink: /programming-old/android/auxiliary-api/interface-dceframelistener-v1.0.3.html
 ---
 
 # CameraListener

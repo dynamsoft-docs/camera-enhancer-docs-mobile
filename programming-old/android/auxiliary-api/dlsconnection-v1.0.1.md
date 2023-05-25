@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android DMLTSConnectionParameters Class
-permalink: /programming/android/auxiliary-api/dlsconnection-v1.0.1.html
+permalink: /programming-old/android/auxiliary-api/dlsconnection-v1.0.1.html
 ---
 
 # DMLTSConnectionParameters

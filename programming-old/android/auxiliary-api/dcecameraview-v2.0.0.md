@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android DCECameraView Class
-permalink: /programming/android/auxiliary-api/dcecameraview-v2.0.0.html
+permalink: /programming-old/android/auxiliary-api/dcecameraview-v2.0.0.html
 ---
 
 # DCECameraView
