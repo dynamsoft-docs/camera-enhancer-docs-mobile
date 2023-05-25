@@ -30,11 +30,11 @@ android-release-note: /camera-enhancer/docs/mobile/programming/android/release-n
 android-cameraenhancer: /camera-enhancer/docs/mobile/programming/android/primary-api/cameraenhancer/
 
 android-old: /camera-enhancer/docs/mobile/programming-old/android/
-android-guide-old: /camera-enhancer/docs/mobile/programming-old/android/guide/
-android-api-old: /camera-enhancer/docs/mobile/programming-old/android/primary-api/
-android-api-auxiliary-old: /camera-enhancer/docs/mobile/programming-old/android/auxiliary-api/
-android-release-note-old: /camera-enhancer/docs/mobile/programming-old/android/release-note/
-android-cameraenhancer-old: /camera-enhancer/docs/mobile/programming-old/android/primary-api/cameraenhancer/
+android-old-guide: /camera-enhancer/docs/mobile/programming-old/android/guide/
+android-old-api: /camera-enhancer/docs/mobile/programming-old/android/primary-api/
+android-old-api-auxiliary: /camera-enhancer/docs/mobile/programming-old/android/auxiliary-api/
+android-old-release-note: /camera-enhancer/docs/mobile/programming-old/android/release-note/
+android-old-cameraenhancer: /camera-enhancer/docs/mobile/programming-old/android/primary-api/cameraenhancer/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
 flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
