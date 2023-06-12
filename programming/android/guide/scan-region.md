@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Customize Camera Settings
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Set a Scan Region
-permalink: /programming/android/guide/basic-settings.html
+permalink: /programming/android/guide/scan-region.html
 ---
 
 # How to Set a Scan Region
