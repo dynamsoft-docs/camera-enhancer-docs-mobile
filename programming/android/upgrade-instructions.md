@@ -11,13 +11,11 @@ permalink: /programming/android/upgrade-instructions.html
 
 # How to Upgrade to 4.x
 
-## From Version 3.x to 4.x
+## From Version 2.x to 4.x
 
 ### CameraEnhancer API changes
 
-If you are using the following APIs, you have to change your code:
-
-The parameters or return value of the following APIs are changed:
+The following APIs are changed on parameters and return values:
 
 * [`CameraEnhancer`](primary-api/camera-enhancer.md#cameraenhancer): Added parameter `CameraView cameraView`.
 * [`setScanRegion`](primary-api/camera-enhancer.md#setscanregion): Changed the type of `region` from `iRegionDefinition` to `DSRect`.
@@ -27,8 +25,8 @@ The following APIs are replaced by new APIs:
 
 * `updateAdvancedSettings`: Replaced by `initSystemSettings` and `initEnhancedSettings`.
 * `getMaxZoomFactor`: Replaced by getCapabilities, which returns a `Capability` class that include `maxZoomFactor` attribute.
-* `enableFeatures`: Replaced by `enableEnhancedFeatures` (renamed, no change).
-* `getAllResolutions`: Replaced by `getAvailableResolutions` (renamed, no change).
+* `enableFeatures`: Replaced by `enableEnhancedFeatures` (renamed, no other change).
+* `getAllResolutions`: Replaced by `getAvailableResolutions` (renamed, no other change).
 * `set/getScanRegionVisible`: Replaced by a series of methods in `CameraView` class.
   * `setScanRegionMaskVisible`
   * `getScanRegionMaskVisible`
@@ -41,17 +39,25 @@ Removed:
 
 ### CameraView API changes
 
-`DCECameraView` is renamed to `CameraView`
+`DCECameraView` is renamed to `CameraView`. The constructor is renamed to `CameraView()`.
 
-If you are using the following APIs, you have to change your code:
+The following APIs are replaced with new UI configuration APIs. Read [How to draw graphics on the views](guide/add-drawing-item.md) for more details.
 
-The parameters or return value of the following APIs are changed:
+* `setOverlayVisible`
+* `getOverlayVisible`
+* `setOverlayColour`
+* `setViewfinderVisible`
+* `getViewfinderVisible`
+* `setViewfinder`
 
-Removed:
+### Other Changes
 
-* setOverlayVisible
-* getOverlayVisible
-* setOverlayColour
-* setViewfinderVisible
-* getViewfinderVisible
-* setViewfinder
+Removed
+
+* `RegionDefinition`: Replaced by `DSRect`
+* `DCEFrame`: Replaced by `ImageData`. The auxiliary attributes are stored in `VideoFrameTag` of `ImageData`.
+* `DCEFeedback`: Replaced by `Feedback` (renamed, no other change).
+* `DCEFrameListener`: Replaced by `VideoFrameListener` (renamed, no other change).
+* `DCECameraStateListener`: Replaced by `CameraStateListener` (renamed, no other change).
+* `DCEPhotoListener`: Replaced by `CameraStateListener` (renamed, no other change).
+* `DCELicenseVerificationListener`: Replaced by `LicenseVerficationListener` in `LicenseUtility` class.
