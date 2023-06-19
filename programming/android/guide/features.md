@@ -31,7 +31,6 @@ All the advanced feaatures are defined in enumeration `EnumEnhancerFeatures`. Cu
 
 - Enable: Trigger method `enableFeatures` with the enumeration members of the features that you want to enable.
 - Disable: Trigger method `disableFeatures` with the enumeration members of the features that you want to disable.
-- Check status: Trigger method `isFeatureEnabled` with the enumeration members of the features that you want to check.
 
 Sample code:
 
