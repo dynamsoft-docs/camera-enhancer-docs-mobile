@@ -18,6 +18,10 @@ mImageEditorView = findViewById(R.id.editor_view);
 
 // Create an ArrayList for appending DrawingItems
 ArrayList<DrawingItem> drawingItemArray = new ArrayList<DrawingItem>();
+// rectItem.setDrawingStyleId(DrawingStyleManager.STYLE_ORANGE_STROKE_FILL);
+drawingItemArray.add(quadItem);
+// Set the drawingItems to the layer
+layer.setDrawingItems(drawingItemArray);
 
 // Suppose you receive a series of detected quad result items as quadResultItems.
 DetectedQuadResultItem[] quadResultItems = result.getItems();
