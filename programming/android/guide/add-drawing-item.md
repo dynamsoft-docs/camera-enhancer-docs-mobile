@@ -11,6 +11,8 @@ permalink: /programming/android/guide/add-drawing-item.html
 
 # Add DrawingItem
 
+## Drawing Basic Grahpics with DrawingItems
+
 ```java
 // Create ImageEditorView
 private ImageEditorView mImageEditorView;
@@ -40,6 +42,11 @@ for (int i=0; i <= quadResultItems.length; i++)
 
     drawingItemArray.add(quadItem);
 }
+
+onDetectedQuadsReceived(){
+
+}
+
 // Get DDN layer with Layer ID and add the drawing items.
 DrawingLayer layer = mImageEditorView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID);
 layer.setDrawingItems(drawingItemArray);
@@ -49,3 +56,5 @@ layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE_FILL);
 layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE_FILL, EnumDrawingItemState.DEFAULT);
 layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE_FILL, EnumDrawingItemState.DEFAULT, EnumDrawingItemMediaType.DIMT_QUADRILATERAL);
 ```
+
+## Drawing Graphics on Your Own View
