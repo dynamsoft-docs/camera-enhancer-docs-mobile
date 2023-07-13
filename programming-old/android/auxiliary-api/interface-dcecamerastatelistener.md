@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: DCECameraStateListener
-permalink: /programming-old/android/auxiliary-api/interface-dcecamerastatelistener.html
+permalink: /programming/android/auxiliary-api/interface-dcecamerastatelistener.html
 ---
 
 # DCECameraStateListener

@@ -1,5 +1,5 @@
 ---
 layout: default-layout
 ignore: true
-permalink: /programming-old/android/primary-api/camera.html
+permalink: /programming/android/primary-api/camera.html
 ---

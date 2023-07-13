@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android API references, Filter
 needAutoGenerateSidebar: true
 breadcrumbText: Android Filter Methods
 noTitleIndex: true
-permalink: /programming-old/android/primary-api/preprocess-v1.0.3.html
+permalink: /programming/android/primary-api/preprocess-v1.0.3.html
 ---
 
 # Frame Preprocessing Methods

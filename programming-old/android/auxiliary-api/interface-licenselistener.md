@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: DCELicenseVerificationListener
-permalink: /programming-old/android/auxiliary-api/interface-licenselistener.html
+permalink: /programming/android/auxiliary-api/interface-licenselistener.html
 ---
 
 # DCELicenseVerificationListener

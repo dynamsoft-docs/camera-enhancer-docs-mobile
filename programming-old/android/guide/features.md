@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Advanced Features
-permalink: /programming-old/android/guide/features.html
+permalink: /programming/android/guide/features.html
 ---
 
 # Advanced Features
@@ -31,7 +31,6 @@ All the advanced feaatures are defined in enumeration `EnumEnhancerFeatures`. Cu
 
 - Enable: Trigger method `enableFeatures` with the enumeration members of the features that you want to enable.
 - Disable: Trigger method `disableFeatures` with the enumeration members of the features that you want to disable.
-- Check status: Trigger method `isFeatureEnabled` with the enumeration members of the features that you want to check.
 
 Sample code:
 

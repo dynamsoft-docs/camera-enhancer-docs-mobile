@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android DCEFeedback Class
-permalink: /programming-old/android/auxiliary-api/dcefeedback.html
+permalink: /programming/android/auxiliary-api/dcefeedback.html
 ---
 
 # DCEFeedback

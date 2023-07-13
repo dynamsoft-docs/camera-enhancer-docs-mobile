@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android Initialization Methods
-permalink: /programming-old/android/primary-api/initialization-v1.0.3.html
+permalink: /programming/android/primary-api/initialization-v1.0.3.html
 ---
 
 # Initialization Methods

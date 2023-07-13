@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: CameraLTSLicenseVerificationListener
-permalink: /programming-old/android/auxiliary-api/interface-licenselistener-v1.0.1.html
+permalink: /programming/android/auxiliary-api/interface-licenselistener-v1.0.1.html
 ---
 
 

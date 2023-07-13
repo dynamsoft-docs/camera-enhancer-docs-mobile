@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Guide on Android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Android Guide
-permalink: /programming-old/android/guide/guide-v1.0.3.html
+permalink: /programming/android/guide/guide-v1.0.3.html
 ---
 
 # User Guide on Android (Java & Kotlin)

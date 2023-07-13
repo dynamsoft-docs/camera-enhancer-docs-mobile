@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Focus, Zoom, Android API Reference
 needAutoGenerateSidebar: true
 breadcrumbText: Android Zoom and Focus
 noTitleIndex: true
-permalink: /programming-old/android/primary-api/zoom-focus-v1.0.3.html
+permalink: /programming/android/primary-api/zoom-focus-v1.0.3.html
 ---
 
 # Focus & Zoom Methods

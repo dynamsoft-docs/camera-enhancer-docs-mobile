@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Android API references, Regular Camera Methods
 needAutoGenerateSidebar: true
 breadcrumbText: Android Regular Camera Methods
 noTitleIndex: true
-permalink: /programming-old/android/primary-api/camera-v1.0.3.html
+permalink: /programming/android/primary-api/camera-v1.0.3.html
 ---
 
 # Regular Camera Methods
