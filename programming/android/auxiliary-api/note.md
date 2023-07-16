@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSNote
 
-The `DSNote` class represents a note, which contains a key and content.
+The `Note` class represents a note, which contains a key and content.
 
 ## Definition
 
@@ -19,38 +19,53 @@ The `DSNote` class represents a note, which contains a key and content.
 ```java
 class Note
 ```
-2. 
-```kotlin
-class Note
-```
 
 ## Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`name`](#name) | *NSString \** | Set/get the name of the Note. |
-| [`content`](#content) | *NSString \** | Set/get the content of the Note. |
+| `Note` | The constructor. Create an instance of the `Note`. |
+| [`setName`](#name) | Set/get the name of the `Note`. |
+| [`getName`](#name) | Set/get the name of the `Note`. |
+| [`setContent`](#content) | Set/get the content of the `Note`. |
+| [`getContent`](#content) | Set/get the content of the `Note`. |
 
-### name
+### Note
 
-Set/get the name of the Note.
-
-```java
-@property(nonatomic, copy) NSString *name;
-```
-2. 
-```kotlin
-var name: String? { get set }
-```
-
-### content
-
-Set/get the content of the Note.
+The constructor. Create an instance of the `Note`.
 
 ```java
-@property(nonatomic, copy) NSString *content;
+Note(String name, String content){}
 ```
-2. 
-```kotlin
-var content: String? { get set }
+
+### setName
+
+Set the name of the `Note`.
+
+```java
+void setName(String name){}
+```
+
+### getName
+
+Get the name of the `Note`.
+
+```java
+String getName(){}
+```
+
+### setContent
+
+Set the content of the `Note`.
+
+```java
+void setContent(String content){}
+```
+
+### getContent
+
+Get the content of the `Note`.
+
+```java
+String getContent(){}
 ```

@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: CameraEnhancer - Dynamsoft Camera Enhancer API Reference
-Description: The class DSCameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
+Description: The class CameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
 Keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSCameraEnhancer
+# CameraEnhancer
 
-The `DSCameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer that defines the camera controlling APIs. It is a subclass of `DSImageSourceAdapter`.
+The `CameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer that defines the camera controlling APIs. It is a subclass of `ImageSourceAdapter`.
 
 ## Definition
 
@@ -24,8 +24,8 @@ class CameraEnhancer extends ImageSourceAdapter
 
 | Method | Description |
 |------- |-------------|
-| [`addListener`](#addlistener) | Add a DSVideoFrameListener to receive callback when video frames are output. |
-| [`removeListener`](#removelistener) | Remove a DSVideoFrameListener. |
+| [`addListener`](#addlistener) | Add a VideoFrameListener to receive callback when video frames are output. |
+| [`removeListener`](#removelistener) | Remove a VideoFrameListener. |
 | [`takePhoto`](#takephoto) | Take a photo. |
 | [`getCameraPosition`](#getcameraposition) | Get the camera position. |
 | [`setZoomFactor`](#setzoomfactor) | Set the zoom factor of the camera. You can use getCapabilities to check the maximum available zoom factor. |
@@ -41,11 +41,11 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`resetEnhancedSettings`](#resetenhancedsettings) | Reset the enhanced settings to default value. |
 | [`getCapabilities`](#getcapabilities) | Get the device capabilities including zoom factor, ISO, exposure time, etc. |
 | [`getCameraState`](#getcamerastate) | Get the device capabilities including zoom factor, ISO, exposure time, etc. |
-| [`setCameraStateListener`](#setcamerastatelistener) | Set a DSCameraStateListener to receive callback when the camera state changed. |
-| [`enableEnhancedFeatures`](#enableenhancedfeatures) | Enable the specified enhanced features. View DSEnhancedFeatures for more details. |
-| [`disableEnhancedFeatures`](#disableenhancedfeatures) | Disable the specified enhanced features. View DSEnhancedFeatures for more details. |
-| [`initWithView`](#cameraenhancerviewactivity) | Create an instance of DSCameraEnhancer. |
-| [`init`](#cameraenhancer) | Create an instance of DSCameraEnhancer. |
+| [`setCameraStateListener`](#setcamerastatelistener) | Set a CameraStateListener to receive callback when the camera state changed. |
+| [`enableEnhancedFeatures`](#enableenhancedfeatures) | Enable the specified enhanced features. View EnumEnhancedFeatures for more details. |
+| [`disableEnhancedFeatures`](#disableenhancedfeatures) | Disable the specified enhanced features. View EnumEnhancedFeatures for more details. |
+| [`initWithView`](#cameraenhancerviewactivity) | Create an instance of CameraEnhancer. |
+| [`init`](#cameraenhancer) | Create an instance of CameraEnhancer. |
 | [`setScanRegion`](#setscanregion) | Set a scan region. The video frame is cropped based on the scan region. |
 | [`getScanRegion`](#getscanregion) | Get a scan region. |
 | [`open`](#open) | Open the camera. |
@@ -63,15 +63,15 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
-| [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by DSVideoFrameTag. |
-| [`getImageCaptureDistanceMode`](#getimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by DSVideoFrameTag. |
+| [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
+| [`getImageCaptureDistanceMode`](#getimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
 | [`getAutoZoomRange`](#getautozoomrange) | Get the range of auto zoom. |
-| [`cameraView`](#setcameraview) | Set/get the DSCameraView instance that bind with this DSCameraEnhancer instance. |
+| [`cameraView`](#setcameraview) | Set/get the CameraView instance that bind with this CameraEnhancer instance. |
 
 ### addListener
 
-Add a DSVideoFrameListener to receive callback when video frames are output.
+Add a VideoFrameListener to receive callback when video frames are output.
 
 ```java
 void addListener(VideoFrameListener listener){}
@@ -79,11 +79,11 @@ void addListener(VideoFrameListener listener){}
 
 **Parameters**
 
-`listener`: A delegate object of DSVideoFrameListener to receive video frame as a DSImageData.
+`listener`: A delegate object of VideoFrameListener to receive video frame as a ImageData.
 
 ### removeListener
 
-Remove a DSVideoFrameListener.
+Remove a VideoFrameListener.
 
 ```java
 void removeListener(VideoFrameListener listener){}
@@ -91,7 +91,7 @@ void removeListener(VideoFrameListener listener){}
 
 **Parameters**
 
-`listener`: A delegate object of DSVideoFrameListener.
+`listener`: A delegate object of VideoFrameListener.
 
 ### takePhoto
 
@@ -103,7 +103,7 @@ void takePhoto(PhotoListener listener) throws CameraEnhancerException{}
 
 **Parameters**
 
-`photolistener`: A delegate object of DSPhotoListener to receive the captured photo.
+`photolistener`: A delegate object of PhotoListener to receive the captured photo.
 
 ### getCameraPosition
 
@@ -280,7 +280,7 @@ Capabilities getCapabilities(){}
 
 **Return Value**
 
-A DSCapabilities object.
+A Capabilities object.
 
 ### getCameraState
 
@@ -296,7 +296,7 @@ The camera state.
 
 ### setCameraStateListener
 
-Set a DSCameraStateListener to receive callback when the camera state changed.
+Set a CameraStateListener to receive callback when the camera state changed.
 
 ```java
 void setCameraStateListener (CameraStateListener listener){}
@@ -304,11 +304,11 @@ void setCameraStateListener (CameraStateListener listener){}
 
 **Parameters**
 
-`listener`: A delegate object of DSCameraStateListener to the camera state.
+`listener`: A delegate object of CameraStateListener to the camera state.
 
 ### enableEnhancedFeatures
 
-Enable the specified enhanced features. View DSEnhancedFeatures for more details.
+Enable the specified enhanced features. View `EnumEnhancedFeatures` for more details.
 
 ```java
 void enableEnhancedFeatures(int enhancerFeatures) throws CameraEnhancerException{}
@@ -316,7 +316,7 @@ void enableEnhancedFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancedFeatures`: A combined value of DSEnhancedFeatures which indicates a series of enhanced features.
+`enhancedFeatures`: A combined value of `EnumEnhancedFeatures` which indicates a series of enhanced features.
 
 **Return Value**
 
@@ -324,7 +324,7 @@ A bool value that indicates whether the enhanced features are enabled successful
 
 ### disableEnhancedFeatures
 
-Disable the specified enhanced features. View DSEnhancedFeatures for more details.
+Disable the specified enhanced features. View EnumEnhancedFeatures for more details.
 
 ```java
 void disableEnhancedFeatures(int enhancerFeatures){}
@@ -332,11 +332,11 @@ void disableEnhancedFeatures(int enhancerFeatures){}
 
 **Parameters**
 
-`enhancedFeatures`: A combined value of DSEnhancedFeatures which indicates a series of enhanced features.
+`enhancedFeatures`: A combined value of EnumEnhancedFeatures which indicates a series of enhanced features.
 
 ### CameraEnhancer(view,activity)
 
-Create an instance of DSCameraEnhancer.
+Create an instance of CameraEnhancer.
 
 ```java
 CameraEnhancer(CameraView view, Activity activity){}
@@ -344,16 +344,16 @@ CameraEnhancer(CameraView view, Activity activity){}
 
 **Parameters**
 
-`view`: A DSCameraView instance.
+`view`: A CameraView instance.
 `activity`: An activity object.
 
 **Return Value**
 
-An instance of DSCameraEnhancer.
+An instance of CameraEnhancer.
 
 ### CameraEnhancer
 
-Create an instance of DSCameraEnhancer.
+Create an instance of CameraEnhancer.
 
 ```java
 CameraEnhancer(Activity activity){}
@@ -361,7 +361,7 @@ CameraEnhancer(Activity activity){}
 
 **Return Value**
 
-An instance of DSCameraEnhancer.
+An instance of CameraEnhancer.
 
 ### setScanRegion
 
@@ -418,7 +418,7 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException{}
 
 **Parameters**
 
-`resolution` One of the DSResolution value.
+`resolution` One of the EnumResolution value.
 
 ### getResolution
 
@@ -483,7 +483,7 @@ selectCamera(EnumCameraPosition position){}
 
 **Parameters**
 
-`position`: One of the DSCameraPosition value.
+`position`: One of the `EnumCameraPosition` value.
 `error`: A NSError pointer. An error occurs when failed to switch the camera.
 
 **Return Value**
@@ -589,7 +589,7 @@ A CGPoint (coordinate measured in PT) converted from the video CGPoint measured 
 
 ### setImageCaptureDistanceMode
 
-Set the capture distance property of the video frame. The capture distance property will be recorded by DSVideoFrameTag.
+Set the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag.
 
 ```java
 void setImageCaptureDistanceMode(EnumImageCaptureDistanceMode mode){}
@@ -597,7 +597,7 @@ void setImageCaptureDistanceMode(EnumImageCaptureDistanceMode mode){}
 
 ### getImageCaptureDistanceMode
 
-Get the capture distance property of the video frame. The capture distance property will be recorded by DSVideoFrameTag.
+Get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag.
 
 ```java
 EnumImageCaptureDistanceMode getImageCaptureDistanceMode(){}

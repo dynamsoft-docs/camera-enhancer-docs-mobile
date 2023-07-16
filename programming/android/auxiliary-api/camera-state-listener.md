@@ -19,10 +19,6 @@ The `DSCameraStateListener` protocol includes methods for monitoring the camera 
 ```java
 interface CameraStateListener
 ```
-2. 
-```kotlin
-interface CameraStateListener
-```
 
 ## Methods
 

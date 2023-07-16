@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: PhotoListener - Dynamsoft Core Module Android Edition API Reference
-Description: The protocol DSPhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
+Description: The interface PhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
 Keywords: photo listener, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSPhotoListener
+# PhotoListener
 
-The `DSPhotoListener` protocol defines the methods for monitoring the photo output.
+The `PhotoListener` interface defines the methods for monitoring the photo output.
 
 ## Definition
 
@@ -18,10 +18,6 @@ The `DSPhotoListener` protocol defines the methods for monitoring the photo outp
 
 ```java
 interface PhotoListener
-```
-2. 
-```kotlin
-protocol PhotoListenerProtocol
 ```
 
 ## Methods
@@ -34,23 +30,9 @@ protocol PhotoListenerProtocol
 The method for monitoring the photo output.
 
 ```java
-- (void)onPhotoOutput:(NSData *)jpegBytes;
-```
-2. 
-```kotlin
-func onPhotoOutput(_ jpegBytes: Data)
+void onPhotoOutput(byte[] bytes);
 ```
 
 **Parameters**
 
-`jpegBytes`: The captured photo as JPEG bytes.
-
-**Code Snippet**
-
-```java
-[listener onPhotoOutput:jpegData];
-```
-2. 
-```kotlin
-listener.onPhotoOutput(jpegData)
-```
+`bytes`: The captured photo as JPEG bytes.

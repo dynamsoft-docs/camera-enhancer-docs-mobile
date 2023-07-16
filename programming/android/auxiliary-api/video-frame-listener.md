@@ -8,9 +8,9 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSVideoFrameListener
+# VideoFrameListener
 
-The `DSVideoFrameListener` protocol includes methods for monitoring the camera state.
+The `VideoFrameListener` protocol includes methods for monitoring the camera state.
 
 ## Definition
 
@@ -18,10 +18,6 @@ The `DSVideoFrameListener` protocol includes methods for monitoring the camera s
 
 ```java
 interface VideoFrameListener
-```
-2. 
-```kotlin
-protocol VideoFrameListenerProtocol
 ```
 
 ## Methods
@@ -31,12 +27,7 @@ protocol VideoFrameListenerProtocol
 The method for monitoring the camera state and receiving call.
 
 ```java
-- (void)onFrameOutPut:(DSImageData*)frame
-            timeStamp:(NSTimeInterval)timeStamp;
-```
-2. 
-```kotlin
-func onFrameOutPut(_ frameextends ImageData, timeStamp: NSTimeInterval)
+void onFrameOutput(ImageData frame, long timeStamp);
 ```
 
 **Parameters**

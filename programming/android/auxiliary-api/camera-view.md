@@ -33,16 +33,17 @@ class CameraView
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`setScanRegionMaskStyle`](#setscanregionmaskstyle) | Set the style of the scan region mask. |
+| [`setTorchButtonVisible`](#settorchbuttonvisible) | Set/get the visibility of the torch button. |
+| [`isTorchButtonVisible`](#istorchbuttonvisible) | Set/get the visibility of the torch button. |
+| [`setScanRegionMaskVisible`](#setscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
+| [`isScanRegionMaskVisible`](#isscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
+| [`setScanLaserVisible`](#setscanlaservisible) | Set the visibility of the scan laser. |
+| [`isScanLaserVisible`](#isscanlaservisible) | Get the visibility of the scan laser. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
-| [`setTorchButtonVisible`](#settorchbuttonvisible) | *BOOL* | Set/get the visibility of the torch button. |
-| [`isTorchButtonVisible`](#istorchbuttonvisible) | *BOOL* | Set/get the visibility of the torch button. |
-| [`setScanRegionMaskVisible`](#setscanregionmaskvisible) | *BOOL* | Set/get the visibility of the scan region mask. |
-| [`isScanRegionMaskVisible`](#isscanregionmaskvisible) | *BOOL* | Set/get the visibility of the scan region mask. |
-| [`setScanLaserVisible`](#setscanlaservisible) | *BOOL* | Set the visibility of the scan laser. |
-| [`isScanLaserVisible`](#isscanlaservisible) | *BOOL* | Get the visibility of the scan laser. |
-| [`setTipConfig`](#settipconfig) | *DSTipConfig* | Set/get the tip configurations. |
-| [`setTipVisible`](#settipvisible) | *BOOL* | Set the visibility of tip. |
-| [`isTipVisible`](#istipvisible) | *BOOL* | Get the visibility of tip. |
+| [`setTipConfig`](#settipconfig) | Set/get the tip configurations. |
+| [`getTipConfig`](#gettipconfig) | Set/get the tip configurations. |
+| [`setTipVisible`](#settipvisible) | Set the visibility of tip. |
+| [`isTipVisible`](#istipvisible) | Get the visibility of tip. |
 
 ### CameraView
 

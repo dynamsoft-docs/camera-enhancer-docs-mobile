@@ -17,11 +17,6 @@ The `DSDrawingLayer` class represents a drawing layer, which is used for managin
 *Assembly:* package com.dynamsoft.dce
 
 ```java
-NS_ASSUME_NONNULL_BEGIN
-class DrawingLayer
-```
-2. 
-```kotlin
 class DrawingLayer
 ```
 
@@ -34,19 +29,14 @@ class DrawingLayer
 | `DLR_LAYER_ID` | The preset DrawingLayer of Dynamsoft Label Recognizer. |
 | `USER_REFINED_LAYER_BASE_ID` | The IDs of user defined Drawinglayers start from 100. |
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-
 ## Methods
 
 | Method | Description |
 |------- |-------------|
 | [`DrawingLayer`](#drawinglayer) | Create an DrawingLayer with the specified ID. |
-| [`getId`](#getid) | *NSInteger* |Get the layer ID of the layer. |
-| [`setVisible`](#visible) | *BOOL* | Set/get the visibility of the layer. |
-| [`isVisible`](#visible) | *BOOL* | Set/get the visibility of the layer. |
+| [`getId`](#getid) | Get the layer ID of the layer. |
+| [`setVisible`](#visible) | Set/get the visibility of the layer. |
+| [`isVisible`](#visible) | Set/get the visibility of the layer. |
 | [`addDrawingItems`](#adddrawingitems) | Add a group of DrawingItem to the layer. |
 | [`setDrawingItems`](#setdrawingitems) | Set the DrawingItems to be displayed on the layer. |
 | [`getDrawingItems`](#getdrawingitems) | Get all the DrawingItems on the layer. |

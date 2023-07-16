@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: LineDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DSLineDrawingItem of Dynamsoft Camera Enhancer represents a line drawing item used for drawing line segments on the view.
+Description: The class LineDrawingItem of Dynamsoft Camera Enhancer represents a line drawing item used for drawing line segments on the view.
 Keywords: line drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSLineDrawingItem
+# LineDrawingItem
 
-The `DSLineDrawingItem` class is a subclass of `DSDrawingItem` and represents a line drawing item used for drawing line segments on the view.
+The `LineDrawingItem` class is a subclass of `DrawingItem` and represents a line drawing item used for drawing line segments on the view.
 
 ## Definition
 
@@ -19,96 +19,61 @@ The `DSLineDrawingItem` class is a subclass of `DSDrawingItem` and represents a 
 ```java
 class LineDrawingItem extends DrawingItem
 ```
-2. 
-```kotlin
-class LineDrawingItem extends DrawingItem
-```
-
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`line`](#line) | *DSLineSegment \** |Get the line information of the DSLineDrawingItem. |
 
 ## Methods
 
 | Method | Description |
 |------- |-------------|
-| [`initWithLine`](#initwithline) | Create an instance of DSLineDrawingItem. |
+| [`getLine`](#line) | Get the line information of the LineDrawingItem. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
+| [`LineDrawingItem`](#initwithline) | Create an instance of LineDrawingItem. |
+| [`LineDrawingItem(coordinateBase)`](#linedrawingitemcoordinatebase) | Create an instance of LineDrawingItem. |
 
-### line
+### getLine
 
-Get the line information of the DSLineDrawingItem.
-
-```java
-@property(nonatomic, readonly) DSLineSegment *line;
-```
-2. 
-```kotlin
-var lineextends LineSegment { get }
-```
-
-## initWithLine
-
-Create an instance of DSLineDrawingItem.
+Get the line information of the LineDrawingItem.
 
 ```java
-- (instancetype)initWithLine:(DSLineSegment *)line;
+com.dynamsoft.core.LineSegment getLine(){}
 ```
-2. 
-```kotlin
-init(lineextends LineSegment)
+
+### getMediaType
+
+Get the media type of the `DrawingItem`.
+
+```java
+EnumDrawingItemMeidaType getMediaType;
 ```
+
+## LineDrawingItem
+
+Create an instance of `LineDrawingItem`.
+
+```java
+LineDrawingItem(com.dynamsoft.core.LineSegment line){}
+```
+
 **Parameters**
 
-`line`: A DSLineSegment object that stores the line coordinates information.
+`line`: A `LineSegment` object that stores the line coordinates information.
 
 **Return Value**
 
-An instance of DSLineDrawingItem.
+An instance of `LineDrawingItem`.
 
-**Code Snippet**
+## LineDrawingItem(coordinateBase)
 
-```java
-DSLineSegment *line = [[DSLineSegment alloc] init];
-DSLineDrawingItem *item = [[DSLineDrawingItem alloc] initWithLine:line];
-```
-2. 
-```kotlin
-let line = DSLineSegment()
-let item = DSLineDrawingItem(line: line)
-```
-
-## initWithLine:coordinateBase:
-
-Create an instance of DSLineDrawingItem.
+Create an instance of `LineDrawingItem`.
 
 ```java
-- (instancetype)initWithLine:(DSLineSegment *)line
-              coordinateBase:(DSCoordinateBase)coordinateBase;
+LineDrawingItem(com.dynamsoft.core.LineSegment line, EnumCoordinateBase coordinateBase){}
 ```
-2. 
-```kotlin
-init(lineextends LineSegment, coordinateBaseextends CoordinateBase)
-```
+
 **Parameters**
 
-`line`: A DSLineSegment object that stores the line coordinates information.
-
-`coordinateBase`: The coordinate base of the DrawingItem.
+`line`: A `LineSegment` object that stores the line coordinates information.  
+`coordinateBase`: The coordinate base of the `DrawingItem`.
 
 **Return Value**
 
-An instance of DSLineDrawingItem.
-
-**Code Snippet**
-
-```java
-DSLineSegment *line = [[DSLineSegment alloc] init];
-DSLineDrawingItem *item = [[DSLineDrawingItem alloc] initWithLine:line coordinateBase:DSCoordinateBaseView];
-```
-2. 
-```kotlin
-let line = DSLineSegment()
-let item = DSLineDrawingItem(line: line, coordinateBase: .view)
-```
+An instance of `LineDrawingItem`.

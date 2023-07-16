@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: QuadDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DSQuadDrawingItem of Dynamsoft Camera Enhancer represents a drawing item that draws quadrilaterals on the view.
+Description: The class QuadDrawingItem of Dynamsoft Camera Enhancer represents a drawing item that draws quadrilaterals on the view.
 Keywords: quad drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSQuadDrawingItem
+# QuadDrawingItem
 
-The `DSQuadDrawingItem` class is a subclass of `DSDrawingItem`. It represents a drawing item that draws quadrilaterals on the view.
+The `QuadDrawingItem` class is a subclass of `DrawingItem`. It represents a drawing item that draws quadrilaterals on the view.
 
 ## Definition
 
@@ -19,94 +19,61 @@ The `DSQuadDrawingItem` class is a subclass of `DSDrawingItem`. It represents a 
 ```java
 class QuadDrawingItem extends DrawingItem
 ```
-2. 
-```kotlin
-class QuadDrawingItem : DrawingItem
-```
-
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`quad`](#quad) | *DSQuadrilateral \** |Get the quadrilateral information of the `DSQuadDrawingItem`. |
 
 ## Methods
 
 | Method | Description |
 |------- |-------------|
-| [`initWithQuad`](#initwithquad) | Create an instance of `DSQuadDrawingItem`. |
+| [`getQuad`](#quad) | Get the quad information of the `QuadDrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
+| [`QuadDrawingItem`](#quaddrawingitemquad) | Create an instance of `QuadDrawingItem`. |
+| [`QuadDrawingItem(coordinateBase)`](#quaddrawingitemquadcoordinatebase) | Create an instance of `QuadDrawingItem`. |
 
-### quad
+### getQuad
 
-Get the quadrilateral information of the `DSQuadDrawingItem`.
-
-```java
-@property(strong, nonatomic, readonly) DSQuadrilateral *quad;
-```
-2. 
-```kotlin
-var quadextends Quadrilateral { get }
-```
-
-### initWithQuad
-
-Create an instance of `DSQuadDrawingItem`.
+Get the quad information of the `QuadDrawingItem`.
 
 ```java
-- (instancetype)initWithQuad:(DSQuadrilateral *)quad;
+com.dynamsoft.core.Quadrilateral getQuad(){}
 ```
-2. 
-```kotlin
-init(quadextends Quadrilateral)
+
+### getMediaType
+
+Get the media type of the `DrawingItem`.
+
+```java
+EnumDrawingItemMeidaType getMediaType;
+```
+
+## QuadDrawingItem(quad)
+
+Create an instance of `QuadDrawingItem`.
+
+```java
+QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad){}
 ```
 
 **Parameters**
 
-`quad`: A `DSQuadrilateral` object that stores the quadrilateral coordinates information.
+`quad`: A `com.dynamsoft.core.Quadrilateral` object that stores the quad coordinates information.
 
 **Return Value**
 
-An instance of `DSQuadDrawingItem`.
+An instance of `QuadDrawingItem`.
 
-**Code Snippet**
+## QuadDrawingItem(quad,coordinateBase)
 
-```java
-DSQuadDrawingItem *item = [[DSQuadDrawingItem alloc] initWithQuad:quad];
-```
-2. 
-```kotlin
-let item = QuadDrawingItem(quad: quad)
-```
-
-### initWithQuad:coordinateBase
-
-Create an instance of `DSQuadDrawingItem`.
+Create an instance of `QuadDrawingItem`.
 
 ```java
-- (instancetype)initWithQuad:(DSQuadrilateral *)quad 
-              coordinateBase:(DSCoordinateBase)coordinateBase;
-```
-2. 
-```kotlin
-init(quadextends Quadrilateral, coordinateBaseextends CoordinateBase)
+QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad, EnumCoordinateBase coordinateBase){}
 ```
 
 **Parameters**
 
-`quad`: A `DSQuadrilateral` object that stores the quadrilateral coordinates information.
-
+`quad`: A `com.dynamsoft.core.Quadrilateral` object that stores the quad coordinates information.  
 `coordinateBase`: The coordinate base of the `DrawingItem`.
 
 **Return Value**
 
-An instance of `DSQuadDrawingItem`.
-
-**Code Snippet**
-
-```java
-DSQuadDrawingItem *item = [[DSQuadDrawingItem alloc] initWithQuad:quad coordinateBase:base];
-```
-2. 
-```kotlin
-let item = QuadDrawingItem(quad: quad, coordinateBase: base)
-```
+An instance of `QuadDrawingItem`.

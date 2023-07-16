@@ -24,138 +24,93 @@ class TextDrawingItem extends DrawingItem
 class TextDrawingItem : DrawingItem
 ```
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`text`](#text) | *NSString \** |Get the text content of the DSTextDrawingItem. |
-| [`topLeftPoint`](#topleftpoint) | *CGPoint* |Get the top-left point of the DSTextDrawingItem. |
-| [`width`](#width) | *NSInteger* |Get the width of the DSTextDrawingItem. |
-| [`height`](#height) | *NSInteger* |Get the height of the DSTextDrawingItem. |
-
 ## Methods
+
 | Method | Description |
 |------- |-------------|
-| [`initWithText`](#initwithtext) | Create an instance of DSTextDrawingItem. |
-| [`initWithText:coordinateBase:`](#initwithtextcoordinatebase) | Create an instance of DSTextDrawingItem with coordinate base. |
+| [`getText`](#gettext) | Get the text information of the `TextDrawingItem`. |
+| [`getTopLeftPoint`](#gettopleftpoint) | Get the top-left point of the `TextDrawingItem`. |
+| [`getWidth`](#getwidth) | Get the width of the `TextDrawingItem`. |
+| [`getHeight`](#getheight) | Get the height of the `TextDrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
+| [`TextDrawingItem`](#textdrawingitemtext) | Create an instance of `TextDrawingItem`. |
+| [`TextDrawingItem(coordinateBase)`](#textdrawingitemtextcoordinatebase) | Create an instance of `TextDrawingItem`. |
 
-### text
+### getText
 
-Get the text content of the DSTextDrawingItem.
-
-```java
-@property (nonatomic, copy, readonly) NSString *text;
-```
-2. 
-```kotlin
-var text: String { get }
-```
-
-### topLeftPoint
-
-Get the top-left point of the DSTextDrawingItem.
+Get the text information of the `TextDrawingItem`.
 
 ```java
-@property (nonatomic, readonly) CGPoint topLeftPoint;
-```
-2. 
-```kotlin
-var topLeftPoint: CGPoint { get }
+String getText(){}
 ```
 
-### width
+### getTopLeftPoint
 
-Get the width of the DSTextDrawingItem.
+Get the top-left point of the `TextDrawingItem`.
 
 ```java
-@property (nonatomic, readonly) NSInteger width;
-```
-2. 
-```kotlin
-var width: Int { get }
+Point getTopLeftPoint(){}
 ```
 
-### height
+### getWidth
 
-Get the height of the DSTextDrawingItem.
+Get the width of the `TextDrawingItem`.
 
 ```java
-@property (nonatomic, readonly) NSInteger height;
-```
-2. 
-```kotlin
-var height: Int { get }
+int getWidth(){}
 ```
 
-### initWithText
+### getHeight
 
-Create an instance of DSTextDrawingItem.
+Get the height of the `TextDrawingItem`.
 
 ```java
-- (instancetype)initWithText:(NSString *)text
-                topLeftPoint:(CGPoint)topLeftPoint
-                       width:(NSInteger)width
-                      height:(NSInteger)height;
+int getHeight(){}
 ```
-2. 
-```kotlin
-init(text: String, topLeftPoint: CGPoint, width: Int, height: Int)
-```
-**Parameters**
 
-`text`: The text content of the DSTextDrawingItem.  
-`topLeftPoint`: The top-left point of the DSTextDrawingItem.  
-`width`: The width of the DSTextDrawingItem.  
-`height`: The height of the DSTextDrawingItem.  
+### getMediaType
 
-**Return Value**
-
-An instance of DSTextDrawingItem.
-
-**Code Snippet**
+Get the media type of the `DrawingItem`.
 
 ```java
-DSTextDrawingItem *item = [[DSTextDrawingItem alloc] initWithText:@"Hello, World!" topLeftPoint:CGPointMake(0, 0) width:100 height:50];
-```
-2. 
-```kotlin
-let item = TextDrawingItem(text: "Hello, World!", topLeftPoint: CGPoint(x: 0, y: 0), width: 100, height: 50)
+EnumDrawingItemMeidaType getMediaType;
 ```
 
-### initWithText:coordinateBase:
+### TextDrawingItem(text)
 
-Create an instance of DSTextDrawingItem with coordinate base.
+Create an instance of `TextDrawingItem`.
 
 ```java
-- (instancetype)initWithText:(NSString *)text
-                topLeftPoint:(CGPoint)topLeftPoint
-                       width:(NSInteger)width
-                      height:(NSInteger)height
-              coordinateBase:(DSCoordinateBase)coordinateBase;
-```
-2. 
-```kotlin
-init(text: String, topLeftPoint: CGPoint, width: Int, height: Int, coordinateBase: CoordinateBase)
+TextDrawingItem(String text, Point topLeftPoint, int width, int height){}
 ```
 
 **Parameters**
 
-`text`: The text content of the DSTextDrawingItem.  
-`topLeftPoint`: The top-left point of the DSTextDrawingItem.  
-`width`: The width of the DSTextDrawingItem.  
-`height`: The height of the DSTextDrawingItem.  
-`coordinateBase`: The coordinate base of the DrawingItem.  
+`text`: A string that stores the text coordinates information.  
+`topLeftPoint`: The top-left point of the `TextDrawingItem`.  
+`width`: The width of the `TextDrawingItem`.  
+`height`: The height of the `TextDrawingItem`.  
 
 **Return Value**
 
-An instance of `DSTextDrawingItem`.
+An instance of `TextDrawingItem`.
 
-**Code Snippet**
+## TextDrawingItem(text,coordinateBase)
+
+Create an instance of `TextDrawingItem`.
 
 ```java
-DSTextDrawingItem *item = [[DSTextDrawingItem alloc] initWithText:@"Hello, World!" topLeftPoint:CGPointMake(0, 0) width:100 height:50 coordinateBase:DSCoordinateBase_View];
+TextDrawingItem(String text, Point topLeftPoint, int width, int height, EnumCoordinateBase coordinateBase){}
 ```
-2. 
-```kotlin
-let item = TextDrawingItem(text: "Hello, World!", topLeftPoint: CGPoint(x: 0, y: 0), width: 100, height: 50, coordinateBase: .view)
-```
+
+**Parameters**
+
+`text`: A string that stores the text coordinates information.  
+`topLeftPoint`: The top-left point of the `TextDrawingItem`.  
+`width`: The width of the `TextDrawingItem`.  
+`height`: The height of the `TextDrawingItem`.  
+`coordinateBase`: The coordinate base of the `DrawingItem`.
+
+**Return Value**
+
+An instance of `TextDrawingItem`.

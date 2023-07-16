@@ -19,12 +19,9 @@ The `DSFeedback` class provides methods to trigger feedbacks from the hardware, 
 ```java
 class Feedback
 ```
-2. 
-```kotlin
-class Feedback
-```
 
 ## Methods
+
 | Method | Description |
 |------- |-------------|
 | [`vibrate`](#vibrate) | Trigger a vibrate. |
@@ -37,10 +34,6 @@ Trigger a vibrate.
 ```java
 + (void)vibrate;
 ```
-2. 
-```kotlin
-class func vibrate()
-```
 
 ### beep
 
@@ -48,8 +41,4 @@ Trigger a beep.
 
 ```java
 + (void)beep;
-```
-2. 
-```kotlin
-class func beep()
 ```

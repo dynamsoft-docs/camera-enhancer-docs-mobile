@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: RectDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DSRectDrawingItem of Dynamsoft Camera Enhancer represents a rectangular drawing item.
+Description: The class RectDrawingItem of Dynamsoft Camera Enhancer represents a rectangular drawing item.
 Keywords: rectangle, drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSRectDrawingItem
+# RectDrawingItem
 
-The `DSRectDrawingItem` class is a subclass of `DSDrawingItem` that represents a rectangular drawing item.
+The `RectDrawingItem` class is a subclass of `DrawingItem` that represents a rectangular drawing item.
 
 ## Definition
 
@@ -19,94 +19,61 @@ The `DSRectDrawingItem` class is a subclass of `DSDrawingItem` that represents a
 ```java
 class RectDrawingItem extends DrawingItem
 ```
-2. 
-```kotlin
-class RectDrawingItem : DrawingItem
-```
-
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`rect`](#rect) | *CGRect* |Get the rect information of the DSRectDrawingItem. |
 
 ## Methods
 
 | Method | Description |
 |------- |-------------|
-| [`initWithRect`](#initwithrect) | Create an instance of DSRectDrawingItem. |
-| [`initWithRect:coordinateBase`](#initwithrectcoordinatebase) | Create an instance of DSRectDrawingItem. |
+| [`getRect`](#rect) | Get the rect information of the `RectDrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
+| [`RectDrawingItem`](#rectdrawingitemrect) | Create an instance of `RectDrawingItem`. |
+| [`RectDrawingItem(coordinateBase)`](#rectdrawingitemrectcoordinatebase) | Create an instance of `RectDrawingItem`. |
 
-### rect
+### getRect
 
-Get the rect information of the DSRectDrawingItem.
-
-```java
-@property(nonatomic, readonly) CGRect rect;
-```
-2. 
-```kotlin
-var rect: CGRect { get }
-```
-
-## initWithRect
-
-Create an instance of DSRectDrawingItem.
+Get the rect information of the `RectDrawingItem`.
 
 ```java
-- (instancetype)initWithRect:(CGRect)rect;
+android.graphics.Rect getRect(){}
 ```
-2. 
-```kotlin
-init(rect: CGRect)
+
+### getMediaType
+
+Get the media type of the `DrawingItem`.
+
+```java
+EnumDrawingItemMeidaType getMediaType;
 ```
+
+### RectDrawingItem(rect)
+
+Create an instance of `RectDrawingItem`.
+
+```java
+RectDrawingItem(android.graphics.Rect rect){}
+```
+
 **Parameters**
 
-`rect`: A CGRect that defines the rect of the DSRectDrawingItem.
+`rect`: A `android.graphics.Rect` object that stores the rect coordinates information.
 
 **Return Value**
 
-An instance of DSRectDrawingItem.
+An instance of `RectDrawingItem`.
 
-**Code Snippet**
+## RectDrawingItem(rect,coordinateBase)
 
-```java
-DSRectDrawingItem *item = [[DSRectDrawingItem alloc] initWithRect:rect];
-```
-2. 
-```kotlin
-let item = RectDrawingItem(rect: rect)
-```
-
-## initWithRect:coordinateBase
-
-Create an instance of DSRectDrawingItem.
+Create an instance of `RectDrawingItem`.
 
 ```java
-- (instancetype)initWithRect:(CGRect *)rect
-              coordinateBase:(DSCoordinateBase)coordinateBase;
+RectDrawingItem(android.graphics.Rect rect, EnumCoordinateBase coordinateBase){}
 ```
-2. 
-```kotlin
-init(rect: UnsafeMutablePointer<CGRect>, coordinateBase: CoordinateBase)
-```
+
 **Parameters**
 
-`rect`: A CGRect that defines the rect of the DSRectDrawingItem.
-
-`coordinateBase`: The coordinate base of the DrawingItem.
+`rect`: A `android.graphics.Rect` object that stores the rect coordinates information.  
+`coordinateBase`: The coordinate base of the `DrawingItem`.
 
 **Return Value**
 
-An instance of DSRectDrawingItem.
-
-**Code Snippet**
-
-```java
-DSRectDrawingItem *item = [[DSRectDrawingItem alloc] initWithRect:rect
-                                                 coordinateBase:coordinateBase];
-```
-2. 
-```kotlin
-let item = RectDrawingItem(rect: &rect, coordinateBase: coordinateBase)
-```
+An instance of `RectDrawingItem`.
