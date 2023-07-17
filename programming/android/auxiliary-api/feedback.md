@@ -32,7 +32,7 @@ class Feedback
 Trigger a vibrate.
 
 ```java
-+ (void)vibrate;
+void vibrate(Context context){}
 ```
 
 ### beep
@@ -40,5 +40,5 @@ Trigger a vibrate.
 Trigger a beep.
 
 ```java
-+ (void)beep;
+void beep(Context context){}
 ```

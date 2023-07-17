@@ -230,7 +230,7 @@ dceCameraView.setTorchButtonVisible(true);
 Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen.
 
 ```java
-Boolean getTorchButtonVisible()
+boolean getTorchButtonVisible()
 ```
 
 **Return Value**
@@ -240,5 +240,5 @@ A boolean value. When the value is true, the torch button should be displayed. O
 **Code Snippet**
 
 ```java
-Boolean isTorchButtonVisible = dceCameraView.getTorchButtonVisible();
+boolean isTorchButtonVisible = dceCameraView.getTorchButtonVisible();
 ```

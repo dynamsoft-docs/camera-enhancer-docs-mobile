@@ -28,7 +28,7 @@ class DrawingItem
 | [`getDrawingStyleId`](#getdrawingstyleid) | Get the DrawingStyle of the `DrawingItem`. |
 | [`setState`](#setstate) | Set the state of the `DrawingItem`. |
 | [`getState`](#getstate) | Get the state of the `DrawingItem`. |
-| [`getCoordinateBase`](#coordinatebase) | Get the coordinate base of the `DrawingItem`. The coordinate base is image by default. |
+| [`getCoordinateBase`](#getcoordinatebase) | Get the coordinate base of the `DrawingItem`. The coordinate base is image by default. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
 | [`addNote`](#addnote) | Add a note to the `DrawingItem`. |
 | [`getNote`](#getnote) | Get the specified `Note`. |

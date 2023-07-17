@@ -31,23 +31,9 @@ class CameraEnhancerModule
 Get the version of Dynamsoft Camera Enhancer.
 
 ```java
-+ (NSString *)getVersion;
-```
-2. 
-```kotlin
-class func getVersion() -> String
+static String getVersion();
 ```
 
 **Return Value**
 
 The version of Dynamsoft Camera Enhancer.
-
-**Code Snippet**
-
-```java
-NSString *version = [DSCameraEnhancerModule getVersion];
-```
-2. 
-```kotlin
-let version = CameraEnhancerModule.getVersion()
-```

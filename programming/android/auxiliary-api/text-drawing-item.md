@@ -19,10 +19,6 @@ The `DSTextDrawingItem` class is a subclass of `DSDrawingItem` and represents a 
 ```java
 class TextDrawingItem extends DrawingItem
 ```
-2. 
-```kotlin
-class TextDrawingItem : DrawingItem
-```
 
 ## Methods
 
@@ -33,8 +29,8 @@ class TextDrawingItem : DrawingItem
 | [`getWidth`](#getwidth) | Get the width of the `TextDrawingItem`. |
 | [`getHeight`](#getheight) | Get the height of the `TextDrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
-| [`TextDrawingItem`](#textdrawingitemtext) | Create an instance of `TextDrawingItem`. |
-| [`TextDrawingItem(coordinateBase)`](#textdrawingitemtextcoordinatebase) | Create an instance of `TextDrawingItem`. |
+| [`TextDrawingItem(text)`](#textdrawingitemtext) | Create an instance of `TextDrawingItem`. |
+| [`TextDrawingItem(text,coordinateBase)`](#textdrawingitemtextcoordinatebase) | Create an instance of `TextDrawingItem`. |
 
 ### getText
 

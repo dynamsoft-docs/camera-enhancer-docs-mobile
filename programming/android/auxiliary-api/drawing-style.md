@@ -38,18 +38,12 @@ class DrawingStyle
 | [`setFontFamily`](#setfontfamily) | Set/get the font. |
 | [`getFontFamily`](#getfontfamily) | Set/get the font. |
 
-## Methods
-
-| Method | Description |
-|------- |-------------|
-| [`initWithId:strokeColor:strokeWidth:fillColor:textColor:`](#initwithidstrokecolorstrokewidthfillcolortextcolor) | Create an instance of the DrawingStyle. |
-
 ### getID
 
 Get the style ID.
 
 ```java
-@property (assign, nonatomic, readonly) NSInteger styleId;
+int getId(){}
 ```
 
 ### setStrokeColor
@@ -121,11 +115,7 @@ float getStrokeWidth(){}
 Set/get the font.
 
 ```java
-@property (nonatomic, copy) UIFont *font;
-```
-2. 
-```kotlin
-var font: UIFont? { get set }
+void setFontSize(int size){}
 ```
 
 ### getFontSize
@@ -133,11 +123,7 @@ var font: UIFont? { get set }
 Set/get the font.
 
 ```java
-@property (nonatomic, copy) UIFont *font;
-```
-2. 
-```kotlin
-var font: UIFont? { get set }
+int getFontSize(){}
 ```
 
 ### setFontFamily

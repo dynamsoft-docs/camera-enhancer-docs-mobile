@@ -24,10 +24,10 @@ class LineDrawingItem extends DrawingItem
 
 | Method | Description |
 |------- |-------------|
-| [`getLine`](#line) | Get the line information of the LineDrawingItem. |
+| [`getLine`](#getline) | Get the line information of the LineDrawingItem. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
-| [`LineDrawingItem`](#initwithline) | Create an instance of LineDrawingItem. |
-| [`LineDrawingItem(coordinateBase)`](#linedrawingitemcoordinatebase) | Create an instance of LineDrawingItem. |
+| [`LineDrawingItem`](#linedrawingitemline) | Create an instance of LineDrawingItem. |
+| [`LineDrawingItem(line,coordinateBase)`](#linedrawingitemlinecoordinatebase) | Create an instance of LineDrawingItem. |
 
 ### getLine
 
@@ -45,7 +45,7 @@ Get the media type of the `DrawingItem`.
 EnumDrawingItemMeidaType getMediaType;
 ```
 
-## LineDrawingItem
+### LineDrawingItem(line)
 
 Create an instance of `LineDrawingItem`.
 
@@ -61,7 +61,7 @@ LineDrawingItem(com.dynamsoft.core.LineSegment line){}
 
 An instance of `LineDrawingItem`.
 
-## LineDrawingItem(coordinateBase)
+### LineDrawingItem(line,coordinateBase)
 
 Create an instance of `LineDrawingItem`.
 

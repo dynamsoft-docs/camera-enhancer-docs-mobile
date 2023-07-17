@@ -21,6 +21,7 @@ interface PhotoListener
 ```
 
 ## Methods
+
 | Method | Description |
 |------- |-------------|
 | [`onPhotoOutput`](#onphotooutput) | The method for monitoring the photo output. |

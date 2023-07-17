@@ -35,8 +35,8 @@ class DrawingLayer
 |------- |-------------|
 | [`DrawingLayer`](#drawinglayer) | Create an DrawingLayer with the specified ID. |
 | [`getId`](#getid) | Get the layer ID of the layer. |
-| [`setVisible`](#visible) | Set/get the visibility of the layer. |
-| [`isVisible`](#visible) | Set/get the visibility of the layer. |
+| [`setVisible`](#setvisible) | Set/get the visibility of the layer. |
+| [`isVisible`](#isvisible) | Set/get the visibility of the layer. |
 | [`addDrawingItems`](#adddrawingitems) | Add a group of DrawingItem to the layer. |
 | [`setDrawingItems`](#setdrawingitems) | Set the DrawingItems to be displayed on the layer. |
 | [`getDrawingItems`](#getdrawingitems) | Get all the DrawingItems on the layer. |

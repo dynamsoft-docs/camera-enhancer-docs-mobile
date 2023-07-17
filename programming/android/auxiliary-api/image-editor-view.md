@@ -33,9 +33,7 @@ class ImageEditorView : UIView
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new DrawingLayer. |
 | [`deleteUserDefinedDrawingLayer`](#deleteuserdefineddrawinglayer) | Delete the specified drawing layer. |
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
-| [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
-| [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
-| [`setOriginalImageWithUIImage`](#setoriginalimagewithuiimage) | Set the original image that displayed on the view. |
+| [`setOriginalImage(bitmapImage)`](#setoriginalimagebitmapimage) | Set the original image that displayed on the view. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
 | [`setTipConfig`](#settipconfig) | Set/get the tip configurations. |
 | [`getTipConfig`](#gettipconfig) | Set/get the tip configurations. |
@@ -167,3 +165,51 @@ void updateTipMessage(String tipMessage){}
 **Parameters**
 
 `tipMessage`: The new message that you want to display.
+
+### setTipConfig
+
+Set/get the tip configurations.
+
+```java
+void setTipConfig(TipConfig tipConfig);
+```
+
+**Parameters**
+
+`tipConfig`: A `TipConfig` object that stores the tip configuration.
+
+### getTipConfig
+
+Set/get the tip configurations.
+
+```java
+TipConfig getTipConfig();
+```
+
+**Return Value**
+
+Get a `TipConfig` object that stores the tip configuration.
+
+### setTipVisible
+
+Set the visibility of tip.
+
+```java
+void setTipVisible(boolean isVisible);
+```
+
+**Parameters**
+
+`isVisible`: A boolean value that indicate the tip is visible.
+
+### isTipVisible
+
+Get the visibility of tip.
+
+```java
+boolean isTipVisible();
+```
+
+**Return Value**
+
+A boolean value that indicate the tip is visible.

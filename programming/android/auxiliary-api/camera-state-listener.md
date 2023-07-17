@@ -27,23 +27,9 @@ interface CameraStateListener
 The method for monitoring the camera state and receiving call.
 
 ```java
-- (void)onCameraStateChanged:(DSCameraState)currentState;
-```
-2. 
-```kotlin
-func onCameraStateChanged(_ currentStateextends CameraState)
+void onCameraStateChanged(EnumCameraState state);
 ```
 
 **Parameters**
 
 `currentState`: The current camera state.
-
-**Code Snippet**
-
-```java
-[listener onCameraStateChanged:currentState];
-```
-2. 
-```kotlin
-listener.onCameraStateChanged(currentState)
-```

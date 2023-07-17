@@ -24,7 +24,7 @@ class QuadDrawingItem extends DrawingItem
 
 | Method | Description |
 |------- |-------------|
-| [`getQuad`](#quad) | Get the quad information of the `QuadDrawingItem`. |
+| [`getQuad`](#getquad) | Get the quad information of the `QuadDrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
 | [`QuadDrawingItem`](#quaddrawingitemquad) | Create an instance of `QuadDrawingItem`. |
 | [`QuadDrawingItem(coordinateBase)`](#quaddrawingitemquadcoordinatebase) | Create an instance of `QuadDrawingItem`. |

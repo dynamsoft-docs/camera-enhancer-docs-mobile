@@ -105,7 +105,7 @@ boolean x = mCameraEnhancer.getEnabledFastModeStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledFastModeStatus
+var x:boolean? = mCameraEnhancer!!.enabledFastModeStatus
 ```
 
 ## enableFrameFilter
@@ -159,7 +159,7 @@ boolean x = mCameraEnhancer.getEnabledFrameFilterStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledFrameFilterStatus
+var x:boolean? = mCameraEnhancer!!.enabledFrameFilterStatus
 ```
 
 ## setMaxFrameRate
@@ -239,7 +239,7 @@ boolean x = mCameraEnhancer.getEnabledSensorControlStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledSensorControlStatus
+var x:boolean? = mCameraEnhancer!!.enabledSensorControlStatus
 ```
 
 ## setSensorControlThreshold

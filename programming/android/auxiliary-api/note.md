@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSNote
+# Note
 
 The `Note` class represents a note, which contains a key and content.
 
@@ -24,13 +24,13 @@ class Note
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| `Note` | The constructor. Create an instance of the `Note`. |
-| [`setName`](#name) | Set/get the name of the `Note`. |
-| [`getName`](#name) | Set/get the name of the `Note`. |
-| [`setContent`](#content) | Set/get the content of the `Note`. |
-| [`getContent`](#content) | Set/get the content of the `Note`. |
+| [`Note`](#notenamecontent) | The constructor. Create an instance of the `Note`. |
+| [`setName`](#setname) | Set/get the name of the `Note`. |
+| [`getName`](#getname) | Set/get the name of the `Note`. |
+| [`setContent`](#setcontent) | Set/get the content of the `Note`. |
+| [`getContent`](#getcontent) | Set/get the content of the `Note`. |
 
-### Note
+### Note(name,content)
 
 The constructor. Create an instance of the `Note`.
 

@@ -228,7 +228,7 @@ void setScanLaserVisible(boolean isScanRegionVisible);
 Get the visibility of the scan laser.
 
 ```java
-Boolean isScanLaserVisible();
+boolean isScanLaserVisible();
 ```
 
 **Return Value**

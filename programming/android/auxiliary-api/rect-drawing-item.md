@@ -24,10 +24,10 @@ class RectDrawingItem extends DrawingItem
 
 | Method | Description |
 |------- |-------------|
-| [`getRect`](#rect) | Get the rect information of the `RectDrawingItem`. |
+| [`getRect`](#getrect) | Get the rect information of the `RectDrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `DrawingItem`. |
-| [`RectDrawingItem`](#rectdrawingitemrect) | Create an instance of `RectDrawingItem`. |
-| [`RectDrawingItem(coordinateBase)`](#rectdrawingitemrectcoordinatebase) | Create an instance of `RectDrawingItem`. |
+| [`RectDrawingItem(rect)`](#rectdrawingitemrect) | Create an instance of `RectDrawingItem`. |
+| [`RectDrawingItem(rect,coordinateBase)`](#rectdrawingitemrectcoordinatebase) | Create an instance of `RectDrawingItem`. |
 
 ### getRect
 

@@ -175,7 +175,7 @@ boolean x = mCameraEnhancer.getEnabledDCEAutoFocusStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledDCEAutoFocusStatus
+var x:boolean? = mCameraEnhancer!!.enabledDCEAutoFocusStatus
 ```
 
 ## enableDefaultAutoFocus
@@ -229,7 +229,7 @@ boolean x = mCameraEnhancer.getEnabledDefaultAutoFocusStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledDefaultAutoFocusStatus
+var x:boolean? = mCameraEnhancer!!.enabledDefaultAutoFocusStatus
 ```
 
 ## enableRegularAutoFocus
@@ -283,7 +283,7 @@ boolean x = mCameraEnhancer.getEnabledRegularAutoFocusStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledRegularAutoFocusStatus
+var x:boolean? = mCameraEnhancer!!.enabledRegularAutoFocusStatus
 ```
 
 ## setRegularAutoFocusParam
@@ -365,7 +365,7 @@ boolean x = mCameraEnhancer.getEnabledAutoFocusOnSharpnessChangeStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledAutoFocusOnSharpnessChangeStatus
+var x:boolean? = mCameraEnhancer!!.enabledAutoFocusOnSharpnessChangeStatus
 ```
 
 ## enableAutoZoom
@@ -419,7 +419,7 @@ boolean x = mCameraEnhancer.getEnabledAutoZoomStatus();
 Kotlin:
 
 ```kotlin
-var x:Boolean? = mCameraEnhancer!!.enabledAutoZoomStatus
+var x:boolean? = mCameraEnhancer!!.enabledAutoZoomStatus
 ```
 
 ## setZoomFactor
