@@ -55,6 +55,8 @@ barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhance
 barcode-deploy-android: /barcode-reader/programming/android/api-reference/camera-enhancer/
 barcode-enum: /barcode-reader/parameters/enum/
 
+dcv-enum: /capture-vision/docs/core/enums/camera-enhancer/
+
 assets: /camera-enhancer/docs/mobile/assets/
 edit_icon: /camera-enhancer/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-smile.png
