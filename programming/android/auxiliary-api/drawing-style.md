@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: DrawingStyle - Dynamsoft Core Module Android Edition API Reference
-Description: The class DSDrawingStyle of Dynamsoft Core Module represents the style attributes of the drawing items, including stroke color, fill color, text color, stroke width, and font.
+Description: The class DrawingStyle of Dynamsoft Core Module represents the style attributes of the drawing items, including stroke color, fill color, text color, stroke width, and font.
 Keywords: drawing style, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSDrawingStyle
+# DrawingStyle
 
-The `DSDrawingStyle` class represents the style attributes of the drawing items, including stroke color, fill color, text color, stroke width, and font.
+The `DrawingStyle` class represents the style attributes of the drawing items, including stroke color, fill color, text color, stroke width, and font.
 
 ## Definition
 

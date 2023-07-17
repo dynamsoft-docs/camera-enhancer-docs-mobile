@@ -8,9 +8,9 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSCameraStateListener
+# CameraStateListener
 
-The `DSCameraStateListener` protocol includes methods for monitoring the camera state.
+The `CameraStateListener` protocol includes methods for monitoring the camera state.
 
 ## Definition
 

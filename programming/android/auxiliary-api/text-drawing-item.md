@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: TextDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DSTextDrawingItem of Dynamsoft Camera Enhancer represents a text drawing item, which can be added to draw texts on the view.
+Description: The class TextDrawingItem of Dynamsoft Camera Enhancer represents a text drawing item, which can be added to draw texts on the view.
 Keywords: text drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSTextDrawingItem
+# TextDrawingItem
 
-The `DSTextDrawingItem` class is a subclass of `DSDrawingItem` and represents a text drawing item, which can be added to draw texts on the view.
+The `TextDrawingItem` class is a subclass of `DrawingItem` and represents a text drawing item, which can be added to draw texts on the view.
 
 ## Definition
 

@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: DrawingLayer - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DSDrawingLayer of Dynamsoft Camera Enhancer represents a drawing layer, which is used for managing and controlling drawing items.
+Description: The class DrawingLayer of Dynamsoft Camera Enhancer represents a drawing layer, which is used for managing and controlling drawing items.
 Keywords: drawing layer, Dynamsoft Camera Enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSDrawingLayer
+# DrawingLayer
 
-The `DSDrawingLayer` class represents a drawing layer, which is used for managing and controlling drawing items.
+The `DrawingLayer` class represents a drawing layer, which is used for managing and controlling drawing items.
 
 ## Definition
 

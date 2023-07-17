@@ -24,7 +24,7 @@ class ImageEditorView : UIView
 
 | Method | Description |
 |------- |-------------|
-| [`ImageEditorView`](#initwithframe) | Create an instance of DSCameraView. |
+| [`ImageEditorView`](#initwithframe) | Create an instance of CameraView. |
 | [`setOriginalImage`](#setoriginalimage) | Set the original image that displayed on the view. |
 | [`setOriginalImage(bitmapImage)`](#setoriginalimagebitmapimage) | Set the original image that displayed on the view. |
 | [`getOriginalImage`](#getoriginalimage) | Get the original image that displayed on the view. |
