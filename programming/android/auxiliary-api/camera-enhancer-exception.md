@@ -17,7 +17,7 @@ noTitleIndex: true
 *Assembly:* package com.dynamsoft.dce
 
 ```java
-class CaptureVisionRouterException extends Exception
+class CameraEnhancerException extends Exception
 ```
 
 ## Methods
