@@ -19,7 +19,7 @@ The error code returned by the library.
 | `EnumCameraErrorCode_LICENSE_INVALID` | -10001 | The licence is invalid. |
 | `EnumCameraErrorCode_LICENSE_EXPIRED` | -10002 | The licence has expired. |
 | `EnumCameraErrorCode_CAMERA_MODULE_NOT_EXIST` | -10003 | Camera module does not exist. |
-| `EnumCameraErrorCode_FILE_NOT_FOUND` | -10004 | Failed to access the fail path. |
+| `EnumCameraErrorCode_FILE_NOT_FOUND` | -10004 | Failed to access the file path. |
 | `EnumCameraErrorCode_JSON_PARSE_FAILED` | -10005 | Failed to parse the JSON data. |
 | `EnumCameraErrorCode_CAMERA_ID_NOT_EXIST` | -10006 | The input value does not exist in the camera ID list. |
 | `EnumCameraErrorCode_PARAMETER_VALUE_INVALID` | -10038 | The input parameter is invalid. |
