@@ -95,11 +95,11 @@ Use the following code to activate the license:
 @interface AppDelegate ()<DBRLicenseVerificationListener>
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   [DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate:self];
+   [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
    ...
 }
-- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-   // Add you code to do when license activation is succeed or failed.
+- (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
+    [self verificationCallback:error];
 }
 ```
 2. 

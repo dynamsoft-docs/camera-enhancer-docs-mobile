@@ -120,13 +120,10 @@ The above features are enabled by triggering method [`enableFeatures`](../primar
 Use the following code to activate the license:
 
 ```java
-CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
-   @Override
-   public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-      if(!isSuccess){
-         error.printStackTrace();
-      }
-   }
+LicenseManager.initLicense(LICENSE, this, (isSuccess, error) -> {
+    if (!isSuccess) {
+        Log.e(TAG, "InitLicense Error: " + error);
+    }
 });
 ```
 
