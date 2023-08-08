@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS DCECameraView Class
-permalink: /programming/ios/auxiliary-api/dcecameraview.html
+permalink: /programming/ios/auxiliary-api/dcecameraview-v2.3.20.html
 ---
 
 # DCECameraView

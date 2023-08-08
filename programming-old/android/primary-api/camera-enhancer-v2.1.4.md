@@ -74,8 +74,8 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) values. |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 ## Camera UI Methods Summary
@@ -251,7 +251,7 @@ EnumCameraState getCameraState()
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{site.mobile-enum}}enum-camera-state.html).
+One of the preset camera state in Enumeration [`EnumCameraState`]({{site.dce-enums}}camera-state.html).
 
 **Code Snippet**
 
@@ -455,7 +455,7 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.mobile-enum}}enum-resolution.html?lang=android).
+`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.dce-enums}}resolution.html?lang=android).
 
 **Exception**
 
@@ -788,7 +788,7 @@ cameraEnhancer.removeListener(listener);
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android) value.
 
 ```java
 void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
@@ -796,7 +796,7 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android).  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android).  
 
 **Exception**
 
@@ -829,7 +829,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android) values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android) values.
 
 ```java
 void disableFeatures(int enhancerFeatures)
@@ -837,7 +837,7 @@ void disableFeatures(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android).  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android).  
 
 **Code Snippet**
 
@@ -863,7 +863,7 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=android).
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=android).
 
 **Return Value**
 

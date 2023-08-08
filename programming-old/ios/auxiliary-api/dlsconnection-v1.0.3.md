@@ -131,7 +131,7 @@ Set the charge way.
 
 **Value Range**
 
-Any one of the [`EnumDMChargeWay`]({{ site.mobile-enum }}enum-1.html?lang=android#enumdmchargeway) Enumeration items.
+Any one of the [`EnumDMChargeWay`]({{ site.dce-enums }}enum-1.html?lang=android#enumdmchargeway) Enumeration items.
 
 **Default Value**
 
@@ -145,7 +145,7 @@ EnumDMChargeWay chargeWay
 
 **See Also**
 
-[`EnumDMChargeWay`]({{ site.mobile-enum }}enum-1.html?lang=android#enumdmchargeway)
+[`EnumDMChargeWay`]({{ site.dce-enums }}enum-1.html?lang=android#enumdmchargeway)
 
 ## UUIDGenerationMethod
 
@@ -153,7 +153,7 @@ Set the method to generate UUID.
 
 **Value Range**
 
-Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.mobile-enum }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod) Enumeration items.
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.dce-enums }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod) Enumeration items.
 
 **Default Value**
 
@@ -167,7 +167,7 @@ EnumDMUUIDGenerationMethod UUIDGenerationMethod
 
 **See Also**
 
-[`EnumDMUUIDGenerationMethod`]({{ site.mobile-enum }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod)
+[`EnumDMUUIDGenerationMethod`]({{ site.dce-enums }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod)
 
 ## maxBufferDays
 
@@ -201,7 +201,7 @@ Set the products. This is a combined value of Product Enumration items.
 
 **Value Range**
 
-Any one of the [`EnumProduct`]({{ site.mobile-enum }}enum-1.html?lang=android#enumproduct) Enumeration items.
+Any one of the [`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct) Enumeration items.
 
 **Code Snippet**
 
@@ -211,4 +211,4 @@ NSInteger products
 
 **See Also**
 
-[`EnumProduct`]({{ site.mobile-enum }}enum-1.html?lang=android#enumproduct)
+[`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct)

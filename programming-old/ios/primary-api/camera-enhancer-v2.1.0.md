@@ -73,8 +73,8 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 ## Advanced Camera Control Methods Summary
@@ -373,7 +373,7 @@ Get the state of the currently selected camera.
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{site.mobile-enum}}enum-camera-state.html?lang=objc,swift).
+One of the preset camera state in Enumeration [`EnumCameraState`]({{site.dce-enums}}camera-state.html?lang=objc,swift).
 
 **Code Snippet**
 
@@ -594,7 +594,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`[in] resolution` One of the int value that preset in Enumeration [`EnumResolution`]({{site.mobile-enum}}enum-resolution.html?lang=objc,swift).
+`[in] resolution` One of the int value that preset in Enumeration [`EnumResolution`]({{site.dce-enums}}resolution.html?lang=objc,swift).
 
 **Code Snippet**
 
@@ -933,7 +933,7 @@ dce.removeListener(self)
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) value. When the license verification is failed, the enabled features will be recorded but not actived. Once a valid license is verified, the features you enabled will be recovered.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift) value. When the license verification is failed, the enabled features will be recorded but not actived. Once a valid license is verified, the features you enabled will be recovered.
 
 ```objc
 - (void)enableFeatures:(EnumEnhancerFeatures)features  error:(NSError * _Nullable * _Nullable)error;
@@ -941,7 +941,7 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mob
 
 **Parameters**
 
-`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).  
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift).  
 `[in out] error` The error occurs when the license is invalid. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -977,7 +977,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift) values.
 
 ```objc
 - (void)disableFeatures:(EnumEnhancerFeatures)features;
@@ -985,7 +985,7 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mo
 
 **Parameters**
 
-`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).  
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift).  
 
 **Code Snippet**
 
@@ -1018,7 +1018,7 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift).
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift).
 
 **Return Value**
 

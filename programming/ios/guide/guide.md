@@ -21,7 +21,7 @@ The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from
 
 Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your iOS app:
 
-## App prerequisites
+## App Prerequisites
 
 - System Requirements:
   - macOS 10.11 and above.
@@ -108,11 +108,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationLis
    ...
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
           ...
-          DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+          LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
           ...
    }
-   func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-          // Add you code to do when license activation is succeed or failed.
+   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+          if !isSuccess {
+             if let error = error {
+                    print("\(error.localizedDescription)")
+             }
+          }
    }
 }
 ```

@@ -95,7 +95,7 @@ permalink: /programming/android/api-reference.html
 ## Exception
 
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
-- [`Error Code Reference`]({{ site.mobile-enum }}errorcode.html?lang=android)
+- [`Error Code Reference`]({{ site.dce-enums }}error-code.html?lang=android)
 
 ## Interfaces
 
@@ -106,8 +106,8 @@ permalink: /programming/android/api-reference.html
 
 ## Enumerations
 
-- [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=android)
-- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=android)
-- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=android)
-- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=android)
-- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=android)
+- [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=android)
+- [`EnumCameraState`]({{ site.dce-enums }}camera-state.html?lang=android)
+- [`EnumEnhancerFeatures`]({{ site.dce-enums }}enhanced-features.html?lang=android)
+- [`EnumFrameQuality`]({{ site.dce-enums }}video-frame-quality.html?lang=android)
+- [`EnumResolution`]({{ site.dce-enums }}resolution.html?lang=android)

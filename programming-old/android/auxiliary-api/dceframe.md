@@ -144,7 +144,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in [`EnumFrameQuality`]({{site.mobile-enum}}enum-frame-quality.html?lang=android).
+The method returns an enumeration value in [`EnumFrameQuality`]({{site.dce-enums}}frame-quality.html?lang=android).
 
 **Remarks**
 
@@ -293,7 +293,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: An `Enumeration` value that means the frame quality. Read more in [`EnumFrameQuality`]({{site.mobile-enum}}enum-frame-quality.html?lang=android).
+`quality`: An `Enumeration` value that means the frame quality. Read more in [`EnumFrameQuality`]({{site.dce-enums}}frame-quality.html?lang=android).
 
 &nbsp;
 

@@ -21,7 +21,7 @@ The Dynamsoft Camera Enhancer Android SDK enables you to easily control cameras 
 
 Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your Android app:
 
-## App prerequisites
+## App Prerequisites
 
 - System Requirements:
   - Supported OS: Android 5 or higher (Android 7 or higher recommended).
@@ -93,8 +93,6 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
        implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.0@aar'
    }
    ```
-
-   >Note:Please replace {version-number} with the correct version number.
 
 3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
 

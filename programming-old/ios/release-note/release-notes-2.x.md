@@ -33,7 +33,7 @@ permalink: /programming/ios/release-note/release-notes-2.x.html
 
 ### New
 
-- Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.mobile-enum }}enum-focus-mode.html?lang=objc,swift) is added to specify the focus mode.
+- Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.dce-enums }}focus-mode.html?lang=objc,swift) is added to specify the focus mode.
 - Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.md#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
 - Added a protocol [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
 - Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.md#getvisibleregionofvideo) in `DCECameraView` class
@@ -76,7 +76,7 @@ permalink: /programming/ios/release-note/release-notes-2.x.html
 
 - Added a property [`cameraView`](../primary-api/camera-enhancer.md#cameraview) for users to bind a `DCECameraView` object to the `DynamsoftCameraEnhancer` object.
 - Added methods [`selectCameraWithPosition`](../primary-api/camera-enhancer.md#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
-- Added enumeration [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift).
+- Added enumeration [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=objc,swift).
 
 ### Changed
 

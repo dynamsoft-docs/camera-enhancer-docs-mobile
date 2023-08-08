@@ -1,43 +1,61 @@
 ---
 layout: default-layout
-title: iOS DCEFrame Class - Dynamsoft Camera Enhancer
+title: iOS DCEFrame Class - Dynamsoft Camera Enhancer Documents
 description: This is the documentation - iOS DCEFrame Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS DCEFrame Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS DCEFrame Class
-permalink: /programming/ios/auxiliary-api/dceframe.html
+permalink: /programming/ios/auxiliary-api/dceframe-v3.0.3.html
 ---
 
 # DCEFrame
 
 The `DCEFrame` is the class that stores pixel data and further information.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DCEFrame : NSObject
+```
+2. 
+```swift
+class DCEFrame : iImageData
 ```
 
 | Method & Property Name | Type/Return Value | Description |
 | ---------------------- | ----------------- | ----------- |
-| [`imageData`](#imagedata) | *NSData* * | The property stores the pixel data of the image. |
+| [`bytes`](#imagedata) | *NSData* * | The property stores the pixel data of the image. |
 | [`width`](#width) | *NSInteger* | The property stores the pixel width of the image. |
 | [`height`](#height) | *NSInteger* | The property stores the pixel height of the image. |
 | [`stride`](#stride) | *NSInteger* | The property stores the stride of the image. |
-| [`pixelFormat`](#pixelformat) | *NSInteger* | The property stores the pixel format of the image. |
+| [`format`](#pixelformat) | *NSInteger* | The property stores the pixel format of the image. |
 | [`frameID`](#frameid) | *NSInteger* | The property stores the `frameID` of the frame. |
-| [`quality`](#quality) | [`EnumFrameQuality`]({{site.mobile-enum}}enum-frame-quality.html?lang=objc,swift) | The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. |
+| [`quality`](#quality) | [`EnumFrameQuality`]({{ site.dce-enums }}frame-quality.md) | The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. |
 | [`isCropped`](#iscropped) | *BOOL* | The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`cropRegion`](#cropregion) | *CGRect* | The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null. |
 | [`orientation`](#orientation) | *NSInteger* | The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation. |
-| [`toUIImage`](#touiimage) | *UIImage* * | The method converts the image to `UIImage` to make it visible on the UI. |
+| [`toUIImage`](#touiimage) | *UIImage* * | The method converts the image to `UIImage`. |
 
 ## imageData
 
 The property stores the pixel data of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSData* imageData
+```
+2. 
+```swift
+var bytes: Data? { get set }
 ```
 
 &nbsp;
@@ -46,8 +64,17 @@ NSData* imageData
 
 The property stores the pixel width of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger width
+```
+2. 
+```swift
+var width: Int { get set }
 ```
 
 &nbsp;
@@ -56,8 +83,17 @@ NSInteger width
 
 The property stores the pixel height of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger height
+```
+2. 
+```swift
+var height: Int { get set }
 ```
 
 &nbsp;
@@ -66,18 +102,36 @@ NSInteger height
 
 The property stores the stride of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger stride
+```
+2. 
+```swift
+var stride: Int { get set }
 ```
 
 &nbsp;
 
 ## pixelFormat
 
-The property stores the pixel format of the image. The property value is one of the Enumeration value of `ImagePixelFormat`. Currently, the image output formats of `DCEFrame` are NV21 or ARGB_8888. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
+The property stores the pixel format of the image. The property value is one of the Enumeration value of `ImagePixelFormat`. Currently, the image output formats of `DCEFrame` are NV21 or ARGB_8888. View more in [`EnumImagePixelFormat`]({{ site.core-enums }}image-pixel-format.html?src=ios)
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger pixelFormat
+```
+2. 
+```swift
+var pixelFormat: Int { get set }
 ```
 
 &nbsp;
@@ -86,18 +140,36 @@ NSInteger pixelFormat
 
 The property stores the `frameID` of the frame.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger frameID
+```
+2. 
+```swift
+var frameID: Int { get set }
 ```
 
 &nbsp;
 
 ## quality
 
-The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. View more about the frame quality in enumeration [`EnumFrameQuality`]({{site.mobile-enum}}enum-frame-quality.html?lang=objc,swift).
+The property indicates the image quality of the `DCEFrame`. View more in [`EnumFrameQuality`]({{ site.dce-enums }}frame-quality.md). User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 EnumFrameQuality quality
+```
+2. 
+```swift
+var quality: EnumFrameQuality { get set }
 ```
 
 &nbsp;
@@ -106,8 +178,17 @@ EnumFrameQuality quality
 
 The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. Property value `true` means the image is cropped and `false` means the image has never been cropped.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 BOOL isCropped
+```
+2. 
+```swift
+var isCropped: Bool { get set }
 ```
 
 &nbsp;
@@ -116,8 +197,17 @@ BOOL isCropped
 
 The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 CGRect cropRegion
+```
+2. 
+```swift
+var cropRegion: CGRect { get set }
 ```
 
 &nbsp;
@@ -126,8 +216,17 @@ CGRect cropRegion
 
 The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270, which depends on the device orientation.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger orientation
+```
+2. 
+```swift
+var orientation: Int { get set }
 ```
 
 <div align="center">
@@ -139,10 +238,19 @@ NSInteger orientation
 
 ## toUIImage
 
-The method converts the image to `UIImage` to make it visible on the UI.
+The method converts the image to `UIImage`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-- (UIImage*)toUIImage;
+- (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func toUIImage() throws -> UIImage
 ```
 
 **Return Value**
@@ -158,12 +266,16 @@ The converted image.
 >1. 
 ```objc
 @property(nonatomic, strong) DCEFrame *dceFrame;
-...
+/*
+  ...
+*/
 [dceFrame toUIImage];
 ```
 2. 
 ```swift
 var dceFrame:DCEFrame! = nil
-...
+/*
+  ...
+*/
 dceFrame.toUIImage()
 ```

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
 breadcrumbText: iOS Protocol DCECameraStateListener
-permalink: /programming/ios/auxiliary-api/protocol-dcecamerastatelistener.html
+permalink: /programming/ios/auxiliary-api/protocol-dcecamerastatelistener-v2.3.20.html
 ---
 
 # DCECameraStateListener

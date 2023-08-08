@@ -97,4 +97,4 @@ permalink: /programming/android/api-reference-v1.0.3.html
 
 ## Enumerations
 
-- [View all Enumerations]({{ site.mobile-enum }}enum-1.html?lang=android)
+- [View all Enumerations]({{ site.dce-enums }}enum-1.html?lang=android)

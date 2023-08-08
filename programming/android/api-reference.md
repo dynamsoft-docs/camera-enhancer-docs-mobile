@@ -46,11 +46,11 @@ permalink: /programming/android/api-reference.html
 
 ## Enumerations
 
-* [`EnumCameraPosition`]()
-* [`EnumCameraState`]()
-* [`EnumCoordinateBase`]()
-* [`EnumDrawingItemMediaType`]()
-* [`EnumDrawingItemState`]()
-* [`EnumEnhancedFeatures`]()
-* [`EnumFocusMode`]()
-* [`EnumResolution`]()
+* [`EnumCameraPosition`]({{ site.dcv-enum }}camera-position.html)
+* [`EnumCameraState`]({{ site.dcv-enum }}camera-state.html)
+* [`EnumCoordinateBase`]({{ site.dcv-enum }}coordinate-base.html)
+* [`EnumDrawingItemMediaType`]({{ site.dcv-enum }}drawing-item-media-type.html)
+* [`EnumDrawingItemState`]({{ site.dcv-enum }}drawing-item-state.html)
+* [`EnumEnhancedFeatures`]({{ site.dcv-enum }}enhanced-features.html)
+* [`EnumFocusMode`]({{ site.dcv-enum }}focus-mode.html)
+* [`EnumResolution`]({{ site.dcv-enum }}resolution.html)

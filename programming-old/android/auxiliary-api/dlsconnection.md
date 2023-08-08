@@ -146,7 +146,7 @@ Sets the method to generate UUID.
 
 **Value Range**
 
-Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.mobile-enum }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod) Enumeration items.
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.dce-enums }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod) Enumeration items.
 
 **Default Value**
 
@@ -161,7 +161,7 @@ dceParameters.uuidGenerationMethod = EnumCameraDMUUIDGenerationMethod.DM_UUIDGM_
 
 **See Also**
 
-[`EnumDMUUIDGenerationMethod`]({{ site.mobile-enum }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod)
+[`EnumDMUUIDGenerationMethod`]({{ site.dce-enums }}enum-1.html?lang=android#enumcameradmuuidcenerationmethod)
 
 &nbsp;
 
@@ -191,7 +191,7 @@ Sets the charge way.
 
 **Value Range**
 
-Any one of the [`EnumDMChargeWay`]({{ site.mobile-enum }}enum-1.html?lang=android#enumdmchargeway) Enumeration items.
+Any one of the [`EnumDMChargeWay`]({{ site.dce-enums }}enum-1.html?lang=android#enumdmchargeway) Enumeration items.
 
 **Default Value**
 
@@ -205,7 +205,7 @@ dceParameters.chargeWay = EnumDMChargeWay.DM_CW_DEVICE_COUNT;
 
 **See Also**
 
-[`EnumDMChargeWay`]({{ site.mobile-enum }}enum-1.html?lang=android#enumdmchargeway)
+[`EnumDMChargeWay`]({{ site.dce-enums }}enum-1.html?lang=android#enumdmchargeway)
 
 &nbsp;
 
@@ -216,7 +216,7 @@ Set the products. This is a combined value of Product Enumration items.
 
 **Value Range**
 
-Any one of the [`EnumProduct`]({{ site.mobile-enum }}enum-1.html?lang=android#enumproduct) Enumeration items.
+Any one of the [`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct) Enumeration items.
 
 **Code Snippet**
 
@@ -227,4 +227,4 @@ dceParameters.products = EnumProduct.PROD_DBR;
 
 **See Also**
 
-[`EnumProduct`]({{ site.mobile-enum }}enum-1.html?lang=android#enumproduct)
+[`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct)

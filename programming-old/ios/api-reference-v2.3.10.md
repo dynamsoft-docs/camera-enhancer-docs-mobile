@@ -66,8 +66,8 @@ permalink: /programming/ios/api-reference.html
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
-| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
+| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift) values. |
+| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.dce-enums}}enhanced-features.html?lang=objc,swift) values. |
 | [`isFeatureEnabled`]({{site.ios-api}}camera-enhancer.html#isfeatureenabled) | Check whether the input features are enabled. |
 
 ### Advanced Camera Control Methods
@@ -93,9 +93,9 @@ permalink: /programming/ios/api-reference.html
 
 ## Enumerations
 
-- [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift)
-- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=objc,swift)
-- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=objc,swift)
-- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=objc,swift)
-- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=objc,swift)
-- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=objc,swift)
+- [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=objc,swift)
+- [`EnumCameraState`]({{ site.dce-enums }}camera-state.html?lang=objc,swift)
+- [`EnumDCEErrorCode`]({{ site.dce-enums }}error-code.html?lang=objc,swift)
+- [`EnumEnhancerFeatures`]({{ site.dce-enums }}enhanced-features.html?lang=objc,swift)
+- [`EnumFrameQuality`]({{ site.dce-enums }}video-frame-quality.html?lang=objc,swift)
+- [`EnumResolution`]({{ site.dce-enums }}resolution.html?lang=objc,swift)
