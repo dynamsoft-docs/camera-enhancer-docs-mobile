@@ -31,7 +31,7 @@ class TextDrawingItem : DrawingItem
 | ----------- | ----------- |
 | [`initWithText`](#initwithtext) | The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingItem`. |
 | [`text`](#text) | The property that indicates the text of the `TextDrawingItem`. |
-| [`textRect`](#textrect) | The `CGRect` property that indicates the location of the `TextDrawingItem`. |
+| [`rect`](#rect) | The `CGRect` property that indicates the location of the `TextDrawingItem`. |
 | [`drawingStyleId`](#drawingstyleid) | Get the drawing style of the current `DrawingItem`. |
 | [`state`](#state) | Set the state of the current `DrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the current `DrawingItem`. |
@@ -113,4 +113,79 @@ The `CGRect` property that indicates the location of the `TextDrawingItem`.
 var rect: CGRect { get }
 ```
 
-{%- include api-reference/drawing-item-ios.md -%}
+&nbsp;
+
+## drawingStyleId
+
+The property that identifies the ID of the `DrawingStyle`.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) NSInteger drawingStyleId;
+```
+2. 
+```swift
+var drawingStyleId: Int { get set }
+```
+
+&nbsp;
+
+## state
+
+The property that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.ios_camera_enhancer }}enum-drawing-item-state.html).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) EnumDrawingItemState state;
+```
+2. 
+```swift
+var state: EnumDrawingItemState { get set }
+```
+
+&nbsp;
+
+## getMediaType
+
+Get the media type of the `DrawingItem`.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (EnumDrawingItemMediaType) getMediaType;
+```
+2. 
+```swift
+func getMediaType() -> EnumDrawingItemMediaType
+```
+
+**Return Value**
+
+The media type of the `DrawingItem`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+EnumDrawingItemMediaType mediaType = [drawingItem getMediaType];
+```
+2. 
+```swift
+let mediaType = drawingItem.getMediaType()
+```
+
