@@ -1,3 +1,5 @@
+useGroupedVersion: true
+
 version_info_list_mobile:
   - value: latest version
   # - value: 4.x
