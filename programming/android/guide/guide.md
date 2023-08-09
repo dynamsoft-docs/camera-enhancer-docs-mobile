@@ -115,15 +115,25 @@ A valid license is required when using the following features:
 
 The above features are enabled by triggering method [`enableFeatures`](../primary-api/camera-enhancer.md#enablefeatures). If you are not using these features, you can skip the license activation step.
 
-Use the following code to activate the license:
+To activate the license:
 
-```java
-LicenseManager.initLicense(LICENSE, this, (isSuccess, error) -> {
-    if (!isSuccess) {
-        Log.e(TAG, "InitLicense Error: " + error);
-    }
-});
-```
+1. Include the library
+
+   ```java
+   dependencies {
+       implementation 'com.dynamsoft:dynamsoftlicense:3.0.0@aar'
+   }
+   ```
+
+2. Initialize the license in your code.
+
+   ```java
+   LicenseManager.initLicense(LICENSE, this, (isSuccess, error) -> {
+       if (!isSuccess) {
+           Log.e(TAG, "InitLicense Error: " + error);
+       }
+   });
+   ```
 
 >Note:
 >- Network connection is required for the license to work.

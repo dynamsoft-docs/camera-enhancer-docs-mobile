@@ -1,16 +1,16 @@
 ---
 layout: default-layout
 Title: ImageEditorView - Dynamsoft Core Module Android Edition API Reference
-Description: The class `ImageEditorView` of Dynamsoft Core Module represents an image editor view, which allows users to add interactable UI elements on the view.
+Description: The class ImageEditorView of Dynamsoft Core Module represents an image editor view, which allows users to add interactable UI elements on the view.
 Keywords: image editor view, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# `ImageEditorView`
+# ImageEditorView
 
-The ``ImageEditorView`` class represents an image editor view, which allows users to add interactable UI elements on the view.
+The `ImageEditorView` class represents an image editor view, which allows users to add interactable UI elements on the view.
 
 ## Definition
 

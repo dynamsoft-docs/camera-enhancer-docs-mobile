@@ -84,42 +84,59 @@ A valid license is required when using the following features:
 
 The above features are enabled by triggering method [`enableFeatures`](../primary-api/camera-enhancer.md#enablefeatures). If you are not using these features, you can skip the license activation step.
 
-Use the following code to activate the license:
+To activate the license:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface AppDelegate ()<DBRLicenseVerificationListener>
-...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+1. Add **DynamsoftLicense.xcframework** to your project and include `DynamsoftLicense` in your `AppDelegate`
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   #import <DynamsoftLicense/DynamsoftLicense.h>
+   ```
+   2. 
+   ```swift
+   import DynamsoftLicense
+   ```
+
+2. Initialize the license in your code.
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   @interface AppDelegate ()<DBRLicenseVerificationListener>
    ...
-}
-- (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
-    [self verificationCallback:error];
-}
-```
-2. 
-```swift
-class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
-   ...
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-          ...
-          LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-          ...
+   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+      ...
    }
-   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-          if !isSuccess {
-             if let error = error {
-                    print("\(error.localizedDescription)")
+   - (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
+       [self verificationCallback:error];
+   }
+   ```
+   2. 
+   ```swift
+   class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
+      ...
+      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+             ...
+             LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+             ...
+      }
+      func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+             if !isSuccess {
+                if let error = error {
+                       print("\(error.localizedDescription)")
+                }
              }
-          }
+      }
    }
-}
-```
+   ```
 
 ### Initialize the Camera View and Control the Camera
 

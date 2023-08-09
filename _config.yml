@@ -21,6 +21,7 @@ ios-api: /camera-enhancer/docs/mobile/programming/ios/primary-api/
 ios-api-auxiliary: /camera-enhancer/docs/mobile/programming/ios/auxiliary-api/
 ios-release-note: /camera-enhancer/docs/mobile/programming/ios/release-note/
 ios-cameraenhancer: /camera-enhancer/docs/mobile/programming/ios/api/cameraenhancer/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 android: /camera-enhancer/docs/mobile/programming/android/
 android-guide: /camera-enhancer/docs/mobile/programming/android/guide/
@@ -28,6 +29,7 @@ android-api: /camera-enhancer/docs/mobile/programming/android/primary-api/
 android-api-auxiliary: /camera-enhancer/docs/mobile/programming/android/auxiliary-api/
 android-release-note: /camera-enhancer/docs/mobile/programming/android/release-note/
 android-cameraenhancer: /camera-enhancer/docs/mobile/programming/android/primary-api/cameraenhancer/
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
 flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/

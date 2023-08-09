@@ -51,8 +51,6 @@ class CameraView: UIView {}
 | [`getDrawingLayer`](#getdrawinglayer) | Get the specified DrawingLayer. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new DrawingLayer. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
-| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system. |
-| [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 | [`setTorchButton`](#settorchbutton) | Add a torch button on your view. |
 | [`deleteUserDefinedDrawingLayer`](#deleteuserdefineddrawinglayer) | Delete the specified drawing layer. |
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
