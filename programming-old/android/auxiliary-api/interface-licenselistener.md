@@ -1,51 +1,41 @@
 ---
 layout: default-layout
-title: Android DCELicenseVerificationListener - Dynamsoft Camera Enhancer
-description: This is the documentation - DCELicenseVerificationListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, DCELicenseVerificationListener
+Title: LicenseVerificationListener - Dynamsoft Camera Enhancer Android Edition API Reference
+Description: The interface LicenseVerificationListener of Dynamsoft Camera Enhancer includes methods for monitoring the license verification status.
+Keywords: license verification, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: DCELicenseVerificationListener
-permalink: /programming/android/auxiliary-api/interface-licenselistener.html
 ---
 
-# DCELicenseVerificationListener
+# LicenseVerificationListener
 
-The interface to handle callback when license verification messages are returned.
+The `LicenseVerificationListener` is a interface that includes methods for monitoring the license verification status.
+
+## Definition
+
+*Namespace:* com.dynamsoft.license
+
+*Assembly:* DynamsoftLicense.aar
 
 ```java
-interface com.dynamsoft.dce.DCELicenseVerificationListener
+interface LicenseVerificationListener
 ```
 
 | Method | Description |
 | ------ | ----------- |
-| `DCELicenseVerificationCallback` | The call back of the license server. |
+| [`onLicenseVerified`](#onlicenseverified) | The method that is triggered when the license server returns the verification info. |
 
-&nbsp;
+### onLicenseVerified
 
-## DCELicenseVerificationCallback
-
-The call back of the license server. Add the code in the callback function to react when the license server connection is successful or failed.
+The method that is triggered when the license server returns the verification info.
 
 ```java
-void DCELicenseVerificationCallback(boolean isSuccess, Exception error);
+void onLicenseVerified(boolean isSuccess, Exception error);
 ```
 
 **Parameters**
 
-`isSuccess`: Whether the license verification was successful.  
-`error`: The error message from the license server.
+`[in] isSuccess`: A Boolean value indicating whether the license is verified successfully.
 
-**Code Snippet**
-
-```java
-CameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener() {
-    @Override
-    public void DCELicenseVerificationCallback(boolean isSuccess, Exception e) {
-        if (!isSuccess) {
-            e.printStackTrace();
-        }
-    }
-});
-```
+`[in] error`: An exception object. It carries the error code and message that describe the reason why your license activation failed.
