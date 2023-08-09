@@ -12,6 +12,10 @@ permalink: /programming/android/release-note/index.html
 # Dynamsoft Camera Enhancer Android SDK - Release Notes
 
 - [4.0.0 (08/04/2023)](release-notes-4.x.md/#400-08042023)
+- [3.0.3 (02/15/2023)](release-notes-3.x.md/#303-02152023)
+- [3.0.2 (02/02/2023)](release-notes-3.x.md/#302-02022023)
+- [3.0.1 (09/29/2022)](release-notes-3.x.md/#301-09292022)
+- [3.0.0 (06/21/2022)](release-notes-3.x.md/#300-06212022)
 - [2.3.11 (02/14/2023)](release-notes-2.x.md/#2311-02142023)
 - [2.3.10 (12/13/2022)](release-notes-2.x.md/#2310-12132022)
 - [2.3.5 (11/04/2022)](release-notes-2.x.md/#235-11042022)
