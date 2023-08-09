@@ -76,7 +76,9 @@ baseurl: "/camera-enhancer/docs/mobile/"
 plugins:
   - jemoji
   - jekyll-sitemap
-  
+
+edition: mobile
+
 defaults:
   - scope:
       path: "Hide_Tree_Page.html"
