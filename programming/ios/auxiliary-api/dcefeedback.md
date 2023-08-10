@@ -1,85 +1,70 @@
 ---
 layout: default-layout
-title: iOS DCEFeedback Class - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS DCEFeedback Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS, DCEFeedback
+Title: DSFeedback - Dynamsoft Core Module iOS Edition API Reference
+Description: The class DSFeedback of Dynamsoft Core Module provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
+Keywords: feedback, objective-c, swift
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: iOS DCEFeedback Class
 ---
 
-# DCEFeedback
+# DSFeedback
 
-With DCEFeedback APIs, user can trigger feedback on the device to respond for some specific events.
+The `DSFeedback` class provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
 
+## Definition
+
+*Assembly:* DynamsoftCore.framework
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface DCEFeedback : NSObject
+@interface DSFeedback : NSObject
+```
+2. 
+```swift
+class Feedback : NSObject
 ```
 
+## Methods
 | Method | Description |
-| ------ | ----------- |
-| [`vibrate`](#vibrate) | Trigger a vibration when the method is called. |
-| [`beep`](#beep) | Trigger a beep when the method is called. |
+|------- |-------------|
+| [`vibrate`](#vibrate) | Trigger a vibrate. |
+| [`beep`](#beep) | Trigger a beep. |
 
-## vibrate
+### vibrate
 
-Trigger a vibrate when the method is called.
+Trigger a vibrate.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (void)vibrate;
 ```
+2. 
+```swift
+class func vibrate()
+```
 
-**Code Snippet**
+### beep
+
+Trigger a beep.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
 >1. 
-```objc
-[DCEFeedback vibrate];
-// For example, if `vibrate` is called in the TextResultCallback of DBR, the device will trigger a vibration each time when barcode result is detected.
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-   [DCEFeedback vibrate];
-}
-```
-2. 
-```swift
-DCEFeedback.vibrate
-// For example, if `vibrate` is called in the TextResultCallback of DBR, the device will trigger a vibration each time when barcode result is detected.
-func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
-   DCEFeedback.beep()
-}
-```
-
-## beep
-
-Trigger a beep when the method is called.
-
 ```objc
 + (void)beep;
 ```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[DCEFeedback beep];
-// For example, if `beep` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-   [DCEFeedback beep];
-}
-```
 2. 
 ```swift
-DCEFeedback.beep()
-// For example, if `beep` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
-func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
-   DCEFeedback.beep()
-}
+class func beep()
 ```

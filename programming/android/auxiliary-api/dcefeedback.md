@@ -1,61 +1,44 @@
 ---
 layout: default-layout
-title: Android DCEFeedback Class - Dynamsoft Camera Enhancer
-description: This is the documentation - Android DCEFeedback Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android, DCEFeedback
+Title: Feedback - Dynamsoft Core Module Android Edition API Reference
+Description: The class Feedback of Dynamsoft Core Module provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
+Keywords: feedback, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: Android DCEFeedback Class
 ---
 
-# DCEFeedback
+# Feedback
+
+The `Feedback` class provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
+
+## Definition
+
+*Assembly:* package com.dynamsoft.dce
+
+```java
+class Feedback
+```
+
+## Methods
 
 | Method | Description |
-| ------ | ----------- |
-| [`vibrate`](#vibrate) | Trigger a vibration when the method is called. |
-| [`beep`](#beep) | Trigger a beep when the method is called. |
+|------- |-------------|
+| [`vibrate`](#vibrate) | Trigger a vibrate. |
+| [`beep`](#beep) | Trigger a beep. |
 
-## vibrate
+### vibrate
 
-Trigger a vibration when the method is called.
+Trigger a vibrate.
 
 ```java
-static void vibrate(Context context)
+void vibrate(Context context){}
 ```
 
-**Code Snippet**
+### beep
+
+Trigger a beep.
 
 ```java
-DCEFeedback.vibrate(MainActivity.this);
-// For example, if `vibrate` is called in the TextResultCallback of DBR, the device will trigger a vibration each time when barcode result is detected.
-mReader.setTextResultListener(new TextResultListener() {
-    @Override
-    public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-        ...
-        DCEFeedback.vibrate(MainActivity.this);
-    }
-});
-```
-
-## beep
-
-Trigger a beep when the method is called.
-
-```java
-static void beep(Context context)
-```
-
-**Code Snippet**
-
-```java
-DCEFeedback.beep(MainActivity.this);
-// For example, if `beep` is called in the TextResultCallback of DBR, the device will trigger a beep each time when barcode result is detected.
-mReader.setTextResultListener(new TextResultListener() {
-    @Override
-    public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-        ...
-        DCEFeedback.beep(MainActivity.this);
-    }
-});
+void beep(Context context){}
 ```

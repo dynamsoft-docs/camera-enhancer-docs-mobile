@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS Guide
+permalink: /programming/ios/guide/guide.html
 ---
 
 # User Guide on iOS
@@ -20,7 +21,7 @@ The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from
 
 Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your iOS app:
 
-## App prerequisites
+## App Prerequisites
 
 - System Requirements:
   - macOS 10.11 and above.
@@ -83,38 +84,59 @@ A valid license is required when using the following features:
 
 The above features are enabled by triggering method [`enableFeatures`](../primary-api/camera-enhancer.md#enablefeatures). If you are not using these features, you can skip the license activation step.
 
-Use the following code to activate the license:
+To activate the license:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface AppDelegate ()<DBRLicenseVerificationListener>
-...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   [DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate:self];
+1. Add **DynamsoftLicense.xcframework** to your project and include `DynamsoftLicense` in your `AppDelegate`
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   #import <DynamsoftLicense/DynamsoftLicense.h>
+   ```
+   2. 
+   ```swift
+   import DynamsoftLicense
+   ```
+
+2. Initialize the license in your code.
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   @interface AppDelegate ()<DBRLicenseVerificationListener>
    ...
-}
-- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-   // Add you code to do when license activation is succeed or failed.
-}
-```
-2. 
-```swift
-class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
-   ...
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-          ...
-          DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-          ...
+   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+      ...
    }
-   func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-          // Add you code to do when license activation is succeed or failed.
+   - (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
+       [self verificationCallback:error];
    }
-}
-```
+   ```
+   2. 
+   ```swift
+   class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
+      ...
+      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+             ...
+             LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+             ...
+      }
+      func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+             if !isSuccess {
+                if let error = error {
+                       print("\(error.localizedDescription)")
+                }
+             }
+      }
+   }
+   ```
 
 ### Initialize the Camera View and Control the Camera
 
@@ -130,15 +152,15 @@ Delcare the DCE & DCECameraView property.
 >
 >1. 
 ```objc
-@interface ViewController ()<DCEFrameListener>
-@property (nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property (nonatomic, strong) DCECameraView *dceView;
+@interface ViewController ()<DSVideoFrameListener>
+@property (nonatomic, strong) DSCameraView *cameraView;
+@property (nonatomic, strong) DSCameraEnhancer *dce;
 @end
 ```
 2. 
 ```swift
-var dce:DynamsoftCameraEnhancer! = nil
-var dceView:DCECameraView! = nil
+var cameraView:CameraView!
+let dce:CameraEnhancer = .init()
 ```
 
 #### Step 1.2
@@ -151,26 +173,27 @@ Initialize the DCE & DCECameraView in a method.
 >
 >1. 
 ```objc
-- (void)configurationDCE{
-   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-   [self.view addSubView:_dceView];
-   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
-   [_dce open];
-   [_dce addListener:self];
+- (void)setUpCamera {
+   self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
+   self.cameraView.autoresizingMask = UIViewAutoresizingFlexibleWidth |UIViewAutoresizingFlexibleHeight;
+   [self.view insertSubview:self.cameraView atIndex:0];
+   self.dce = [[DSCameraEnhancer alloc] init];
+   self.dce.cameraView = self.cameraView;
+   [self.dce addListener:self];
 }
 ```
 2. 
 ```swift
-func configurationDCE() {
-   dceView = DCECameraView.init(frame: self.view.bounds)
-   self.view.addSubview(dceView)
-   dce = DynamsoftCameraEnhancer.init(view: dceView)
-   dce.open()
+func setUpCamera() {
+   cameraView = .init(frame: view.bounds)
+   cameraView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+   view.insertSubview(cameraView, at: 0)
+   dce.cameraView = cameraView
    dce.addListener(self)
 }
 ```
 
-Remember to add the `configurationDCE` to the `viewDidLoad` method
+Add the `setUpCamera` to the `viewDidLoad` method and open the camera when the view appear.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -180,14 +203,24 @@ Remember to add the `configurationDCE` to the `viewDidLoad` method
 ```objc
 - (void)viewDidLoad {
    [super viewDidLoad];
-   [self configurationDCE];
+   // Do any additional setup after loading the view.
+   [self setUpCamera];
+}
+- (void)viewWillAppear:(BOOL)animated {
+   [super viewWillAppear:animated];
+   [self.dce open];
 }
 ```
 2. 
 ```swift
 override func viewDidLoad() {
    super.viewDidLoad()
-   configurationDCE()
+   // Do any additional setup after loading the view.
+   setUpCamera()
+}
+override func viewWillAppear(_ animated: Bool) {
+   super.viewWillAppear(animated)
+   dce.open()
 }
 ```
 
@@ -221,11 +254,11 @@ Add `DCEFrameListener` to your `ViewController` so that you can use `FrameOutput
 >
 >1. 
 ```objc
-@interface ViewController ()<DCEFrameListener>
+@interface ViewController ()<DSVideoFrameListener>
 ```
 2. 
 ```swift
-class ViewController: UIViewController,DCEFrameListener{
+class ViewController: UIViewController,VideoFrameListener{
    //...
 }
 ```
@@ -238,16 +271,13 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
 >
 >1. 
 ```objc
-- (void)frameOutPutCallback:(nonnull DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp {
-   if (isview) {
-          isview = false;
+- (void)onFrameOutPut:(nonnull DSImageData *)frame {
+   if (self.isClicked) {
+          self.isClicked = false;
           dispatch_async(dispatch_get_main_queue(), ^{
-             [self->photoButton setEnabled:false];
-             UIImage *image = [[UIImage alloc] initWithCGImage: frame.toUIImage.CGImage
-                                                         scale: 1.0
-                                                   orientation: UIImageOrientationRight];
-             [self->imageView setImage:image];
-             [self.view addSubview:self->imageView];
+             self.button.enabled = false;
+             self.imageView.image = [frame toUIImage:nil];
+             self.imageView.hidden = false;
              [self addBack];
           });
    }
@@ -255,17 +285,14 @@ Add `FrameOutputCallback` to your project to get frames from camera output. DCEF
 ```
 2. 
 ```swift
-func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
-   if isview {
-          isview = false
-          DispatchQueue.main.async {
-             self.photoButton?.isEnabled = false
-             var image:UIImage!
-             image = frame.toUIImage()
-             image = UIImage.init(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.right)
-             self.imageView.image = image
-             self.view.addSubview(self.imageView)
-             self.addBack()
+func onFrameOutPut(_ frame: ImageData) {
+   if isClicked {
+          isClicked = false
+          DispatchQueue.main.async { [self] in
+             button.isEnabled = false
+             imageView.image = try? frame.toUIImage()
+             imageView.isHidden = false
+             addBack()
           }
    }
 }

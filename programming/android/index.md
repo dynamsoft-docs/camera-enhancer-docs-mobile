@@ -1,22 +1,23 @@
 ---
 layout: default-layout
-title: Start on Android - Dynamsoft Camera Enhancer
-description: This is the documentation - Start on Android page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Start on Android
+title: Get start on Android - Dynamsoft Camera Enhancer
+description: This is the documentation - Get start on Android page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Java, Kotlin
 needAutoGenerateSidebar: true
 breadcrumbText: Start on Android
+permalink: /programming/android/index.html
 ---
 
-# Start on Android
+# Get start on Android
 
 ## Getting started
 
 - [User guide for Android]({{site.android-guide}}guide.html)
 
-## API reference for Android Edition
+## API reference for Java, Kotlin Edition
 
-- [API Reference](api-reference.md)
+- [APIs reference]({{site.android}}api-reference.html)
 
-## Android Release Note
+## Java, Kotlin Release Note
 
 - [Android Release Note]({{site.android-release-note}})

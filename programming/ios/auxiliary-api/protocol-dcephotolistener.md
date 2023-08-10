@@ -1,37 +1,59 @@
 ---
 layout: default-layout
-title: iOS Protocol DCEPhotoListener - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS Protocol DCEPhotoListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS Protocol DCEPhotoListener
+Title: DSPhotoListener - Dynamsoft Core Module iOS Edition API Reference
+Description: The protocol DSPhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
+Keywords: photo listener, objective-c, swift
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: false
-breadcrumbText: iOS Protocol DCEPhotoListener
 ---
 
-# DCEPhotoListener
+# DSPhotoListener
 
-The interface that provide method for capturing photo from the camera.
+The `DSPhotoListener` protocol defines the methods for monitoring the photo output.
 
+## Definition
+
+*Assembly:* DynamsoftCore.framework
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@protocol DCEPhotoListener <NSObject>
+@protocol DSPhotoListener <NSObject>
+```
+2. 
+```swift
+protocol PhotoListener : NSObjectProtocol
 ```
 
-| Method | Type | Description |
-| ------ | ---- | ----------- |
-| [`photoOutputCallback`](#photooutputcallback) | *required* | The callback method for user to receive the captured photo. |
+## Methods
+| Method | Description |
+|------- |-------------|
+| [`onPhotoOutput`](#onphotooutput) | The method for monitoring the photo output. |
 
-## photoOutputCallback
+### onPhotoOutput
 
-The callback method for user to receive the captured photo. User can complete the method by adding code to execute with the capture image.
+The method for monitoring the photo output.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-- (void)photoOutputCallback:(NSData *)jpegBytes;
+- (void)onPhotoOutput:(NSData *)jpegBytes;
+```
+2. 
+```swift
+func onPhotoOutput(_ jpegBytes: Data)
 ```
 
 **Parameters**
 
-`jpegBytes` The byte data of the captured image.
+`jpegBytes`: The captured photo as JPEG bytes.
 
 **Code Snippet**
 
@@ -41,30 +63,9 @@ The callback method for user to receive the captured photo. User can complete th
 >
 >1. 
 ```objc
-@interface ViewController ()<DCEPhotoListener>
-- (void)configurationDCE(){
-   // When you trigger takePhote method, the library firstly capture a photo
-   // When the photo is captured and stored in memory, it will be processed by DBR
-   [_dce takePhoto:self]
-}
-- (void)photoOutputCallback:(NSData *)jpegBytes{
-   // Add your code to execute when photo is captured.
-   // For example, you can use Dynamsoft Barcode Reader (DBR) to decode the byte image.
-   NSArray<iTextResult*> *barcodeResults = [_dbr decodeFileInMemory:jpegBytes error:nil];
-}
+[listener onPhotoOutput:jpegData];
 ```
 2. 
 ```swift
-class ViewController: UIViewController, DCEPhotoListener {
-   func configurationDCE(){
-          // When you trigger takePhote method, the library firstly capture a photo
-          // When the photo is captured and stored in memory, it will be processed by DBR
-          dce.takePhoto()
-   }
-   func photoOutputCallback(_ jpegByte: Data){
-          // Add your code to execute when photo is captured.
-          // For example, you can use Dynamsoft Barcode Reader (DBR) to decode the byte image.
-          let barcodeResults = try? dbr.decodeFileInMemory(jpegByte)
-   }
-}
+listener.onPhotoOutput(jpegData)
 ```

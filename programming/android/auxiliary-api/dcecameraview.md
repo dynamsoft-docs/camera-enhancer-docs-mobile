@@ -1,268 +1,296 @@
 ---
 layout: default-layout
-title: Android DCECameraView Class - Dynamsoft Camera Enhancer
-description: This is the documentation - Android DCECameraView Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android, DCECameraView
+Title: CameraView - Dynamsoft Camera SDK API Reference
+Description: The class CameraView of Dynamsoft Camera SDK represents a camera view that displays the camera preview and provides UI controlling APIs.
+Keywords: camera view, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: Android DCECameraView Class
 ---
 
-# DCECameraView
+# CameraView
 
-The camera view is the main UI view of the DCE SDK. It is designed to display the video preview, overlay, viewfinder, etc.
+The `CameraView` class is used to display the camera preview and provides UI controlling APIs. Users can add interactable UI elements on the view.
+
+## Definition
+
+*Assembly:* package com.dynamsoft.dce
 
 ```java
-class com.dynamsoft.dce.DCECameraView extends RelativeLayout
+class CameraView
 ```
 
-| Method Name | Description |
-|------|------|
-| [`DCECameraView`](#dcecameraview) | Initialize the `DCECameraView` object. |
-| [`setOverlayVisible`](#setoverlayvisible) | This method controls whether the camera view to display coloured and translucent overlay. |
-| [`getOverlayVisible`](#getoverlayvisible) | Get the visibility (true: visible/ false: invisible) of the overlay. |
-| [`setOverlayColour`](#setoverlaycolour) | Set the stroke and fill colour of the overlay. |
-| [`setViewfinderVisible`](#setviewfindervisible) | This method controls whether to display a viewfinder. |
-| [`getViewfinderVisible`](#getviewfindervisible) | Get the visibility (true: visible/ false: invisible) of the viewfinder. |
-| [`setViewfinder`](#setviewfinder) | Set the position and the size of the viewfinder. |
-| [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
-| [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
-| [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
+## Methods
+
+| Method | Description |
+|------- |-------------|
+| [`CameraView`](#cameraview) | Create an instance of `CameraView`. |
+| [`getDrawingLayer`](#getdrawinglayer) | Get the specified `DrawingLayer`. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a new `DrawingLayer`. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
+| [`setTorchButton`](#settorchbutton) | Add a torch button on your view. |
+| [`deleteUserDefinedDrawingLayer`](#deleteuserdefineddrawinglayer) | Delete the specified drawing layer. |
+| [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
+| [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
+| [`setScanRegionMaskStyle`](#setscanregionmaskstyle) | Set the style of the scan region mask. |
+| [`setTorchButtonVisible`](#settorchbuttonvisible) | Set/get the visibility of the torch button. |
+| [`isTorchButtonVisible`](#istorchbuttonvisible) | Set/get the visibility of the torch button. |
+| [`setScanRegionMaskVisible`](#setscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
+| [`isScanRegionMaskVisible`](#isscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
+| [`setScanLaserVisible`](#setscanlaservisible) | Set the visibility of the scan laser. |
+| [`isScanLaserVisible`](#isscanlaservisible) | Get the visibility of the scan laser. |
+| [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
+| [`setTipConfig`](#settipconfig) | Set/get the tip configurations. |
+| [`getTipConfig`](#gettipconfig) | Set/get the tip configurations. |
+| [`setTipVisible`](#settipvisible) | Set the visibility of tip. |
+| [`isTipVisible`](#istipvisible) | Get the visibility of tip. |
 
-&nbsp;
+### CameraView
 
-## DCECameraView
-
-Initialize the `DCECameraView` object.
+The constructor. Create an instance of `CameraView`.
 
 ```java
-DCECameraView(android.content.Context context)
+CameraView(android.content.Context context);
 ```
 
 **Parameters**
 
-`context`: An instance of global information about an application environment.
+`frame`: A CGRect value that defines the position of the view.
 
-&nbsp;
+**Return Value**
 
-## setOverlayVisible
+An instance of `CameraView`.
 
-This method controls whether the camera view displays coloured and translucent overlays.
+### getDrawingLayer
+
+Get the specified `DrawingLayer`.
 
 ```java
-void setOverlayVisible(boolean overlayVisibile)
+DrawingLayer getDrawingLayer(int id);
 ```
 
 **Parameters**
 
-`overlayVisibile`: If true, the camera view will draw and display overlays according to the position and colour settings. Otherwise, the overlay will be hidden.
+`layerId`: The ID of the layer that you want to get.
 
-**Code Snippet**
+**Return Value**
 
-```java
-//Suppose dceCameraView is an object of `DCECameraView`
-dceCameraView.setOverlayVisible(true);
-```
+The object of the targeting layer.
 
-&nbsp;
+### createDrawingLayer
 
-## getOverlayVisible
-
-Get the visibility (true: visible/ false: invisible) of the overlay.
+Create a new `DrawingLayer`.
 
 ```java
-boolean getOverlayVisible()
+DrawingLayer createDrawingLayer();
 ```
 
 **Return Value**
 
-The visibility (true: visible/ false: invisible) of the overlay.
+The object of the layer you created.
 
-**Code Snippet**
-
-```java
-//Suppose dceCameraView is an object of `DCECameraView`
-boolean isVisible = dceCameraView.getOverlayVisible();
-```
-
-&nbsp;
-
-## setOverlayColour
-
-Set the stroke and fill colour of the overlays.
-
-```java
-void setOverlayColour(int strokeARGB, int fillARGB)
-```
-
-**Parameters**
-
-`strokeARGB`: The colour code of the overlays stroke.
-`fillARGB`: The colour code of the overlays stroke.
-
-**Code Snippet**
-
-```java
-//Suppose dceCameraView is an object of `DCECameraView`
-dceCameraView.setOverlayColour(0xff00ff00, 0x00000000);
-```
-
-&nbsp;
-
-## setViewfinderVisible
-
-This method controls whether to display a viewfinder.
-
-```java
-void setViewfinderVisible(boolean viewfinderVisible)
-```
-
-**Parameters**
-
-`viewfinderVisible`: A boolean value that means whether the viewfinder is visible or not. Users can define the position and size of the viewfinder via method [`setViewfinder`](#setviewfinder). The viewfinder will be created based on the default value if the `setViewfinder` has never been triggered.
-
-**Code Snippet**
-
-```java
-//Suppose dceCameraView is an object of `DCECameraView`
-dceCameraView.setViewfinderVisible(true);
-```
-
-&nbsp;
-
-## getViewfinderVisible
-
-Get the visibility (true: visible/ false: invisible) of the viewfinder.
-
-**Return Value**
-
-A boolean value means whether the viewfinder is visible.
-
-**Code Snippet**
-
-```java
-//Suppose dceCameraView is an object of `DCECameraView`
-boolean flag = dceCameraView.getViewfinderVisible();
-```
-
-&nbsp;
-
-## setViewfinder
-
-Set the position and the size of the viewfinder.
-
-```java
-void setViewfinder(float left, float top, float right, float bottom) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`left`: The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
-`top`: The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
-`right`: The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
-`bottom`: The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
-
-**Code Snippet**
-
-```java
-//Suppose dceCameraView is an object of `DCECameraView`
-dceCameraView.setViewfinder(0.2, 0.3, 0.8, 0.7);
-```
-
-**Remarks**
-
-The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
-
-&nbsp;
-
-## setTorchButton
-
-Set the styles of the button with the position, size and images.
-
-```java
-void setTorchButton(Point torchButtonPosition, int width, int height, Drawable torchOnImage, Drawable torchOffImage)
-```
-
-**Parameters**
-
-`torchButtonPosition`: The coordinate of the top-left corner of the torch button. You can input a null value to apply no changes to the position of the torch button.  
-`width`: The width of the torch button. You can input a null value to apply no changes to the width of the torch button.  
-`height`: The height of the torch button. You can input a null value to apply no changes to the height of the torch button.  
-`torchOnImage`: Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
-`torchOffImage`: Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
-
-**Code Snippet**
-
-```java
-cameraView.setTorchButton(new Point(100,100), 50,50, getDrawable(R.drawable.torch_on_image), getDrawable(R.drawable.torch_off_image));
-```
-
-**Remarks**
-
-Method `setTorchButton(Point torchButtonPosition)` is deprecated. Please use the new `setTorchButton` method.
-
-&nbsp;
-
-## setTorchButtonVisible
-
-Set the visibility of the torch button. The torch button icon is preset in the SDK. If the `torchButtonPosition` has never been configured, the `torchButton` will be displayed on the default position. Currently, the icon and the size of the button are not available for setting.
-
-```java
-void setTorchButtonVisible(boolean isTorchButtonVisible)
-```
-
-**Parameters**
-
-`isTorchButtonVisible`: When the value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
-
-**Code Snippet**
-
-```java
-dceCameraView.setTorchButtonVisible(true);
-```
-
-&nbsp;
-
-## getTorchButtonVisible
-
-Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen.
-
-```java
-Boolean getTorchButtonVisible()
-```
-
-**Return Value**
-
-A boolean value. When the value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
-
-**Code Snippet**
-
-```java
-Boolean isTorchButtonVisible = dceCameraView.getTorchButtonVisible();
-```
-
-&nbsp;
-
-## getVisibleRegionOfVideo
+### getVisibleRegionOfVideo
 
 Get the visible region of the video streaming.
 
-When the shape of your camera view is quite different from the shape of the video streaming, there might exist a large area that is invisible. You can use this method to get the region of this invisible area.
-
-<div align="center">
-    <p><img src="../../assets/visible-region.png" width="30%" alt="visible-region"></p>
-    <p>What's Visible Region</p>
-</div>
+```java
+DSRect getVisibileRegionOfVideo();
+```
 
 **Return Value**
 
-An `iRegionDefinition` object. You can use this object to set the scan region so that the invisible areas will be cropped from the video frames.
+A `DSRect` object (measuredInPercentage = 1) that defines the visible region of the video.
 
-**Code Snippet**
+### setTorchButton
+
+Add a torch button on your view. If you are using enhanced feature - smart torch, the style of this torch button will be applied to the smart torch as well.
 
 ```java
-iRegionDefinition visibleRegion = cameraView.getVisibleRegion();
-cameraEnhancer.setScanRegion(visibleRegion);
+void setTorchButton(Point torchButtonPosition, int width, int height, Drawable torchOnImage, Drawable torchOffImage);
 ```
+
+**Parameters**
+
+`torchButtonPosition`: Set the top-left point of the torch button.  
+`width`: Set the width of the torch button.
+`height`: Set the height of the torch button.
+`torchOnImage`: The torch button image that you want to display when the torch is on.  
+`torchOffImage`: The torch button image that you want to display when the torch is off.  
+
+### setTorchButtonVisible
+
+Set/get the visibility of the torch button.
+
+```java
+void setTorchButtonVisible(boolean isTorchButtonVisible);
+```
+
+**Parameters**
+
+`isVisible`: A boolean value that indicate the torch button is visible.
+
+### isTorchButtonVisible
+
+Set/get the visibility of the torch button.
+
+```java
+void setTorchButtonVisible(boolean isTorchButtonVisible);
+```
+
+**Return Value**
+
+A boolean value that indicate the torch button is visible.
+
+### deleteUserDefinedDrawingLayer
+
+Delete the specified drawing layer.
+
+**Parameters**
+
+`frame`: The ID of the layer that you want to delete.
+
+```java
+void deleteUserDefinedDrawingLayer(int id);
+```
+
+### clearUserDefinedDrawingLayers
+
+Clear all the user-defined drawing layers.
+
+```java
+void clearUserDefinedDrawingLayers();
+```
+
+### getAllDrawingLayers
+
+Get all the drawing layers on the view.
+
+**Return Value**
+
+All the drawing layers. The return value includes both system drawing layers and user defined drawing layers.
+
+```java
+DrawingLayer[] getAllDrawingLayers();
+```
+
+### setScanRegionMaskVisible
+
+Set the visibility of the scan region mask.
+
+```java
+void setScanRegionMaskVisible(boolean isScanRegionVisible);
+```
+
+**Parameters**
+
+`isScanRegionVisible`: A boolean value that indicates whether the scan region mask is visible.
+
+### isScanRegionMaskVisible
+
+Get the visibility of the scan laser.
+
+```java
+boolean isScanRegionMaskVisible();
+```
+
+**Return Value**
+
+A boolean value that indicates whether the scan region mask is visible.
+
+### setScanRegionMaskStyle
+
+Set the style of the scan region mask.
+
+```java
+void setScanRegionMaskStyle(int strokeColor, int surroundingColour, float strokeWidth);
+```
+
+**Parameters**
+
+`strokeColour`: The stroke colour of the scan region box.  
+`surroundingColour`: The colour of the mask around the scan region.  
+`strokeWidth`: The width of the stroke.  
+
+### setScanLaserVisible
+
+Set the visibility of the scan laser.
+
+```java
+void setScanLaserVisible(boolean isScanRegionVisible);
+```
+
+**Parameters**
+
+`isScanRegionVisible`: A boolean value that indicates whether the scan laser is visible.
+
+### isScanLaserVisible
+
+Get the visibility of the scan laser.
+
+```java
+boolean isScanLaserVisible();
+```
+
+**Return Value**
+
+A boolean value that indicates whether the scan laser is visible.
+
+### setTipConfig
+
+Set/get the tip configurations.
+
+```java
+void setTipConfig(TipConfig tipConfig);
+```
+
+**Parameters**
+
+`tipConfig`: A `TipConfig` object that stores the tip configuration.
+
+### getTipConfig
+
+Set/get the tip configurations.
+
+```java
+TipConfig getTipConfig();
+```
+
+**Return Value**
+
+Get a `TipConfig` object that stores the tip configuration.
+
+### setTipVisible
+
+Set the visibility of tip.
+
+```java
+void setTipVisible(boolean isVisible);
+```
+
+**Parameters**
+
+`isVisible`: A boolean value that indicate the tip is visible.
+
+### isTipVisible
+
+Get the visibility of tip.
+
+```java
+boolean isTipVisible();
+```
+
+**Return Value**
+
+A boolean value that indicate the tip is visible.
+
+### updateTipMessage
+
+Update the tip message. The new tip message will be immediately displayed on the view. Generally, tip messages are uploaded internally.
+
+```java
+void updateTipMessage(String tipMessage);
+```
+
+**Parameters**
+
+`tipMessage` The new message that you want to display.

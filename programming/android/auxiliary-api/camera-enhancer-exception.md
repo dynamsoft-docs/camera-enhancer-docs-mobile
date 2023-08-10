@@ -1,46 +1,39 @@
 ---
 layout: default-layout
-title: Android CameraEnhancerException Class - Dynamsoft Camera Enhancer
-description: This is the documentation - Android CameraEnhancerException Class page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android, CameraEnhancerException
+Title: extends CameraEnhancerException - Dynamsoft Core Module Android Edition API Reference
+Description: The class CameraEnhancerModule of Dynamsoft Core Module defines the camera enhancer exception.
+Keywords: camera enhancer, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: Android CameraEnhancerException Class
 ---
 
 # CameraEnhancerException
 
-Exception for signaling camera enhancer errors.
+`CameraEnhancerException` class defines the camera enhancer exceptions.
+
+## Definition
+
+*Assembly:* package com.dynamsoft.dce
 
 ```java
-class com.dynamsoft.dce.CameraEnhancerException extends Exception
+class CameraEnhancerException extends Exception
 ```
 
-| Method Name | Type |
-|------|------|
-| [`getErrorCode`](#geterrorcode) | int |
+## Methods
 
-&nbsp;
+| Method | Description |
+|------- |-------------|
+| [`getErrorCode`](#geterrorcode) | Get the version of Dynamsoft Camera Enhancer. |
 
-## getErrorCode
+### getErrorCode
 
-Gets the error code.
+Get the error code.
 
 ```java
-int getErrorCode()
+int getErrorCode();
 ```
 
 **Return Value**
 
-The error code. See also [`Error Code List`]({{ site.mobile-enum }}errorcode.html?lang=android).
-
-**Code Snippet**
-
-```java
-try {
-    mCameraEnhancer.setResolution(EnumResolution.RESOLUTION_1080P);
-} catch (CameraEnhancerException e) {
-    Log.e("DCE", "onCreate: Resolution setting error is:"+e.getErrorCode());
-}
-```
+The error code.

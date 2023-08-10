@@ -1,9 +1,8 @@
-repositoryUrl: https://github.com/dynamsoft-docs/camera-enhancer-docs/blob/main
-repository: dynamsoft-docs/camera-enhancer-docs
-docFullPath: https://www.dynamsoft.com/barcode-reader/docs/core/
-firstLevelUrl: /camera-enhancer/docs/core
+repositoryUrl: https://github.com/dynamsoft-docs/camera-enhancer-docs-mobile/blob/main
+repository: dynamsoft-docs/camera-enhancer-docs-mobile
+docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/mobile/
+firstLevelUrl: /camera-enhancer/docs/mobile
 docHomePage: /camera-enhancer/docs/core/introduction/
-frontPageFolder: /camera-enhancer/docs/core/
 
 productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
 productName: Dynamsoft Camera Enhancer
@@ -16,24 +15,21 @@ release_notes: /camera-enhancer/docs/core/release-notes/
 parameter-reference: /camera-enhancer/docs/core/parameters/reference/
 faq: /camera-enhancer/docs/core/faq/
 
-ios: /camera-enhancer/docs/mobile/ios/
-ios-guide: /camera-enhancer/docs/mobile/ios/guide/
-ios-api: /camera-enhancer/docs/mobile/ios/primary-api/
-ios-api-auxiliary: /camera-enhancer/docs/mobile/ios/auxiliary-api/
-ios-release-note: /camera-enhancer/docs/mobile/ios/release-note/
-ios-cameraenhancer: /camera-enhancer/docs/mobile/ios/api/cameraenhancer/
+ios: /camera-enhancer/docs/mobile/programming/ios/
+ios-guide: /camera-enhancer/docs/mobile/programming/ios/guide/
+ios-api: /camera-enhancer/docs/mobile/programming/ios/primary-api/
+ios-api-auxiliary: /camera-enhancer/docs/mobile/programming/ios/auxiliary-api/
+ios-release-note: /camera-enhancer/docs/mobile/programming/ios/release-note/
+ios-cameraenhancer: /camera-enhancer/docs/mobile/programming/ios/api/cameraenhancer/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
-android: /camera-enhancer/docs/mobile/android/
-android-guide: /camera-enhancer/docs/mobile/android/guide/
-android-api: /camera-enhancer/docs/mobile/android/primary-api/
-android-api-auxiliary: /camera-enhancer/docs/mobile/android/auxiliary-api/
-android-release-note: /camera-enhancer/docs/mobile/android/release-note/
-android-cameraenhancer: /camera-enhancer/docs/mobile/android/primary-api/cameraenhancer/
-
-js: /camera-enhancer/docs/web/javascript/
-js-guide: /camera-enhancer/docs/web/javascript/user-guide/
-js-api: /camera-enhancer/docs/web/javascript/api-reference/
-js-rn: /camera-enhancer/docs/web/javascript/release-note/
+android: /camera-enhancer/docs/mobile/programming/android/
+android-guide: /camera-enhancer/docs/mobile/programming/android/guide/
+android-api: /camera-enhancer/docs/mobile/programming/android/primary-api/
+android-api-auxiliary: /camera-enhancer/docs/mobile/programming/android/auxiliary-api/
+android-release-note: /camera-enhancer/docs/mobile/programming/android/release-note/
+android-cameraenhancer: /camera-enhancer/docs/mobile/programming/android/primary-api/cameraenhancer/
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
 flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
@@ -61,24 +57,30 @@ barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhance
 barcode-deploy-android: /barcode-reader/programming/android/api-reference/camera-enhancer/
 barcode-enum: /barcode-reader/parameters/enum/
 
-assets: /camera-enhancer/docs/core/assets/
-edit_icon: /camera-enhancer/docs/core/assets/img-icon/edit-icon.png
-smile_icon: /camera-enhancer/docs/core/assets/img-icon/icon-smile.png
-sad_icon: /camera-enhancer/docs/core/assets/img-icon/icon-sad.png
-dbr_icon: /camera-enhancer/docs/core/assets/img-icon/icon-dbr.svg
-dwt_icon: /camera-enhancer/docs/core/assets/img-icon/icon-dwt.svg
-dnt_icon: /camera-enhancer/docs/core/assets/img-icon/icon-dnt.svg
+dce-enums: /camera-enhancer/docs/core/enums/
+core-enums: /capture-vision/docs/core/enums/core/
+cvr-enums: /capture-vision/docs/core/enums/capture-vision-router/
+
+assets: /camera-enhancer/docs/mobile/assets/
+edit_icon: /camera-enhancer/docs/mobile/assets/img-icon/edit-icon.png
+smile_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-smile.png
+sad_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-sad.png
+dbr_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-dbr.svg
+dwt_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-dwt.svg
+dnt_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-dnt.svg
 
 overview: /camera-enhancer/overview/
-download: /camera-enhancer/downloads/1000021-confirmation/
+download: /camera-enhancer/downloads/
 
 useVersionTree: true
 
-baseurl: "/camera-enhancer/docs/core/"
+baseurl: "/camera-enhancer/docs/mobile/"
 plugins:
   - jemoji
   - jekyll-sitemap
-  
+
+edition: mobile
+
 defaults:
   - scope:
       path: "Hide_Tree_Page.html"

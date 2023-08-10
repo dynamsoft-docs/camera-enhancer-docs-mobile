@@ -1,57 +1,39 @@
 ---
 layout: default-layout
-title: Android DCEPhotoListener - Dynamsoft Camera Enhancer
-description: This is the documentation - DCEPhotoListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, DCEPhotoListener
+Title: PhotoListener - Dynamsoft Core Module Android Edition API Reference
+Description: The interface PhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
+Keywords: photo listener, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: DCEPhotoListener
 ---
 
-# DCEPhotoListener
+# PhotoListener
 
-The interface that provide method for capturing photo from the camera.
+The `PhotoListener` interface defines the methods for monitoring the photo output.
+
+## Definition
+
+*Assembly:* package com.dynamsoft.dce
 
 ```java
-interface com.dynamsoft.dce.DCEPhotoListener
+interface PhotoListener
 ```
 
-| Functions | Description |
-| --------- | ----------- |
-| [`photoOutputCallback`](#photooutputcallback) | The callback method for user to receive the captured photo. |
+## Methods
 
-## photoOutputCallback
+| Method | Description |
+|------- |-------------|
+| [`onPhotoOutput`](#onphotooutput) | The method for monitoring the photo output. |
 
-The callback method for user to receive the captured photo. User can complete the method by adding code to execute with the capture image.
+### onPhotoOutput
+
+The method for monitoring the photo output.
 
 ```java
-photoOutputCallback(byte[] bytes)
+void onPhotoOutput(byte[] bytes);
 ```
 
 **Parameters**
 
-`bytes`: The byte data of the captured image.
-
-**Code Snippet**
-
-```java
-// Create an instance of DCEPhotoListener
-DCEPhotoListener photoListener = new DCEPhotoListener() {
-    @Override
-    public void photoOutputCallback(byte[] bytes) {
-        // Add your code to execute when photo is captured.
-        // For example, you can use Dynamsoft Barcode Reader (DBR) to decode the byte image.
-        try {
-            BarcodeReader mReader = new BarcodeReader();
-            mReader.decodeFileInMemory(bytes);
-        } catch (BarcodeReaderException e) {
-            e.printStackTrace();
-        }
-    }
-};
-// Since you have configured the photoOutputCallback.
-// When you trigger takePhote method, the library firstly capture a photo
-// When the photo is captured and stored in memory, it will be processed by DBR
-mCameraEnhancer.takePhoto(photoListener);
-```
+`bytes`: The captured photo as JPEG bytes.
