@@ -121,7 +121,7 @@ To activate the license:
 
    ```java
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftlicense:3.0.0@aar'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.0.10@aar'
    }
    ```
 
