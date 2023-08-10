@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Advanced Features on Android - Dynamsoft Camera Enhancer
-description: This is the documentation - Enable Advanced Features on Android.
-keywords:  Camera Enhancer, Advanced Features on Android
+title: Advanced Features on iOS - Dynamsoft Camera Enhancer
+description: This is the documentation - Enable Advanced Features on iOS.
+keywords:  Camera Enhancer, Advanced Features on iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Advanced Features
-permalink: /programming/android/guide/features.html
+permalink: /programming/ios/guide/features-v3.0.3.html
 ---
 
 # Advanced Features
@@ -18,27 +18,38 @@ On this page, you will read about how to use advanced features of Dynamsoft Came
 
 All the advanced feaatures are defined in enumeration `EnumEnhancerFeatures`. Currently, they are available as follow:
 
-| Feature | Enumeration Member | Value |
-| ------- | ------ | ----- |
-| [Frame Filter](#frame-filter) | `EnumFRAME_FILTER` | 0x01 |
-| [Sensor Control](#sensor-control) | `EnumSENSOR_CONTROL` | 0x02 |
-| [Enhanced Focus](#enhanced-focus) | `EnumENHANCED_FOCUS` | 0x04 |
-| [Fast Mode](#fast-mode) | `EnumFAST_MODE` | 0x08 |
-| [Auto Zoom](#auto-zoom) | `EnumAUTO_ZOOM` | 0x10 |
-| [Smart Torch](#smart-torch) | `EnumSMART_TORCH` | 0x20 |
+| Feature | Enumeration Member (Objective-C) | Enumeration Member (Swift) | Value |
+| ------- | ------ | ----- | ----- |
+| [Frame Filter](#frame-filter) | `EnhancedFeatureFrameFilter` | `frameFilter` | 0x01 |
+| [Sensor Control](#sensor-control) | `EnhancedFeatureSensorControl` | `sensorControl` | 0x02 |
+| [Enhanced Focus](#enhanced-focus) | `EnhancedFeatureEnhancedFocus` | `enhancedFocus` | 0x04 |
+| [Auto Zoom](#auto-zoom) | `EnhancedFeatureAutoZoom` | `autoZoom` | 0x10 |
+| [Smart Torch](#smart-torch) | `EnhancedFeatureSmartTorch` | `smartTorch` | 0x20 |
 
 ## How to Use
 
-- Enable: Trigger method `enableFeatures` with the enumeration members of the features that you want to enable.
-- Disable: Trigger method `disableFeatures` with the enumeration members of the features that you want to disable.
+- Enable: Trigger method `enableEnhancedFeatures` with the enumeration members of the features that you want to enable.
+- Disable: Trigger method `disableEnhancedFeatures` with the enumeration members of the features that you want to disable.
 
 Sample code:
 
-```java
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 // To enable features
-mCameraEnhancer.enableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
+[_dce enableEnhancedFeatures:EnhancedFeatureFrameFilter | EnhancedFeatureSensorControl error: &error];
 // To disable features
-mCameraEnhancer.disableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
+[_dce disableEnhancedFeatures:EnhancedFeatureFrameFilter | EnhancedFeatureSensorControl];
+```
+2. 
+```swift
+// To enable features
+dce.enableEnhancedFeatures(EnumEnhancerFeatures.frameFilter.rawValue | EnumEnhancerFeatures.sensorControl.rawValue, error: &error)
+// To disable features
+dce.disableEnhancedFeatures(EnumEnhancerFeatures.frameFilter.rawValue | EnumEnhancerFeatures.sensorControl.rawValue)
 ```
 
 - You can enable or disable multiple features at one time.
@@ -58,10 +69,6 @@ The mobile sensor can help on filtering out all the frames that are produced whe
 ### Enhanced Focus
 
 This feature can assist the camera in its focus. It is recommended to be enabled on low-end devices.
-
-### Fast Mode
-
-The video frames are cropped into small sizes when the **Fast Mode** is enabled. The feature will sharply improve the processing efficiency When the targeting areas are always located in the middle of the video. The average time consumption on cropping each frame is less than 10ms.
 
 ### Auto Zoom
 

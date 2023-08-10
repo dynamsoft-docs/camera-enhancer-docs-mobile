@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Advanced Features on iOS - Dynamsoft Camera Enhancer
-description: This is the documentation - Enable Advanced Features on iOS.
-keywords:  Camera Enhancer, Advanced Features on iOS
+title: Advanced Features on Android - Dynamsoft Camera Enhancer
+description: This is the documentation - Enable Advanced Features on Android.
+keywords:  Camera Enhancer, Advanced Features on Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Advanced Features
-permalink: /programming/ios/guide/features.html
+permalink: /programming/android/guide/features-v3.0.3.html
 ---
 
 # Advanced Features
@@ -31,27 +31,14 @@ All the advanced feaatures are defined in enumeration `EnumEnhancerFeatures`. Cu
 
 - Enable: Trigger method `enableFeatures` with the enumeration members of the features that you want to enable.
 - Disable: Trigger method `disableFeatures` with the enumeration members of the features that you want to disable.
-- Check status: Trigger method `isFeatureEnabled` with the enumeration members of the features that you want to check.
 
 Sample code:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
+```java
 // To enable features
-[_dce enableFeatures:EnumFRAME_FILTER | EnumSENSOR_CONTROL error: &error];
+mCameraEnhancer.enableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
 // To disable features
-[_dce disableFeatures:EnumFRAME_FILTER | EnumSENSOR_CONTROL];
-```
-2. 
-```swift
-// To enable features
-dce.enableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancerFeatures.EnumSENSOR_CONTROL.rawValue, error: &error)
-// To disable features
-dce.disableFeatures(EnumEnhancerFeatures.EnumFRAME_FILTER.rawValue | EnumEnhancerFeatures.EnumSENSOR_CONTROL.rawValue)
+mCameraEnhancer.disableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
 ```
 
 - You can enable or disable multiple features at one time.
