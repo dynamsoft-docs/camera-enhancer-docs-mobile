@@ -10,7 +10,7 @@ breadcrumbText: Android API references
 permalink: /programming/android/api-reference.html
 ---
 
-# Android API references (Latest)
+# Android API references
 
 ## Primary Class
 
