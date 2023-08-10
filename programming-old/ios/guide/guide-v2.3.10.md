@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS Guide
-permalink: /programming/ios/guide/guide.html
+permalink: /programming/ios/guide/guide-v2.3.10.html
 ---
 
 # User Guide on iOS
