@@ -18,7 +18,7 @@ The interface to handle callback when torch state callback is returned.
 interface com.dynamsoft.dce.TorchListener
 ```
 
-| Functions | Description |
+| Methods | Description |
 | --------- | ----------- |
 | [`onTorchStateChanged`](#onTorchStateChanged) | The method for user to add code when torch state is changed. |
 

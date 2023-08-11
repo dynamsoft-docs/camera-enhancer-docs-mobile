@@ -18,7 +18,7 @@ The interface to handle callback when previewed frame callback is returned.
 interface com.dynamsoft.dce.CameraListener
 ```
 
-| Functions | Description |
+| Methods | Description |
 | --------- | ----------- |
 | [`onPreviewOriginalFrame`](#onprevieworiginalframe) | The callback function where you can add code to use the previewed **original** frames. |
 | [`onPreviewFilterFrame`](#onpreviewfilterframe) | The callback function where you can add code to use the previewed **filtered** frames. |

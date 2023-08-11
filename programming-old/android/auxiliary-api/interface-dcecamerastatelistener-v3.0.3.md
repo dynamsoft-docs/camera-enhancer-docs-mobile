@@ -18,7 +18,7 @@ The interface to handle callback when camera state changes.
 interface com.dynamsoft.dce.DCECameraStateListener
 ```
 
-| Functions | Description |
+| Methods | Description |
 | --------- | ----------- |
 | [`stateChangeCallback`](#statechangecallback) | The callback method is triggered when **camera state** changes. |
 
