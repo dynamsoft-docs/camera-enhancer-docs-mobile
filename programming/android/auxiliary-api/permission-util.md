@@ -12,10 +12,10 @@ permalink: /programming/android/auxiliary-api/permission-util.html
 
 # PermissionUtil
 
-The interface to handle callback when torch state callback is returned.
+The `PermissionUtil` class defines the methods for requesting the camera permission.
 
 ```java
-interface com.dynamsoft.dce.TorchListener
+final class PermissionUtil
 ```
 
 | Functions | Description |
