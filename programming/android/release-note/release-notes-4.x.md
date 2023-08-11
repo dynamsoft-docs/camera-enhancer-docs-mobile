@@ -11,7 +11,7 @@ permalink: /programming/android/release-note/release-notes-4.x.html
 
 # Release Notes - Android 4.x
 
-## 4.0.0 (08/04/2023)
+## 4.0.0 (08/10/2023)
 
 * Refactored the camera-controlling APIs of the CameraEnhancer class.
 * Refactored the UI configuration APIs.
