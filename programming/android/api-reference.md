@@ -36,6 +36,7 @@ permalink: /programming/android/api-reference.html
 * [DrawingStyleManager](auxiliary-api/drawing-style-manager.md)
 * [Feedback](auxiliary-api/feedback.md)
 * [Note](auxiliary-api/note.md)
+* [PermissionUtil](auxiliary-api/permission-util.md)
 * [TipConfig](auxiliary-api/tip-config.md)
 
 ## Interfaces

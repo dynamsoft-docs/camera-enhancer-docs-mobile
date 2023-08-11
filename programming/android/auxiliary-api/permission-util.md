@@ -18,7 +18,7 @@ The `PermissionUtil` class defines the methods for requesting the camera permiss
 final class PermissionUtil
 ```
 
-| Functions | Description |
+| Methods | Description |
 | --------- | ----------- |
 | [`requestCameraPermission`](#requestcamerapermission) | Trigger to request the camera permission. |
 
