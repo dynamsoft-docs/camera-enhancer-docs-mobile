@@ -18,7 +18,7 @@ The interface that provide method for capturing photo from the camera.
 interface com.dynamsoft.dce.DCEPhotoListener
 ```
 
-| Functions | Description |
+| Methods | Description |
 | --------- | ----------- |
 | [`photoOutputCallback`](#photooutputcallback) | The callback method for user to receive the captured photo. |
 

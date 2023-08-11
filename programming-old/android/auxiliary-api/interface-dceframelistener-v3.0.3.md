@@ -18,7 +18,7 @@ The interface to handle callback when previewed frame callback is returned.
 interface com.dynamsoft.dce.DCEFrameListener
 ```
 
-| Functions | Description |
+| Methods | Description |
 | --------- | ----------- |
 | [`frameOutputCallback`](#frameoutputcallback) | The callback method for user to implement when frame is output. |
 
