@@ -18,38 +18,38 @@ permalink: /programming/ios/api-reference.html
 
 ## View Classes
 
-* [`DSCameraView`](auxiliary-api/camera-view.md)
-* [`DSImageEditorView`](auxiliary-api/image-editor-view.md)
+* [DSCameraView](auxiliary-api/dcecameraview.md)
+* [DSImageEditorView](auxiliary-api/dceimageeditorview.md)
 
 ## Auxiliary Classes
 
 * [DSCameraEnhancerModule](auxiliary-api/camera-enhancer-module.md)
 * [DSCapabilities](auxiliary-api/capabilities.md)
-* [DSDrawingItem](auxiliary-api/drawing-item.md)
-  * [DSLineDrawingItem](auxiliary-api/line-drawing-item.md)
-  * [DSQuadDrawingItem](auxiliary-api/quad-drawing-item.md)
-  * [DSRectDrawingItem](auxiliary-api/rect-drawing-item.md)
-  * [DSTextDrawingItem](auxiliary-api/text-drawing-item.md)
-* [DSDrawingLayer](auxiliary-api/drawing-layer.md)
-* [DSDrawingStyle](auxiliary-api/drawing-style.md)
-* [DSDrawingStyleManager](auxiliary-api/drawing-style-manager.md)
-* [DSFeedback](auxiliary-api/feedback.md)
+* [DSDrawingItem](auxiliary-api/drawingitem.md)
+  * [DSLineDrawingItem](auxiliary-api/drawingitem-line.md)
+  * [DSQuadDrawingItem](auxiliary-api/drawingitem-quad.md)
+  * [DSRectDrawingItem](auxiliary-api/drawingitem-rect.md)
+  * [DSTextDrawingItem](auxiliary-api/drawingitem-text.md)
+* [DSDrawingLayer](auxiliary-api/drawinglayer.md)
+* [DSDrawingStyle](auxiliary-api/drawingstyle.md)
+* [DSDrawingStyleManager](auxiliary-api/drawingstylemanager.md)
+* [DSFeedback](auxiliary-api/dcefeedback.md)
 * [DSNote](auxiliary-api/note.md)
 * [DSTipConfig](auxiliary-api/tip-config.md)
 
 ## Interfaces
 
-* [`DSCameraStateListener`](auxiliary-api/camera-state-listener.md)
-* [`DSPhotoListener`](auxiliary-api/photo-listener.md)
-* [`DSVideoFrameListener`](auxiliary-api/video-frame-listener.md)
+* [DSCameraStateListener](auxiliary-api/protocol-dcecamerastatelistener.md)
+* [DSPhotoListener](auxiliary-api/protocol-dcephotolistener.md)
+* [DSVideoFrameListener](auxiliary-api/protocol-dceframelistener.md)
 
 ## Enumerations
 
-* [`DSCameraPosition`]()
-* [`DSCameraState`]()
-* [`DSCoordinateBase`]()
-* [`DSDrawingItemMediaType`]()
-* [`DSDrawingItemState`]()
-* [`DSEnhancedFeatures`]()
-* [`DSFocusMode`]()
-* [`DSResolution`]()
+* [DSCameraPosition]({{ site.dce-enums }}camera-position.html?lang=objc&swift)
+* [DSCameraState]({{ site.dce-enums }}camera-state.html?lang=objc&swift)
+* [DSCoordinateBase]({{ site.dce-enums }}coordinate-base.html?lang=objc&swift)
+* [DSDrawingItemMediaType]({{ site.dce-enums }}drawing-item-media-type.html?lang=objc&swift)
+* [DSDrawingItemState]({{ site.dce-enums }}drawing-item-state.html?lang=objc&swift)
+* [DSEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=objc&swift)
+* [DSFocusMode]({{ site.dce-enums }}focus-mode.html?lang=objc&swift)
+* [DSResolution]({{ site.dce-enums }}resolution.html?lang=objc&swift)
