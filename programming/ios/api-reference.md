@@ -45,11 +45,11 @@ permalink: /programming/ios/api-reference.html
 
 ## Enumerations
 
-* [DSCameraPosition]({{ site.dcv-enum }}camera-position.html?lang=objc&swift)
-* [DSCameraState]({{ site.dcv-enum }}camera-state.html?lang=objc&swift)
-* [DSCoordinateBase]({{ site.dcv-enum }}coordinate-base.html?lang=objc&swift)
-* [DSDrawingItemMediaType]({{ site.dcv-enum }}drawing-item-media-type.html?lang=objc&swift)
-* [DSDrawingItemState]({{ site.dcv-enum }}drawing-item-state.html?lang=objc&swift)
-* [DSEnhancedFeatures]({{ site.dcv-enum }}enhanced-features.html?lang=objc&swift)
-* [DSFocusMode]({{ site.dcv-enum }}focus-mode.html?lang=objc&swift)
-* [DSResolution]({{ site.dcv-enum }}resolution.html?lang=objc&swift)
+* [DSCameraPosition]({{ site.dce-enum }}camera-position.html?lang=objc&swift)
+* [DSCameraState]({{ site.dce-enum }}camera-state.html?lang=objc&swift)
+* [DSCoordinateBase]({{ site.dce-enum }}coordinate-base.html?lang=objc&swift)
+* [DSDrawingItemMediaType]({{ site.dce-enum }}drawing-item-media-type.html?lang=objc&swift)
+* [DSDrawingItemState]({{ site.dce-enum }}drawing-item-state.html?lang=objc&swift)
+* [DSEnhancedFeatures]({{ site.dce-enum }}enhanced-features.html?lang=objc&swift)
+* [DSFocusMode]({{ site.dce-enum }}focus-mode.html?lang=objc&swift)
+* [DSResolution]({{ site.dce-enum }}resolution.html?lang=objc&swift)

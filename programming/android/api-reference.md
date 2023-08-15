@@ -47,11 +47,11 @@ permalink: /programming/android/api-reference.html
 
 ## Enumerations
 
-* [EnumCameraPosition]({{ site.dcv-enum }}camera-position.html?lang=android)
-* [EnumCameraState]({{ site.dcv-enum }}camera-state.html?lang=android)
-* [EnumCoordinateBase]({{ site.dcv-enum }}coordinate-base.html?lang=android)
-* [EnumDrawingItemMediaType]({{ site.dcv-enum }}drawing-item-media-type.html?lang=android)
-* [EnumDrawingItemState]({{ site.dcv-enum }}drawing-item-state.html?lang=android)
-* [EnumEnhancedFeatures]({{ site.dcv-enum }}enhanced-features.html?lang=android)
-* [EnumFocusMode]({{ site.dcv-enum }}focus-mode.html?lang=android)
-* [EnumResolution]({{ site.dcv-enum }}resolution.html?lang=android)
+* [EnumCameraPosition]({{ site.dce-enum }}camera-position.html?lang=android)
+* [EnumCameraState]({{ site.dce-enum }}camera-state.html?lang=android)
+* [EnumCoordinateBase]({{ site.dce-enum }}coordinate-base.html?lang=android)
+* [EnumDrawingItemMediaType]({{ site.dce-enum }}drawing-item-media-type.html?lang=android)
+* [EnumDrawingItemState]({{ site.dce-enum }}drawing-item-state.html?lang=android)
+* [EnumEnhancedFeatures]({{ site.dce-enum }}enhanced-features.html?lang=android)
+* [EnumFocusMode]({{ site.dce-enum }}focus-mode.html?lang=android)
+* [EnumResolution]({{ site.dce-enum }}resolution.html?lang=android)
