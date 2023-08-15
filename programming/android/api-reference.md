@@ -18,8 +18,8 @@ permalink: /programming/android/api-reference.html
 
 ## View Classes
 
-* [`CameraView`](auxiliary-api/dcecameraview.md)
-* [`ImageEditorView`](auxiliary-api/dceimageeditorview.md)
+* [CameraView](auxiliary-api/dcecameraview.md)
+* [ImageEditorView](auxiliary-api/dceimageeditorview.md)
 
 ## Auxiliary Classes
 
@@ -41,17 +41,17 @@ permalink: /programming/android/api-reference.html
 
 ## Interfaces
 
-* [`CameraStateListener`](auxiliary-api/interface-dcecamerastatelistener.md)
-* [`PhotoListener`](auxiliary-api/interface-dcephotolistener.md)
-* [`VideoFrameListener`](auxiliary-api/interface-dceframelistener.md)
+* [CameraStateListener](auxiliary-api/interface-dcecamerastatelistener.md)
+* [PhotoListener](auxiliary-api/interface-dcephotolistener.md)
+* [VideoFrameListener](auxiliary-api/interface-dceframelistener.md)
 
 ## Enumerations
 
-* [`EnumCameraPosition`]({{ site.dcv-enum }}camera-position.html?lang=android)
-* [`EnumCameraState`]({{ site.dcv-enum }}camera-state.html?lang=android)
-* [`EnumCoordinateBase`]({{ site.dcv-enum }}coordinate-base.html?lang=android)
-* [`EnumDrawingItemMediaType`]({{ site.dcv-enum }}drawing-item-media-type.html?lang=android)
-* [`EnumDrawingItemState`]({{ site.dcv-enum }}drawing-item-state.html?lang=android)
-* [`EnumEnhancedFeatures`]({{ site.dcv-enum }}enhanced-features.html?lang=android)
-* [`EnumFocusMode`]({{ site.dcv-enum }}focus-mode.html?lang=android)
-* [`EnumResolution`]({{ site.dcv-enum }}resolution.html?lang=android)
+* [EnumCameraPosition]({{ site.dcv-enum }}camera-position.html?lang=android)
+* [EnumCameraState]({{ site.dcv-enum }}camera-state.html?lang=android)
+* [EnumCoordinateBase]({{ site.dcv-enum }}coordinate-base.html?lang=android)
+* [EnumDrawingItemMediaType]({{ site.dcv-enum }}drawing-item-media-type.html?lang=android)
+* [EnumDrawingItemState]({{ site.dcv-enum }}drawing-item-state.html?lang=android)
+* [EnumEnhancedFeatures]({{ site.dcv-enum }}enhanced-features.html?lang=android)
+* [EnumFocusMode]({{ site.dcv-enum }}focus-mode.html?lang=android)
+* [EnumResolution]({{ site.dcv-enum }}resolution.html?lang=android)

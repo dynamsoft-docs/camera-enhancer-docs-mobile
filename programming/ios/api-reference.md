@@ -18,8 +18,8 @@ permalink: /programming/ios/api-reference.html
 
 ## View Classes
 
-* [`DSCameraView`](auxiliary-api/dcecameraview.md)
-* [`DSImageEditorView`](auxiliary-api/dceimageeditorview.md)
+* [DSCameraView](auxiliary-api/dcecameraview.md)
+* [DSImageEditorView](auxiliary-api/dceimageeditorview.md)
 
 ## Auxiliary Classes
 
@@ -39,17 +39,17 @@ permalink: /programming/ios/api-reference.html
 
 ## Interfaces
 
-* [`DSCameraStateListener`](auxiliary-api/protocol-dcecamerastatelistener.md)
-* [`DSPhotoListener`](auxiliary-api/protocol-dcephotolistener.md)
-* [`DSVideoFrameListener`](auxiliary-api/protocol-dceframelistener.md)
+* [DSCameraStateListener](auxiliary-api/protocol-dcecamerastatelistener.md)
+* [DSPhotoListener](auxiliary-api/protocol-dcephotolistener.md)
+* [DSVideoFrameListener](auxiliary-api/protocol-dceframelistener.md)
 
 ## Enumerations
 
-* [`DSCameraPosition`]({{ site.dcv-enum }}camera-position.html?lang=objc&swift)
-* [`DSCameraState`]({{ site.dcv-enum }}camera-state.html?lang=objc&swift)
-* [`DSCoordinateBase`]({{ site.dcv-enum }}coordinate-base.html?lang=objc&swift)
-* [`DSDrawingItemMediaType`]({{ site.dcv-enum }}drawing-item-media-type.html?lang=objc&swift)
-* [`DSDrawingItemState`]({{ site.dcv-enum }}drawing-item-state.html?lang=objc&swift)
-* [`DSEnhancedFeatures`]({{ site.dcv-enum }}enhanced-features.html?lang=objc&swift)
-* [`DSFocusMode`]({{ site.dcv-enum }}focus-mode.html?lang=objc&swift)
-* [`DSResolution`]({{ site.dcv-enum }}resolution.html?lang=objc&swift)
+* [DSCameraPosition]({{ site.dcv-enum }}camera-position.html?lang=objc&swift)
+* [DSCameraState]({{ site.dcv-enum }}camera-state.html?lang=objc&swift)
+* [DSCoordinateBase]({{ site.dcv-enum }}coordinate-base.html?lang=objc&swift)
+* [DSDrawingItemMediaType]({{ site.dcv-enum }}drawing-item-media-type.html?lang=objc&swift)
+* [DSDrawingItemState]({{ site.dcv-enum }}drawing-item-state.html?lang=objc&swift)
+* [DSEnhancedFeatures]({{ site.dcv-enum }}enhanced-features.html?lang=objc&swift)
+* [DSFocusMode]({{ site.dcv-enum }}focus-mode.html?lang=objc&swift)
+* [DSResolution]({{ site.dcv-enum }}resolution.html?lang=objc&swift)
