@@ -40,8 +40,8 @@ class DrawingLayer
 | [`addDrawingItems`](#adddrawingitems) | Add a group of DrawingItem to the layer. |
 | [`setDrawingItems`](#setdrawingitems) | Set the DrawingItems to be displayed on the layer. |
 | [`getDrawingItems`](#getdrawingitems) | Get all the DrawingItems on the layer. |
-| [`setDefaultStyle`](#setdefaultstyle) | Set the default style of the layer. |
-| [`setDefaultStyle`](#setdefaultstyle) | Set the default style of the layer with filter options. |
+| [`setDefaultStyle(style)`](#setdefaultstylestyle) | Set the default style of the layer. |
+| [`setDefaultStyle(style,state,mediaType)`](#setdefaultstylestylestatemediatype) | Set the default style of the layer with filter options. |
 | [`clearDrawingItems`](#cleardrawingitems) | Remove all DrawingItems from the layer. |
 
 ### DrawingLayer
@@ -120,7 +120,7 @@ Arraylist<DrawingItem> getDrawingItems(){}
 
 An array of `DrawingItems`
 
-### setDefaultStyle
+### setDefaultStyle(style)
 
 Set the default style of the layer. A `DrawingItem` on the layer will use the default style if it doesn't hold a style attribute.
 
@@ -132,7 +132,7 @@ void setDefaultStyle(int styleId){}
 
 `styleId`: An ID of DrawingStyle.
 
-### setDefaultStyle
+### setDefaultStyle(style,state,mediaType)
 
 Set the default style of the layer with filter options. A `DrawingItem` on the layer will use the default style if it doesn't hold a style attribute.
 
