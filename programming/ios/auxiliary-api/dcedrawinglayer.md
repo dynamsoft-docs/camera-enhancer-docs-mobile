@@ -54,8 +54,8 @@ class DrawingLayer : NSObject
 | [`addDrawingItems`](#adddrawingitems) | Add a group of DrawingItem to the layer. |
 | [`setDrawingItems`](#setdrawingitems) | Set the DrawingItems to be displayed on the layer. |
 | [`getDrawingItems`](#getdrawingitems) | Get all the DrawingItems on the layer. |
-| [`setDefaultStyle`](#setdefaultstyle) | Set the default style of the layer. |
-| [`setDefaultStyle`](#setdefaultstyle) | Set the default style of the layer with filter options. |
+| [`setDefaultStyle`](#setdefaultstylestyle) | Set the default style of the layer. |
+| [`setDefaultStyle`](#setdefaultstylestylestatemediatype) | Set the default style of the layer with filter options. |
 | [`clearDrawingItems`](#cleardrawingitems) | Remove all DrawingItems from the layer. |
 
 ### layerId
@@ -171,7 +171,7 @@ Get all the DrawingItems on the layer.
 func getDrawingItems() -> [DrawingItem]
 ```
 
-### setDefaultStyle
+### setDefaultStyle(style)
 
 Set the default style of the layer. A DrawingItem on the layer will use the default style if it doesn't hold a style attribute.
 
@@ -191,7 +191,7 @@ func setDefaultStyle(_ drawingStyle: Int)
 
 `drawingStyle`: An ID of DrawingStyle.
 
-### setDefaultStyle
+### setDefaultStyle(style,state,mediaType)
 
 Set the default style of the layer with filter options. A DrawingItem on the layer will use the default style if it doesn't hold a style attribute.
 
