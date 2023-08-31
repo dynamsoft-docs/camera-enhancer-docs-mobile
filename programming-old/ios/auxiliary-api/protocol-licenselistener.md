@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSLicenseVerificationListener - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The protocol DSLicenseVerificationListener of Dynamsoft Camera Enhancer includes methods for monitoring the license verification status.
-Keywords: license verification, objective-c, swift
+title: DSLicenseVerificationListener - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The protocol DSLicenseVerificationListener of Dynamsoft Camera Enhancer includes methods for monitoring the license verification status.
+keywords: license verification, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

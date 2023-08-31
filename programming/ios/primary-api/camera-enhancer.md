@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCameraEnhancer - Dynamsoft Camera Enhancer API Reference
-Description: The class DSCameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
-Keywords: camera enhancer, objective-c, swift
+title: DSCameraEnhancer - Dynamsoft Camera Enhancer API Reference
+description: The class DSCameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
+keywords: camera enhancer, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

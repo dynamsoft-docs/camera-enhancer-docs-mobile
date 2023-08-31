@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSDrawingStyleManager - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The class DSDrawingStyleManager of Dynamsoft Camera Enhancer provides methods to manage drawing styles.
-Keywords: drawing style, manager, objective-c, swift
+title: DSDrawingStyleManager - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The class DSDrawingStyleManager of Dynamsoft Camera Enhancer provides methods to manage drawing styles.
+keywords: drawing style, manager, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

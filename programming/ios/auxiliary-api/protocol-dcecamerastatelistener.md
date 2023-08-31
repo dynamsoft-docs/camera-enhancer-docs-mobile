@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCameraStateListener - Dynamsoft Core Module iOS Edition API Reference
-Description: The protocol that includes methods for monitoring the camera state.
-Keywords: camera state, objective-c, swift
+title: DSCameraStateListener - Dynamsoft Core Module iOS Edition API Reference
+description: The protocol that includes methods for monitoring the camera state.
+keywords: camera state, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

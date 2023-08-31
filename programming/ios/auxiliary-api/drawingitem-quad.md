@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSQuadDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The class DSQuadDrawingItem of Dynamsoft Camera Enhancer represents a drawing item that draws quadrilaterals on the view.
-Keywords: quad drawing item, objective-c, swift
+title: DSQuadDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The class DSQuadDrawingItem of Dynamsoft Camera Enhancer represents a drawing item that draws quadrilaterals on the view.
+keywords: quad drawing item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

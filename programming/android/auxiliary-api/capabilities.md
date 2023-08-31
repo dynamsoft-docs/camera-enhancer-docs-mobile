@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Capabilities - Dynamsoft Core Module Android Edition API Reference
-Description: The class Capabilities of Dynamsoft Core Module represents the capability properties of the hardware, including the maximum zoom factor, focal length, exposure time, and ISO.
-Keywords: capabilities, hardware, Java, Kotlin
+title: Capabilities - Dynamsoft Core Module Android Edition API Reference
+description: The class Capabilities of Dynamsoft Core Module represents the capability properties of the hardware, including the maximum zoom factor, focal length, exposure time, and ISO.
+keywords: capabilities, hardware, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

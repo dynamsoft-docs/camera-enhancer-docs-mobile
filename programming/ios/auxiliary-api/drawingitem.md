@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSDrawingItem - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSDrawingItem of Dynamsoft Core Module represents a base class for drawing items, which can be added to drawing layers to draw basic graphics on the view.
-Keywords: drawing item, objective-c, swift
+title: DSDrawingItem - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSDrawingItem of Dynamsoft Core Module represents a base class for drawing items, which can be added to drawing layers to draw basic graphics on the view.
+keywords: drawing item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

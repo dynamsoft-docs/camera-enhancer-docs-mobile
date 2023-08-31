@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSLineDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The class DSLineDrawingItem of Dynamsoft Camera Enhancer represents a line drawing item used for drawing line segments on the view.
-Keywords: line drawing item, objective-c, swift
+title: DSLineDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The class DSLineDrawingItem of Dynamsoft Camera Enhancer represents a line drawing item used for drawing line segments on the view.
+keywords: line drawing item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

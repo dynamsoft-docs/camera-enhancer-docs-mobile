@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: RectDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class RectDrawingItem of Dynamsoft Camera Enhancer represents a rectangular drawing item.
-Keywords: rectangle, drawing item, Java, Kotlin
+title: RectDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The class RectDrawingItem of Dynamsoft Camera Enhancer represents a rectangular drawing item.
+keywords: rectangle, drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

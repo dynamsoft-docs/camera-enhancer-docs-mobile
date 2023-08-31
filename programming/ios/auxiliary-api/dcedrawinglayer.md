@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSDrawingLayer - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The class DSDrawingLayer of Dynamsoft Camera Enhancer represents a drawing layer, which is used for managing and controlling drawing items.
-Keywords: drawing layer, Dynamsoft Camera Enhancer, objective-c, swift
+title: DSDrawingLayer - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The class DSDrawingLayer of Dynamsoft Camera Enhancer represents a drawing layer, which is used for managing and controlling drawing items.
+keywords: drawing layer, Dynamsoft Camera Enhancer, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

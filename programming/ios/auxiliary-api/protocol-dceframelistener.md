@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSVideoFrameListener - Dynamsoft Camera Enhancer Module iOS Edition API Reference
-Description: The protocol that defines methos for monitoring the video frame output.
-Keywords: Video frame listener, objective-c, swift
+title: DSVideoFrameListener - Dynamsoft Camera Enhancer Module iOS Edition API Reference
+description: The protocol that defines methos for monitoring the video frame output.
+keywords: Video frame listener, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

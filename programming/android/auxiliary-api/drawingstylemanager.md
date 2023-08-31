@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DrawingStyleManager - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DrawingStyleManager of Dynamsoft Camera Enhancer provides methods to manage drawing styles.
-Keywords: drawing style, manager, Java, Kotlin
+title: DrawingStyleManager - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The class DrawingStyleManager of Dynamsoft Camera Enhancer provides methods to manage drawing styles.
+keywords: drawing style, manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
