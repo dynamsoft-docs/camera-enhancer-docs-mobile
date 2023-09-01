@@ -62,7 +62,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
 | [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
-| [`setCameraStateListener`](#setcamerastatelistener ) | Add a [`DCECameraStateListener`](interface-dcecamerastatelistener.md) to receive notification when the camera state changes. |
+| [`setCameraStateListener`](#setcamerastatelistener ) | Add a [`DCECameraStateListener`](interface-dcecamerastatelistener.html) to receive notification when the camera state changes. |
 
 ## Frame Acquiring Methods Summary
 
@@ -258,7 +258,7 @@ EnumCameraState getCameraState()
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{ site.dce-enums }}camera-state.md).
+One of the preset camera state in Enumeration [`EnumCameraState`]({{ site.dce-enums }}camera-state.html).
 
 **Code Snippet**
 
@@ -391,7 +391,7 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException
 
 **Parameters**
 
-`resolution`: One of the int value that preset in [`EnumResolution`]({{ site.dce-enums }}resolution.md).
+`resolution`: One of the int value that preset in [`EnumResolution`]({{ site.dce-enums }}resolution.html).
 
 **Code Snippet**
 
@@ -521,7 +521,7 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 **Parameters**
 
 `[in] focusPosition`: An `android.graphics.PointF` object indicates the interest area.
-`[in] subsequentFocusMode`: Specify a focus mode via [EnumFocusMode]({{ site.dce-enums }}focus-mode.md). If you set the focus mode to `FM_LOCKED`, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
+`[in] subsequentFocusMode`: Specify a focus mode via [EnumFocusMode]({{ site.dce-enums }}focus-mode.html). If you set the focus mode to `FM_LOCKED`, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
 
 **Exception**
 
@@ -547,7 +547,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameters**
 
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`](region-definition.md) class.
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`](region-definition.html) class.
 
 **Code Snippet**
 
@@ -569,14 +569,14 @@ try {
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`](region-definition.md):
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`](region-definition.html):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`](dceframe.md) from [`FrameOutputCallback`](interface-dceframelistener.md) and cropped [`DCEFrame`](dceframe.md) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.md) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
+- You will still get the original [`DCEFrame`](dceframe.html) from [`FrameOutputCallback`](interface-dceframelistener.html) and cropped [`DCEFrame`](dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
 - When you trigger `setScanRegion`, the **scanRegion** will be displayed on the UI automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;
@@ -650,7 +650,7 @@ boolean scanRegionVisible = cameraEnhancer.getScanRegionVisible();
 
 ### setCameraStateListener
 
-Add a [`DCECameraStateListener`](interface-dcecamerastatelistener.md) to receive notification when the camera state changes.
+Add a [`DCECameraStateListener`](interface-dcecamerastatelistener.html) to receive notification when the camera state changes.
 
 ```java
 void setCameraStateListener (DCECameraStateListener listener)
@@ -658,7 +658,7 @@ void setCameraStateListener (DCECameraStateListener listener)
 
 **Parameters**
 
-`[in] listener`: A [`DCECameraStateListener`](interface-dcecamerastatelistener.md) object.
+`[in] listener`: A [`DCECameraStateListener`](interface-dcecamerastatelistener.html) object.
 
 **Code Snippet**
 
@@ -762,7 +762,7 @@ cameraEnhancer.removeListener(listener);
 
 ### takePhoto
 
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](interface-dcephotolistener.md#photooutputcallback).
+Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](interface-dcephotolistener.html#photooutputcallback).
 
 ```java
 void takePhoto(DCEPhotoListener listener)
@@ -770,7 +770,7 @@ void takePhoto(DCEPhotoListener listener)
 
 **Parameters**
 
-`listener`: An instance of [`DCEPhotoListener`](interface-dcephotolistener.md).
+`listener`: An instance of [`DCEPhotoListener`](interface-dcephotolistener.html).
 
 **Code Snippet**
 
@@ -919,7 +919,7 @@ cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthres
 
 ### setCameraView
 
-Set a [`DCECameraView`](dcecameraview.md) object as the main UI view.
+Set a [`DCECameraView`](dcecameraview.html) object as the main UI view.
 
 ```java
 void setCameraView(DCECameraView cameraView)
@@ -927,7 +927,7 @@ void setCameraView(DCECameraView cameraView)
 
 **Parameters**
 
-`cameraView`: The main UI view. See also [`DCECameraView`](dcecameraview.md).
+`cameraView`: The main UI view. See also [`DCECameraView`](dcecameraview.html).
 
 **Code Snippet**
 
@@ -942,7 +942,7 @@ cameraEnhancer.setCameraView(cameraView);
 
 ### getCameraView
 
-Get the [`DCECameraView`](dcecameraview.md) object of the current UI view.
+Get the [`DCECameraView`](dcecameraview.html) object of the current UI view.
 
 ```java
 DCECameraView getCameraView()
@@ -950,7 +950,7 @@ DCECameraView getCameraView()
 
 **Return Value**
 
-The current UI view. See also [`DCECameraView`](dcecameraview.md).
+The current UI view. See also [`DCECameraView`](dcecameraview.html).
 
 **Code Snippet**
 

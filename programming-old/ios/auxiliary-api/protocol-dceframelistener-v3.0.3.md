@@ -50,7 +50,7 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval)
 
 **Parameters**
 
-`frame`: The parameter is the original `DCEFrame` with detailed frame information. View more in [`DCEFrame`](dceframe.md) class.  
+`frame`: The parameter is the original `DCEFrame` with detailed frame information. View more in [`DCEFrame`](dceframe.html) class.  
 `timeStamp`: The time stamp that records when the DCEFrame is output.
 
 **Code Snippet**
@@ -76,4 +76,4 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
 
 **See also**
 
-- [`DCEFrame`](dceframe.md)
+- [`DCEFrame`](dceframe.html)

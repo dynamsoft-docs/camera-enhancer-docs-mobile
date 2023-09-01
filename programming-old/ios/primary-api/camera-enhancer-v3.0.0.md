@@ -217,7 +217,7 @@ Get the state of the currently selected camera.
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{ site.dce-enums }}camera-state.md).
+One of the preset camera state in Enumeration [`EnumCameraState`]({{ site.dce-enums }}camera-state.html).
 
 **Code Snippet**
 
@@ -625,7 +625,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`](region-definition.md) value. The frame will be cropped according to the scan region. |
+| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`](region-definition.html) value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
 | [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
@@ -670,7 +670,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{ site.dce-enums }}resolution.md).
+`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{ site.dce-enums }}resolution.html).
 
 **Code Snippet**
 
@@ -788,7 +788,7 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`scanRegion`: Use a [`iRegionDefinition`](region-definition.md) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.md).
+`scanRegion`: Use a [`iRegionDefinition`](region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.html).
 
 **Code Snippet**
 
@@ -819,14 +819,14 @@ dce.setScanRegion(scanRegion, error: &error)
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`](region-definition.md):
+- The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`](region-definition.html):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`](dceframe.md) from [`FrameOutputCallback`](protocol-dceframelistener.md) and cropped [`DCEFrame`](dceframe.md) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.md) will be configured based on the **scanRegion** when `setScanRegion` is triggered.
+- You will still get the original [`DCEFrame`](dceframe.html) from [`FrameOutputCallback`](protocol-dceframelistener.html) and cropped [`DCEFrame`](dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.html) will be configured based on the **scanRegion** when `setScanRegion` is triggered.
 - When you trigger `setScanRegion`, the [`scanRegionVisible`](#scanregionvisible) will be set to true automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;

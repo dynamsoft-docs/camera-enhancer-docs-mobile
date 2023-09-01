@@ -14,31 +14,31 @@ permalink: /programming/android/api-reference-v3.0.0.html
 
 ## Primary Class
 
-* [CameraEnhancer](primary-api/camera-enhancer.md)
+* [CameraEnhancer](primary-api/camera-enhancer.html)
 
 ## View Classes
 
-* [`DCECameraView`](auxiliary-api/camera-view.md)
-* [`DCEImageEditorView`](auxiliary-api/image-editor-view.md)
+* [`DCECameraView`](auxiliary-api/dcecameraview.html)
+* [`DCEImageEditorView`](auxiliary-api/dceimageeditorview.html)
 
 ## Auxiliary Classes
 
-* [CameraEnhancerException](auxiliary-api/camera-enhancer-exception.md)
-* [DrawingItem](auxiliary-api/drawing-item.md)
-  * [LineDrawingItem](auxiliary-api/line-drawing-item.md)
-  * [QuadDrawingItem](auxiliary-api/quad-drawing-item.md)
-  * [RectDrawingItem](auxiliary-api/rect-drawing-item.md)
-  * [TextDrawingItem](auxiliary-api/text-drawing-item.md)
-* [DCEDrawingLayer](auxiliary-api/drawing-layer.md)
-* [DrawingStyle](auxiliary-api/drawing-style.md)
-* [DrawingStyleManager](auxiliary-api/drawing-style-manager.md)
-* [DCEFeedback](auxiliary-api/feedback.md)
+* [CameraEnhancerException](auxiliary-api/camera-enhancer-exception.html)
+* [DrawingItem](auxiliary-api/drawingitem.html)
+  * [LineDrawingItem](auxiliary-api/drawingitem-line.html)
+  * [QuadDrawingItem](auxiliary-api/drawingitem-quad.html)
+  * [RectDrawingItem](auxiliary-api/drawingitem-rect.html)
+  * [TextDrawingItem](auxiliary-api/drawingitem-tex.html)
+* [DCEDrawingLayer](auxiliary-api/dcedrawinglayer.html)
+* [DrawingStyle](auxiliary-api/drawingstyle.html)
+* [DrawingStyleManager](auxiliary-api/drawingstylemanager.html)
+* [DCEFeedback](auxiliary-api/dcefeedback.html)
 
 ## Interfaces
 
-* [`CameraStateListener`](auxiliary-api/camera-state-listener.md)
-* [`PhotoListener`](auxiliary-api/photo-listener.md)
-* [`FrameListener`](auxiliary-api/video-frame-listener.md)
+* [`CameraStateListener`](auxiliary-api/interface-camerastatelistener.html)
+* [`PhotoListener`](auxiliary-api/interface-dcephotolistener.html)
+* [`FrameListener`](auxiliary-api/interface-dceframelistener.html)
 
 ## Enumerations
 

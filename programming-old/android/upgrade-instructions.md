@@ -17,9 +17,9 @@ permalink: /programming/android/upgrade-instructions.html
 
 The following APIs are changed on parameters and return values:
 
-* [`CameraEnhancer`](primary-api/camera-enhancer.md#cameraenhancer): Added parameter `CameraView cameraView`.
-* [`setScanRegion`](primary-api/camera-enhancer.md#setscanregion): Changed the type of `region` from `iRegionDefinition` to `DSRect`.
-* [`getScanRegion`](primary-api/camera-enhancer.md#getscanregion): Changed the type of return value from `iRegionDefinition` to `DSRect`.
+* [`CameraEnhancer`](primary-api/camera-enhancer.html#cameraenhancer): Added parameter `CameraView cameraView`.
+* [`setScanRegion`](primary-api/camera-enhancer.html#setscanregion): Changed the type of `region` from `iRegionDefinition` to `DSRect`.
+* [`getScanRegion`](primary-api/camera-enhancer.html#getscanregion): Changed the type of return value from `iRegionDefinition` to `DSRect`.
 
 The following APIs are replaced by new APIs:
 
@@ -41,7 +41,7 @@ Removed:
 
 `DCECameraView` is renamed to `CameraView`. The constructor is renamed to `CameraView()`.
 
-The following APIs are replaced with new UI configuration APIs. Read [How to draw graphics on the views](guide/add-drawing-item.md) for more details.
+The following APIs are replaced with new UI configuration APIs. Read [How to draw graphics on the views](guide/add-drawing-item.html) for more details.
 
 * `setOverlayVisible`
 * `getOverlayVisible`

@@ -33,8 +33,8 @@ class DCECameraView : UIView, CALayerDelegate
 | [`cameraWithFrame`](#camerawithframe) | Init the `DCECameraView` with a static method. |
 | [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
 | [`torchButtonVisible`](#torchbuttonvisible) | The property controls the visibility of the torch Button. |
-| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
-| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.html) instance with the layer ID. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.html) instance. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the region of video that is visible on the camera. It help you to set the scan region when the shape of `DCECameraView` is quite different from the video streaming. |
 | [`overlayVisible`](#overlayvisible) | **Deprecated**. The property stores the BOOL value that controls the visibility of the overlays. |
 | [`setOverlayColour`](#setoverlaycolour) | **Deprecated**. Set the stroke and fill in colour of the overlay(s). |
@@ -209,7 +209,7 @@ func getDrawingLayer(_ layerId: Int) -> DCEDrawingLayer
 
 **Return Value**
 
-The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
+The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.html).
 
 **Code Snippet**
 

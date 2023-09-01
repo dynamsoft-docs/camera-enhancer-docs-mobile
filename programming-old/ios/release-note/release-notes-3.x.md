@@ -17,10 +17,10 @@ permalink: /programming/ios/release-note/release-notes-3.x.html
 
 ## 3.0.2 (02/02/2023)
 
-* Override method [`setFocus`](../primary-api/camera-enhancer.md#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.dce-enums }}focus-mode.html?lang=objc&swift) is added to specify the focus mode.
-* Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.md#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
-* Added an interface [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener).
-* Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.md#getvisibleregionofvideo) in `DCECameraView` class
+* Override method [`setFocus`](../primary-api/camera-enhancer.html#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.dce-enums }}focus-mode.html?lang=objc&swift) is added to specify the focus mode.
+* Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.html#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
+* Added an interface [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.html) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.html#setcamerastatelistener).
+* Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.html#getvisibleregionofvideo) in `DCECameraView` class
 * Deprecated method `pause` and `resume` in `CameraEnhancer` class.
 * Fixed a bug that might be caused by thread blocking when using an offline license.
 * Deprecated method `pause` and `resume` in `CameraEnhancer` class.
@@ -33,7 +33,7 @@ permalink: /programming/ios/release-note/release-notes-3.x.html
 
 ## 3.0.1 (09/29/2022)
 
-* Added methods [`selectCamera(EnumCameraPosition)`](../primary-api/camera-enhancer.md#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.md#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
+* Added methods [`selectCamera(EnumCameraPosition)`](../primary-api/camera-enhancer.html#selectcamerawithposition) and [`getCameraPosition`](../primary-api/camera-enhancer.html#getcameraposition) for users to switch between the front-facing camera and the back-facing camera.
 * Added enumeration [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=iOS).
 * Added a new class [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html). The following APIs are available in the class:
   * [`vibrate`]({{site.ios-api-auxiliary}}dcefeedback.html#vibrate): Triggers a vibration.
@@ -42,12 +42,12 @@ permalink: /programming/ios/release-note/release-notes-3.x.html
 ## 3.0.0 (06/21/2022)
 
 * Updated UI configuration APIs.
-  * Added [`DCEImageEditorView`](../auxiliary-api/dceimageeditorview.md)
-  * Added [`DCEDrawingLayer`](../auxiliary-api/dcedrawinglayer.md)
+  * Added [`DCEImageEditorView`](../auxiliary-api/dceimageeditorview.html)
+  * Added [`DCEDrawingLayer`](../auxiliary-api/dcedrawinglayer.html)
   * Added DrawingItem Classes
-    * [`DrawingItem`](../auxiliary-api/drawingitem.md)
-    * [`QuadDrawingItem`](../auxiliary-api/drawingitem-quad.md)
-    * [`RectDrawingItem`](../auxiliary-api/drawingitem-rect.md)
-    * [`TextDrawingItem`](../auxiliary-api/drawingitem-text.md)
+    * [`DrawingItem`](../auxiliary-api/drawingitem.html)
+    * [`QuadDrawingItem`](../auxiliary-api/drawingitem-quad.html)
+    * [`RectDrawingItem`](../auxiliary-api/drawingitem-rect.html)
+    * [`TextDrawingItem`](../auxiliary-api/drawingitem-text.html)
   * Added [`DrawingStyle`]
   * Added [`DrawingStyleManager`]

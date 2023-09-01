@@ -42,7 +42,7 @@ class DCEDrawingLayer : NSObject
 
 ## initWithId
 
-The constructor of the [`DCEDrawingLayer`](dcedrawinglayer.md) class. Initialize the instance of the [`DCEDrawingLayer`](dcedrawinglayer.md) class.
+The constructor of the [`DCEDrawingLayer`](dcedrawinglayer.html) class. Initialize the instance of the [`DCEDrawingLayer`](dcedrawinglayer.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -65,8 +65,8 @@ init(id layerId: Int)
 
 Please initialize the DrawingLayers via the following methods:
 
-- [`DCEImageEditorView.createDrawingLayer`](dceimageeditorview.md#createdrawinglayer)
-- [`DCECameraView.createDrawingLayer`](dcecameraview.md#createdrawinglayer)
+- [`DCEImageEditorView.createDrawingLayer`](dceimageeditorview.html#createdrawinglayer)
+- [`DCECameraView.createDrawingLayer`](dcecameraview.html#createdrawinglayer)
 
 &nbsp;
 
@@ -210,7 +210,7 @@ drawingLayer.setDrawingStyleId(0)
 
 ## setDrawingStyleId:state:
 
-Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state`is a filter of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.html). The `state`is a filter of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -250,7 +250,7 @@ drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected)
 
 ## setDrawingStyleId:state:mediaType:
 
-Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state` and `mediaType` are filters of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.html). The `state` and `mediaType` are filters of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

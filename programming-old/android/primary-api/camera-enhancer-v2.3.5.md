@@ -853,7 +853,7 @@ cameraEnhancer.removeListener(listener);
 
 ### takePhoto
 
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/interface-dcephotolistener.md#photooutputcallback).
+Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/interface-dcephotolistener.html#photooutputcallback).
 
 ```java
 void takePhoto(DCEPhotoListener listener)
@@ -861,7 +861,7 @@ void takePhoto(DCEPhotoListener listener)
 
 **Parameters**
 
-`listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/interface-dcephotolistener.md).
+`listener`: An instance of [`DCEPhotoListener`](../auxiliary-api/interface-dcephotolistener.html).
 
 **Code Snippet**
 
