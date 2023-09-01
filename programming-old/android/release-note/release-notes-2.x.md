@@ -72,7 +72,7 @@ permalink: /programming/android/release-note/release-notes-2.x.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-2.3.0.html -%}
+{%- include release-notes/product-highlight-2.3.0.md -%}
 
 <div class="fold-panel-end"></div>
 
