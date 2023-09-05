@@ -31,8 +31,8 @@ class DCEImageEditorView : UIView
 | ----------- | ----------- |
 | [`setOriginalImage`](#setoriginalimage) | Set the background image of the view with an original image. |
 | [`getOriginalImage`](#getoriginalimage) | Get the current backgroud image. |
-| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
-| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.html) instance with the layer ID. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.html) instance. |
 | [`getSelectedDrawingItem`](#getselecteddrawingitem) | Get the selected drawing item. |
 
 ## setOriginalImage
@@ -135,7 +135,7 @@ func getDrawingLayer(_ layerId: Int) -> DCEDrawingLayer
 
 **Return Value**
 
-The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
+The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.html).
 
 **Code Snippet**
 

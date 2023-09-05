@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: LicenseVerificationListener - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The interface LicenseVerificationListener of Dynamsoft Camera Enhancer includes methods for monitoring the license verification status.
-Keywords: license verification, Java, Kotlin
+title: LicenseVerificationListener - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The interface LicenseVerificationListener of Dynamsoft Camera Enhancer includes methods for monitoring the license verification status.
+keywords: license verification, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

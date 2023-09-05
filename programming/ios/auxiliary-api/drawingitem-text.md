@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSTextDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The class DSTextDrawingItem of Dynamsoft Camera Enhancer represents a text drawing item, which can be added to draw texts on the view.
-Keywords: text drawing item, objective-c, swift
+title: DSTextDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The class DSTextDrawingItem of Dynamsoft Camera Enhancer represents a text drawing item, which can be added to draw texts on the view.
+keywords: text drawing item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

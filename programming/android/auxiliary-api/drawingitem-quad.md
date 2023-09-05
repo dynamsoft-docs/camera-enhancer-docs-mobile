@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: QuadDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class QuadDrawingItem of Dynamsoft Camera Enhancer represents a drawing item that draws quadrilaterals on the view.
-Keywords: quad drawing item, Java, Kotlin
+title: QuadDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The class QuadDrawingItem of Dynamsoft Camera Enhancer represents a drawing item that draws quadrilaterals on the view.
+keywords: quad drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -14,8 +14,8 @@ permalink: /programming/ios/auxiliary-api/guide-of-drawing-items-v3.0.3.html
 
 | Class | Description |
 | ----- | ----------- |
-| [`DCECameraView`](dcecameraview.md) | The view displays video streaming and auxiliary UI elements. |
-| [`DCEImageEditorView`](dceimageeditorview.md) | The view displays still image and auxiliary UI elements. |
+| [`DCECameraView`](dcecameraview.html) | The view displays video streaming and auxiliary UI elements. |
+| [`DCEImageEditorView`](dceimageeditorview.html) | The view displays still image and auxiliary UI elements. |
 
 `DCECameraView` and `DCEImageEditorView` are the main classes for user to configure the UI. `DrawingItems` are the UI elements that user can create, modify and interact on the UI view. All the `DrawingItems` are contained in `DCEDrawingLayers` and finally displayed on the `DCECameraView` or `DCEImageEditorView`.
 

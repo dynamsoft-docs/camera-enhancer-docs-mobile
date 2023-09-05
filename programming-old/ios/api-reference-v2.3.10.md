@@ -48,7 +48,7 @@ permalink: /programming/ios/api-reference.html
 | [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
 | [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`setCameraStateListener`]({{site.ios-api}}camera-enhancer.md#setcamerastatelistener) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
+| [`setCameraStateListener`]({{site.ios-api}}camera-enhancer.html#setcamerastatelistener) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
 | [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
 | [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | **Deprecated, will be removed in v3.0**. Pause the current selected  camera. |
 | [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | **Deprecated, will be removed in v3.0**. Resume the current selected camera. |

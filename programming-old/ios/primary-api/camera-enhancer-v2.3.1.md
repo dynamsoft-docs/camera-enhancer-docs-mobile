@@ -963,7 +963,7 @@ dce.removeListener(self)
 
 ### takePhoto
 
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/protocol-dcephotolistener.md#photooutputcallback).
+Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/protocol-dcephotolistener.html#photooutputcallback).
 
 ```objc
 - (void)takePhoto:(nonnull id<DCEPhotoListener>)listener API_AVAILABLE(ios(11.0));
@@ -971,7 +971,7 @@ Take a photo from the camera and save the image in the memory. The photo will be
 
 **Parameters**
 
-`[in] listener` An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.md).
+`[in] listener` An instance of [`DCEPhotoListener`](../auxiliary-api/protocol-dcephotolistener.html).
 
 **Code Snippet**
 

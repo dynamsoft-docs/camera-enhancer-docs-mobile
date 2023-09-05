@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: VideoFrameListener - Dynamsoft Camera Enhancer Module Android Edition API Reference
-Description: The protocol that defines methos for monitoring the video frame output.
-Keywords: Video frame listener, Java, Kotlin
+title: VideoFrameListener - Dynamsoft Camera Enhancer Module Android Edition API Reference
+description: The protocol that defines methos for monitoring the video frame output.
+keywords: Video frame listener, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

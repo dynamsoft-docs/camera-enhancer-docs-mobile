@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CameraEnhancer - Dynamsoft Camera Enhancer API Reference
-Description: The class CameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
-Keywords: camera enhancer, Java, Kotlin
+title: CameraEnhancer - Dynamsoft Camera Enhancer API Reference
+description: The class CameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
+keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -63,7 +63,7 @@ init(id styleId: Int, stroke strokeColor: UIColor, strokeWidth: CGFloat, fill fi
 
 **Remarks**
 
-Please use [`DrawingStyleManager.createDrawingStyle`](drawingstylemanager.md#createdrawingstyle) to create the drawing style.
+Please use [`DrawingStyleManager.createDrawingStyle`](drawingstylemanager.html#createdrawingstyle) to create the drawing style.
 
 &nbsp;
 

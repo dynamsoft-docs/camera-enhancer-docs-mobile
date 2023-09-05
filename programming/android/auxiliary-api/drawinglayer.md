@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DrawingLayer - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class DrawingLayer of Dynamsoft Camera Enhancer represents a drawing layer, which is used for managing and controlling drawing items.
-Keywords: drawing layer, Dynamsoft Camera Enhancer, Java, Kotlin
+title: DrawingLayer - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The class DrawingLayer of Dynamsoft Camera Enhancer represents a drawing layer, which is used for managing and controlling drawing items.
+keywords: drawing layer, Dynamsoft Camera Enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

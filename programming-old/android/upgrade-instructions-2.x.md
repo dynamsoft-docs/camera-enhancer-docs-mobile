@@ -26,4 +26,4 @@ CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELi
 });
 ```
 
-For API changes, it is recommended to check the [APIs reference](api-reference.md) for the new APIs.
+For API changes, it is recommended to check the [APIs reference](api-reference.html) for the new APIs.

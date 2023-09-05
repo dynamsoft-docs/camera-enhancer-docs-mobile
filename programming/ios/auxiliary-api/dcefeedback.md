@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSFeedback - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSFeedback of Dynamsoft Core Module provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
-Keywords: feedback, objective-c, swift
+title: DSFeedback - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSFeedback of Dynamsoft Core Module provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
+keywords: feedback, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

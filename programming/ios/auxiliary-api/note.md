@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSNote - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSNote of Dynamsoft Core Module represents a note, which contains a key and content.
-Keywords: note, objective-c, swift
+title: DSNote - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSNote of Dynamsoft Core Module represents a note, which contains a key and content.
+keywords: note, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

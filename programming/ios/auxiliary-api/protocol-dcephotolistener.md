@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSPhotoListener - Dynamsoft Core Module iOS Edition API Reference
-Description: The protocol DSPhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
-Keywords: photo listener, objective-c, swift
+title: DSPhotoListener - Dynamsoft Core Module iOS Edition API Reference
+description: The protocol DSPhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
+keywords: photo listener, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

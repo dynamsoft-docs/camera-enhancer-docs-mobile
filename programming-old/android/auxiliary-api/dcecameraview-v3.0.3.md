@@ -24,8 +24,8 @@ class com.dynamsoft.dce.DCECameraView
 | [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set the visibility of the torch button. The torch button icon is pre-set in the SDK. |
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
-| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
-| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.html) instance with the layer ID. |
+| [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.html) instance. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
 | [`setOverlayVisible`](#setoverlayvisible) | **Deprecated**. This method controls whether the camera view to display coloured and translucent overlay. |
 | [`getOverlayVisible`](#getoverlayvisible) | **Deprecated**. Get the visibility (true: visible/ false: invisible) of the overlay. |
@@ -120,7 +120,7 @@ Boolean isTorchButtonVisible = dceCameraView.getTorchButtonVisible();
 
 ## getDrawingLayer
 
-Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID.
+Get the [`DCEDrawingLayer`](dcedrawinglayer.html) instance with the layer ID.
 
 ```java
 public DCEDrawingLayer getDrawingLayer(int id);
@@ -128,7 +128,7 @@ public DCEDrawingLayer getDrawingLayer(int id);
 
 **Parameters**
 
-`id`: The id of the target [`DCEDrawingLayer`](dcedrawinglayer.md).
+`id`: The id of the target [`DCEDrawingLayer`](dcedrawinglayer.html).
 
 **Parameters**
 
@@ -153,7 +153,7 @@ DCEDrawingLayer layer = dceCameraView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_
 
 ## createDrawingLayer
 
-Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance.
+Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.html) instance.
 
 ```java
 public DCEDrawingLayer createDrawingLayer();
@@ -161,7 +161,7 @@ public DCEDrawingLayer createDrawingLayer();
 
 **Return Value**
 
-An instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
+An instance of [`DCEDrawingLayer`](dcedrawinglayer.html).
 
 **Code Snippet**
 

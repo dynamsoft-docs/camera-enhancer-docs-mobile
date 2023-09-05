@@ -142,7 +142,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in [`EnumFrameQuality`]({{ site.dce-enums }}frame-quality.md).
+The method returns an enumeration value in [`EnumFrameQuality`]({{ site.dce-enums }}frame-quality.html).
 
 **Remarks**
 
@@ -291,7 +291,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: One of the [`EnumFrameQuality`]({{ site.dce-enums }}frame-quality.md) value that indicates the frame quality.
+`quality`: One of the [`EnumFrameQuality`]({{ site.dce-enums }}frame-quality.html) value that indicates the frame quality.
 
 &nbsp;
 

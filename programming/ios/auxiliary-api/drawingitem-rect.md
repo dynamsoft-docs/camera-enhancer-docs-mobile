@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSRectDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
-Description: The class DSRectDrawingItem of Dynamsoft Camera Enhancer represents a rectangular drawing item.
-Keywords: rectangle, drawing item, objective-c, swift
+title: DSRectDrawingItem - Dynamsoft Camera Enhancer iOS Edition API Reference
+description: The class DSRectDrawingItem of Dynamsoft Camera Enhancer represents a rectangular drawing item.
+keywords: rectangle, drawing item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

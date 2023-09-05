@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: LineDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
-Description: The class LineDrawingItem of Dynamsoft Camera Enhancer represents a line drawing item used for drawing line segments on the view.
-Keywords: line drawing item, Java, Kotlin
+title: LineDrawingItem - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The class LineDrawingItem of Dynamsoft Camera Enhancer represents a line drawing item used for drawing line segments on the view.
+keywords: line drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
