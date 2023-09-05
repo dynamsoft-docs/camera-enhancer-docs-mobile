@@ -31,9 +31,13 @@ protocol VideoFrameListener : NSObjectProtocol
 
 ## Methods
 
+| Method | Description |
+|------- |-------------|
+| [`onFrameOutPut`](#onframeoutput) | The method for monitoring the output of video frames. |
+
 ### onFrameOutPut
 
-The method for monitoring the camera state and receiving call.
+The method for monitoring the output of video frames.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

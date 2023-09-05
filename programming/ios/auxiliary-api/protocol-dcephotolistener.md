@@ -30,6 +30,7 @@ protocol PhotoListener : NSObjectProtocol
 ```
 
 ## Methods
+
 | Method | Description |
 |------- |-------------|
 | [`onPhotoOutput`](#onphotooutput) | The method for monitoring the photo output. |

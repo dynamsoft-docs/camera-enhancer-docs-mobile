@@ -31,6 +31,10 @@ protocol CameraStateListener : NSObjectProtocol
 
 ## Methods
 
+| Method | Description |
+|------- |-------------|
+| [`onFrameOutPut`](#onframeoutput) | The method for monitoring the camera state and receiving call. |
+
 ### onCameraStateChanged
 
 The method for monitoring the camera state and receiving call.
