@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Advanced Features
+permalink: /programming/android/guide/features.html
 ---
 
 # Advanced Features
@@ -19,26 +20,24 @@ All the advanced feaatures are defined in enumeration `EnumEnhancerFeatures`. Cu
 
 | Feature | Enumeration Member | Value |
 | ------- | ------ | ----- |
-| [Frame Filter](#frame-filter) | `EnumFRAME_FILTER` | 0x01 |
-| [Sensor Control](#sensor-control) | `EnumSENSOR_CONTROL` | 0x02 |
-| [Enhanced Focus](#enhanced-focus) | `EnumENHANCED_FOCUS` | 0x04 |
-| [Fast Mode](#fast-mode) | `EnumFAST_MODE` | 0x08 |
-| [Auto Zoom](#auto-zoom) | `EnumAUTO_ZOOM` | 0x10 |
-| [Smart Torch](#smart-torch) | `EnumSMART_TORCH` | 0x20 |
+| [Frame Filter](#frame-filter) | `EF_FRAME_FILTER` | 0x01 |
+| [Sensor Control](#sensor-control) | `EF_SENSOR_CONTROL` | 0x02 |
+| [Enhanced Focus](#enhanced-focus) | `EF_ENHANCED_FOCUS` | 0x04 |
+| [Auto Zoom](#auto-zoom) | `EF_AUTO_ZOOM` | 0x10 |
+| [Smart Torch](#smart-torch) | `EF_SMART_TORCH` | 0x20 |
 
 ## How to Use
 
-- Enable: Trigger method `enableFeatures` with the enumeration members of the features that you want to enable.
-- Disable: Trigger method `disableFeatures` with the enumeration members of the features that you want to disable.
-- Check status: Trigger method `isFeatureEnabled` with the enumeration members of the features that you want to check.
+- Enable: Trigger method `enableEnhancedFeatures` with the enumeration members of the features that you want to enable.
+- Disable: Trigger method `disableEnhancedFeatures` with the enumeration members of the features that you want to disable.
 
 Sample code:
 
 ```java
 // To enable features
-mCameraEnhancer.enableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
+mCameraEnhancer.enableEnhancedFeatures(EnumEnhancedFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
 // To disable features
-mCameraEnhancer.disableFeatures(EnumEnhancerFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
+mCameraEnhancer.disableEnhancedFeatures(EnumEnhancedFeatures.EF_FRAME_FILTER | EnumEnhancerFeatures.EF_AUTO_ZOOM);
 ```
 
 - You can enable or disable multiple features at one time.
@@ -58,10 +57,6 @@ The mobile sensor can help on filtering out all the frames that are produced whe
 ### Enhanced Focus
 
 This feature can assist the camera in its focus. It is recommended to be enabled on low-end devices.
-
-### Fast Mode
-
-The video frames are cropped into small sizes when the **Fast Mode** is enabled. The feature will sharply improve the processing efficiency When the targeting areas are always located in the middle of the video. The average time consumption on cropping each frame is less than 10ms.
 
 ### Auto Zoom
 

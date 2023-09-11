@@ -1,27 +1,14 @@
 ---
-layout: home-page
-title: Dynamsoft Camera Enhancer SDK Documentation
-description: Dynamsoft Camera Enhancer SDK Documentation Homepage
+layout: default-layout
+title: Index of Dynamsoft Camera Enhancer
+description: This is the documentation - Index of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer
-breadcrumbText: HomePage
+needAutoGenerateSidebar: true
+breadcrumbText: Start Programming
+permalink: /programming/index.html
 ---
 
-# Dynamsoft Camera Enhancer Documentation
+# Dynamsoft Camera Enhancer Mobile
 
-* [Introduction]({{site.introduction}}index.html)
-
-<hr>
-DEVELOPMENT
-<hr>
-
-* [Web (Client Side)]({{site.js}})
-* [Android]({{site.android}})
-* [iOS]({{site.ios}})
-
-<hr>
-USEFUL RESOURCES
-<hr>
-
-* [Release Notes]({{site.release_notes}}index.html)
-* [License]({{site.license_activation}}License.html)
-* [FAQ]({{site.contact-us}})
+- [Android]({{site.android}})
+- [iOS]({{site.ios}})

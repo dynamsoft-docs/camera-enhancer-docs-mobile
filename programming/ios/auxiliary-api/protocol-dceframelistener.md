@@ -1,40 +1,20 @@
 ---
 layout: default-layout
-title: iOS Protocol DCEFrameListener - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS Protocol DCEFrameListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS Protocol DCEFrameListener
+title: DSVideoFrameListener - Dynamsoft Camera Enhancer Module iOS Edition API Reference
+description: The protocol that defines methos for monitoring the video frame output.
+keywords: Video frame listener, objective-c, swift
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: false
-breadcrumbText: iOS Protocol DCEFrameListener
 ---
 
-# DCEFrameListener
+# DSVideoFrameListener
 
-The protocol to handle callback when previewed frame callback is returned.
+The `DSVideoFrameListener` protocol includes methods for monitoring the camera state.
 
-```objc
-@protocol CameraEnhancerListener <NSObject>
-```
+## Definition
 
-| Method | Type | Description |
-| ------ | ---- | ----------- |
-| [`frameOutPutCallback`](#frameoutputcallback) | *required* | Callback when the `DCEFrame` is output. |
-
-## frameOutPutCallback
-
-Callback when the `DCEFrame` is output.
-
-```objc
-- (void)frameOutPutCallback:(DCEFrame*)frame timeStamp:(NSTimeInterval)timeStamp;
-```
-
-**Parameters**
-
-`frame`: The parameter is the original `DCEFrame` with detailed frame information. View more in [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) class.  
-`timeStamp`: The time stamp that records when the DCEFrame is output. 
-
-**Code Snippet**
+*Assembly:* DynamsoftCore.framework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -42,19 +22,38 @@ Callback when the `DCEFrame` is output.
 >
 >1. 
 ```objc
-[_dce addListener:self];
-- (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
-    // TODO add your code
-}
+@protocol DSVideoFrameListener <NSObject>
 ```
 2. 
 ```swift
-dce.addListener(self)
-func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-    // TODO add your code
-}
+protocol VideoFrameListener : NSObjectProtocol
 ```
 
-**See also**
+## Methods
 
-- [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html)
+| Method | Description |
+|------- |-------------|
+| [`onFrameOutPut`](#onframeoutput) | The method for monitoring the output of video frames. |
+
+### onFrameOutPut
+
+The method for monitoring the output of video frames.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)onFrameOutPut:(DSImageData*)frame
+            timeStamp:(NSTimeInterval)timeStamp;
+```
+2. 
+```swift
+func onFrameOutPut(_ frame: DSImageData, timeStamp: NSTimeInterval)
+```
+
+**Parameters**
+
+`frame`: The output video frame.  
+`timeStamp`: The time stamp that the video frame is output.

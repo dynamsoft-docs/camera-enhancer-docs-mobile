@@ -1,50 +1,36 @@
 ---
 layout: default-layout
-title: Android DCEFrameListener - Dynamsoft Camera Enhancer
-description: This is the documentation - DCEFrameListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, DCEFrameListener
+title: VideoFrameListener - Dynamsoft Camera Enhancer Module Android Edition API Reference
+description: The protocol that defines methos for monitoring the video frame output.
+keywords: Video frame listener, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: DCEFrameListener
 ---
 
-# DCEFrameListener
+# VideoFrameListener
 
-The interface to handle callback when previewed frame callback is returned.
+The `VideoFrameListener` protocol includes methods for monitoring the camera state.
+
+## Definition
+
+*Assembly:* package com.dynamsoft.dce
 
 ```java
-interface com.dynamsoft.dce.DCEFrameListener
+interface VideoFrameListener
 ```
 
-| Functions | Description |
-| --------- | ----------- |
-| [`frameOutputCallback`](#frameoutputcallback) | The callback method for user to implement when frame is output. |
+## Methods
 
-## frameOutputCallback
+### onFrameOutPut
 
-The callback method can be triggered when `frame` is output.
+The method for monitoring the camera state and receiving call.
 
 ```java
-void frameOutputCallback(DCEFrame frame, long timeStamp);
+void onFrameOutput(ImageData frame, long timeStamp);
 ```
 
 **Parameters**
 
-`frame`: The `DCEFrame` object that contains the image data and further information.  
-`timeStamp`: The `timeStamp` that records when the `frame` is output.
-
-**Code Snippet**
-
-```java
-cameraEnhancer.addListener(new DCEFrameListener() {
-    @Override
-    public void frameOutputCallback(DCEFrame frame, long timeStamp) {
-        // Add your code
-    }
-});
-```
-
-**See also**
-
-- [`class DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
+`frame`: The output video frame.  
+`timeStamp`: The time stamp that the video frame is output.

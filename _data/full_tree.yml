@@ -1,21 +1,19 @@
 tree_file_list:
   - sidelist-full-tree.html
-  - sidelist-introduction.html
-  - sidelist-programming.html
-  - sidelist-useful.html
-  - sidelist-release-notes.html
-  - sidelist-license-activation.html
-  - sidelist-faq.html
   - sidelist-programming/programming-oc.html
   - sidelist-programming/programming-oc-v1.0.0.html
   - sidelist-programming/programming-oc-v1.0.1.html
   - sidelist-programming/programming-oc-v1.0.3.html
   - sidelist-programming/programming-oc-v2.0.0.html
+  - sidelist-programming/programming-oc-v2.1.4.html
+  - sidelist-programming/programming-oc-v2.3.5.html
+  - sidelist-programming/programming-oc-v2.3.20.html
   - sidelist-programming/programming-android.html
   - sidelist-programming/programming-android-v1.0.0.html
   - sidelist-programming/programming-android-v1.0.1.html
   - sidelist-programming/programming-android-v1.0.3.html
   - sidelist-programming/programming-android-v2.0.0.html
-  - sidelist-programming/programming-javascript-v2.0.3.html
-  - sidelist-programming/programming-javascript-v2.3.2.html
-  - sidelist-programming/programming-javascript.html
+  - sidelist-programming/programming-android-v2.1.4.html
+  - sidelist-programming/programming-android-v2.3.5.html
+  - sidelist-programming/programming-android-v2.3.10.html
+  - sidelist-programming/programming-android-v3.0.3.html

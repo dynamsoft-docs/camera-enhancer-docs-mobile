@@ -1,37 +1,60 @@
 ---
 layout: default-layout
-title: iOS Protocol DCECameraStateListener - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS Protocol DCECameraStateListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, iOS Protocol DCECameraStateListener
+title: DSCameraStateListener - Dynamsoft Core Module iOS Edition API Reference
+description: The protocol that includes methods for monitoring the camera state.
+keywords: camera state, objective-c, swift
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: false
-breadcrumbText: iOS Protocol DCECameraStateListener
 ---
 
-# DCECameraStateListener
+# DSCameraStateListener
 
-The interface to handle callback when camera state changes.
+The `DSCameraStateListener` protocol includes methods for monitoring the camera state.
 
+## Definition
+
+*Assembly:* DynamsoftCore.framework
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@protocol DCECameraStateListener <NSObject>
+@protocol DSCameraStateListener <NSObject>
+```
+2. 
+```swift
+protocol CameraStateListener : NSObjectProtocol
 ```
 
-| Method | Type | Description |
-| ------ | ---- | ----------- |
-| [`stateChangeCallback`](#statechangecallback) | *required* | The callback method is triggered when **camera state** changes. |
+## Methods
 
-## stateChangeCallback
+| Method | Description |
+|------- |-------------|
+| [`onFrameOutPut`](#onframeoutput) | The method for monitoring the camera state and receiving call. |
 
-The callback method is triggered when **camera state** changes.
+### onCameraStateChanged
 
+The method for monitoring the camera state and receiving call.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-- (void)stateChangeCallback:(EnumCameraState)cameraState;
+- (void)onCameraStateChanged:(DSCameraState)currentState;
+```
+2. 
+```swift
+func onCameraStateChanged(_ currentState: DSCameraState)
 ```
 
 **Parameters**
 
-`cameraState`: The camera state. It includes `opened`, `opening`, `closed` and `closing`.
+`currentState`: The current camera state.
 
 **Code Snippet**
 
@@ -41,22 +64,9 @@ The callback method is triggered when **camera state** changes.
 >
 >1. 
 ```objc
-@interface ViewController ()<DCECameraStateListener>
-- (void)configurationDCE{
-   [_dce setCameraStateListener:self];
-}
-- (void)stateChangeCallback:(EnumCameraState)state{
-   // Add your code to do when camera state changes.
-}
+[listener onCameraStateChanged:currentState];
 ```
 2. 
 ```swift
-class ViewController: UIViewController,DCECameraStateListener{
-   func configurationDCE(){
-          dce.setCameraStateListener(self)
-   }
-   func stateChangeCallback(EnumCameraState currentState){
-          // Add your code to do when camera state changes.
-   }
-}
+listener.onCameraStateChanged(currentState)
 ```

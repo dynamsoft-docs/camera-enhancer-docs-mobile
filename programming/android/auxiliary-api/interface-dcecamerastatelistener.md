@@ -1,49 +1,35 @@
 ---
 layout: default-layout
-title: Interface DCECameraStateListener - Dynamsoft Camera Enhancer
-description: This is the documentation - DCECameraStateListener page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, DCECameraStateListener
+title: CameraStateListener - Dynamsoft Core Module Android Edition API Reference
+description: The protocol that includes methods for monitoring the camera state.
+keywords: camera state, Java, Kotlin
+needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
-breadcrumbText: DCECameraStateListener
 ---
 
-# DCECameraStateListener
+# CameraStateListener
 
-The interface to handle callback when camera state changes.
+The `CameraStateListener` protocol includes methods for monitoring the camera state.
+
+## Definition
+
+*Assembly:* package com.dynamsoft.dce
 
 ```java
-interface com.dynamsoft.dce.DCECameraStateListener
+interface CameraStateListener
 ```
 
-| Functions | Description |
-| --------- | ----------- |
-| [`stateChangeCallback`](#statechangecallback) | The callback method is triggered when **camera state** changes. |
+## Methods
 
-## stateChangeCallback
+### onCameraStateChanged
 
-The callback method is triggered when **camera state** changes.
+The method for monitoring the camera state and receiving call.
 
 ```java
-void stateChangeCallback(EnumCameraState currentState);
+void onCameraStateChanged(EnumCameraState state);
 ```
 
 **Parameters**
 
-`currentState`: The camera state. It includes `opened`, `opening`, `closed` and `closing`.
-
-**Code Snippet**
-
-```java
-cameraEnhancer.setCameraStateListener(new DCECameraStateListener() {
-    @Override
-    public void stateChangeCallback(EnumCameraState currentState) {
-        // Add your code to do when camera state changes
-    }
-});
-```
-
-**See also**
-
-- [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener)
+`currentState`: The current camera state.

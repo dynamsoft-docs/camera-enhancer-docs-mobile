@@ -7,94 +7,49 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS API references
+permalink: /programming/ios/api-reference.html
 ---
 
 # iOS API references
 
-## Primary Class - CameraEnhancer
+## Primary Class
 
-### Initialization
+* [DSCameraEnhancer](primary-api/camera-enhancer.md)
 
-| Method | Description |
-| ------ | ----------- |
-| [`initWithView`]({{site.ios-api}}camera-enhancer.html#initwithview) | Initialize the camera enhancer with the `DCECameraView`. |
-| [`initLicense`]({{site.ios-api}}camera-enhancer.html#initlicense) | Sets product key and activate the SDK. |
-| [`getVersion`]({{site.ios-api}}camera-enhancer.html#getversion) | Get the SDK version. |
-| [`cameraView`]({{site.ios-api}}camera-enhancer.html#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
+## View Classes
 
-### Basic Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getAllCameras`]({{site.ios-api}}camera-enhancer.html#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCameraWithPosition`]({{site.ios-api}}camera-enhancer.html#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`]({{site.ios-api}}camera-enhancer.html#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
-| [`selectCamera`]({{site.ios-api}}camera-enhancer.html#selectcamera) | Select a camera from the camera list with the camera ID. |
-| [`getSelectedCamera`]({{site.ios-api}}camera-enhancer.html#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraState`]({{site.ios-api}}camera-enhancer.html#getcamerastate) | Get the state of the currently selected camera. |
-| [`open`]({{site.ios-api}}camera-enhancer.html#open) | Turn on the current selected camera. |
-| [`close`]({{site.ios-api}}camera-enhancer.html#close) | Turn off the current selected camera. |
-| [`turnOnTorch`]({{site.ios-api}}camera-enhancer.html#turnontorch) | Turn on the torch. |
-| [`turnOffTorch`]({{site.ios-api}}camera-enhancer.html#turnofftorch) | Turn off the torch. |
-| [`getFrameRate`]({{site.ios-api}}camera-enhancer.html#getframerate) | Get the current frame rate. |
-| [`setResolution`]({{site.ios-api}}camera-enhancer.html#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`]({{site.ios-api}}camera-enhancer.html#getresolution) | Get the current resolution. |
-| [`setZoom`]({{site.ios-api}}camera-enhancer.html#setzoom) | Set the zoom factor. Once setZoom is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`getMaxZoomFactor`]({{site.ios-api}}camera-enhancer.html#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`autoZoomRange`]({{site.ios-api}}camera-enhancer.html#autozoomrange) | The property for getting/setting the range of auto zoom. |
-| [`setFocus`]({{site.ios-api}}camera-enhancer.html#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setFocus(subsequentFocusMode)`]({{site.ios-api}}camera-enhancer.html#setfocussubsequentFocusMode) | Trigger a focus at the targeting point and set the subsequent focus mode after focused.  |
-| [`setScanRegion`]({{site.ios-api}}camera-enhancer.html#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`]({{site.ios-api}}camera-enhancer.html#getscanregion) | Get the scan region. |
-| [`scanRegionVisible`]({{site.ios-api}}camera-enhancer.html#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`setCameraStateListener`]({{site.ios-api}}camera-enhancer.md#setcamerastatelistener) | Add a `DCECameraStateListener` to receive notification when the camera state changes. |
-| [`setFrameRate`]({{site.ios-api}}camera-enhancer.html#setframerate) | **Deprecated, will be removed in v3.0**. Set the frame rate to the input value (if the input value is available for the device). |
-| [`pause`]({{site.ios-api}}camera-enhancer.html#pause) | **Deprecated, will be removed in v3.0**. Pause the current selected  camera. |
-| [`resume`]({{site.ios-api}}camera-enhancer.html#resume) | **Deprecated, will be removed in v3.0**. Resume the current selected camera. |
-
-### Frame Acquiring Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) | Get the latest frame from the buffer. The input boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`]({{site.ios-api}}camera-enhancer.html#addlistener) | Add a listener to the Camera Enhancer instance. |
-| [`removeListener`]({{site.ios-api}}camera-enhancer.html#removelistener) | Remove a preciously added listener from the Camera Enhancer instance. |
-| [`takePhoto`]({{site.ios-api}}camera-enhancer.html#takephoto) | Take a photo from the camera and save the image in the memory. |
-
-### Enhanced Features
-
-| Method | Description |
-| ------ | ----------- |
-| [`enableFeatures`]({{site.ios-api}}camera-enhancer.html#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
-| [`disableFeatures`]({{site.ios-api}}camera-enhancer.html#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.mobile-enum}}enum-enhancer-features.html?lang=objc,swift) values. |
-| [`isFeatureEnabled`]({{site.ios-api}}camera-enhancer.html#isfeatureenabled) | Check whether the input features are enabled. |
-
-### Advanced Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`updateAdvancedSettingsFromFile`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
-| [`updateAdvancedSettingsFromString`]({{site.ios-api}}camera-enhancer.html#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
+* [DSCameraView](auxiliary-api/dcecameraview.md)
+* [DSImageEditorView](auxiliary-api/dceimageeditorview.md)
 
 ## Auxiliary Classes
 
-- [`DCECameraView`]({{site.ios-api-auxiliary}}dcecameraview.html)
-- [`DCEFeedback`]({{site.ios-api-auxiliary}}dcefeedback.html)
-- [`DCEFrame`]({{site.ios-api-auxiliary}}dceframe.html)
-- [`iRegionDefinition`]({{site.ios-api-auxiliary}}region-definition.html)
+* [DSCameraEnhancerModule](auxiliary-api/camera-enhancer-module.md)
+* [DSCapabilities](auxiliary-api/capabilities.md)
+* [DSDrawingItem](auxiliary-api/drawingitem.md)
+  * [DSLineDrawingItem](auxiliary-api/drawingitem-line.md)
+  * [DSQuadDrawingItem](auxiliary-api/drawingitem-quad.md)
+  * [DSRectDrawingItem](auxiliary-api/drawingitem-rect.md)
+  * [DSTextDrawingItem](auxiliary-api/drawingitem-text.md)
+* [DSDrawingLayer](auxiliary-api/drawinglayer.md)
+* [DSDrawingStyle](auxiliary-api/drawingstyle.md)
+* [DSDrawingStyleManager](auxiliary-api/drawingstylemanager.md)
+* [DSFeedback](auxiliary-api/dcefeedback.md)
+* [DSNote](auxiliary-api/note.md)
+* [DSTipConfig](auxiliary-api/tip-config.md)
 
-## Protocol
+## Interfaces
 
-- [`DCECameraStateListener`]({{ site.ios-api-auxiliary }}protocol-camerastatelistener.html)
-- [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
-- [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
-- [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)
+* [DSCameraStateListener](auxiliary-api/protocol-dcecamerastatelistener.md)
+* [DSPhotoListener](auxiliary-api/protocol-dcephotolistener.md)
+* [DSVideoFrameListener](auxiliary-api/protocol-dceframelistener.md)
 
 ## Enumerations
 
-- [`EnumCameraPosition`]({{ site.mobile-enum }}enum-camera-position.html?lang=objc,swift)
-- [`EnumCameraState`]({{ site.mobile-enum }}enum-camera-state.html?lang=objc,swift)
-- [`EnumDCEErrorCode`]({{ site.mobile-enum }}errorcode.html?lang=objc,swift)
-- [`EnumEnhancerFeatures`]({{ site.mobile-enum }}enum-enhancer-features.html?lang=objc,swift)
-- [`EnumFrameQuality`]({{ site.mobile-enum }}enum-frame-quality.html?lang=objc,swift)
-- [`EnumResolution`]({{ site.mobile-enum }}enum-resolution.html?lang=objc,swift)
+* [DSCameraPosition]({{ site.dce-enums }}camera-position.html?lang=objc&swift)
+* [DSCameraState]({{ site.dce-enums }}camera-state.html?lang=objc&swift)
+* [DSCoordinateBase]({{ site.dce-enums }}coordinate-base.html?lang=objc&swift)
+* [DSDrawingItemMediaType]({{ site.dce-enums }}drawing-item-media-type.html?lang=objc&swift)
+* [DSDrawingItemState]({{ site.dce-enums }}drawing-item-state.html?lang=objc&swift)
+* [DSEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=objc&swift)
+* [DSFocusMode]({{ site.dce-enums }}focus-mode.html?lang=objc&swift)
+* [DSResolution]({{ site.dce-enums }}resolution.html?lang=objc&swift)
