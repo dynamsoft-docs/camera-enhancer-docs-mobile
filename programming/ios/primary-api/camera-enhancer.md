@@ -95,6 +95,7 @@ Add a DSVideoFrameListener to receive callback when video frames are output.
 ```
 2. 
 ```swift
+func addListener(_ listener: DSVideoFrameListener)
 ```
 
 **Parameters**
@@ -115,11 +116,12 @@ Remove a DSVideoFrameListener.
 ```
 2. 
 ```swift
+func removeListener(_ listener: DSVideoFrameListener)
 ```
 
 **Parameters**
 
-`listener`: A delegate object of DSVideoFrameListener.
+`listener`: A delegate object of VideoFrameListener.
 
 ### takePhoto
 
@@ -135,6 +137,7 @@ Take a photo.
 ```
 2. 
 ```swift
+func takePhoto(_ photoListener: PhotoListener)
 ```
 
 **Parameters**
@@ -155,6 +158,7 @@ Get the camera position.
 ```
 2. 
 ```swift
+func getCameraPosition() -> CameraPosition
 ```
 
 **Return Value**
@@ -175,6 +179,7 @@ Set the zoom factor of the camera. You can use getCapabilities to check the maxi
 ```
 2. 
 ```swift
+func setZoomFactor(_ factor: CGFloat)
 ```
 
 **Parameters**
@@ -195,6 +200,7 @@ Get the zoom factor of the camera.
 ```
 2. 
 ```swift
+func getZoomFactor() -> CGFloat
 ```
 
 **Return Value**
@@ -215,6 +221,7 @@ Get the currently actived focus mode.
 ```
 2. 
 ```swift
+func getFocusMode() -> FocusMode
 ```
 
 **Return Value**
@@ -235,6 +242,7 @@ Initialize system settings from a JSON file. The system settings contain more pr
 ```
 2. 
 ```swift
+func initSystemSettingsFromFile(_ filePath: String) throws -> Bool
 ```
 
 **Parameters**
@@ -260,6 +268,7 @@ Initialize system settings from a JSON string. The system settings contain more 
 ```
 2. 
 ```swift
+func initSystemSettings(_ filePath: JsonString) throws -> Bool
 ```
 
 **Parameters**
@@ -285,6 +294,7 @@ Reset the system settings to default value.
 ```
 2. 
 ```swift
+func resetSystemSettings()
 ```
 
 ### initEnhancedSettingsFromFile
