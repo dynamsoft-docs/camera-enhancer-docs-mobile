@@ -242,7 +242,7 @@ Initialize system settings from a JSON file. The system settings contain more pr
 ```
 2. 
 ```swift
-func initSystemSettingsFromFile(_ filePath: String) throws -> Bool
+func initSystemSettingsFromFile(_ filePath: String) throws -> BOOL
 ```
 
 **Parameters**
@@ -268,12 +268,12 @@ Initialize system settings from a JSON string. The system settings contain more 
 ```
 2. 
 ```swift
-func initSystemSettings(_ filePath: JsonString) throws -> Bool
+func initSystemSettings(_ filePath: String) throws -> BOOL
 ```
 
 **Parameters**
 
-`JsonString`: The JSON string.
+`JsonString`: The JSON string.  
 `error`: A NSError pointer. An error occurs when the JSON data includes invalid keys or values.
 
 **Return Value**
@@ -311,11 +311,12 @@ Initialize enhanced settings from a JSON file. The enhanced settings contain aux
 ```
 2. 
 ```swift
+func initEnhancedSettingsFromFile(_ filePath: String) throws -> BOOL
 ```
 
 **Parameters**
 
-`filePath`: The JSON string.
+`filePath`: The JSON string.  
 `error`: A NSError pointer. An error occurs when the file path is not available or the JSON data includes invalid keys or values.
 
 **Return Value**
@@ -336,11 +337,12 @@ Initialize enhanced settings from a JSON string. The enhanced settings contain a
 ```
 2. 
 ```swift
+func initEnhancedSettings(_ JsonString: String) throws -> BOOL
 ```
 
 **Parameters**
 
-`JsonString`: The JSON string.
+`JsonString`: The JSON string.  
 `error`: A NSError pointer. An error occurs when the JSON data includes invalid keys or values.
 
 **Return Value**
@@ -361,6 +363,7 @@ Output the enhanced settings to a JSON string. The enhanced settings contain aux
 ```
 2. 
 ```swift
+func outputEnhancedSettings() throws -> String
 ```
 
 **Parameters**
@@ -385,11 +388,12 @@ Output the enhanced settings to a JSON file. The enhanced settings contain auxil
 ```
 2. 
 ```swift
+func outputEnhancedSettingsToFile(_ file: String) throws -> String
 ```
 
 **Parameters**
 
-`file` The path that you want to output the JSON file.
+`file` The path that you want to output the JSON file.  
 `error` A NSError pointer. An error occurs when the file path is not available.
 
 **Return Value**
@@ -410,6 +414,7 @@ Reset the enhanced settings to default value.
 ```
 2. 
 ```swift
+func resetEnhancedSettings()
 ```
 
 ### getCapabilities
@@ -426,6 +431,7 @@ Get the device capabilities including zoom factor, ISO, exposure time, etc.
 ```
 2. 
 ```swift
+func getCapabilities() -> Capabilities
 ```
 
 **Return Value**
@@ -446,6 +452,7 @@ Get the device capabilities including zoom factor, ISO, exposure time, etc.
 ```
 2. 
 ```swift
+func getCameraState() -> CameraState
 ```
 
 **Return Value**
@@ -466,6 +473,7 @@ Set a DSCameraStateListener to receive callback when the camera state changed.
 ```
 2. 
 ```swift
+func setCameraStateListener(_ listener: CameraStateListener)
 ```
 
 **Parameters**
@@ -486,6 +494,7 @@ Enable the specified enhanced features. View DSEnhancedFeatures for more details
 ```
 2. 
 ```swift
+func enableEnhancedFeatures(_ enhancedFeatures: Int) -> BOOL
 ```
 
 **Parameters**
@@ -510,6 +519,7 @@ Disable the specified enhanced features. View DSEnhancedFeatures for more detail
 ```
 2. 
 ```swift
+func disableEnhancedFeatures(_ enhancedFeatures: Int)
 ```
 
 **Parameters**
@@ -530,6 +540,7 @@ Create an instance of DSCameraEnhancer.
 ```
 2. 
 ```swift
+init(view: CameraView)
 ```
 
 **Parameters**
@@ -554,6 +565,7 @@ Create an instance of DSCameraEnhancer.
 ```
 2. 
 ```swift
+init()
 ```
 
 **Return Value**
@@ -574,11 +586,12 @@ Set a scan region. The video frame is cropped based on the scan region.
 ```
 2. 
 ```swift
+func setScanRegion(_ scanRegion: DSRect) -> BOOL
 ```
 
 **Parameters**
 
-`scanRegion`: A DSRect object.
+`scanRegion`: A DSRect object.  
 `error`: A NSError pointer. An error occurs when the DSRect data is invalid.
 
 **Return Value**
@@ -599,6 +612,7 @@ Get a scan region.
 ```
 2. 
 ```swift
+func getScanRegion() -> DSRect
 ```
 
 **Return Value**
@@ -619,6 +633,7 @@ Open the camera.
 ```
 2. 
 ```swift
+func open()
 ```
 
 ### close
@@ -635,6 +650,7 @@ Close the camera.
 ```
 2. 
 ```swift
+func close()
 ```
 
 ### setResolution
@@ -651,6 +667,7 @@ Set the resolution. If the targeting resolution is not available for your device
 ```
 2. 
 ```swift
+func setResolution(_ resolution: Resolution)
 ```
 
 **Parameters**
@@ -671,6 +688,7 @@ Get the current resolution.
 ```
 2. 
 ```swift
+func getResolution() -> Resolution
 ```
 
 **Return Value**
@@ -691,6 +709,7 @@ Get the IDs of all available cameras.
 ```
 2. 
 ```swift
+func getResolution() -> [String]
 ```
 
 **Return Value**
@@ -711,6 +730,7 @@ Select a camera with a camera ID.
 ```
 2. 
 ```swift
+func selectCamera(_ cameraId: String) -> BOOL
 ```
 
 **Parameters**
@@ -736,6 +756,7 @@ Select a camera with a camera position.
 ```
 2. 
 ```swift
+func selectCameraWithPosition(_ position: CameraPosition) -> BOOL
 ```
 
 **Parameters**
@@ -761,6 +782,7 @@ Get the currently actived camera.
 ```
 2. 
 ```swift
+func getSelectedCamera() -> String
 ```
 
 **Return Value**
@@ -777,10 +799,11 @@ Get the frame rate.
 >
 >1. 
 ```objc
-- (int)getFrameRate;
+- (NSInteger)getFrameRate;
 ```
 2. 
 ```swift
+func getFrameRate() -> Int
 ```
 
 **Return Value**
@@ -801,6 +824,7 @@ Turn on the torch.
 ```
 2. 
 ```swift
+func turnOnTorch()
 ```
 
 ### turnOffTorch
@@ -817,6 +841,7 @@ Turn off the torch.
 ```
 2. 
 ```swift
+func turnOffTorch()
 ```
 
 ### setFocus
@@ -833,6 +858,7 @@ Set the focus point of interest and trigger an one-off auto-focus.
 ```
 2. 
 ```swift
+func setFocus(_ focusPoint: CGPoint)
 ```
 
 **Parameters**
@@ -853,6 +879,7 @@ Set the focus point of interest and trigger an one-off auto-focus. After the foc
 ```
 2. 
 ```swift
+func setFocus(_ focusPoint: CGPoint, subsequentFocusMode: FocusMode)
 ```
 
 **Parameters**
@@ -954,6 +981,7 @@ Set/get the capture distance property of the video frame. The capture distance p
 ```
 2. 
 ```swift
+var imageCaptureDistanceMode: CGPoint { get set }
 ```
 
 ### autoZoomRange
@@ -970,6 +998,7 @@ Set/get the range of auto zoom.
 ```
 2. 
 ```swift
+var autoZoomRange: UIFloatRange { get set }
 ```
 
 ### cameraView
@@ -986,4 +1015,5 @@ Set/get the DSCameraView instance that bind with this DSCameraEnhancer instance.
 ```
 2. 
 ```swift
+var cameraView: CameraView { get set }
 ```
