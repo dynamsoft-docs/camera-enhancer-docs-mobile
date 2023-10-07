@@ -23,7 +23,7 @@ permalink: /programming/android/release-note/release-notes-2.x.html
 
 - Override method [`setFocus`](../primary-api/camera-enhancer.html#setfocussubsequentfocusmode) in `CameraEnhancer` class for users to specify the subsequent focus mode after triggering a focus. Enumeration [`EnumFocusMode`]({{ site.dce-enums }}focus-mode.html?lang=android) is added to specify the focus mode.
 - Added a new method [`setAutoZoomRange`](../primary-api/camera-enhancer.html#setautozoomrange) in `CameraEnhancer` for users to specify a range for the auto-zoom feature of the library.
-- Added an interface [`DCECameraStateListener`](../auxiliary-api/protocol-dcecamerastatelistener.html) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.html#setcamerastatelistener).
+- Added an interface [`DCECameraStateListener`](../auxiliary-api/interface-dcecamerastatelistener.html) to receive a callback when the camera state changes. You can add the protocol via a new method [`setCameraStateListener`](../primary-api/camera-enhancer.html#setcamerastatelistener).
 - Added a new method [`getVisibleRegionOfVideo`](../auxiliary-api/dcecameraview.html#getvisibleregionofvideo) in `DCECameraView` class
 
 ### Deprecated

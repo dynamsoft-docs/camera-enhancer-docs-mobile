@@ -30,7 +30,7 @@ permalink: /programming/ios/api-reference.html
   * [DSQuadDrawingItem](auxiliary-api/drawingitem-quad.md)
   * [DSRectDrawingItem](auxiliary-api/drawingitem-rect.md)
   * [DSTextDrawingItem](auxiliary-api/drawingitem-text.md)
-* [DSDrawingLayer](auxiliary-api/drawinglayer.md)
+* [DSDrawingLayer](auxiliary-api/dcedrawinglayer.md)
 * [DSDrawingStyle](auxiliary-api/drawingstyle.md)
 * [DSDrawingStyleManager](auxiliary-api/drawingstylemanager.md)
 * [DSFeedback](auxiliary-api/dcefeedback.md)

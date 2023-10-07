@@ -7,10 +7,12 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS DCEFrame Class
-permalink: /programming/ios/auxiliary-api/dceframe-v3.0.3.html
+permalink: /programming/ios/auxiliary-api/dceframe.html
 ---
 
 # DCEFrame
+
+> Removed in v4.0.
 
 The `DCEFrame` is the class that stores pixel data and further information.
 
