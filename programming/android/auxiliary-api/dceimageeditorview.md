@@ -24,7 +24,7 @@ class ImageEditorView : UIView
 
 | Method | Description |
 |------- |-------------|
-| [`ImageEditorView`](#initwithframe) | Create an instance of CameraView. |
+| [`ImageEditorView`](#imageeditorview-1) | Create an instance of CameraView. |
 | [`setOriginalImage`](#setoriginalimage) | Set the original image that displayed on the view. |
 | [`setOriginalImage(bitmapImage)`](#setoriginalimagebitmapimage) | Set the original image that displayed on the view. |
 | [`getOriginalImage`](#getoriginalimage) | Get the original image that displayed on the view. |
@@ -40,7 +40,7 @@ class ImageEditorView : UIView
 | [`setTipVisible`](#settipvisible) | Set the visibility of tip. |
 | [`isTipVisible`](#istipvisible) | Get the visibility of tip. |
 
-### initWithFrame
+### ImageEditorView
 
 The consturctor. Create an instance of `ImageEditorView`.
 
