@@ -24,7 +24,7 @@ permalink: /programming/android/release-note/release-notes-1.x.html
 ### New
 
 - Added a new property [`products`]({{ site.android-api-auxiliary }}dlsconnection.html#products) in class `DMLTSConnectionParameters`.
-- Added a new enumeration [`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct).
+- Added a new enumeration [`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct){:target="_blank"}.
 
 ## 1.0.0 (04/29/2021)
 

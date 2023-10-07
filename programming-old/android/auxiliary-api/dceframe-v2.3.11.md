@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Android DCEFrame Class - Dynamsoft Camera Enhancer
+title: Android DCEFrame Class - Dynamsoft Camera Enhancer Documents
 description: This is the documentation - Android DCEFrame Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DCEFrame
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android DCEFrame Class
-permalink: /programming/android/auxiliary-api/dceframe.html
+permalink: /programming/android/auxiliary-api/dceframe-v2.3.11.html
 ---
 
 # DCEFrame
@@ -40,7 +40,7 @@ class com.dynamsoft.dce.DCEFrame
 | [`setIsCropped`](#setiscropped) | Set a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`setCropRegion`](#setcropregion) | Set a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`setOrientation`](#setorientation) | Set the orientation of the image. |
-| [`toBitmap`](#tobitmap) | The method converts the image to `UIImage` to make it visible on the UI. |
+| [`toBitmap`](#tobitmap) | The method converts the image to `Bitmap`. |
 
 &nbsp;
 
@@ -114,10 +114,9 @@ int getPixelFormat()
 
 **Return Value**
 
-The method returns an int value that refers to the enumeration value of [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat) (view the enumeration members in Dynamsoft Barcode Reader documents).
+The method returns an int value that refers to the pixel format of the image. View morein [`EnumImagePixelFormat`]({{ site.core-enums }}image-pixel-format.html?src=android).
 
 &nbsp;
-
 
 ## getFrameID
 
@@ -133,7 +132,6 @@ The method returns an int value that stores the `frameID` of the image.
 
 &nbsp;
 
-
 ## getQuality
 
 Get the frame quality of the image. User have to enable the frame filter feature to get the quality (high/low) of the image. Otherwise, the frame quality will be unknown.
@@ -144,7 +142,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in [`EnumFrameQuality`]({{site.dce-enums}}vidoe-frame-quality.html?lang=android).
+The method returns an enumeration value in [`EnumFrameQuality`]({{ site.dce-enums }}vidoe-frame-quality.html).
 
 **Remarks**
 
@@ -265,7 +263,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
+`pixelFormat`: The pixelFormat of the image. View more in [`EnumImagePixelFormat`]({{ site.core-enums }}image-pixel-format.html?src=android).
 
 &nbsp;
 
@@ -293,7 +291,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: An `Enumeration` value that means the frame quality. Read more in [`EnumFrameQuality`]({{site.dce-enums}}video-frame-quality.html?lang=android).
+`quality`: One of the [`EnumFrameQuality`]({{ site.dce-enums }}vidoe-frame-quality.html) value that indicates the frame quality.
 
 &nbsp;
 
@@ -339,7 +337,7 @@ void setOrientation(int orientation)
 
 ## toBitmap
 
-The method converts the image to `UIImage` to make it visible on the UI.
+The method converts the image to `Bitmap`.
 
 ```java
 Bitmap toBitmap()

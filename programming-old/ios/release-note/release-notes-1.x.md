@@ -28,7 +28,7 @@ permalink: /programming/ios/release-note/release-notes-1.x.html
 ### New
 
 - Added a new property [`products`]({{ site.ios-api-auxiliary }}dlsconnection.html#products) in class `iDCELTSConnectionParameters`.
-- Added a new enumeration [`EnumProduct`]({{ site.dce-enums }}enum-1.html?lang=android#enumproduct).
+- Added a new enumeration [`EnumProduct`]({{ site.dce-enums }}enum-1.html#enumproduct){:target="_blank"}.
 
 ## 1.0.0 (04/29/2021)
 
