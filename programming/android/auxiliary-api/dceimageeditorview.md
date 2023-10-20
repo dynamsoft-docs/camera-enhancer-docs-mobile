@@ -66,7 +66,7 @@ void setOriginalImage(com.dynamsoft.core.ImageData imageData){}
 
 **Parameters**
 
-`imageData`: A `com.dynamsoft.core.ImageData` object as the original.
+`imageData`: A [`com.dynamsoft.core.ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object as the original.
 
 ### setOriginalImage(bitmapImage)
 
@@ -90,7 +90,7 @@ com.dynamsoft.core.ImageData getOriginalImage(){}
 
 **Return Value**
 
-A `com.dynamsoft.core.ImageData` object as the original image.
+A [`com.dynamsoft.core.ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object as the original image.
 
 **Code Snippet**
 

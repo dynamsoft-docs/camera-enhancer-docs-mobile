@@ -18,8 +18,8 @@ permalink: /programming/android/upgrade-instructions.html
 The following APIs are changed on parameters and return values:
 
 * [`CameraEnhancer`](primary-api/camera-enhancer.html#cameraenhancer): Added parameter `CameraView cameraView`.
-* [`setScanRegion`](primary-api/camera-enhancer.html#setscanregion): Changed the type of `region` from `iRegionDefinition` to `DSRect`.
-* [`getScanRegion`](primary-api/camera-enhancer.html#getscanregion): Changed the type of return value from `iRegionDefinition` to `DSRect`.
+* [`setScanRegion`](primary-api/camera-enhancer.html#setscanregion): Changed the type of `region` from `iRegionDefinition` to [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
+* [`getScanRegion`](primary-api/camera-enhancer.html#getscanregion): Changed the type of return value from `iRegionDefinition` to [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
 
 The following APIs are replaced by new APIs:
 
@@ -54,8 +54,8 @@ The following APIs are replaced with new UI configuration APIs. Read [How to dra
 
 Removed
 
-* `RegionDefinition`: Replaced by `DSRect`
-* `DCEFrame`: Replaced by `ImageData`. The auxiliary attributes are stored in `VideoFrameTag` of `ImageData`.
+* `RegionDefinition`: Replaced by [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
+* `DCEFrame`: Replaced by [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html). The auxiliary attributes are stored in `VideoFrameTag` of [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html).
 * `DCEFeedback`: Replaced by `Feedback` (renamed, no other change).
 * `DCEFrameListener`: Replaced by `VideoFrameListener` (renamed, no other change).
 * `DCECameraStateListener`: Replaced by `CameraStateListener` (renamed, no other change).

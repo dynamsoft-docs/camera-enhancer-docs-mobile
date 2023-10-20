@@ -55,7 +55,7 @@ LineDrawingItem(com.dynamsoft.core.LineSegment line){}
 
 **Parameters**
 
-`line`: A `LineSegment` object that stores the line coordinates information.
+`line`: A [`LineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html) object that stores the line coordinates information.
 
 **Return Value**
 
@@ -71,7 +71,7 @@ LineDrawingItem(com.dynamsoft.core.LineSegment line, EnumCoordinateBase coordina
 
 **Parameters**
 
-`line`: A `LineSegment` object that stores the line coordinates information.  
+`line`: A [`LineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html) object that stores the line coordinates information.  
 `coordinateBase`: The coordinate base of the `DrawingItem`.
 
 **Return Value**

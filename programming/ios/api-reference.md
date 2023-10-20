@@ -36,6 +36,10 @@ permalink: /programming/ios/api-reference.html
 * [DSFeedback](auxiliary-api/dcefeedback.md)
 * [DSNote](auxiliary-api/note.md)
 * [DSTipConfig](auxiliary-api/tip-config.md)
+* [DSQuadrilateral]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
+* [DSLineSegment]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html)
+* [DSImageData]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
+* [DSRect]({{ site.dcv_ios_api }}core/basic-structures/rect.html)
 
 ## Interfaces
 

@@ -99,7 +99,7 @@ DSRect getVisibileRegionOfVideo();
 
 **Return Value**
 
-A `DSRect` object (measuredInPercentage = 1) that defines the visible region of the video.
+A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object (measuredInPercentage = 1) that defines the visible region of the video.
 
 ### setTorchButton
 

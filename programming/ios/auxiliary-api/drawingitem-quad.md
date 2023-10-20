@@ -43,7 +43,7 @@ class QuadDrawingItem : DrawingItem
 
 ### quad
 
-Get the quadrilateral information of the `DSQuadDrawingItem`.
+The property that stores the coordinate information of the `DSQuadDrawingItem` in a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -77,7 +77,7 @@ init(quad: DSQuadrilateral)
 
 **Parameters**
 
-`quad`: A `DSQuadrilateral` object that stores the quadrilateral coordinates information.
+`quad`: A [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html) object that stores the quadrilateral coordinates information.
 
 **Return Value**
 
@@ -118,7 +118,7 @@ init(quad: DSQuadrilateral, coordinateBase: DSCoordinateBase)
 
 **Parameters**
 
-`quad`: A `DSQuadrilateral` object that stores the quadrilateral coordinates information.
+`quad`: A [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html) object that stores the quadrilateral coordinates information.
 
 `coordinateBase`: The coordinate base of the `DrawingItem`.
 

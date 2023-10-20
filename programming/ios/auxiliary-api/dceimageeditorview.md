@@ -33,6 +33,8 @@ class ImageEditorView : UIView
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
+| [`image`](#image) | The property stores the original image that displayed on the view in a `UIImage`. |
+| [`imageData`](#imagedata) | The property stores the original image that displayed on the view in a [`ImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html). |
 | [`tipConfig`](#tipconfig) | *DSTipConfig* | Set/get the tip configurations. |
 | [`tipVisible`](#tipvisible) | *BOOL* | Set/get the visibility of tip. |
 
@@ -41,8 +43,6 @@ class ImageEditorView : UIView
 | Method | Description |
 |------- |-------------|
 | [`initWithFrame`](#initwithframe) | Create an instance of DSCameraView. |
-| [`setOriginalImage`](#setoriginalimage) | Set the original image that displayed on the view. |
-| [`getOriginalImage`](#getoriginalimage) | Get the original image that displayed on the view. |
 | [`getSelectedDrawingItem`](#getselecteddrawingitem) | Get the selected DrawingItem. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the specified DrawingLayer. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new DrawingLayer. |
@@ -51,6 +51,74 @@ class ImageEditorView : UIView
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
 | [`setOriginalImageWithUIImage`](#setoriginalimagewithuiimage) | Set the original image that displayed on the view. |
+
+### image
+
+The property stores the original image that displayed on the view in a `UIImage`.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) UIImage *image;
+```
+2. 
+```swift
+var image:UIImage { get, set }
+```
+
+### imageData
+
+The property stores the original image that displayed on the view in a [`ImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) DSImageData *imageData;
+```
+2. 
+```swift
+var image:DSImageData { get, set }
+```
+
+### tipConfig
+
+Set/get the tip configurations.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) DSTipConfig * tipConfig;
+```
+2. 
+```swift
+var tipConfig: DSTipConfig { get set }
+```
+
+### tipVisible
+
+Set/get the visibility of tip.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) BOOL tipVisible;
+```
+2. 
+```swift
+var tipConfig: BOOL { get set }
+```
 
 ### initWithFrame
 
@@ -90,80 +158,6 @@ DSImageEditorView *editorView = [[DSImageEditorView alloc] initWithFrame:frame];
 2. 
 ```swift
 let editorView = DSImageEditorView(frame: frame)
-```
-
-### setOriginalImage
-
-Set the original image that displayed on the view.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setOriginalImage:(DSImageData *)imageData;
-```
-2. 
-```swift
-func setOriginalImage(_ image: DSImageData)
-```
-
-**Parameters**
-
-`imageData`: A DSImageData object as the original.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSImageData *imageData = [[DSImageData alloc] init];
-[editorView setOriginalImage:imageData];
-```
-2. 
-```swift
-let imageData = DSImageData()
-editorView.setOriginalImage(imageData)
-```
-
-### getOriginalImage
-
-Get the original image that displayed on the view.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (DSImageData *)getOriginalImage;
-```
-2. 
-```swift
-func getOriginalImage() -> DSImageData
-```
-
-**Return Value**
-
-A UIImage object as the original.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSImageData *originalImage = [editorView getOriginalImage];
-```
-2. 
-```swift
-let originalImage = editorView.getOriginalImage()
 ```
 
 ### getSelectedDrawingItem

@@ -61,7 +61,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
-| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system. |
+| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 | [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`getImageCaptureDistanceMode`](#getimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
@@ -373,8 +373,8 @@ void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
 
 **Parameters**
 
-`scanRegion`: A DSRect object.
-`error`: A NSError pointer. An error occurs when the DSRect data is invalid.
+`scanRegion`: A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object.
+`error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
 
@@ -390,7 +390,7 @@ DSRect getScanRegion(){}
 
 **Return Value**
 
-A DSRect object that represent the scan region area.
+A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object that represent the scan region area.
 
 ### open
 
@@ -557,7 +557,7 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
 
 ```java
 android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.DSRect videoRect){}
@@ -565,11 +565,11 @@ android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_stru
 
 **Parameters**
 
-`videoRect`: The DSRect that you want to convert.
+`videoRect`: The [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) that you want to convert.
 
 **Return Value**
 
-A CGRect (coordinate measured in PT) converted from the DSRect.
+A CGRect (coordinate measured in PT) converted from the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
 
 ### convertPointToViewCoordinates
 

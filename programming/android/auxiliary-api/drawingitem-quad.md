@@ -37,6 +37,10 @@ Get the quad information of the `QuadDrawingItem`.
 com.dynamsoft.core.Quadrilateral getQuad(){}
 ```
 
+**Return Value**
+
+A [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) object that stores the coodrinates of the `QuadDrawingItem`.
+
 ### getMediaType
 
 Get the media type of the `DrawingItem`.

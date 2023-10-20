@@ -33,7 +33,7 @@ class LineDrawingItem : DSDrawingItem
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`line`](#line) | *DSLineSegment \** |Get the line information of the DSLineDrawingItem. |
+| [`line`](#line) | [*DSLineSegment \**]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) |Get the line information of the DSLineDrawingItem. |
 
 ## Methods
 
@@ -43,7 +43,7 @@ class LineDrawingItem : DSDrawingItem
 
 ### line
 
-Get the line information of the DSLineDrawingItem.
+The property that stores the line information of the `DSLineDrawingItem` in a [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -58,9 +58,9 @@ Get the line information of the DSLineDrawingItem.
 var line: DSLineSegment { get }
 ```
 
-## initWithLine
+### initWithLine
 
-Create an instance of DSLineDrawingItem.
+Create an instance of `DSLineDrawingItem`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -76,11 +76,11 @@ init(line: DSLineSegment)
 ```
 **Parameters**
 
-`line`: A DSLineSegment object that stores the line coordinates information.
+`line`: A  [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) object that stores the line coordinates information.
 
 **Return Value**
 
-An instance of DSLineDrawingItem.
+An instance of `DSLineDrawingItem`.
 
 **Code Snippet**
 
@@ -99,9 +99,9 @@ let line = DSLineSegment()
 let item = DSLineDrawingItem(line: line)
 ```
 
-## initWithLine:coordinateBase:
+### initWithLine:coordinateBase:
 
-Create an instance of DSLineDrawingItem.
+Create an instance of `DSLineDrawingItem`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -116,15 +116,16 @@ Create an instance of DSLineDrawingItem.
 ```swift
 init(line: DSLineSegment, coordinateBase: DSCoordinateBase)
 ```
+
 **Parameters**
 
-`line`: A DSLineSegment object that stores the line coordinates information.
+`line`: A  [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) object that stores the line coordinates information.
 
-`coordinateBase`: The coordinate base of the DrawingItem.
+`coordinateBase`: The coordinate base of the `DrawingItem`.
 
 **Return Value**
 
-An instance of DSLineDrawingItem.
+An instance of `DSLineDrawingItem`.
 
 **Code Snippet**
 

@@ -70,7 +70,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
-| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system. |
+| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 
 ## Attributes
@@ -591,8 +591,8 @@ func setScanRegion(_ scanRegion: DSRect) -> BOOL
 
 **Parameters**
 
-`scanRegion`: A DSRect object.  
-`error`: A NSError pointer. An error occurs when the DSRect data is invalid.
+`scanRegion`: A  [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object.  
+`error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
 
@@ -617,7 +617,7 @@ func getScanRegion() -> DSRect
 
 **Return Value**
 
-A DSRect object that represent the scan region area.
+A [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object that represent the scan region area.
 
 ### open
 
@@ -889,7 +889,7 @@ func setFocus(_ focusPoint: CGPoint, subsequentFocusMode: FocusMode)
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -906,11 +906,11 @@ func convertRectToViewCoordinates(_ videoRect: DSRect) -> CGRect
 
 **Parameters**
 
-`videoRect`: The DSRect that you want to convert.
+`videoRect`: The [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) that you want to convert.
 
 **Return Value**
 
-A CGRect (coordinate measured in PT) converted from the DSRect.
+A CGRect (coordinate measured in PT) converted from the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
 
 **Code Snippet**
 
