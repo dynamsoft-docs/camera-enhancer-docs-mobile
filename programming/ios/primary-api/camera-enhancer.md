@@ -81,6 +81,33 @@ class CameraEnhancer : ImageSourceAdapter
 | [`autoZoomRange`](#autozoomrange) | Set/get the range of auto zoom. |
 | [`cameraView`](#cameraview) | Set/get the DSCameraView instance that bind with this DSCameraEnhancer instance. |
 
+## Inherited Methods
+
+The following methods are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+
+| Method | Description |
+| ------ | ----------- |
+| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`getImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#getimage) | Get an image from the Video Buffer. |
+| [`setNextImageToReturn`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturn) | Specify the next image that is returned by method getImage. |
+| [`hasImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasimage) | Check the availability of the specified image. |
+| [`addImageToBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the buffer of the adapter. |
+| [`clearBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears the image buffer. |
+
+## Inherited Properties
+
+The following properties are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`hasNextImageToFetch`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasnextimagetofetch) | *BOOL* |Determines whether there are more images left to fetch. |
+| [`maxImageCount`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#maximagecount) | *NSUInteger* | The property defines the maximum capability of the Video Buffer. |
+| [`bufferOverflowProtectionMode`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#bufferoverflowprotectionmode) | *DSBufferOverflowProtectionMode* | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one. |
+| [`imageCount`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#imagecount) | *NSUInteger* | The property defines current image count in the Video Buffer. |
+| [`bufferEmpty`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#bufferempty) | *BOOL* | The read only property indicates whether the Video Buffer is empty. |
+| [`colourChannelUsageType`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#colourchannelusagetype) | *colourChannelUsageType* | The usage type of a color channel in an image. |
+
 ### addListener
 
 Add a DSVideoFrameListener to receive callback when video frames are output.
