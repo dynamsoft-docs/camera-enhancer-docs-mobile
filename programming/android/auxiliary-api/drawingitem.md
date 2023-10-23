@@ -20,7 +20,7 @@ The `DrawingItem` class represents a base class for drawing items, which can be 
 class DrawingItem
 ```
 
-## Attributes
+## Methods
 
 | Method | Description |
 |------- |-------------|

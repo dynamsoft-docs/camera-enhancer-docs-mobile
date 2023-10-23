@@ -39,10 +39,36 @@ class TextDrawingItem : DrawingItem
 | [`height`](#height) | *NSInteger* |Get the height of the DSTextDrawingItem. |
 
 ## Methods
+
 | Method | Description |
 |------- |-------------|
 | [`initWithText`](#initwithtext) | Create an instance of DSTextDrawingItem. |
 | [`initWithText:coordinateBase:`](#initwithtextcoordinatebase) | Create an instance of DSTextDrawingItem with coordinate base. |
+
+## Interited Attributes
+
+The following attributes are inherited from the base class [`DrawingItem`](drawingitem.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`drawingStyleId`](drawingitem.html#drawingstyleid) | *NSInteger* | The DrawingStyle of the DrawingItem. If a DrawingItem holds a drawingStyleId, it will not use the default style of its layer. |
+| [`state`](drawingitem.html#state) | *DSDrawingItemState* | The state of the DrawingItem. |
+| [`CoordinateBase`](drawingitem.html#coordinatebase) | *DSCoordinateBase* | The coordinate base of the DrawingItem. The coordinate base is image by default. |
+
+## Interited Methods
+
+The following methods are inherited from the base class [`DrawingItem`](drawingitem.html).
+
+| Method | Description |
+|------- |-------------|
+| [`getMediaType`](drawingitem.html#getmediatype) | Get the media type of the DrawingItem. |
+| [`addNote`](drawingitem.html#addnote) | Add a note to the DrawingItem. |
+| [`getNote`](drawingitem.html#getnote) | Get the specified DSNote. |
+| [`hasNote`](drawingitem.html#hasnote) | Check whether the specified Note exists. |
+| [`updateNote`](drawingitem.html#updatenote) | Update the content of the specified DSNote. |
+| [`deleteNote`](drawingitem.html#deletenote) | Remove the specified DSNote with the specified name. |
+| [`getAllNotes`](drawingitem.html#getallnotes) | Get all DSNotes of this DrawingItem. |
+| [`clearNotes`](drawingitem.html#clearnotes) | Remove all DSNotes of this DrawingItem. |
 
 ### text
 
