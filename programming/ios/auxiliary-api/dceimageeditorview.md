@@ -51,6 +51,7 @@ class ImageEditorView : UIView
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
 | [`setOriginalImageWithUIImage`](#setoriginalimagewithuiimage) | Set the original image that displayed on the view. |
+| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### image
 
@@ -432,3 +433,24 @@ func setOriginalImage(_ image: UIImage)
 ```swift
 func setOriginalImage(_ image: UIImage)
 ```
+
+### setDrawingItemClickListener
+
+Set a [`DrawingItemClickListener`](protocol-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setDrawingItemClickListener:(id<DSDrawingItemClickListener>)clickListener;
+```
+2. 
+```swift
+func setDrawingItemClickListener(_ clickListener: DrawingItemClickListener)
+```
+
+**Parameters**
+
+`clickListener`: A protocol instance of [`DrawingItemClickListener`](protocol-click-listener.md).

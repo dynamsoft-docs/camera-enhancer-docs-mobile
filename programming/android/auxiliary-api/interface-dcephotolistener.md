@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: PhotoListener - Dynamsoft Core Module Android Edition API Reference
+title: PhotoListener - Dynamsoft Camera Enhancer Android Edition API Reference
 description: The interface PhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
 keywords: photo listener, Java, Kotlin
 needGenerateH3Content: true

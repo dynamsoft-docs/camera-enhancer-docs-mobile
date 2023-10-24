@@ -13,6 +13,8 @@ permalink: /programming/android/primary-api/initialization.html
 
 # Initialization Methods
 
+> You are viewing a history document page of DCE v1.0.3.
+
 | Method | Description |
 | ------ | ----------- |
 | [`initLicenseFromDLS`](#initLicensefromdls) | Initialize the Camera Enhancer from the license server with a license. |

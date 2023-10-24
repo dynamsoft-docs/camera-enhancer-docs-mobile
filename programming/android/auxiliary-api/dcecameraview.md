@@ -39,11 +39,12 @@ class CameraView
 | [`isScanRegionMaskVisible`](#isscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
 | [`setScanLaserVisible`](#setscanlaservisible) | Set the visibility of the scan laser. |
 | [`isScanLaserVisible`](#isscanlaservisible) | Get the visibility of the scan laser. |
-| [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
 | [`setTipConfig`](#settipconfig) | Set/get the tip configurations. |
 | [`getTipConfig`](#gettipconfig) | Set/get the tip configurations. |
 | [`setTipVisible`](#settipvisible) | Set the visibility of tip. |
 | [`isTipVisible`](#istipvisible) | Get the visibility of tip. |
+| [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
+| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### CameraView
 
@@ -294,3 +295,15 @@ void updateTipMessage(String tipMessage);
 **Parameters**
 
 `tipMessage` The new message that you want to display.
+
+### setDrawingItemClickListener
+
+Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked.
+
+```java
+void setDrawingItemClickListener(DrawingItemClickListener clickListener)
+```
+
+**Parameters**
+
+`clickListener`: An interface instance of [`DrawingItemClickListener`](interface-click-listener.md).

@@ -55,18 +55,3 @@ func onPhotoOutput(_ jpegBytes: Data)
 **Parameters**
 
 `jpegBytes`: The captured photo as JPEG bytes.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[listener onPhotoOutput:jpegData];
-```
-2. 
-```swift
-listener.onPhotoOutput(jpegData)
-```

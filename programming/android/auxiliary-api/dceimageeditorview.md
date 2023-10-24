@@ -39,6 +39,7 @@ class ImageEditorView : UIView
 | [`getTipConfig`](#gettipconfig) | Set/get the tip configurations. |
 | [`setTipVisible`](#settipvisible) | Set the visibility of tip. |
 | [`isTipVisible`](#istipvisible) | Get the visibility of tip. |
+| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### ImageEditorView
 
@@ -213,3 +214,15 @@ boolean isTipVisible();
 **Return Value**
 
 A boolean value that indicate the tip is visible.
+
+### setDrawingItemClickListener
+
+Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked.
+
+```java
+void setDrawingItemClickListener(DrawingItemClickListener clickListener)
+```
+
+**Parameters**
+
+`clickListener`: An interface instance of [`DrawingItemClickListener`](interface-click-listener.md).

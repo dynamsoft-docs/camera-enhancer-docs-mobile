@@ -6,6 +6,7 @@ keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/android/primary-api/camera-enhancer.html
 ---
 
 # CameraEnhancer

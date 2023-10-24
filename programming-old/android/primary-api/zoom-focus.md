@@ -12,6 +12,8 @@ permalink: /programming/android/primary-api/zoom-focus.html
 
 # Focus & Zoom Methods
 
+> You are viewing a history document page of DCE v1.0.3.
+
 | Method | Description |
 | ------ | ----------- |
 | [`setAutoFocusPosition`](#setautofocusposition) | Set auto focus position (Change the default auto focus position). |

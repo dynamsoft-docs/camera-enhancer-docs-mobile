@@ -33,7 +33,7 @@ protocol CameraStateListener : NSObjectProtocol
 
 | Method | Description |
 |------- |-------------|
-| [`onFrameOutPut`](#onframeoutput) | The method for monitoring the camera state and receiving call. |
+| [`onCameraStateChanged`](#oncamerastatechanged) | The method for monitoring the camera state and receiving call. |
 
 ### onCameraStateChanged
 
@@ -55,18 +55,3 @@ func onCameraStateChanged(_ currentState: DSCameraState)
 **Parameters**
 
 `currentState`: The current camera state.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[listener onCameraStateChanged:currentState];
-```
-2. 
-```swift
-listener.onCameraStateChanged(currentState)
-```
