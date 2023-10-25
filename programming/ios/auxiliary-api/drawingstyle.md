@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSDrawingStyle - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSDrawingStyle of Dynamsoft Core Module represents the style attributes of the drawing items, including stroke color, fill color, text color, stroke width, and font.
+title: DSDrawingStyle - DynamsoftCameraEnhancer iOS Edition API Reference
+description: The class DSDrawingStyle of DynamsoftCameraEnhancer represents the style attributes of the drawing items, including stroke color, fill color, text color, stroke width, and font.
 keywords: drawing style, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

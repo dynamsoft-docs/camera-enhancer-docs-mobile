@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSImageEditorView - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSImageEditorView of Dynamsoft Core Module represents an image editor view, which allows users to add interactable UI elements on the view.
+title: DSImageEditorView - DynamsoftCameraEnhancer iOS Edition API Reference
+description: The class DSImageEditorView of DynamsoftCameraEnhancer represents an image editor view, which allows users to add interactable UI elements on the view.
 keywords: image editor view, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

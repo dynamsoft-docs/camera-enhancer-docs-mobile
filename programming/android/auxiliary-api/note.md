@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Note - Dynamsoft Core Module Android Edition API Reference
-description: The class Note of Dynamsoft Core Module represents a note, which contains a key and content.
+title: Note - DynamsoftCameraEnhancer Android Edition API Reference
+description: The class Note of DynamsoftCameraEnhancer represents a note, which contains a key and content.
 keywords: note, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

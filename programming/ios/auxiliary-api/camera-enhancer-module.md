@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSCameraEnhancerModule - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSCameraEnhancerModule of Dynamsoft Core Module represents the camera enhancer module, which provides general functions for the camera enhancer.
+title: DSCameraEnhancerModule - DynamsoftCameraEnhancer iOS Edition API Reference
+description: The class DSCameraEnhancerModule of DynamsoftCameraEnhancer represents the camera enhancer module, which provides general functions for the camera enhancer.
 keywords: camera enhancer, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TipConfig - Dynamsoft Core Module Android Edition API Reference
-description: The class TipConfig of Dynamsoft Core Module represents the configurations of tip, including the top left point, width, duration, and coordinate base.
+title: TipConfig - DynamsoftCameraEnhancer Android Edition API Reference
+description: The class TipConfig of DynamsoftCameraEnhancer represents the configurations of tip, including the top left point, width, duration, and coordinate base.
 keywords: tip config, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

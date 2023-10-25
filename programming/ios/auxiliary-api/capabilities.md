@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSCapabilities - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSCapabilities of Dynamsoft Core Module represents the capability properties of the hardware, including the maximum zoom factor, focal length, exposure time, and ISO.
+title: DSCapabilities - DynamsoftCameraEnhancer iOS Edition API Reference
+description: The class DSCapabilities of DynamsoftCameraEnhancer represents the capability properties of the hardware, including the maximum zoom factor, focal length, exposure time, and ISO.
 keywords: capabilities, hardware, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

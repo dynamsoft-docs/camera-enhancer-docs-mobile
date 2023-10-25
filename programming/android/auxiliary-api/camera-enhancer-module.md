@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CameraEnhancerModule - Dynamsoft Core Module Android Edition API Reference
-description: The class CameraEnhancerModule of Dynamsoft Core Module represents the camera enhancer module, which provides general functions for the camera enhancer.
+title: CameraEnhancerModule - DynamsoftCameraEnhancer Android Edition API Reference
+description: The class CameraEnhancerModule of DynamsoftCameraEnhancer represents the camera enhancer module, which provides general functions for the camera enhancer.
 keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

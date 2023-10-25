@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSTipConfig - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSTipConfig of Dynamsoft Core Module represents the configurations of tip, including the top left point, width, duration, and coordinate base.
+title: DSTipConfig - DynamsoftCameraEnhancer iOS Edition API Reference
+description: The class DSTipConfig of DynamsoftCameraEnhancer represents the configurations of tip, including the top left point, width, duration, and coordinate base.
 keywords: tip config, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
