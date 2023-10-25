@@ -103,20 +103,6 @@ let styleID = DrawingStyleManager.createDrawingStyle(UIColor.red, strokeWidth: 1
 
 A `DrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DrawingItems` in different shapes. Here we use `QuadDrawingItem` as an example to illustrate how to draw graphics on the view.
 
-```java
-// Create an ArrayList for appending DrawingItems
-ArrayList<DrawingItem> drawingItemArray = new ArrayList<DrawingItem>();
-// Create a quadrilateral
-Quadrilateral quad = new Quadrilateral();
-// Set the coordinate information of the Quadrilateral
-// quad.points[0] = new Point(0,0);
-// ...
-drawingItemArray.add(quad);
-// You can add multiple DrawingItems to the layer.
-// Set the drawingItems to the layer
-layer.setDrawingItems(drawingItemArray);
-```
-
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift

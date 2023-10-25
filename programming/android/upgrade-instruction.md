@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android API references
-permalink: /programming/android/upgrade-instruction.html
+permalink: /programming/android/upgrade-instructions.html
 ---
 
 # How to Upgrade from 2.x to 4.x
