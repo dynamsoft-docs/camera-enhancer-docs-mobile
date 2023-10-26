@@ -11,6 +11,12 @@ permalink: /programming/ios/release-note/release-notes-4.x.html
 
 # Release Notes - iOS 4.x
 
+## 4.0.1 (10/26/2023)
+
+* Added a new method `setDrawingItemClickListener` to class `CameraView` & `ImageEditorView`. You can set a `DrawingItemClickListener` to the view to monitor the click events of the `DrawingItems`.
+* Fixed a bug where `getDrawingItems` returns the previous coordinate information when `DrawingItems` are edited on the `ImageEditorView`.
+* Applied some internal changes to the resolution control and scan region UI setting APIs.
+
 ## 4.0.0 (08/10/2023)
 
 * Refactored the camera-controlling APIs of the [`CameraEnhancer`]({{ site.ios }}primary-api/camera-enhancer.html) class.

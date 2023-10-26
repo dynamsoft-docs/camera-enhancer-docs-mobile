@@ -93,37 +93,12 @@ defaults:
     values:
       sitemap: false
   - scope:
-      path: "programming/javascript"
-    values:
-      category: "js-repo"
-      edition: "js"
-  - scope:
       path: "programming/android"
     values:
       category: "mobile-repo"
       edition: "mobile"
   - scope:
-      path: "programming/objectivec-swift"
-    values:
-      category: "mobile-repo"
-      edition: "mobile"
-  - scope:
-      path: "programming/flutter"
-    values:
-      category: "mobile-repo"
-      edition: "mobile"
-  - scope:
-      path: "programming/xamarin"
-    values:
-      category: "mobile-repo"
-      edition: "mobile"
-  - scope:
-      path: "programming/cordova"
-    values:
-      category: "mobile-repo"
-      edition: "mobile"
-  - scope:
-      path: "programming/react-native"
+      path: "programming/ios"
     values:
       category: "mobile-repo"
       edition: "mobile"

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS API references
-permalink: /programming/iOS/upgrade-instruction.html
+permalink: /programming/ios/upgrade-instructions.html
 ---
 
 # How to Upgrade
@@ -70,6 +70,24 @@ License activation API are removed from `DynamsoftCameraEnhancer` library. Pleas
    }
    ```
 
-### Re-write your Code Based on the API References
+## Re-write your Code Based on the API References
 
 The APIs of `DynamsoftCameraEnhancer` are refactored. Please follow the [API reference](api-reference.md) to update your code.
+
+### CameraEnhancer API changes
+
+The following APIs are changed on parameters and return values:
+
+* [`CameraEnhancer`](primary-api/camera-enhancer.html#cameraenhancer): Added parameter `CameraView cameraView`.
+* [`setScanRegion`](primary-api/camera-enhancer.html#setscanregion): Changed the type of `region` from `iRegionDefinition` to [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
+* [`getScanRegion`](primary-api/camera-enhancer.html#getscanregion): Changed the type of return value from `iRegionDefinition` to [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
+  * `set/getScanRegionVisible`: Replaced by a series of methods in `CameraView` class.
+    * `scanRegionMaskVisible`
+    * `scanLaserVisible`
+
+### UI Configuring API changes
+
+* `DCECameraView` is renamed to `CameraView`.
+* Added a new view class `ImageEditorView`.
+
+Read [How to configure UI](guide/ui-configurations.html) for more details about the API changes.

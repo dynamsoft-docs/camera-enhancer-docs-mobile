@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Feedback - Dynamsoft Core Module Android Edition API Reference
-description: The class Feedback of Dynamsoft Core Module provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
+title: Feedback - DynamsoftCameraEnhancer Android Edition API Reference
+description: The class Feedback of DynamsoftCameraEnhancer provides methods to trigger feedbacks from the hardware, such as vibrate and beep.
 keywords: feedback, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

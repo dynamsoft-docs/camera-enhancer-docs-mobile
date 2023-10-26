@@ -70,7 +70,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
-| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system. |
+| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 
 ## Attributes
@@ -80,6 +80,33 @@ class CameraEnhancer : ImageSourceAdapter
 | [`imageCaptureDistanceMode`](#imagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by DSVideoFrameTag. |
 | [`autoZoomRange`](#autozoomrange) | Set/get the range of auto zoom. |
 | [`cameraView`](#cameraview) | Set/get the DSCameraView instance that bind with this DSCameraEnhancer instance. |
+
+## Inherited Methods
+
+The following methods are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+
+| Method | Description |
+| ------ | ----------- |
+| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`getImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#getimage) | Get an image from the Video Buffer. |
+| [`setNextImageToReturn`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturn) | Specify the next image that is returned by method getImage. |
+| [`hasImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasimage) | Check the availability of the specified image. |
+| [`addImageToBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the buffer of the adapter. |
+| [`clearBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears the image buffer. |
+
+## Inherited Properties
+
+The following properties are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`hasNextImageToFetch`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasnextimagetofetch) | *BOOL* |Determines whether there are more images left to fetch. |
+| [`maxImageCount`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#maximagecount) | *NSUInteger* | The property defines the maximum capability of the Video Buffer. |
+| [`bufferOverflowProtectionMode`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#bufferoverflowprotectionmode) | *DSBufferOverflowProtectionMode* | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one. |
+| [`imageCount`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#imagecount) | *NSUInteger* | The property defines current image count in the Video Buffer. |
+| [`bufferEmpty`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#bufferempty) | *BOOL* | The read only property indicates whether the Video Buffer is empty. |
+| [`colourChannelUsageType`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#colourchannelusagetype) | *colourChannelUsageType* | The usage type of a color channel in an image. |
 
 ### addListener
 
@@ -591,8 +618,8 @@ func setScanRegion(_ scanRegion: DSRect) -> BOOL
 
 **Parameters**
 
-`scanRegion`: A DSRect object.  
-`error`: A NSError pointer. An error occurs when the DSRect data is invalid.
+`scanRegion`: A  [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object.  
+`error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
 
@@ -617,7 +644,7 @@ func getScanRegion() -> DSRect
 
 **Return Value**
 
-A DSRect object that represent the scan region area.
+A [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object that represent the scan region area.
 
 ### open
 
@@ -889,7 +916,7 @@ func setFocus(_ focusPoint: CGPoint, subsequentFocusMode: FocusMode)
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -906,11 +933,11 @@ func convertRectToViewCoordinates(_ videoRect: DSRect) -> CGRect
 
 **Parameters**
 
-`videoRect`: The DSRect that you want to convert.
+`videoRect`: The [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) that you want to convert.
 
 **Return Value**
 
-A CGRect (coordinate measured in PT) converted from the DSRect.
+A CGRect (coordinate measured in PT) converted from the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
 
 **Code Snippet**
 

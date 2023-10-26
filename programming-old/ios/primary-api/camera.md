@@ -12,6 +12,8 @@ permalink: /programming/ios/primary-api/camera.html
 
 # iOS API Reference - Regular Camera Methods
 
+> You are viewing a history document page of DCE v1.0.3.
+
 | Method | Description |
 |-----------------|---------------|
 | [`updateCameraSettingFromJson`](#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |

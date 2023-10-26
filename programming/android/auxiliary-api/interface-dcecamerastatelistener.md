@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CameraStateListener - Dynamsoft Core Module Android Edition API Reference
-description: The protocol that includes methods for monitoring the camera state.
+title: CameraStateListener - Dynamsoft Camera Enhancer Android Edition API Reference
+description: The interface that includes methods for monitoring the camera state.
 keywords: camera state, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CameraStateListener
 
-The `CameraStateListener` protocol includes methods for monitoring the camera state.
+The `CameraStateListener` interface includes methods for monitoring the camera state.
 
 ## Definition
 

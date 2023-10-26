@@ -12,6 +12,8 @@ permalink: /programming/ios/primary-api/zoom-focus.html
 
 # iOS API Reference - Focus & Zoom Methods
 
+> You are viewing a history document page of DCE v1.0.3.
+
 | Method | Description |
 |-----------------|---------------|
 | [`setDefaultAutoFocusPosition`](#setdefaultautofocusposition) | Set auto focus position (Change the default auto focus position). |

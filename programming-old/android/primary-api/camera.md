@@ -12,6 +12,8 @@ permalink: /programming/android/primary-api/camera.html
 
 # Regular Camera Methods
 
+> You are viewing a history document page of DCE v1.0.3.
+
 | Method | Description |
 | ------ | ----------- |
 | [`getDeviceLevel`](#getdevicelevel)| Make an evaluation on the current device and define its level for further use. |

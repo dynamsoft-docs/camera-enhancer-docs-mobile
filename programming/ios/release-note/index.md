@@ -11,6 +11,7 @@ permalink: /programming/ios/release-note/index.html
 
 # Dynamsoft Camera Enhancer iOS SDK - Release Notes
 
+- [4.0.1 (10/26/2023)](release-notes-4.x.html#401-10262023)
 - [4.0.0 (08/10/2023)](release-notes-4.x.html#400-08102023)
 - [3.0.3 (05/24/2023)](release-notes-3.x.html#303-05242023)
 - [3.0.2 (02/02/2023)](release-notes-3.x.html#302-02022023)

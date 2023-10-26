@@ -33,7 +33,7 @@ class LineDrawingItem : DSDrawingItem
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`line`](#line) | *DSLineSegment \** |Get the line information of the DSLineDrawingItem. |
+| [`line`](#line) | [*DSLineSegment \**]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) |Get the line information of the DSLineDrawingItem. |
 
 ## Methods
 
@@ -41,9 +41,34 @@ class LineDrawingItem : DSDrawingItem
 |------- |-------------|
 | [`initWithLine`](#initwithline) | Create an instance of DSLineDrawingItem. |
 
+## Interited Attributes
+
+The following attributes are inherited from the base class [`DrawingItem`](drawingitem.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`drawingStyleId`](drawingitem.html#drawingstyleid) | *NSInteger* | The DrawingStyle of the DrawingItem. If a DrawingItem holds a drawingStyleId, it will not use the default style of its layer. |
+| [`state`](drawingitem.html#state) | *DSDrawingItemState* | The state of the DrawingItem. |
+| [`CoordinateBase`](drawingitem.html#coordinatebase) | *DSCoordinateBase* | The coordinate base of the DrawingItem. The coordinate base is image by default. |
+
+## Interited Methods
+
+The following methods are inherited from the base class [`DrawingItem`](drawingitem.html).
+
+| Method | Description |
+|------- |-------------|
+| [`getMediaType`](drawingitem.html#getmediatype) | Get the media type of the DrawingItem. |
+| [`addNote`](drawingitem.html#addnote) | Add a note to the DrawingItem. |
+| [`getNote`](drawingitem.html#getnote) | Get the specified DSNote. |
+| [`hasNote`](drawingitem.html#hasnote) | Check whether the specified Note exists. |
+| [`updateNote`](drawingitem.html#updatenote) | Update the content of the specified DSNote. |
+| [`deleteNote`](drawingitem.html#deletenote) | Remove the specified DSNote with the specified name. |
+| [`getAllNotes`](drawingitem.html#getallnotes) | Get all DSNotes of this DrawingItem. |
+| [`clearNotes`](drawingitem.html#clearnotes) | Remove all DSNotes of this DrawingItem. |
+
 ### line
 
-Get the line information of the DSLineDrawingItem.
+The property that stores the line information of the `DSLineDrawingItem` in a [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -58,9 +83,9 @@ Get the line information of the DSLineDrawingItem.
 var line: DSLineSegment { get }
 ```
 
-## initWithLine
+### initWithLine
 
-Create an instance of DSLineDrawingItem.
+Create an instance of `DSLineDrawingItem`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -76,11 +101,11 @@ init(line: DSLineSegment)
 ```
 **Parameters**
 
-`line`: A DSLineSegment object that stores the line coordinates information.
+`line`: A  [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) object that stores the line coordinates information.
 
 **Return Value**
 
-An instance of DSLineDrawingItem.
+An instance of `DSLineDrawingItem`.
 
 **Code Snippet**
 
@@ -99,9 +124,9 @@ let line = DSLineSegment()
 let item = DSLineDrawingItem(line: line)
 ```
 
-## initWithLine:coordinateBase:
+### initWithLine:coordinateBase:
 
-Create an instance of DSLineDrawingItem.
+Create an instance of `DSLineDrawingItem`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -116,15 +141,16 @@ Create an instance of DSLineDrawingItem.
 ```swift
 init(line: DSLineSegment, coordinateBase: DSCoordinateBase)
 ```
+
 **Parameters**
 
-`line`: A DSLineSegment object that stores the line coordinates information.
+`line`: A  [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) object that stores the line coordinates information.
 
-`coordinateBase`: The coordinate base of the DrawingItem.
+`coordinateBase`: The coordinate base of the `DrawingItem`.
 
 **Return Value**
 
-An instance of DSLineDrawingItem.
+An instance of `DSLineDrawingItem`.
 
 **Code Snippet**
 

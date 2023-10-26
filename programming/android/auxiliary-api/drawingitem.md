@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DrawingItem - Dynamsoft Core Module Android Edition API Reference
-description: The class DrawingItem of Dynamsoft Core Module represents a base class for drawing items, which can be added to drawing layers to draw basic graphics on the view.
+title: DrawingItem - DynamsoftCameraEnhancer Android Edition API Reference
+description: The class DrawingItem of DynamsoftCameraEnhancer represents a base class for drawing items, which can be added to drawing layers to draw basic graphics on the view.
 keywords: drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -20,7 +20,7 @@ The `DrawingItem` class represents a base class for drawing items, which can be 
 class DrawingItem
 ```
 
-## Attributes
+## Methods
 
 | Method | Description |
 |------- |-------------|

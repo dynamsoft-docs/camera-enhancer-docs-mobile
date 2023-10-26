@@ -38,7 +38,7 @@ public QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad);
 
 **Parameters**
 
-`quad`: The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
+`quad`: The [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) that indicates the location of the `QuadDrawingItem`.
 
 **Code Snippet**
 
@@ -78,7 +78,7 @@ public com.dynamsoft.core.Quadrilateral getQuad();
 
 **Return Value**
 
-The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
+The [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) that indicates the location of the `QuadDrawingItem`.
 
 **Code Snippet**
 

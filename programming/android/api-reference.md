@@ -34,9 +34,13 @@ permalink: /programming/android/api-reference.html
 * [DrawingLayer](auxiliary-api/drawinglayer.md)
 * [DrawingStyle](auxiliary-api/drawingstyle.md)
 * [DrawingStyleManager](auxiliary-api/drawingstylemanager.md)
+* [DSRect]({{ site.dcv_android_api }}core/basic-structures/rect.html)
 * [Feedback](auxiliary-api/dcefeedback.md)
+* [ImageData]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
+* [LineSegment]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
 * [Note](auxiliary-api/note.md)
 * [PermissionUtil](auxiliary-api/permission-util.md)
+* [Quadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
 * [TipConfig](auxiliary-api/tip-config.md)
 
 ## Interfaces

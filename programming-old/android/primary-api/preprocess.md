@@ -12,9 +12,11 @@ permalink: /programming/android/primary-api/preprocess.html
 
 # Frame Preprocessing Methods
 
+> You are viewing a history document page of DCE v1.0.3.
+
 | Method | Description |
 | ------ | ----------- |
-| [`AcquireListFrame`](#AcquireListFrame) | Fetch a frame from the video buffer. |
+| [`AcquireListFrame`](#acquirelistframe) | Fetch a frame from the video buffer. |
 | [`enableFastMode`](#enablefastmode) | Set true/false to turn on/off DCE fast mode. |
 | [`getEnabledFastModeStatus`](#getenabledfastmodestatus) | Get the current status of fast mode (on/off). |
 | [`enableFrameFilter`](#enableframefilter) | Set true/false to turn on/off DCE frame filter. |

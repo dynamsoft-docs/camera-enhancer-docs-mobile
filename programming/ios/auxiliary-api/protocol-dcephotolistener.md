@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSPhotoListener - Dynamsoft Core Module iOS Edition API Reference
-description: The protocol DSPhotoListener of Dynamsoft Core Module defines the methods for monitoring the photo output.
+title: DSPhotoListener - DynamsoftCameraEnhancer iOS Edition API Reference
+description: The protocol DSPhotoListener of DynamsoftCameraEnhancer defines the methods for monitoring the photo output.
 keywords: photo listener, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -55,18 +55,3 @@ func onPhotoOutput(_ jpegBytes: Data)
 **Parameters**
 
 `jpegBytes`: The captured photo as JPEG bytes.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[listener onPhotoOutput:jpegData];
-```
-2. 
-```swift
-listener.onPhotoOutput(jpegData)
-```

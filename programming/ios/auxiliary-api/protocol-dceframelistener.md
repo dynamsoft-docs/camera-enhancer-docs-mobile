@@ -55,5 +55,5 @@ func onFrameOutPut(_ frame: DSImageData, timeStamp: NSTimeInterval)
 
 **Parameters**
 
-`frame`: The output video frame.  
+`frame`: The output video frame in an [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object.  
 `timeStamp`: The time stamp that the video frame is output.

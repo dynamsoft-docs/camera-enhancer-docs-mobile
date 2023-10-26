@@ -6,6 +6,7 @@ keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/android/primary-api/camera-enhancer.html
 ---
 
 # CameraEnhancer
@@ -61,13 +62,38 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
-| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system. |
+| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 | [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`getImageCaptureDistanceMode`](#getimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
 | [`getAutoZoomRange`](#getautozoomrange) | Get the range of auto zoom. |
 | [`cameraView`](#setcameraview) | Set/get the CameraView instance that bind with this CameraEnhancer instance. |
+
+## Inherited Methods
+
+The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
+
+| Method | Description |
+| ------ | ----------- |
+| [`hasNextImageToFetch`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
+| [`setMaxImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setmaximagecount) | Set the maximum capability of the Video Buffer. |
+| [`getMaxImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getmaximagecount) | Get the property defines the maximum capability of the Video Buffer. |
+| [`setBufferOverflowProtectionMode`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one. |
+| [`getBufferOverflowProtectionMode`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getbufferoverflowprotectionmode) | Get the buffer overflow protection mode. |
+| [`getImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getimagecount) | Get the current image count in the Video Buffer. |
+| [`isBufferEmpty`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#isbufferempty) | Check whether the Video Buffer is empty. |
+| [`setColourChannelUsageType`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setcolourchannelusagetype) | Set the usage type of a color channel in an image. |
+| [`getColourChannelUsageType`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getcolourchannelusagetype) | Get the usage type of a color channel in an image. |
+| [`startFetching`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`stopFetching`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`getImage`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getimage) | Get an image from the Video Buffer. |
+| [`setNextImageToReturn(imageId)`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturnimageid) | Specify the next image that is returned by method getImage. |
+| [`setNextImageToReturn(imageId,keepInBuffer)`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturnimageidkeepinbuffer) | Specify the next image that is returned by method getImage. |
+| [`hasImage`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#hasimage) | Check the availability of the specified image. |
+| [`addImageToBuffer`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the buffer of the adapter. |
+| [`clearBuffer`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears the image buffer. |
+| [`setErrorListener`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Clears the image buffer. |
 
 ### addListener
 
@@ -373,8 +399,8 @@ void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
 
 **Parameters**
 
-`scanRegion`: A DSRect object.
-`error`: A NSError pointer. An error occurs when the DSRect data is invalid.
+`scanRegion`: A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object.
+`error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
 
@@ -390,7 +416,7 @@ DSRect getScanRegion(){}
 
 **Return Value**
 
-A DSRect object that represent the scan region area.
+A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object that represent the scan region area.
 
 ### open
 
@@ -557,7 +583,7 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a DSRect under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
 
 ```java
 android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.DSRect videoRect){}
@@ -565,11 +591,11 @@ android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_stru
 
 **Parameters**
 
-`videoRect`: The DSRect that you want to convert.
+`videoRect`: The [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) that you want to convert.
 
 **Return Value**
 
-A CGRect (coordinate measured in PT) converted from the DSRect.
+A CGRect (coordinate measured in PT) converted from the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
 
 ### convertPointToViewCoordinates
 

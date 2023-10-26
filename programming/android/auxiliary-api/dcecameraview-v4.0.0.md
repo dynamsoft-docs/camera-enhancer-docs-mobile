@@ -24,7 +24,7 @@ class CameraView
 
 | Method | Description |
 |------- |-------------|
-| [`CameraView`](#cameraview) | Create an instance of `CameraView`. |
+| [`CameraView`](#cameraview-1) | Create an instance of `CameraView`. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the specified `DrawingLayer`. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new `DrawingLayer`. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
@@ -44,7 +44,6 @@ class CameraView
 | [`setTipVisible`](#settipvisible) | Set the visibility of tip. |
 | [`isTipVisible`](#istipvisible) | Get the visibility of tip. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
-| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### CameraView
 
@@ -295,15 +294,3 @@ void updateTipMessage(String tipMessage);
 **Parameters**
 
 `tipMessage` The new message that you want to display.
-
-### setDrawingItemClickListener
-
-Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked.
-
-```java
-void setDrawingItemClickListener(DrawingItemClickListener clickListener)
-```
-
-**Parameters**
-
-`clickListener`: An interface instance of [`DrawingItemClickListener`](interface-click-listener.md).
