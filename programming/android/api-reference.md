@@ -31,7 +31,7 @@ permalink: /programming/android/api-reference.html
   * [QuadDrawingItem](auxiliary-api/drawingitem-quad.md)
   * [RectDrawingItem](auxiliary-api/drawingitem-rect.md)
   * [TextDrawingItem](auxiliary-api/drawingitem-text.md)
-* [DrawingLayer](auxiliary-api/drawinglayer.md)
+* [DrawingLayer](auxiliary-api/dcedrawinglayer.md)
 * [DrawingStyle](auxiliary-api/drawingstyle.md)
 * [DrawingStyleManager](auxiliary-api/drawingstylemanager.md)
 * [DSRect]({{ site.dcv_android_api }}core/basic-structures/rect.html)

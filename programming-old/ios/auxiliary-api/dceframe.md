@@ -37,7 +37,7 @@ class DCEFrame : iImageData
 | [`stride`](#stride) | *NSInteger* | The property stores the stride of the image. |
 | [`format`](#pixelformat) | *NSInteger* | The property stores the pixel format of the image. |
 | [`frameID`](#frameid) | *NSInteger* | The property stores the `frameID` of the frame. |
-| [`quality`](#quality) | [`EnumFrameQuality`]({{ site.dce-enums }}vidoe-frame-quality.html) | The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. |
+| [`quality`](#quality) | [`EnumFrameQuality`]({{ site.dce-enums }}video-frame-quality.html) | The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. |
 | [`isCropped`](#iscropped) | *BOOL* | The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`cropRegion`](#cropregion) | *CGRect* | The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null. |
 | [`orientation`](#orientation) | *NSInteger* | The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation. |
@@ -159,7 +159,7 @@ var frameID: Int { get set }
 
 ## quality
 
-The property indicates the image quality of the `DCEFrame`. View more in [`EnumFrameQuality`]({{ site.dce-enums }}vidoe-frame-quality.html). User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown.
+The property indicates the image quality of the `DCEFrame`. View more in [`EnumFrameQuality`]({{ site.dce-enums }}video-frame-quality.html). User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -21,7 +21,7 @@ View Classes
 Auxiliary APIs
 
 * [`DrawingItem`](../auxiliary-api/drawingitem.html): The struct for you to draw basic UI elements.
-* [`DrawingLayer`](../auxiliary-api/drawinglayer.html): Container of DrawingItems. You can add multiple layer to a view.
+* [`DrawingLayer`](../auxiliary-api/dcedrawinglayer.html): Container of DrawingItems. You can add multiple layer to a view.
 * [`DrawingStyle`](../auxiliary-api/drawingstyle.html): Defines the styles of the DrawingItems.
 
 ## Highlight Results
