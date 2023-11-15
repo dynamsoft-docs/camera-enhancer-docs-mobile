@@ -144,7 +144,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in [`EnumFrameQuality`]({{site.dce-enums}}vidoe-frame-quality.html?lang=android).
+The method returns an enumeration value in [`EnumFrameQuality`]({{site.dce-enums}}video-frame-quality.html?lang=android).
 
 **Remarks**
 
