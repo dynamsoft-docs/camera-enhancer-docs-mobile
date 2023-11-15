@@ -190,7 +190,7 @@ func getVisibleRegionOfVideo() -> DSRect
 ```
 **Return Value**
 
-A [`DSRect`]({{ site.dcv_ios_api }}rect.html) object (measuredInPercentage = true) that defines the visible region of the video.
+A [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object (measuredInPercentage = true) that defines the visible region of the video.
 
 **Code Snippet**
 

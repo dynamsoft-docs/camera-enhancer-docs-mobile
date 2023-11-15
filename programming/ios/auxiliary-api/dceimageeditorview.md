@@ -51,7 +51,7 @@ class ImageEditorView : UIView
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
 | [`setOriginalImageWithUIImage`](#setoriginalimagewithuiimage) | Set the original image that displayed on the view. |
-| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
+| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](protocol-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### image
 

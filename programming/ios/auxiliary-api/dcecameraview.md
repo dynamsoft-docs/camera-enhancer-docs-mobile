@@ -57,7 +57,7 @@ class CameraView: UIView {}
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`setScanRegionMaskStyle`](#setscanregionmaskstyle) | Set the style of the scan region mask. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
-| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](interface-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
+| [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](protocol-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### initWithFrame
 
@@ -191,7 +191,7 @@ func getVisibleRegionOfVideo() -> DSRect
 ```
 **Return Value**
 
-A [`DSRect`]({{ site.dcv_ios_api }}rect.html) object (measuredInPercentage = true) that defines the visible region of the video.
+A [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object (measuredInPercentage = true) that defines the visible region of the video.
 
 **Code Snippet**
 
