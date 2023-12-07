@@ -1,0 +1,82 @@
+[
+    {
+        "version": "4.0.2",
+        "matchList": {
+            "android":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/android/api-reference/license",
+                        "version": "3.0.30"
+                    }, {
+                        "path": "/programming/android/api-reference/core",
+                        "version": "3.0.20"
+                    }
+                ]
+            },
+            "ios":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/objectivec-swift/api-reference/license",
+                        "version": "3.0.30"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/core",
+                        "version": "3.0.20"
+                    }
+                ]
+            }
+        }
+    }, {
+        "version": "4.0.1",
+        "matchList": {
+            "android":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/android/api-reference/license",
+                        "version": "3.0.20"
+                    }, {
+                        "path": "/programming/android/api-reference/core",
+                        "version": "3.0.20"
+                    }
+                ]
+            },
+            "ios":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/objectivec-swift/api-reference/license",
+                        "version": "3.0.20"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/core",
+                        "version": "3.0.20"
+                    }
+                ]
+            }
+        }
+    }, {
+        "version": "4.0.0",
+        "matchList": {
+            "android":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/android/api-reference/license",
+                        "version": "3.0.10"
+                    }, {
+                        "path": "/programming/android/api-reference/core",
+                        "version": "3.0.10"
+                    }
+                ]
+            },
+            "ios":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/objectivec-swift/api-reference/license",
+                        "version": "3.0.10"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/core",
+                        "version": "3.0.10"
+                    }
+                ]
+            }
+        }
+    }
+]
+    

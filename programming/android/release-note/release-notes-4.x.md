@@ -11,6 +11,10 @@ permalink: /programming/android/release-note/release-notes-4.x.html
 
 # Release Notes - Android 4.x
 
+## 4.0.2 (12/07/2023)
+
+* Fixed a bug where method `getSelectedDrawingItem` might not return correctly.
+
 ## 4.0.1 (10/26/2023)
 
 * Added a new method `setDrawingItemClickListener` to class `CameraView` & `ImageEditorView`. You can set a `DrawingItemClickListener` to the view to monitor the click events of the `DrawingItems`.
