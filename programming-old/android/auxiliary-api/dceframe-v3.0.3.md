@@ -12,6 +12,8 @@ permalink: /programming/android/auxiliary-api/dceframe-v3.0.3.html
 
 # DCEFrame
 
+> You are viewing a historical document page of Dynamsoft Camera Enhancer v3.0.3.
+
 The `DCEFrame` is the class that stores pixel data and further information.
 
 ```java
