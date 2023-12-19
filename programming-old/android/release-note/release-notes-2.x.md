@@ -11,6 +11,12 @@ permalink: /programming/android/release-note/release-notes-2.x.html
 
 # Release Notes - Android 2.x
 
+## 2.3.12 (12/19/2023)
+
+### Fixed
+
+- Added internal changes to prevent crashes on cross-platform apps.
+
 ## 2.3.11 (02/14/2023)
 
 ### Fixed

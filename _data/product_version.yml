@@ -14,7 +14,7 @@ version_info_list_mobile:
   - value: 2.x
     child:
       - 2.3.20_ios
-      - 2.3.12_ios
+      - 2.3.12
       - 2.3.11
       - 2.3.10
       - 2.3.5
