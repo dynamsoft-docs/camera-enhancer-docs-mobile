@@ -90,9 +90,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
    ```java
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3@aar'
-       implementation 'com.dynamsoft:dynamsoftcore:3.0.20@aar'
-       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30@aar'
+       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.2@aar'
    }
    ```
 
