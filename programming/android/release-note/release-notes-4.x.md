@@ -11,6 +11,10 @@ permalink: /programming/android/release-note/release-notes-4.x.html
 
 # Release Notes - Android 4.x
 
+## 4.0.3 (12/28/2023)
+
+* Fixed a bug crash bug caused by auto-zoom feature.
+
 ## 4.0.2 (12/07/2023)
 
 * Fixed a bug where method `getSelectedDrawingItem` might not return correctly.
