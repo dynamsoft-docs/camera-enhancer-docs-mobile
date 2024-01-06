@@ -60,7 +60,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
 2. Open the file `HelloWorld\app\build.gradle`, and add reference in the dependencies:
 
-   ```java
+   ```groovy
    dependencies {
        implementation fileTree(dir: 'libs', include: ['*.aar'])
    }
@@ -78,7 +78,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
 1. Open the file `HelloWorld\app\build.gradle`, and add the remote repository:
 
-   ```java
+   ```groovy
    repositories {
        maven {
            url "https://download2.dynamsoft.com/maven/aar"
@@ -88,7 +88,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
 2. Add reference in the dependencies:
 
-   ```java
+   ```groovy
    dependencies {
        implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3@aar'
        implementation 'com.dynamsoft:dynamsoftcore:3.0.20@aar'
@@ -121,7 +121,7 @@ To activate the license:
 
 1. Include the library
 
-   ```java
+   ```groovy
    dependencies {
        implementation 'com.dynamsoft:dynamsoftlicense:3.0.10@aar'
    }
