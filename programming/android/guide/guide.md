@@ -12,7 +12,7 @@ permalink: /programming/android/guide/guide.html
 
 # Dynamsoft Camera Enhancer User Guide for Android (Java)
 
-The Dynamsoft Camera Enhancer Android SDK enables you to easily control cameras from your Android applications to stream live video and acquire realtime frames. 
+The Dynamsoft Camera Enhancer Android SDK enables you to easily control cameras from your Android applications to stream live video and acquire realtime frames.
 
 > **Example Usage**
 > 
@@ -23,11 +23,9 @@ Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your And
 
 ## App Prerequisites
 
-- System Requirements:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
-  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_64.
-
-- Environment: Android Studio 3.4+.
+- Supported OS: Android 5 or higher (Android 7 or higher recommended).
+- Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_64.
+- Development Environment: Android Studio 2022.2.1 or higher.
 
 ## Installation
 
@@ -36,6 +34,7 @@ If you don't have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) SD
 ## Build Your First Application
 
 The following sample will demonstrate how to acquire a frame from video streaming by DCE.
+
 >Note: 
 >- The following steps are completed in Android Studio 4.2.
 >- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
@@ -56,7 +55,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
 #### Local Binary Dependency
 
-1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
+1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancer.aar` to the target directory `HelloWorld\app\libs`
 
 2. Open the file `HelloWorld\app\build.gradle`, and add reference in the dependencies:
 
@@ -123,7 +122,7 @@ To activate the license:
 
    ```groovy
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftlicense:3.0.10@aar'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30@aar'
    }
    ```
 
