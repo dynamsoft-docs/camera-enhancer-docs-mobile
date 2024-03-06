@@ -36,7 +36,7 @@ If you don't have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) SD
 The following sample will demonstrate how to acquire a frame from video streaming by DCE.
 
 >Note: 
->- The following steps are completed in Android Studio 4.2.
+>- The following steps are completed in Android Studio 2022.2.1.
 >- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
 >- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
 
@@ -89,9 +89,9 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
    ```groovy
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3@aar'
-       implementation 'com.dynamsoft:dynamsoftcore:3.0.20@aar'
-       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30@aar'
+       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3'
+       implementation 'com.dynamsoft:dynamsoftcore:3.0.20'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
    }
    ```
 
@@ -122,7 +122,7 @@ To activate the license:
 
    ```groovy
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30@aar'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
    }
    ```
 
