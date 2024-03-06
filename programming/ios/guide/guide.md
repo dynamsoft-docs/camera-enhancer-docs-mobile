@@ -23,11 +23,9 @@ Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your iOS
 
 ## App Prerequisites
 
-- System Requirements:
-  - macOS 10.11 and above.
-  - iOS 9.0 and above.
-- Environment: Xcode 7.1 - 11.5 and above.
-- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+- Supported OS: iOS 11 or higher (iOS 13 and higher recommended).
+- Supported ABI: arm64 and x86_64.
+- Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
 ## Installation
 
@@ -109,7 +107,7 @@ To activate the license:
    >
    >1. 
    ```objc
-   @interface AppDelegate ()<DBRLicenseVerificationListener>
+   @interface AppDelegate ()<DSLicenseVerificationListener>
    ...
    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
@@ -121,7 +119,7 @@ To activate the license:
    ```
    2. 
    ```swift
-   class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
+   class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
       ...
       func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
              ...
@@ -385,6 +383,34 @@ Run the project. Now, you can try to capture video frames with Dynamsoft Camera 
 > - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).
 > - You can download the similar complete Swift source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldSwift).
 > - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/).
+
+### Additional Steps for iOS 12 or Lower Versions
+
+If your iOS version is less than 13, please add the following additional steps:
+
+1. Remove the methods `application:didDiscardSceneSessions:` and `application:configurationForConnectingSceneSession:options:` from your `AppDelegate` file.
+2. Remove the `SceneDelegate.Swift` file (`SceneDelegate.h` & `SceneDelegate.m` for Objective-C).
+3. Remove the `Application Scene Manifest` from your info.plist file.
+4. Declaire the window in your `AppDelegate.Swift` file (`AppDelegate.h` for Objective-C).
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   @interface AppDelegate : UIResponder <UIApplicationDelegate>
+   @property (strong, nonatomic) UIWindow *window;
+   @end
+   ```
+   2. 
+   ```swift
+   import UIKit
+   @main
+   class AppDelegate: UIResponder, UIApplicationDelegate {
+      var window: UIWindow?
+   }
+   ```
 
 ## What's Next?
 
