@@ -14,7 +14,7 @@ The `DSCameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer t
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.framework
+*Assembly:* DynamsoftCameraEnhancer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -463,11 +463,11 @@ func getCapabilities() -> Capabilities
 
 **Return Value**
 
-A DSCapabilities object.
+A [DSCapabilities](../auxiliary-api/capabilities.md) object.
 
 ### getCameraState
 
-Get the device capabilities including zoom factor, ISO, exposure time, etc.
+Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.dce-enums }}camera-state.html?lang=objc,swift) enumeration.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -488,7 +488,7 @@ The camera state.
 
 ### setCameraStateListener
 
-Set a DSCameraStateListener to receive callback when the camera state changed.
+Set a [DSCameraStateListener](../auxiliary-api/protocol-dcecamerastatelistener.md) to receive callback when the camera state changes.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -509,7 +509,7 @@ func setCameraStateListener(_ listener: CameraStateListener)
 
 ### enableEnhancedFeatures
 
-Enable the specified enhanced features. View DSEnhancedFeatures for more details.
+Enable the specified enhanced features. View [DSEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=objc,swift) to learn about these enhanced features. By default, these enhanced features are all disabled.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -526,7 +526,7 @@ func enableEnhancedFeatures(_ enhancedFeatures: Int) -> BOOL
 
 **Parameters**
 
-`enhancedFeatures`: A combined value of DSEnhancedFeatures which indicates a series of enhanced features.
+`enhancedFeatures`: A combined value of `DSEnhancedFeatures` which indicates a series of enhanced features.
 
 **Return Value**
 
@@ -534,7 +534,7 @@ A bool value that indicates whether the enhanced features are enabled successful
 
 ### disableEnhancedFeatures
 
-Disable the specified enhanced features. View DSEnhancedFeatures for more details.
+Disable any enhanced features that have been previously enabled. View [DSEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=objc,swift) to learn about these enhanced features.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -551,11 +551,11 @@ func disableEnhancedFeatures(_ enhancedFeatures: Int)
 
 **Parameters**
 
-`enhancedFeatures`: A combined value of DSEnhancedFeatures which indicates a series of enhanced features.
+`enhancedFeatures`: A combined value of `DSEnhancedFeatures` which indicates a series of enhanced features.
 
 ### initWithView
 
-Create an instance of DSCameraEnhancer.
+Create an instance of DSCameraEnhancer with a [DSCameraView](../auxiliary-api/dcecameraview.md) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -601,7 +601,7 @@ An instance of DSCameraEnhancer.
 
 ### setScanRegion
 
-Set a scan region. The video frame is cropped based on the scan region.
+Set a scan region. The video frame is cropped based on the scan region. To learn the full code to setting a scan region, please refer to the [scan region](../guide/scan-region.md) article.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -623,11 +623,11 @@ func setScanRegion(_ scanRegion: DSRect) -> BOOL
 
 **Return Value**
 
-A bool value that indicates whether the scan region setting is successful.
+A bool value that indicates whether the scan region has been successfully set or not.
 
 ### getScanRegion
 
-Get a scan region.
+Get the scan region if one has been set.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -682,7 +682,7 @@ func close()
 
 ### setResolution
 
-Set the resolution. If the targeting resolution is not available for your device, a closest available resolutionll be selected.
+Set the resolution. If the targeted resolution is not available for your device, the closest available resolution will be selected.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -736,7 +736,7 @@ Get the IDs of all available cameras.
 ```
 2. 
 ```swift
-func getResolution() -> [String]
+func getAllCameras() -> [String]
 ```
 
 **Return Value**

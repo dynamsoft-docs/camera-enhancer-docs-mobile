@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS API references
-permalink: /programming/ios/upgrade-instructions.html
+permalink: /programming/ios/upgrade-instruction.html
 ---
 
 # How to Upgrade

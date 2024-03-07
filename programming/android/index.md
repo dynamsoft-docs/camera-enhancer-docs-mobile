@@ -14,10 +14,10 @@ permalink: /programming/android/index.html
 
 - [User guide for Android]({{site.android-guide}}guide.html)
 
-## API reference for Java, Kotlin Edition
+## API reference for Java & Kotlin Edition
 
-- [APIs reference]({{site.android}}api-reference.html)
+- [API reference]({{site.android}}api-reference.html)
 
-## Java, Kotlin Release Note
+## Android Release Notes
 
 - [Android Release Note]({{site.android-release-note}})

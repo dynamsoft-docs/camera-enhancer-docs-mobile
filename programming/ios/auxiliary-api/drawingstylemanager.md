@@ -14,7 +14,7 @@ The `DSDrawingStyleManager` class is the manager of DrawingStyles in Dynamsoft C
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.framework
+*Assembly:* DynamsoftCameraEnhancer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

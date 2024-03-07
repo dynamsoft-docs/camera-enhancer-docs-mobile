@@ -14,7 +14,7 @@ The `DSCameraView` class is used to display the camera preview and provides UI c
 
 ## Definition
 
-*Assembly:* DynamsoftCameraSDK.framework
+*Assembly:* DynamsoftCameraSDK.xcframework
 
 ```objc
 @interface DSCameraView: UIView<CALayerDelegate>

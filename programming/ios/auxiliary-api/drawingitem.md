@@ -14,7 +14,7 @@ The `DSDrawingItem` class represents a base class for drawing items, which can b
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

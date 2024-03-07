@@ -14,7 +14,7 @@ The `DSDrawingItemClickListener` protocol includes methods for monitoring the cl
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
