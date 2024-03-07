@@ -14,7 +14,7 @@ The `DSRectDrawingItem` class is a subclass of `DSDrawingItem` that represents a
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.framework
+*Assembly:* DynamsoftCameraEnhancer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Advanced Features
-permalink: /programming/ios/guide/features-v3.0.3.html
+permalink: /programming/ios/guide/features.html
 ---
 
 # Advanced Features

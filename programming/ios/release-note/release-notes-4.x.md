@@ -11,6 +11,10 @@ permalink: /programming/ios/release-note/release-notes-4.x.html
 
 # Release Notes - iOS 4.x
 
+## 4.2.0 (03/07/2024)
+
+* Internal changes to be compatible with `DynamsoftCaptureVisionRouter` v2.2.10.
+
 ## 4.0.2 (12/07/2023)
 
 * Some internal changes.

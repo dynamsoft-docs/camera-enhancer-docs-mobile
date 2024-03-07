@@ -306,11 +306,11 @@ Capabilities getCapabilities(){}
 
 **Return Value**
 
-A Capabilities object.
+A [Capabilities](../auxiliary-api/capabilities.md) object.
 
 ### getCameraState
 
-Get the device capabilities including zoom factor, ISO, exposure time, etc.
+Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.dce-enums }}camera-state.html) enumeration.
 
 ```java
 EnumCameraState getCameraState(){}
@@ -322,7 +322,7 @@ The camera state.
 
 ### setCameraStateListener
 
-Set a CameraStateListener to receive callback when the camera state changed.
+Set a [CameraStateListener](../auxiliary-api/interface-dcecamerastatelistener.md) to receive callback when the camera state changes.
 
 ```java
 void setCameraStateListener (CameraStateListener listener){}
@@ -334,10 +334,10 @@ void setCameraStateListener (CameraStateListener listener){}
 
 ### enableEnhancedFeatures
 
-Enable the specified enhanced features. View `EnumEnhancedFeatures` for more details.
+Enable the specified enhanced features. View [EnumEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=android) to learn about these enhanced features. By default, these enhanced features are all disabled.
 
 ```java
-void enableEnhancedFeatures(int enhancerFeatures) throws CameraEnhancerException{}
+void enableEnhancedFeatures(int enhancedFeatures) throws CameraEnhancerException{}
 ```
 
 **Parameters**
@@ -350,7 +350,7 @@ A bool value that indicates whether the enhanced features are enabled successful
 
 ### disableEnhancedFeatures
 
-Disable the specified enhanced features. View EnumEnhancedFeatures for more details.
+Disable any enhanced features that have been previously enabled. View [EnumEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=android) to learn about these enhanced features.
 
 ```java
 void disableEnhancedFeatures(int enhancerFeatures){}
@@ -358,11 +358,11 @@ void disableEnhancedFeatures(int enhancerFeatures){}
 
 **Parameters**
 
-`enhancedFeatures`: A combined value of EnumEnhancedFeatures which indicates a series of enhanced features.
+`enhancedFeatures`: A combined value of `EnhancedFeatures` which indicates a series of enhanced features.
 
 ### CameraEnhancer(view,activity)
 
-Create an instance of CameraEnhancer.
+Create an instance of CameraEnhancer with a [CameraView](../auxiliary-api/dcecameraview.md) object.
 
 ```java
 CameraEnhancer(CameraView view, Activity activity){}
@@ -391,7 +391,7 @@ An instance of CameraEnhancer.
 
 ### setScanRegion
 
-Set a scan region. The video frame is cropped based on the scan region.
+Set a scan region. The video frame is cropped based on the scan region. To learn the full code to setting a scan region, please refer to the [scan region](../guide/scan-region.md) article.
 
 ```java
 void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
@@ -404,11 +404,13 @@ void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
 
 **Return Value**
 
-A bool value that indicates whether the scan region setting is successful.
+A bool value that indicates whether the scan region has been successfully set or not.
+
+**Code Snippet**
 
 ### getScanRegion
 
-Get a scan region.
+Get the scan region if one has been set.
 
 ```java
 DSRect getScanRegion(){}
@@ -436,7 +438,7 @@ void close() throws CameraEnhancerException{}
 
 ### setResolution
 
-Set the resolution. If the targeting resolution is not available for your device, a closest available resolutionll be selected.
+Set the resolution. If the targeted resolution is not available for your device, the closest available resolution will be selected.
 
 ```java
 void setResolution(EnumResolution resolution) throws CameraEnhancerException{}

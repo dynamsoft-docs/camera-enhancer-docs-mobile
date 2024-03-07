@@ -14,7 +14,7 @@ The `DSTipConfig` class defines the configurations of tip, including the top lef
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 ```objc
 @interface DSTipConfig : NSObject

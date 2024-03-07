@@ -14,7 +14,7 @@ The `DSCameraEnhancerModule` class defines general functions of the camera enhan
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

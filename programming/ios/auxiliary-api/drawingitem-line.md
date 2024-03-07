@@ -14,7 +14,7 @@ The `DSLineDrawingItem` class is a subclass of `DSDrawingItem` and represents a 
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.framework
+*Assembly:* DynamsoftCameraEnhancer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

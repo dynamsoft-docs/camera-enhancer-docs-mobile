@@ -14,7 +14,7 @@ The `DSPhotoListener` protocol defines the methods for monitoring the photo outp
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -16,8 +16,8 @@ permalink: /programming/ios/index.html
 
 ## API reference for Objective-C & Swift Edition
 
-- [APIs reference]({{site.ios}}api-reference.html)
+- [API reference]({{site.ios}}api-reference.html)
 
-## Objective-C & Swift Release Note
+## iOS Release Notes
 
 - [iOS Release Note]({{site.ios-release-note}})
