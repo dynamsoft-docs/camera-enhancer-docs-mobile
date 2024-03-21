@@ -20,6 +20,7 @@ permalink: /programming/android/release-note/index.html
 - [3.0.2 (02/02/2023)](release-notes-3.x.html#302-02022023)
 - [3.0.1 (09/29/2022)](release-notes-3.x.html#301-09292022)
 - [3.0.0 (06/21/2022)](release-notes-3.x.html#300-06212022)
+- [2.3.20 (03/21/2024)](release-notes-2.x.html#2320-03212024)
 - [2.3.12 (12/19/2023)](release-notes-2.x.html#2312-12192023)
 - [2.3.11 (02/14/2023)](release-notes-2.x.html#2311-02142023)
 - [2.3.10 (12/13/2022)](release-notes-2.x.html#2310-12132022)
