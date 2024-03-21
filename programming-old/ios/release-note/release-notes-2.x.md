@@ -11,6 +11,12 @@ permalink: /programming/ios/release-note/release-notes-2.x.html
 
 # Release Notes - iOS 2.x
 
+## 2.3.21 (03/21/2024)
+
+### Changed
+
+- Removed the support of `Bitcode`.
+
 ## 2.3.20 (03/27/2023)
 
 ### Fixed

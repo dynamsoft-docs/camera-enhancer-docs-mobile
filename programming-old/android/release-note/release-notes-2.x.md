@@ -11,6 +11,12 @@ permalink: /programming/android/release-note/release-notes-2.x.html
 
 # Release Notes - Android 2.x
 
+## 2.3.20 (03/21/2024)
+
+### Changed
+
+- Internal changes on the torch controlling logics.
+
 ## 2.3.12 (12/19/2023)
 
 ### Fixed
