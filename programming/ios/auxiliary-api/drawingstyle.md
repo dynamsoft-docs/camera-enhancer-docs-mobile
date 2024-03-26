@@ -40,12 +40,6 @@ class DrawingStyle : NSObject
 | [`strokeWidth`](#strokewidth) | *CGFloat* | Set/get the stroke width (in pixel). |
 | [`font`](#font) | *UIFont \** | Set/get the font. |
 
-## Methods
-
-| Method | Description |
-|------- |-------------|
-| [`initWithId:strokeColor:strokeWidth:fillColor:textColor:`](#initwithidstrokecolorstrokewidthfillcolortextcolor) | Create an instance of the DrawingStyle. |
-
 ### styleId
 
 Get the style ID.
@@ -146,47 +140,4 @@ Set/get the font.
 2. 
 ```swift
 var font: UIFont? { get set }
-```
-
-### initWithId:strokeColor:strokeWidth:fillColor:textColor:
-
-Create an instance of the DrawingStyle.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (instancetype)initWithId:(NSInteger)styleId strokeColor:(UIColor *)strokeColor strokeWidth:(CGFloat)strokeWidth fillColor:(UIColor *)fillColor textColor:(UIColor *)textColor;
-```
-2. 
-```swift
-init(styleId: Int, strokeColor: UIColor?, strokeWidth: CGFloat, fillColor: UIColor?, textColor: UIColor?)
-```
-**Parameters**
-
-`styleId`: Set the style ID.  
-`strokeColor`: Set the stroke color.  
-`strokeWidth`: Set the stroke width.  
-`fillColor`: Set the fill color.  
-`textColor`: Set the text color.  
-
-**Return Value**
-
-An instance of the `DSDrawingStyle` class.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSDrawingStyle *style = [[DSDrawingStyle alloc] initWithId:1 strokeColor:[UIColor blackColor] strokeWidth:2.0 fillColor:[UIColor redColor] textColor:[UIColor whiteColor]];
-```
-2. 
-```swift
-let style = DrawingStyle(styleId: 1, strokeColor: UIColor.black, strokeWidth: 2.0, fillColor: UIColor.red, textColor: UIColor.white)
 ```

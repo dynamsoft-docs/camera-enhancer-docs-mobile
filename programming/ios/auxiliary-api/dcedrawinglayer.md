@@ -45,6 +45,7 @@ class DrawingLayer : NSObject
 | ---------- | ---- | ----------- |
 | [`layerId`](#layerid) | *NSInteger* |Get the layer ID of the layer. |
 | [`visible`](#visible) | *BOOL* | Set/get the visibility of the layer. |
+| [`drawingItems`](#drawingitems) | *NSArray<DrawingItem *> \** | Set/get the drawing items on the layer. |
 
 ## Methods
 
@@ -92,6 +93,23 @@ Set/get the visibility of the layer.
 var visible: Bool { get set }
 ```
 
+### drawingItems
+
+Set/get the drawing items on the layer.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (atomic, copy, nullable) NSArray<DSDrawingItem *> *drawingItems;
+```
+2. 
+```swift
+var drawingItems: [DrawingItem] { get set }
+```
+
 ### initWithId
 
 Create an DrawingLayer with the specified ID.
@@ -133,44 +151,6 @@ func addDrawingItems(_ items: [DSDrawingItem])
 
 `items`: An array of DrawingItems to be added to the layer.
 
-### setDrawingItems
-
-Set the DrawingItems to be displayed on the layer. The previously displayed DrawingItems are removed.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setDrawingItems:(NSArray<DSDrawingItem *> *)items;
-```
-2. 
-```swift
-func setDrawingItems(_ items: [DSDrawingItem])
-```
-
-**Parameters**
-
-`items`: An array of DrawingItems to be set on the layer.
-
-### getDrawingItems
-
-Get all the DrawingItems on the layer.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSArray<DSDrawingItem *> *)getDrawingItems;
-```
-2. 
-```swift
-func getDrawingItems() -> [DrawingItem]
-```
-
 ### setDefaultStyle(style)
 
 Set the default style of the layer. A DrawingItem on the layer will use the default style if it doesn't hold a style attribute.
@@ -181,15 +161,16 @@ Set the default style of the layer. A DrawingItem on the layer will use the defa
 >
 >1. 
 ```objc
-- (void)setDefaultStyle:(NSInteger)drawingStyle;
+- (void)setDefaultStyle:(NSUInteger)styleId;
 ```
 2. 
 ```swift
-func setDefaultStyle(_ drawingStyle: Int)
+func setDefaultStyle(_ styleId: UInt)
 ```
+
 **Parameters**
 
-`drawingStyle`: An ID of DrawingStyle.
+`styleId`: An ID of DrawingStyle.
 
 ### setDefaultStyle(style,state,mediaType)
 
@@ -201,20 +182,20 @@ Set the default style of the layer with filter options. A DrawingItem on the lay
 >
 >1. 
 ```objc
-- (void)setDefaultStyle:(NSInteger)drawingStyle
-               forState:(NSInteger)drawingItemState
-                forType:(NSInteger)drawingItemMediaType;
+- (void)setDefaultStyle:(NSUInteger)styleId
+               forState:(NSUInteger)state
+                forType:(NSUInteger)type;
 ```
 2. 
 ```swift
-func setDefaultStyle(_ drawingStyle: Int, forState drawingItemState: Int, forType drawingItemMediaType: Int)
+func setDefaultStyle(_ styleId: UInt, forState drawingItemState: UInt, forType drawingItemMediaType: UInt)
 ```
 
 **Parameters**
 
-`drawingStyle`: An ID of DrawingStyle.  
-`drawingItemState`: Specify a group of DrawingItem state. It filters which kinds of DrawingItems will use this default style.  
-`drawingItemMediaType`: Specify a group of DrawingItem media type. It filters which kinds of DrawingItems will use this default style.
+`styleId`: An ID of DrawingStyle.  
+`forState`: Specify a group of DrawingItem state. It filters which kinds of DrawingItems will use this default style.  
+`forType`: Specify a group of DrawingItem media type. It filters which kinds of DrawingItems will use this default style.
 
 ### clearDrawingItems
 
