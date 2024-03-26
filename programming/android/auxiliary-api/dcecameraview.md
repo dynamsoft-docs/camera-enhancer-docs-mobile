@@ -34,7 +34,7 @@ class CameraView
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`setScanRegionMaskStyle`](#setscanregionmaskstyle) | Set the style of the scan region mask. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set/get the visibility of the torch button. |
-| [`isTorchButtonVisible`](#istorchbuttonvisible) | Set/get the visibility of the torch button. |
+| [`getTorchButtonVisible`](#gettorchbuttonvisible) | Set/get the visibility of the torch button. |
 | [`setScanRegionMaskVisible`](#setscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
 | [`isScanRegionMaskVisible`](#isscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
 | [`setScanLaserVisible`](#setscanlaservisible) | Set the visibility of the scan laser. |
@@ -113,14 +113,14 @@ void setTorchButton(Point torchButtonPosition, int width, int height, Drawable t
 **Parameters**
 
 `torchButtonPosition`: Set the top-left point of the torch button.  
-`width`: Set the width of the torch button.
-`height`: Set the height of the torch button.
+`width`: Set the width of the torch button.  
+`height`: Set the height of the torch button.  
 `torchOnImage`: The torch button image that you want to display when the torch is on.  
 `torchOffImage`: The torch button image that you want to display when the torch is off.  
 
 ### setTorchButtonVisible
 
-Set/get the visibility of the torch button.
+Set the visibility of the torch button.
 
 ```java
 void setTorchButtonVisible(boolean isTorchButtonVisible);
@@ -128,14 +128,14 @@ void setTorchButtonVisible(boolean isTorchButtonVisible);
 
 **Parameters**
 
-`isVisible`: A boolean value that indicate the torch button is visible.
+`isTorchButtonVisible`: A boolean value that indicate the torch button is visible.
 
-### isTorchButtonVisible
+### getTorchButtonVisible
 
-Set/get the visibility of the torch button.
+Get the visibility of the torch button.
 
 ```java
-void setTorchButtonVisible(boolean isTorchButtonVisible);
+boolean getTorchButtonVisible();
 ```
 
 **Return Value**
