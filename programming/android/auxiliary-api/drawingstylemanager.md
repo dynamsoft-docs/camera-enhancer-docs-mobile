@@ -28,6 +28,19 @@ class DrawingStyleManager
 | [`createDrawingStyle`](#createdrawingstyle) | Create an instance of the DrawingStyle and get the style ID. |
 | [`getAllDrawingStyles`](#getalldrawingstyles) | Get all available DrawingStyles. |
 
+## Constant Variables
+
+| Variable | Type | Description |
+| -------- | ---- | ----------- |
+| `STYLE_BLUE_STROKE` | *int* | A preset `DrawingStyle` with blue stroke colour and no fill colour. |
+| `STYLE_GREEN_STROKE` | *int* | A preset `DrawingStyle` with green stroke colour and no fill colour. |
+| `STYLE_ORANGE_STROKE` | *int* | A preset `DrawingStyle` with orange stroke colour and no fill colour. |
+| `STYLE_YELLOW_STROKE` | *int* | A preset `DrawingStyle` with yellow stroke colour and no fill colour. |
+| `STYLE_BLUE_STROKE_FILL` | *int* | A preset `DrawingStyle` with blue stroke colour and fill colour. |
+| `STYLE_GREEN_STROKE_FILL` | *int* | A preset `DrawingStyle` with green stroke colour and fill colour. |
+| `STYLE_ORANGE_STROKE_FILL` | *int* | A preset `DrawingStyle` with orange stroke colour and fill colour. |
+| `STYLE_YELLOW_STROKE_FILL` | *int* | A preset `DrawingStyle` with yellow stroke colour and fill colour. |
+
 ### getDrawingStyle
 
 Get the specified DrawingStyle.

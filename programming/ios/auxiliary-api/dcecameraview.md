@@ -51,13 +51,98 @@ class CameraView: UIView {}
 | [`getDrawingLayer`](#getdrawinglayer) | Get the specified DrawingLayer. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new DrawingLayer. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
-| [`setTorchButton`](#settorchbutton) | Add a torch button on your view. |
+| [`setTorchButtonWithFrame`](#settorchbuttonwithframe) | Add a torch button on your view. |
 | [`deleteUserDefinedDrawingLayer`](#deleteuserdefineddrawinglayer) | Delete the specified drawing layer. |
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`setScanRegionMaskStyle`](#setscanregionmaskstyle) | Set the style of the scan region mask. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
 | [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](protocol-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
+
+### torchButtonVisible
+
+Set/get the visibility of the torch button.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) BOOL torchButtonVisible;
+```
+2. 
+```swift
+var torchButtonVisible: BOOL { get set }
+```
+
+### scanRegionMaskVisible
+
+Set/get the visibility of the scan region mask.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) BOOL scanRegionMaskVisible;
+```
+2. 
+```swift
+var scanRegionMaskVisible: BOOL { get set }
+```
+
+### scanLaserVisible
+
+Set/get the visibility of the scan laser.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) BOOL scanLaserVisible;
+```
+2. 
+```swift
+var scanLaserVisible: BOOL { get set }
+```
+
+### tipConfig
+
+Set/get the tip configurations.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) DSTipConfig * tipConfig;
+```
+2. 
+```swift
+var tipConfig: DSTipConfig { get set }
+```
+
+### tipVisible
+
+Set/get the visibility of tip.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) BOOL tipVisible;
+```
+2. 
+```swift
+var tipConfig: BOOL { get set }
+```
 
 ### initWithFrame
 
@@ -108,11 +193,11 @@ Get the specified DrawingLayer.
 >
 >1. 
 ```objc
-- (DSDrawingLayer *)getDrawingLayer:(NSInteger)layerId;
+- (nullable DSDrawingLayer *)getDrawingLayer:(NSUInteger)layerId;
 ```
 2. 
 ```swift
-func getDrawingLayer(_ layerId: Int) -> DSDrawingLayer?
+func getDrawingLayer(_ layerId: UInt) -> DSDrawingLayer?
 ```
 
 **Parameters**
@@ -208,7 +293,7 @@ DSRect *visibleRegion = [cameraView getVisibleRegionOfVideo];
 let visibleRegion = cameraView.getVisibleRegionOfVideo()
 ```
 
-### setTorchButton
+### setTorchButtonWithFrame
 
 Add a torch button on your view. If you are using enhanced feature - smart torch, the style of this torch button will be applied to the smart torch as well.
 
@@ -218,9 +303,9 @@ Add a torch button on your view. If you are using enhanced feature - smart torch
 >
 >1. 
 ```objc
-- (void)setTorchButton:(CGRect)frame
-          torchOnImage:(UIImage* _Nullable)torchOnImage
-         torchOffImage:(UIImage* _Nullable)torchOffImage
+- (void)setTorchButtonWithFrame:(CGRect)frame
+                   torchOnImage:(UIImage* _Nullable)torchOnImage
+                  torchOffImage:(UIImage* _Nullable)torchOffImage
 NS_SWIFT_NAME(setTorchButton(frame:torchOnImage:torchOffImage:));
 ```
 2. 
@@ -233,23 +318,6 @@ func setTorchButton(_ frame: CGRect, torchOnImage: UIImage, torchOffImage: UIIma
 `frame`: The place that you want to locate the torch button.  
 `torchOnImage`: The torch button image that you want to display when the torch is on.  
 `torchOffImage`: The torch button image that you want to display when the torch is off.  
-
-### torchButtonVisible
-
-Set/get the visibility of the torch button.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (assign, nonatomic) BOOL torchButtonVisible;
-```
-2. 
-```swift
-var torchButtonVisible: BOOL { get set }
-```
 
 ### deleteUserDefinedDrawingLayer
 
@@ -265,11 +333,11 @@ Delete the specified drawing layer.
 >
 >1. 
 ```objc
-- (void)deleteUserDefinedDrawingLayer:(NSInteger)layerId;
+- (void)deleteUserDefinedDrawingLayer:(NSUInteger)layerId;
 ```
 2. 
 ```swift
-func deleteUserDefinedDrawingLayer(_ layerId:Int)
+func deleteUserDefinedDrawingLayer(_ layerId:UInt)
 ```
 
 ### clearUserDefinedDrawingLayers
@@ -310,40 +378,6 @@ All the drawing layers. The return value includes both system drawing layers and
 func getAllDrawingLayers() -> [DrawingLayer]
 ```
 
-### scanRegionMaskVisible
-
-Set/get the visibility of the scan region mask.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) BOOL scanRegionMaskVisible;
-```
-2. 
-```swift
-var scanRegionMaskVisible: BOOL { get set }
-```
-
-### scanLaserVisible
-
-Set/get the visibility of the scan laser.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) BOOL scanLaserVisible;
-```
-2. 
-```swift
-var scanLaserVisible: BOOL { get set }
-```
-
 ### setScanRegionMaskStyle
 
 Set the style of the scan region mask.
@@ -369,40 +403,6 @@ func setScanRegionMaskStyle(_ strokeColour: UIColor, strokeWidth: CGFloat, surro
 `strokeWidth` The width of the stroke.  
 `surroundingColour` The colour of the mask around the scan region.  
 
-### tipConfig
-
-Set/get the tip configurations.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (assign, nonatomic) DSTipConfig * tipConfig;
-```
-2. 
-```swift
-var tipConfig: DSTipConfig { get set }
-```
-
-### tipVisible
-
-Set/get the visibility of tip.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (assign, nonatomic) BOOL tipVisible;
-```
-2. 
-```swift
-var tipConfig: BOOL { get set }
-```
-
 ### updateTipMessage
 
 Update the tip message. The new tip message will be immediately displayed on the view. Generally, tip messages are uploaded internally.
@@ -413,11 +413,11 @@ Update the tip message. The new tip message will be immediately displayed on the
 >
 >1. 
 ```objc
-- (void)updateTipMessage:(NSString*)tipMessage;
+- (void)updateTipMessage:(NSString*)message;
 ```
 2. 
 ```swift
-func updateTipMessage(_ tipMessage: String)
+func updateTipMessage(_ message: String)
 ```
 
 **Parameters**
@@ -434,11 +434,11 @@ Set a [`DrawingItemClickListener`](protocol-click-listener.md) to receive callba
 >
 >1. 
 ```objc
-- (void)setDrawingItemClickListener:(id<DSDrawingItemClickListener>)clickListener;
+- (void)setDrawingItemClickListener:(nullable id<DSDrawingItemClickListener>)clickListener;
 ```
 2. 
 ```swift
-func setDrawingItemClickListener(_ clickListener: DrawingItemClickListener)
+func setDrawingItemClickListener(_ clickListener: DrawingItemClickListener?)
 ```
 
 **Parameters**

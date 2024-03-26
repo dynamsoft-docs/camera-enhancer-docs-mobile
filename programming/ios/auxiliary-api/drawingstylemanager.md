@@ -91,11 +91,11 @@ Create an instance of the DrawingStyle and get the style ID.
 >
 >1. 
 ```objc
-+ (NSInteger)createDrawingStyle:(UIColor *)strokeColor strokeWidth:(CGFloat)strokeWidth fillColor:(UIColor *)fillColor textColor:(UIColor *)textColor;
++ (NSInteger)createDrawingStyle:(UIColor *)strokeColor strokeWidth:(CGFloat)strokeWidth fillColor:(UIColor *)fillColor textColor:(UIColor *)textColor font:(UIFont *)font;
 ```
 2. 
 ```swift
-class func createDrawingStyle(strokeColor: UIColor, strokeWidth: CGFloat, fillColor: UIColor, textColor: UIColor) -> Int
+class func createDrawingStyle(strokeColor: UIColor, strokeWidth: CGFloat, fillColor: UIColor, textColor: UIColor, font: UIFont) -> Int
 ```
 
 **Parameters**
@@ -104,25 +104,11 @@ class func createDrawingStyle(strokeColor: UIColor, strokeWidth: CGFloat, fillCo
 `strokeWidth`: Set the stroke width.  
 `fillColor`: Set the fill colour.  
 `textColor`: Set the text colour.  
+`font`: Set the font.  
 
 **Return Value**
 
 The style ID of the created DrawingStyle.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSInteger styleId = [DSDrawingStyleManager createDrawingStyle:[UIColor blueColor] strokeWidth:2.0 fillColor:[UIColor yellowColor] textColor:[UIColor blackColor]];
-```
-2. 
-```swift
-let styleId = DrawingStyleManager.createDrawingStyle(strokeColor: .blue, strokeWidth: 2.0, fillColor: .yellow, textColor: .black)
-```
 
 ### getAllDrawingStyles
 
@@ -134,7 +120,7 @@ Get all available DrawingStyles.
 >
 >1. 
 ```objc
-+ (NSArray<DSDrawingStyle*> *)getAllDrawingStyles;
++ (nullable NSArray<DSDrawingStyle*> *)getAllDrawingStyles;
 ```
 2. 
 ```swift

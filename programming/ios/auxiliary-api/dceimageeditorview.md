@@ -50,7 +50,6 @@ class ImageEditorView : UIView
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`updateTipMessage`](#updatetipmessage) | Update the tip message. |
-| [`setOriginalImageWithUIImage`](#setoriginalimagewithuiimage) | Set the original image that displayed on the view. |
 | [`setDrawingItemClickListener`](#setdrawingitemclicklistener) | Set a [`DrawingItemClickListener`](protocol-click-listener.md) to receive callback when [`DrawingItems`](drawingitem.md) on the view are clicked. |
 
 ### image
@@ -396,42 +395,6 @@ func updateTipMessage(_ tipMessage: String)
 2. 
 ```swift
 editorView.updateTipMessage(tipMessage)
-```
-
-### setOriginalImageWithUIImage
-
-Set the original image that displayed on the view.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setOriginalImageWithUIImage:(UIImage *)image;
-```
-2. 
-```swift
-func setOriginalImage(_ image: UIImage)
-```
-
-**Parameters**
-
-`image`: A UIImage object as the original.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setOriginalImageWithUIImage:(UIImage *)image;
-```
-2. 
-```swift
-func setOriginalImage(_ image: UIImage)
 ```
 
 ### setDrawingItemClickListener
