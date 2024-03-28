@@ -99,7 +99,7 @@ NSInteger userDefinedStyle = [DSDrawingStyleManager createDrawingStyle:UIColor.b
 let styleID = DrawingStyleManager.createDrawingStyle(UIColor.red, strokeWidth: 1, fill: UIColor.init(red: 255, green: 0, blue: 0, alpha: 0.1), textColor: UIColor.red, font:UIFont.systemFont(ofSize: 1) )
 ```
 
-## Add More Basic Grahpics
+## Add More Basic Graphics
 
 A `DrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DrawingItems` in different shapes. Here we use `QuadDrawingItem` as an example to illustrate how to draw graphics on the view.
 

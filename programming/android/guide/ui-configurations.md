@@ -66,7 +66,7 @@ Create a use-defined style:
 int userDefinedStyle = DrawingStyleManager.createDrawingStyle(R.color.white,1f, R.color.white,R.color.white);
 ```
 
-## Add More Basic Grahpics
+## Add More Basic Graphics
 
 A `DrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DrawingItems` in different shapes. Here we use `QuadDrawingItem` as an example to illustrate how to draw graphics on the view.
 
