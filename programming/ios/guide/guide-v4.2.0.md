@@ -55,7 +55,7 @@ There are three ways to add the SDK into your project - **Manually**, or via **C
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftCameraEnhancer','4.2.1'
+   pod 'DynamsoftCameraEnhancer','4.2.0'
    pod 'DynamsoftCore','3.2.10'
    pod 'DynamsoftLicense','3.2.10'
 

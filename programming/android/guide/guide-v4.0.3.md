@@ -90,9 +90,9 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
    ```groovy
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.2.0@aar'
-       implementation 'com.dynamsoft:dynamsoftcore:3.2.10@aar'
-       implementation 'com.dynamsoft:dynamsoftlicense:3.2.10@aar'
+       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3@aar'
+       implementation 'com.dynamsoft:dynamsoftcore:3.0.20@aar'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.0.30@aar'
    }
    ```
 
