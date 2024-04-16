@@ -4,6 +4,7 @@ version_info_list_mobile:
   - value: latest version
   - value: 4.x
     child:
+      - 4.2.0_ios
       - 4.0.2
       - 4.0.1
       - 4.0.0
