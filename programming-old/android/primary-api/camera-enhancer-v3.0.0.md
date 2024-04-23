@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: Android CameraEnhancer Class
-permalink: /programming/android/api-reference/camera-enhancer/camera-enhancer-v3.0.0.html
+permalink: /programming/android/primary-api/camera-enhancer-v3.0.0.html
 ---
 
 # CameraEnhancer Class
