@@ -1,5 +1,31 @@
 [
     {
+        "version": "4.2.10",
+        "matchList": {
+            "android":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/android/api-reference/license",
+                        "version": "3.2.20"
+                    }, {
+                        "path": "/programming/android/api-reference/core",
+                        "version": "3.2.30"
+                    }
+                ]
+            },
+            "ios":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/objectivec-swift/api-reference/license",
+                        "version": "3.2.20"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/core",
+                        "version": "3.2.30"
+                    }
+                ]
+            }
+        }
+    }, {
         "version": "4.2.0",
         "matchList": {
             "android":{

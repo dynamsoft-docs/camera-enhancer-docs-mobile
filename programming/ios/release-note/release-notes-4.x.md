@@ -11,6 +11,10 @@ permalink: /programming/ios/release-note/release-notes-4.x.html
 
 # Release Notes - iOS 4.x
 
+## 4.2.10 (05/15/2024)
+
+* Small fixes and tweaks.
+
 ## 4.2.1 (04/16/2024)
 
 * Updated the privacy list of the library.

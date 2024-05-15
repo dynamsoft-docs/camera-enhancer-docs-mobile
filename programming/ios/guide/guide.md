@@ -12,10 +12,10 @@ permalink: /programming/ios/guide/guide.html
 
 # User Guide on iOS
 
-The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from your iOS applications to stream live video and acquire realtime frames. 
+The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from your iOS applications to stream live video and acquire realtime frames.
 
 > **Example Usage**
-> 
+>
 > See how Dynamsoft Camera Enhancer helps in camera control and video recognition:
 > - **Barcode scanning from video stream**: check [Dynamsoft Barcode Reader iOS User Guide](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/user-guide.html?ver=latest)
 
@@ -23,31 +23,11 @@ Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your iOS
 
 ## App Prerequisites
 
-- System Requirements:
-  - macOS 10.11 and above.
-  - iOS 9.0 and above.
-- Environment: Xcode 7.1 - 11.5 and above.
-- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+- Supported OS: **iOS 11** or higher (**iOS 13** and higher recommended).
+- Supported ABI: **arm64 and x86_64**.
+- Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
 ## Add the SDK
-
-There are three ways to add the SDK into your project - **Manually**, or via **CocoaPods**.
-
-### Add the Frameworks Manually
-
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
-
-   | File | Description |
-   | :--- | :---------- |
-   | DynamsoftCore.xcframework | The core library, which includes common basic structures and intermediate result related APIs. |
-   | DynamsoftLicense.xcframework | The license library, which includes license related APIs. |
-   | DynamsoftCameraEnhancer.xcframework | The library provides camera control, camera enhancements, and basic UI configuration features. |
-
-2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
-
-3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
-
-### Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -55,9 +35,9 @@ There are three ways to add the SDK into your project - **Manually**, or via **C
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftCameraEnhancer','4.2.1'
-   pod 'DynamsoftCore','3.2.10'
-   pod 'DynamsoftLicense','3.2.10'
+   pod 'DynamsoftCameraEnhancer','4.2.10'
+   pod 'DynamsoftCore','3.2.30'
+   pod 'DynamsoftLicense','3.2.20'
 
    end
    ```
@@ -68,18 +48,9 @@ There are three ways to add the SDK into your project - **Manually**, or via **C
    pod install
    ```
 
-## Installation
-
-If you don't have SDK yet, please download Dynamsoft Camera Enhancer (DCE) SDK from <a href="https://www.dynamsoft.com/camera-enhancer/downloads/1000021-confirmation/" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DCE installation package is `DynamsoftCameraEnhancer`, which is represented by `INSTALLATION FOLDER`.
-
 ## Build Your First Application with Dynamsoft Camera Enhancer
 
 The following sample will demonstrate how to acquire a frame from video streaming by DCE.
-
-> Note:
-> - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).
-> - You can download the similar complete Swift source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldSwift).
-> - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/).
 
 ### Create a New Project and Include Dynamsoft Camera Enhancer
 
@@ -421,12 +392,4 @@ Run the project. Now, you can try to capture video frames with Dynamsoft Camera 
 &nbsp;
 
 > Note:
-> - You can download the similar complete Objective-C source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldObjc).
-> - You can download the similar complete Swift source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/ios/HelloWorldSwift).
 > - For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/).
-
-## What's Next?
-
-### How to integration with barcode reader
-
-<a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/user-guide.html?utm_source=docs" target="_blank">This article</a> guides you to integrate the barcode reader function into your app.
