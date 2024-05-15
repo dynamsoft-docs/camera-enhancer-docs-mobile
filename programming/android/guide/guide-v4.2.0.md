@@ -29,8 +29,9 @@ Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your And
 
 ## Build Your First Application
 
->Note: 
+>Note:
 >- The following steps are completed in Android Studio 2022.2.1.
+>- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
 
 ### Create a New Project
 
@@ -57,9 +58,9 @@ Step-by-step guide on how to integrate Dynamsoft Camera Enhancer SDK to your And
 
    ```groovy
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.2.10@aar'
-       implementation 'com.dynamsoft:dynamsoftcore:3.2.30@aar'
-       implementation 'com.dynamsoft:dynamsoftlicense:3.2.20@aar'
+       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.2.0@aar'
+       implementation 'com.dynamsoft:dynamsoftcore:3.2.10@aar'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.2.10@aar'
    }
    ```
 
@@ -90,7 +91,7 @@ To activate the license:
 
    ```groovy
    dependencies {
-       implementation 'com.dynamsoft:dynamsoftlicense:3.2.20@aar'
+       implementation 'com.dynamsoft:dynamsoftlicense:3.2.10@aar'
    }
    ```
 

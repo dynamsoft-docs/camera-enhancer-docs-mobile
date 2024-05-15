@@ -11,6 +11,10 @@ permalink: /programming/android/release-note/release-notes-4.x.html
 
 # Release Notes - Android 4.x
 
+## 4.2.10 (05/15/2024)
+
+* Small fixes and tweaks.
+
 ## 4.2.0 (03/07/2024)
 
 * Internal changes to be compatible with `DynamsoftCaptureVisionRouter` v2.2.10.
