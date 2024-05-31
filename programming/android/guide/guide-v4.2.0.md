@@ -98,7 +98,7 @@ To activate the license:
 2. Initialize the license in your code.
 
    ```java
-   LicenseManager.initLicense(LICENSE, this, (isSuccess, error) -> {
+   LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
        if (!isSuccess) {
            Log.e(TAG, "InitLicense Error: " + error);
        }
@@ -108,7 +108,7 @@ To activate the license:
 >Note:
 >- Network connection is required for the license to work.
 >- "DLS2***" is a time-limited public trial license used in the sample.
->- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
 
 ### Create Camera View
 
