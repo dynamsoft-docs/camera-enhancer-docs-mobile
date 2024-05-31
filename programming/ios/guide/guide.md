@@ -148,6 +148,11 @@ To activate the license:
    }
    ```
 
+>Note:
+>- Network connection is required for the license to work.
+>- "DLS2***" is a time-limited public trial license used in the sample.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=guide&package=ios){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
+
 ### Initialize the Camera View and Control the Camera
 
 In this section, we continue working on the `ViewController` file in the project. You will learn how to create a simple camera app.
