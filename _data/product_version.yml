@@ -4,6 +4,7 @@ version_info_list_mobile:
   - value: latest version
   - value: 4.x
     child:
+      - 4.2.10_Android
       - 4.2.1_ios
       - 4.2.0
       - 4.0.2
