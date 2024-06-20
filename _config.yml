@@ -62,6 +62,8 @@ dce-enums: /camera-enhancer/docs/core/enums/
 core-enums: /capture-vision/docs/core/enums/core/
 cvr-enums: /capture-vision/docs/core/enums/capture-vision-router/
 
+dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
+
 assets: /camera-enhancer/docs/mobile/assets/
 edit_icon: /camera-enhancer/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-smile.png
