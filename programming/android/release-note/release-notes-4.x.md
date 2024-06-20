@@ -11,6 +11,11 @@ permalink: /programming/android/release-note/release-notes-4.x.html
 
 # Release Notes - Android 4.x
 
+## 4.2.11 (06/20/2024)
+
+* Added a new constructor of class [`CameraEnhancer`]({{ site.android-api }}camera-enhancer.html).
+* Updated the enumeration value of [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=android).
+
 ## 4.2.10 (05/15/2024)
 
 * Small fixes and tweaks.
@@ -35,7 +40,7 @@ permalink: /programming/android/release-note/release-notes-4.x.html
 
 ## 4.0.0 (08/10/2023)
 
-* Refactored the camera-controlling APIs of the CameraEnhancer class.
+* Refactored the camera-controlling APIs of the `CameraEnhancer` class.
 * Refactored the UI configuration APIs.
   * Updated the scan region setting APIs. Support scan laser setting.
   * Added new features to set the coordinate base of the DrawingItems and tip messages.
