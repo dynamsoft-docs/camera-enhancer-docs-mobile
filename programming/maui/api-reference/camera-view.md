@@ -43,16 +43,12 @@ The constructor. Create an instance of `CameraView`.
 CameraView();
 ```
 
-**Return Value**
-
-An instance of `CameraView`.
-
 ### TorchButton
 
 The property that defines a torch button. User can click the button to turn on/off the torch. View [`TorchButton`]({{ site.dce_maui_api }}torch-button.html) class for how more information about how to configure the torch button.
 
 ```csharp
-TorchButton TorchButton
+TorchButton TorchButton { get; set; }
 ```
 
 ### TorchButtonVisible
@@ -60,7 +56,7 @@ TorchButton TorchButton
 The property that defines whether the torch button is visible.
 
 ```csharp
-bool TorchButtonVisible
+bool TorchButtonVisible { get; set; }
 ```
 
 ### ScanRegionMaskVisible
@@ -68,7 +64,7 @@ bool TorchButtonVisible
 The property that defines whether the scan region mask is visible.
 
 ```csharp
-bool ScanRegionMaskVisible
+bool ScanRegionMaskVisible { get; set; }
 ```
 
 ### ScanLaserVisible
@@ -76,5 +72,5 @@ bool ScanRegionMaskVisible
 The property that defines whether the scan laser is visible.
 
 ```csharp
-bool ScanLaserVisible
+bool ScanLaserVisible { get; set; }
 ```
