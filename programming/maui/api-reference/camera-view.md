@@ -43,10 +43,6 @@ The constructor. Create an instance of `CameraView`.
 CameraView();
 ```
 
-**Parameters**
-
-`frame`: A CGRect value that defines the position of the view.
-
 **Return Value**
 
 An instance of `CameraView`.
