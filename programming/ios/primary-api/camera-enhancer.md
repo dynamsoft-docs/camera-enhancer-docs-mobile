@@ -275,7 +275,8 @@ func initSystemSettingsFromFile(_ filePath: String) throws -> BOOL
 
 **Parameters**
 
-`filePath`: The path of the JSON file.  
+`filePath`: The path of the JSON file.
+
 `error`: A NSError pointer. An error occurs when the file path is not available or the JSON datacludes invalid keys or values.
 
 **Return Value**
@@ -301,7 +302,8 @@ func initSystemSettings(_ filePath: String) throws -> BOOL
 
 **Parameters**
 
-`JsonString`: The JSON string.  
+`JsonString`: The JSON string.
+
 `error`: A NSError pointer. An error occurs when the JSON data includes invalid keys or values.
 
 **Return Value**
@@ -344,7 +346,8 @@ func initEnhancedSettingsFromFile(_ filePath: String) throws -> BOOL
 
 **Parameters**
 
-`filePath`: The JSON string.  
+`filePath`: The JSON string.
+
 `error`: A NSError pointer. An error occurs when the file path is not available or the JSON data includes invalid keys or values.
 
 **Return Value**
@@ -370,7 +373,8 @@ func initEnhancedSettings(_ JsonString: String) throws -> BOOL
 
 **Parameters**
 
-`JsonString`: The JSON string.  
+`JsonString`: The JSON string.
+
 `error`: A NSError pointer. An error occurs when the JSON data includes invalid keys or values.
 
 **Return Value**
@@ -421,7 +425,8 @@ func outputEnhancedSettingsToFile(_ file: String) throws -> String
 
 **Parameters**
 
-`file` The path that you want to output the JSON file.  
+`file` The path that you want to output the JSON file.
+
 `error` A NSError pointer. An error occurs when the file path is not available.
 
 **Return Value**
@@ -619,7 +624,8 @@ func setScanRegion(_ scanRegion: DSRect) -> BOOL
 
 **Parameters**
 
-`scanRegion`: A  [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object.  
+`scanRegion`: A  [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) object.
+
 `error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
@@ -764,6 +770,7 @@ func selectCamera(_ cameraId: String) -> BOOL
 **Parameters**
 
 `position`: One of the Camera IDs.
+
 `error`: A NSError pointer. An error occurs when failed to switch the camera.
 
 **Return Value**
@@ -790,6 +797,7 @@ func selectCameraWithPosition(_ position: CameraPosition) -> BOOL
 **Parameters**
 
 `position`: One of the DSCameraPosition value.
+
 `error`: A NSError pointer. An error occurs when failed to switch the camera.
 
 **Return Value**
@@ -912,7 +920,8 @@ func setFocus(_ focusPoint: CGPoint, subsequentFocusMode: FocusMode)
 
 **Parameters**
 
-`focusPoint`: The focus point of interest. The coordinate base of the point is "image".  
+`focusPoint`: The focus point of interest. The coordinate base of the point is "image".
+
 `subsequentFocusMode`: The subsequent focus mode.
 
 ### convertRectToViewCoordinates
