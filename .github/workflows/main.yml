@@ -8,7 +8,7 @@ on:
   push:
     branches: 
     - main 
-    #- preview 
+    - archive 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,4 +31,11 @@ jobs:
       doc-url: camera-enhancer/docs/mobile
     secrets: inherit
 
-  
+  Build-Archive:
+    if: ${{ github.ref == 'refs/heads/archive' }}
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-archive.yml@archive
+    with:
+      doc-repo: camera-enhancer-docs-mobile
+      doc-url: camera-enhancer/docs-archive/mobile
+    secrets: inherit
+

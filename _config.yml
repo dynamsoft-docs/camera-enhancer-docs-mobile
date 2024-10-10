@@ -1,83 +1,83 @@
 repositoryUrl: https://github.com/dynamsoft-docs/camera-enhancer-docs-mobile/blob/main
 repositoryUrlMobile: https://github.com/dynamsoft-docs/camera-enhancer-docs-mobile/blob/main
 repository: dynamsoft-docs/camera-enhancer-docs-mobile
-docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/mobile/
-firstLevelUrl: /camera-enhancer/docs/mobile
-docHomePage: /camera-enhancer/docs/core/introduction/
+docFullPath: https://www.dynamsoft.com/camera-enhancer/docs-archive/mobile/
+firstLevelUrl: /camera-enhancer/docs-archive/mobile
+docHomePage: /camera-enhancer/docs-archive/core/introduction/
 
 productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
 productName: Dynamsoft Camera Enhancer
 
-introduction: /camera-enhancer/docs/core/introduction/
-programming: /camera-enhancer/docs/core/programming/
-parameters: /camera-enhancer/docs/core/parameters/
-license_activation: /camera-enhancer/docs/core/license-activation/
-release_notes: /camera-enhancer/docs/core/release-notes/
-parameter-reference: /camera-enhancer/docs/core/parameters/reference/
-faq: /camera-enhancer/docs/core/faq/
+introduction: /camera-enhancer/docs-archive/core/introduction/
+programming: /camera-enhancer/docs-archive/core/programming/
+parameters: /camera-enhancer/docs-archive/core/parameters/
+license_activation: /camera-enhancer/docs-archive/core/license-activation/
+release_notes: /camera-enhancer/docs-archive/core/release-notes/
+parameter-reference: /camera-enhancer/docs-archive/core/parameters/reference/
+faq: /camera-enhancer/docs-archive/core/faq/
 
-ios: /camera-enhancer/docs/mobile/programming/ios/
-ios-guide: /camera-enhancer/docs/mobile/programming/ios/guide/
-ios-api: /camera-enhancer/docs/mobile/programming/ios/primary-api/
-ios-api-auxiliary: /camera-enhancer/docs/mobile/programming/ios/auxiliary-api/
-ios-release-note: /camera-enhancer/docs/mobile/programming/ios/release-note/
-ios-cameraenhancer: /camera-enhancer/docs/mobile/programming/ios/api/cameraenhancer/
-dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+ios: /camera-enhancer/docs-archive/mobile/programming/ios/
+ios-guide: /camera-enhancer/docs-archive/mobile/programming/ios/guide/
+ios-api: /camera-enhancer/docs-archive/mobile/programming/ios/primary-api/
+ios-api-auxiliary: /camera-enhancer/docs-archive/mobile/programming/ios/auxiliary-api/
+ios-release-note: /camera-enhancer/docs-archive/mobile/programming/ios/release-note/
+ios-cameraenhancer: /camera-enhancer/docs-archive/mobile/programming/ios/api/cameraenhancer/
+dcv_ios_api: /capture-vision/docs-archive/mobile/programming/ios/api-reference/
 
-android: /camera-enhancer/docs/mobile/programming/android/
-android-guide: /camera-enhancer/docs/mobile/programming/android/guide/
-android-api: /camera-enhancer/docs/mobile/programming/android/primary-api/
-android-api-auxiliary: /camera-enhancer/docs/mobile/programming/android/auxiliary-api/
-android-release-note: /camera-enhancer/docs/mobile/programming/android/release-note/
-android-cameraenhancer: /camera-enhancer/docs/mobile/programming/android/primary-api/cameraenhancer/
-dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+android: /camera-enhancer/docs-archive/mobile/programming/android/
+android-guide: /camera-enhancer/docs-archive/mobile/programming/android/guide/
+android-api: /camera-enhancer/docs-archive/mobile/programming/android/primary-api/
+android-api-auxiliary: /camera-enhancer/docs-archive/mobile/programming/android/auxiliary-api/
+android-release-note: /camera-enhancer/docs-archive/mobile/programming/android/release-note/
+android-cameraenhancer: /camera-enhancer/docs-archive/mobile/programming/android/primary-api/cameraenhancer/
+dcv_android_api: /capture-vision/docs-archive/mobile/programming/android/api-reference/
 
-flutter: /capture-vision/docs/mobile/programming/flutter/
-flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+flutter: /capture-vision/docs-archive/mobile/programming/flutter/
+flutter_api: /capture-vision/docs-archive/mobile/programming/flutter/api-reference/
 
-xamarin: /capture-vision/docs/mobile/programming/xamarin/
-xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs-archive/mobile/programming/xamarin/api-reference/
 
-cordova: /capture-vision/docs/mobile/programming/cordova/
-cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+cordova: /capture-vision/docs-archive/mobile/programming/cordova/
+cordova_api: /capture-vision/docs-archive/mobile/programming/cordova/api-reference/
 
-react_native: /capture-vision/docs/mobile/programming/react-native/
-react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+react_native: /capture-vision/docs-archive/mobile/programming/react-native/
+react_native_api: /capture-vision/docs-archive/mobile/programming/react-native/api-reference/
 
-reference: /camera-enhancer/docs/core/parameters/reference/
-enumerations: /camera-enhancer/docs/core/parameters/enumerations/
-mobile-enum: /camera-enhancer/docs/core/programming/enumerations/
+reference: /camera-enhancer/docs-archive/core/parameters/reference/
+enumerations: /camera-enhancer/docs-archive/core/parameters/enumerations/
+mobile-enum: /camera-enhancer/docs-archive/core/programming/enumerations/
 
-license-error: /camera-enhancer/docs/core/faq/license-error/
-contact-us: /camera-enhancer/docs/core/faq/contact-us/
-gallery: /camera-enhancer/docs/core/resources/code-gallery/
-all-release-note: /camera-enhancer/docs/core/release-notes/
-resource: /camera-enhancer/docs/core/resources/
+license-error: /camera-enhancer/docs-archive/core/faq/license-error/
+contact-us: /camera-enhancer/docs-archive/core/faq/contact-us/
+gallery: /camera-enhancer/docs-archive/core/resources/code-gallery/
+all-release-note: /camera-enhancer/docs-archive/core/release-notes/
+resource: /camera-enhancer/docs-archive/core/resources/
 
 barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhancer/
 barcode-deploy-android: /barcode-reader/programming/android/api-reference/camera-enhancer/
 barcode-enum: /barcode-reader/parameters/enum/
 
-dce-enums: /camera-enhancer/docs/core/enums/
-core-enums: /capture-vision/docs/core/enums/core/
-cvr-enums: /capture-vision/docs/core/enums/capture-vision-router/
+dce-enums: /camera-enhancer/docs-archive/core/enums/
+core-enums: /capture-vision/docs-archive/core/enums/core/
+cvr-enums: /capture-vision/docs-archive/core/enums/capture-vision-router/
 
-dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
+dce_maui_api: /camera-enhancer/docs-archive/mobile/programming/maui/api-reference/
 
-assets: /camera-enhancer/docs/mobile/assets/
-edit_icon: /camera-enhancer/docs/mobile/assets/img-icon/edit-icon.png
-smile_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-smile.png
-sad_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-sad.png
-dbr_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-dbr.svg
-dwt_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-dwt.svg
-dnt_icon: /camera-enhancer/docs/mobile/assets/img-icon/icon-dnt.svg
+assets: /camera-enhancer/docs-archive/mobile/assets/
+edit_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/edit-icon.png
+smile_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/icon-smile.png
+sad_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/icon-sad.png
+dbr_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/icon-dbr.svg
+dwt_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/icon-dwt.svg
+dnt_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/icon-dnt.svg
 
 overview: /camera-enhancer/overview/
 download: /camera-enhancer/downloads/
 
 useVersionTree: true
 
-baseurl: "/camera-enhancer/docs/mobile/"
+baseurl: "/camera-enhancer/docs-archive/mobile/"
 plugins:
   - jemoji
   - jekyll-sitemap
