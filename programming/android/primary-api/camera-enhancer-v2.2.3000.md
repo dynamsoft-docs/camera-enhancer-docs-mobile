@@ -25,6 +25,8 @@ class CameraEnhancer extends ImageSourceAdapter
 
 | Method | Description |
 |------- |-------------|
+| [`CameraEnhancer`](#cameraenhancer) | The constructor. |
+| [`CameraEnhancer`](#cameraenhancer) | The constructor. |
 | [`addListener`](#addlistener) | Add a VideoFrameListener to receive callback when video frames are output. |
 | [`removeListener`](#removelistener) | Remove a VideoFrameListener. |
 | [`takePhoto`](#takephoto) | Take a photo. |
@@ -94,6 +96,32 @@ The following methods are inherited from superclass [`ImageSourceAdapter`]({{ si
 | [`addImageToBuffer`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the buffer of the adapter. |
 | [`clearBuffer`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears the image buffer. |
 | [`setErrorListener`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Register an error listener to receive callback when error occurs in the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html). |
+
+### CameraEnhancer(lifecycleOwner)
+
+The constructor.
+
+```java
+CameraEnhancer(@NonNull final LifecycleOwner lifecycleOwner)
+```
+
+**Parameters**
+
+`lifecycleOwner`: An implementation of `LifecycleOwner` such as an `AppCompatActivity` object.
+
+### CameraEnhancer(cameraView, lifecycleOwner)
+
+The constructor.
+
+```java
+CameraEnhancer(@NonNull CameraView cameraView, @NonNull final LifecycleOwner lifecycleOwner)
+```
+
+**Parameters**
+
+`cameraView`: An object of `CameraView`.
+
+`lifecycleOwner`: An implementation of `LifecycleOwner` such as an `AppCompatActivity` object.
 
 ### addListener
 
