@@ -55,10 +55,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`close`](#close) | Close the camera. |
 | [`setResolution`](#setresolution) | Set the resolution. If the targeting resolution is not available for your device, a closest available resolutionll be selected. |
 | [`getResolution`](#getresolution) | Get the current resolution. |
-| [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
-| [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
 | [`selectCamera(position)`](#selectcameraposition) | Select a camera with a camera position. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
 | [`getFrameRate`](#getframerate) | Get the frame rate. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
@@ -71,6 +68,9 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
 | [`getAutoZoomRange`](#getautozoomrange) | Get the range of auto zoom. |
 | [`cameraView`](#setcameraview) | Set/get the CameraView instance that bind with this CameraEnhancer instance. |
+| [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
+| [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
 
 ## Inherited Methods
 
@@ -500,35 +500,6 @@ List<Size> getAvailableResolutions(){}
 
 All available resolutions in a list.
 
-### getAllCameras
-
-Get the IDs of all available cameras.
-
-```java
-String[] getAllCameras(){}
-```
-
-**Return Value**
-
-An array of camera IDs.
-
-### selectCamera
-
-Select a camera with a camera ID.
-
-```java
-void selectCamera(String cameraID) throws CameraEnhancerException{}
-```
-
-**Parameters**
-
-`position`: One of the Camera IDs.
-`error`: A NSError pointer. An error occurs when failed to switch the camera.
-
-**Return Value**
-
-A bool value that indicates whether the camera selection is successful.
-
 ### selectCamera(position)
 
 Select a camera with a camera position.
@@ -545,18 +516,6 @@ selectCamera(EnumCameraPosition position){}
 **Return Value**
 
 A bool value that indicates whether the camera selection is successful.
-
-### getSelectedCamera
-
-Get the currently actived camera.
-
-```java
-String getSelectedCamera(){}
-```
-
-**Return Value**
-
-The ID of the currently actived camera.
 
 ### getFrameRate
 
@@ -690,3 +649,50 @@ Bind a `CameraView` instance with this `CameraEnhancer` instance.
 ```java
 void setCameraView(CameraView view){}
 ```
+
+### getAllCameras
+
+> This method is deprecated.
+
+Get the IDs of all available cameras.
+
+```java
+String[] getAllCameras(){}
+```
+
+**Return Value**
+
+An array of camera IDs.
+
+### selectCamera
+
+> This method is deprecated.
+
+Select a camera with a camera ID.
+
+```java
+void selectCamera(String cameraID) throws CameraEnhancerException{}
+```
+
+**Parameters**
+
+`position`: One of the Camera IDs.
+`error`: A NSError pointer. An error occurs when failed to switch the camera.
+
+**Return Value**
+
+A bool value that indicates whether the camera selection is successful.
+
+### getSelectedCamera
+
+> This method is deprecated.
+
+Get the currently actived camera.
+
+```java
+String getSelectedCamera(){}
+```
+
+**Return Value**
+
+The ID of the currently actived camera.
