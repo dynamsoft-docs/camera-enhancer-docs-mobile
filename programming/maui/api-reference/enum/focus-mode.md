@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumFocusMode - Dynamsoft Vision Router MAUI Edition
+title: EnumFocusMode - Dynamsoft Capture Vision MAUI Edition
 description: The enumeration FocusMode of DCE MAUI describes the focus mode.
 keywords: focus mode, lock focal length, keep continuous auto focus
 needGenerateH3Content: true

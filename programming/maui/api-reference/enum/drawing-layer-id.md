@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumDrawingLayerId - Dynamsoft Vision Router MAUI Edition
+title: EnumDrawingLayerId - Dynamsoft Capture Vision MAUI Edition
 description: The enumeration DrawingLayerId of DCE MAUI describes the layer ID.
 keywords: Camera Position, front forward, back forward
 needGenerateH3Content: true

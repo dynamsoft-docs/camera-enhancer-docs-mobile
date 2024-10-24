@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumCameraPosition - Dynamsoft Vision Router MAUI Edition
+title: EnumCameraPosition - Dynamsoft Capture Vision MAUI Edition
 description: The enumeration CameraPosition of DCE MAUI describes the camera position.
 keywords: Camera Position, front forward, back forward
 needGenerateH3Content: true

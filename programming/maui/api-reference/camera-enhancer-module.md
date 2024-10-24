@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CameraEnhancerModule - DynamsoftCameraEnhancer MAUI Edition API Reference
+title: CameraEnhancerModule - Dynamsoft Capture Vision MAUI Edition API Reference
 description: The class CameraEnhancerModule of DCV MAUI represents the camera enhancer module, which provides general functions for the camera enhancer.
 keywords: camera enhancer, MAUI
 needGenerateH3Content: true
