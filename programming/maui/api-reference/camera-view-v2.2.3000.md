@@ -16,7 +16,7 @@ The `CameraView` class is used to display the camera preview and provides UI con
 
 *Namespace:* Dynamsoft.CameraEnhancer.Maui
 
-*Assembly:* Dynamsoft.CameraEnhancer.Maui
+*Assembly:* Dynamsoft.CaptureVisionRouter.Maui
 
 ```java
 class CameraView : View
@@ -27,7 +27,6 @@ class CameraView : View
 | Method | Description |
 |------- |-------------|
 | [`CameraView`](#cameraview-1) | The constructor. |
-| [`GetDrawingLayer`](#getdrawinglayer) | Get the specified `DrawingLayer`. |
 
 | Property | Type | Description |
 |--------- | ---- |-------------|
@@ -43,22 +42,6 @@ The constructor. Create an instance of `CameraView`.
 ```csharp
 CameraView();
 ```
-
-### GetDrawingLayer
-
-Get the specified `DrawingLayer`.
-
-```csharp
-DrawingLayer GetDrawingLayer(EnumDrawingLayerId id);
-```
-
-**Parameters**
-
-`[in] id`: One of the [`EnumDrawingLayerId`]({{ site.dce_maui_api }}enum/drawing-layer-id.html) member that specifies the ID of the layer that you want to get.
-
-**Return Value**
-
-The `DrawingLayer` instance.
 
 ### TorchButton
 

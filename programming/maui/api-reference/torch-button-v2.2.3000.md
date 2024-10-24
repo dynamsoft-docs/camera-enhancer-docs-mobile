@@ -16,7 +16,7 @@ The TorchButton class defines a torch button with its location, size and image.
 
 *Namespace:* Dynamsoft.CameraEnhancer.Maui
 
-*Assembly:* Dynamsoft.CameraEnhancer.Maui
+*Assembly:* Dynamsoft.CaptureVisionRouter.Maui
 
 ```java
 class TorchButton

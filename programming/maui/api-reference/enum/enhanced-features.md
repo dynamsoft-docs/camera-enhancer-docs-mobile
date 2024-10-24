@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumEnhancedFeatures - Dynamsoft Vision Router MAUI Edition
+title: EnumEnhancedFeatures - Dynamsoft Capture Vision MAUI Edition
 description: The enumeration EnhancedFeatures of DCE MAUI describes the enhanced camera controlling features.
 keywords: frame filter, sensor control, enhanced focus, auto zoom, smart torch
 needGenerateH3Content: true
