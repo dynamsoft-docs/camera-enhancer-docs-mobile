@@ -45,7 +45,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/image-source-adapter.html)
+The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html)
 
 | Method | Description |
 | ------ | ----------- |
@@ -133,7 +133,7 @@ DMRect GetScanRegion();
 
 **Return Value**
 
-A [`DMRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object that represent the scan region area.
+A [`DMRect`]({{ site.dcv_maui_api }}core/rect.html) object that represent the scan region area.
 
 ### EnableEnhancedFeatures
 
