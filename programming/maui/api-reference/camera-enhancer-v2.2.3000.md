@@ -43,7 +43,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`SetFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`GetFocusMode`](#getfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 
-The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/image-source-adapter.html)
+The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html)
 
 | Method | Description |
 | ------ | ----------- |
@@ -131,7 +131,7 @@ DMRect GetScanRegion();
 
 **Return Value**
 
-A [`DMRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object that represent the scan region area.
+A [`DMRect`]({{ site.dcv_maui_api }}core/rect.html) object that represent the scan region area.
 
 ### EnableEnhancedFeatures
 

@@ -32,7 +32,7 @@ class ImageEditorView : View
 | Property | Type | Description |
 |--------- | ---- |-------------|
 | [`OriginalImage`](#originalimage) | *ImageData* | The original image that displayed on the view. |
-| [`SelectedDrawingItem`](#selecteddrawingitem) | *DrawingItem* | The selected [`DrawingItem`](drawingitem.md) on the view. |
+| [`SelectedDrawingItem`](#selecteddrawingitem) | *DrawingItem* | The selected [`DrawingItem`](drawing-item.html) on the view. |
 
 ### ImageEditorView
 
@@ -68,7 +68,7 @@ ImageData OriginalImage{ get; set; }
 
 ### SelectedDrawingItem
 
-The selected [`DrawingItem`](drawingitem.md) on the view.
+The selected [`DrawingItem`](drawing-item.html) on the view.
 
 ```csharp
 DrawingItem SelectedDrawingItem { get; }
