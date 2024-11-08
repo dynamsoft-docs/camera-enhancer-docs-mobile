@@ -15,10 +15,10 @@ permalink: /programming/android/guide/scan-region.html
 
 ```java
 DSRect region = new DSRect();
-region.left = 15;
-region.right = 85;
-region.top = 30;
-region.bottom = 70;
+region.left = 0.15;
+region.right = 0.85;
+region.top = 0.3;
+region.bottom = 0.7;
 region.isMeasuredInPercentage = true;
 try {
     mCameraEnhancer.setScanRegion(region);
@@ -54,10 +54,10 @@ Since the scan region is set for the video streaming, its coordinate system migh
 
 ```java
 DSRect region = new DSRect();
-region.left = 15;
-region.right = 85;
-region.top = 30;
-region.bottom = 70;
+region.left = 0.15;
+region.right = 0.85;
+region.top = 0.3;
+region.bottom = 0.7;
 region.isMeasuredInPercentage = true;
 try {
     mCameraEnhancer.setScanRegion(region);
