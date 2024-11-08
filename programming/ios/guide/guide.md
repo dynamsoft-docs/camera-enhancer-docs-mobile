@@ -8,6 +8,7 @@ noTitleIndex: true
 needGenerateH3Content: true
 breadcrumbText: iOS Guide
 permalink: /programming/ios/guide/guide.html
+ignore: true
 ---
 
 # User Guide on iOS
