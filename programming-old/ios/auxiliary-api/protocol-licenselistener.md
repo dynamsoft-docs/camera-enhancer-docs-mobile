@@ -6,6 +6,7 @@ keywords: license verification, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/ios/auxiliary-api/protocol-licenselistener.html
 ---
 
 # DSLicenseVerificationListener

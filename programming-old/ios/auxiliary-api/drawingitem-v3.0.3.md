@@ -47,7 +47,7 @@ var drawingStyleId: Int { get set }
 
 ## state
 
-The property that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.ios_camera_enhancer }}enum-drawing-item-state.html).
+The property that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.dce-enums }}enum-drawing-item-state.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -86,7 +86,7 @@ permalink: /programming/ios/api-reference-v2.3.10.html
 
 ## Protocol
 
-- [`DCECameraStateListener`]({{ site.ios-api-auxiliary }}protocol-camerastatelistener.html)
+- [`DCECameraStateListener`]({{ site.ios-api-auxiliary }}protocol-dcecamerastatelistener.html)
 - [`DCEFrameListener`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html)
 - [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html)
 - [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html)

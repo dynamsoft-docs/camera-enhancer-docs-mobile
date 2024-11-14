@@ -34,7 +34,7 @@ int getErrorCode()
 
 **Return Value**
 
-The error code. See <a href="https://www.dynamsoft.com/camera-enhancer/docs/parameters/enumerations/error-code.html?ver=latest" target="_blank">Camera Enhancer error code list</a>.
+The error code. See [Camera Enhancer error code list]({{ site.dce-enums }}error-code.html?lang=android).
 
 **Code Snippet**
 

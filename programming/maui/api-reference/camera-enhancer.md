@@ -111,7 +111,7 @@ void Close();
 
 ### SetScanRegion
 
-Set a scan region. The video frame is cropped based on the scan region. To learn the full code to setting a scan region, please refer to the [scan region](../guide/scan-region.md) article.
+Set a scan region. The video frame is cropped based on the scan region.
 
 ```csharp
 void SetScanRegion(DMRect scanRegion);

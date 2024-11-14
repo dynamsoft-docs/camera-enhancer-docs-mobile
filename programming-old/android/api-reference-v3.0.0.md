@@ -28,7 +28,7 @@ permalink: /programming/android/api-reference-v3.0.0.html
   * [LineDrawingItem](auxiliary-api/drawingitem-line.html)
   * [QuadDrawingItem](auxiliary-api/drawingitem-quad.html)
   * [RectDrawingItem](auxiliary-api/drawingitem-rect.html)
-  * [TextDrawingItem](auxiliary-api/drawingitem-tex.html)
+  * [TextDrawingItem](auxiliary-api/drawingitem-text.html)
 * [DCEDrawingLayer](auxiliary-api/dcedrawinglayer.html)
 * [DrawingStyle](auxiliary-api/drawingstyle.html)
 * [DrawingStyleManager](auxiliary-api/drawingstylemanager.html)
@@ -42,11 +42,11 @@ permalink: /programming/android/api-reference-v3.0.0.html
 
 ## Enumerations
 
-* [`EnumCameraPosition`]({{ site.dcv-enum }}camera-position.html)
-* [`EnumCameraState`]({{ site.dcv-enum }}camera-state.html)
-* [`EnumCoordinateBase`]({{ site.dcv-enum }}coordinate-base.html)
-* [`EnumDrawingItemMediaType`]({{ site.dcv-enum }}drawing-item-media-type.html)
-* [`EnumDrawingItemState`]({{ site.dcv-enum }}drawing-item-state.html)
-* [`EnumEnhancedFeatures`]({{ site.dcv-enum }}enhanced-features.html)
-* [`EnumFocusMode`]({{ site.dcv-enum }}focus-mode.html)
-* [`EnumResolution`]({{ site.dcv-enum }}resolution.html)
+* [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=android)
+* [`EnumCameraState`]({{ site.dce-enums }}camera-state.html?lang=android)
+* [`EnumCoordinateBase`]({{ site.dce-enums }}coordinate-base.html?lang=android)
+* [`EnumDrawingItemMediaType`]({{ site.dce-enums }}drawing-item-media-type.html?lang=android)
+* [`EnumDrawingItemState`]({{ site.dce-enums }}drawing-item-state.html?lang=android)
+* [`EnumEnhancedFeatures`]({{ site.dce-enums }}enhanced-features.html?lang=android)
+* [`EnumFocusMode`]({{ site.dce-enums }}focus-mode.html?lang=android)
+* [`EnumResolution`]({{ site.dce-enums }}resolution.html?lang=android)

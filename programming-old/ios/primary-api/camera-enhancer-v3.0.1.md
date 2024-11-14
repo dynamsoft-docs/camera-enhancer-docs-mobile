@@ -626,7 +626,7 @@ Take a photo from the camera and save the image in the memory. The photo will be
 
 **Parameters**
 
-`listener`: An instance of [`DCEPhotoListener`](protocol-dcephotolistener.html).
+`listener`: An instance of [`DCEPhotoListener`]({{ site.ios-api-auxiliary }}protocol-dcephotolistener.html).
 
 **Code Snippet**
 

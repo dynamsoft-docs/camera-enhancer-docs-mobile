@@ -6,6 +6,8 @@ keywords: license verification, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/android/auxiliary-api/interface-licenselistener.html
+ignore: true
 ---
 
 # LicenseVerificationListener

@@ -99,7 +99,7 @@ permalink: /programming/android/api-reference-v2.3.10.html
 
 ## Interfaces
 
-- [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-camerastatelistener.html)
+- [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-dcecamerastatelistener.html)
 - [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
 - [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 - [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)

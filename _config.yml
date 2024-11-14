@@ -63,6 +63,7 @@ core-enums: /capture-vision/docs-archive/core/enums/core/
 cvr-enums: /capture-vision/docs-archive/core/enums/capture-vision-router/
 
 dce_maui_api: /camera-enhancer/docs-archive/mobile/programming/maui/api-reference/
+dcv_maui_api: /capture-vision/docs-archive/mobile/programming/maui/api-reference/
 
 assets: /camera-enhancer/docs-archive/mobile/assets/
 edit_icon: /camera-enhancer/docs-archive/mobile/assets/img-icon/edit-icon.png

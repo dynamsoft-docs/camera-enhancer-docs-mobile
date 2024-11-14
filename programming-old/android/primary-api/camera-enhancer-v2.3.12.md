@@ -62,7 +62,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
 | [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
-| [`setCameraStateListener`](#setcamerastatelistener ) | Add a [`DCECameraStateListener`](interface-dcecamerastatelistener.html) to receive notification when the camera state changes. |
+| [`setCameraStateListener`](#setcamerastatelistener ) | Add a [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-dcecamerastatelistener.html) to receive notification when the camera state changes. |
 
 ## Frame Acquiring Methods Summary
 
@@ -547,7 +547,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameters**
 
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`](region-definition.html) class.
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{ site.android-api-auxiliary }}region-definition.html) class.
 
 **Code Snippet**
 
@@ -569,14 +569,14 @@ try {
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`](region-definition.html):
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{ site.android-api-auxiliary }}region-definition.html):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`](dceframe.html) from [`FrameOutputCallback`](interface-dceframelistener.html) and cropped [`DCEFrame`](dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
+- You will still get the original [`DCEFrame`]({{ site.android-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.android-api-auxiliary }}interface-dceframelistener.html) and cropped [`DCEFrame`]({{ site.android-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.android-api-auxiliary }}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
 - When you trigger `setScanRegion`, the **scanRegion** will be displayed on the UI automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;
@@ -650,7 +650,7 @@ boolean scanRegionVisible = cameraEnhancer.getScanRegionVisible();
 
 ### setCameraStateListener
 
-Add a [`DCECameraStateListener`](interface-dcecamerastatelistener.html) to receive notification when the camera state changes.
+Add a [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-dcecamerastatelistener.html) to receive notification when the camera state changes.
 
 ```java
 void setCameraStateListener (DCECameraStateListener listener)
@@ -658,7 +658,7 @@ void setCameraStateListener (DCECameraStateListener listener)
 
 **Parameters**
 
-`[in] listener`: A [`DCECameraStateListener`](interface-dcecamerastatelistener.html) object.
+`[in] listener`: A [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-dcecamerastatelistener.html) object.
 
 **Code Snippet**
 
@@ -762,7 +762,7 @@ cameraEnhancer.removeListener(listener);
 
 ### takePhoto
 
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](interface-dcephotolistener.html#photooutputcallback).
+Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html#photooutputcallback).
 
 ```java
 void takePhoto(DCEPhotoListener listener)
@@ -770,7 +770,7 @@ void takePhoto(DCEPhotoListener listener)
 
 **Parameters**
 
-`listener`: An instance of [`DCEPhotoListener`](interface-dcephotolistener.html).
+`listener`: An instance of [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html).
 
 **Code Snippet**
 
@@ -919,7 +919,7 @@ cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthres
 
 ### setCameraView
 
-Set a [`DCECameraView`](dcecameraview.html) object as the main UI view.
+Set a [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object as the main UI view.
 
 ```java
 void setCameraView(DCECameraView cameraView)
@@ -927,7 +927,7 @@ void setCameraView(DCECameraView cameraView)
 
 **Parameters**
 
-`cameraView`: The main UI view. See also [`DCECameraView`](dcecameraview.html).
+`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
 
 **Code Snippet**
 
@@ -942,7 +942,7 @@ cameraEnhancer.setCameraView(cameraView);
 
 ### getCameraView
 
-Get the [`DCECameraView`](dcecameraview.html) object of the current UI view.
+Get the [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object of the current UI view.
 
 ```java
 DCECameraView getCameraView()
@@ -950,7 +950,7 @@ DCECameraView getCameraView()
 
 **Return Value**
 
-The current UI view. See also [`DCECameraView`](dcecameraview.html).
+The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
 
 **Code Snippet**
 

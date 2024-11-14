@@ -78,7 +78,7 @@ public EnumDrawingItemState getState();
 
 **Return Value**
 
-The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.android_camera_enhancer }}enum-drawing-item-state.html).
+The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.dce-enums }}drawing-item-state.html?lang=android).
 
 **Code Snippet**
 
@@ -98,7 +98,7 @@ public void setState(EnumDrawingItemState state);
 
 **Parameters**
 
-`state`: The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.android_camera_enhancer }}enum-drawing-item-state.html).
+`state`: The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.dce-enums }}drawing-item-state.html?lang=android).
 
 **Code Snippet**
 
