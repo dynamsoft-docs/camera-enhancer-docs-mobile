@@ -14,7 +14,7 @@ The `DSFeedback` class provides methods to trigger feedbacks from the hardware, 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

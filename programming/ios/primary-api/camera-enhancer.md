@@ -14,7 +14,7 @@ The `DSCameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer t
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -72,6 +72,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
 | [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
+| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a `DSZoomFactorChangeListener` to receive callback when the zoom-factor changed. |
 
 ## Attributes
 
@@ -1060,3 +1061,24 @@ func getSelectedCamera() -> String
 **Return Value**
 
 The ID of the currently actived camera.
+
+### setZoomFactorChangeListener
+
+Set a [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setZoomFactorChangeListener:(nullable id<DSZoomFactorChangeListener>)listener;
+```
+2. 
+```swift
+func setZoomFactorChangeListener(_ listener: DSZoomFactorChangeListener?)
+```
+
+**Parameters**
+
+`listener`: A delegate object of [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive zoom-factor changed notification.

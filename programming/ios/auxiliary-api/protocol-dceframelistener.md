@@ -14,7 +14,7 @@ The `DSVideoFrameListener` protocol includes methods for monitoring the camera s
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
