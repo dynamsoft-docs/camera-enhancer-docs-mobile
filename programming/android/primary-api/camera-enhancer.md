@@ -71,6 +71,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
 | [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
+| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a `ZoomFactorChangeListener` to receive callback when the zoom-factor changed. |
 
 ## Inherited Methods
 
@@ -696,3 +697,15 @@ String getSelectedCamera(){}
 **Return Value**
 
 The ID of the currently actived camera.
+
+### setZoomFactorChangeListener
+
+Set a [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
+
+```java
+void setZoomFactorChangeListener(ZoomFactorChangeListener listener);
+```
+
+**Parameters**
+
+`listener`: A [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
