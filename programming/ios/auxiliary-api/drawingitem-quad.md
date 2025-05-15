@@ -14,7 +14,7 @@ The `DSQuadDrawingItem` class is a subclass of `DSDrawingItem`. It represents a 
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -14,7 +14,7 @@ The `DSDrawingLayer` class represents a drawing layer, which is used for managin
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

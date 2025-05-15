@@ -14,7 +14,7 @@ The `DSImageEditorView` class represents an image editor view, which allows user
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

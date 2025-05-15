@@ -14,7 +14,7 @@ The `DSCapabilities` class represents the capability properties of the hardware,
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

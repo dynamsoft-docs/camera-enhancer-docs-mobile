@@ -14,7 +14,7 @@ The `DSDrawingStyle` class represents the style attributes of the drawing items,
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -14,7 +14,7 @@ The `ArcDrawingItem` class is a subclass of `DrawingItem`. It represents a drawi
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

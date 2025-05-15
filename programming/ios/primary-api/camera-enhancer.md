@@ -14,7 +14,7 @@ The `DSCameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer t
 
 ## Definition
 
-*Assembly:* DynamsoftCameraEnhancer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
