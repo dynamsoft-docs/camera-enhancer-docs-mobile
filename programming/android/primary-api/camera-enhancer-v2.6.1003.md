@@ -153,7 +153,7 @@ void removeListener(VideoFrameListener listener){}
 Take a photo.
 
 ```java
-void takePhoto(PhotoListener listener){}
+void takePhoto(PhotoListener listener) throws CameraEnhancerException{}
 ```
 
 **Parameters**
@@ -177,7 +177,7 @@ The camera position.
 Set the zoom factor of the camera. You can use getCapabilities to check the maximum available zoom factor.
 
 ```java
-void setZoomFactor(float factor){}
+void setZoomFactor(float factor) throws CameraEnhancerException{}
 ```
 
 **Parameters**
@@ -189,7 +189,7 @@ void setZoomFactor(float factor){}
 Get the zoom factor of the camera.
 
 ```java
-float getZoomFactor(){}
+float getZoomFactor() throws CameraEnhancerException{}
 ```
 
 **Return Value**
@@ -454,7 +454,7 @@ A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object t
 Open the camera.
 
 ```java
-void open(){}
+void open() throws CameraEnhancerException{}
 ```
 
 ### close
@@ -462,7 +462,7 @@ void open(){}
 Close the camera.
 
 ```java
-void close(){}
+void close() throws CameraEnhancerException{}
 ```
 
 ### setResolution
@@ -470,7 +470,7 @@ void close(){}
 Set the resolution. If the targeted resolution is not available for your device, the closest available resolution will be selected.
 
 ```java
-void setResolution(EnumResolution resolution){}
+void setResolution(EnumResolution resolution) throws CameraEnhancerException{}
 ```
 
 **Parameters**
@@ -535,7 +535,7 @@ The current frame rate.
 Turn on the torch.
 
 ```java
-void turnOnTorch(){}
+void turnOnTorch() throws CameraEnhancerException{}
 ```
 
 ### turnOffTorch
@@ -543,7 +543,7 @@ void turnOnTorch(){}
 Turn off the torch.
 
 ```java
-void turnOffTorch(){}
+void turnOffTorch() throws CameraEnhancerException{}
 ```
 
 ### setFocus
@@ -551,7 +551,7 @@ void turnOffTorch(){}
 Set the focus point of interest and trigger an one-off auto-focus.
 
 ```java
-void setFocus(android.graphics.PointF focusPoint){}
+void setFocus(android.graphics.PointF focusPoint) throws CameraEnhancerException{}
 ```
 
 **Parameters**
@@ -563,7 +563,7 @@ void setFocus(android.graphics.PointF focusPoint){}
 Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode.
 
 ```java
-void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusMode){}
+void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusMode) throws CameraEnhancerException{}
 ```
 
 **Parameters**
@@ -651,18 +651,6 @@ Bind a `CameraView` instance with this `CameraEnhancer` instance.
 void setCameraView(CameraView view){}
 ```
 
-### setZoomFactorChangeListener
-
-Set a [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
-
-```java
-void setZoomFactorChangeListener(ZoomFactorChangeListener listener);
-```
-
-**Parameters**
-
-`listener`: A [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
-
 ### getAllCameras
 
 > This method is deprecated.
@@ -709,3 +697,15 @@ String getSelectedCamera(){}
 **Return Value**
 
 The ID of the currently actived camera.
+
+### setZoomFactorChangeListener
+
+Set a [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
+
+```java
+void setZoomFactorChangeListener(ZoomFactorChangeListener listener);
+```
+
+**Parameters**
+
+`listener`: A [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
