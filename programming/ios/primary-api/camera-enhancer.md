@@ -740,11 +740,12 @@ Select a camera with a camera position.
 >
 >1. 
 ```objc
-- (BOOL)selectCameraWithPosition:(DSCameraPosition)position error:(NSError * _Nullable * _Nullable)error;
+- (void)selectCameraWithPosition:(DSCameraPosition)position
+               completionHandler:(nullable void(^)(BOOL isSuccess, NSError *_Nullable error))completionHandler;
 ```
 2. 
 ```swift
-func selectCamera(with position: CameraPosition) throws
+func selectCameraWithPosition(_ position: CameraPosition, completionHandler: ((Bool, (any Error)?) -> Void)? = nil)
 ```
 
 **Parameters**
