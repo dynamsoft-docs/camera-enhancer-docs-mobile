@@ -14,7 +14,7 @@ The `DSCameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer t
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+*Assembly:* DynamsoftCameraEnhancer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,7 +61,10 @@ class CameraEnhancer : ImageSourceAdapter
 | [`close`](#close) | Close the camera. |
 | [`setResolution`](#setresolution) | Set the resolution. If the targeting resolution is not available for your device, a closest available resolutionll be selected. |
 | [`getResolution`](#getresolution) | Get the current resolution. |
+| [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
+| [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
 | [`selectCameraWithPosition`](#selectcamerawithposition) | Select a camera with a camera position. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
 | [`getFrameRate`](#getframerate) | Get the frame rate. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
@@ -69,10 +72,6 @@ class CameraEnhancer : ImageSourceAdapter
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
-| [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
-| [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
-| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a `DSZoomFactorChangeListener` to receive callback when the zoom-factor changed. |
 
 ## Attributes
 
@@ -730,6 +729,54 @@ func getResolution() -> Resolution
 
 The current resolution.
 
+### getAllCameras
+
+Get the IDs of all available cameras.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSArray<NSString*>*)getAllCameras;
+```
+2. 
+```swift
+func getAllCameras() -> [String]
+```
+
+**Return Value**
+
+An array of camera IDs.
+
+### selectCamera
+
+Select a camera with a camera ID.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (BOOL)selectCamera:(NSString*)cameraId error:(NSError * _Nullable * _Nullable)error NS_SWIFT_NAME(selectCamera(_:));
+```
+2. 
+```swift
+func selectCamera(_ cameraId: String) -> BOOL
+```
+
+**Parameters**
+
+`position`: One of the Camera IDs.
+
+`error`: A NSError pointer. An error occurs when failed to switch the camera.
+
+**Return Value**
+
+A bool value that indicates whether the camera selection is successful.
+
 ### selectCameraWithPosition
 
 Select a camera with a camera position.
@@ -740,12 +787,11 @@ Select a camera with a camera position.
 >
 >1. 
 ```objc
-- (void)selectCameraWithPosition:(DSCameraPosition)position
-               completionHandler:(nullable void(^)(BOOL isSuccess, NSError *_Nullable error))completionHandler;
+- (BOOL)selectCameraWithPosition:(DSCameraPosition)position error:(NSError * _Nullable * _Nullable)error NS_SWIFT_NAME(selectCameraWithPosition(_:));
 ```
 2. 
 ```swift
-func selectCameraWithPosition(_ position: CameraPosition, completionHandler: ((Bool, (any Error)?) -> Void)? = nil)
+func selectCameraWithPosition(_ position: CameraPosition) -> BOOL
 ```
 
 **Parameters**
@@ -757,6 +803,27 @@ func selectCameraWithPosition(_ position: CameraPosition, completionHandler: ((B
 **Return Value**
 
 A bool value that indicates whether the camera selection is successful.
+
+### getSelectedCamera
+
+Get the currently actived camera.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSString*)getSelectedCamera;
+```
+2. 
+```swift
+func getSelectedCamera() -> String
+```
+
+**Return Value**
+
+The ID of the currently actived camera.
 
 ### getFrameRate
 
@@ -987,99 +1054,3 @@ Set/get the DSCameraView instance that bind with this DSCameraEnhancer instance.
 ```swift
 var cameraView: CameraView { get set }
 ```
-
-### getAllCameras
-
-> This method is deprecated.
-
-Get the IDs of all available cameras.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSArray<NSString*>*)getAllCameras;
-```
-2. 
-```swift
-func getAllCameras() -> [String]
-```
-
-**Return Value**
-
-An array of camera IDs.
-
-### selectCamera
-
-> This method is deprecated.
-
-Select a camera with a camera ID.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (BOOL)selectCamera:(NSString*)cameraId error:(NSError * _Nullable * _Nullable)error NS_SWIFT_NAME(selectCamera(_:));
-```
-2. 
-```swift
-func selectCamera(_ cameraId: String) -> BOOL
-```
-
-**Parameters**
-
-`position`: One of the Camera IDs.
-
-`error`: A NSError pointer. An error occurs when failed to switch the camera.
-
-**Return Value**
-
-A bool value that indicates whether the camera selection is successful.
-
-### getSelectedCamera
-
-> This method is deprecated.
-
-Get the currently actived camera.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSString*)getSelectedCamera;
-```
-2. 
-```swift
-func getSelectedCamera() -> String
-```
-
-**Return Value**
-
-The ID of the currently actived camera.
-
-### setZoomFactorChangeListener
-
-Set a [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setZoomFactorChangeListener:(nullable id<DSZoomFactorChangeListener>)listener;
-```
-2. 
-```swift
-func setZoomFactorChangeListener(_ listener: DSZoomFactorChangeListener?)
-```
-
-**Parameters**
-
-`listener`: A delegate object of [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive zoom-factor changed notification.

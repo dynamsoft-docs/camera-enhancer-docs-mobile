@@ -16,7 +16,7 @@ The `Feedback` class provides methods to trigger feedbacks from the hardware, su
 
 *Namespace:* Dynamsoft.CameraEnhancer.Maui
 
-*Assembly:* Dynamsoft.CameraEnhancer.Maui
+*Assembly:* Dynamsoft.CaptureVisionRouter.Maui
 
 ```java
 class Feedback

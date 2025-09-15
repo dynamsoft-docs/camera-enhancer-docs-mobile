@@ -16,7 +16,7 @@ The `CameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer tha
 
 *Namespace:* Dynamsoft.CameraEnhancer.Maui
 
-*Assembly:* Dynamsoft.CameraEnhancer.Maui
+*Assembly:* Dynamsoft.CaptureVisionRouter.Maui
 
 ```java
 class CameraEnhancer : ImageSourceAdapter
@@ -42,8 +42,6 @@ class CameraEnhancer : ImageSourceAdapter
 | [`GetZoomFactor`](#getzoomfactor) | Get the zoom factor of the camera. |
 | [`SetFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`GetFocusMode`](#getfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
-| [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
-| [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
 The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html)
 
@@ -113,7 +111,7 @@ void Close();
 
 ### SetScanRegion
 
-Set a scan region. The video frame is cropped based on the scan region.
+Set a scan region. The video frame is cropped based on the scan region. To learn the full code to setting a scan region, please refer to the [scan region](../guide/scan-region.md) article.
 
 ```csharp
 void SetScanRegion(DMRect scanRegion);
@@ -235,19 +233,3 @@ EnumFocusMode GetFocusMode();
 **Return Value**
 
 A [`EnumFocusMode`]({{ site.dce_maui_api }}enum/focus-mode.html) value that represents the current focus mode.
-
-### TurnOnTorch
-
-Turn on the torch.
-
-```csharp
-void TurnOnTorch();
-```
-
-### TurnOffTorch
-
-Turn off the torch.
-
-```csharp
-void TurnOffTorch();
-```

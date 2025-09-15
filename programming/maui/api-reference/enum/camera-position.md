@@ -26,14 +26,5 @@ public enum EnumCameraPosition : int
     CP_BACK = 0,
     // The front-facing camera.
     CP_FRONT = 1
-    /**
-     * The back-facing ultra-wide-angle camera. It is an ultra-wide-angle camera for macro-distance capturing.
-     */
-    CP_BACK_ULTRA_WIDE,
-    /**
-     * A back-facing virtual camera. It is a vitural camera that can switch between the wide-angle camera and the ultra-wide-angle camera automatically.
-     * Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max.
-     */
-    CP_BACK_DUAL_WIDE_AUTO
 }
 ```
