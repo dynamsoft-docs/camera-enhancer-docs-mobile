@@ -38,6 +38,7 @@ class CameraView: UIView {}
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`torchButtonVisible`](#torchbuttonvisible) | *BOOL* | Set/get the visibility of the torch button. |
+| [`cameraToggleButtonVisible`](#cameratogglebuttonvisible) | *BOOL* | Set/get the visibility of the camera toggle button. |
 | [`scanRegionMaskVisible`](#scanregionmaskvisible) | *BOOL* | Set/get the visibility of the scan region mask. |
 | [`scanLaserVisible`](#scanlaservisible) | *BOOL* | Set/get the visibility of the scan laser. |
 | [`tipConfig`](#tipconfig) | *DSTipConfig* | Set/get the tip configurations. |
@@ -52,6 +53,7 @@ class CameraView: UIView {}
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new DrawingLayer. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
 | [`setTorchButtonWithFrame`](#settorchbuttonwithframe) | Add a torch button on your view. |
+| [`setCameraToggleButtonWithFrame`](#setcameratogglebuttonwithframe) | Add a camera toggle button on your view for switching between front and back camera. |
 | [`deleteUserDefinedDrawingLayer`](#deleteuserdefineddrawinglayer) | Delete the specified drawing layer. |
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
@@ -74,6 +76,23 @@ Set/get the visibility of the torch button.
 2. 
 ```swift
 var torchButtonVisible: BOOL { get set }
+```
+
+### cameraToggleButtonVisible
+
+Set/get the visibility of the camera toggle button.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (assign, nonatomic) BOOL cameraToggleButtonVisible;
+```
+2. 
+```swift
+var cameraToggleButtonVisible: BOOL { get set }
 ```
 
 ### scanRegionMaskVisible
@@ -318,6 +337,29 @@ func setTorchButton(_ frame: CGRect, torchOnImage: UIImage, torchOffImage: UIIma
 `frame`: The place that you want to locate the torch button.  
 `torchOnImage`: The torch button image that you want to display when the torch is on.  
 `torchOffImage`: The torch button image that you want to display when the torch is off.  
+
+### setCameraToggleButtonWithFrame
+
+Add a camera toggle button on your view for switching between front and back camera.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setCameraToggleButtonWithFrame:(CGRect)frame
+                     cameraToggleImage:(UIImage* _Nullable)cameraToggleImage;
+```
+2. 
+```swift
+func setCameraToggleButton(_ frame: CGRect, cameraToggleImage: UIImage)
+```
+
+**Parameters**
+
+`frame`: The place that you want to locate the camera toggle button.  
+`cameraToggleImage`: The camera toggle button image. 
 
 ### deleteUserDefinedDrawingLayer
 

@@ -29,12 +29,15 @@ class CameraView
 | [`createDrawingLayer`](#createdrawinglayer) | Create a new `DrawingLayer`. |
 | [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
 | [`setTorchButton`](#settorchbutton) | Add a torch button on your view. |
+| [`setCameraToggleButton`](#setcameratogglebutton) | Add a camera toggle button on your view for switching between front and back cameras. |
 | [`deleteUserDefinedDrawingLayer`](#deleteuserdefineddrawinglayer) | Delete the specified drawing layer. |
 | [`clearUserDefinedDrawingLayers`](#clearuserdefineddrawinglayers) | Clear all the user-defined drawing layers. |
 | [`getAllDrawingLayers`](#getalldrawinglayers) | Get all the drawing layers on the view. |
 | [`setScanRegionMaskStyle`](#setscanregionmaskstyle) | Set the style of the scan region mask. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Set/get the visibility of the torch button. |
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Set/get the visibility of the torch button. |
+| [`setCameraToggleButtonVisible`](#setcameratogglebuttonvisible) | Set/get the visibility of the camera toggle button. |
+| [`getCameraToggleButtonVisible`](#getcameratogglebuttonvisible) | Set/get the visibility of the camera toggle button. |
 | [`setScanRegionMaskVisible`](#setscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
 | [`isScanRegionMaskVisible`](#isscanregionmaskvisible) | Set/get the visibility of the scan region mask. |
 | [`setScanLaserVisible`](#setscanlaservisible) | Set the visibility of the scan laser. |
@@ -141,6 +144,46 @@ boolean getTorchButtonVisible();
 **Return Value**
 
 A boolean value that indicate the torch button is visible.
+
+### setCameraToggleButton
+
+Add a camera toggle button on your view for switching between front and back camera.
+
+```java
+void setCameraToggleButton(Point cameraToggleButtonPosition);
+void setCameraToggleButton(Point cameraToggleButtonPosition, int width, int height, Drawable cameraToggleImage);
+```
+
+**Parameters**
+
+`cameraToggleButtonPosition`: Set the top-left point of the camera toggle button.  
+`width`: Set the width of the camera toggle button.  
+`height`: Set the height of the camera toggle button.  
+`cameraToggleImage`: The camera toggle button image that you want to display.
+
+### setCameraToggleButtonVisible
+
+Set the visibility of the camera toggle button.
+
+```java
+void setCameraToggleButtonVisible(boolean isCameraToggleButtonVisible);
+```
+
+**Parameters**
+
+`isCameraToggleButtonVisible`: A boolean value that indicates whether the camera toggle button is visible.
+
+### getCameraToggleButtonVisible
+
+Get the visibility of the camera toggle button.
+
+```java
+boolean getCameraToggleButtonVisible();
+```
+
+**Return Value**
+
+A boolean value that indicates whether the camera toggle button is visible.
 
 ### deleteUserDefinedDrawingLayer
 
