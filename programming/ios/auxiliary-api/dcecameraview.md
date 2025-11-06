@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCameraView
 
-The `DSCameraView` class is used to display the camera preview and provides UI controlling APIs. Users can add interactable UI elements on the view.
+The `DSCameraView` class is used to display the camera preview and provides API to control and customize the UI. Users can also add interactable UI elements on the view, such as the torch button.
 
 ## Definition
 
@@ -244,7 +244,7 @@ let drawingLayer = cameraView.getDrawingLayer(layerId)
 
 ### createDrawingLayer
 
-Create a new DrawingLayer.
+Create a new DSDrawingLayer.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
