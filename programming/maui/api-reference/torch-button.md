@@ -22,7 +22,7 @@ The TorchButton class defines a torch button with its location, size and image.
 class TorchButton
 ```
 
-## Properties
+## Properties & Methods
 
 | Property | Type | Description |
 |--------- |------|-------------|
@@ -32,6 +32,10 @@ class TorchButton
 | [`Height`](#height) | *double* | The height of the torch button. |
 | [`TorchOnImageSource`](#torchonimagesource) | *ImageSource* | The image source of the torch button when the torch is on. |
 | [`TorchOffImageSource`](#torchoffimagesource) | *ImageSource* | The image source of the torch button when the torch is off. |
+
+| Method | Description |
+|------- |-------------|
+| [`TorchButton`](#torchbutton-1) | The constructors. |
 
 ### X
 
@@ -79,4 +83,13 @@ The image source of the torch button when the torch is off.
 
 ```csharp
 ImageSource? TorchOffImageSource { get; set; }
+```
+
+### TorchButton
+
+The constructors.
+
+```csharp
+TorchButton();
+TorchButton(double x, double y, double width, double height, ImageSource? onImageSource, ImageSource? offImageSource);
 ```
