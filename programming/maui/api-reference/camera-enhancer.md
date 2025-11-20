@@ -44,6 +44,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`GetFocusMode`](#getfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
+| [`TakePhoto`](#takephoto) | Take a photo. |
 
 The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html)
 
@@ -251,3 +252,15 @@ Turn off the torch.
 ```csharp
 void TurnOffTorch();
 ```
+
+### TakePhoto
+
+Take a photo.
+
+```csharp
+public partial void TakePhoto(Action<byte[]?> listener);
+```
+
+**Parameters**
+
+`listener`: A callback to receive the photo data.
