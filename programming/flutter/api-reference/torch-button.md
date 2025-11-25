@@ -20,15 +20,31 @@ noTitleIndex: true
 class TorchButton
 ```
 
+## Constructor
+
+```dart
+TorchButton({
+  required this.location,
+  this.torchOnImageBase64,
+  this.torchOffImageBase64,
+});
+```
+
 ## Properties
+
+| Property | Description |
+| -------- | ----------- |
+| [`location`](#location) | *Rect* | Defines the location of the camera button. This rectangle specifies the button's position and size on the screen. Coordinates are in logical pixels. |
+| [`torchOnImageBase64`](#torchonimagebase64) | *String* | Sets the icon image (as a base64 string) that will be displayed when the torch is on. |
+| [`torchOffImageBase64`](#torchoffimagebase64) | *String* | Sets the icon image (as a base64 string) that will be displayed when the torch is off. |
 
 ### location
 
 Sets the location of the torch button as a [Rect](https://api.flutter.dev/flutter/dart-ui/Rect-class.html) - this rectangle specifies the button's position and size on the screen. When creating a custom torch button, **this property must be set**.
 
 ```dart
- Rect location;
- ```
+Rect location;
+```
 
 **Remarks**
 
@@ -48,14 +64,4 @@ Sets the icon image (as a base64 string) that will be displayed when the torch i
 
 ```dart
 String? torchOffImageBase64;
-```
-
-## Code Snippet
-
-```dart
-final TorchButton _torch = TorchButton(
-	location: Rect.fromLTWH(300, 30, 50, 50), // places the torch button towards the top-right corner of the camera view
-	torchOffImageBase64: 'insert_base64_string_here',
-	torchOnImageBase64: 'insert_base64_string_here'
-);
 ```

@@ -17,7 +17,23 @@ noTitleIndex: true
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-class CameraView
+class CameraView extends StatefulWidget
+```
+
+## Constructors
+
+```dart
+const CameraView({
+  super.key,
+  required this.cameraEnhancer,
+  this.torchButtonVisible,
+  this.scanRegionMaskVisible,
+  this.scanLaserVisible,
+  this.torchButton,
+  this.visibleLayerIds,
+  this.cameraToggleButtonVisible,
+  this.cameraToggleButton,
+});
 ```
 
 ## Properties
@@ -28,7 +44,7 @@ class CameraView
 | [`cameraToggleButton`](#cameratogglebutton) | Defines a custom widget to replace the default camera toggle button. |
 | [`cameraToggleButtonVisible`](#cameratogglebuttonvisible) | Determines whether the camera toggle button is visible. |
 | [`scanLaserVisible`](#scanlaservisible) | Determines whether the scan laser will be visible in the scan region. |
-| [`scanRegionMaskVisible`](#scanregionmaskvisible) | Establishes whether the scan region will be represented visually using a mask. |
+| [`scanRegionMaskVisible`](#scanregionmaskvisible) | Determines whether the scan region mask will be visible. (Scan region mask is a mask covered outside the scan region.) |
 | [`torchButtonVisible`](#torchbuttonvisible) | Controls the visibility of the torch/flash button. |
 | [`torchButton`](#torchbutton) | Defines a custom `TorchButton` instead of the default torch icon. |
 | [`visibleLayerIds`](#visiblelayerids) | Defines which drawing layer(s) to display on the camera view. |
@@ -79,7 +95,7 @@ Defaults to `true` if not specified.
 
 ### scanRegionMaskVisible
 
-Establishes whether the scan region (if defined via the `CameraEnhancer`) will be represented visually using a mask. The mask highlights the area where the barcode scanning occurs, and it defaults to `true` if not specified.
+Determines whether the scan region mask will be visible. Scan region mask is a mask covered outside the scan region.
 
 ```dart
 final bool? scanRegionMaskVisible;
@@ -111,7 +127,7 @@ final TorchButton? torchButton;
 
 ### visibleLayerIds
 
-Defines which drawing layer(s) (see [`EnumDrawingLayerId`](../enum/drawing-layer-id.md)) to display on the camera view. The drawing layer is responsible for highlighting the captured result, so in the case of the Barcode Reader, the drawing layer would highlight any recognized barcodes.
+Defines which drawing layer(s) (see [`EnumDrawingLayerId`]({{site.dcv_flutter_api}}core/enum/drawing-layer-id.html)) to display on the camera view. The drawing layer is responsible for highlighting the captured result, so in the case of the Barcode Reader, the drawing layer would highlight any recognized barcodes.
 
 ```dart
 final List<EnumDrawingLayerId>? visibleLayerIds;
@@ -120,21 +136,3 @@ final List<EnumDrawingLayerId>? visibleLayerIds;
 **Remarks**
 
 The Capture Vision library can work with multiple functional products, including the Barcode Reader, Label Recognizer, and the Document Normalizer. If you would like to disable the feature to highlight any found barcodes, then the `visibleLayerIds` must not include `EnumDrawingLayerId.dbr`.
-
-## Code Snippet
-
-```dart
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-    appBar: AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary, title: Text(widget.title)),
-    body: Center(child: CameraView(
-        cameraEnhancer: _camera, 
-        torchButtonVisible: true, 
-        scanRegionMaskVisible: false, 
-        scanLaserVisible: true, 
-        torchButton: _torch, 
-        visibleLayerIds: [EnumDrawingLayerId.dbr])
-    ),
-);
-```
