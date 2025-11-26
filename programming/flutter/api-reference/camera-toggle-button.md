@@ -20,11 +20,25 @@ noTitleIndex: true
 class CameraToggleButton
 ```
 
+## Constructors
+
+```dart
+CameraToggleButton({
+  required this.location,
+  this.imageBase64,
+});
+```
+
 ## Properties
+
+| Properties | Type | Description |
+| ---------- | ---- | ----------- |
+| [`location`](#location) | *Rect* | Defines the location of the camera button. This rectangle specifies the button's position and size on the screen. Coordinates are in logical pixels. |
+| [`imageBase64`](#imagebase64) | *String* | A base 64 string that specifies the camera toggle image. |
 
 ### location
 
-Defines the location of the camera toggle button (as a [Rect](https://api.flutter.dev/flutter/dart-ui/Rect-class.html)). This rectangle specifies the button's position and size on the screen. Coordinates are in pixels.
+Defines the location of the camera button. This rectangle specifies the button's position and size on the screen. Coordinates are in logical pixels.
 
 ```dart
 Rect location;
@@ -32,7 +46,7 @@ Rect location;
 
 ### imageBase64
 
-Sets the image (as a base64 string) to be used for the camera toggle button.
+A base 64 string that specifies the camera toggle image.
 
 ```dart
 String? imageBase64;
@@ -42,11 +56,3 @@ String? imageBase64;
 
 When setting the imageBase64 string, please note that the string should not include the `data:image/png;base64,` portion of the base64 string.
 
-## Code Snippet
-
-```dart
-final CameraToggleButton _cameraToggleBtn = CameraToggle(
-    location: Rect.fromLTWH(300, 30, 50, 50),
-    imageBase64: "<insert base64 string>"
-)
-```

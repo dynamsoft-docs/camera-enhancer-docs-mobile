@@ -17,7 +17,19 @@ The `CameraEnhancer` class provides camera-specific functionality including came
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-class CameraEnhancer
+class CameraEnhancer extends ImageSourceAdapter
+```
+
+## Static Properties
+
+| Property | Description |
+| -------- | ----------- |
+| [`instance`](#instance) | Returns the singleton instance of `CameraEnhancer`. |
+
+### instance
+
+```dart
+static CameraEnhancer get instance;
 ```
 
 ## Methods
@@ -29,24 +41,42 @@ class CameraEnhancer
 | [`disableEnhancedFeatures`](#disableenhancedfeatures) | Disables the selected and activated enhanced features of the Camera Enhancer. |
 | [`enableEnhancedFeatures`](#enableenhancedfeatures) | Activates the selected enhanced features provided by the Camera Enhancer library, including the auto-zoom and smart torch features. |
 | [`getCameraPosition`](#getcameraposition) | Returns the current camera being used. |
-| [`getColourChannelUsageType`](#getcolourchannelusagetype) | Retrieves the current colour channel that is being used by the camera enhancer. |
 | [`getFocusMode`](#getfocusmode) | Returns the current focus mode of the camera. |
 | [`getScanRegion`](#getscanregion) | Returns the current scan region. |
+| [`getZoomFactor`](#getzoomfactor) | Returns the current zoom factor of the camera. |
 | [`open`](#open) | Opens the selected camera to begin the capture process. |
 | [`selectCamera`](#selectcamera) | Selects the camera based on the specified camera position. |
-| [`setColourChannelUsageType`](#setcolourchannelusagetype) | Defines the colour channel used by the camera enhancer. |
 | [`setFocus`](#setfocus) | Sets the focus point as well as the mode for the camera. |
+| [`setResolution`](#setresolution) | Sets the resolution of the camera. |
 | [`setScanRegion`](#setscanregion) | Sets the scan region of the camera and displays a bordered area on the UI. |
 | [`setZoomFactor`](#setzoomfactor) | Sets the zoom factor of the camera. |
 | [`turnOffTorch`](#turnofftorch) | Turns off the camera's flashlight (if available). |
 | [`turnOnTorch`](#turnontorch) | Turns on the camera's flashlight (if available). |
+
+The following methods are inherited from superclass [`ImageSourceAdapter`]({{ site.dcv_flutter_api }}core/image-source-adapter.html)
+
+| Method | Description |
+| ------ | ----------- |
+| [`addImageToBuffer`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#addimagetobuffer) | Adds an image to the internal buffer. |
+| [`clearBuffer`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#clearbuffer) | Clears all images from the buffer, resetting the state for new image fetching. |
+| [`getBufferOverflowProtectionMode`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#getbufferoverflowprotectionmode) | Get the current mode for handling buffer overflow. |
+| [`getColourChannelUsageType`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#getcolourchannelusagetype) | Get the current usage type for color channels in images. |
+| [`getImage`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `ImageData`. |
+| [`getMaximumImageCount`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#getmaximumimagecount) | Get the maximum number of images that can be buffered. |
+| [`hasImage`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#hasimage) | Checks if an image with the specified ID is present in the buffer. |
+| [`setBufferOverflowProtectionMode`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#setbufferoverflowprotectionmode) | Sets the behavior for handling new incoming images when the buffer is full. |
+| [`setColourChannelUsageType`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#setcolourchannelusagetype) | Sets the usage type for color channels in images. |
+| [`setMaximumImageCount`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#setmaximumimagecount) | Sets the maximum number of images that can be buffered at any time. |
+| [`setNextImageToReturn`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#setnextimagetoreturn) | Sets the processing priority of a specific image. This can affect the order in which images are returned by getImage. |
+| [`startFetching`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of `ImageSourceAdapter`. |
+| [`stopFetching`]({{ site.dcv_flutter_api }}core/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of `ImageSourceAdapter`. |
 
 ### close
 
 Closes the camera and releases the related resources. When the `CaptureVisionRouter` instance calls `stopCapturing`, please make sure to call this method as well to ensure that the resources are released properly.
 
 ```dart
-Future<void> close()
+Future<void> close();
 ```
 
 ### destroy
@@ -54,28 +84,28 @@ Future<void> close()
 Destroys the camera enhancer instance and releases the related resources on the host side.
 
 ```dart
-Future<void> destroy()
+Future<void> destroy();
 ```
 
 ### disableEnhancedFeatures
 
-Disables the selected and activated enhanced features (represented by [`EnumEnhancedFeatures`](./enum/enhanced-features-camera.md)) of the Camera Enhancer.
+Disables the selected and activated enhanced features (represented by [`EnumEnhancedFeatures`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.md)) of the Camera Enhancer.
 
 ```dart
-Future<void> disableEnhancedFeatures(int features)
+Future<void> disableEnhancedFeatures(int features);
 ```
 
 ### enableEnhancedFeatures
 
-Activates the selected enhanced features (represented by [`EnumEnhancedFeatures`](./enum/enhanced-features-camera.md)) provided by the Camera Enhancer library, including the auto-zoom and smart torch features.
+Activates the selected enhanced features (represented by [`EnumEnhancedFeatures`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.md)) provided by the Camera Enhancer library, including the auto-zoom and smart torch features.
 
 ```dart
-Future<void> enableEnhancedFeatures(int features)
+Future<void> enableEnhancedFeatures(int features);
 ```
 
 **Remarks**
 
-This method must be used **after [`setInput`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#setinput) and before the [`open`](#open) method**. If you would like to activate multiple enhanced features, then they must be combined using the OR (`|`) operator.
+If you would like to activate multiple enhanced features, then they must be combined using the OR (`|`) operator.
 
 ```dart
 await _cvr.setInput(_camera);
@@ -85,30 +115,18 @@ _camera.open();
 
 ### getCameraPosition
 
-Returns the current camera being used, represented as a [`EnumCameraPosition`](./enum/camera-position.md).
+Returns the current camera being used, represented as a [`EnumCameraPosition`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.md).
 
 ```dart
-Future<EnumCameraPosition> getCameraPosition() async
+Future<EnumCameraPosition> getCameraPosition() async;
 ```
-
-### getColourChannelUsageType
-
-Retrieves the current colour channel (as a [`EnumColourChannelUsageType`](./enum/colour-channel.md)) that is being used by the camera enhancer.
-
-```dart
-Future<EnumColourChannelUsageType> getColourChannelUsageType()
-```
-
-**Remarks**
-
-This method should be used to verify which colour channel the camera is using, and in turn verify what pixel type any images retrieved during the capture process will come out in.
 
 ### getFocusMode
 
-Returns the current focus mode of the camera, represented as a [`EnumFocusMode`](./enum/focus-mode.md).
+Returns the current focus mode of the camera, represented as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/focus-mode.md).
 
 ```dart
-Future<EnumFocusMode> getFocusMode() async 
+Future<EnumFocusMode> getFocusMode() async;
 ```
 
 ### getScanRegion
@@ -116,7 +134,15 @@ Future<EnumFocusMode> getFocusMode() async
 Returns the current scan region as a [`DSRect`]({{ site.dcv_flutter_api }}core/dsrect.html) object.
 
 ```dart
-Future<DSRect?> getScanRegion() async
+Future<DSRect?> getScanRegion() async;
+```
+
+### getZoomFactor
+
+Returns the current zoom factor of the camera.
+
+```dart
+Future<double> getZoomFactor();
 ```
 
 ### open
@@ -124,41 +150,35 @@ Future<DSRect?> getScanRegion() async
 Opens the selected camera to begin the capture process.
 
 ```dart
-Future<void> open()
+Future<void> open();
 ```
 
 ### selectCamera
 
-Selects the camera based on the specified [`EnumCameraPosition`](./enum/camera-position.md).
+Selects the camera based on the specified [`EnumCameraPosition`]({{ site.dcv_flutter_api }}core/enum/camera-position.md).
 
 ```dart
-Future<void> selectCamera(EnumCameraPosition position)
+Future<void> selectCamera(EnumCameraPosition position);
 ```
 
 **Remarks**
 
-If you attempt to select the **backDualWideAuto** or the **backUltraWide** cameras on an Android phone, an exception will be thrown as those cameras are only available on iPhones. Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max. This method must be called **after [`setInput`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#setinput) and before the [`open`](#open) method**.
-
-> *Exception* - "This camera position is only supported on iOS"
-
-### setColourChannelUsageType
-
-Defines the colour channel (as a [`EnumColourChannelUsageType`](./enum/colour-channel.md)) used by the camera enhancer - therefore determining whether the captured images or frames will come out in grayscale or colour (or one of the individual colours).
-
-```dart
-Future<void> setColourChannelUsageType(EnumColourChannelUsageType type)
-```
-
-**Remarks**
-
-This method should be used to change the pixel type of the original image or captured frame should you choose to retrieve it after the capture process. In order to retrieve the original image after the barcode is decoded or the captured result is received, please refer to [this article].
+- **backUltraWide** & **backDualWideAuto**: iPhone only.
 
 ### setFocus
 
-Sets the focus point as well as the mode (as a [`EnumFocusMode`](./enum/focus-mode.md)) for the camera.
+Sets the focus point as well as the mode (as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/focus-mode.md)) for the camera.
 
 ```dart
-Future<void> setFocus(Point<double> point, EnumFocusMode focusMode)
+Future<void> setFocus(Point<double> point, EnumFocusMode focusMode);
+```
+
+### setResolution
+
+Sets the resolution of the camera.
+
+```dart
+Future<void> setResolution(EnumResolution resolution);
 ```
 
 ### setScanRegion
@@ -166,21 +186,19 @@ Future<void> setFocus(Point<double> point, EnumFocusMode focusMode)
 Sets the scan region of the camera and displays a bordered area on the UI to represent the scan region. To learn how to specify the scan region when using the Barcode Reader, please visit this [section of the foundational user guide]({{ site.dbr_flutter }}explore-features/ui-customization.html#specifying-a-scan-region).
 
 ```dart
-Future<void> setScanRegion(DSRect region) async
+Future<void> setScanRegion(DSRect region) async;
 ```
 
-**Remarks**
+**See also**
 
-This method must be called **after [`setInput`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#setinput) and before the [`open`](#open) method**. The region is represented as a [`DSRect`]({{ site.dcv_flutter_api }}core/dsrect.html).
-
-> *Exception* - "Failed to set the scan region"
+- [`DSRect`]({{ site.dcv_flutter_api }}core/dsrect.html).
 
 ### setZoomFactor
 
 Sets the zoom factor of the camera.
 
 ```dart
-Future<void> setZoomFactor(double zoom)
+Future<void> setZoomFactor(double zoom);
 ```
 
 ### turnOffTorch
@@ -188,7 +206,7 @@ Future<void> setZoomFactor(double zoom)
 Turns off the camera's flashlight (if available).
 
 ```dart
-Future<void> turnOffTorch()
+Future<void> turnOffTorch();
 ```
 
 ### turnOnTorch
@@ -196,5 +214,5 @@ Future<void> turnOffTorch()
 Turns on the camera's flashlight (if available).
 
 ```dart
-Future<void> turnOnTorch()
+Future<void> turnOnTorch();
 ```

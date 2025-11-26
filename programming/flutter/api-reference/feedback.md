@@ -27,7 +27,7 @@ class FeedBack
 Plays a beep sound when a captured result is found.
 
 ```dart
-Future<void> beep()
+static Future<void> beep()
 ```
 
 ### vibrate
@@ -35,7 +35,7 @@ Future<void> beep()
 Triggers a vibration when a captured result is found.
 
 ```dart
-Future<void> vibrate()
+static Future<void> vibrate()
 ```
 
 ## Code Snippet
