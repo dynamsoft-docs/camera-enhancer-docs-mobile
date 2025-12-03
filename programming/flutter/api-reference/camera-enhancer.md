@@ -89,7 +89,7 @@ Future<void> destroy();
 
 ### disableEnhancedFeatures
 
-Disables the selected and activated enhanced features (represented by [`EnumEnhancedFeatures`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.md)) of the Camera Enhancer.
+Disables the selected and activated enhanced features (represented by [`EnumEnhancedFeatures`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.html)) of the Camera Enhancer.
 
 ```dart
 Future<void> disableEnhancedFeatures(int features);
@@ -97,7 +97,7 @@ Future<void> disableEnhancedFeatures(int features);
 
 ### enableEnhancedFeatures
 
-Activates the selected enhanced features (represented by [`EnumEnhancedFeatures`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.md)) provided by the Camera Enhancer library, including the auto-zoom and smart torch features.
+Activates the selected enhanced features (represented by [`EnumEnhancedFeatures`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.html)) provided by the Camera Enhancer library, including the auto-zoom and smart torch features.
 
 ```dart
 Future<void> enableEnhancedFeatures(int features);
@@ -115,7 +115,7 @@ _camera.open();
 
 ### getCameraPosition
 
-Returns the current camera being used, represented as a [`EnumCameraPosition`]({{ site.dcv_flutter_api }}core/enum/enhanced-features-camera.md).
+Returns the current camera being used, represented as a [`EnumCameraPosition`]({{ site.dcv_flutter_api }}core/enum/camera-position.html).
 
 ```dart
 Future<EnumCameraPosition> getCameraPosition() async;
@@ -123,7 +123,7 @@ Future<EnumCameraPosition> getCameraPosition() async;
 
 ### getFocusMode
 
-Returns the current focus mode of the camera, represented as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/focus-mode.md).
+Returns the current focus mode of the camera, represented as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/camera-position.html).
 
 ```dart
 Future<EnumFocusMode> getFocusMode() async;
@@ -155,7 +155,7 @@ Future<void> open();
 
 ### selectCamera
 
-Selects the camera based on the specified [`EnumCameraPosition`]({{ site.dcv_flutter_api }}core/enum/camera-position.md).
+Selects the camera based on the specified [`EnumCameraPosition`]({{ site.dcv_flutter_api }}core/enum/camera-position.html).
 
 ```dart
 Future<void> selectCamera(EnumCameraPosition position);
@@ -167,7 +167,7 @@ Future<void> selectCamera(EnumCameraPosition position);
 
 ### setFocus
 
-Sets the focus point as well as the mode (as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/focus-mode.md)) for the camera.
+Sets the focus point as well as the mode (as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/focus-mode.html)) for the camera.
 
 ```dart
 Future<void> setFocus(Point<double> point, EnumFocusMode focusMode);
@@ -183,7 +183,7 @@ Future<void> setResolution(EnumResolution resolution);
 
 ### setScanRegion
 
-Sets the scan region of the camera and displays a bordered area on the UI to represent the scan region. To learn how to specify the scan region when using the Barcode Reader, please visit this [section of the foundational user guide]({{ site.dbr_flutter }}explore-features/ui-customization.html#specifying-a-scan-region).
+Sets the scan region of the camera and displays a bordered area on the UI to represent the scan region.
 
 ```dart
 Future<void> setScanRegion(DSRect region) async;

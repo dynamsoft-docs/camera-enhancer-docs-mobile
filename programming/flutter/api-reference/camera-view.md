@@ -65,10 +65,6 @@ Defines a custom widget (as a [`CameraToggleButton`](camera-toggle-button.md) ob
 final CameraToggleButton? cameraToggleButton;
 ```
 
-**Remarks**
-
-If provided, this widget will be used instead of the default camera toggle button. You must ensure that the custom widget handles the camera switch operation appropriately.
-
 ### cameraToggleButtonVisible
 
 Determines whether the camera toggle button (to switch between the front and back cameras) is visible.
