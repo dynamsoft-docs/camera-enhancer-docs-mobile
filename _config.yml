@@ -66,6 +66,8 @@ cvr-enums: /capture-vision/docs/core/enums/capture-vision-router/
 dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
 dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
 
+dcv_react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+
 dcv_flutter: /capture-vision/docs/mobile/programming/flutter/
 dcv_flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
 dcp_flutter: /code-parser/docs/mobile/programming/flutter/
