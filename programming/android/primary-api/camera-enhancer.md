@@ -339,7 +339,7 @@ A [Capabilities](../auxiliary-api/capabilities.md) object.
 
 ### getCameraState
 
-Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.dce-enums }}camera-state.html) enumeration.
+Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.android }}enum/camera-state.html) enumeration.
 
 ```java
 EnumCameraState getCameraState(){}
@@ -363,7 +363,7 @@ void setCameraStateListener (CameraStateListener listener){}
 
 ### enableEnhancedFeatures
 
-Enable the specified enhanced features. View [EnumEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=android) to learn about these enhanced features. By default, these enhanced features are all disabled.
+Enable the specified enhanced features. View [EnumEnhancedFeatures]({{ site.android }}enum/enhanced-features.html?lang=android) to learn about these enhanced features. By default, these enhanced features are all disabled.
 
 ```java
 void enableEnhancedFeatures(int enhancedFeatures) throws CameraEnhancerException{}
@@ -379,7 +379,7 @@ A bool value that indicates whether the enhanced features are enabled successful
 
 ### disableEnhancedFeatures
 
-Disable any enhanced features that have been previously enabled. View [EnumEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=android) to learn about these enhanced features.
+Disable any enhanced features that have been previously enabled. View [EnumEnhancedFeatures]({{ site.android }}enum/enhanced-features.html?lang=android) to learn about these enhanced features.
 
 ```java
 void disableEnhancedFeatures(int enhancerFeatures){}

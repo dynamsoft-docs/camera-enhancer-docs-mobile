@@ -49,7 +49,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`outputEnhancedSettingsToFile`](#outputenhancedsettingstofile) | Output the enhanced settings to a JSON file. The enhanced settings contain auxiliary parameters of enhanced features. |
 | [`resetEnhancedSettings`](#resetenhancedsettings) | Reset the enhanced settings to default value. |
 | [`getCapabilities`](#getcapabilities) | Get the device capabilities including zoom factor, ISO, exposure time, etc. |
-| [`getCameraState`](#getcamerastate) | Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.dce-enums }}camera-state.html?lang=objc,swift) enumeration. |
+| [`getCameraState`](#getcamerastate) | Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.ios }}enum/camera-state.html?lang=objc,swift) enumeration. |
 | [`setCameraStateListener`](#setcamerastatelistener) | Set a DSCameraStateListener to receive callback when the camera state changed. |
 | [`enableEnhancedFeatures`](#enableenhancedfeatures) | Enable the specified enhanced features. View DSEnhancedFeatures for more details. |
 | [`disableEnhancedFeatures`](#disableenhancedfeatures) | Disable the specified enhanced features. View DSEnhancedFeatures for more details. |
@@ -474,7 +474,7 @@ A [DSCapabilities](../auxiliary-api/capabilities.md) object.
 
 ### getCameraState
 
-Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.dce-enums }}camera-state.html?lang=objc,swift) enumeration.
+Tells you whether the camera is open, opening, closing, or closed - each state being represented by a member of the [CameraState]({{ site.ios }}enum/camera-state.html?lang=objc,swift) enumeration.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -516,7 +516,7 @@ func setCameraStateListener(_ listener: CameraStateListener)
 
 ### enableEnhancedFeatures
 
-Enable the specified enhanced features. View [DSEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=objc,swift) to learn about these enhanced features. By default, these enhanced features are all disabled.
+Enable the specified enhanced features. View [DSEnhancedFeatures]({{ site.ios }}enum/enhanced-features.html?lang=objc,swift) to learn about these enhanced features. By default, these enhanced features are all disabled.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -541,7 +541,7 @@ A bool value that indicates whether the enhanced features are enabled successful
 
 ### disableEnhancedFeatures
 
-Disable any enhanced features that have been previously enabled. View [DSEnhancedFeatures]({{ site.dce-enums }}enhanced-features.html?lang=objc,swift) to learn about these enhanced features.
+Disable any enhanced features that have been previously enabled. View [DSEnhancedFeatures]({{ site.ios }}enum/enhanced-features.html?lang=objc,swift) to learn about these enhanced features.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
