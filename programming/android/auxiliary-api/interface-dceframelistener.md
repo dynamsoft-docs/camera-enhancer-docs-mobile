@@ -14,7 +14,9 @@ The `VideoFrameListener` interface includes methods for monitoring the camera st
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 interface VideoFrameListener

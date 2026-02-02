@@ -14,7 +14,9 @@ The `DrawingLayer` class represents a drawing layer, which is used for managing 
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class DrawingLayer

@@ -14,7 +14,9 @@ The `ZoomFactorChangeListener` interface defines the methods for monitoring the 
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 interface ZoomFactorChangeListener

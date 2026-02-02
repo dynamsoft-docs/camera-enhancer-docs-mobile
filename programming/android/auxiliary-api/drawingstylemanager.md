@@ -14,7 +14,9 @@ The `DrawingStyleManager` class is the manager of DrawingStyles in Dynamsoft Cam
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class DrawingStyleManager

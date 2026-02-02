@@ -14,7 +14,9 @@ The `DrawingItemClickListener` interface includes methods for monitoring the cli
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 interface DrawingItemClickListener

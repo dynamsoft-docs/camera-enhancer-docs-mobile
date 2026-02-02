@@ -14,7 +14,9 @@ The `TextDrawingItem` class is a subclass of `DrawingItem` and represents a text
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class TextDrawingItem extends DrawingItem

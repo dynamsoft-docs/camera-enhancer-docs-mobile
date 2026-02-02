@@ -14,7 +14,9 @@ The `CameraView` class is used to display the camera preview and provides UI con
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class CameraView

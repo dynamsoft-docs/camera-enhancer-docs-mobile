@@ -14,7 +14,9 @@ The `TipConfig` class defines the configurations of tip, including the top left 
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class TipConfig

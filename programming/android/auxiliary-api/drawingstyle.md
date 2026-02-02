@@ -14,7 +14,9 @@ The `DrawingStyle` class represents the style attributes of the drawing items, i
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class DrawingStyle

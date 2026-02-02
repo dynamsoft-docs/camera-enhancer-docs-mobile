@@ -14,7 +14,9 @@ The `CameraEnhancerModule` class defines general functions of the camera enhance
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class CameraEnhancerModule
