@@ -14,7 +14,9 @@ The `Feedback` class provides methods to trigger feedbacks from the hardware, su
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class Feedback

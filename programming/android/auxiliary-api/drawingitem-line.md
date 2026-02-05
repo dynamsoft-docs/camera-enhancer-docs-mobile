@@ -14,7 +14,9 @@ The `LineDrawingItem` class is a subclass of `DrawingItem` and represents a line
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class LineDrawingItem extends DrawingItem

@@ -14,7 +14,9 @@ The `ArcDrawingItem` class is a subclass of `DrawingItem`. It represents a drawi
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class ArcDrawingItem extends DrawingItem

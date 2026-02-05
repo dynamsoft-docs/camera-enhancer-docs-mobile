@@ -67,12 +67,13 @@ class CameraEnhancer : ImageSourceAdapter
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
+| [`setFocusListener`](#setfocuslistener) | Set a [`DSFocusListener`](../auxiliary-api/protocol-focus-listener.md) to receive callback when the focus operation is completed. |
 | [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 | [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
 | [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
-| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a `DSZoomFactorChangeListener` to receive callback when the zoom-factor changed. |
+| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed. |
 
 ## Attributes
 
@@ -1083,3 +1084,24 @@ func setZoomFactorChangeListener(_ listener: DSZoomFactorChangeListener?)
 **Parameters**
 
 `listener`: A delegate object of [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive zoom-factor changed notification.
+
+### setFocusListener
+
+Set a [`DSFocusListener`](../auxiliary-api/protocol-focus-listener.md) to receive callback when the focus operation is completed.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setFocusListener:(nullable id<DSFocusListener>)listener;
+```
+2. 
+```swift
+func setFocusListener(_ listener: DSFocusListener?)
+```
+
+**Parameters**
+
+`listener`: A delegate object of [`DSFocusListener`](../auxiliary-api/protocol-focus-listener.md) to receive focus completion notifications.

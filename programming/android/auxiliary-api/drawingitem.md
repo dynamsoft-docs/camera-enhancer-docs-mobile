@@ -14,7 +14,9 @@ The `DrawingItem` class represents a base class for drawing items, which can be 
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class DrawingItem

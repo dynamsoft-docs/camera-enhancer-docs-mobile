@@ -14,7 +14,9 @@ The `QuadDrawingItem` class is a subclass of `DrawingItem`. It represents a draw
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class QuadDrawingItem extends DrawingItem

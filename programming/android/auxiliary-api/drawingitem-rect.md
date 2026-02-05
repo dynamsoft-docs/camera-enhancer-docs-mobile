@@ -14,7 +14,9 @@ The `RectDrawingItem` class is a subclass of `DrawingItem` that represents a rec
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class RectDrawingItem extends DrawingItem

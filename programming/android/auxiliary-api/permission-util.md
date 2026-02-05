@@ -14,6 +14,12 @@ permalink: /programming/android/auxiliary-api/permission-util.html
 
 The `PermissionUtil` class defines the methods for requesting the camera permission.
 
+## Definition
+
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
+
 ```java
 final class PermissionUtil
 ```

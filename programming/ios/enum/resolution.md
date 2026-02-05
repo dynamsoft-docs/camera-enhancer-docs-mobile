@@ -40,7 +40,11 @@ typedef NS_ENUM(NSInteger, DSResolution)
    /**
     * Set the video streaming to the 4K resolution.
     */
-   DSResolution4K = 4
+   DSResolution4K = 4,
+   /**
+    * Set the resolution to max so that you can capture 3024*4032 size photo.
+    */
+   DSResolutionMax
 };
 ```
 >
@@ -66,5 +70,9 @@ public enum Resolution : Int{
     * Set the video streaming to the 4K resolution.
     */
    4K = 4
+   /**
+    * Set the resolution to max so that you can capture 3024*4032 size photo.
+    */
+   max
 }
 ```

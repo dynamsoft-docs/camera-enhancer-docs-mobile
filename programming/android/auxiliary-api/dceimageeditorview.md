@@ -14,7 +14,9 @@ The `ImageEditorView` class represents an image editor view, which allows users 
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class ImageEditorView : UIView

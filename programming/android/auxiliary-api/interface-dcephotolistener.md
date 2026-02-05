@@ -14,7 +14,9 @@ The `PhotoListener` interface defines the methods for monitoring the photo outpu
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 interface PhotoListener

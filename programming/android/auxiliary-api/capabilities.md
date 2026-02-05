@@ -14,7 +14,9 @@ The `Capabilities` class represents the capability properties of the hardware, i
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class Capabilities

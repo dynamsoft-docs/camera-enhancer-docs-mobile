@@ -27,5 +27,7 @@ public @interface EnumResolution {
    int RESOLUTION_2K = 4;
    // 4K
    int RESOLUTION_4K = 5;
+   // Set the resolution to max so that you can capture 3024*4032 size photo.
+   int RESOLUTION_MAX = 6;
 }
 ```

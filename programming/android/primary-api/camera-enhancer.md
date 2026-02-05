@@ -15,7 +15,9 @@ The `CameraEnhancer` class is the primary class of Dynamsoft Camera Enhancer tha
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 class CameraEnhancer extends ImageSourceAdapter
@@ -61,6 +63,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
+| [`setFocusListener`](#setfocuslistener) | Set a [`FocusListener`](../auxiliary-api/interface-focus-listener.md) to receive callback when the focus operation is completed. |
 | [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 | [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
@@ -71,7 +74,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
 | [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
-| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a `ZoomFactorChangeListener` to receive callback when the zoom-factor changed. |
+| [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed. |
 
 ## Inherited Methods
 
@@ -662,6 +665,18 @@ void setZoomFactorChangeListener(ZoomFactorChangeListener listener);
 **Parameters**
 
 `listener`: A [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed.
+
+### setFocusListener
+
+Set a [`FocusListener`](../auxiliary-api/interface-focus-listener.md) to receive callback when the focus operation is completed.
+
+```java
+void setFocusListener(FocusListener listener);
+```
+
+**Parameters**
+
+`listener`: A [`FocusListener`](../auxiliary-api/interface-focus-listener.md) to receive focus completion notifications.
 
 ### getAllCameras
 

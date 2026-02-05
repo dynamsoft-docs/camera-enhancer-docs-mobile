@@ -14,7 +14,9 @@ The `CameraStateListener` interface includes methods for monitoring the camera s
 
 ## Definition
 
-*Assembly:* package com.dynamsoft.dce
+*Assembly:* DynamsoftCaptureVisionBundle.aar
+
+*Namespace:* com.dynamsoft.dce
 
 ```java
 interface CameraStateListener
