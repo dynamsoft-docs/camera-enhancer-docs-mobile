@@ -23,6 +23,7 @@ enum EnumResolution {
   RESOLUTION_720P = 2,
   Resolution1080P = 3,
   RESOLUTION_4K = 4,
+  RESOLUTION_MAX = 5
 }
 ```
 
@@ -35,3 +36,4 @@ enum EnumResolution {
 | `RESOLUTION_720P` | High Definition 720p. |
 | `Resolution1080P` | Full High Definition 1080p. |
 | `RESOLUTION_4K` | Ultra High Definition 4K. |
+| `RESOLUTION_MAX` | The maximum supported resolution. Commonly used for photo capturing. |
