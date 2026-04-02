@@ -634,6 +634,9 @@ func setScanRegion(_ scanRegion: DSRect) -> BOOL
 
 A bool value that indicates whether the scan region has been successfully set or not.
 
+> [!Note]
+> The valid range for left, right, top, and bottom is [0.0, 1.0] when measuredInPercentage is true.
+
 ### getScanRegion
 
 Get the scan region if one has been set.

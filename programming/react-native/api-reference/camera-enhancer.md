@@ -241,6 +241,9 @@ setScanRegion(region: undefined | null | DSRect)
 
 - [`DSRect`]({{ site.dcv_react_native_api }}core/dsrect.html).
 
+> [!Note]
+> The valid range for left, right, top, and bottom is [0.0, 1.0] when measuredInPercentage is true.
+
 ### setZoomFactor
 
 Sets the zoom factor of the camera.
