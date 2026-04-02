@@ -438,7 +438,8 @@ void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
 
 A bool value that indicates whether the scan region has been successfully set or not.
 
-**Code Snippet**
+> [!Note]
+> The valid range for left, right, top, and bottom is [0.0, 1.0] when measuredInPercentage is true.
 
 ### getScanRegion
 

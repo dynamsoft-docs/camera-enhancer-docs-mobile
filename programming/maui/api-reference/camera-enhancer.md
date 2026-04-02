@@ -124,6 +124,9 @@ void SetScanRegion(DMRect scanRegion);
 
 `scanRegion`: A [`DMRect`]({{ site.dcv_maui_api }}core/rect.html) object.
 
+> [!Note]
+> The valid range for left, right, top, and bottom is [0.0, 1.0] when measuredInPercentage is true.
+
 ### GetScanRegion
 
 Get the scan region if one has been set.
