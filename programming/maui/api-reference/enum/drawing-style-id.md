@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: EnumDrawingStyleId
 ---
 
-# Enumeration EnumDrawingStyleId
+# EnumDrawingStyleId
 
 `EnumDrawingStyleId` describes the drawing style IDs.
 

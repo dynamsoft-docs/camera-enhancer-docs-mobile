@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: EnumDrawingLayerId
 ---
 
-# Enumeration EnumDrawingLayerId
+# EnumDrawingLayerId
 
 `EnumDrawingLayerId` describes the layer ID.
 
