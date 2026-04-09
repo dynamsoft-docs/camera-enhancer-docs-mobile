@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: EnhancedFeatures
 ---
 
-# Enumeration EnhancedFeatures
+# EnumEnhancedFeatures
 
 `EnhancedFeatures` describes the enhanced camera controlling features.
 
@@ -23,16 +23,16 @@ breadcrumbText: EnhancedFeatures
 public enum EnumEnhancedFeatures : int
 {
     //Enable the Frame filter feature
-    EF_FRAME_FILTER = 0x01,
+    EF_FRAME_FILTER = 1 << 0,
     //Enable the sensor control feature
-    EF_SENSOR_CONTROL = 0x02,
+    EF_SENSOR_CONTROL = 1 << 1,
     //Enable the camera focus features
-    EF_ENHANCED_FOCUS = 0x04,
+    EF_ENHANCED_FOCUS = 1 << 2,
     //Enable the autozoom feature
-    EF_AUTO_ZOOM = 0x10,
+    EF_AUTO_ZOOM = 1 << 3,
     //Enable the smart torch button
-    EF_SMART_TORCH = 0x20,
+    EF_SMART_TORCH = 1 << 4,
     // Enable all
-    EF_ALL = 0x3F
+    EF_ALL = int.MaxValue
 }
 ```

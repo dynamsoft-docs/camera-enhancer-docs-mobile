@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: FocusMode
 ---
 
-# Enumeration FocusMode
+# EnumFocusMode
 
 `FocusMode` describes the focus mode.
 

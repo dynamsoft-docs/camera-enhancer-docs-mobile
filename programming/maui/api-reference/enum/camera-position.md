@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: CameraPosition
 ---
 
-# Enumeration CameraPosition
+# EnumCameraPosition
 
 `CameraPosition` describes the camera position.
 
@@ -29,11 +29,11 @@ public enum EnumCameraPosition : int
     /**
      * The back-facing ultra-wide-angle camera. It is an ultra-wide-angle camera for macro-distance capturing.
      */
-    CP_BACK_ULTRA_WIDE,
+    CP_BACK_ULTRA_WIDE = 2,
     /**
      * A back-facing virtual camera. It is a vitural camera that can switch between the wide-angle camera and the ultra-wide-angle camera automatically.
      * Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, and all subsequent Pro and Pro Max models.
      */
-    CP_BACK_DUAL_WIDE_AUTO
+    CP_BACK_DUAL_WIDE_AUTO = 3
 }
 ```
