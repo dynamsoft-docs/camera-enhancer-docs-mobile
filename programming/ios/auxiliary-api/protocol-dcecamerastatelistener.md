@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSCameraStateListener - DynamsoftCameraEnhancer iOS Edition API Reference
-description: The protocol that includes methods for monitoring the camera state.
+description: "Learn what the Dcecamerastatelistener protocol does in Dynamsoft Camera Enhancer iOS SDK and how it helps monitor camera, frame, or click events for modern web."
 keywords: camera state, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

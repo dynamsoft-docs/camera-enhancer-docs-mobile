@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSCameraEnhancer - Dynamsoft Camera Enhancer iOS API Reference
-description: The class DSCameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
+description: "Learn what DSCameraEnhancer does in Dynamsoft Camera Enhancer iOS API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: camera enhancer, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

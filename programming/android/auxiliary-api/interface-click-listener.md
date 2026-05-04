@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DrawingItemClickListener - Dynamsoft Camera Enhancer Android Edition API Reference
-description: The interface that includes methods for monitoring the click events.
+description: "Understand the Click Listener interface in Dynamsoft Camera Enhancer Android API and learn how it supports capture, camera, or result workflows for modern web."
 keywords: Click listener, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
