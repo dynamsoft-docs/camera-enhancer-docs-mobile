@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDrawingItemClickListener - DynamsoftCameraEnhancer iOS Edition API Reference
-description: The protocol that includes methods for monitoring the click events of the DrawingItems.
+description: "Learn what the Click Listener protocol does in Dynamsoft Camera Enhancer iOS SDK and how it helps monitor camera, frame, or click events for modern web."
 keywords: click events, drawingItems, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

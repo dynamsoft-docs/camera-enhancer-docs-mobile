@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDrawingItem - DynamsoftCameraEnhancer iOS Edition API Reference
-description: The class DSDrawingItem of DynamsoftCameraEnhancer represents a base class for drawing items, which can be added to drawing layers to draw basic graphics on the view.
+description: "Learn what DSDrawingItem does in Dynamsoft Camera Enhancer iOS API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: drawing item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
