@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CameraView - Dynamsoft Camera SDK API Reference
-description: The class CameraView of Dynamsoft Camera SDK represents a camera view that displays the camera preview and provides UI controlling APIs.
+description: "Learn what CameraView does in Dynamsoft Camera Enhancer Android API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: camera view, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

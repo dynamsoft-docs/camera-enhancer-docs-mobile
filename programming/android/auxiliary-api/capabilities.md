@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Capabilities - DynamsoftCameraEnhancer Android Edition API Reference
-description: The class Capabilities of DynamsoftCameraEnhancer represents the capability properties of the hardware, including the maximum zoom factor, focal length, exposure time, and ISO.
+description: "Learn what Capabilities does in Dynamsoft Camera Enhancer Android API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: capabilities, hardware, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

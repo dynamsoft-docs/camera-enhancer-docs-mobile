@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Set a Scan Region - Exploring Features of Dynamsoft Camera Enhancer iOS Edition.
-description: This page introduce how to set a scan region with Dynamsoft Camera Enhancer iOS Edition.
+description: "Learn how to use Dynamsoft Camera Enhancer iOS features with practical setup guidance, workflow tips, and examples for building reliable capture apps."
 keywords:  Camera Enhancer, scan region
 needAutoGenerateSidebar: true
 noTitleIndex: true

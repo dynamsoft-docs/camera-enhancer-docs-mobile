@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Set a Scan Region - Exploring Features of Dynamsoft Camera Enhancer Android Edition.
-description: This page introduce how to set a scan region with Dynamsoft Camera Enhancer Android Edition.
+description: "Learn how to use Dynamsoft Camera Enhancer Android features with practical setup guidance, workflow tips, and examples for building reliable capture apps."
 keywords:  Camera Enhancer, Customize Camera Settings
 needAutoGenerateSidebar: true
 noTitleIndex: true

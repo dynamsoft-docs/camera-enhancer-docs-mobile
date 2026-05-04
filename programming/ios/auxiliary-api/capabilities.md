@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSCapabilities - DynamsoftCameraEnhancer iOS Edition API Reference
-description: The class DSCapabilities of DynamsoftCameraEnhancer represents the capability properties of the hardware, including the maximum zoom factor, focal length, exposure time, and ISO.
+description: "Learn what DSCapabilities does in Dynamsoft Camera Enhancer iOS API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: capabilities, hardware, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
