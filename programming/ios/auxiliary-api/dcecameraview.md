@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSCameraView - Dynamsoft Camera SDK API Reference
-description: The class DSCameraView of Dynamsoft Camera SDK represents a camera view that displays the camera preview and provides UI controlling APIs.
+description: "Learn what DSCameraView does in Dynamsoft Camera Enhancer iOS API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: camera view, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DrawingItem - DynamsoftCameraEnhancer Android Edition API Reference
-description: The class DrawingItem of DynamsoftCameraEnhancer represents a base class for drawing items, which can be added to drawing layers to draw basic graphics on the view.
+description: "Learn what DrawingItem does in Dynamsoft Camera Enhancer Android API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: drawing item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
