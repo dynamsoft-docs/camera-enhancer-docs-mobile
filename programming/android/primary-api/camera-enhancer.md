@@ -431,8 +431,8 @@ void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
 
 **Parameters**
 
-`scanRegion`: A [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object.
-`error`: A NSError pointer. An error occurs when the [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) data is invalid.
+`scanRegion`: A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object.
+`error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
 
@@ -577,19 +577,19 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
 
 ```java
-android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.Rect videoRect){}
+android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.DSRect videoRect){}
 ```
 
 **Parameters**
 
-`videoRect`: The [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) that you want to convert.
+`videoRect`: The [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) that you want to convert.
 
 **Return Value**
 
-A CGRect (coordinate measured in px) converted from the [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
+A CGRect (coordinate measured in px) converted from the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
 
 ### convertPointToViewCoordinates
 
