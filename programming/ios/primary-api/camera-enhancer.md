@@ -884,7 +884,7 @@ func convertRectToViewCoordinates(_ videoRect: DSRect) -> CGRect
 
 **Return Value**
 
-A CGRect (coordinate measured in PT) converted from the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
+A CGRect (coordinate measured in DP) converted from the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
 
 **Code Snippet**
 
@@ -924,7 +924,7 @@ func convertPointToViewCoordinates(_ point: CGPoint) -> CGPoint
 
 **Return Value**
 
-A CGPoint (coordinate measured in PT) converted from the video CGPoint measured in PT.
+A CGPoint (coordinate measured in DP) converted from the video CGPoint measured in DP.
 
 **Code Snippet**
 

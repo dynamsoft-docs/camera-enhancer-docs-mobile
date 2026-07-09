@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CameraEnhancer - Dynamsoft Camera Enhancer API Reference
-description: The class CameraEnhancer of Dynamsoft Camera Enhancer defines the camera controlling APIs.
+description: "Learn what CameraEnhancer does in Dynamsoft Camera Enhancer Android API, including its purpose, key data, and how it supports capture workflows for modern web."
 keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -65,7 +65,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`setFocusListener`](#setfocuslistener) | Set a [`FocusListener`](../auxiliary-api/interface-focus-listener.md) to receive callback when the focus operation is completed. |
 | [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
-| [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
+| [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a Point under video coordinate system to another Point under camera view coordinate system. |
 | [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`getImageCaptureDistanceMode`](#getimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`setAutoZoomRange`](#setautozoomrange) | Set the range of auto zoom. |
@@ -431,8 +431,8 @@ void setScanRegion(DSRect scanRegion) throws CameraEnhancerException{}
 
 **Parameters**
 
-`scanRegion`: A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object.
-`error`: A NSError pointer. An error occurs when the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) data is invalid.
+`scanRegion`: A [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object.
+`error`: A NSError pointer. An error occurs when the [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) data is invalid.
 
 **Return Value**
 
@@ -446,12 +446,12 @@ A bool value that indicates whether the scan region has been successfully set or
 Get the scan region if one has been set.
 
 ```java
-DSRect getScanRegion(){}
+Rect getScanRegion(){}
 ```
 
 **Return Value**
 
-A [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object that represent the scan region area.
+A [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) object that represent the scan region area.
 
 ### open
 
@@ -577,23 +577,23 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
 
 ```java
-android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.DSRect videoRect){}
+android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.Rect videoRect){}
 ```
 
 **Parameters**
 
-`videoRect`: The [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) that you want to convert.
+`videoRect`: The [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) that you want to convert.
 
 **Return Value**
 
-A CGRect (coordinate measured in PT) converted from the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
+A CGRect (coordinate measured in px) converted from the [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
 
 ### convertPointToViewCoordinates
 
-Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system.
+Convert the coordinates of a Point under video coordinate system to another Point under camera view coordinate system.
 
 ```java
 Point convertPointToViewCoordinates(Point point){}
@@ -601,11 +601,11 @@ Point convertPointToViewCoordinates(Point point){}
 
 **Parameters**
 
-`point`: The CGPoint that you want to convert.
+`point`: The Point that you want to convert.
 
 **Return Value**
 
-A CGPoint (coordinate measured in PT) converted from the video CGPoint measured in PT.
+A Point (coordinate measured in px) converted from the video Point measured in px.
 
 ### setImageCaptureDistanceMode
 
