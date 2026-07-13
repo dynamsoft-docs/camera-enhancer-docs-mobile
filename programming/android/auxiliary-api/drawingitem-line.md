@@ -31,7 +31,7 @@ class LineDrawingItem extends DrawingItem
 | [`LineDrawingItem`](#linedrawingitemline) | Create an instance of LineDrawingItem. |
 | [`LineDrawingItem(line,coordinateBase)`](#linedrawingitemlinecoordinatebase) | Create an instance of LineDrawingItem. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 
@@ -64,7 +64,7 @@ com.dynamsoft.core.LineSegment getLine(){}
 Get the media type of the `DrawingItem`.
 
 ```java
-EnumDrawingItemMeidaType getMediaType;
+EnumDrawingItemMediaType getMediaType;
 ```
 
 ### LineDrawingItem(line)

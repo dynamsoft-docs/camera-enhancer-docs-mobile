@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumResolution - Dynamsoft Capture Vision React Native
-description: Enumeration EnumResolution of Dynamsoft Capture Vision Dynamsoft Capture Vision React Native defines the camera resolutions.
+description: Enumeration EnumResolution of Dynamsoft Capture Vision React Native defines the camera resolutions.
 keywords: resolution, capture vision, camera, enhancer
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

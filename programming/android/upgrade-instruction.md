@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android Upgrade Instructions- Dynamsoft Camera Enhancer
-description: This is the documentation of Android upgrade instructionspage of Dynamsoft Camera Enhancer.
+description: This is the documentation of Android upgrade instructions page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android upgrade instructions
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -14,7 +14,7 @@ permalink: /programming/android/upgrade-instruction.html
 
 ## Update License Activation Code
 
-License activation API are removed from `DynamsoftCameraEnhancer` library. Please use the `LicenseManager` of `DynamsoftLicense` instead.
+License activation APIs are removed from `DynamsoftCameraEnhancer` library. Please use the `LicenseManager` of `DynamsoftLicense` instead.
 
 1. Include the library
 

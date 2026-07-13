@@ -41,7 +41,7 @@ class QuadDrawingItem : DrawingItem
 |------- |-------------|
 | [`initWithQuad`](#initwithquad) | Create an instance of `DSQuadDrawingItem`. |
 
-## Interited Attributes
+## Inherited Attributes
 
 The following attributes are inherited from the base class [`DrawingItem`](drawingitem.html).
 
@@ -51,7 +51,7 @@ The following attributes are inherited from the base class [`DrawingItem`](drawi
 | [`state`](drawingitem.html#state) | *DSDrawingItemState* | The state of the DrawingItem. |
 | [`CoordinateBase`](drawingitem.html#coordinatebase) | *DSCoordinateBase* | The coordinate base of the DrawingItem. The coordinate base is image by default. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the base class [`DrawingItem`](drawingitem.html).
 

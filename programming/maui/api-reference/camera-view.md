@@ -31,9 +31,9 @@ class CameraView : View
 
 | Property | Type | Description |
 |--------- | ---- |-------------|
-| [`CameraToggleButton`](#cameratogglebutton) | *CameraToggleButton* | The property that defines a camera toggle button. User can click the button to switch between the front and back forward cameras. |
+| [`CameraToggleButton`](#cameratogglebutton) | *CameraToggleButton* | The property that defines a camera toggle button. User can click the button to switch between the front and back cameras. View [`CameraToggleButton`]({{ site.dce_maui_api }}camera-toggle-button.html) class for more information on how to configure the camera toggle button. |
 | [`CameraToggleButtonVisible`](#cameratogglebuttonvisible) | *bool* | The property that defines whether the camera toggle button is visible. |
-| [`TorchButton`](#torchbutton) | *TorchButton* | The property that defines a torch button. User can click the button to turn on/off the torch. |
+| [`TorchButton`](#torchbutton) | *TorchButton* | The property that defines a torch button. User can click the button to turn on/off the torch. View [`TorchButton`]({{ site.dce_maui_api }}torch-button.html) class for more information on how to configure the torch button. |
 | [`TorchButtonVisible`](#torchbuttonvisible) | *bool* | The property that defines whether the torch button is visible. |
 | [`ScanRegionMaskVisible`](#scanregionmaskvisible) | *bool* | The property that defines whether the scan region mask is visible. |
 | [`ScanLaserVisible`](#scanlaservisible) | *bool* | The property that defines whether the scan laser is visible. |
@@ -64,7 +64,7 @@ The `DrawingLayer` instance.
 
 ### CameraToggleButton
 
-The property that defines a torch button. User can click the button to switch between the front and back forward cameras. View [`CameraToggleButton`]({{ site.dce_maui_api }}camera-toggle-button.html) class for how more information about how to configure the camera toggle button.
+The property that defines a camera toggle button. User can click the button to switch between the front and back cameras. View [`CameraToggleButton`]({{ site.dce_maui_api }}camera-toggle-button.html) class for more information on how to configure the camera toggle button.
 
 ```csharp
 CameraToggleButton CameraToggleButton { get; set; }
@@ -80,7 +80,7 @@ bool CameraToggleButtonVisible { get; set; }
 
 ### TorchButton
 
-The property that defines a torch button. User can click the button to turn on/off the torch. View [`TorchButton`]({{ site.dce_maui_api }}torch-button.html) class for how more information about how to configure the torch button.
+The property that defines a torch button. User can click the button to turn on/off the torch. View [`TorchButton`]({{ site.dce_maui_api }}torch-button.html) class for more information on how to configure the torch button.
 
 ```csharp
 TorchButton TorchButton { get; set; }

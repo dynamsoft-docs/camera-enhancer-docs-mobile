@@ -41,7 +41,7 @@ class ArcDrawingItem : DSDrawingItem
 | [`centre`](#centre) | *CGPoint* | The centre of the `ArcDrawingItem`. |
 | [`radius`](#radius) | *CGFloat* | The radius of the `ArcDrawingItem`. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 

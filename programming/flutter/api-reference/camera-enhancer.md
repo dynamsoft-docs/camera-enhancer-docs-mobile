@@ -123,7 +123,7 @@ Future<EnumCameraPosition> getCameraPosition() async;
 
 ### getFocusMode
 
-Returns the current focus mode of the camera, represented as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/camera-position.html).
+Returns the current focus mode of the camera, represented as a [`EnumFocusMode`]({{ site.dcv_flutter_api }}core/enum/focus-mode.html).
 
 ```dart
 Future<EnumFocusMode> getFocusMode() async;

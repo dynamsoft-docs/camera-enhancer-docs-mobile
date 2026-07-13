@@ -26,7 +26,7 @@ class TipConfig
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`topLeftPoint`](#topleftpoint) | *CGPoint* | The top left point of the tip area. |
+| [`topLeftPoint`](#topleftpoint) | *Point* | The top left point of the tip area. |
 | [`width`](#width) | *NSInteger* | The width of the tip area. |
 | [`duration`](#duration) | *NSInteger* | The duration of each tip message will be displayed. |
 | [`coordinateBase`](#coordinatebase) | *EnumCoordinateBase* | The coordinate base of the tip message. |

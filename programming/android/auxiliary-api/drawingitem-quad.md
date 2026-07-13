@@ -31,7 +31,7 @@ class QuadDrawingItem extends DrawingItem
 | [`QuadDrawingItem`](#quaddrawingitemquad) | Create an instance of `QuadDrawingItem`. |
 | [`QuadDrawingItem(coordinateBase)`](#quaddrawingitemquadcoordinatebase) | Create an instance of `QuadDrawingItem`. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 
@@ -61,14 +61,14 @@ com.dynamsoft.core.Quadrilateral getQuad(){}
 
 **Return Value**
 
-A [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) object that stores the coodrinates of the `QuadDrawingItem`.
+A [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) object that stores the coordinates of the `QuadDrawingItem`.
 
 ### getMediaType
 
 Get the media type of the `DrawingItem`.
 
 ```java
-EnumDrawingItemMeidaType getMediaType;
+EnumDrawingItemMediaType getMediaType;
 ```
 
 ## QuadDrawingItem(quad)

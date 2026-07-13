@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: UI Configuration - Exploring Features of Dynamsoft Camera Enhancer iOS Edition.
-description: This page introduce how to configure the UI with Dynamsoft Camera Enhancer iOS Edition.
+description: This page introduces how to configure the UI with Dynamsoft Camera Enhancer iOS Edition.
 keywords:  Camera Enhancer, UI, overlay
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -59,9 +59,9 @@ layer.visible = false
 
 ### Change the Style
 
-There are several preset styles definded in the `DrawingStyleManager`. You can directly specify the colour with the preset styles or create your own styles.
+There are several preset styles defined in the `DrawingStyleManager`. You can directly specify the colour with the preset styles or create your own styles.
 
-The follow code snippet shows how to specify preset styles:
+The following code snippet shows how to specify preset styles:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,7 +82,7 @@ layer.setDefaultStyle(DrawingStyleId.blueStroke.rawValue)
 layer?.setDefaultStyle(DrawingStyleId.blueStroke.rawValue, forState: DrawingItemState.default.rawValue, forType: DrawingItemMediaType.line.rawValue)
 ```
 
-Create a use-defined style:
+Create a user-defined style:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

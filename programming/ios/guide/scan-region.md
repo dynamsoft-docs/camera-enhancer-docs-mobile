@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Set a Scan Region - Exploring Features of Dynamsoft Camera Enhancer iOS Edition.
-description: This page introduce how to set a scan region with Dynamsoft Camera Enhancer iOS Edition.
+description: This page introduces how to set a scan region with Dynamsoft Camera Enhancer iOS Edition.
 keywords:  Camera Enhancer, scan region
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -63,7 +63,7 @@ cameraView.setScanRegionMaskStyle(UIColor.init(red: 255, green: 167, blue: 0, al
 
 ## Configure your own Scan Region UI
 
-You can either use the CameraView to create the scan region UI or draw it youself.
+You can either use the CameraView to create the scan region UI or draw it yourself.
 
 Since the scan region is set for the video streaming, its coordinate system might not be the same with the view coordinate system. You can use the following code to get the scan region Rect under the view coordinate system:
 

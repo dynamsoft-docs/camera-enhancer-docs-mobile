@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: UI Configuration - Exploring Features of Dynamsoft Camera Enhancer Android Edition.
-description: This page introduce how to configure the UI with Dynamsoft Camera Enhancer Android Edition.
+description: This page introduces how to configure the UI with Dynamsoft Camera Enhancer Android Edition.
 keywords:  Camera Enhancer, UI, overlay
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -49,9 +49,9 @@ layer.setVisible(true);
 
 ### Change the Style
 
-There are several preset styles definded in the `DrawingStyleManager`. You can directly specify the colour with the preset styles or create your own styles.
+There are several preset styles defined in the `DrawingStyleManager`. You can directly specify the colour with the preset styles or create your own styles.
 
-The follow code snippet shows how to specify preset styles:
+The following code snippet shows how to specify preset styles:
 
 ```java
 // Set the default DrawingStyles of the layer.
@@ -60,7 +60,7 @@ layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE_FILL);
 layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE_FILL, EnumDrawingItemState.DEFAULT, EnumDrawingItemMediaType.DIMT_QUADRILATERAL);
 ```
 
-Create a use-defined style:
+Create a user-defined style:
 
 ```java
 int userDefinedStyle = DrawingStyleManager.createDrawingStyle(R.color.white,1f, R.color.white,R.color.white);

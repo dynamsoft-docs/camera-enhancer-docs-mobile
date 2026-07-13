@@ -13,7 +13,7 @@ ignore: true
 
 # User Guide on iOS
 
-The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from your iOS applications to stream live video and acquire realtime frames.
+The Dynamsoft Camera Enhancer iOS SDK enables you to easily control cameras from your iOS applications to stream live video and acquire real-time frames.
 
 > **Example Usage**
 >
@@ -160,7 +160,7 @@ In this section, we continue working on the `ViewController` file in the project
 
 #### Step 1.1
 
-Delcare the DCE & DCECameraView property.
+Declare the DCE & DCECameraView property.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -255,7 +255,7 @@ In this section, you will learn how to capture video frames with `DynamsoftCamer
 Dynamsoft Camera Enhancer provides two solutions for fetching the video frames:
 
 - Use the method [`getFrameFromBuffer`]({{site.ios-api}}camera-enhancer.html#getframefrombuffer) to fetch a single frame from the video buffer.
-- Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetching the video frames.
+- Use callback method [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) to continuously fetch video frames.
 
 > Note:
 > - All the following code will be added to the `ViewController` file in your project.
@@ -325,7 +325,7 @@ Add the trigger of the capture button.
 >1. 
 ```objc
 @implementation ViewController{
-   // Add these varibles to capture and display images.
+   // Add these variables to capture and display images.
    UIButton *photoButton;
    UIImageView* imageView;
    bool isview;
@@ -360,7 +360,7 @@ Add the trigger of the capture button.
 ```
 2. 
 ```swift
-// Add these varibles to capture and display images.
+// Add these variables to capture and display images.
 var photoButton:UIButton! = UIButton()
 var imageView:UIImageView!
 var isview:Bool = false
