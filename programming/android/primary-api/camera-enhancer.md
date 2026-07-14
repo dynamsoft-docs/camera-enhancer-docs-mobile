@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CameraEnhancer - Dynamsoft Camera Enhancer API Reference
-description: "Learn what CameraEnhancer does in Dynamsoft Camera Enhancer Android API, including its purpose, key data, and how it supports capture workflows for modern web."
+description: "Learn what CameraEnhancer does in Dynamsoft Camera Enhancer Android API, including its purpose, key data, and how it supports capture workflows for modern mobile apps."
 keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -28,14 +28,13 @@ class CameraEnhancer extends ImageSourceAdapter
 | Method | Description |
 |------- |-------------|
 | [`CameraEnhancer`](#cameraenhancer) | The constructor. |
-| [`CameraEnhancer`](#cameraenhancer) | The constructor. |
 | [`addListener`](#addlistener) | Add a VideoFrameListener to receive callback when video frames are output. |
 | [`removeListener`](#removelistener) | Remove a VideoFrameListener. |
 | [`takePhoto`](#takephoto) | Take a photo. |
 | [`getCameraPosition`](#getcameraposition) | Get the camera position. |
 | [`setZoomFactor`](#setzoomfactor) | Set the zoom factor of the camera. You can use getCapabilities to check the maximum available zoom factor. |
 | [`getZoomFactor`](#getzoomfactor) | Get the zoom factor of the camera. |
-| [`getFocusMode`](#getfocusmode) | Get the currently actived focus mode. |
+| [`getFocusMode`](#getfocusmode) | Get the currently active focus mode. |
 | [`initSystemSettingsFromFile`](#initsystemsettingsfromfile) | Initialize system settings from a JSON file. The system settings contain more precise camera control parameters. |
 | [`initSystemSettings`](#initsystemsettings) | Initialize system settings from a JSON string. The system settings contain more precise camera control parameters. |
 | [`resetSystemSettings`](#resetsystemsettings) | Reset the system settings to default value. |
@@ -55,16 +54,16 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`getScanRegion`](#getscanregion) | Get a scan region. |
 | [`open`](#open) | Open the camera. |
 | [`close`](#close) | Close the camera. |
-| [`setResolution`](#setresolution) | Set the resolution. If the targeting resolution is not available for your device, a closest available resolutionll be selected. |
+| [`setResolution`](#setresolution) | Set the resolution. If the targeted resolution is not available for your device, the closest available resolution will be selected. |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`selectCamera(position)`](#selectcameraposition) | Select a camera with a camera position. |
 | [`getFrameRate`](#getframerate) | Get the frame rate. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
-| [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
-| [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
+| [`setFocus`](#setfocus) | Set the focus point of interest and trigger a one-off auto-focus. |
+| [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`setFocusListener`](#setfocuslistener) | Set a [`FocusListener`](../auxiliary-api/interface-focus-listener.md) to receive callback when the focus operation is completed. |
-| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
+| [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to an Android Rect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a Point under video coordinate system to another Point under camera view coordinate system. |
 | [`setImageCaptureDistanceMode`](#setimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
 | [`getImageCaptureDistanceMode`](#getimagecapturedistancemode) | Set/get the capture distance property of the video frame. The capture distance property will be recorded by VideoFrameTag. |
@@ -73,7 +72,7 @@ class CameraEnhancer extends ImageSourceAdapter
 | [`cameraView`](#setcameraview) | Set/get the CameraView instance that bind with this CameraEnhancer instance. |
 | [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
 | [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the currently active camera. |
 | [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a [`ZoomFactorChangeListener`](../auxiliary-api/interface-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed. |
 
 ## Inherited Methods
@@ -84,7 +83,7 @@ The following methods are inherited from superclass [`ImageSourceAdapter`]({{ si
 | ------ | ----------- |
 | [`hasNextImageToFetch`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
 | [`setMaxImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setmaximagecount) | Set the maximum capability of the Video Buffer. |
-| [`getMaxImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getmaximagecount) | Get the property defines the maximum capability of the Video Buffer. |
+| [`getMaxImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getmaximagecount) | Get the property that defines the maximum capability of the Video Buffer. |
 | [`setBufferOverflowProtectionMode`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one. |
 | [`getBufferOverflowProtectionMode`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getbufferoverflowprotectionmode) | Get the buffer overflow protection mode. |
 | [`getImageCount`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getimagecount) | Get the current image count in the Video Buffer. |
@@ -201,7 +200,7 @@ The zoom factor.
 
 ### getFocusMode
 
-Get the currently actived focus mode.
+Get the currently active focus mode.
 
 ```java
 EnumFocusMode getFocusMode(){}
@@ -222,7 +221,7 @@ void initSystemSettingsFromFile(String filePath) throws CameraEnhancerException{
 **Parameters**
 
 `filePath`: The path of the JSON file.  
-`error`: A NSError pointer. An error occurs when the file path is not available or the JSON datacludes invalid keys or values.
+`error`: A NSError pointer. An error occurs when the file path is not available or the JSON data includes invalid keys or values.
 
 **Return Value**
 
@@ -552,7 +551,7 @@ void turnOffTorch(){}
 
 ### setFocus
 
-Set the focus point of interest and trigger an one-off auto-focus.
+Set the focus point of interest and trigger a one-off auto-focus.
 
 ```java
 void setFocus(android.graphics.PointF focusPoint){}
@@ -564,7 +563,7 @@ void setFocus(android.graphics.PointF focusPoint){}
 
 ### setFocus(subsequentFocusMode)
 
-Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode.
+Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode.
 
 ```java
 void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusMode){}
@@ -577,7 +576,7 @@ void setFocus(android.graphics.PointF focusPoint, EnumFocusMode subsequentFocusM
 
 ### convertRectToViewCoordinates
 
-Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system.
+Convert the coordinates of a [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html) under video coordinate system to an Android Rect under camera view coordinate system.
 
 ```java
 android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_structure.DSRect videoRect){}
@@ -589,7 +588,7 @@ android.graphics.Rect convertRectToViewCoordinates(com.dynamsoft.core.basic_stru
 
 **Return Value**
 
-A CGRect (coordinate measured in px) converted from the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
+An Android Rect (coordinates measured in px) converted from the [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html).
 
 ### convertPointToViewCoordinates
 
@@ -628,7 +627,7 @@ EnumImageCaptureDistanceMode getImageCaptureDistanceMode(){}
 Set the range of auto zoom.
 
 ```java
-void setAutoZoomRange(android.util.Range ){}
+void setAutoZoomRange(android.util.Range<Float> zoomRange){}
 ```
 
 **Parameters**
@@ -716,7 +715,7 @@ A bool value that indicates whether the camera selection is successful.
 
 > This method is deprecated.
 
-Get the currently actived camera.
+Get the currently active camera.
 
 ```java
 String getSelectedCamera(){}
@@ -724,4 +723,4 @@ String getSelectedCamera(){}
 
 **Return Value**
 
-The ID of the currently actived camera.
+The ID of the currently active camera.

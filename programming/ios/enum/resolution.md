@@ -11,7 +11,7 @@ breadcrumbText: Resolution
 
 # EnumResolution
 
-Enumeration `Resolution` describes the resolution.
+Enumeration `DSResolution` describes the resolution.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: UI Configuration - Exploring Features of Dynamsoft Camera Enhancer iOS Edition.
-description: This page introduce how to configure the UI with Dynamsoft Camera Enhancer iOS Edition.
+description: This page introduces how to configure the UI with Dynamsoft Camera Enhancer iOS Edition.
 keywords:  Camera Enhancer, UI, overlay
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -15,14 +15,14 @@ permalink: /programming/ios/guide/ui-configurations.html
 
 View Classes
 
-* [`CameraView`](../auxiliary-api/dcecameraview.html): Display the captured video streaming and related UI elements.
-* [`ImageEditorView`](../auxiliary-api/dceimageeditorview.html): Display an image and editable UI elements.
+* [`DSCameraView`](../auxiliary-api/dcecameraview.html): Display the captured video streaming and related UI elements.
+* [`DSImageEditorView`](../auxiliary-api/dceimageeditorview.html): Display an image and editable UI elements.
 
 Auxiliary APIs
 
-* [`DrawingItem`](../auxiliary-api/drawingitem.html): The struct for you to draw basic UI elements.
-* [`DrawingLayer`](../auxiliary-api/dcedrawinglayer.html): Container of DrawingItems. You can add multiple layer to a view.
-* [`DrawingStyle`](../auxiliary-api/drawingstyle.html): Defines the styles of the DrawingItems.
+* [`DSDrawingItem`](../auxiliary-api/drawingitem.html): The struct for you to draw basic UI elements.
+* [`DSDrawingLayer`](../auxiliary-api/dcedrawinglayer.html): Container of DrawingItems. You can add multiple layer to a view.
+* [`DSDrawingStyle`](../auxiliary-api/drawingstyle.html): Defines the styles of the DrawingItems.
 
 ## Highlight Results
 
@@ -59,9 +59,9 @@ layer.visible = false
 
 ### Change the Style
 
-There are several preset styles definded in the `DrawingStyleManager`. You can directly specify the colour with the preset styles or create your own styles.
+There are several preset styles defined in the `DrawingStyleManager`. You can directly specify the colour with the preset styles or create your own styles.
 
-The follow code snippet shows how to specify preset styles:
+The following code snippet shows how to specify preset styles:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,7 +82,7 @@ layer.setDefaultStyle(DrawingStyleId.blueStroke.rawValue)
 layer?.setDefaultStyle(DrawingStyleId.blueStroke.rawValue, forState: DrawingItemState.default.rawValue, forType: DrawingItemMediaType.line.rawValue)
 ```
 
-Create a use-defined style:
+Create a user-defined style:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -101,7 +101,7 @@ let styleID = DrawingStyleManager.createDrawingStyle(UIColor.red, strokeWidth: 1
 
 ## Add More Basic Graphics
 
-A `DrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DrawingItems` in different shapes. Here we use `QuadDrawingItem` as an example to illustrate how to draw graphics on the view.
+A `DSDrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DSDrawingItems` in different shapes. Here we use `DSQuadDrawingItem` as an example to illustrate how to draw graphics on the view.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

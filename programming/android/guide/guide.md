@@ -13,7 +13,7 @@ ignore: true
 
 # Dynamsoft Camera Enhancer User Guide for Android (Java)
 
-The Dynamsoft Camera Enhancer Android SDK enables you to easily control cameras from your Android applications to stream live video and acquire realtime frames.
+The Dynamsoft Camera Enhancer Android SDK enables you to easily control cameras from your Android applications to stream live video and acquire real-time frames.
 
 > **Example Usage**
 >

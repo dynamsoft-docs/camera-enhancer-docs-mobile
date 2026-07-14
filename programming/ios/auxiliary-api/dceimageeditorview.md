@@ -100,7 +100,7 @@ Set/get the tip configurations.
 ```
 2. 
 ```swift
-var tipConfig: DSTipConfig { get set }
+var tipConfig: TipConfig { get set }
 ```
 
 ### tipVisible
@@ -157,7 +157,7 @@ DSImageEditorView *editorView = [[DSImageEditorView alloc] initWithFrame:frame];
 ```
 2. 
 ```swift
-let editorView = DSImageEditorView(frame: frame)
+let editorView = ImageEditorView(frame: frame)
 ```
 
 ### getSelectedDrawingItem
@@ -174,7 +174,7 @@ Get the selected DrawingItem.
 ```
 2. 
 ```swift
-func getSelectedDrawingItem() -> DSDrawingItem?
+func getSelectedDrawingItem() -> DrawingItem?
 ```
 
 **Return Value**
@@ -210,7 +210,7 @@ Get the specified DrawingLayer.
 ```
 2. 
 ```swift
-func getDrawingLayer(_ layerId: Int) -> DSDrawingLayer
+func getDrawingLayer(_ layerId: Int) -> DrawingLayer
 ```
 
 **Parameters**
@@ -250,7 +250,7 @@ Create a new DrawingLayer.
 ```
 2. 
 ```swift
-func createDrawingLayer() -> DSDrawingLayer
+func createDrawingLayer() -> DrawingLayer
 ```
 
 **Return Value**

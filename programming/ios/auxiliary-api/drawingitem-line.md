@@ -26,7 +26,7 @@ The `DSLineDrawingItem` class is a subclass of `DSDrawingItem` and represents a 
 ```
 2. 
 ```swift
-class LineDrawingItem : DSDrawingItem
+class LineDrawingItem : DrawingItem
 ```
 
 ## Attributes
@@ -41,7 +41,7 @@ class LineDrawingItem : DSDrawingItem
 |------- |-------------|
 | [`initWithLine`](#initwithline) | Create an instance of DSLineDrawingItem. |
 
-## Interited Attributes
+## Inherited Attributes
 
 The following attributes are inherited from the base class [`DrawingItem`](drawingitem.html).
 
@@ -51,7 +51,7 @@ The following attributes are inherited from the base class [`DrawingItem`](drawi
 | [`state`](drawingitem.html#state) | *DSDrawingItemState* | The state of the DrawingItem. |
 | [`CoordinateBase`](drawingitem.html#coordinatebase) | *DSCoordinateBase* | The coordinate base of the DrawingItem. The coordinate base is image by default. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the base class [`DrawingItem`](drawingitem.html).
 

@@ -2,7 +2,7 @@
 layout: default-layout
 title: CameraEnhancer Class - Dynamsoft Capture Vision React Native
 description: CameraEnhancer class of Dynamsoft Capture Vision React Native edition manages camera operations and enhancements.
-keywords: camera, enhancer, barcode reader, flutter, capture vision
+keywords: camera, enhancer, barcode reader, react native, capture vision
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

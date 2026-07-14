@@ -11,7 +11,7 @@ breadcrumbText: CameraPosition
 
 # CameraPosition
 
-Enumeration `CameraPosition` describes the camera position.
+Enumeration `DSCameraPosition` describes the camera position.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

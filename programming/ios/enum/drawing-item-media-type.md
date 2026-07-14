@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DrawingItemMediaType - Dynamsoft Camera Enhancer iOS Enumerations
-description: The enumeration DrawingItemMediaType of Dynamsoft Camera Enhancer iOS describes the media type of DrawingItems.
+description: The enumeration `DSDrawingItemMediaType` of Dynamsoft Camera Enhancer iOS describes the media type of DrawingItems.
 keywords:  DrawingItem, media type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -11,7 +11,7 @@ breadcrumbText: DrawingItemMediaType
 
 # DrawingItemMediaType
 
-The enumeration `DrawingItemMediaType` describes the media type of DrawingItems.
+The enumeration `DSDrawingItemMediaType` describes the media type of DrawingItems.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

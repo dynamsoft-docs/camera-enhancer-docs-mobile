@@ -26,7 +26,7 @@ The `ArcDrawingItem` class is a subclass of `DrawingItem`. It represents a drawi
 ```
 2. 
 ```swift
-class ArcDrawingItem : DSDrawingItem
+class ArcDrawingItem : DrawingItem
 ```
 
 ## Methods & Attributes
@@ -41,7 +41,7 @@ class ArcDrawingItem : DSDrawingItem
 | [`centre`](#centre) | *CGPoint* | The centre of the `ArcDrawingItem`. |
 | [`radius`](#radius) | *CGFloat* | The radius of the `ArcDrawingItem`. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 

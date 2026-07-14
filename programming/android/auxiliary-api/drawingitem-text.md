@@ -34,7 +34,7 @@ class TextDrawingItem extends DrawingItem
 | [`TextDrawingItem(text)`](#textdrawingitemtext) | Create an instance of `TextDrawingItem`. |
 | [`TextDrawingItem(text,coordinateBase)`](#textdrawingitemtextcoordinatebase) | Create an instance of `TextDrawingItem`. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 
@@ -91,7 +91,7 @@ int getHeight(){}
 Get the media type of the `DrawingItem`.
 
 ```java
-EnumDrawingItemMeidaType getMediaType;
+EnumDrawingItemMediaType getMediaType;
 ```
 
 ### TextDrawingItem(text)

@@ -40,8 +40,8 @@ class CameraEnhancer : ImageSourceAdapter
 | [`GetCameraPosition`](#getcameraposition) | Select a camera with a camera position. |
 | [`SetZoomFactor`](#setzoomfactor) | Set the zoom factor of the camera. |
 | [`GetZoomFactor`](#getzoomfactor) | Get the zoom factor of the camera. |
-| [`SetFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
-| [`GetFocusMode`](#getfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
+| [`SetFocus`](#setfocus) | Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
+| [`GetFocusMode`](#getfocusmode) | Get the current focus mode. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`SetResolution`](#setresolution) | Set the resolution of the camera. |
@@ -218,7 +218,7 @@ The zoom factor.
 
 ### SetFocus
 
-Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode.
+Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode.
 
 ```csharp
 void SetFocus(Point focusPoint, EnumFocusMode subsequentFocusMode);

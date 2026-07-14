@@ -11,7 +11,7 @@ breadcrumbText: FocusMode
 
 # FocusMode
 
-Enumeration `FocusMode` describes the focus mode.
+Enumeration `DSFocusMode` describes the focus mode.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

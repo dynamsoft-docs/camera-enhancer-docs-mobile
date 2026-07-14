@@ -32,7 +32,7 @@ class ArcDrawingItem extends DrawingItem
 | [`ArcDrawingItem`](#arcdrawingitemcentre-radius) | Create an instance of `ArcDrawingItem`. |
 | [`ArcDrawingItem(coordinateBase)`](#arcdrawingitemcentre-radius-coordinatebase) | Create an instance of `ArcDrawingItem` and set the coordinate base. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 
@@ -73,7 +73,7 @@ int getRadius(){}
 Get the media type of the `DrawingItem`.
 
 ```java
-EnumDrawingItemMeidaType getMediaType;
+EnumDrawingItemMediaType getMediaType;
 ```
 
 ## ArcDrawingItem(centre, radius)

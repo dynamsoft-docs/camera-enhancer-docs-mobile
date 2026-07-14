@@ -31,7 +31,7 @@ class RectDrawingItem extends DrawingItem
 | [`RectDrawingItem(rect)`](#rectdrawingitemrect) | Create an instance of `RectDrawingItem`. |
 | [`RectDrawingItem(rect,coordinateBase)`](#rectdrawingitemrectcoordinatebase) | Create an instance of `RectDrawingItem`. |
 
-## Interited Methods
+## Inherited Methods
 
 The following methods are inherited from the superclass [`DrawingItem`](drawingitem.html).
 
@@ -64,7 +64,7 @@ android.graphics.Rect getRect(){}
 Get the media type of the `DrawingItem`.
 
 ```java
-EnumDrawingItemMeidaType getMediaType;
+EnumDrawingItemMediaType getMediaType;
 ```
 
 ### RectDrawingItem(rect)

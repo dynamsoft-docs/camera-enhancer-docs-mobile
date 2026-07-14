@@ -46,8 +46,8 @@ class TipConfig : NSObject
 
 | Method | Description |
 |------- |-------------|
-| [`init`](#init) | Create an instance of TipConfig with default configurations. |
-| [`initWithCoordinates`](#initwithcoordinates) | Create an instance of TipConfig. |
+| [`init`](#init) | Create an instance of `DSTipConfig` with default configurations. |
+| [`initWithCoordinates`](#initwithcoordinates) | Create an instance of `DSTipConfig`. |
 
 ### topLeftPoint
 
@@ -119,7 +119,7 @@ var coordinateBase: EnumCoordinateBase { get set }
 
 ## init
 
-Create an instance of TipConfig with default configurations.
+Create an instance of `DSTipConfig` with default configurations.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -136,7 +136,7 @@ init()
 
 **Return Value**
 
-An instance of `TipConfig`.
+An instance of `DSTipConfig`.
 
 **Code Snippet**
 
@@ -155,7 +155,7 @@ let config = TipConfig()
 
 ## initWithCoordinates
 
-Create an instance of TipConfig.
+Create an instance of `DSTipConfig`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -185,7 +185,7 @@ init(topLeftPoint: CGPoint, width: Int, duration: Int, coordinateBase: EnumCoord
 
 **Return Value**
 
-An instance of `TipConfig`.
+An instance of `DSTipConfig`.
 
 **Code Snippet**
 

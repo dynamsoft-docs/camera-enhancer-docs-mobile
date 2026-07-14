@@ -39,7 +39,7 @@ class CameraEnhancer : ImageSourceAdapter
 | [`getCameraPosition`](#getcameraposition) | Get the camera position. |
 | [`setZoomFactor`](#setzoomfactor) | Set the zoom factor of the camera. You can use getCapabilities to check the maximum available zoom factor. |
 | [`getZoomFactor`](#getzoomfactor) | Get the zoom factor of the camera. |
-| [`getFocusMode`](#getfocusmode) | Get the currently actived focus mode. |
+| [`getFocusMode`](#getfocusmode) | Get the currently active focus mode. |
 | [`initSystemSettingsFromFile`](#initsystemsettingsfromfile) | Initialize system settings from a JSON file. The system settings contain more precise camera control parameters. |
 | [`initSystemSettings`](#initsystemsettings) | Initialize system settings from a JSON string. The system settings contain more precise camera control parameters. |
 | [`resetSystemSettings`](#resetsystemsettings) | Reset the system settings to default value. |
@@ -59,20 +59,20 @@ class CameraEnhancer : ImageSourceAdapter
 | [`getScanRegion`](#getscanregion) | Get a scan region. |
 | [`open`](#open) | Open the camera. |
 | [`close`](#close) | Close the camera. |
-| [`setResolution`](#setresolution) | Set the resolution. If the targeting resolution is not available for your device, a closest available resolutionll be selected. |
+| [`setResolution`](#setresolution) | Set the resolution. If the targeted resolution is not available for your device, the closest available resolution will be selected. |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`selectCameraWithPosition`](#selectcamerawithposition) | Select a camera with a camera position. |
 | [`getFrameRate`](#getframerate) | Get the frame rate. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
-| [`setFocus`](#setfocus) | Set the focus point of interest and trigger an one-off auto-focus. |
-| [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
+| [`setFocus`](#setfocus) | Set the focus point of interest and trigger a one-off auto-focus. |
+| [`setFocus(subsequentFocusMode)`](#setfocussubsequentfocusmode) | Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`setFocusListener`](#setfocuslistener) | Set a [`DSFocusListener`](../auxiliary-api/protocol-focus-listener.md) to receive callback when the focus operation is completed. |
 | [`convertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html) under video coordinate system to a CGRect under camera view coordinate system. |
 | [`convertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a CGPoint under video coordinate system to another CGPoint under camera view coordinate system. |
 | [`getAllCameras`](#getallcameras) | Get the IDs of all available cameras. |
 | [`selectCamera`](#selectcamera) | Select a camera with a camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the currently actived camera. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the currently active camera. |
 | [`setZoomFactorChangeListener`](#setzoomfactorchangelistener) | Set a [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangelistener.md) to receive callback when the zoom-factor changed. |
 
 ## Attributes
@@ -85,22 +85,22 @@ class CameraEnhancer : ImageSourceAdapter
 
 ## Inherited Methods
 
-The following methods are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+The following methods are inherited from base class [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
 
 | Method | Description |
 | ------ | ----------- |
-| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
-| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of `DSImageSourceAdapter`. |
+| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of `DSImageSourceAdapter`. |
 | [`getImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#getimage) | Get an image from the Video Buffer. |
 | [`setNextImageToReturn`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturn) | Specify the next image that is returned by method getImage. |
 | [`hasImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasimage) | Check the availability of the specified image. |
 | [`addImageToBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the buffer of the adapter. |
 | [`clearBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears the image buffer. |
-| [`setErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Registers a [`ImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to be used as a callback when an error occurs in the [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). |
+| [`setErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Registers a [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to be used as a callback when an error occurs in the [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). |
 
 ## Inherited Properties
 
-The following properties are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+The following properties are inherited from base class [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -125,7 +125,7 @@ Add a DSVideoFrameListener to receive callback when video frames are output.
 ```
 2. 
 ```swift
-func addListener(_ listener: DSVideoFrameListener)
+func addListener(_ listener: VideoFrameListener)
 ```
 
 **Parameters**
@@ -146,7 +146,7 @@ Remove a DSVideoFrameListener.
 ```
 2. 
 ```swift
-func removeListener(_ listener: DSVideoFrameListener)
+func removeListener(_ listener: VideoFrameListener)
 ```
 
 **Parameters**
@@ -239,7 +239,7 @@ The zoom factor.
 
 ### getFocusMode
 
-Get the currently actived focus mode.
+Get the currently active focus mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -279,7 +279,7 @@ func initSystemSettingsFromFile(_ filePath: String) throws -> BOOL
 
 `filePath`: The path of the JSON file.
 
-`error`: A NSError pointer. An error occurs when the file path is not available or the JSON datacludes invalid keys or values.
+`error`: A NSError pointer. An error occurs when the file path is not available or the JSON data includes invalid keys or values.
 
 **Return Value**
 
@@ -422,7 +422,7 @@ Output the enhanced settings to a JSON file. The enhanced settings contain auxil
 ```
 2. 
 ```swift
-func outputEnhancedSettingsToFile(_ file: String) throws -> String
+func outputEnhancedSettingsToFile(_ file: String) throws -> Bool
 ```
 
 **Parameters**
@@ -819,7 +819,7 @@ func turnOffTorch()
 
 ### setFocus
 
-Set the focus point of interest and trigger an one-off auto-focus.
+Set the focus point of interest and trigger a one-off auto-focus.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -840,7 +840,7 @@ func setFocus(_ focusPoint: CGPoint)
 
 ### setFocus(subsequentFocusMode)
 
-Set the focus point of interest and trigger an one-off auto-focus. After the focus, you can either lock the focalngth or keep the continuous auto focus enabled by configuring the subsequent focus mode.
+Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -884,7 +884,7 @@ func convertRectToViewCoordinates(_ videoRect: DSRect) -> CGRect
 
 **Return Value**
 
-A CGRect (coordinate measured in dp) converted from the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
+A CGRect (coordinate measured in pt) converted from the [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
 
 **Code Snippet**
 
@@ -924,7 +924,7 @@ func convertPointToViewCoordinates(_ point: CGPoint) -> CGPoint
 
 **Return Value**
 
-A CGPoint (coordinate measured in dp) converted from the video CGPoint measured in dp.
+A CGPoint (coordinate measured in pt) converted from the video CGPoint measured in pt.
 
 **Code Snippet**
 
@@ -955,7 +955,7 @@ Set/get the capture distance property of the video frame. The capture distance p
 ```
 2. 
 ```swift
-var imageCaptureDistanceMode: CGPoint { get set }
+var imageCaptureDistanceMode: ImageCaptureDistanceMode { get set }
 ```
 
 ### autoZoomRange
@@ -1048,7 +1048,7 @@ A bool value that indicates whether the camera selection is successful.
 
 > This method is deprecated.
 
-Get the currently actived camera.
+Get the currently active camera.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -1081,7 +1081,7 @@ Set a [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangel
 ```
 2. 
 ```swift
-func setZoomFactorChangeListener(_ listener: DSZoomFactorChangeListener?)
+func setZoomFactorChangeListener(_ listener: ZoomFactorChangeListener?)
 ```
 
 **Parameters**
@@ -1102,7 +1102,7 @@ Set a [`DSFocusListener`](../auxiliary-api/protocol-focus-listener.md) to receiv
 ```
 2. 
 ```swift
-func setFocusListener(_ listener: DSFocusListener?)
+func setFocusListener(_ listener: FocusListener?)
 ```
 
 **Parameters**
