@@ -85,22 +85,22 @@ class CameraEnhancer : ImageSourceAdapter
 
 ## Inherited Methods
 
-The following methods are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+The following methods are inherited from base class [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
 
 | Method | Description |
 | ------ | ----------- |
-| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
-| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of `DSImageSourceAdapter`. |
+| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of `DSImageSourceAdapter`. |
 | [`getImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#getimage) | Get an image from the Video Buffer. |
 | [`setNextImageToReturn`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturn) | Specify the next image that is returned by method getImage. |
 | [`hasImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasimage) | Check the availability of the specified image. |
 | [`addImageToBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the buffer of the adapter. |
 | [`clearBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears the image buffer. |
-| [`setErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Registers a [`ImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to be used as a callback when an error occurs in the [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). |
+| [`setErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Registers a [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to be used as a callback when an error occurs in the [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). |
 
 ## Inherited Properties
 
-The following properties are inherited from base class [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+The following properties are inherited from base class [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |

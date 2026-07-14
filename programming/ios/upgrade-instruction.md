@@ -78,16 +78,16 @@ The APIs of `DynamsoftCameraEnhancer` are refactored. Please follow the [API ref
 
 The following APIs are changed on parameters and return values:
 
-* [`CameraEnhancer`](primary-api/camera-enhancer.html#cameraenhancer): Added parameter `CameraView cameraView`.
+* [`DSCameraEnhancer`](primary-api/camera-enhancer.html#cameraenhancer): Added parameter `DSCameraView cameraView`.
 * [`setScanRegion`](primary-api/camera-enhancer.html#setscanregion): Changed the type of `region` from `iRegionDefinition` to [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
 * [`getScanRegion`](primary-api/camera-enhancer.html#getscanregion): Changed the type of return value from `iRegionDefinition` to [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html).
-  * `set/getScanRegionVisible`: Replaced by a series of methods in `CameraView` class.
+  * `set/getScanRegionVisible`: Replaced by a series of methods in `DSCameraView` class.
     * `scanRegionMaskVisible`
     * `scanLaserVisible`
 
 ### UI Configuring API changes
 
-* `DCECameraView` is renamed to `CameraView`.
-* Added a new view class `ImageEditorView`.
+* `DCECameraView` is renamed to `DSCameraView`.
+* Added a new view class `DSImageEditorView`.
 
 Read [How to configure UI](guide/ui-configurations.html) for more details about the API changes.

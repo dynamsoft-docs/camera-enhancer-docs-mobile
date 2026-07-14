@@ -15,14 +15,14 @@ permalink: /programming/ios/guide/ui-configurations.html
 
 View Classes
 
-* [`CameraView`](../auxiliary-api/dcecameraview.html): Display the captured video streaming and related UI elements.
-* [`ImageEditorView`](../auxiliary-api/dceimageeditorview.html): Display an image and editable UI elements.
+* [`DSCameraView`](../auxiliary-api/dcecameraview.html): Display the captured video streaming and related UI elements.
+* [`DSImageEditorView`](../auxiliary-api/dceimageeditorview.html): Display an image and editable UI elements.
 
 Auxiliary APIs
 
-* [`DrawingItem`](../auxiliary-api/drawingitem.html): The struct for you to draw basic UI elements.
-* [`DrawingLayer`](../auxiliary-api/dcedrawinglayer.html): Container of DrawingItems. You can add multiple layer to a view.
-* [`DrawingStyle`](../auxiliary-api/drawingstyle.html): Defines the styles of the DrawingItems.
+* [`DSDrawingItem`](../auxiliary-api/drawingitem.html): The struct for you to draw basic UI elements.
+* [`DSDrawingLayer`](../auxiliary-api/dcedrawinglayer.html): Container of DrawingItems. You can add multiple layer to a view.
+* [`DSDrawingStyle`](../auxiliary-api/drawingstyle.html): Defines the styles of the DrawingItems.
 
 ## Highlight Results
 
@@ -101,7 +101,7 @@ let styleID = DrawingStyleManager.createDrawingStyle(UIColor.red, strokeWidth: 1
 
 ## Add More Basic Graphics
 
-A `DrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DrawingItems` in different shapes. Here we use `QuadDrawingItem` as an example to illustrate how to draw graphics on the view.
+A `DSDrawingItem` is the basic unit that you can draw on the view. It has different subclasses so that you can create `DSDrawingItems` in different shapes. Here we use `DSQuadDrawingItem` as an example to illustrate how to draw graphics on the view.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
