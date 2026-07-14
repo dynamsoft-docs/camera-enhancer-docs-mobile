@@ -955,7 +955,7 @@ Set/get the capture distance property of the video frame. The capture distance p
 ```
 2. 
 ```swift
-var imageCaptureDistanceMode: DSImageCaptureDistanceMode { get set }
+var imageCaptureDistanceMode: ImageCaptureDistanceMode { get set }
 ```
 
 ### autoZoomRange
