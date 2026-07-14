@@ -41,7 +41,7 @@ class CameraView: UIView {}
 | [`cameraToggleButtonVisible`](#cameratogglebuttonvisible) | *BOOL* | Set/get the visibility of the camera toggle button. |
 | [`scanRegionMaskVisible`](#scanregionmaskvisible) | *BOOL* | Set/get the visibility of the scan region mask. |
 | [`scanLaserVisible`](#scanlaservisible) | *BOOL* | Set/get the visibility of the scan laser. |
-| [`tipConfig`](#tipconfig) | *DSTipConfig* | Set/get the tip configurations. |
+| [`tipConfig`](#tipconfig) | *TipConfig* | Set/get the tip configurations. |
 | [`tipVisible`](#tipvisible) | *BOOL* | Set/get the visibility of tip. |
 
 ## Methods
@@ -143,7 +143,7 @@ Set/get the tip configurations.
 ```
 2. 
 ```swift
-var tipConfig: DSTipConfig { get set }
+var tipConfig: TipConfig { get set }
 ```
 
 ### tipVisible
@@ -216,7 +216,7 @@ Get the specified DrawingLayer.
 ```
 2. 
 ```swift
-func getDrawingLayer(_ layerId: UInt) -> DSDrawingLayer?
+func getDrawingLayer(_ layerId: UInt) -> DrawingLayer?
 ```
 
 **Parameters**
@@ -256,7 +256,7 @@ Create a new DSDrawingLayer.
 ```
 2. 
 ```swift
-func createDrawingLayer() -> DSDrawingLayer
+func createDrawingLayer() -> DrawingLayer
 ```
 **Return Value**
 

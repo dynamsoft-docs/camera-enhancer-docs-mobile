@@ -133,7 +133,7 @@ Add a note to the DrawingItem.
 ```
 2. 
 ```swift
-func addNote(_ note: DSNote, replace: Bool)
+func addNote(_ note: Note, replace: Bool)
 ```
 **Parameters**
 
@@ -155,7 +155,7 @@ Get the specified DSNote.
 ```
 2. 
 ```swift
-func getNote(_ noteName: String) -> DSNote?
+func getNote(_ noteName: String) -> Note?
 ```
 **Parameters**
 

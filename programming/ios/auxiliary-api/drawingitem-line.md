@@ -26,7 +26,7 @@ The `DSLineDrawingItem` class is a subclass of `DSDrawingItem` and represents a 
 ```
 2. 
 ```swift
-class LineDrawingItem : DSDrawingItem
+class LineDrawingItem : DrawingItem
 ```
 
 ## Attributes

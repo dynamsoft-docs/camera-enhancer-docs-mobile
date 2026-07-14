@@ -53,7 +53,7 @@ Get the specified DrawingStyle.
 ```
 2. 
 ```swift
-class func getDrawingStyle(_ styleId: Int) -> DSDrawingStyle?
+class func getDrawingStyle(_ styleId: Int) -> DrawingStyle?
 ```
 
 **Parameters**
@@ -124,7 +124,7 @@ Get all available DrawingStyles.
 ```
 2. 
 ```swift
-class func getAllDrawingStyles() -> [DSDrawingStyle]
+class func getAllDrawingStyles() -> [DrawingStyle]
 ```
 
 **Return Value**

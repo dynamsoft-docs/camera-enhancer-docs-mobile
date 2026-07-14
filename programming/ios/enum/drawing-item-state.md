@@ -11,7 +11,7 @@ breadcrumbText: DrawingItemState
 
 # DrawingItemState
 
-Enumeration `DrawingItemState` describes the state of DrawingItems.
+Enumeration `DSDrawingItemState` describes the state of DrawingItems.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

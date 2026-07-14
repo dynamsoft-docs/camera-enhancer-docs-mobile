@@ -11,7 +11,7 @@ breadcrumbText: CoordinateBase
 
 # CoordinateBase
 
-Enumeration `CoordinateBase` describes the camera position.
+Enumeration `DSCoordinateBase` describes the camera position.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

@@ -145,7 +145,7 @@ Add a group of DrawingItem to the layer.
 ```
 2. 
 ```swift
-func addDrawingItems(_ items: [DSDrawingItem])
+func addDrawingItems(_ items: [DrawingItem])
 ```
 **Parameters**
 

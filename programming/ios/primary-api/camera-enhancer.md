@@ -125,7 +125,7 @@ Add a DSVideoFrameListener to receive callback when video frames are output.
 ```
 2. 
 ```swift
-func addListener(_ listener: DSVideoFrameListener)
+func addListener(_ listener: VideoFrameListener)
 ```
 
 **Parameters**
@@ -146,7 +146,7 @@ Remove a DSVideoFrameListener.
 ```
 2. 
 ```swift
-func removeListener(_ listener: DSVideoFrameListener)
+func removeListener(_ listener: VideoFrameListener)
 ```
 
 **Parameters**
@@ -1081,7 +1081,7 @@ Set a [`DSZoomFactorChangeListener`](../auxiliary-api/protocol-zoomfactorchangel
 ```
 2. 
 ```swift
-func setZoomFactorChangeListener(_ listener: DSZoomFactorChangeListener?)
+func setZoomFactorChangeListener(_ listener: ZoomFactorChangeListener?)
 ```
 
 **Parameters**
@@ -1102,7 +1102,7 @@ Set a [`DSFocusListener`](../auxiliary-api/protocol-focus-listener.md) to receiv
 ```
 2. 
 ```swift
-func setFocusListener(_ listener: DSFocusListener?)
+func setFocusListener(_ listener: FocusListener?)
 ```
 
 **Parameters**

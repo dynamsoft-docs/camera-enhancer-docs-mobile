@@ -11,7 +11,7 @@ breadcrumbText: EnhancedFeatures
 
 # EnhancedFeatures
 
-Enumeration `EnhancedFeatures` indicates the advanced features of Dynamsoft Camera Enhancer iOS.
+Enumeration `DSEnhancedFeatures` indicates the advanced features of Dynamsoft Camera Enhancer iOS.
 
 - `Frame Filter`: The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically.
 - `Sensor Control`: The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking.

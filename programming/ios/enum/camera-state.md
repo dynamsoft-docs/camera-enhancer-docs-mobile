@@ -11,7 +11,7 @@ breadcrumbText: CameraState
 
 # CameraState
 
-Enumeration `CameraState` describes the camera state.
+Enumeration `DSCameraState` describes the camera state.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C
