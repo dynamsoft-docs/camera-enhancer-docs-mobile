@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, DSResolution)
     */
    DSResolution720P = 2,
    /**
-    * Set the video streaming to the 480P resolution.
+    * Set the video streaming to the 1080P resolution.
     */
    DSResolution1080P = 3,
    /**
@@ -63,7 +63,7 @@ public enum Resolution : Int{
     */
    720P = 2
    /**
-    * Set the video streaming to the 480P resolution.
+    * Set the video streaming to the 1080P resolution.
     */
    1080P = 3
    /**
