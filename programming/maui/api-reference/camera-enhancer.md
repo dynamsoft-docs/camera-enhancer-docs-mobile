@@ -42,6 +42,8 @@ class CameraEnhancer : ImageSourceAdapter
 | [`GetZoomFactor`](#getzoomfactor) | Get the zoom factor of the camera. |
 | [`SetFocus`](#setfocus) | Set the focus point of interest and trigger a one-off auto-focus. After the focus, you can either lock the focal length or keep the continuous auto focus enabled by configuring the subsequent focus mode. |
 | [`GetFocusMode`](#getfocusmode) | Get the current focus mode. |
+| [`ConvertRectToViewCoordinates`](#convertrecttoviewcoordinates) | Convert the coordinates of a [`DMRect`]({{ site.dcv_maui_api }}core/rect.html) under video coordinate system to a MAUI `Rect` (in dp) under camera view coordinate system. |
+| [`ConvertPointToViewCoordinates`](#convertpointtoviewcoordinates) | Convert the coordinates of a `Point` under video coordinate system to another `Point` (in dp) under camera view coordinate system. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`SetResolution`](#setresolution) | Set the resolution of the camera. |
@@ -240,6 +242,38 @@ EnumFocusMode GetFocusMode();
 **Return Value**
 
 A [`EnumFocusMode`]({{ site.dce_maui_api }}enum/focus-mode.html) value that represents the current focus mode.
+
+### ConvertRectToViewCoordinates
+
+Convert the coordinates of a [`DMRect`]({{ site.dcv_maui_api }}core/rect.html) under video coordinate system to a MAUI `Rect` under camera view coordinate system.
+
+```csharp
+Microsoft.Maui.Graphics.Rect ConvertRectToViewCoordinates(DMRect videoRect);
+```
+
+**Parameters**
+
+`videoRect`: The [`DMRect`]({{ site.dcv_maui_api }}core/rect.html) that you want to convert.
+
+**Return Value**
+
+A MAUI `Rect` (coordinate measured in dp) converted from the [`DMRect`]({{ site.dcv_maui_api }}core/rect.html).
+
+### ConvertPointToViewCoordinates
+
+Convert the coordinates of a `Point` under video coordinate system to another `Point` under camera view coordinate system.
+
+```csharp
+Microsoft.Maui.Graphics.Point ConvertPointToViewCoordinates(Microsoft.Maui.Graphics.Point point);
+```
+
+**Parameters**
+
+`point`: The `Point` that you want to convert.
+
+**Return Value**
+
+A `Point` (coordinate measured in dp) converted from the video `Point` measured in px.
 
 ### TurnOnTorch
 
